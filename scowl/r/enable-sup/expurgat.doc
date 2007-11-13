@@ -1,0 +1,95 @@
+                        EXPURGATING THE ENABLE LISTS
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+
+The ENABLE2K word lists are not filtered or expurgated in any way.  Words
+are excluded only for reasons of form (e.g., o'clock, DNA) or linguistic
+affiliation (e.g., bonjour, ubermensch), but never for reasons of bad
+taste (quinine), offensiveness (televangelism) or disreputability
+(irregardless).
+
+Nevertheless, the ENABLE2K compilers recognize that its lists may have
+applications in situations where such all-inclusiveness may not be
+appropriate.  For instance, an ENABLE list may be used in a game program
+which might be used by children.  The ENABLE2K supplement includes
+the MAKELIST program, which allows one to produce a custom word list by
+merging one or more or the lists supplied by ENABLE2K and its supplement.
+This program offers the option of removing potentially offensive words
+from its output, at any of three levels of squeamishness.
+
+It should be noted that the nature of the English language is such that
+complete expurgation of potentially offensive words is impossible, even
+ignoring the problem that each individual has his or her own standards of
+offense.  Many English words have both offensive and inoffensive uses, and
+many of these are so common in their inoffensive uses that it would make
+no sense to attempt to remove them.  Examples of such words are "screw" and
+"fairy".  The best that one can hope to do is to remove words that are
+generally considered offensive, and which do not have common inoffensive
+uses.
+
+Further, the compilers of ENABLE2K can make NO GUARANTEE that the MAKELIST
+program will remove all words which might prove offensive in your
+application.  If the possible presence of offensive words in any ENABLE
+list is important to you, it is *your* responsibility to check for such
+words and remove them yourself, whether or not you use the MAKELIST
+program.  And while we have made a serious attempt to determine sets of
+words which might reasonably be found offensive, we cannot know the
+requirements of your application.  In fact, as the legal boys say, we
+disclaim any warranty that this package is fit for a particular purpose.
+
+The MAKELIST program offers you the choice of three levels of expurgation:
+Cautious, Aggressive, and Politically Correct.  (Of course, you also have
+the option of not expurgating at all.)  A more detailed explanation of
+these options is as follows:
+
+1.  Cautious expurgation attempts to remove patently offensive words, but
+does not generally remove words which are not universally agreed to be
+offensive, or which have significant inoffensive meanings.  (A few words
+are so notorious that they are removed despite minor inoffensive uses.)
+Almost all of the words removed from the second edition OSPD (r) by
+Milton Bradley for OSPD3 fall into this category.  However, several very
+familiar vulgarities (of the sort still not heard on network television)
+are *not* removed at this level.  This level of expurgation should be
+chosen if the goal is to have expurgation interfere as little as possible
+with the completeness of the lexicon.
+
+2.  Agressive expurgation removes additional words that we consider likely
+to offend, even if they have inoffensive meanings or are held by some to
+be inoffensive.  This results in some linguistic anomalies, such as
+permitting participles for verbs that have been removed (due to the
+offensiveness of their meanings as nouns or adjectives).  We believe that
+this level of expurgation is most likely to be appropriate for use in
+situations involving children.
+
+3.  Politically correct expurgation removes additional words which are
+found offensive by some.  This list is based primarily on the standards
+of the Encarta (r) World English Dictionary, which are much stricter than
+those of any other dictionary we have seen.  It labels as offensive
+many words with which most people seem comfortable, particularly words
+associated with mental disability and gender stereotypes.  Examples of
+words considered offensive by Encarta include "idiotic", "henpeck",
+"crone", "slob", "klutz", "wimp" and "weirdo".  If you, or your intended
+audience, are likely to find such words offensive, then you should choose
+this level of expurgation.  We find it hard to imagine that this degree of
+sensitivity is ever necessary.  But then, I'm an able-bodied middle-class
+white American male heterosexual baby boomer; of course, I would think
+that.  (I'm also a "slob" and a "klutz", but we'll let that pass...)
+
+The process of removing potentially offensive words obviously entails the
+existence of lists of such words.   These lists, unlike the other ENABLE2K
+lists, are not distributed in a readable form.  The lists might well, in
+themselves, prove offensive, and besides, the last thing we would ever
+want to do is to increase anyone's vocabulary of abuse.  We of course
+recognize this will not prevent anyone who really wishes to ferret out
+their contents from doing so.  Most attempts to sanitize the English
+lexicon are equally futile, a fact which potential users of the ENABLE2K
+expurgation option should consider.
+
+
+---
+The OSPD is a trademark of the Milton Bradley Co., Inc.
+Encarta is a trademark of the Microsoft Corp.
+
+
+
+--Alan Beale

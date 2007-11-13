@@ -1,0 +1,8 @@
+#!/bin/sh
+
+rm -f working/$1.mk
+
+for l in `cat l/levels-list`
+do
+  echo "\$(call $1,$l)" >> working/$1.mk
+done

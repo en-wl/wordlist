@@ -1,0 +1,4 @@
+#!/bin/sh
+
+tail +3 r/mwords/10001fr.equ > r/mwords/frequent.lst 
+tail +3 r/mwords/10002fr.equ | cut -f2 -d' ' >> r/mwords/frequent.lst

@@ -1,0 +1,130 @@
+                             THE 2DICTS LIST
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+
+The file 2DICTS.LST is a supplement to the main WORD.LST file, for those who
+prefer to use a more diverse lexicon of long words rather than one derived
+from a single dictionary.  I was led to assemble 2DICTS.LST by the following
+beliefs:
+
+1. Diversity is good.  OSPD (r) is a far better collection of words for
+game play than any single dictionary.  OSPD is assembled from five distinct
+sources, giving us colorful and distinctive words like "brrr", "deflea",
+"hangup", "ralph" and "sleazo", each of which appears to be cited in only
+one of the source dictionaries.
+
+2. Long words have a different role in game play than short words.  The
+biggest problem with using MW10 as the only source of legitimate long words
+is the fact that a surprising number of commonly used long words are
+omitted, words like "hatemonger", "soundtrack" and "unimportance".
+
+3. The example of OSPD would suggest that the entire contents of one or
+more additional dictionaries should be added.  Apart from the fact that
+this is a tremendous expansion of the lexicon (and a lot of work) is the
+fact that it is overkill, due to the reduced opportunities for play of
+long words.  While a Scrabble (r) player might well be able to play
+"soundtrack" (and be shocked when it is disallowed), it is highly unlikely
+that she would be able to play "strobilaceous", or would think of doing so
+even if it were playable.
+
+Accordingly, I decided to construct a list of additional words by adopting a
+set of dictionaries, and adding any word which was listed in two or more of
+them, thereby hopefully adding any common words left out of MW10, while
+omitting idiosyncracies, likely errors and words too obscure to have
+attracted the attention of more than one team of lexicographers.
+
+The result of this process is the 2DICTS.LST file, which contains about
+16,000 additional words.  I used five dictionaries to build the file:
+the American Heritage fourth, the Webster's New World College fourth,
+the Encarta (r) World English (American edition), and both the first and
+second Random House Webster's College.  I used paper editions of all the
+dictionaries, though I also used electronic editions where they were
+available.  As it turned out, the existence of electronic editions of
+all of the dictionaries other than the Random House made the whole project
+more practical.
+
+Observe that I used the full American Heritage dictionary rather than the
+American Heritage College dictionary, which was supposedly used in the
+assembly of OSPD.  I made this choice because of the availability of this
+particular dictionary in electronic form.  I experimented with use of
+the College dictionary instead, and found that only a relatively small
+fraction of the words previously chosen for inclusion were affected.  I
+therefore decided to stick with the full dictionary in order to make
+assembly of the list more straightforward.
+
+Some may object to my inclusion of the Encarta dictionary in the process,
+either because of dislike of Microsoft, or because this dictionary has a
+relatively bad reputation among logophiles.  I chose to use it because,
+let's face it, it will become one of the most used dictionaries in America
+(and no doubt the world) by virtue of being installed on millions of
+computers before purchase.  Additionally, while it certainly is cursed
+with a large number of errors, I don't find the error level unreasonable
+for a first edition, and most of the errors have no impact on this
+particular project.  I found no more than 10 words which were so blatantly
+dubious that I was forced to leave them out, which is no worse than for the
+American Heritage dictionary.  And, on the positive side, Encarta's mining
+of the English of Australia, New Zealand, South Africa and the Caribbean
+makes it a source of many new (to me) words which are too good to be
+ignored.
+
+This project was implemented in two stages, the first completed with the
+publication of the first version of ENABLE, and the second for ENABLE2K.
+
+My procedures for the first edition were as follows.  I first extracted all
+the root words longer than eight characters not in MW10 from the AHD3
+index.  I then did the same for WNWCD (third edition), and marked any words
+previously found in AHD3.  Finally, I looked up each unmatched word in the
+paper RHWCD (first edition), and marked each match.  Finally, I added the
+inflections of the marked words.  (This description is oversimplified in
+one way: rather than processing each dictionary in its entirety, I divided
+the word space into relatively small chunks, for instance ver-wap, and
+then consulted all three dictionaries relative to the chunk at a single
+sitting.)
+
+For the second chunk, my procedures were similar, except that I used paper
+dictionaries exclusively, and was aided by having gathered lists of
+unmatched words from AHD3 and WNWCD3 for the previous edition of ENABLE.
+At this time, I upgraded from WNW3 to WNW4 and from the first edition
+Random House to the second.  Because the second edition Random House
+dictionary removed a significant number of words from the first, I ended up
+treating the union of the two editions as a single source.  This issue did
+not arise with WNWCD.  For the second release of the ENABLE2K Supplement,
+I performed a similar upgrade from the American Heritage third edition to
+the fourth.
+
+Note that the above was a mechanical process.  I did not attempt to include
+or exclude additional words on grounds of taste, preference or personal
+disagreement with the sources (though of course I was sorely tempted).
+There were a small number of cases where entries were clearly erroneous
+and/or self-contradictory.  These few entries were omitted, or corrected
+when I was completely certain of the correction.
+
+One interesting problem which showed up occasionally in building the list
+was determining the plurals of words which are generally not considered to
+have plurals, such as diseases, or for which more than one plural is
+plausible, but none is explicitly shown in some or all of the sources.  I
+made educated guesses in such cases, and it is likely that some of my
+decisions can be disputed.  See the PLURALS.DOC file for a long discussion
+of the problem of undocumented plurals and how I dealt with it.
+
+I have no delusion that the 2DICTS.LST file is complete, though I believe
+its accuracy level to be quite high.  I'm sure that, being human, I've
+overlooked some errors, and failed to include some valid words, but I
+hope such oversights are few.  Even though I readily admit to the
+incompleteness of the list, I still feel it is a useful compendium.  As
+the compiler of the list, I would be interested to be informed of
+significant errors.  I plan to correct errors of commission, but errors of
+omission might not be corrected unless I can systematically tackle all
+similar errors.
+
+
+---
+Scrabble is a trademark of the Milton Bradley Co., Inc.
+The OSPD is a trademark of the Milton Bradley Co., Inc.
+Encarta is a trademark of the Microsoft Corp.
+
+
+
+
+--Alan Beale
+biljir@pobox.com

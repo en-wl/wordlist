@@ -1,0 +1,5 @@
+
+unset LC_ALL
+export LC_ALL
+export LC_COLLATE=C LC_CTYPE=C
+

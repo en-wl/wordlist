@@ -1,0 +1,74 @@
+This directory contains numerous special word list which I have
+created myself.
+
+abbreviations:
+
+A list of commonly used abbreviations and acronyms, especially in
+conversational text such as email.
+
+abbreviations-also:
+
+Some additional abbreviations which I did not want to include at the
+lower word list sizes.
+
+frequent.lst:
+
+A combination of the two top 1000 lists found in the mwords package.
+I carefully went though and weeded out words which where an artifact
+of the corpus used.
+
+letters:
+
+A list of single letters and there inflected forms
+
+names.from_alan_beale:
+
+A list of names (version 5.2) sent to be by Alan Beale <biljir@pobox.com>:
+
+  I have a large list of proper names, whose origins are in the
+  linux-words proper names, but which both removes a lot of (what I
+  considered to be) junk entries, and adds a lot of names of various
+  sorts, notably names of commercial products and noteworthy
+  historical personages.
+
+never-abbreviations:
+
+A list of words that I do not consider abbreviations.
+
+never-variant:
+
+A list of words I do not consider variants.
+
+not-possessive:
+
+A list of nouns which should not take a possessive form with "'s".
+
+proper-names:
+
+A list of additional proper names.
+
+roman-numerals:
+
+A list of roman numerous originally extracted from the ispell word
+lists.
+
+signature:
+
+A small list of words that I thought really out to be at the 35 level.
+
+unix-terms:
+
+A list of commonly used unix terms often used as regular english words
+by geeks.
+
+variant:
+
+A list of words which the 12dicts package does not consider variants
+but I do.
+
+
+
+
+
+
+

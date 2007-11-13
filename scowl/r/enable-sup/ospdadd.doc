@@ -1,0 +1,35 @@
+                           THE OSPDADD LIST
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+As I assembled the 2DICTS.LST file, I also worked on gathering together
+words from the five source dictionaries which met the requirements for
+OSPD (r).  The resulting file, OSPDADD.LST, contains approximately
+6,500 words from these dictionaries of eight characters or less (plus
+their inflections) that are not listed in OSPD.
+
+As with the 2DICTS.LST file, I did not attempt to include or exclude
+words on grounds of taste, preference or personal disagreement with the
+sources.  There were a few blatant errors, such as AHD4's description of
+"boppish" as a noun, despite the adjectival definition and example, and
+a few entries which were far more likely to be typographical errors
+than accurate reflections of the compilers' intent, such as the listing
+by Encarta of "shadkanim" as a plural of "shadkhan".  When how to
+correct such errors was clear, I did so; otherwise, I simply omitted
+the dubious entries.
+
+I used the techniques described in PLURALS.DOC for deciding on the
+plural forms of nouns whose plurals were not readily obvious, when
+information from the source dictionaries was missing or muddled.
+
+Like 2DICTS.LST, OSPDADD.LST is certain to contain erroneous words and
+to omit valid words from its sources.  Nevertheless, it clearly points
+out the need for another revision of OSPD, and should be highly useful
+for any who prefer not to wait.
+
+
+
+The OSPD is a trademark of the Milton Bradley Co., Inc.
+
+
+
+--Alan Beale

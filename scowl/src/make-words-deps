@@ -1,0 +1,24 @@
+#!/bin/bash
+
+shopt -s nullglob
+
+echo -n src/get-all-below src/filter working/possessive.lst ''
+echo -n src/add-other-spellings r/varcon/voc.tab r/varcon/variant.tab ''
+echo -n src/add-possessive src/make-words ''
+echo -n `src/get-all-below $1 supplement` ''
+echo -n `src/get-all-below $1 include` ''
+echo -n `src/get-all-below $1 add-affixes` ''
+
+if [ $1 -le `cat l/add-affixes/max-level` ]
+then
+  echo -n src/add-affixes r/infl/infl.txt ''
+fi
+
+if [ $1 -ne `src/get-level max` ]
+then
+  echo -n '' working/words.`src/get-level next $1`
+fi
+
+echo
+
+

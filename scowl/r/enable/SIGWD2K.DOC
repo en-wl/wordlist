@@ -1,0 +1,83 @@
+                       THE ENABLE2K SIGNATURE WORDS
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+
+As with the first edition of ENABLE, the ENABLE2K word list contains
+a collection of "signature words", words which one of the compilers
+feels to be a word of particular interest, usefulness or value, yet which
+is not presently recognized as valid by OSPD (r) or MW10.  (See the file
+SIGWORDS.DOC for more discussion of the "signature word" concept.)  The
+original ENABLE had 500 signature words.  For ENABLE2K, we have increased
+the number to 1024.  The original signature words were all (with one
+exception) long words, ineligible for inclusion in OSPD due to their
+length.  Many of the new ENABLE2K signature words, on the other hand, are
+short, and suitable for inclusion in OSPD whenever it is next expanded.
+
+A significant number of the new signature words were taken from the
+ENABLE2K "plural reform" project, which was an attempt to remove invalid
+plurals (such as "trichinosises") from the list, and to identify omitted
+valid plurals (such as "oxymorons").  The plural reform project is
+described in absurd detail in the file PLURALS.DOC in the ENABLE2K
+supplement.  All the new plurals identified by the reform project that
+were explicitly shown by two major American dictionaries were added as
+signature words, as were plurals of short words listed by a single such
+dictionary.  A number of other plurals with less clearcut evidence, but
+which one or both of us feel is certainly valid, have also been added.
+See PLURALS.DOC for information about specific plurals.
+
+ENABLE2K retains almost all the signature words from the original ENABLE.
+The following words were dropped because they are now in the base
+ENABLE2K list:
+
+discontinuation
+discontinuations
+multibillions
+premarketing
+premarketings
+salpiglossises
+
+The following words were dropped because they were included in the
+ENABLE2K "additional MW10 words" list, which contains MW10 words added
+after the preparation of the first version of ENABLE, as well as MW10
+words erroneously omitted from OSPD (see MW10ADD.DOC).
+
+bafflegab
+bafflegabs
+hypermedia
+plasmodesms
+tsimmeses
+tzimmeses
+viewdatas
+violoncellos
+
+Some of these words are plurals implied by MW10, but not explicitly
+listed.
+
+The following words were removed from the signature list because after
+the completion of the "plural reform" project, I was no longer confident
+of their correctness:
+
+panmixises
+spermathecas
+
+(The list continues to contain some plurals in which I have little
+confidence, but since these words were chosen by Mendel, I didn't feel it
+was up to me to remove them.)
+
+One of the points of the original signature word list was to suggest
+words which ought to be more widely recognized.  The appearance of some
+of these words, such as "hypermedia", in the latest edition of MW10 can be
+seen as a vindication of the concept.  The ENABLE2K list contains more
+trendy and thoroughly modern words, such as "intranet", "piercings",
+"rainforest" and "abductee".  Mendel and I will be quite surprised if many
+of these words are not adopted by revisions of MW10 and OSPD as time
+passes.
+
+
+---
+Scrabble is a trademark of the Milton Bradley Co., Inc.
+The OSPD is a trademark of the Milton Bradley Co., Inc.
+
+
+
+--Alan Beale

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cat l/$1/* | src/filter | sort | uniq > working/$1.lst
+

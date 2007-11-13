@@ -1,0 +1,153 @@
+                       USING THE MAKELIST PROGRAM
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+
+ENABLE2K and its supplement provide a variety of supplemental word lists
+which may be interesting or useful for some purposes.  To assist in
+combining the lists suitably for a particular application, the supplement
+includes the MAKELIST program.  This program is provided as a Windows 98
+executable (MAKELIST.EXE); the source code is also distributed, allowing
+the program to be compiled and executed on a non-Windows system such as
+Linux.
+
+Before running the MAKELIST program, you may wish to verify that it has
+not been tampered with by running the md5 program, described in
+CHECKSUM.DOC, against it.  The correct checksum for the Windows
+MAKELIST.EXE is F345E5E8DD8E7C7415457EFD22479920.
+
+To run MAKELIST, either use the Run option from the Windows Start menu,
+or bring up a DOS window.  If you use Run, enter the full path to
+MAKELIST.EXE as the program name.  If you use a DOS window, use the CD
+command to make the ENABLE2K directory your starting directory, and
+then type MAKELIST to execute the program.  In either case, you should
+run MAKELIST in the directory where you installed both ENABLE2K and
+its supplement package.
+
+MAKELIST determines what to do by asking for user input.  It begins by
+asking for the name of the file to contain the output list.  If you do
+not specify a full path, the file will be written in the ENABLE2K
+directory.  You must not specify the same name as any of the ENABLE
+files, as the program will overwrite its input and probably crash.
+(One way of avoiding this without knowing all file names is to give the
+output file a .TXT extension, as all the ENABLE word lists are named
+.LST.)
+
+After the output file name has been determined, MAKELIST asks you whether
+specific lists of words should be included.  For each question, an answer
+of "y" or "n" is expected.  You can also simply hit the Enter key in
+response to any question.  This is the same as answering "n".  MAKELIST
+always includes the main ENABLE2K word list, containing the words in
+OSPD (r) and long words from MW10.  You will be asked if you want to
+include each of the following:
+
+1.  Signature words (SIGWORD.LST).  These are miscellaneous interesting
+words that have been added to the ENABLE2K list to distinguish it from
+other similar lists.  (See SIGWORD.DOC for more information.)  Note
+that some signature words are found in one or more of the supplementary
+lists, and will be present in the MAKELIST output file if you choose to
+include any of these lists.
+
+2.  New MW10 words (MW10ADD.LST).  These are words present in the 2000
+edition of MW10 but not in the main ENABLE word list.  Some of these
+words are new to this edition, while some are words that should have
+been present in OSPD, but were apparently overlooked.  As with the
+signature words, some of these words are present in other lists, and
+may be included from these sources even if you reply "n" to this
+question.
+
+3.  Stale words (STALE.LST).  These are words present in the OSPD, but
+not in recent editions of the source dictionaries (see COSSPD.DOC).
+These words are included in the base WORD.LST file, but will be excluded
+if you reply "n" to this question.
+
+4.  Additional OSPD words (OSPDADD.LST).  These are words from five
+dictionaries (see 2DICTS.DOC for the list) which met the criteria for
+inclusion in OSPD, but which are not included there.  Since these are
+all short words, adding them can significantly expand a player's options
+in Scrabble (r) or a similar word game.
+
+5.  Words confirmed by two dictionaries (2DICTS.LST).  These are long
+words (over eight letters) listed by at least two of the five source
+dictionaries (see 2DICTS.DOC).  The addition of these words is likely
+to have little effect at Scrabble, but may be significant for other
+games.
+
+6.  Additional plurals (PLURALS.LST).  These are words the compilers
+of ENABLE believe to be valid plurals omitted from OSPD and MW10 (see
+PLURALS.DOC).
+
+7.  OSW and Chambers words (ABLE.LST).  These are words from OSW (Official
+Scrabble Words) and the Chambers dictionary, used for tournament Scrabble
+play in Britain and elsewhere (see ABLE.DOC).  Adding these words increases
+the size of the output list by 50%, adding many unusual short words, and
+corresponds to use of the SOWPODS list in Scrabble.  If you have down-
+loaded the ABLE supplement into the ENABLE2K directory, you will also
+be asked if you want to include:
+
+    7a.  OSW and Chambers words which would not be valid in American
+    Scrabble (mostly foreign words), and
+
+    7b.  Signature corrections to the ABLE word list.
+
+If you have not downloaded the ABLE supplement, the 7a words will be
+excluded, and the 7b corrections will be included.
+
+8.  Lower-case acronyms (LCACR.LST).  These are acronyms containing
+only lower case letters, such as "pdq" and "tko".  These words are not
+considered valid for most word games, though there may be occasions
+when they are appropriate.
+
+9.  Words with no part of speech (NOPOS.LST).  These are words
+representing the pronunciation of multi-word phrases, such as "wanna"
+and "dunno", which have no part of speech.  These words are not
+considered valid in Scrabble, but are probably valid for most other
+word games.
+
+10.  Inflections of one-letter words (LETTERS.LST).  These are words
+formed from one-letter words,  such as "ps" and "xed".  These words
+are not considered valid for most word games, though there may be
+exceptions where their use is appropriate.
+
+11.  Upper-case words (not proper names) (UPPER.LST).  These are words
+which are not valid at Scrabble because they contain one or more
+capital letters, but which are not proper names or acronyms.  These
+words are not valid in Scrabble, but may be valid in other word games.
+(See AUXFILES.DOC for more discussion of these words.)  If you include
+these words, you will be asked whether case distinctions should be
+preserved. If you answer "y", the same word may appear in the output
+list with different capitalization (for example, "march" and "March").
+If you answer "n", the words in UPPER.LST will be lower-cased, and only
+one copy of any word will be written to the output list (e.g., the
+output will include "march" and "december", but not "March" or
+"December").
+
+12.  Upper-case acronyms (UCACR.LST).  These are acronyms which include
+capital letters.  (See AUXFILES.DOC for a full discussion of "acronym" as
+used here.)  These words are not considered valid for most word games,
+though there may be exceptions where their use is appropriate.  The same
+options apply as for UPPER.LST.  That is, you can choose whether case
+distinctions should be preserved or ignored.
+
+After you have thus selected the input files, you will be given three
+additional choices.  You will first be asked if you wish to expurgate the
+output list by removing potentially offensive words.  If you reply "y",
+you will be asked to select one of three expurgation levels.  If you
+intend to expurgate the MAKELIST output, it is very important that you
+read EXPURGAT.DOC first, to understand the process and to be able to
+choose an appropriate level of expurgation.  Next, you will be asked if
+you wish to exclude words that cannot be played at Scrabble due to the
+size of the board and the letter distribution.  If you reply "y", words
+longer than 15 letters and words impossible to play like "pizzazz" and
+"classlessnesses" will not be written to the output.  If you reply "n" to
+this question, you will be asked if you want to impose a limit on the
+length of the output words.  To write only words of length 20 or less,
+reply 20 to the question.  If you wish to have no limit, reply 0 or just
+hit enter.
+
+After the program completes, it will report on the number of words
+written, after which you must hit enter to terminate its execution.
+
+
+
+
+The OSPD is a trademark of the Milton Bradley Co., Inc.

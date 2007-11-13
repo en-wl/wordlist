@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cat r/ukacd/deaccented.lst \
+  | tr -d ' -'             \
+  > r/ukacd/squashed.lst

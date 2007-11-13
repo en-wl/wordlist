@@ -1,0 +1,13 @@
+#!/bin/sh
+
+spellings="`src/list-spellings`"
+classes="`src/list-classes`"
+
+for s in $spellings
+do
+  for c in $classes
+  do
+    echo -n '' $1$s-$c.$2
+  done
+done 
+echo

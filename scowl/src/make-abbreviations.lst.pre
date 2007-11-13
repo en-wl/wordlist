@@ -1,0 +1,39 @@
+#!/bin/sh
+
+cat r/special/roman-numerals | tr 'a-z' 'A-Z' \
+  | cat - r/special/roman-numerals            \
+  | sort | uniq                               \
+  > working/roman-numerals.tmp
+
+cat working/all.lst-unfiltered | grep "\." | cat - l/abbreviations/* \
+  | src/filter                                                       \
+  | sort | uniq                                                      \
+  | comm -23 - working/roman-numerals.tmp                            \
+  > working/abbreviations.lst.tmp
+
+cat working/all.lst                                \
+  | grep -E "^[A-Z]{2,}'?s?$"                      \
+  > working/acronyms.lst.tmp
+
+cat l/not-abbreviations/* working/known-upper.lst  \
+  | src/filter                                     \
+  | src/add-affixes                                \
+  | sort | uniq                                    \
+  > working/not-abbreviations.tmp
+
+cat working/abbreviations.lst.tmp            \
+  | sort | uniq                              \
+  | comm -23 - working/not-abbreviations.tmp \
+  | cat - working/acronyms.lst.tmp           \
+  | sort | uniq                              \
+  | comm -23 - r/special/never-abbreviations \
+  > working/abbreviations.lst.pre
+
+rm working/{abbreviations.lst,acronyms.lst,roman-numerals,not-abbreviations}.tmp
+
+
+
+
+
+
+

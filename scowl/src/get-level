@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+
+$/ = undef;
+open F, "l/levels-list";
+@levels = ("00", split(/[ \n]+/,<F>), "99");
+
+if ($ARGV[0] eq 'max') {
+    print $levels[$#levels-1];
+} elsif ($ARGV[0] eq 'min') {
+    print $levels[1];
+} else {
+    $pos = 0;
+    while ($levels[$pos] != $ARGV[1]) {
+	die if $pos == $#levels-1;
+	$pos++;
+    }
+    if ($ARGV[0] eq 'next') {
+    	print $levels[$pos+1];
+    } elsif ($ARGV[0] eq 'prev') {
+    	print $levels[$pos-1];
+    } else {
+	die;
+    }
+}
+print "\n";
+

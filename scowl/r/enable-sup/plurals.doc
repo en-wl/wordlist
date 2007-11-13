@@ -1,0 +1,1591 @@
+                      THE ENABLE2K "PLURAL REFORM"
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+
+All dictionaries, it would seem, have a "How to Use This Dictionary"
+section which assures the reader that, whenever a noun has an irregular or
+possibly confusing plural, all plurals will be explicitly stated in the
+corresponding entry.  In practice, all dictionaries routinely ignore this
+promise.  The result is that there are many nouns for which a correct
+plural or plurals cannot easily be determined, and one who wishes to do so
+is reduced to guesswork and pattern-matching.
+
+This fact of life has been a constant irritation during the compilation
+of ENABLE.  Midway into the compilation of ENABLE2K, I decided I'd really
+had enough of dealing with this in a piecemeal way.  I decided instead to
+undertake a thorough study of the entire "plural situation", by gathering
+information in one place about every listed noun lacking complete plural
+information.  Ultimately, a data base of around 800 words requiring careful
+consideration was compiled; many other words were given a more superficial
+examination.  A side effect of this crusade was the discovery of a number
+of plurals unnoted in previous versions of ENABLE whose correctness was
+very well documented.
+
+Kinds of words for which the correct plural might be in doubt include:
+
+1.  Scientific and technical words (e.g., paralysis).
+2.  Words of foreign origin (e.g., tableau).
+3.  Words ending in "f", "s" or "z" (e.g., asparagus).
+4.  Words ending in "o" (e.g., tomato).
+5.  Words with a collective meaning or unusual usage patterns (e.g.,
+    jailbait, dickens).
+6.  Words similar to other words with irregular plurals (e.g., mongoose,
+    shaman).
+
+To complicate matters, it is clear that dictionary writers omit plurals
+for a number of different reasons, including:
+
+1.  The word has a regular English plural, and the compilers do not
+    anticipate any difficulties (e.g., circus).
+2.  The word's plural(s) can be predicted from the plural of a suffix
+    or ending word from which the word is formed (e.g., airman,
+    psychoanalysis).
+3.  The word is of a sort for which the plural form is not often used
+    (e.g., diabetes).
+4.  The plural was carelessly omitted.  (Few examples can be proven,
+    but, after all, lexicographers are human too.  One clear example is
+    the omission of any plural for the word "flanken" by OSPD (r),
+    which is the *only* case I've found where OSPD fails to keep its
+    vow to explicitly state all inflections, or the lack thereof.)
+
+Whenever words of the classes listed above are shown in some of the
+source dictionaries without an explicit plural, a decision was needed as
+to which plurals to include in ENABLE2K and its supplemental lists.
+Attempting to codify binding rules for these decisions, though a useful
+exercise in recognizing English word patterns, was not adequate to solve
+the problem.  After failing to establish ironclad rules for plural
+determination, I have gradually developed a number of rules of thumb,
+including:
+
+1.  Any plural given in OSPD is taken on face value.  OSPD was based
+on several out-of-print dictionaries, and the fact that I can find no
+current source for a particular plural is not particularly germane.
+
+2.  In the absence of any other information, technical words of Latin or
+Greek origin are assumed to have only a Latin/Greek plural.  (Exceptions
+are chemical elements, for which OSPD clearly establishes that plurals are
+English-standard, and the names of species, where Latinate plurals are
+uncommon, though not unheard-of.)  This rule is based in part on the
+observed fact that such plurals are regularly omitted from dictionaries,
+but can generally be readily intuited by the scientifically literate
+reader.  Note that this rule carries somewhat more force for scientific and
+medical terms than for the vocabulary of fields like grammar, architecture
+and theology.  Also, it carries more weight for a word that "looks Greek"
+than for one whose foreignness is not obvious to the eye.
+
+3.  A corollary of the above rule is that words with certain suffixes can
+safely be assumed to have regular Greek or Latin plurals, which most
+dictionaries are likely to omit.  Words ending in -genesis, -iasis,
+-lysis, -osis, -stasis and -taxis, in particular, can be assumed to have
+plurals in which the "is" is changed to "es", unless another plural is
+explicitly shown.
+
+4.  In the absence of other information (such as formation from a suffix
+like -man, with its own pluralization patterns), non-technical words
+are assumed to have regular English plurals, even if another plural, such
+as a foreign plural, is plausible.  This is based in part on the idea that
+the dictionary cannot expect its readers to know a variety of non-English
+languages, and so is failing them if it neglects to give explicit foreign
+plurals.  Thus, when AHD3 gives no explicit plural for the word "sastruga",
+this must be a claim that "sastrugas" is a legitimate plural, since the
+alternative is to suppose that its compilers assumed all readers would be
+familiar enough with Russian (and its transliteration into the Roman
+alphabet) to guess the plural "sastrugi" instead. As another example,
+someone who looks up the word "arras" and finds no plural listed has no
+reason to suppose the plural is anything but "arrases", which we list in
+the ENABLE2K supplement despite the fact that one dictionary (MW10) shows
+only an explicit plural of "arras".  An exception to this rule is that any
+really appalling regular English plural will be rejected ("appalling" as
+measured by the ENABLE compilers, of course).  An example is the plural
+of "manyplies".  The failure of any source dictionary to show an explicit
+plural for this word would otherwise imply a plural of "manyplieses", but
+this construct so clashes with English word patterns as to be rejected on
+that basis.
+
+(It should be noted for the record that, unlike AHD3, AHD4 gives an
+explicit plural of "sastrugi" for "sastruga".  The word "hafiz", for
+which MW10 gives only the plural "hafis", but about which the other major
+dictionaries are silent, is perhaps now a better example.)
+
+5.  Suffix-based plurals are given more weight if they are confirmed by
+explicit plurals.  The fact that -man words pluralize in -men is well-
+confirmed.  The MW10 entry for -osis says it pluralizes in either -oses
+or -osises, but in fact an explicit plural of -osises is seldom seen.
+For this reason, we allow an -osises plural only if explicitly shown in
+one of the source dictionaries.  Finally, consider the suffix -enchyma.
+This is shown as having two plurals, -enchymas and -enchymata.  We
+reluctantly accept both plurals, the reluctance stemming from the fact
+that not a single word so suffixed is listed anywhere with an explicit
+plural.  This lack lends more credibility to the natural plural form.
+But since the suffix plural is the only piece of explicit information we
+have, we have no better option than to believe it, and list both plurals.
+
+6.  For help in resolving difficult cases, the ENABLE2K compilers have
+used a few secondary sources of additional information.  These are the
+Random House Unabridged Dictionary, the Merriam-Webster Medical Dictionary,
+the list of accepted words in British Scrabble(r) (OSW), and the list of
+words accepted by the Hasbro computer Scrabble game.  The Merriam-Webster
+Medical Dictionary was especially valuable for finding plurals of
+biological and medical words, not least because this dictionary is far
+more explicit about pluralization than any of the general-purpose
+dictionaries.  When MWMD shows no explicit plural for "bronchitis", one
+feels safe in assuming that it regards "bronchitises" as the only plural.
+If "bronchites" or "bronchitides" were considered acceptable, I feel
+certain MWMD would have made explicit mention of them.
+
+
+ENABLE2K is comprised of a main word list (short words from OSPD and
+long words from MW10), plus a number of additional lists.  When, as a
+result of this research, new plurals were found or previously recorded
+plurals were invalidated, there remained the issue of how to record the
+changes.  When plurals were invalidated, there was no choice but to remove
+them from the main list.  Invalid plurals were almost exclusively plurals
+of diseases.  In a few cases, on the authority of MWMD, a new disease
+plural was added directly to the main list.  This was especially necessary
+when all the previously recorded plurals for a disease had been removed.
+Beyond this, if a new plural was implied by an entry in MW10, the plural
+was added to the MW10ADD list.  For long words, if a plural was listed or
+implied by two other dictionaries (of the five used by ENABLE), it was
+added to the 2DICTS list.  Similarly, for short words, any plural listed
+or implied by a single source dictionary was added to the OSPDADD list.
+Finally, all new plurals which were not placed directly into the main list
+were added to the file PLURALS.LST.  This includes plurals of long words
+only noted by a single source as well as irregular plurals which are
+documented by no dictionary (other than OSW), but about which we are
+highly confident, such as "mimeses".
+
+Note that the discussion above applies only to plurals which were added
+for words already recognized as nouns.  It does not apply to any plural
+added for a word which was previously recognized only as an adjective or
+interjection.  For instance, the word "mutuals", the plural of a word
+which is described by OSPD as an adjective, is not present in PLURALS.LST.
+
+As stated above, detailed information was collected on 800 words, giving
+all possible reasonable (and sometimes unreasonable) plurals, together
+with the reasons for accepting them.  It is very unlikely that many
+readers would find this data anything other than an exercise in boredom.
+But I do think it worthwhile to list the final results, in terms of words
+removed from the list and words added.  In most cases, decisions about
+whether or not to include a possible plural were clear-cut.  In some
+cases, such decisions were very much subject to debate, and I have chosen
+to risk boring my audience by describing these situations.  Readers with
+less than obsessive interest in the subject may well wish to stop reading
+at this point.
+
+(I have chosen only to give data on plurals for words whose singular form
+is present in the main ENABLE2K word list.  However, similar decisions
+were also required for the plurals of words in the supplemental lists, and
+were made in the same way, for the same kinds of reasons.)
+
+The following purported plurals were removed from WORD.LST because no
+adequate justification could be found for including them.
+
+amyloidosises
+appendicites
+appendicitides
+ariboflavinosises
+babesiosises
+bronchites
+bronchitides
+carcinomatosises
+cellulitides
+cervicites
+cervicitides
+cholecystites
+cholecystitises
+conjunctivites
+conjunctivitides
+dermatites
+diverticulites
+diverticulitides
+diverticulosises
+endocytosises
+endometriosises
+endometrites
+endometritides
+epididymites
+epididymitides
+fibrosites
+fibrositides
+folluluiculites
+folluluiculitides
+gastroenteritises
+gingivites
+gingivitides
+hallucinosises
+hemochromatosises
+heterokaryosises
+histoplasmosises
+keratoconjuctivites
+keratoconjuctivitides
+laryngites
+laryngitises
+leukocytosises
+lymphocytosises
+mastoidites
+mastoiditises
+mononucleosises
+myxomatosises
+neurofibromatosises
+pediculosises
+periostites
+periostitides
+peritonites
+peritonitides
+pneumonites
+pneumonitises
+pollenosises
+pollinosises
+prediabeteses
+premaxillas
+pronephroses
+prostatites
+prostatitides
+psittacosises
+saccharomyceses
+salpiglosses
+salpingites
+salpingitides
+scintillae
+spondylites
+spondylitides
+sporotrichosises
+strongyloidosises
+tendinites
+tendinitides
+tendonites
+tendonitides
+thyroidites
+thyroiditides
+tonsillites
+tonsillitides
+tracheites
+tracheitides
+trichinosises
+tympaniteses
+urethrites
+urethritides
+vaginitises
+valvulites
+valvulitides
+vulvovaginitises
+
+As a general rule, additional plurals were added to an appropriate
+supplemental list rather than  to the main list.  However, a few were
+added directly to WORD.LST.  With one exception (salpiglossises), these
+were all plurals of medical terms supported by the MW Medical Dictionary.
+These additional plurals are:
+
+arteritides
+carditides
+gastritises
+pronephroi
+salpiglossises
+tsutsugamushis
+uveitides
+vaginitides
+vulvovaginitides
+
+The following plurals were explicitly mentioned by two dictionaries (for
+long words), or by one (for short words).  Because the evidence for these
+plurals is unequivocal, they were all added to the main ENABLE list as
+"signature words" (see SIGWORD.DOC) unless they were also present in the
+new MW10 words list (MW10ADD.LST).  Entries in this list marked with an
+asterisk are new to the first revision of the ENABLE2K supplement, and
+are not signature words, as the signature words were not changed for this
+revision.
+
+acciaccature
+aliyoth
+amphisbaenae
+antefixae
+antipastos
+armamentariums
+bacchanalias
+barramundies
+bedsoniae
+bialies
+bonsais
+buckos
+buncoes
+bunkoes
+cafetoria
+calvariums
+calzoni*
+cannolis
+canolas
+castratos
+chapaties
+chapatties
+chedarim
+chilis
+chitals
+colobuses
+concertini
+corneae
+corpuses
+coteaus
+creodonta
+cyclopes
+daemones
+dentaliums
+dickys
+dominatrixes
+droshkys
+droskys
+drosophilae
+effluviums*
+emeritas
+enchiridions
+enureses
+epineuria
+epitheliums
+esophaguses
+farragos
+fianchetti
+filses
+forzandi*
+frangipanis
+gateaus
+gemeinschaften
+gingkos*
+haftoros*
+haikus
+halachoth
+hamadryades
+helleris
+herbariums
+heterokarya
+kaddishes
+kiddushim
+klezmers
+kobos
+kois
+kolache
+kurtoses
+kwachas
+kylices
+mafiosos
+mahimahis
+megilloth
+metencephalons
+midrashot
+mikvos
+mikvot
+mucros
+muskellunges
+myelencephalons
+myrmidones*
+nairas
+nancys
+nereises
+notornes
+omnibusses
+osteites
+ostinati
+ouguiyas
+oxymorons
+palaestras
+palpebras
+pancratia
+panettoni
+paradores
+parae
+parashot
+pastorali
+penicilliums
+phylloxerae
+pingoes
+portamentos
+prezzes*
+proscenia
+prosomata
+protozoons
+qindarkas
+quadrivia
+quarterstaffs
+ranulae
+reais*
+rhinencephalons
+rilievos
+rubati
+saltarelli
+santimu*
+scarabaei
+schnozes
+scleromas
+scriptoriums
+siliculas
+siliquas
+sinfonias
+soleuses
+sostenuti
+spaetzles*
+spatzles
+squeteagues
+strappadoes
+substratums
+succubas
+superstratums
+synkarya
+talliths
+tandoors
+tectums
+tessiture
+thebes
+toeas
+triskelia
+tusses
+ulpans
+uredines
+usneae
+vibriones
+violoncellos
+vitelli
+wackoes
+wendigoes
+windigoes
+wizzes
+wunderkinds
+xystuses
+zoariums
+
+The following plurals were explicitly mentioned by only a single
+dictionary (and therefore were not added to the 2DICTS.LST file).
+
+administratrixes
+aggiornamenti
+andantini
+appoggiature
+barricados
+brontosauri
+buttinskys*
+chylomicra
+clostridiums
+condominia
+contralti
+cypripedia
+decrescendi
+diminuendoes
+encephalons
+epilimnia
+epiphenomenons
+fricandeaux
+gesellschaften
+hydromedusas
+kilohertzes
+megahertzes
+microfilarias
+millimicra*
+neurohypophysises
+oesophaguses
+opprobria
+perihelions
+phosphori
+pococuranti
+risorgimenti
+scherzandi
+stegosauri
+submaxillas
+tomatilloes
+zucchetti
+
+Determining the plurals for the following words was not completely
+obvious, and there is room for disagreement with my conclusions.  However,
+I am reasonably confident that I made the right choices.  Because of the
+potent for controversy, I am giving information about cases where plurals
+were not added as well as ones in which they were.  In the lists below,
+a "=" precedes a plural listed in the previous version of ENABLE which I
+retained, a "!" indicates a potential plural which was not added, a "+"
+indicates a plural which was added, and a "-" indicates a previously
+accepted plural which was rejected.
+
+acetum
+   =aceta, +acetums
+acromion
+   =acromia, +acromions
+agape
+   =agapae, =agapai, !agapes
+alewife
+   =alewives, !alewifes
+alnico
+   =alnicoes, +alnicos
+anestrus
+   =anestri, +anestruses
+anthrax
+   =anthraces, !anthraxes
+arcana
+   =arcana, +arcanas
+archenteron
+   +archentera, =archenterons
+arras
+   =arras, +arrases
+asparagus
+   =asparagus, +asparaguses
+barytes
+   =barytes, !baryteses
+behalf
+   !behalfs, =behalves
+blowby
+   !blowbies, =blowbys
+broadleaf
+   !broadleafs, =broadleaves
+bute
+   =bute, +butes
+buttinski
+   =buttinskies, +buttinskis
+cacoethes
+   =cacoethes, !cacoetheses
+cannelloni
+   =cannelloni, !cannellonis
+chlamydia
+   =chlamydiae, +chlamydias
+chloasma
+   +chloasmas, =chloasmata
+clavus
+   =clavi, !clavuses
+coloboma
+   !colobomas, =colobomata
+confetti
+   =confetti, !confettis
+coreopsis
+   =coreopsis, +coreopsises
+cowlstaff
+   =cowlstaffs, =cowlstaves
+culex
+   +culexes, =culices
+culpa
+   =culpae, !culpas
+czardas
+   =czardas, +czardases
+danish
+   =danish, +danishes
+dentalium
+   =dentalia, +dentaliums
+dessertspoonful
+   =dessertspoonfuls, =dessertspoonsful
+diencephalon
+   =diencephala, +diencephalons
+dipteron
+   =diptera, !dipterons
+endleaf
+   !endleafs, =endleaves
+epistaxis
+   =epistaxes, !epistaxises
+eremurus
+   =eremuri, !eremuruses
+exedra
+   =exedrae, +exedras
+falafel
+   =falafel, +falafels
+felafel
+   =felafel, +felafels
+fettucine
+   =fettucine, !fettucines
+fettucini
+   =fettucini, !fettucinis
+fettuccine
+   =fettuccine, !fettuccines
+fettuccini
+   =fettuccini, !fettuccinis
+flanken
+   =flanken, +flankens
+flyleaf
+   !flyleafs, =flyleaves
+fortis
+   =fortes, !fortises
+franglais
+   =franglais, !franglaises
+gaposis
+   !gaposes, =gaposises
+gesso
+   =gessoes, !gessos
+gingko
+   =gingkoes, !gingkos
+gnocchi
+   =gnocchi, !gnocchis
+gonion
+   =gonia, +gonions
+greek
+   =greek, !greeks
+gules
+   =gules, !guleses
+gusto
+   =gustoes, !gustos
+hades
+   =hades, !hadeses
+hafiz
+   =hafis, +hafizes
+herma
+   =hermae, =hermai, !hermas
+herpes
+   =herpes, !herpeses
+hesperidium
+   =hesperidia, !hesperidiums
+highlife
+   =highlifes, !highlives
+hokku
+   =hokku, !hokkus
+hornfels
+   =hornfels, !hornfelses
+hypolimnion
+   =hypolimnia, +hypolimnions
+impatiens
+   =impatiens, +impatienses
+inion
+   =inia, +inions
+kazachok
+   =kazachki, +kazachoks
+kermes
+   =kermes, +kermeses
+kerygma
+   +kerygmas, =kerygmata
+kreplach
+   =kreplach, !kreplaches
+kuchen
+   =kuchen, +kuchens
+laches
+   =laches, !lacheses
+leatherleaf
+   !leatherleafs, =leatherleaves
+lenis
+   =lenes, !lenises
+lexis
+   =lexes, +lexises
+linguine
+   =linguines
+linguini
+   =linguinis
+lues
+   =lues, !lueses
+manicotti
+   =manicotti, +manicottis
+meatloaf
+   =meatloaves, !meatloafs
+mesencephalon
+   =mesencephala, +mesencephalons
+mesenteron
+   =mesentera, !mesenterons
+mesonephros
+   =mesonephroi, !mesonephroses
+metanephros
+   =metanephroi, !metanephroses
+midlife
+   !midlifes, =midlives
+mooncalf
+   !mooncalfs, =mooncalves
+multimedia
+   =multimedia, =multimedias
+mythos
+   =mythoi, !mythoses
+nachas
+   =nachas, !nachases
+naches
+   =naches, !nacheses
+nene
+   =nene, +nenes
+nephritis
+   =nephritides, +nephritises
+notornis
+   +notornes, =notornis, +notornises
+nucha
+   =nuchae, !nuchas
+ornis
+   +ornises, =ornithes
+osculum
+   =oscula, !osculums
+parashah
+   +parashahs, =parashioth, +parashot, =parashoth
+peculium
+   =peculia, !peculiums
+plasmodesm
+   =plasmodesma, =plasmodesmata, +plasmodesms
+procambium
+   =procambia, =procambiums
+propylon
+   =propyla, +propylons
+prosencephalon
+   =prosencephala, !prosencephalas, +prosencephalons
+pseudomonas
+   =pseudomonades, !pseudomonases
+psoas
+   =psoae, =psoai, !psoases
+pyknosis
+   =pyknoses, !pyknosises
+qwerty
+   !qwerties, =qwertys
+rhombencephalon
+   =rhombencephala, +rhombencephalons
+rotorcraft
+   =rotorcraft, !rotorcrafts
+sanies
+   =sanies, !sanieses
+saphena
+   =saphenae, !saphenas
+sartorius
+   =sartorii, !sartoriuses
+sastruga
+   +sastrugas, =sastrugi
+scalenus
+   =scaleni, !scalenuses
+schul
+   =schuln, +schuls
+solidus
+   =solidi, +soliduses
+strappado
+   =strappadoes, +strappados
+superphenomenon
+   =superphenomena, +superphenomenons
+surimi
+   =surimi, +surimis
+swingby
+   !swingbies, =swingby
+tabes
+   =tabes, !tabeses
+taka
+   =taka, +takas
+tallis
+   +tallises, =tallisim
+tallit
+   +tallits, =tallitim
+taxis
+   =taxes, !taxises
+tegmentum
+   =tegmenta, !tegmentums
+telencephalon
+   =telencephala, +telencephalons
+testatrix
+   =testatrices, +testatrixes
+torr
+   =torr, +torrs
+tsimmes
+   =tsimmes, +tsimmeses
+tzimmes
+   =tzimmes, +tzimmeses
+utriculus
+   =utriculi, !utriculuses
+vagus
+   =vagi, !vaguses
+vermis
+   =vermes, !vermises
+viewdata
+   =viewdata, +viewdatas
+whiz
+   !whizes, =whizzes
+wildlife
+   =wildlife, !wildlifes, !wildlives
+witan
+   =witan, +witans
+zastruga
+   +zastrugas, =zastrugi
+
+(During the work on this revision of ENABLE2K, two further words with
+questionable plurals turned up.  These words were overlooked in the
+investigations described in the document.  The status quo for these
+words is not outrageous, so I have not made the attempt to resolve
+them at this time.  These words are:
+
+avoirdupois
+   !avoirdupois, =avoirdupoises
+flak
+   =flak, !flaks
+)
+
+Finally, we have the list of difficult cases.  These are the words for
+which I found decisions far from obvious, and where I think a reasonable
+reviewer might have good cause to question my conclusions.  For each
+potential plural, in additional to the marks described above, a "?" is
+used to indicate those plurals that are dubious, and a brief debate is
+given on the merits of accepting or rejecting the plural.  A * marks the
+"winning" side to such debates (which is almost always the last side to
+speak).  In some cases, you may well find the losing side of the debate
+more eloquent or convincing.  You may also find these decisions to be
+inconsistent, and that evidence for a plural adequate in one case was
+found inadequate in another.  Life is like that sometimes.
+
+aerenchyma
+   =aerenchymas, +?aerenchymata
+
+   Con: I have found no evidence at all for the use of "aerenchymata".
+  *Pro: MW10 shows that one plural of -enchyma is -enchymata.  In
+        practice, "aerenchyma" (a sort of tissue) is a word very
+        unlikely to be used in the plural, regular or not, so why
+        not accept the one slightly relevant piece of evidence we've
+        got?
+
+allodium
+   =allodia, +?allodiums
+alodium
+   =alodia, +?alodiums
+
+   Con: "allodium" is a technical legal term, for which one expects
+        a Latin plural, as shown by OSPD and RHWCD.
+  *Pro: "allodiums" is listed by OSW, and implied by WNW4.
+
+alphosis
+   =alphosises, +?alphoses
+
+   Con: OSPD says "alphosises" is the only plural of "alphosis".
+  *Pro: "alphosis" is a medical term.  For it not to have an -oses
+        plural would be highly surprising.
+
+apomixis
+   =apomixes, +?apomixises
+
+   Con: As a scientific word, "apomixis" should be assumed to have only
+        a Latinate plural.  Further, neither OSW nor OSPD lists
+        "apomixises".
+  *Pro: There is little consistency to the way that dictionaries list
+        plurals for words ending in -mixis.  Given the failure to show
+        an explicit plural of "apomixis" by several of the source
+        dictionaries, and the fact that a plural ending in -mixises is
+        listed, or even preferred, for other such words, it seems best
+        to accept such a plural here as well.  A close call.
+
+arteritis
+   =?arteritides, +arteritises
+
+   Con: I can find no sign of acceptance of "arteritides", except...
+  *Pro: According to the web pages describing TWL98, it accepts the
+        validity of "arteritides". Since the Merriam-Webster crew was
+        involved with defining TWL98, there may be something to it.
+
+asperges
+   =asperges, !?aspergeses
+
+   Pro: None of the source dictionaries indicate that "asperges" is
+        irregular.
+  *Con: It is most unusual for words ending in -es (pronounced "eez")
+        to add another -es for the plural.  ("herculeses" is an
+        exception.)
+
+behoof
+   !?behoofs, =behooves
+
+   Pro: Most of the source dictionaries do not show a special plural
+        for "behoof", and OSW lists "behoofs".
+  *Con: There is substantial documentation for "behooves" as the only
+        plural.  This is a very close call.
+
+bris
+   !?brises, =brisses
+
+   Pro: None of the source dictionaries (other than OSPD) show an
+        irregular plural, leading to a strong implication of the
+        correctness of "brises".
+  *Con: OSPD shows only "brisses", and, to my eye, "brisses" seems
+        much more natural.
+
+calo
+   =calo, +?calos
+
+   Con: With so little evidence, there's no point in trying to second-
+        guess OSPD.  Failure of MW10 to list a plural is probably
+        an oversight, or an indication of the lack of use of the plural.
+  *Pro: Because one expects irregular plurals for -o words, dictionaries
+        tend to list explicit plurals somewhat more often than for other
+        sorts of words.  Accordingly, failure to list a plural for one is
+        stronger evidence of regularity than in the general case.
+
+cementum
+   =cementa, +?cementums
+
+   Con: One expects "cementum", as a medical term, to have a Latinate
+        plural.
+  *Pro: So why doesn't any dictionary (other than OSPD and OSW)
+        document "cementa"?
+
+cestos
+   =cestoi, +?cestoses
+
+   Con: Another case of almost no evidence.  But RHWCD lists "cestos" as
+        a variant of "cestus", whose plural is "cesti".  This leads one
+        to expect a Latin/Greek plural for "cestos" as well.
+  *Pro: But RHWCD could say so, and it doesn't.  Further, "cestoses" is
+        in OSW.
+
+charisma
+   !?charismas, =charismata
+
+   Pro: Can you imagine Dan Rather contrasting the "charismata" of
+        the various presidential hopefuls?
+  *Con: But virtually all my sources are convinced "charismata" is
+        the only accepted plural.
+
+chlorenchyma
+   =chlorenchymas, +?chlorenchymata
+
+   See "aerenchyma".
+
+collenchyma
+   =collenchymas, +?collenchymata
+
+   See "aerenchyma".
+
+departed
+   =departed, !?departeds
+
+   Pro: There are precedents for this construction, such as "marrieds"
+        and "insureds".
+  *Con: But "departeds" just doesn't ring true.
+
+dihedron
+   +?dihedra, =dihedrons
+
+  *Pro: Anyone who studied geometry in high school knows the preferred
+        plural for -hedron is -hedra.  And OSW lists "dihedra".
+   Con: The listings in the primary dictionaries for the other -hedron
+        words give explicit -hedra plurals.  The absence of such listings
+        for "dihedron" is strong evidence against "dihedra".
+
+dynein
+   =dynein, +?dyneins
+
+   Con: Very little evidence here, as the word is listed only in OSPD
+        and MW10.  Best to trust OSPD.
+  *Pro: "dynein", a chemical name, is just not the sort of word one
+        expects to be its own plural.
+
+ecesis
+   +?eceses, =ecesises
+
+  *Pro: "ecesis" is a technical term, clearly of Greek origin, exactly
+        the sort of word one expects to have a -ses plural.
+   Con: OSPD says it's "ecesises", and I can't find any actual evidence
+        to overrule it.
+
+ed
+   =ed, +?eds
+
+   Con: In many contexts, "education" is a collective noun that doesn't
+        pluralize, and that "ed" should have the same property is quite
+        reasonable.
+  *Pro: But it's not obviously so, especially when no non-Scrabble
+        dictionary mentions it.
+
+endomixis
+   +?endomixes, =?endomixises
+
+   Con: Only OSPD and OSW say anything about plurals for this word.
+        There aren't enough -mixis words to establish a pattern.  For
+        the other -mixis words, MW10 lists a -mixes plural, but for
+        "endomixis" it does not.  This serves as evidence for
+        "endomixises".
+  *Pro: The "endomixes" plural is clearly more natural.  OSW lists both
+        plurals, which seems like a reasonable solution.
+
+enosis
+   !?enoses, =enosises
+
+   Pro: "enosis" is derived from Greek, and OSW shows "enoses" as the
+        plural.
+  *Con: "enosis" comes from modern, not ancient Greek, and is a
+        political rather than a scientific term, which makes the
+        absence of the usual -oses plural more plausible.
+
+fractus
+   =fracti, !?fractuses
+
+   Pro: WNW fails to give an explicit plural for "fractus".  Since WNW
+        is the only source dictionary listing this word, all the evidence
+        we have points to a regular English plural.
+  *Con: Other cloud names have only Latinate plurals.  Also, since
+        "fractus" is listed in only one source dictionary, there is
+        insufficent evident to overrule OSPD.
+
+gammadion
+   =gammadia, +gammadions
+
+   Con: "gammadion" is clearly Greek-derived, so why expect a regular
+        English plural?
+  *Pro: The documentation for "gammadia" is insufficent to make me
+        reject the implied "gammadions".
+
+gastritis
+   +?gastritides, +gastritises
+
+   See "arteritis".
+
+gelati
+   =gelati, +?gelatis
+
+   Con: "gelati" is already plural.
+  *Pro: Not according to several dictionaries.
+
+go
+    +?gos
+
+    Con: So what is the plural of the Japanese game "go"?  Is it "go",
+         since Japanese itself has no plural.  Or is it "goes", the same
+         as the plural of the verb "go"?
+   *Pro: In the absence of an explicit plural, "gos" is what you'd
+         expect.  And OSW lists it.
+
+grandiflora
+   =?grandiflorae, =grandifloras
+
+   Con: "grandiflora" is a species name, and such names only
+        infrequently have Latinate plurals.  Given the lack of
+        documentation for "grandiflorae", the logical assumption is
+        that only "grandifloras" is used.
+  *Pro: "flora" pluralizes as "florae" as well as "floras".  So why
+        shouldn't "grandiflora" follow the pattern?
+
+gravlax
+   =gravlax, !?gravlaxes
+
+   Pro: None of the non-OSPD sources indicate that "gravlax" is plural,
+        and OSW lists "gravlaxes".
+  *Con: In the definition of "gravlax" ("smoked salmon"), "salmon"
+        itself is plural.  How much more explicit do you need to
+        be?
+
+hao
+   =hao, !?haos
+
+   Pro: Neither RHWCD nor AH give an explicit plural for "hao".  Since
+        "hao" is a currency, this is enough justification to list it
+        (see "pula").
+  *Con: All other listed Vietnamese currencies are self-plural.  And
+        both RHWCD and AH, despite failing to specify a plural in their
+        definitions, use "hao" as a plural in their currency tables.
+
+hypermedia
+   =hypermedia, +?hypermedias
+
+   Con: "media" is plural, so is "hypermedia".
+  *Pro: MW10's rather strange definition of "hypermedia" ("a database
+        format") is clearly singular, with a meaningful plural.
+
+inion
+   =inia, +?inions
+
+   Con: "inion" is an anatomical term, and should have a Latinate plural.
+        OSPD says it does.  What's the problem?
+  *Pro: Only OSPD and OSW show the Latinate plural.  Everyone else,
+        including MW Medical, fails to mention it.  Especially since
+        "inion" doesn't look particularly foreign, this is most likely
+        intended to indicate a regular plural.
+
+jackanapes
+   =jackanapes, =?jackanapeses
+
+   Con: "jackanapeses"?  Aw, come on, pull the other one.
+  *Pro: "jackanapeses" is recognized by the Hasbro Scrabble game, and
+        only one source dictionary (Encarta (r)) contradicts this.  A
+        very close call.
+
+jailbait
+   =jailbait, !?jailbaits
+
+   Pro: "jailbait" means "a girl under the age of consent".  This clearly
+        has a meaningful plural.  In the absence of contrary information,
+        that plural must be "jailbaits".
+  *Con: "bait", in the sense of "food used as a fishing lure", is a
+        collective noun.  We speak of buying "bait", not "baits".
+        "jailbait" is derived from this usage of "bait".  Besides, can
+        anyone imagine overhearing "Oh man!  Look at those jailbaits!"
+
+jejunum
+   =jejuna, !?jejunums
+
+   Pro: A majority of the ENABLE dictionaries as well as MW10 leave out
+        any plural for "jejunum".  While the word is certainly strange,
+        it doesn't have the feel that would lead one to assume a Latin
+        plural.
+  *Con: No one but a medical professional is going to speak or write about
+        a "jejunum", much less more than one.  And MW Medical testifies
+        that they'll be using the -a plural.
+
+jiao
+   =jiao, !?jiaos
+
+   See "hao", replacing Vietnam with China.  (Since "jiao" is not listed
+   in MW10's currency table, the part of the argument about currency
+   tables does not apply.)
+
+kenosis
+   +?kenoses, =kenosises
+
+   See "mimesis".  It should be noted that it is almost impossible to
+   imagine a circumstance where "kenosis" might be used in the plural.
+
+lez
+   !?lezes, =lezzes
+
+   Pro: "lezes" is listed by OSW, and implied by WNW.  Additionally, the
+        plural of the variant spelling "les" is "leses", since "lesses" is
+        clearly wrong.
+  *Con: "lezzes" has more support, and is a far more sensible spelling.
+
+lochia
+   =lochia, +?lochias
+
+   Con: OSPD and The MW Medical Dictionary agree that "lochia" is its
+        own plural.  Isn't that enough?
+  *Pro: But none of the primary dictionaries that actually list
+        "lochia" support this conclusion.
+
+logos
+   =logoi, !?logoses
+
+   Pro: Besides OSPD, the only actual evidence for "logoi" is in
+        MW10 which, since it capitalizes "Logos", is irrelevant.
+  *Con: "logos" is a Greek word used as a technical term used in
+        philosophy and theology.  One expects a Greek plural, and one
+        assumes that anyone erudite enough to actually use the word will
+        recognize that.  Besides, "logoses" is awkward.  Another very
+        close call.
+
+lordosis
+   =lordoses, !?lordosises
+
+   Pro: "lordosis" is not an -osis in the usual way the suffix is
+        used.  A majority of the source dictionaries give no explicit
+        plural, which, in these cirucmstances, is support for a
+        regular English plural.
+  *Con: A sufficent number of sources document "lordoses" to make
+        "lordosises" rather unlikely.
+
+malines
+   =malines, !?malineses
+
+   Pro: "malines" is a fabric, it should have a plural.  And no
+        source dictionary shows it as its own plural.
+  *Con: The "s" in "malines" is silent.  Given that, is "malineses"
+        a reasonable spelling for the plural?  Besides which, a
+        variant of "malines" is "maline".  I consider it to be
+        possible that "malines" was originally a plural for which
+        the singular gradually dropped out of usage.
+
+mankind
+   =mankind, !?mankinds
+
+   Pro: OSW lists "mankinds", and none of the source dictionaries
+        actually labels "mankind" as already plural.
+  *Con: "mankinds"?  You gotta be kidding!
+
+metacercaria
+   =metacercariae, !?metacercarias
+
+   Pro: MW10 is the only dictionary listing "metacercaria", and it
+        implies a regular plural.
+  *Con: Three tertiary sources, including the MW Medical Dictionary,
+        give the plural as "metacercariae", and it is the sort of
+        word one expects to have an irregular plural.
+
+mimesis
+   +?mimeses, =mimesises
+
+   Con: OSPD shows "mimesis" as regular, and no source dictionary
+        contradicts this.
+  *Pro: This word screams for a Latinate plural, which is listed by
+        OSW.
+
+muggins
+   =muggins, +?mugginses
+
+   Con: "mugginses" is pretty damn unnatural.
+  *Pro: It's not all that much worse than "joneses".  And it's listed
+        by OSW.  Still, a very close call.
+
+natriuresis
+   =natriureses, !?natriuresises
+
+   Pro: No source actually lists "natriureses", including the MW
+        Medical Dictionary.  Because MWMD is so consistently precise
+        about plurals, this is strong evidence that in fact the plural
+        is regular.
+  *Con: Not strong enough!
+
+noesis
+   +?noeses, =noesises
+
+   See "mimesis".
+
+omphalos
+   =omphali, +?omphaloses
+
+   Con: It's Greek, and obviously Greek.  Enough said.
+  *Pro: Though I don't know Greek, if "omphalos" took a Greek plural, and
+        conformed to the pattern of other Greek-derived -os words in
+        English, its plural would be "omphaloi".  For this reason, failure
+        of multiple dictionaries to list an explicit plural cannot be
+        construed as evidence for "omphali".
+
+omphaloskepsis
+   =omphaloskepses, !?omphaloskepsises
+
+   Pro: This is one of the most frustrating words of the 170,000 in
+        ENABLE2K, because there is no evidence!  In the absence of
+        evidence, we have no choice but to assume a regular plural.
+  *Con: Not so.  "omphaloskepsis" reeks of Greek.  Do you really
+        think it has an regular English plural?  (Either way, or
+        even both ways at once, I'm not convinced.)
+
+once
+   =once, +?onces
+
+   Con: It seems that "once" is a noun, meaning "one single time".
+        OK, but can a word meaning "one single time" actually have a
+        plural?
+  *Pro: Sure.  Here's an example:  "We had each tried LSD once, but
+        our onces had affected us quite differently."
+
+oyes
+   !?oyeses, =oyesses
+
+   Pro: "oyeses" is listed in OSW, and implied by a solid majority
+        of the source dictionaries.
+  *Con: "oyesses" is a far more reasonable plural, and is adequately
+        documented.
+
+oyez
+   =oyesses, !?oyezes
+
+   Pro: See "oyes" Pro.  In addition, "oyesses" is a pretty weird
+        plural for "oyez".  If it were beyond dispute, don't you
+        think that all of the dictionaries would have mentioned it?
+  *Con: Yes, there is a strong case for "oyezes".  But if I accept
+        it, I have little justification for rejecting "oyeses" as
+        a plural of "oyes", even though it seems to me clearly wrong.
+
+panmixis
+   +panmixes, +?panmixises
+
+   See "apomixis" and "endomixis".  (One difference from "endomixis":
+   OSW does not list "panmixes", but OSPD does.)
+
+parenchyma
+   =parenchymas, +?parenchymata
+
+   See "aerenchyma".
+
+paterfamilias
+   !?paterfamiliases, =patresfamilias
+
+   Pro: "paterfamiliases" is implied by RHWCD, and explicitly listed
+        by RH Unabridged.
+  *Con: Insufficent, when compared to the weight of evidence against
+        it.
+
+penne
+    =penne, !?pennes
+
+    Pro: "pennes" is listed by OSW, and implied by Encarta.
+   *Con: Admittedly, some pastas are plural and some pastas are
+         singular.  But the evidence that "penne" is plural is
+         much stronger than the evidence it is not.
+
+pereion
+   +pereia, !?pereions
+pereon
+   +perea, !?pereons
+
+   Pro: The only listing of these words outside of OSPD is in MW10, and
+        it implies a regular plural.
+  *Con: You expect a word meaning "an anatomical part of a crustacean" to
+        have a regular plural?
+
+pinyin
+   =pinyin, !?pinyins
+
+   Pro: "pinyins" is clearly implied everywhere "pinyin" is listed,
+        including OSPD (before emendation by TWL98).
+  *Con: But TWL98 got it right.  There is only one "pinyin".
+
+pocketful:
+   =pocketfuls, =?pocketsful
+
+   Con: "pocketsful" is cited as a valid plural by AH3, but not by MW10.
+        Also, since MW10 lists the only plural of the suffix -ful as
+        -fuls, "pocketsful" is not even implied by MW10.  Since the main
+        ENABLE word list should contain only words from OSPD and MW10,
+        "pocketsful" should be removed.
+  *Pro: "pocketsful" was added to the list of valid words by the TWL98
+        committee.  Where plausible, such changes should be included
+        even without support from MW10 (see also "mongoloids" and
+        "samaritans".)
+
+postcava
+   =postcavae, !?postcavas
+
+   Pro: If there were a word "cava" with plural "cavae", the implication
+        of "postcavae" would be strong.  Without it, the failure of MW10
+        and AH3 to show a plural must be considered evidence favoring
+        "postcavas".
+  *Con: There is no explicit evidence for "postcavas" and one expects
+        a Latinate plural for such anatomical terms.  Also, "postcavae"
+        is implied by the plural "venae cavae" of "vena cava".  A close
+        call.
+
+pronephros
+   +pronephra, +pronephroi, -?pronephroses
+
+  *Pro: The Hasbro Scrabble game accepts "pronephroses".  While
+        this is not the strongest possible evidence, we should not
+        casually disregard it.
+   Con: The evidence for the irregular plurals is strong, and it
+        is likely that the entries showing no explicit plural (MW10
+        and WNW) are oversights rather than testimony for a regular
+        plural.  Also, there is no particular evidence of a regular
+        plural for *any* -nephros word.  Yet another close call.
+
+prosenchyma
+   =prosenchymas, +?prosenchymata
+
+   See "aerenchyma".
+
+pseudoparenchyma
+   =pseudoparenchymas, +?pseudoparenchymata
+
+   See "aerenchyma".
+
+puerperium
+   =puerperia, !?puerperiums
+
+  *Con: A clear majority of the sources list "puerperia" as the only
+        plural, including MW Medical.
+   Pro: Yeah, I suppose so.  But my intuitions lead me to expect
+        "puerperiums" to also be acceptable.  While "puerperium" does
+        indeed have a medical aspect, it's not quite the same sort of
+        word as "diverticulum".
+
+pula
+   =pula, +?pulas
+
+   Con: The evidence for "pula" is very weak, consisting of OSW and
+        an omitted plural in AH3.
+  *Pro: Currency plurals are one of the issues on which dictionaries
+        strongly disagree.  By analogy with other currencies, AH3's
+        omitted plural is better read as an endorsement of "pulas"
+        than as some kind of oversight.
+
+pyrosis
+   +?pyroses, =pyrosises
+
+   See "mimesis".
+
+quadrivium
+   +quadrivia, =?quadriviums
+
+   Con: The issue is not whether to accept "quadrivia", which is
+        listed by multiple sources, but whether to also accept
+        "quadriviums".  One notes that there is unanimity that
+        the only plural of "trivium" is "trivia".  Why should
+        "quadrivium" be any different?
+  *Pro: But a majority of the sources, including MW10, give no
+        indication of an irregular plural.  Besides, the Hasbro
+        game recognizes "quadriviums", and that should count for
+        something.
+
+rapini
+   =rapini, +?rapinis
+
+   Con: The situation of this word is *really* muddled.  It is not
+        even in the paper OSPD, though there is good evidence it's
+        supposed to be.  It's an alternate spelling for "rappini",
+        which, according to OSPD and most other sources, is already
+        plural, implying the nonexistence of "rapinis".
+  *Pro: The definition of "rapini" in MW10 is a singular definition,
+        not a plural.  Further, the Hasbro Scrabble computer game
+        dictionary includes a definition of "rapini" as a word with a
+        regular plural.  (It must be admitted, however, that the Hasbro
+        game, despite the definition, does not actually accept "rapinis".)
+
+rappini
+   =rappini, +?rappinis
+
+   See "rapini".  The sitation is slightly different, since the Hasbro
+   game agrees with OSPD in this instance, but since "rapini" and
+   "rappini" are alternate spellings of the same word, they ought not to
+   have different forms of pluralization, at least not without good
+   documentation thereof.
+
+reticulum
+   =reticula, !?reticulums
+
+   Pro: "reticulums" is implied by MW10, and listed in OSW.
+  *Con: Not very good evidence compared the rest of the American
+        lexicographic world, all of which accept only "reticula".
+        A close call.
+
+rufiyaa
+   =rufiyaa, +?rufiyaas
+
+   See "pula".
+
+seecatch
+   !?seecatches, =seecatchie
+
+   Pro: WNW4 fails to list a plural for "seecatch".  This can't be
+        construed as support for "seecatchie", which is obviously a most
+        unusual pluralization.
+  *Con: Actually, WNW4 lists "seecatchie" as an alternate form of
+        "seecatch".  Three other sources agree that "seecatchie" is
+        the plural; the WNW4 entry is most easily explained as the
+        result of confusion, rather than as evidence for "seecatches".
+
+serpigo
+   =serpigines, =serpigoes, !?serpigos
+
+   Pro: More sources imply a regular plural for "serpigo" than list an
+        irregular one.
+  *Con: "serpigo" is a disease, and there is seldom call to use it in
+        the plural.  No more than this should be read from the failure
+        to mention a specific plural.
+
+shrapnel
+   =shrapnel, +?shrapnels
+
+   Con: No reason to doubt OSPD and MW10 on this one.
+  *Pro: In addition to the meaning of "fragments from a shell", an
+        inherently plural meaning, "shrapnel" can also mean "a shell
+        designed to scatter shrapnel".  This meaning is singular, and
+        pretty obviously has a regular plural.  This is confirmed by
+        OSW.
+
+skepsis
+   !?skepses, =?skepsises
+
+   Pro: We've seen "omphalos" and "ompahloskepsis" - now here's the
+        missing piece.  While it's true that no one lists the plural
+        "skepses", that didn't keep us from accepting "mimeses" or
+        "pyroses".
+  *Con: This time, OSW agrees with OSPD, and lists only "skepsises".
+        It's still a close thing, but without other evidence I'm not
+        inclined to overrule them both.
+
+spermatheca
+   =spermathecae, !?spermathecas
+
+   Pro: Three sources imply a regular plural for "spermatheca"; only one
+        lists "spermathecae".
+  *Con: A "spermatheca" is a kind of "theca", for which only the single
+        plural "thecae" is listed.  Someone used to discussing thecae
+        would clearly use the corresponding plural for the derived word.
+
+stereopsis
+   =stereopses, =stereopsides, !?stereopsises
+
+   Pro: Other than the listing of -opsis in MW10, which shows plurals of
+        -opses and -opsides, there is no evidence of any plural but a
+        regular English one.
+  *Con: "stereopsis" means "stereoscopic vision"; it is unlikely to be
+        used in the plural.  This, rather than regularity, is the reason
+        that lexicographers don't bother to list a plural.  Given this,
+        the MW10 suffix information is the best we have.
+
+supersedeas
+   =supersedeas, !?supersedeases
+
+   Pro: "supersedeas" doesn't conform to any of the patterns of self-
+        plural English words, and unlike many such constructions,
+        "supersedeases" sounds (to me) quite natural.  And only OSPD and
+        RHWCD support the "supersedeas" plural.
+  *Con: "supersedeas" is an old (15th century) legal term.  A regular
+        plural is not especially to be expected.  Still, a close call.
+
+synesis
+   +?syneses, =sysesises
+
+   See "mimesis".
+
+telos
+   =teloi, +?teloses
+
+   Con: See "logos".
+  *Pro: "logos" is not listed in OSW.  "telos" is, and according to OSW
+        the plural is "teloses".
+
+triskelion
+   +triskelia, =?triskelions
+
+   Con: The issue is not "triskelia", which is well-documented, but
+        "triskelions", which is not accepted by any of ENABLE2K's sources
+        except the Hasbro Scrabble computer game.  MW10's failure to list
+        an explicit plural is most likely an oversight.
+  *Pro: Nothing about "triskelion" leads one to doubt MW10's implication
+        of a regular plural.  See "gammadion".
+
+tsooris
+   =tsooris, !?tsoorises
+tsores
+   =tsores, !?tsoreses
+tsoris
+   =tsoris, !?tsorises
+tsorris
+   =tsorris, !?tsorrises
+tsouris
+   =tsouris, !?tsourises
+tsuris
+   =tsuris, !?tsurises
+
+   Pro: Not one of the listings for all these spellings of "tsuris" (the
+        most accepted spelling) other than OSPD implies that the word is
+        its own plural.  If it were, it seems like someone would have
+        mentioned it.
+  *Con: Mendel assures me from personal experience that, as a Yiddish
+        synonym for "troubles", "tsuris" is already plural.  While the
+        lexicographical evidence seems (to me) to support "tsurises", et.
+        al., real word usage trumps scholarship, and I trust Mendel's
+        expertise.  (Whether his expertise was in Yiddish, or in troubles,
+        he didn't say.)
+
+tympanites
+   =?tympanites, -?tympaniteses
+
+  *Con: "tympanites" is a medical condition, ending with an -eez sound.
+        Such words (diabetes, calvities, rabies, etc.) consistently
+        remain unchanged in the plural.  The only source for the -eses
+        plural is the Hasbro Scrabble CD-ROM, not a source which, by
+        itself, lends much credibility.
+   Pro: Maybe so, but why doesn't anyone document this?  Even MW Medical
+        implies a regular plural.  The -eses plural is ugly, but it is
+        more consistent with the lexicographical evidence than the
+        alternative.  This is another extremely close call.
+
+tzuris
+   =tzuris, !?tzurises
+
+   See "tsooris", et. al.
+
+varia
+   =varia, +?varias
+
+   Con: "varia" is already plural.
+  *Pro: According to AH3, a "varia" is a "miscellany", a word with a
+        singular meaning which admits a plural.
+
+waterleaf
+   =waterleafs, !?waterleaves
+
+   Pro: While the "waterleafs" plural is well-documented, it is likely
+        that "waterleaves" is also valid.  Several dictionaries list no
+        plural for "waterleaf".  This implies a regular plural, which is
+        "waterleaves", not "waterleafs".
+  *Con: The listings for other plants whose names end in -leaf explicitly
+        list the -leaves plural.  This leads me to believe that, in fact,
+        a -leaves plural is considered irregular, and that omission of a
+        plural actually implies -leafs.  (While all dictionaries state
+        that implicit plurals are assumed to be regular, they don't
+        generally state what regularity means.  Usually, it's obvious,
+        but sometimes, as here or for words like "whiz" and "yes", a few
+        details would be helpful.)
+
+womankind
+   =womankind, !?womankinds
+womenkind
+   =womenkind, !?womenkinds
+
+   See "mankind".
+
+
+---
+Scrabble is a trademark of the Milton Bradley Co., Inc.
+The OSPD is a trademark of the Milton Bradley Co., Inc.
+Encarta is a trademark of the Microsoft Corp.
+
+
+
+--Alan Beale

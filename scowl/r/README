@@ -1,0 +1,58 @@
+This directory contains the source of the raw data.  In order for the
+word lists to compile you will need to unpack all of the various word
+lists in the proper directory.
+
+The following word lists, which are created or distributed by me,
+are available at http://wordlist.sourceforge.net/.
+
+varcon:
+  Variant Conversion Info (VARCON)
+
+infl:
+  Inflection Database
+
+pos:
+  Part of Speech Database
+
+alt12dicts:
+  Unofficial Alternate 12 Dicts Package
+
+special:
+  Special words lists that I added myself.
+  Nothing needs to be downloaded for this directory.
+
+Plus the following additinal word list from various locations: 
+(These files are also available at http://wordlist.sourceforge.net/src/)
+
+census:
+  1990 Census Name Files
+  http://www.census.gov/genealogy/names/
+
+enable:
+  Updated millennial edition of ENABLE (ENABLE2K)
+  http://personal.riverusers.com/~thegrendel/enable2k.zip
+  http://members.tripod.com/~the_grendel/enable2k.zip
+
+enable-sup:
+  Updated ENABLE SUPPLEMENT
+  http://personal.riverusers.com/~thegrendel/supp2k.zip
+  http://members.tripod.com/~the_grendel/supp2k.zip
+
+mwords:
+  The Moby Words Package.
+  http://www.dcs.shef.ac.uk/research/ilash/Moby/
+  ftp://sable.ox.ac.uk/pub/wordlists/Moby/
+
+uk-freq-class:
+  UK English Wordlist With Frequency Classification
+  April 2002
+  http://www.cl.cam.ac.uk/users/bck1/menu.html
+
+ukacd:
+  The UK Advanced Cryptics Dictionary (UKACD)
+
+yawl:
+  Updated Y2K version of YAWL
+  http://metalab.unc.edu/pub/Linux/libs/yawl-0.2.tar.gz
+  http://personal.riverusers.com/~thegrendel/yawl-0.2.tar.gz
+

@@ -1,0 +1,54 @@
+                        THE "CHECKSUM" PROGRAM
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+A "checksum" is a uniquely generated file signature, a sort of digital
+certificate of authenticity for that file. It is a number calculated
+from the very contents of the file. Changing a single character in the
+file results in a different checksum. This makes it easy to determine
+whether a file has been tampered with or altered.
+
+A generic checksum utility might work by assigning each character (letter)
+in the tested file a numerical value according to its relative position in
+the alphabet. If we were to give 'a' a value of 1, then 'b' would be 2,
+'c' would be 3... and finally 'z' would become 26. Finding the sum of
+all the numbers associated with the characters in a word file would
+yield a ridiculously large number, so, at periodic intervals, one could
+divide the running total by a cleverly chosen "magic number" and only
+keep the remainder. Throw in an additional factor to distinguish adjacent
+characters from one another, so that a transposition of letters makes a
+difference in the final total. To increase security, output the checksum
+in hexadecimal, or base 16 notation, so that the letters 'a' through
+'f' stand for the decimal numbers 10 through 15.  Simple, yet effective.
+
+For all you technical types, this is nothing more than a simple "hashing"
+algorithm, nevertheless, it serves its purpose by detecting most instances
+of tampering and alteration in files
+
+The first release of ENABLE used a checksum utility written by one
+of the maintainers of that list. That particular checksum program
+had a clever hack to return the same checksum for both the DOS and
+UNIX versions of an otherwise identical list. In the interests of
+increased security, the original checksum program will no longer be
+distributed with ENABLE. Users of the ENABLE list wishing to verify
+that their copy of the list is pristine are now urged to download the
+"MD5 Command Line Message Digest Utility", written by Ron Rivest
+(of RSA fame) from http://www.fourmilab.ch/md5/. The "md5.zip"
+file from that site contains both a 32-bit Windows binary and the
+source code for a UNIX build. The md5 signature for the WORD.LST
+file in ENABLE2K is B175518814B6B8787CFE34C7BB8705B6 (if the file is
+converted to UNIX format, with the CR's removed, the md5 signature is
+E942E9E884090D2BDB02265864882231).  The maintainers of the ENABLE list
+regret that they can offer no assistance in using "md5".
+
+Those interesting in delving more deeply into the subject of file security
+may obtain Phil Zimmerman's "PGP" program. It is considerably more secure,
+if more complex, than even the excellent md5 package. The excellent book,
+PGP: PRETTY GOOD PRIVACY, by Simon Garfinkel (O'Reilly & Associates,
+Inc., ISBN 1-56592-098-8), gives in depth coverage on the subject.
+
+
+                                 M\Cooper
+                                PO Box 237
+                       St. David, AZ  85630-0237
+                        thegrendel@theriver.com
+               http://personal.riverusers.com/~thegrendel/

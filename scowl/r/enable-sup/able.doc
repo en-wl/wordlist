@@ -1,0 +1,55 @@
+The ABLE (Alternate British LExicon) list purports to represent the
+contents of the fourth edition of OSW, plus longer words from the 1997
+Chambers Dictionary.  The notorious OSW is itself based on the Chambers
+Dictionary, which is the official reference for Scrabble players in
+Britain.  We have removed words duplicated in the ENABLE list to reduce
+the size of the archive.
+
+Due to copyright considerations, the maintainers of ENABLE could
+not reproduce the "official" OSW. Under highly obscure circumstances,
+however, we came into possession of an equivalent list. It seems that a
+mysterious individual, identifying himself only as "The Third Man" (with
+more than a slight resemblance to the young Orson Wells), handed over a
+sealed diplomatic pouch on a dark and stormy night to a cashiered ex-MI6
+operative. There were strains of zither music in the background, and the
+whole sordid affair had a tinge of disreputable sleaziness. Somehow, a
+bundle of papers from the pouch found its way into a dumpster behind the
+Pentagon, from whence it was retrieved by an inebriated denizen of the
+nearby Men's Shelter. There the tangled trail of this latter day version
+of the Pentagon Papers vanished until... Years later, one of the ENABLE
+maintainers purchased a battered, but otherwise undistinguished statuette
+of a black falcon from the venerable auction firm of Spade & Archer. The
+base of the statuette, next to the "Made in Malta" inscription, seemed
+to contain a hollow space. Within it was a sheaf of yellowing mildewy
+papers. It was a handwritten word list, the last surviving facsimile of
+the ABLE list! ...And the rest, as they say, is history.
+
+For this revision of the ENABLE2K Supplement, the ABLE list has been
+improved in the following ways.  It has incorporated changes from the
+fourth edition of OSW.  A significant number of errors have been
+corrected.  And finally, two more controversial changes have been
+made.  First, OSW contains a small number of words which are not valid
+Scrabble plays according to American rules.  These include foreign
+words (bitte), words with no part of speech (winna) and words
+containing capital letters (pH).  These words have been removed from
+the ABLE list.  Additionally, in the process of revising ABLE, we
+discovered a number of cases where we believe the compilers of OSW
+have misinterpreted Chambers.  There are both words whose inclusion
+is not justified (chilioi, which appears only in an etymology) and
+words which should have been included but were not (coinop).  We
+have corrected both sorts of errors, and regard these changes as
+"signature words" for ABLE.  (Perhaps a better term would be "signature
+corrections", as some words were removed rather than added.)
+
+Further information on Alan Beale's researches on ABLE, including the
+complete ABLE list without removal of words duplicated in ENABLE, is
+available as an additional supplement to ENABLE2K.  This supplement
+also contains full lists of the invalid Scrabble words and the
+"signature corrections".
+
+
+By combining the "ABLE.LST" file from this archive with "WORD.LST"
+from ENABLE2K, interested parties can create a workable version of the
+"SOWPODS" list beloved of tournament word gamers. This may be accomplished
+either using Alan Beale's "makelist" utility or by a simple UNIX pipe
+(cat WORD.LST ABLE.LST | sort | uniq > SOWPODS.LST).

@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+
+$inc_level = 0;
+if ($ARGV[0] ne '') {
+  $inc_level = $ARGV[0];
+}
+
+print STDERR "Include Level: $inc_level\n";
+
+if ($ARGV[1] eq 'use-all') {
+
+  print STDERR "Skipping Remove List\n";
+
+} else {
+  
+  open F, "r/alt12dicts/2of12id.txt" or die;
+  
+  while (<F>) {
+    s/\r?\n$// or die;
+    ($d,$w,$p,$a) = /^(\-?)(\w+) (.).*: ?(.*)$/ or die;
+    my @a = $a =~ /([~@-]*\w+)/g;
+    @a = map {"$d$_"} @a if ($d);
+    my (@a0,@a1);
+    foreach (@a) {if (s/^[~-]//) {push @a0, $_} else {push @a1, $_}}
+    $remove{"$w:$p"} = 1 unless @a1;
+    foreach (@a0) {$remove{"$w:$p:$_"} = 1}
+  }
+}
+
+open F, "r/infl/infl.txt" or die;
+
+while (<F>) {
+  ($w,$p,$a) = /(\S+) (.).*: (.+)/ or die;
+  next if $remove{"$w:$p"};
+  @a = split /, | \| /, $a;
+  @a = grep {my ($word,$tags,$level) 
+		 = /^([A-Za-z\']+)([~<!?]*)(| [\d.]+)(| {\S+})$/ or die $_;
+	     $_ = $word;
+	     $tags !~ /~|\?|!</ && $level <= $inc_level} @a;
+  @a = grep {not $remove{"$w:$p:$_"}} @a;
+  next unless @a;
+  $lookup{$w} .= join("\n",@a)."\n";
+}
+
+while (<STDIN>) {
+  print;
+  chop;
+  print $lookup{$_};
+}

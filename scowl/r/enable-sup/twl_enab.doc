@@ -1,0 +1,234 @@
+                           ENABLE vs. TWL98
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+The NSA updated "Tournament Word List" (TWL98) is the official reference
+for tournament and club Scrabble (tm) play.  It is available only to
+members of the NSA.  Some time ago, a list purporting to be the TWL98 list
+appeared on the web.  Because the TWL98 is not available to non-NSA
+members, we are unable to verify that the posted list is in fact identical
+to TWL98.  However, Mendel and I believe it is likely that this list is
+in fact TWL98.  It includes the publicized differences between TWL98
+and earlier lists, and also contains some of the same errors that
+characterized the DOOM list, from which the TWL98 list was supposedly
+derived.
+
+When we downloaded the purported TWL98 list, we immediately compared it to
+the original ENABLE list, discovering two errors in ENABLE, and five
+judgment calls where we felt that TWL98 had made better choices than
+we had.  Accordingly, the words "discontinuaton" and "discontinuations",
+which were erroneously omitted from ENABLE, were added.  Additionally the
+words "antidiabetics", "nonabstracts" and "overbreathings" were added.
+These are all inflections of words given in MW10 without a part of speech.
+However, all are plausible.  Further, "antidiabetics" is listed in the
+MW Medical Dictionary, and "nonabstracts" in RH Unabridged.  Whether to
+include these words is a judgment call, and we decided to add them.
+Finally, as part of the "plural reform" effort for ENABLE2K, the plural
+"salpiglosses", for which there is no evidence, was removed and replaced
+by "salpiglossises", which was the only plural listed by the purported
+TWL98.  The omitted plural "tsutsugamushis", present in TWL98, was added
+as well.
+
+The remaining differences between ENABLE (without signature words or new
+MW10 words) and the purported TWL98 can be classified into three groups of
+words, two being systematic differences, and then a small set of
+miscellaneous differences.  These differences are described below.
+
+The single biggest set of differences between purported TWL98 and ENABLE
+is the result of the ENABLE2K "plural reform" (see PLURALS.DOC).  Through
+this effort, many questionable plurals in the earlier ENABLE (and in the
+purported TWL98) were deleted, and a few new plurals were added.  The
+following plurals are present in the purported TWL98, but we can find no
+convincing evidence of their validity:
+
+amyloidosises
+appendicites
+appendicitides
+babesiosises
+bronchites
+bronchitides
+cellulitides
+cervicites
+cervicitides
+cholecystites
+cholecystitises
+conjunctivites
+dermatites
+diverticulites
+endocardites
+endocarditides
+endocytosises
+endometriosises
+endometrites
+endometritides
+eneterocolites
+eneterocolitides
+epididymites
+epididymitides
+fibrosites
+fibrositides
+folliculites
+folliculitides
+gingivites
+gingivitides
+hallucinosises
+heterozygosises
+homozygosises
+hyperhidrosises
+laryngites
+laryngitises
+leatherleafs
+leukocytosises
+lymphanites
+lymphanitides
+lymphocytosises
+mastoidites
+mastoiditises
+myelofibrosises
+myocarsites
+myocarsitides
+myxomatosises
+pediculosises
+pericardites
+pericarditises
+periostites
+periostitides
+peritonites
+peritonitides
+pneumonites
+pneumonitides
+pollenosises
+pollinosises
+prediabeteses
+premaxillas
+prostatites
+prostatitides
+saccharomyceses
+salpingites
+salpingitides
+scintillae
+spondylites
+spondylitides
+tendinites
+tendinitides
+tendonites
+tendonitides
+thyroidites
+thyroiditides
+tonsillites
+tonsillitides
+tracheites
+tracheitides
+trichinosises
+tympaniteses
+urethrites
+urethritides
+vaginitises
+valvulites
+valvulitides
+
+Similarly, the following plurals were added to ENABLE, but are not present
+in the purported TWL98:
+
+arteritises
+carditides
+gastritises
+uveitides
+vaginitides
+
+The other systematic source of differences between the purported TWL98 and
+ENABLE has to do with the "also called" words (see DOOM_ENA.DOC).  When
+ENABLE was first released, one of its innovations was to add all the words
+from MW10 referenced from other entries using a phrase like "also called
+elliptical".  These words are generally present in the purported TWL98 as
+well as in ENABLE, but the purported TWL98 tends to omit the plurals of
+"also-called" words which are nouns.  Accordingly, the following plurals
+are present in ENABLE, but left out of the purported TWL98:
+
+diamondbacks
+ellipticals
+exponentials
+greaseproofs
+hypoglossals
+incandescents
+trigeminals
+
+
+Finally, we have a collection of miscellaneous differences between the two
+lists.  An annotated list of these differences follows.  A word preceded
+by a + is present in ENABLE but not in the purported TWL98, and the
+opposite for a word preceded by a -.
+
++anticolonials - "anticolonial" is listed by MW10 without a part of
+     speech.  Random House Unabridged calls "anticolonial" a noun,
+     justifying the inclusion of a plural.
++antisubversives - MW10 lists no part of speech for "antisubversive".
+     While there is no evidence one way or the other, we find the
+     existence of a plural very plausible.
+-antitakeovers - Again, no part of speech is listed.  We find this plural
+     implausible, and chose not to include it, despite a citation by RH
+     Unabridged.
+-bassett - This word was added to ENABLE as a result of the TWL98
+     announcement, as an "also called" word, referenced from the MW10
+     entry for "basset hound".  The extra "t" was always a little
+     puzzling.  The most recent edition of MW10 corrects the entry to
+     refer to "basset".  We have therefore removed "bassett" and its
+     plural.
+-bassetts - See above.
++chlorenchymata - There are a number of "-enchyma" words in MW10, none of
+     which is given an explicit plural.  TWL98 uses the plural form
+     -enchymata for some of them but not for others.  In the absence of
+     hard evidence, we have chosen to list this form for all such words.
++grandstanded - The correct past tense of "grandstand".
+-grandstood - An absurd past tense of "grandstand".
++hypoglycemics - "hypoglycemic" is listed as a noun in MW10.
++interwrought - An implied past tense of "interwork".
+-kafkaesque - This word is capitalized in MW10, and is rightfully not
+     present in ENABLE2K.
++mediterranean - Listed in MW10.
+-nonconcurrents - "nonconcurrent" is listed by MW10 without a part of
+     speech.  We consider this plural unconvincing and have chosen to
+     omit it, despite a citation by RH Unabridged.
++parenchymata - Another -enchyma plural (see above).
+-potshotted - A ridiculous past tense for "potshot", directly contradicted
+     by both the MW10 entry and by OSPD (tm).
++predischarged - "predischarge" is listed in MW10 without a part of speech.
+     We have given it verb tenses, based on the entry in RH Unabridged.
++predischarging - See above.
+-preluncheons - This is plausible, but "predinners" was removed from the
+     acceptable word list by the official TWL98 changes.  If "predinners"
+     is invalid, then "preluncheons" is as well.
++premarketings - "premarketing" is listed by MW10 without a part of
+     speech.  We believe it to be a noun, and have included a plural.
+     The situation is confused because the original TWL98 announcements
+     claimed that "premarketing" should be removed, despite its inclusion
+     in MW10.
+-schmaltzier - We believe "schamltzier" and "schmaltziest" to be valid
+     words.  However, they cannot be justified on the basis of MW10.  We
+     therefore omit them from the ENABLE list proper, and have added them
+     as "signature words".
+-schmaltziest - See above.
+-superheavies - "superheavy" is listed by MW10 without a part of speech.
+     We see no reason to suppose it should be considered a noun.
+-superjumbos - Similarly, we have no reason to imagine that "superjumbo"
+     is considered a noun.
++trapeziums - Listed in MW10.
+-ultrarights - Removed from ENABLE by analogy with the official TWL98's
+     rejection of "ultralefts".
+-uncoatings - "uncoating" is listed by MW10 without a part of speech.  We
+     find this plural quite implausible, and can find no evidence that
+     "uncoating" is accepted as a noun.
+
+
+[It should be noted that the TWL98 addition of "starfruit" and
+"starfruits" was based on an error in the definition of the word
+"carambola" which has been corrected in the most recent editions of
+MW10.  These words will be removed from the ENABLE2K list the next time
+it is revised.]
+
+
+---
+Scrabble is a trademark of the Milton Bradley Co., Inc.
+The OSPD is a trademark of the Milton Bradley Co., Inc.
+
+
+--Alan Beale

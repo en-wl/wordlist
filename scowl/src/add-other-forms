@@ -1,0 +1,40 @@
+#!/usr/bin/perl
+
+open F, "r/alt12dicts/2of12id.txt" or die;
+
+while (<F>) {
+  s/\r?\n$// or die;
+  ($d,$w,$p,$a) = /^(\-?)(\w+) (.).*: ?(.*?)$/ or die;
+  next if $d eq '-'; #
+  @a0 = split /  /, $a;
+  splice @a0, -1, 0, "'" if $p eq 'V' && @a0 >= 3;
+  @a = ();
+  foreach (@a0) {
+    s/ {.+?}//g; s/ \(.+?\)//g; 
+    s/ \| / /g; s/ \/ / /g;
+    push @a, (split / /, $_);
+  }
+  @a = grep {!/^[@~-]/} @a;
+  @a0 = grep {$_ ne "'"} @a;
+  next unless @a0;
+  $words = join("\n",$w, @a0)."\n";
+  if ($p eq 'V' && @a >= 4) {
+    while ($a[0] ne "'") {local $_ = shift @a; $lookup{$_} .= $words}
+    shift @a;
+  }
+  $words = join("\n",$w, @a)."\n";
+  foreach (@a) {$lookup{$_} .= $words}
+}
+
+open F, "working/possessive.lst";
+
+while (<F>) {
+  chop;
+  $lookup{"$_\'s"} .= "$_\n";
+}
+
+while (<STDIN>) {
+  print;
+  chop;
+  print $lookup{$_};
+}

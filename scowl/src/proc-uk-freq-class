@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+
+use IO::Handle;
+
+chdir "r/uk-freq-class/" or die;
+
+for $i (0 ... 16) {
+    $f[$i] = new IO::Handle;
+    open $f[$i], ">uk.".sprintf("%02u",$i);
+}
+
+open F, "wlist.html";
+
+while(<F>) {
+    /^(\S+) (\S+)\n/ or next;
+    $f[$2]->print("$1\n");
+}

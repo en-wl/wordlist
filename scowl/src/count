@@ -1,0 +1,10 @@
+#!/bin/sh
+
+c=0
+for f in 10 20 35 40 50 55 60 70 80 95
+do
+  n=`cat final/english-{words,abbreviations,contractions}.$f 2> /dev/null | wc -l `
+  p=`cat final/english-{proper-names,upper}.$f 2> /dev/null | wc -l`
+  c=`expr $c + $n + $p`
+  echo $f $n $p $c
+done

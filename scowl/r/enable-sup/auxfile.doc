@@ -1,0 +1,144 @@
+                           AUXILIARY WORD LISTS
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+
+The ENABLE2K supplement includes a number of auxiliary files of words
+not generally allowed in Scrabble (r), but which may be of use in
+Scrabble variants, anagramming, or other word games.  They may also
+possibly be of general interest.
+
+The rules of Scrabble make the following requirements on playable
+words:
+
+1.  They must have a traditional part of speech (noun, adjective, etc.),
+2.  They must not be capitalized (interpreted in American play as not
+    allowing any capital letters),
+3.  They must not be abbreviations, prefixes or suffixes,
+4.  They must not require a hyphen or apostrophe (or any other symbol
+    which is not a letter).
+
+In addition to the words forbidden by these rules, two other sorts of
+words are by general agreement forbidden, though they would seem to be
+allowed by the above list.  These are acronyms, and inflections of
+one-letter words.
+
+Some acronyms, such as "snafu" and "awol" are not problematic for
+Scrabble, while others, such as "pdq" and "tko", are.  The distinction
+is whether the word is pronounced as a sequence of letters.  For
+purposes of this discussion, I limit the use of the word "acronym" to
+this latter class.  (I also stipulate that "Io" is not an acronym in
+this sense, despite its pronunciation.  This will be relevant if "Io"
+(a kind of moth) ever loses its capitalization.)
+
+Acronyms of this sort have generally been listed in dictionaries as
+abbreviations, but in recent years, with the proliferation of acronyms in
+everyday usage, this practice is changing.  Some dictionaries now list
+many acronyms as full-fledged words with parts of speech.  For instance, a
+majority of popular American dictionaries list "pdq" as an adverb.  Such
+acronyms do not seem to be excluded by the rules listed above.  In fact,
+the word "pdq" is listed in printed copies of the OSPD (r) third edition,
+though I understand this listing is considered to be erroneous.  The file
+LCACR.LST contains all the lower-case acronyms listed with a part of
+speech by any of the 5 ENABLE source dictionaries (see 2DICTS.DOC).  In
+the absence of better information, plural formation by adding a lower-case
+"s" has been assumed.  I have to mention that the acronym "rbi" is given a
+secondary pronunciation by the Webster's New World College Dictionary,
+which is the same as that of "ribby".  If this pronunciation ever becomes
+the primary pronunciation, I will have to reluctantly accept "rbi" as a
+full-fledged English word.
+
+(I note, for the record, that the decisions made by lexicographers as
+to which acronyms are words and which abbreviations seem quite arbitrary.
+Why "pdq" is an adverb, but "asap", which is even pronounceable, is not,
+is a mystery.  One presumes that with the passage of time standards will
+be developed for making this distinction, and that lexicographers will
+do better at abiding by them.)
+
+Another set of troublesome words is the set containing inflections of
+one-letter words, such as "ps" and "xed".  Nothing in the Scrabble
+rules forbids these words, which are listed by several of the source
+dictionaries, including MW10.  Despite this, in practice these words
+are never allowed.  These words, which are otherwise self-explanatory,
+are listed in the file LETTERS.LST.
+
+Yet a third set of troublesome words is the set of "pronunciation
+spellings", which includes "gonna", "wanna" and "lemme".  (The
+Encarta (r) dictionary calls these words "contractions", which is
+perhaps a better designation.)  These words are clearly not allowed in
+Scrabble play, as they have no part of speech.  Words of this sort from
+the ENABLE2K source dictionaries are listed in the file NOPOS.LST.  I note
+four words which resemble pronunciation spellings, but which are listed in
+OSPDADD.LST because they have parts of speech: "gotcha", an interjection,
+"gotta", a verb, and "outa"/"outta", which are prepositions.
+
+ENABLE2K includes two additional files of interesting words containing
+upper-case characters (and therefore unavailable for use in Scrabble).
+These files were inspired by the description in the printed OSPD of
+permitted Scrabble words.  Instead of giving a non-capitalization
+requirement, OSPD states that "proper names" are not allowed.  This is
+of course inaccurate, as not every capitalized word is a proper name
+(e.g., "Iraqi", "Napoleonic", "Pleistocene" or "Ritalin"), and not
+every proper name is capitalized (e.g., "pinyin", "cinquecento").  This
+misstatement inspired the production of a list of capitalized words
+which are not proper names from two of the source dictionaries (MW10
+and WNW4; AHD4 and RHWCD2 were added for the second version of the
+ENABLE2K Supplement).  Actually, two lists were produced, UPPER.LST,
+which contains most such words, and UCACR.LST, which contains those words
+which are acronyms.  (The definition of "acronym" given above is used
+here, so that "SAM", "GUI" and even "RFLP" are not considered to be
+acronyms.  In fact, I treat any word pronounced as the sequence of its
+letters as an acronym, even when the word does not conform to the
+classical definition.  For instance, I treat "Rx" as an acronym, even
+though it does not abbreviate any "R- x-" phrase.)
+
+In many cases, it was not completely straightforward to decide whether
+a word was or was not a proper name, and doubtless some of my decisions
+were wrong.  I included a name if any definition was not a proper name,
+even if the most common definition was.  For instance, I included
+"Solomon" (a very wise man), even though the most common use of this
+word is as a proper name.  Some of the assumptions I made in winnowing
+out the proper names were as follows:  Names of languages (both human
+and computer) are proper names, but names of religions and ideologies
+are not.  Names of holy books (like "Bible" and "Avesta") are not proper
+names, but chapters of such books are.  Designations of specific times
+or historical events (like "Holocaust") are proper names, but recurring
+events ("January") or prophecied events which have not yet taken place
+("Ragnarok") are not.  Of course, all these rules apply only to nouns,
+not to other parts of speech.  The noun "Arabic" could not be listed,
+but the adjective was no problem.  I went strictly "by the book" in this
+regard.  "Romansch" is defined as a noun (a regional language of
+Switzerland).  From this, one could reasonably infer that "Romansch" is
+also used as an adjective, but since this part of speech was never
+explicitly shown, I chose not to include this word.  I maintained a
+similar pedantic distinction between dynasties (proper names) and dynasty
+members (not proper names), thus explaining why "Hohenzollern" is listed,
+but "Medici" is not.
+
+Determining the plurals of many of these upper-case words proved even
+more challenging than for their lower-case brethren.  Listed plurals
+usually represent my best guess, and may therefore be incorrect,
+perhaps, upon occasion, laughably so.  For nouns with a final capital
+letter (whether pronounced as acronyms or not), I assume a plural
+ending in "'s", unless some other plural is listed.  Thus, for most of
+the acronymic words, no plural is shown.
+
+I should further note that I assumed that all trade marks which were
+not marked with a part of speech were nouns, and had plurals.  This
+upon occasion resulted in some dubious entries like "FedExes" and
+"Technicolors" in the list.
+
+Even if the upper-case word lists are worthless for your intended use
+of ENABLE, they are worth glancing at, if for no other reason than as a
+reminder of how arbitrary the distinctions between noun, proper name and
+abbreviation (like most formal distinctions in the English language)
+actually are.
+
+
+---
+Scrabble is a trademark of the Milton Bradley Co., Inc.
+The OSPD is a trademark of the Milton Bradley Co., Inc.
+Encarta is a trademark of the Microsoft Corp.
+
+
+
+--Alan Beale

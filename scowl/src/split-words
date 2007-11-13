@@ -1,0 +1,48 @@
+#!/bin/sh
+
+rm -f working/*.$1.pre
+
+comm -12 working/words.$1 r/varcon/american.lst \
+  > working/american-all.$1.pre
+
+comm -12 working/words.$1 r/varcon/british.lst \
+  > working/british-all.$1.pre
+
+comm -12 working/words.$1 r/varcon/british_z.lst \
+  > working/british_z-all.$1.pre
+
+comm -12 working/words.$1 r/varcon/canadian.lst \
+  > working/canadian-all.$1.pre
+
+comm -12 working/words.$1 working/variant_0.lst   \
+  > working/variant_0-all.$1.pre
+
+comm -12 working/words.$1 working/variant_1.lst   \
+  > working/variant_1-all.$1.pre
+
+comm -12 working/words.$1 working/variant_2.lst   \
+  > working/variant_2-all.$1.pre
+
+cat working/*-all.$1.pre         \
+  | sort | uniq                  \
+  | comm -13 - working/words.$1  \
+  > working/english-all.$1.pre
+
+for s in `src/list-spellings`
+do
+  for c in `src/list-classes -1`
+  do
+    comm -12 working/$s-all.$1.pre working/$c.lst > working/$s-$c.$1.pre
+    cat working/$s-$c.$1.pre >> working/$s-other.$1.pre
+  done
+  sort working/$s-other.$1.pre | uniq \
+    | comm -13 - working/$s-all.$1.pre \
+    > working/$s-words.$1.pre
+  #rm working/$s-{all,other}.$1.pre
+done
+
+
+
+
+
+

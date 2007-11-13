@@ -1,0 +1,10 @@
+#!/bin/sh
+
+comm -23 working/known-upper.lst working/abbreviations.lst  \
+  | src/add-possessive                                      \
+  | src/add-other-spellings                                 \
+  | sort | uniq                                             \
+  > working/upper.lst
+
+
+

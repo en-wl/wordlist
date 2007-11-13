@@ -1,0 +1,43 @@
+#!/bin/sh
+
+echo clean
+
+make -s clean
+
+rm -rf scowl-$1
+rm -f scowl-$1.*
+
+echo levels
+
+rm l/levels-list 2> /dev/null
+ls -lRF l | sed 's/^.*kevina.*..:.. /  /' | sed '/total/d' > l.dir
+tar cf l.tar l/
+
+echo copy
+
+mkdir scowl-$1
+
+mkdir scowl-$1/r/
+cp r/README scowl-$1/r/
+cp -a r/special scowl-$1/r/
+
+cd r/
+for d in `ls -I README -I special -I ATTIC`
+do
+  cd $d
+  mkdir ../../scowl-$1/r/$d/
+  cp `cat .keep` ../../scowl-$1/r/$d/
+  cd ..
+done
+cd ..
+
+cp -a README Makefile l.dir l.tar src final scowl-$1/
+
+echo tar
+tar cf scowl-$1.tar scowl-$1/
+gzip -9 scowl-$1.tar
+
+echo zip
+cd scowl-$1
+zip -q9lr ../scowl-$1.zip *
+

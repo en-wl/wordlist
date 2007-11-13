@@ -1,0 +1,45 @@
+                List of Files in the ENABLE Archive
+                ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+
+WORD.LST        This is the ENABLE word list for word game players.
+README          Introduction to the ENABLE word list.
+ENABLE.DOC      Commentary on the ENABLE word list.
+SIGWORD.LST     List of 1024 "signature" words contained in the
+                ENABLE2K WORD.LST.
+SIGWORD.DOC     Commentary on the version 1 "signature" words.
+SIGWD2K.DOC     Commentary on the "signature" words in this updated edition of
+                ENABLE.
+MW10ADD.LST     New words from latest edition of "Merriam Webster", 10th
+                edition (added to WORD.LST)
+MW10ADD.DOC     Documentation on the MW10ADD.LST list.
+CHECKSUM.DOC    Documentation for the md5 "checksum" program.
+
+FILE_ID.DIZ     Descriptor files for BBS and ftp distribution sites.
+VENDINFO.DIZ
+DESC.SDI
+AVEXTRA.TXT
+
+README.1ST      This file.
+
+
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+
+The ENABLE list has been placed in the Public Domain. This means it is free 
+and freely distributable. No fees, registrations, or "contributions" are 
+required for its use. 
+
+
+Note that it is strongly suggested that the SUPP2K.ZIP supplementary
+archive be obtained, as it contains essential additional documentation
+for the ENABLE list.
+                      It may be downloaded from 
+         http://personal.riverusers.com/~thegrendel/software.html
+
+
+
+
+                                      M\Cooper
+                               thegrendel@theriver.com
+                    http://personal.riverusers.com/~thegrendel/

@@ -1,0 +1,68 @@
+                           THE MW10ADD WORD LIST
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+
+The Merriam-Webster's Collegiate dictionary, tenth edition, generally
+referred to as MW10, is by far the most significant English dictionary for
+the American Scrabble (r) player.  It is the only source for long words
+(more than 8 letters) permitted in tournament Scrabble play.  Additionally,
+it is one of the source dictionaries from which OSPD (r), the authority for
+short words in tournament play, was compiled.  It should be noted that,
+even though the name MW10 is cited as if it defined a unique reference,
+revisions of MW10 are printed regularly, generally with a number of new
+words added each printing.  But because the OSPD is also published by
+Merriam-Webster, OSPD has done a far better job of tracking changes to
+MW10 than for any other of the source dictionaries.  (We have identified
+over 4000 words from the other source dictionaries eligible for but
+omitted from OSPD.  The ENABLE2K supplement includes the file OSPDADD.LST,
+which lists these words, together with eligible words from the Encarta (r)
+World English Dictionary, which is not an OSPD source dictionary.)
+
+Despite the above, we have identified about 250 words listed in or implied
+by the 2000 edition of MW10 which are not in OSPD or, as far as we can
+tell, in the TWL98 list which governs tournament Scrabble play.  These
+words have all been added to the ENABLE WORD.LST; additionally, we have
+listed them in the file MW10ADD.LST.  (Because we have released this
+version of the ENABLE2K supplement without updating the main ENABLE2K
+archive, changes to the MW10ADD list for this supplement are not reflected
+in WORD.LST.)  The words in MW10ADD.LST fall into three classes.
+
+One class is composed of words which have been added to MW10 since
+1998.  This includes words like "ecoterrorist", "velociraptor" and "tyiyn"
+(a currency unit of Kyrgyzstan).  We feel safe in predicting that whenever
+the official word list for tournament Scrabble is revised, whether via a
+revision of OSPD or a TWL200x replacing TWL98, these words will be on it.
+
+Another class of MW10ADD.LST words is made up of words which have been in
+MW10 for some time, but which appear to have been overlooked in the
+assembly or maintenance of OSPD.  Most of these words are plurals of nouns
+which are listed by OSPD as adjectives, such as "gnostics" and "modernes".
+
+The third class of words is potentially more controversial.  This list
+consists of plurals implied by MW10, but not listed in OSPD or, as far as
+we can tell, in TWL98.  Examples of such words are "inions", "archentera"
+and "testatrixes".  These words were identified as part of a larger
+effort to identify plurals omitted from OSPD and TWL98, which is discussed
+in excruciating detail in the file PLURALS.DOC in the ENABLE2K supplement.
+It is also worth mentioning that very few of these plural forms are
+explicitly listed in MW10, and therefore that the validity of some or all
+of them is open to debate.  This is in contrast to the words in the first
+two classes, for which the evidence is unequivocal.
+
+Because of the importance of MW10 to the serious Scrabble player, we
+believe the inclusion of all these words in the ENABLE2K WORD.LST to be
+completely justified.  However, they are of course not yet considered
+acceptable in tournament Scrabble play.  Users of ENABLE who would prefer
+to exclude these words can easily do so using the MAKELIST utility in the
+ENABLE2K supplement, the UNIX comm command, or, in the worst case, a text
+editor.
+
+
+---
+Scrabble is a trademark of the Milton Bradley Co., Inc.
+The OSPD is a trademark of the Milton Bradley Co., Inc.
+Encarta is a trademark of the Microsoft Corp.
+
+
+
+--Alan Beale

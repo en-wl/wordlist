@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cat l/accented/* | src/find-accented | sort | uniq > working/with-accents.lst
+cat working/with-accents.lst | src/deaccent > working/without-accents.lst
+

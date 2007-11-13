@@ -1,0 +1,45 @@
+#!/usr/bin/perl
+
+sub strip_plurel() 
+{
+    local $_ = $_[0];
+    my @l;
+    push @l, "$1y" if /^(.+)ies$/;
+    push @l, "$1Y" if /^(.+)IES$/;
+    push @l, $1    if /^(.+)es$/i;
+    push @l, $1    if /^(.+)s$/i;
+    return @l;
+}
+
+if ($#ARGV == -1) {
+    $in = STDIN;
+} else {
+    $in = "IN";
+    open $in, $ARGV[0] or die;
+}
+
+while (<$in>) {
+    chop;
+    $lookup{$_} = 1;
+}
+
+if ($#ARGV == -1) {
+    $out = STDOUT;
+} else {
+    close $in;
+    $out = "OUT";
+    open $out, ">$ARGV[0]" or die;
+}
+
+foreach $w (keys lookup) 
+{
+    my $dont_print = 0;
+    foreach $s (&strip_plurel($w)) 
+    {
+	if (exists $lookup{$s}) 
+	{
+	    $dont_print = 1;
+	}
+    }
+    print $out "$w\n" unless $dont_print;
+}

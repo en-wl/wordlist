@@ -1,0 +1,44 @@
+#!/usr/bin/perl
+
+sub strip_plurel() 
+{
+    local $_ = $_[0];
+    my @l;
+    push @l, "$1y" if /^(.+)[iI]es$/;
+    push @l, $1    if /^(.+)es$/;
+    push @l, $1    if /^(.+?)\'?s$/;
+    return @l;
+}
+
+# STDIN contains the the list of words which contain the base forms
+
+while (<STDIN>) {
+    print unless $ARGV[1] eq "noecho";
+    chop;
+    $lookup{$_} = 1;
+}
+
+# ARGV[0] is the file of words with possible 's's that we want to 
+# extract provided the base from is was in the above list
+
+open IN, $ARGV[0] or die;
+
+while (<IN>) {
+    chop;
+    my $print = 0;
+    foreach $s (&strip_plurel($_)) 
+    {
+	if (exists $lookup{$s}) 
+	{
+	    $print = 1;
+	}
+    }
+    print "$_\n" if $print;
+}
+
+
+
+
+
+
+

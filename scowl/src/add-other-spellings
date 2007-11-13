@@ -1,0 +1,52 @@
+#!/usr/bin/perl
+
+while(<STDIN>) {
+    chop;
+    $words{$_} = '';
+    $know_about{$_} = 1;
+}
+
+sub valid_entry ( $ ){local $_ = $_[0]; /^[A-Za-z\']+$/ && exists $words{$_}}
+
+foreach my $f (qw(working/variant_0.lst working/variant_1.lst 
+		  working/variant_2.lst r/varcon/abbc.tab))
+{
+  open F, $f or die "Unable to open $f\n";
+  while (<F>) {
+    my (@words) = split /[\t\n]+/;
+    $know_about{$_} = 1 foreach @words;
+  }
+}
+
+open F, "r/varcon/voc.tab" or die;
+ 
+while (<F>) {
+    s/\(.+\)\n/\n/;
+    my ($word) = grep {valid_entry $_} (split /[,\t\n]/);
+    next unless defined $word;
+    y/,\t -/\n/;
+    $words{$word} .= $_;
+}
+
+open F, "r/varcon/variant.tab" or die;
+
+while (<F>) {
+    @w = grep {$know_about{$_}} (split /[\t\n]/);
+    next unless @w && grep {valid_entry $_} @w;
+    $words{$w[0]} .= "$_\n" foreach @w;
+}
+
+open F, "r/varcon/variant-wroot.tab" or die;
+
+while (<F>) {
+    s/^(.+)\:\t// or die;
+    my $root = $1;
+    next unless exists $words{$root};
+    @w = grep {$know_about{$_}} (split /[\t\n]/);
+    next unless @w && grep {valid_entry $_} @w;
+    $words{$w[0]} .= "$_\n" foreach @w;
+}
+
+while (($key, $value) = each %words) {
+    print "$key\n$value";
+}

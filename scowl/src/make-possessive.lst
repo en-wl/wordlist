@@ -1,0 +1,9 @@
+#!/bin/sh
+
+src/extract-possessive | sort | uniq         \
+  | comm -23 - working/abbreviations.lst.pre \
+  | cat - working/proper-names.lst           \
+  | comm -23 - r/special/not-possessive      \
+  | grep -v "'"                              \
+  | src/remove-plurals                       \
+  | sort | uniq > working/possessive.lst

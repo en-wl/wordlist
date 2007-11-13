@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+
+while (<>) 
+{
+  s/\r?\n$// or die;
+  s/[.:]$//;
+  next if /[ .\/-]/;
+  print "$_\n";
+  die unless /^[A-Za-z']+$/;
+}

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo -n src/split-words  
+echo -n '' working/variant_0.lst
+echo -n '' working/variant_1.lst
+echo -n '' working/variant_2.lst
+echo -n '' working/words.$1 r/varcon/split r/varcon/american.lst
+for c in `src/list-classes -1`
+do
+  echo -n '' working/$c.lst
+done
+echo

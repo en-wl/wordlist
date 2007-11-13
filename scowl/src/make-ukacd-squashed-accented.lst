@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cat r/ukacd/UKACD17.TXT \
+  | tr -d '\r -'        \
+  > r/ukacd/squashed-accented.lst
+

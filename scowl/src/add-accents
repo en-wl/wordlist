@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+
+open A, "working/with-accents.lst";
+open B, "working/without-accents.lst";
+
+for (;;) 
+{
+  $with_accent = <A> or last;
+  chop $with_accent;
+  $without_accent = <B> or die;
+  chop $without_accent;
+  $lookup{$without_accent} = $with_accent;
+}
+
+while (<STDIN>) {
+  chop;
+  if (exists $lookup{$_}) {
+    print "$lookup{$_}\n";
+  } else {
+    my $w = $_;
+    s/\'s$//;
+    if (exists $lookup{$_}) {
+      print "$lookup{$_}'s\n";
+    } else {
+      print "$w\n";
+    }
+  }
+}
+
+

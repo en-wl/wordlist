@@ -1,0 +1,21 @@
+#!/bin/bash
+
+n=$1
+nn=`src/get-level prev $1`
+
+for b in `src/list-combin`
+do
+  i=0
+  rm -f final/$b$n
+  comm -13 working/$b$nn.pre working/$b$n.pre \
+    | src/add-accents \
+    | sort | uniq \
+    > final/$b$n
+  if [ ! -s final/$b$n ]
+  then
+    rm final/$b$n
+  fi
+done
+
+
+

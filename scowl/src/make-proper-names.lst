@@ -1,0 +1,20 @@
+#!/bin/sh
+
+cat working/all.lst | grep "^[A-Z]"           \
+  | comm -23 - working/abbreviations.lst.pre  \
+  | cat - l/proper-names/*                    \
+  | src/add-other-spellings                   \
+  | src/find-ss working/all.lst               \
+  | sed "s/^\(.*\)'s\$/\1/"                   \
+  | src/filter                                \
+  | sort | uniq                               \
+  | comm -23 - working/known-upper.lst        \
+  | sed "s/^\(.*\)/\1 \1's/"                  \
+  | tr ' ' '\n'                               \
+  | sort | uniq                               \
+  > working/proper-names.lst
+
+
+
+
+

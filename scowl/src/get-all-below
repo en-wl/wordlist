@@ -1,0 +1,17 @@
+#!/bin/bash
+
+shopt -s nullglob
+
+i=`src/get-level min`
+while [ $i -le $1 ]
+do
+  fl="$fl `echo l/$2/$i/*`"
+  i=`src/get-level next $i`
+done
+
+echo $fl
+
+
+
+
+

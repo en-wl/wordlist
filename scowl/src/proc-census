@@ -1,0 +1,39 @@
+#!/usr/bin/perl
+
+@namefiles = qw(21986na.mes 3897male.nam 4946fema.len);
+
+foreach $f (@namefiles) {
+    open IN, "l/proper-names/$f" or die;
+    while (<IN>) {
+	tr /\r\n//d;
+	my $proper = $_;
+	tr /\'//d;
+	tr /[a-z]/[A-Z]/;
+	next if !/^[A-Z]+$/;
+	$proper{$_} = $proper;
+    }
+}
+
+chdir "r/census";
+
+@files = qw(dist.all.last  dist.female.first  dist.male.first);
+
+foreach $f (@files) {
+    open IN, $f;
+    $of = $f.".lst";
+    open OUT, ">$of";
+    $i = 0;
+    while ($_ = <IN> and $i++ != 1000) {
+	($_) = /^(\S+)/;
+	if (exists $proper{$_}) {
+	    print OUT "$proper{$_}\n";
+	} else {
+	    (s/^MC(.)(.+)/Mc$1\L$2\E/ 
+	     or s/(.)(.+)/$1\L$2\E/);
+	    print OUT "$_\n";
+	}
+    }
+    close IN;
+    close OUT;
+    qx"sort $of -o $of";
+}

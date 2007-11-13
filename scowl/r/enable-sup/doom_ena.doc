@@ -1,0 +1,717 @@
+                           ENABLE vs. DOOM
+‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+
+[Note:  This file was included in the first edition of ENABLE, and is
+mostly unchanged in ENABLE2K.  In a few cases, where ENABLE2K differs
+from its predecessor, the differences are noted in brackets.]
+
+The NSA updated "Tournament Word List" (TWL98) is to be the official
+reference for tournament and club Scrabble (r) play. The operators of the
+DOOM Scrabble server originally compiled this list, and it has undergone
+an update by an official "Dictionary Committee". Unfortunately, this
+TWL98 list remains proprietary and it is, despite promises to the
+contrary, available only to a small group of insiders. Our aim in
+distributing the Public Domain ENABLE list is to provide a very necessary
+resource and reference to the rest of the Scrabble community.
+
+In spring of 1997, Mendel was approached by an individual known to us only
+as Deep Glottides, offering him a number of arcane items of dubious value,
+including shards of the True Cross, an edition of the Necronomicon in the
+original Arabic, an exotic ebony statuette of a Mediterranean bird of prey,
+and an absolutely amazing way to MAKE MONEY FAST! While he found these items
+uninteresting, Mendel did accept the offer of a list of corrections to the
+then-current draft of the ENABLE list, supposedly derived from the contents
+of the DOOM list. Of course, we have no way of verifying the bona fides of
+these corrections; the hypothesis that they are instead code words used by
+the black helicopter division of the Insect Trust delegates from the Crab
+Nebula cannot be ruled out. However, using highly advanced UNIX (tm)
+software, we were able to reconstruct the list on which they were based.
+This list proved to be a highly accurate approximation to the union of
+OSPD (r) and MW10, and we consider it very likely that it is in fact a
+faithful copy of the DOOM list current at that time. This file lists the
+differences between that list and the ENABLE list (not including signature
+words).
+
+The differences between the DOOM list and ENABLE fall into four categories:
+
+I.  MW10 changes
+
+These words were added or removed solely on the basis of their presence or
+absence in MW10. None of the listings is in any way ambiguous or suggestive
+of an error in MW10. The word "coresidenttial" was not added, since it is
+clearly a typographical error.
+
+DOOM words removed from ENABLE (MW10)
+
+fricandeaux (*)
+kafkaesque
+
+(*) "fricandeaux" has been added to the ENABLE list as a signature word.
+It is accepted by other dictionaries.
+
+non-DOOM words added to ENABLE (MW10)
+
+edutainment
+edutainments
+homeschool
+homeschooled
+homeschooler
+homeschoolers
+homeschooling
+homeschools
+hypoglycemics
+maquiladora
+maquiladoras
+mediterranean
+philharmonic
+philharmonics
+upgradabilities
+upgradability
+upgradable
+upgradeability
+upgradeable
+victimologies
+victimologist
+victimologists
+victimology
+
+
+II.  TWL98 words
+
+The status of these words was changed by TWL98. We anticipate these changes
+will be reflected in the DOOM list, and possibly already are. Note that some
+published TWL98 changes are not listed here, because these changes were
+already reflected in the DOOM list as of Spring 1997 (e.g., the false word
+"nonfinites" could not be removed because it was not present). Also, one
+version of the TWL98 changes mandated the removal of the word "suboptimum",
+which we ignored since the word is clearly present in MW10, and this change
+was not confirmed by other accounts of TWL98.
+
+DOOM words removed from ENABLE (TWL98)
+
+alkalosises
+anopheleses
+antiradars
+antishocks
+antismokes
+antisolars
+antitumors
+antiwomen
+arterites
+arteritises
+beachwears
+cacoetheses
+cafetoria
+chlorosises
+cocksfeet
+da
+dei
+des
+enterites
+fluorosises
+footwears
+franglaises
+gastrites
+gastritises
+glossites
+glossitides
+halitosises
+hanguls
+heterosises
+hybridomata
+impatienses
+interflowed
+interflowing
+interflows
+interfolded (*)
+interfolding (*)
+interfolds (*)
+interzones
+kev
+knitwears
+laminites
+laminitides
+lezes
+licenti
+literatuses
+lycopodia
+menswears
+multilanes
+multipaths
+multipoles
+neckwears
+nephrosises
+nightlives
+nonanimals
+nonbuyings
+noncakings
+noncareers
+nonchurches
+noncounties
+nondeserts
+nonedibles
+nonenergies
+nonexempts
+nonfossils
+nonghettos
+nongrowths
+nonimpacts
+noninjuries
+nonkoshers
+nonleagues
+nonlivings
+nonmarkets
+nonrubbers
+nonrulings
+nonsexuals
+nonspeeches
+nontariffs
+outerwears
+overwearied
+overwearies
+overwearying
+parotites
+parotitides
+phlebites
+phlebitises
+playwears
+postfaults
+predinners
+preflights
+premarketed
+premarketing (*)
+premarkets
+prereturned
+prereturning
+prereturns
+prereviewed
+prereviewing
+prereviews
+preseasons (*)
+prestricken
+prestrikes
+prestriking
+prestruck
+presummits
+pretraveled
+pretraveling
+pretravelled
+pretravelling
+pretravels
+proptosises
+rainwears
+reticulums
+retinitises
+sauterneses
+sclerosises
+silicosises
+sinusites
+sinusitides
+skiwears
+sleepwears
+straphanged
+strid
+suboptima
+subvisuals
+superriches
+supersizes
+swimwears
+synovites
+synovitides
+teniasises
+testatrixes
+townwears
+trapeziums
+ultralefts
+ultrariches
+underwears
+utriculuses
+vaginites
+vaginitides
+vin
+vins
+von
+womenkinds
+zamindaries
+zemindaris
+
+(*) These words are present in the ENABLE list as signature words.
+Despite their rejection by TWL98, they appear to us to be reasonably valid.
+Note that "premarketing" is actually listed in MW10.
+
+[ENABLE2K lists "premarketing" as a base word, not a signature word, as
+it has become clear that the statement that TWL98 removed it was simply
+an error.  ENABLE2K also lists "vaginitides", based on its appearance
+in the Merriam-Webster Medical Dictionary.]
+
+non-DOOM words added to ENABLE (TWL98)
+
+acervulus
+aerobrake
+aerobraked
+aerobrakes
+aerobraking
+anthelion
+anthelions
+anthodium
+antimycin
+antimycins
+backdropt
+backstab
+backstabbed
+backstabs
+bassett
+bassetts
+bedsit
+bedsits
+booklouse
+bronchium
+caldarium
+calyculus
+chalazion
+chalazions
+chemo
+chemos
+cocaptained
+cocaptaining
+cocksfoots
+cocounseled
+cocounseling
+cocounselled
+cocounselling
+cocultured
+coculturing
+cofeatured
+cofeaturing
+cohostessed
+cohostessing
+copartnered
+copartnering
+copresented
+copresenting
+copresents
+credendum
+ctenidium
+cubiculum
+declaw
+declawed
+declawing
+declaws
+epicedium
+esthetics
+ferretings
+finalise
+finalised
+finalises
+finalising
+flabellum
+gallamine
+gallamines
+gammadion
+gelsemium
+gelsemiums
+gynaeceum
+gynaecium
+hospitium
+ignorami
+iller
+illest
+imaginaries
+latte
+lattes
+lepidotes
+lezzes
+louvred
+lycopodiums
+macadamia
+macadamias
+maglevs
+malleolus
+mazaedium
+microbrew
+microbrews
+misstricken
+misstriking
+misstruck
+nightlifes
+nonmutants (*)
+oasthouse
+oasthouses
+overcleaned (*)
+overcleaning (*)
+overcleans (*)
+overdried (*)
+overdries (*)
+overdriven (*)
+overdriving (*)
+overdrove (*)
+overdrying (*)
+overlighted
+petrale
+petrales
+phelonion
+phelonions
+photostatted
+photostatting
+pineals
+platyfish
+platyfishes
+pocketsful
+ponderosa
+ponderosas
+premixt
+preshrunken
+pterygium
+pterygiums
+pyrolize
+pyrolized
+pyrolizes
+pyrolizing
+redtail
+redtails
+retiarius
+rhytons
+samaritans
+sarmentum
+scintillae
+septarium
+sevruga
+sevrugas
+sextarius
+silkies
+slaphappier
+slaphappiest
+sleepover
+sleepovers
+smoothes
+spaetzles
+sporozoon
+starfruit
+starfruits
+superfirms
+superhyped
+superhyping
+supermini
+superminis
+sympodium
+technicals
+teniases
+trapezii
+treenware
+treenwares
+tricyclics
+trihedron
+trihedrons
+trochilus
+trochlears
+unguentum
+unhealthier
+unhealthiest
+unsell
+unselling
+unsells
+unsightlier
+unsightliest
+vestigium
+voguer
+voguers
+whinging
+yellowfin
+yellowfins
+
+(*) Accounts of the TWL98 changes varied concerning these words. They were
+described as both added and removed. Since they were not present as of
+Spring 1997, and since they all seemed to be perfectly valid inflections, we
+added them to the ENABLE list.
+
+[In ENABLE2K, the words "bassett" and "bassetts" were dropped; their
+inclusion was based on an error in MW10 which has now been corrected.
+Similarly, the words "starfruit" and "starfruits" have been removed from
+the latest edition of MW10, and should be removed from the main ENABLE
+word list the next time it is revised.]
+
+
+III.  "also called" words
+
+These words are words shown in italics in MW10 entries for other words.
+TWL98 legitimizes these words, even though it only catalogued those shorter
+than 10 letters.
+
+non-DOOM words added to ENABLE (also called)
+
+buffalofish
+buffalofishes
+colorpoint
+colorpoints
+cyclicalities
+cyclicality
+diamondbacks
+dolphinfish
+dolphinfishes
+ellipticals
+exponentials
+greaseproofs
+handyperson
+handypersons
+hypoglossals
+incandescents
+largemouth
+largemouths
+maidenhair
+maidenhairs
+parainfluenza
+parainfluenzas
+photomultiplier
+reflectivities
+reflectivity
+scissortail
+scissortails
+smallmouth
+smallmouths
+streetlamp
+streetlamps
+trigeminals
+tsutsugamushi
+
+[In ENABLE2K, the implied plural of "tsutsugamushi", "tsutsugamushis",
+was also added.]
+
+
+IV.  Interpretations
+
+One of the dirty secrets of Scrabble (tm) is that the official source for
+resolution of word validity, MW10, is incapable of resolving all such
+questions.  The primary reason for this is the MW10 practice of including
+lists of words starting with a particular prefix, such as anti- or non-,
+without providing part of speech information.  This makes it impossible to
+decide, on the basis of MW10 alone, whether "antitakeovers", for example, is
+a valid word or not.
+
+To resolve such questions, it is necessary to go to other sources, such as
+the Hasbro Scrabble (tm) CD-ROM and other dictionaries, and then to use good
+judgment and "word sense" to decide.  (The Random House Unabridged dictionary
+proved especially helpful here, since it provides similar word lists having
+a large intersection with the MW10 lists, and also provides part of speech
+information.)  In many cases, our judgment on these questions disagreed with
+that of the compilers of the DOOM list.  Can we claim that our judgments were
+always correct?  Well, of course we can.  That's called "marketing"!  More
+realistically, we claim we have considered each putative word on its merits,
+and have always tried to make a careful and thoughtful decision.  At the very
+least, we hope we have avoided absurdities such as the abominable
+"nonpolices" and "ultrariches" (words rightly rejected by TWL98, but
+accepted by the Hasbro CD-ROM and, in the case of "ultrariches", by the DOOM
+list as well).
+
+For each word listed below, we explain our rationale for accepting or
+rejecting the word.  Note that no words are listed where we reached the same
+conclusions as the DOOM list, but be assured that these words were examined
+as carefully as those where there was disagreement.
+
+
+DOOM words removed from ENABLE (interpretations)
+
+antitakeovers
+    An obvious nonsense word, despite acceptance by Hasbro CD and RH
+    Unabridged.
+beautifuler
+    Not listed in MW10, accepted by the Hasbro CD.  This word
+    proved very controversial.  MW10, in its introduction, does not
+    claim to list all -er and -est forms, only those whose spelling
+    might be in doubt.  So its absence from MW10 does not, in itself,
+    prove it invalid.  But I claim the following:  (a)  No dictionary
+    that I have been able to check lists this form, and (b) if a
+    single-word comparative form of beautiful exists, it would be
+    "beautifuller".  (If one looks at the -ful words in OSPD for
+    which a comparative form is listed, one finds they all double
+    the "l".)  Finally, I note that neither the DOOM list nor the
+    Hasbro CD lists the putative superlative "beautifulest".  (While
+    English has the occasional word with a superlative but no comparative,
+    I'm unaware of any examples of the opposite sort.)  Mendel feels
+    that there is a tradition of accepting this word, and recalls
+    having seen arguments for it, though he cannot reconstruct them.
+    Accordingly, "beautifuler" (and the implied "beautifulest") have
+    been added to ENABLE as signature words despite the impossibility
+    of justifying them on the basis of MW10.
+    [During the research for the second edition of the ENABLE2K
+    Supplement, two additional facts about "beautifuler" turned up.
+    First the Merriam-Webster Unabridged Dictionary (NI3) lists it, as
+    well as the corresponding superlative; this is doubtless the original
+    justification for including the word in the DOOM list.  Additionally,
+    the fourth edition of the American Heritage dictionary notes its
+    existence as "obsolete" and, interestingly enough, spells it with a
+    double "l".]
+
+endocardites
+    Rejected based on OSPD's listing of "carditises" as the only
+    plural of "carditis".  Since "carditis" is not listed by MW10,
+    the OSPD listing seems to be the best information available on
+    pluralization of words with this root.
+endocarditides
+    See "endocardites".  [ENABLE2K allows "carditides", a plural listed
+    by the MW Medical Dictionary.  MW Medical does not, however, list
+    "endocarditides", so this word remains removed.]
+enterocolites
+    Rejected based on OSPD's listing of "colitises" as the only
+    plural of "colitis".  Plurals such as this one present a difficult
+    problem.  Based on MW10 alone, one would admit this plural, since
+    OSPD gives no explicit pluralization, and the general -itis entry
+    allows -ites and -itides as well as -itises.  However, OSPD shows
+    only the plural "colitises" for "colitis".  OSPD was compiled by
+    Merriam-Webster, and presumably would have included "colites" and
+    "colitides" if they were legitimate.  Therefore, we have decided
+    to follow the lead of OSPD in such cases.
+enterocolitides
+    See "enterocolites".
+gastroenterites
+    Rejected based on TWL98's removal of the root form "enterites".
+heterozyogises
+    Rejected based on OSPD's listing of "zygoses" as the only plural
+    of "zygosis".  See "enterocolites".
+homozygosises
+    See "enterocolites".
+hyperhidrosises
+    See "enterocolites".  OSPD shows only the plural "hidroses" for
+    "hidrosis".
+loungewears
+    Rejected due to TWL98's condemnation of all -wears plurals.
+lymphadenites
+    See "enterocolites".  OSPD shows only the plural "adenitises" for
+    "adenitis".
+lymphadenitides
+    See "enterocolites".
+myelofibrosises
+    See "enterocolites".  OSPD shows only the plural "fibroses" for
+    "fibrosis".
+myocardites
+    See "endocardites".
+myocarditides
+    See "endocardites".
+nonghettoes
+    TWL98 removes "nonghettos" on the grounds that "nonghetto" is not
+    a noun.  So "nonghettoes" has to go too.
+otosclerosises
+    Rejected due to TWL98's rejection of the root form "sclerosises"
+pericardites
+    When OSPD and MW10 appeared to be in conflict about the plurals of
+    diseases (see "endocardites"), other sources were consulted.  Actually,
+    very few sources *could* be consulted, since virtually no one other
+    than a few crazed Scrabble (tm) players believes that diseases even have
+    plurals.   However, the Merriam-Webster Unabridged does accept them.
+    Though it was not helpful for any other of the troublesome disease
+    words, MW Unabridged does show "pericarditides" as the only plural of
+    "pericarditis".  Since this was an explicit entry, we decided it
+    overrode the implications of both MW10 and OSPD, and accordingly
+    included only "pericarditides" in ENABLE.
+pericarditises
+    See "pericardites".
+saccharomyceses
+    Supposedly the plural of "saccharomyces".  MW10 defines two other
+    -myces words, both of which have plurals identical to the singular
+    form.  Also, American Heritage shows "saccharomyces" as unchanged
+    in the plural.  Accordingly, we made a judgment call that this
+    unnatural-looking plural is an error, and removed it from the
+    ENABLE list.
+scaramouchs
+    Rejected as an obvious offense to the English language, since the
+    "ch" in scarmouch is a soft ch, not a hard one as in "oligarch".
+schmaltzier
+    Not listed by MW10, but accepted by the other major American
+    dictionaries.  Added to ENABLE as signature word.
+schmaltziest
+    See "schmaltzier".
+sportswears
+    Rejected due to TWL98's condemnation of all -wears plurals.
+tenosynovites
+    Rejected based on TWL98's rejection of the root form "synovites".
+tenosynovitides
+    See "tenosynovites".
+ultrarights
+    Accepted by the Hasbro CD, but removed from ENABLE by analogy with
+    "ultralefts", which is rejected by TWL98.
+vulvovaginites
+    Rejected based on TWL98's rejection of the root form "vaginites".
+
+
+non-DOOM words added to ENABLE (interpretations)
+
+antefixae
+    This word is given explicitly as a plural of "antefix" by MW10.
+    OSPD and MW Unabridged reject this plural, and give "antefixa"
+    in its place (as does American Heritage).  This may be evidence
+    that "antefixae" is erroneous.  Nevertheless, not having the
+    resources or experience to second-guess Merriam-Webster on this
+    point, we decided to take MW10 at face value, and added "antefixae"
+    to the ENABLE list.  [The Encarta(r) dictionary confirms "antefixae"
+    as a valid plural of "antefix".  However, as a plural not listed in
+    OSPD, we treat "antefixae" as a new MW10 word, rather than as an
+    OSPD word.]
+anticolonials
+    Accepted by RH Unabridged, rejected by the Hasbro CD.  Judgment
+    call.
+antisubversives
+    Judgment call.
+begirting
+    This word is given explicitly as the present participle of "begird"
+    by MW10.  OSPD and MW Unabridged (and American Heritage) instead
+    give a more regular "begirding".  Again, possibly an error in MW10.
+    Not being expert in the conjugation of archaic verbs, once more we
+    have put our trust in the scolarship of MW10 and accepted "begirting".
+    [The 1999 edition of MW10 removes "begirting".  Accordingly, we have
+    removed it from ENABLE2K.]
+chlorenchymata
+    A plural of "chlorenchyma", by virtue of the MW10 -enchyma entry.
+interboroughs
+    Accepted by both RH Unabridged and the Hasbro CD.
+interurbans
+    Accepted by both RH Unabridged and the Hasbro CD.
+interworkings
+    Accepted by the Hasbro CD.
+interwrought
+    Past tense of "interwork", accepted by RH Unabridged, rejected
+    by the Hasbro CD.  Accepted as clearly implied by MW10.
+nonalcoholics
+    Accepted by both RH Unabridged and the Hasbro CD.
+nonchemicals
+    Accepted by both RH Unabridged and the Hasbro CD.
+noncomplyings
+    Accepted by both RH Unabridged and the Hasbro CD.
+noncompounds
+    Accepted by the Hasbro CD.
+nondiabetics
+    Accepted by the Hasbro CD.
+nonperishables
+    Accepted by both RH Unabridged and the Hasbro CD.
+overlighting
+    TWL98 adds "overlighted", implying that "overlighting" is also valid.
+    Also, the OSPD entry for "overlit" implies the existence of the verb
+    "overlight".
+parenchymata
+    A plural of "parenchyma", by virtue of the MW10 -enchyma entry.
+precomputers
+    Accepted by the Hasbro CD.
+predischarged
+    Accepted by RH Unabridged, rejected by the Hasbro CD.  Judgment call.
+predischarging
+    See "predischarged".
+presentencings
+    Accepted by the Hasbro CD.
+ultraheated
+    Accepted by the Hasbro CD.
+ultraheating
+    See "ultraheated".
+ultraheats
+    See "ultraheated".
+ultraradicals
+    Accepted by both RH Unabridged and the Hasbro CD.
+
+
+---
+Scrabble is a trademark of the Milton Bradley Co., Inc.
+The OSPD is a trademark of the Milton Bradley Co., Inc.
+Encarta is a trademark of the Microsoft Corp.
+UNIX is a trademark of AT & T.
+
+
+
+
+---Alan Beale

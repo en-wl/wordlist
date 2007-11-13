@@ -1,0 +1,5 @@
+Version 4.0 of alt12dicts is used for Scowl 6, except for variant.txt.
+Version 2.0 of alt12dicts is used var varinat.txt becuase version 4.0
+marks words such as forwards as variants, which I don't belive should
+be marked that way.
+

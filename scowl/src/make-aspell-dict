@@ -1,0 +1,61 @@
+
+rm -f *.twl
+
+export LC_CTYPE=C
+export LC_COLLATE=C
+
+echo base
+
+cat final/english-*.{10,20,35,40,50,55,60} final/special-* \
+  | sort -u > en.wl0
+cat en.wl0 final/american-*.{10,20,35,40,50,55,60} \
+  | sort -u > en_US-w_accents.twl
+cat en.wl0 final/british-*.{10,20,35,40,50,55,60} \
+  | sort -u > en_GB-ise-w_accents.twl
+cat en.wl0 final/british_z-*.{10,20,35,40,50,55,60} \
+  | sort -u > en_GB-ize-w_accents.twl
+cat en.wl0 final/canadian-*.{10,20,35,40,50,55,60} \
+  | sort -u > en_CA-w_accents.twl
+
+cat final/variant_0-*.{10,20,35,40,50,55,60} \
+  | sort -u > en-variant_0.wl0
+cat en-variant_0.wl0 final/variant_1-*.{10,20,35,40,50,55,60} \
+  | sort -u > en-variant_1.wl0
+cat en-variant_1.wl0 final/variant_2-*.{10,20,35,40,50,55,60} \
+  | sort -u > en-variant_2.wl0
+
+echo deaccent
+
+for f in *-w_accents.twl
+do
+  b=`basename $f -w_accents.twl`
+  src/deaccent < $f | sort -u > $b-wo_accents.twl
+done
+
+for f in en-variant_*.wl0
+do
+  b=`basename $f .wl0`
+  src/deaccent < $f > $b.wl1
+  cat $f $b.wl1 | sort -u > $b.wl
+done
+
+echo common
+
+cat *.twl | sort -u > en-common.wl
+
+for f in *.twl
+do
+  comm -12 en-common.wl $f > en-common.wl0
+  mv en-common.wl0 en-common.wl
+done
+
+echo finish
+
+for f in *.twl
+do
+  b=`basename $f .twl`
+  comm -13 en-common.wl $f > $b-only.wl
+done
+        
+
+rm -f *.twl *.wl{0,1} *.vwl

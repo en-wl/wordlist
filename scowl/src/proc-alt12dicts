@@ -1,0 +1,95 @@
+#!/usr/bin/perl -w
+
+chdir "r/alt12dicts";
+
+open IN, "abbr.txt";
+open OUT, ">abbr.lst";
+while (<IN>) 
+{
+    next if /~/;
+    y/:\r//d;
+    print OUT;
+}
+close OUT;
+close IN;
+
+open IN, "variant.txt";
+open OYES  , ">variant-yes.lst";
+open OMAYBE, ">variant-maybe.lst";
+open BYES  , ">nonamer-yes.lst";
+open BMAYBE, ">nonamer-maybe.lst";
+while (<IN>) {
+    s/\r?\n$// or die;
+    ($w, $f, $s) = /^(.+):?\t(.)([!?]?)$/ or die "Bad Line: $_";
+    next unless $w =~ /^[A-Za-z\']+$/;
+    $already_variant{$w} = 1;
+    if ($s eq '!' || $s eq '') {
+	print OYES $w, "\n" if $f eq '#';
+	print BYES $w, "\n" if $f eq '&';
+    } else {
+	print OMAYBE $w, "\n" if $f eq '#';
+	print BMAYBE $w, "\n" if $f eq '&';
+    }
+}
+
+close BMAYBE;
+close BYES;
+close OMAYBE;
+close OYES;
+close IN;
+
+open IN, "2of12full.txt";
+open O02, ">02of12.lst";
+open O05, ">05of12.lst";
+open O11, ">11of12.lst";
+open U, ">4of12upper.lst";
+open ONA, ">not-abbr.lst";
+open V, ">variant-also.lst";
+open NV, ">not-variant.lst";
+
+while (<IN>)
+{
+    s/\r?\n$// or die;
+    ($total, $not_variant, $variant, $non_american, $word, $abrv_mark) 
+	= /^(..): (..) (..)\# (..)\&   (.+?)([:.]?)$/ or die "Bad Line:$_";
+    $_ = $word;
+    $not_variant  = 0 if $not_variant  eq ' -';
+    $variant      = 0 if $variant      eq ' -';
+    $non_american = 0 if $non_american eq ' -';
+    next unless /^[A-Za-z\']+$/;
+    $_ .= "\n";
+    my $not_abrv   = ($abrv_mark eq '' && $total >= 5);
+    my $is_variant = ($variant >= $non_american 
+		      && ($variant + $non_american) > $not_variant
+		      && !$already_variant{$word});
+    print ONA if $not_abrv;
+    print V   if $is_variant;
+    print NV  unless $is_variant || $already_variant{$word};
+    if ($total >= 11) {
+        print O11;
+    } elsif ($total >= 5) {
+	print O05;
+    } elsif ($total >= 4 && /^[A-Z]+/ && $abrv_mark eq '') {
+	print U;
+    } elsif ($total >= 2) {
+	print O02;
+    } else {
+	die "This should not happen: $total $_\n";
+    }
+}
+
+close NV;
+close V;
+close ONA;
+close U;
+close O11;
+close O05;
+close O02;
+close IN;
+
+
+
+
+
+
+

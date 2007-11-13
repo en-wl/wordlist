@@ -1,0 +1,224 @@
+                            OSPD ORIGINS AND CURRENCY
+ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+
+
+One of the results of the researches that have taken place in producing
+the ENABLE2K word lists is documentation of the deficiencies of the OSPD
+(the Official Scrabble Player's Dictionary).   Notably, the ENABLE2K
+OSPDADD list includes over 6500 words which ought to be present in the
+OSPD, but are not.  During work on the most recent revision of ENABLE2K,
+I became interested in the opposite question, namely, how many words in
+OSPD were mistakes, that is, words which should not have been included
+according to the original criteria by which the OSPD was constructed.
+
+It is beyond my power to answer that question, as OSPD was assembled from
+a number of out-of-print dictionaries, such as the Merriam-Webster
+Collegiate 9th edition and the American Heritage College Dictionary
+2nd edition, which I do not own.  In place of this question, I have
+tried to determine instead what words of OSPD have become stale, that
+is, are not included in recent dictionaries of the sort from which OSPD
+was composed.  After much labor, I have produced a list showing, for
+each OSPD word, a contemporary dictionary in which it may be found, or
+the absence of any.  Additionally, after haunting eBay for some months,
+I have come into possession of the 1973 Funk and Wagnall's College
+Dictionary, which was one of the primary sources of the original OSPD,
+and which has enabled me to reduce the number of words of completely
+unknown provenance to a small fraction of the total.
+
+The result of these researches is the COSSPD.LST file.  This file
+contains all the words of OSPD, plus those of OSPDADD.LST and the
+OSPD-eligible words from MW10ADD.LST.  Each word is preceded by two
+characters, indicating where a definition of (or reference to) the
+word is to be found.  The first character supplies a historical
+perspecive on the word, while the second character provides a more
+recent perspective.  The encoding of this information is described
+later in this document.
+
+A summary of statistics derived from COSSPD.LST follows.  I find it
+noteworthy that each of the source dictionaries has contributed a
+significant fraction of the total.
+
+Note that each category is limited to words not in any previous category,
+except where stated otherwise.  (See below for explanation of the
+dictionary acronyms.)
+
+Of the 100940 OSPD words,
+
+  . 70861 words (70.2 %) are found in both MW10 and another recent
+    dictionary.
+  . 3215 words (3.2 %) are found solely in MW10.
+  . 7226 words (7.2 %) are found in RHWCD2.
+  . 3747 words (3.7 %) are found in AHD3 or AHD4.  Most of these
+    (3090) are also found in AHCD3.
+  . 3478 words (3.4 %) are found in WNWCD3 or WNWCD4.
+  . 752 words (0.7 %) are found in RHWCD1.
+  . 5725 words (5.7 %) are found in the 1973 F&WCD.
+  . 3329 words (3.3 %) were not found in any OSPD source I consulted.
+  . Of the words in the previous two categories, 520 (0.5 %) are
+    to be found in EWED1.  The rest are the words I refer to as
+    "stale".
+  . 2605 words (2.6 %) are inflections of words not explicitly
+    supported by the OSPD sources, including inflections for words
+    whose part of speech is omitted.  Of these, 1055 are listed by
+    NI3.  Over half of the total (1303) are inflections of words
+    from F&WCD.
+
+COSSPD.LST also contains 6754 words from recent dictionary editions.
+These words are eligible for OSPD but are not present, either due to
+oversight or because they were added after the most recent OSPD was
+compiled.  Statistics on these words are as follows:
+
+  . 191 words (2.8 %) are from MW10.
+  . 1781 words (26.4 %) are from RHWCD2.
+  . 1882 words (27.9 %) are from AHD3 or AHD4.
+  . 418 words (6.2 %) are from WNWCD3 or WNWCD4.
+  . 1847 words (27.3 %) are from EWED1.
+  . 625 words (9.3 %) are from RHWCD1.
+  . 10 words (0.1 %) are additional inflections of OSPD words I
+    believe to be correct, but which are not listed in any of the
+    OSPD sources.
+
+The file STALE.LST contains the "stale words" referred to above.  These
+are the OSPD words for which no recent source (of the size of MW10 or
+RHWCD2) could be found, and their inflections.  A few of these words,
+such as "fishbone", "lima" and "unmended", are still current, and their
+omission from recent dictionaries seems rather surprising, but by and
+large they are extremely obscure, and unlikely to be missed by any but
+the most fanatical word game devotees.
+
+The annotations of COSSPD.LST and their meanings are as follows:
+
+   = - Indicates a word found in MW10.  (See note 1.)
+   . - Indicates a word found in the Random House Webster's College
+       Dictionary 2nd edition (RHWCD2).
+   &,@ - Indicates a word found in an American Heritage dictionary.
+       (See note 2).
+   > - Indicates a word found in Webster's New World College
+       Dictionary, 3rd or 4th edition (WNWCD3/4).
+   % - Indicates a word found in the 1973 Funk and Wagnall's College
+       Dictionary (F&WCD) (first column only).
+   # - Indicates a word found in the Encarta World English Dictionary,
+       first edition (EWED1) (second column only).
+   : - Indicates a word found in the Random House Webster's College
+       Dictionary 1st edition (RHWCD1).  (See note 3.)
+   " - Indicates an inflection not found in or implied by any source
+       dictionary, but endorsed by the Merriam-Webster New International
+       3 (NI3) CD-ROM.  (See notes 4 through 6.)
+   ^ - Indicates an inflection not found in or implied by any source
+       dictionary, and not shown by the NI3 CD-ROM.  (See notes 4
+       and 5.)
+   ` - Indicates a British variant of an included word not explicitly
+       mentioned by any of the source dictionaries.  (See note 7.)
+   - - Indicates a word still in the published OSPD3, but which was
+       removed by the TWL98 reform.
+   + - Indicates a word not present in OSPD (first column only).
+   blank - Indicates a word not in any of these categories.  In column
+       1, a blank indicates that I could not find the word in any
+       historical source (omitting Encarta); while in column 2 it
+       indicates it could not be found in any modern source (omitting
+       the Funk and Wagnall's dictionary).
+
+Notes:
+
+1.  If a word is annotated with "=" in both columns, it indicates the
+word was not found in any modern source other than MW10.  (About 65 %
+of the words are shown as "=.", meaning they are listed by both MW10 and
+RHWCD2.)
+
+2.  The "&" symbol has a slightly different meaning in the two columns.
+According to the Scrabble FAQ, the American Heritage source dictionary
+for OSPD was the American Heritage College Dictionary (AHCD3).  In
+researching ENABLE2K, I have instead generally used the full American
+Heritage Dictionary (AHCD3/4), which is available on CD-ROM.  In the
+second column, "&" indicates this dictionary.  In the first column, "&"
+indicates the American Heritage College Dictionary, and "@" is used to
+reference words listed in the full American Heritage Dictionary, but not
+in the College Dictionary.  Also note that this list uses both the 3rd
+and 4th editions of the full American Heritage Dictionary, but only the
+3rd edition of the College Dictionary, as the 4th edition was not
+released until this work was almost completed.
+
+3.  I should probably regard the Random House Webster's College 1st
+edition as now "stale", as the last printing was in 1995.  I have
+decided not to do so on the basis that many copies are still in use,
+and also because this is a very fine dictionary which I hate to write
+off.  Thousands of words from the 1st edition were removed from the
+2nd, and it is the only "current" source for many of them.
+
+4.  As anyone who has looked at PLURALS.DOC knows, the question of
+validating inflections is very complex and vexing.  I did not want to
+complicate these OSPD researches further with trying to ascertain the
+validity of all inflections listed in OSPD.  Therefore, I adopted an
+agnostic policy for inflections.  If a word was shown in a source
+dictionary without inflections, I assumed the inflections were regular,
+even if I knew better.  As a simple example, I am well aware that the
+plural of "fireman" is "firemen".  But MW10 lists "fireman" without
+showing an explicit plural, leading me to treat "firemen" as not shown
+in MW10, even though the compilers of that volume certainly intended it
+to be implied.  This has sometimes had the effect of making some of
+the inflections of a word appear to have a different source from the
+word itself.
+
+5.  "^" has a secondary meaning.  Some of the source dictionaries
+include lists of words with common prefixes, such as "anti-", "pre-"
+and "un-", which do not show parts of speech.  Inflections of such
+words, regular or not, are shown with a "^" or """ annotation unless
+some other dictionary shows the appropriate part of speech.
+
+6.  The Merriam-Webster NI3 CD-ROM is a relatively recent addition to
+my collection of electronic dictionaries.  I was interested to discover
+during this research how much effect the contents of NI3 had on OSPD.
+Many of the stranger inflections of OSPD, such as "sensiblest" and
+"enuresises", are to be found there, and nowhere else.  Once I made
+this connection, I made a distinction between unsupported inflections
+mentioned in NI3 and the remainder.  About 1 in 3 of these inflections
+showed up in NI3.  (The percentage is significantly greater than that
+if one excludes the inflections of words without an explicit part of
+speech discussed in note 5.)
+
+7.  I remember, when the 2nd edition of OSPD was current, that its cover
+boldly proclaimed "Now includes Canadian words!"  This led me to suspect
+that perhaps it had been "padded" with unsupported British variants of
+words.  My suspicion was not confirmed.  I marked unsupported British
+variants of OSPD words with a "`", but there turned out to be relatively
+few of them (171).  It is more reasonable to suppose that they were
+present in some of the earlier editions of the source dictionaries (such
+as MW9) than that they were added for marketing reasons.
+
+
+Mendel and I have occasionally been asked to supply definitions of the
+words in the ENABLE2K list.  We have seen no need to undertake that labor,
+as, with the exception of the signature words, all the ENABLE2K words are
+defined in either OSPD or in MW10.  However, we must admit that we have
+not provided definitions of the words in the various supplemental lists,
+which derive from multiple sources.  It should now be noted that, for
+the subset of supplemental words eligible for inclusion in OSPD, the
+COSSPD.LST file helps meet that need.  For any unfamiliar short word not
+listed in OSPD, its COSSPD.LST entry indicates a specific current
+dictionary in which a definition can be found, all of which are
+available online, with the exception of RHWCD1.  (And the RHWCD1
+words can generally also be found in the Random House Unabridged
+Dictionary, which is available on CD-ROM.)
+
+
+A final note is an explanation of the file name COSSPD.LST.  COSSPD is
+an acronym for Contemporary Open Source Scrabble Player's Dictionary,
+which is the name I have given to the collection of words from
+COSSPD.LST which do not have a blank (or a minus) in the second column.
+This list is contemporary because it omits words from long-out-of-print
+sources, and includes words from recent sources such as the Encarta
+dictionary.  The list is "open source" because it makes explicit the
+origin of its contents; every word can be checked (and corrected, if
+mistakes are found).  Because of these two characteristics, I believe
+it be superior to the OSPD, both for practical use and for fulfilling
+the original intent behind its creation.
+
+
+
+
+Scrabble is a trademark of the Milton Bradley Co., Inc.
+The OSPD is a trademark of the Milton Bradley Co., Inc.
+Encarta is a trademark of the Microsoft Corp.
+
+
+--Alan Beale

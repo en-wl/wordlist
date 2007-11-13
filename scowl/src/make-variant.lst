@@ -1,0 +1,85 @@
+#!/bin/sh
+
+start ()
+{
+    echo -n;
+}
+
+add ()
+{
+  cat - $1 | src/filter | sort -u;
+}
+
+rem ()
+{
+  comm -23 - $1;
+}
+
+cat r/alt12dicts/not-variant.lst \
+  | src/filter | src/add-affixes 0.0 use-all | sort -u \
+  > working/variant-no.lst
+
+cat r/alt12dicts/variant-maybe.lst \
+  | src/filter | src/add-affixes 0.9 use-all | sort -u \
+  > working/variant-maybe.lst
+
+cat r/alt12dicts/variant-yes.lst \
+  | src/filter | sort -u \
+  > working/variant-yes-bare.lst
+
+cat r/alt12dicts/variant-yes.lst \
+  | src/filter | src/add-affixes 1.9 use-all | sort -u \
+  > working/variant-yes.lst
+
+start \
+  | add working/variant-maybe.lst    \
+  | rem working/variant-no.lst       \
+  | add r/special/variant_0          \
+  | rem r/special/never-variant      \
+  > working/variant_0-pre.lst
+
+start \
+  | add working/variant-yes.lst      \
+  | rem working/variant-no.lst       \
+  | add working/variant-yes-bare.lst \
+  | add r/special/variant_1          \
+  | rem working/variant_0-pre.lst    \
+  | rem r/special/never-variant      \
+  > working/variant_1-pre.lst
+
+start \
+  | add r/special/variant_2          \
+  | rem working/variant_1-pre.lst    \
+  | rem working/variant_0-pre.lst    \
+  | rem r/special/never-variant      \
+  > working/variant_2-pre.lst
+
+start \
+  | add r/infl/variant_0.lst         \
+  | rem working/variant_2-pre.lst | rem working/variant_1-pre.lst    \
+  | add working/variant_0-pre.lst    \
+  | rem r/special/never-variant      \
+  > working/variant_0.lst
+
+start \
+  | add r/infl/variant_1.lst         \
+  | rem working/variant_2-pre.lst    \
+  | add working/variant_1-pre.lst    \
+  | add r/infl/variant_0.lst         \
+  | rem working/variant_0.lst        \
+  | rem r/special/never-variant      \
+  > working/variant_1.lst
+
+start \
+  | add r/infl/variant_2.lst         \
+  | add working/variant_2-pre.lst    \
+  | add r/infl/variant_1.lst  | add r/infl/variant_0.lst         \
+  | rem working/variant_1.lst | rem working/variant_0.lst        \
+  | rem r/special/never-variant      \
+  > working/variant_2.lst
+
+
+
+
+
+

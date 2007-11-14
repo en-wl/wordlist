@@ -1,0 +1,135 @@
+QUICK START
+
+
+
+18 May 93
+
+
+
+Copy all the files on all the disks to a folder on your hard disk (make sure you
+have at least four (4) megabytes of free disk space per disk of product).
+Set your directory ('CD') to the new folder, type BUILD and press (enter).
+The files that were extracted may be viewed and manipulated by any capable 
+text editor or word processor, such as Microsoft Word 5.x.
+
+Moby (tm) Part-of-Speech II Documentation Notes
+
+
+This documentation, the software and/or database are:
+
+
+Copyright (c) 1988-93, Grady Ward.  All Rights Reserved.
+
+3449 Martha Ct.
+
+Arcata, CA  95521-4884  USA
+
+(707) 826-7715
+ (voice/fax)
+grady@netcom.com
+
+
+ 
+License Agreement
+
+This documentation, software and/or database was developed and
+copyrighted by Grady Ward and is licensed, not sold, to you on a
+non-exclusive, non-transferable basis. The documentation, software
+and/or database and derivative works of this database may not be
+copied in whole or part except for archival purposes as provided by law.
+If you have purchased the commercial license, Grady Ward explicitly
+grants you the limited right to create and market data structures or
+knowledge bases derived this work without further payment of a
+license fee, as long as the purpose and effect of that data structure
+or knowledge base is other than redistributing that Grady Ward
+data structure or database. (In other words, you must make a
+reasonable effort to prevent unlicensed individuals and companies
+from accessing the source form of this data.)
+
+
+
+Willful copyright violations are both a civil and a criminal offense [17USC500]
+
+Disclaimer of Warranty
+
+
+This documentation, software and/or database is sold "as is" and
+without express or implied warranties as to performance or merchantability
+for a particular purpose. The user is advised to test the documentation,
+software and/or database thoroughly before relying on it.
+The user assumes the entire risk of using this documentation,
+software and/or database and any liability of seller or manufacturer
+will be limited to product replacement or refund of the license fee.
+
+Moby (tm) Part-of-Speech II for MSDOS operating systems is compressed
+and distributed on one HD double sided diskette.  After decompression
+the vocabulary file included with this product is in ordinary ASCII
+format with CRLF (ASCII 13/10) delimiters.
+
+This second edition is a particularly thorough revision of the original
+Moby Part-of-Speech. Beyond the fifteen thousand new entries,
+many thousand more entries have been scrutinized for correctness
+and modernity. This is unquestionably the largest P-O-S list in the
+world.  Note that the many included phrases means that parsing
+algorithms can now tokenize in units larger than a single word,
+increasing both speed *and* accuracy.
+
+
+Database Legend:
+
+
+Each part-of-speech vocabulary entry consists of a word or phrase 
+field followed by a field delimiter of  (ASCII 215) and the
+part-of-speech field that is coded using the following ASCII symbols 
+(case is significant):
+
+
+
+Noun                        	N
+
+Plural                      	p
+
+Noun Phrase		h
+
+Verb (usu participle)    V
+
+Verb (transitive)     	t
+
+Verb (intransitive)  	i
+
+Adjective                     A
+
+Adverb                    	v
+
+Conjunction             	C
+
+Preposition             	P
+
+Interjection            	!
+
+Pronoun                    	r
+
+Definite Article       	D
+
+Indefinite Article     	I
+
+Nominative               	o
+
+
+
+This two-part vocabulary record is delimited from others with CRLF
+(ASCII 13/10). For example, engineer Nt  means that the word engineer
+has two main uses in English; the principal part-of-speech is as a noun 
+"That engineer could write in microcode with one hand and in ADA
+with the other" and its secondary part-of-speech is as a transitive verb:
+"We sure engineered that software to death." 
+
+In many cases, the -ed, -ing,
+-ly, and -ic forms of words are not explicitly listed; the participle forms
+of verbs will be usually marked simply with the V sign rather than the
+more specific t or i symbols.  Words such as "be," which often have
+more than one head entry in a dictionary, have one listing with all the
+parts-of-speech for all senses concatenated.  Foreign words commonly
+used in English usually include their diacritical marks, for example, the
+acute accent e is denoted by ASCII 142.
+

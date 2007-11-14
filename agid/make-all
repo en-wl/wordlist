@@ -1,0 +1,36 @@
+#!/bin/sh
+
+LANG=C
+export LANG
+
+cat  ../enable/WORD.LST \
+     ../enable-sup/2DICTS.LST \
+     ../enable-sup/LCACR.LST \
+     ../enable-sup/LETTERS.LST \
+     ../enable-sup/NOPOS.LST \
+     ../enable-sup/OSPDADD.LST \
+     ../enable-sup/PLURALS.LST \
+     ../enable-sup/UCACR.LST \
+     ../enable-sup/UPPER.LST \
+     ../jargon-wl/word.lst \
+     ../ukacd/deaccented.lst \
+     ../yawl/sigword.list \
+     ~/12dict/2of12-all.lst \
+     extra-words \
+  | ../../src/filter | sort -u > all.lst
+
+cat ../ukacd/squashed.lst \
+  | ../../src/filter | sort -u > all.mega
+
+cat ../enable-sup/ABLE.LST ../mwords/354984si.ngl \
+  | ../../src/filter | sort -u > all.fil
+
+comm -12 all.mega all.fil >> all.lst
+
+sort -u all.lst -o all.lst
+
+rm all.mega all.fil
+
+
+    
+    

@@ -1,0 +1,783 @@
+abide v: abode, abided 1
+acanthus pN: acanthuses, acanthi 1, acanthus 1.1
+agape pN: agapae, agapai 0.1, agapes 0.2
+ageratum pN: ageratum, ageratums 1
+aircraft pN: aircraft
+albacore pN: albacore, albacores {:1}
+albatross pN: albatross, albatrosses {:1}
+alder pN: alders, alder 0.1
+alight v: alighted, alit 1
+anchovy pN: anchovies, anchovy 1
+anecdote pN: anecdotes, anecdota 1
+angelfish pN: angelfish, angelfishes 0.1
+anopheles pN: anopheles
+antelope pN: antelope, antelopes {:1}
+antenna pN: antennas {TV}, antennae {insect}
+apparatus pN: apparatuses, apparatus 0.1
+appendix pN: appendices {organ}, appendixes {supplement}
+arise v: arose | arisen
+armful pN: armfuls, armsful 1
+arras pN: arrases, arras 1
+asparagus pN: asparaguses, asparagus 1
+atlas pN: atlases {book}, atlantes {sculpture}
+autobahn pN: autobahns, autobahnen 2
+awake v: awoke, awaked 1 | awoken, awaked 1, awoke 1.1
+axis pN: axises {deer}, axes {line}
+babysit V: babysit | babysat | babysitting | babysits
+bacchanalia pN: bacchanalia, bacchanalias 1
+backbite v: backbit  | backbitten
+backslide v: backslid | backslid, backslidden 1
+bad A: worse, badder {slang} | worst, baddest {slang}
+bagful pN: bagfuls, bagsful 1
+ban pN: bani {money}, bans {prohibition}
+bandit pN: bandits, banditti 1
+barracks pN: barracks
+barracuda pN: barracudas, barracuda {:1}
+baud pN: baud, bauds 1
+be V: was, wast 2 | were | been | being | am | are, art 2 | is | are
+bear pN: bears, bear {:1}
+bear v: bore | borne, born 1
+beat v: beat | beaten, beat 1 
+beaver pN: beavers, beaver {:1}
+become v: became | become
+beef pN: beeves {animal}, beefs {complaint}
+beget v: begot, begat 2 | begotten, begot 1
+begin v: began | begun
+beluga pN: belugas, beluga {:1}
+bend v: bent
+bereave v: bereaved, bereft 1
+beseech v: besought, beseeched 1
+bestrew v: bestrewed | bestrewed, bestrewn 1
+bestride v: bestrode, bestrid 1 | bestridden, bestrid 1
+bet v: bet, betted 1
+betrothed pN: betrothed, betrotheds 2
+bias p: biases, biasses 2
+biceps pN: biceps, bicepses 1
+bid v: bid, bade {command} | bidden, bid 0.1
+bide v: bode, bided 1
+bighorn pN: bighorns, bighorn {:1}
+bijou pN: bijoux
+billion pN: billions, billion {counting}
+bind v: bound
+biscuit pN: biscuits, biscuit 1
+bison pN: bison, bisons 1
+bite v: bit | bitten
+bleed v: bled
+blend v: blended, blent 1
+bless v: blessed, blest 1
+blow v: blew, blowed 2 | blown, blowed 2
+bluefish pN: bluefishes, bluefish {:1}
+bob pN: bobs, bob {money}
+bobcat pN: bobcats, bobcat {:1}
+bogey v: bogeyed, bogied 1
+bolshevik pN: bolsheviks, bolsheviki 1
+bonito p: bonitos, bonito 1.0,  bonitoes 1.1
+bonito pN: bonitos, bonitoes 1, bonito {:1}
+bourgeois pN: bourgeois
+box pN: boxes {container}, box {shrub}, boxes 0.1 {shrub}
+brace pN: braces, brace {pair}
+bravura pN: bravuras, bravure 2
+break v: broke | broken
+bream pN: breams, bream {:1}
+breed v: bred
+bring v: brought
+brother pN: brothers, brethren {religious}
+browbeat v: browbeat | browbeaten
+buck pN: bucks, buck 0.1
+buffalo pN: buffaloes, buffalos 1, buffalo {:1}
+build v: built, builded 2
+bullshit v: bullshitted, bullshit {:1}, bullshat 2 {:1} 
+burn v: burned, burnt 1
+burst v: burst, bursted 1
+bust v: busted, bust 1
+buy v: bought
+bypass v: bypassed, bypast 1
+cactus pN: cacti, cactuses 1, cactus 1.1
+calf pN: calves {animal}, calfs 1 {animal}, calves {leg}
+camera pN: cameras, camerae {chamber}
+campanile pN: campaniles, campanili 1
+can V: could {be_able}, canned {preserve} | canning | can {be_able}, canst 2 {be_able}, cans {preserve}
+cannon pN: cannons, cannon 1
+canvasback pN: canvasbacks, canvasback {:1}
+caravanserai pN: caravanserais, caravanserai 1
+caribou pN: caribou, caribous {:1}
+carp pN: carp, carps {:1}
+cast v: cast
+catch v: caught
+catfish pN: catfish, catfishes {:1}
+chamois pN: chamois, chamoix 1
+chap v: chapped, chapt 1
+char pN: chars {charwoman}, char {fish}, chars {fish:1}
+chassis pN: chassis
+cherub pN: cherubs, cherubim {angel}, cherubims 1 {angel}
+chide v: chided, chid 1 | chided, chid 1, chidden 1.1
+child pN: children
+choose v: chose | chosen
+chrysalis pN: chrysalises, chrysalides 1
+chub pN: chub, chubs {:1}
+cicerone pN: ciceroni, cicerones 0.1
+cirrus pN: cirri, cirrus 2
+citrus pN: citruses, citrus 1
+clad v: clad
+cleave v: cleaved {cling}, cleaved {split}, clove 0.1 {split}, cleft 0.2 {split} | cleaved, cleft 0.1, cloven 0.2
+cling v: clung
+clip v: clipped | clipped, clipt 1
+clitoris pN: clitorises, clitorides 1
+clothe v: clothed, clad 1
+clover pN: clovers, clover {:1}
+clubfoot pN: clubfeet, clubfoots {:1}
+coccyx pN: coccyges, coccyxes 1
+cod pN: cod, cods {:1}
+codfish pN: codfish, codfishes {:1}
+cognomen pN: cognomens, cognomina 1
+cognoscente pN: cognoscenti
+coho pN: coho, cohos {:1}
+colloquy pN: colloquies
+coma pN: comas {medicine}, comae {optics}
+come v: came | come
+contretemps pN: contretemps
+corps pN: corps
+corpus pN: corpora, corpora {texts}, corpuses 1 {texts}
+cosmos pN: cosmoses, cosmos 0.1
+cost v: cost, costed 2
+cottonseed pN: cottonseeds, cottonseed 0.1
+cougar pN: cougars, cougar {:1}
+cow pN: cows, kine 1
+crappie pN: crappie, crappies {:1}
+crawfish pN: crawfish, crawfishes {:1}
+crayfish pN: crayfish, crayfishes {:1}
+creep v: crept
+crocus pN: crocuses, crocus 1, croci 1.1
+cumulonimbus pN: cumulonimbi, cumulonimbuses 1, cumulonimbus 2
+cumulus pN: cumuli, cumulus 2
+cupful pN: cupfuls, cupsful 1
+curse v: cursed, curst 1 
+cut v: cut
+cuttlefish pN: cuttlefish, cuttlefishes {:1}
+cyclops pN: cyclops {flea}, cyclopes {giant}
+dace pN: dace, daces {:1}
+damned A: damneder | damnedest, damndest 0.1
+danish pN: danishes, danish 1
+dare v: dared, durst 2
+datum pN: data, datums {reference_point}
+daylight v: daylighted, daylit 1
+dead pN: dead, deads 2
+deal v: dealt
+debris pN: debris
+deer pN: deer, deers 1
+detritus pN: detritus
+diabetes pN: diabetes
+die V: died | dying {expire}, dieing {shape} | dies
+die pN: dice {gambling}, dies {tool}
+dig v: dug, digged 2 
+dilettante pN: dilettantes, dilettanti 1
+diploma pN: diplomas, diplomata {historical_document}
+dive v: dived, dove 1 | dived
+djinn pN: djinns, djinn 1
+do V: did, didst 2 | done | doing | does, dost 2, doth 2.1
+do pN: dos, do's 2
+do v: did | done
+doe pN: doe, does {:1}
+dogfish pN: dogfishes, dogfish {:1}
+dong pN: dong {money}, dongs {penis}
+dozen pN: dozens, dozen {counting}
+drachma pN: drachmas, drachmae 1, drachmai 1.1
+drag v: dragged
+draw v: drew | drawn
+dream v: dreamed, dreamt 1
+drink v: drank | drunk, drank 1
+drive v: drove | driven
+drown v: drowned
+dry A: drier, dryer 2 | driest, dryest 2
+duck pN: ducks, duck {:1}
+dwell v: dwelt, dwelled 1
+dybbuk pN: dybbukim, dybbuks 0.1
+eat v: ate | eaten
+eel pN: eels, eel {:1}
+eland pN: eland, elands {:1}
+elect pN: elect
+elk pN: elks, elk {:1}
+emphasis pN: emphases
+epiglottis pN: epiglottises, epiglottides 1
+epoxy v: epoxied, epoxyed 1
+ermine pN: ermines, ermine {:1}
+eye pN: eyes, eyen 2, eyne 2.1
+fall v: fell | fallen
+far A: farther, further 0.1 | farthest, furthest 0.1
+feed v: fed
+feel v: felt
+femur pN: femurs, femora 1
+fettuccine pN: fettuccines, fettuccine 1
+ficus pN: ficus, ficuses 1
+fight v: fought
+find v: found
+firstborn pN: firstborn, firstborns 0.1
+fish pN: fish, fishes {:1}
+fit v: fitted, fit 1
+flagstaff pN: flagstaffs, flagstaves 2
+flak pN: flak
+flan pN: flans, flanes 2
+flatfish pN: flatfish, flatfishes {:1}
+flatfoot pN: flatfoots {cop}, flatfeet {foot}
+flee v: fled
+fling v: flung
+floodlight v: floodlighted, floodlit 1
+flounder pN: flounder, flounders {:1}
+fly v: flew, flied {baseball} | flown
+folk pN: folks, folk 0.1
+foot pN: feet
+forbid v: forbade, forbad 1, forbid 1.1 | forbidden, forbid 1
+forceps pN: forceps, forcipes 2, forcepses 2.1
+forego v: forewent | foregone
+forget v: forgot | forgotten
+forgive v: forgave | forgiven
+forgo v: forwent | forgone
+forkful pN: forkfuls, forksful 2
+forsake v: forsook | forsaken
+fowl pN: fowl, fowls {:1}
+freeze v: froze | frozen
+fro pN: fros
+frosh pN: frosh
+fry pN: fry {fish}, fries {potatoes}
+fuzz pN: fuzz {cop}, fuzzes {fluff}
+gallows pN: gallows, gallowses 1
+gannet pN: gannets, gannet 1
+gar pN: gars, gar {:1}
+garfish pN: garfish, garfishes {:1}
+gazelle pN: gazelles, gazelle {:1}
+geisha pN: geisha, geishas 1
+geld v: gelded, gelt 1
+genius pN: geniuses {brilliance}, genii {spirit}
+genus pN: genera, genuses 1
+get v: got | got, gotten 0.1
+gild v: gilded, gilt 1
+gird v: girded, girt 1
+give v: gave | given
+gladiolus pN: gladioli, gladiolus 1, gladioluses 1.1
+glans pN: glandes
+glottis pN: glottises, glottides 1
+gnaw v: gnawed | gnawed, gnawn 1
+gnu pN: gnu, gnus {:1}
+go pN: gos {game}, goes {try}
+go v: went | gone
+goat pN: goats, goat 1
+goldfish pN: goldfish, goldfishes {:1}
+good A: better | best
+goodby pN: goodbys
+goose pN: geese {bird}, gooses {poke}
+grand pN: grand {money}, grands {piano}
+grapefruit pN: grapefruits, grapefruit 0.1
+gravamen pN: gravamens, gravamina 1
+grave v: graved | graven, graved 1
+grind v: ground
+gross pN: gross {12_dozen}, grosses {total}
+grouper pN: groupers, grouper {:1}
+grouse pN: grouse, grouses 0.1
+grow v: grew | grown
+guarani pN: guaranis, guarani 0.1, guaranies 0.2
+gulden pN: guldens, gulden 1
+gyp V: gypped | gypping | gyps
+haddock pN: haddocks, haddock {:1}
+haiku pN: haiku, haikus 2
+hake pN: hake, hakes {:1}
+half pN: halves, halfs 2
+halfpenny pN: halfpence {amount}, halfpennies {coin}
+halibut pN: halibut, halibuts {:1}
+handful pN: handfuls, handsful 1
+hang v: hung, hanged {execute}
+hare pN: hares, hare {:1}
+hart pN: harts, hart {:1}
+have V: had, hadst 2 | having | has, hast 2, hath 2.1
+hear v: heard
+heathen pN: heathens, heathen 1
+heave v: heaved, hove {nautical}
+henchman pN: henchmen
+hepatitis pN: hepatitides
+hero pN: heroes, heroes {sandwich}, heros 1 {sandwich}
+herring pN: herring, herrings {:1}
+hertz pN: hertz, hertzes 1
+hew v: hewed | hewed, hewn 1
+hiatus pN: hiatuses, hiatus 1
+hide v: hid | hidden, hid 1
+hind pN: hinds, hind {:1}
+hit v: hit
+ho pN: hos
+hold v: held
+honey v: honeyed, honied 1
+horse pN: horses, horse {:1}
+horseflesh pN: horseflesh
+horsepower pN: horsepower
+hose pN: hoses {tube}, hose {stockings}
+hovercraft pN: hovercraft
+hullo pN: hullos
+hundred pN: hundreds, hundred {counting}
+hundredweight pN: hundredweights, hundredweight {counting}
+hurt v: hurt
+ibex pN: ibex, ibexes {:1}, ibices 1 {:1}
+ibis pN: ibis, ibises {:1}
+ictus pN: ictuses, ictus 1
+ill A: worse, iller 2 | worst, illest 2
+imago pN: imagoes, imagines 1, imagos 2
+impala pN: impalas, impala {:1}
+impatiens pN: impatiens, impatienses 1
+insigne pN: insignia
+intaglio pN: intaglios, intagli 1, intaglioes 2
+interweave v: interwove, interweaved 1 | interwoven, interweaved 1
+iris pN: irises {eye}, irides 1 {eye}, irises {flower}
+jarful pN: jarfuls, jarsful 2
+jellyfish pN: jellyfish, jellyfishes {:1}
+jinni pN: jinnis, jinn 1
+jugful pN: jugfuls, jugsful 2
+kangaroo pN: kangaroos, kangaroo {:1}
+keep v: kept
+kibbutz pN: kibbutzim
+kielbasa pN: kielbasas, kielbasi 1, kielbasy 1.1
+kin pN: kin {family}, kins {relative}
+kip pN: kip {money}, kips 0.1 {money}, kips {sleep}
+kneel v: knelt, kneeled 1
+know v: knew | known
+krona pN: kronur {Iceland}, kronor {Sweden}
+krone pN: kroner
+kuchen pN: kuchen, kuchens 0.1
+lade v: laded | laden, laded 1
+landslide v: landslid | landslid, landslidden 1
+larynx pN: larynges, larynxes 1
+lath pN: laths, lath 1
+lay v: laid
+lead v: led, leaded {use_lead}
+lean v: leaned, leant 1
+leap v: leaped, leapt 0.1, lept 1
+learn v: learned, learnt 1
+leave v: left, leaved {produce_leaves}
+lend v: lent
+lepton pN: lepta {money}, leptons {physics}
+less A: lesser | least, lessest 2
+less pN: less
+let v: let
+lie v: lied {fib}, lay {recline} | lain
+lied pN: lieder
+light v: lighted, lit 1
+lightning V: lightninged | lightning | lightnings
+ling pN: ling, lings {:1}
+linguine pN: linguine, linguines 1
+linguini pN: linguini, linguinis 1
+lira pN: lire, liras 1
+little A: littler, less 1, lesser 1.1 | littlest, least 1
+lobster pN: lobster, lobsters {:1}
+locus pN: loci, loca 2
+looney pN: looneys, loonies 1
+loris pN: lorises, loris 0.1
+lose v: lost
+louse pN: lice {insect}, louses {insult}
+lox pN: lox, loxes 1
+lungfish pN: lungfishes, lungfish {:1}
+lynx pN: lynx, lynxes {:1}
+macaroni pN: macaronis {fop}, macaronies 1 {fop}, macaronis {pasta}
+mackerel pN: mackerel, mackerels {:1}
+madam pN: madams {brothel}, mesdames {lady}
+madame pN: mesdames, madames 2
+mademoiselle pN: mademoiselles, mesdemoiselles 0.1
+make v: made
+mallard pN: mallards, mallard {:1}
+mamma pN: mammas, mammae {gland}
+man pN: men
+manservant pN: menservants, manservants 2
+many A: more | most
+markka pN: markkaa, markkas 1
+marlin pN: marlin, marlins {:1}
+marquis pN: marquises, marquis 1
+marten pN: martens, marten {:1}
+matzo pN: matzoth, matzos 0.1, matzot 0.2
+may V: might | may, mayst 2
+mean v: meant
+medium pN: media {communication}, mediums 1 {communication}, mediums {seance}
+meet v: met
+melt v: melted | melted, molten 1
+menhaden pN: menhaden, menhadens 1
+meninx pN: meninges, meninxes 2
+merman pN: mermen
+methinks V: methought
+microfiche pN: microfiche, microfiches 1
+midwife V: midwifed, midwived 1 | midwifing, midwiving 1 | midwifes
+military pN: military, militaries 1
+million pN: millions, million {counting}
+miniseries pN: miniseries
+mink pN: mink, minks {:1}
+minnow pN: minnows, minnow {:1}
+misdo v: misdid | misdone
+mishear v: misheard
+misshape v: misshaped | misshaped, misshapen 1
+misspell v: misspelled, misspelt 1
+mix v: mixed, mixt 2
+money pN: moneys, monies 1
+mongoose pN: mongooses, mongeese 1
+monseigneur pN: messeigneurs, monseigneurs 2
+monsieur pN: messieurs, monsieurs 2
+monsignor pN: monsignors, monsignori 1
+moose pN: moose
+mouse pN: mice
+mow v: mowed | mowed, mown 1
+much A: more | most
+mullet pN: mullets, mullet {:1}
+muskellunge pN: muskellunge, muskellunges {:1}
+muskox pN: muskoxen
+narcissus pN: narcissus, narcissuses 1, narcissi 1.1
+neat pN: neat
+necropolis pN: necropolises, necropoles 1, necropoleis 1.1, necropoli 1.2
+nexus pN: nexuses, nexus 0.1
+nisei pN: nisei, niseis 1
+nonstop pN: nonstops
+nonvocal pN: nonvocals
+novella pN: novellas, novelle 1
+oak pN: oaks, oak 1
+obi pN: obis, obi 1
+obloquy pN: obloquies
+obsequy pN: obsequies
+octopus pN: octopuses, octopi 1
+offspring pN: offspring, offsprings 1
+okapi pN: okapis, okapi {:1}
+old A: older, elder 1 | oldest, eldest 1
+only A: onliest
+opossum pN: opossums, opossum {:1}
+opus pN: opera, opuses 0.1
+otter pN: otters, otter {:1}
+outdo v: outdid | outdone
+overdo v: overdid | overdone
+overlie v: overlay | overlain
+overpass v: overpassed, overpast 1
+oversee v: oversaw | overseen
+ox pN: oxen {animal}, ox 1 {animal}, oxes {oaf}
+pailful pN: pailfuls, pailsful 1
+para pN: paras {money}, para 1 {money}, paras {paramedic}
+passerby pN: passersby
+paterfamilias pN: patresfamilias {Roman}, paterfamiliases {contemporary}
+patois pN: patois
+pay v: paid, payed {slacken}
+pea p: peas, pease 1
+peacock pN: peacocks, peacock {:1}
+peafowl pN: peafowls, peafowl {:1}
+pekinese pN: pekinese
+pekingese pN: pekingese
+pelf pN: pelfs
+pen v: penned {enclose}, pent 2 {enclose}, penned {write}
+penny pN: pennies, pence {British}
+perch pN: perch, perches {:1}
+person pN: people, persons 0.1
+phalanx pN: phalanxes {army}, phalanges {bone}
+pharynx pN: pharynges, pharynxes 1
+pheasant pN: pheasants, pheasant 1
+phenomenon pN: phenomenons {celebrity}, phenomena {science}, phenomenons 1 {science}
+phlox pN: phlox, phloxes 1
+pi pN: pis {Greek}, pies {printing}
+piazza pN: piazzas, piazze 1
+pickerel pN: pickerel, pickerels {:1}
+pike pN: pikes {fish}, pike {fish:1}, pikes {weapon}
+pikestaff pN: pikestaffs, pikestaves 0.1
+pinon pN: pinons, pinones 1
+pinyin pN: pinyin, pinyins 2
+piranha pN: piranha, piranhas {:1}
+plateful pN: platefuls, platesful 2
+platy pN: platys, platies 1, platy {:1}
+platypus pN: platypuses, platypi 1, platypus 1.1
+plead v: pleaded, pled 1
+plexus pN: plexuses, plexus 1
+pocketful pN: pocketfuls, pocketsful 2
+poi pN: poi, pois 0.1
+police pN: police
+pollack pN: pollack, pollacks {:1}
+pollock pN: pollock, pollocks {:1}
+pompano pN: pompano, pompanos {:1}
+porgy pN: porgy, porgies {:1}
+porpoise pN: porpoise, porpoises {:1}
+pox pN: poxes, pox 1
+precis pN: precis, precises 2
+proboscis pN: proboscises, proboscides 1
+pronghorn pN: pronghorns, pronghorn {:1}
+protozoan pN: protozoans, protozoa 0.1
+prove v: proved | proved, proven 1
+ptarmigan pN: ptarmigan, ptarmigans {:1}
+pubes pN: pubes
+puma pN: pumas, puma 1
+put v: put
+quadriceps pN: quadricepses, quadriceps 1
+quadrillion pN: quadrillions, quadrillion {counting}
+quail pN: quail, quails {:1}
+quarterstaff pN: quarterstaves, quarterstaffs 1
+quid pN: quid {money}, quids {tobacco}
+quit v: quit, quitted 1
+rabbit pN: rabbits, rabbit {:1}
+rabies pN: rabies
+raccoon pN: raccoons, raccoon {:1}
+rand pN: rands {leather}, rand {money}
+read v: read
+real pN: reals {Portugese_money}, reis 1 {Portugese_money}, reals {Spanish_money}, reales 1 {Spanish_money}, reals {number}
+rebroadcast v: rebroadcast, rebroadcasted 1
+red v: red, redded 2
+redo V: redid | redone | redoing | redoes
+reeve v: rove, reeved 1
+rehang v: rehanged {execute}, rehung {suspend}
+relay v: relaid {lay_again}, relayed {pass_along}
+religious pN: religious, religiouses 2
+rend v: rent, rended 2
+rendezvous pN: rendezvous, rendezvouses 2
+resow v: resowed | resown, resowed 1
+retread v: retreaded {tire}, retrod {walk_again} | retrodden
+revers pN: revers, reverses 2
+reweave v: rewove, reweaved 1 | rewoven, reweaved 1, rewove 1.1
+rewind v: rewound, rewinded 2
+rhinoceros pN: rhinoceroses, rhinoceri 1, rhinoceros {:1}
+rid v: rid, ridded 1
+ride v: rode | ridden
+rigatoni pN: rigatoni, rigatonis 2
+ring v: ringed {encircle}, rang {sound} | rung
+ripsaw v: ripsawed | ripsawed, ripsawn 1
+rise v: rose | risen
+rive v: rived | rived, riven 1
+roach pN: roaches {fish}, roach {fish:1}, roaches {insect}
+roe pN: roe {deer}, roes {deer:1}, roes {eggs}
+roebuck pN: roebucks, roebuck {:1}
+run v: ran | run
+rupiah pN: rupiahs, rupiah 1
+sable pN: sable {animal}, sables {animal:1}, sables {fur}
+sackful pN: sackfuls, sacksful 2
+sailfish pN: sailfish, sailfishes {:1}
+salmon pN: salmon, salmons {:1}
+salmonella pN: salmonellae, salmonellas 1, salmonella 1.1
+samurai pN: samurai, samurais 2
+sardine pN: sardines, sardine {:1}
+sash pN: sashes {clothing}, sashes {window}, sash 0.1 {window}
+saute v: sauteed, sauted 1
+saw v: sawed | sawed, sawn 1
+sawbones pN: sawbones, sawboneses 1
+say V: said | saying | says, saith 2
+say v: said
+scampi pN: scampi, scampies 1, scampis 2
+schnapps pN: schnapps, schnappses 2
+schnaps pN: schnaps, schnapses 2
+schrod pN: schrod, schrods 1
+scintilla pN: scintillas, scintillae 2
+score pN: scores, score {twenty}
+scrod pN: scrod, scrods 1
+seal pN: seals, seals {animal}, seal {animal:1}
+see v: saw | seen
+seek v: sought
+seethe v: seethed, sod 2 | seethed, sodden 2, sod 2.1
+sell v: sold
+send v: sent
+seraph pN: seraphs, seraphim 1
+seraphim pN: seraphim, seraphims 2
+set v: set
+sew v: sewed | sewn, sewed 1
+shad pN: shad, shads {:1}
+shake v: shook | shaken
+shall V: should | shall, shalt 2
+shave v: shaved | shaved, shaven 1
+shear v: sheared | sheared, shorn 1
+shed v: shed
+sheep pN: sheep
+shellfish pN: shellfish, shellfishes {:1}
+shew v: shewed | shewn
+shine v: shone, shined {polish}
+shit v: shit, shat 1
+shoe pN: shoes, shoon 1
+shoe v: shod, shoed 1 | shod, shoed 1, shodden 1.1
+shoot v: shot
+shot pN: shots, shot {bullet}
+shovelful pN: shovelfuls, shovelsful 2
+show v: showed | shown, showed 1
+shrimp pN: shrimp, shrimps {:1}
+shrink v: shrank, shrunk 1 | shrunk, shrunken 1
+shrive v: shrived, shrove 1 | shriven, shrived 1
+shut v: shut
+shy A: shyer, shier 1 | shyest, shiest 1
+sightread v: sightread
+signor pN: signors, signori 0.1
+signora pN: signoras, signore 0.1
+signore pN: signori
+signorina pN: signorinas, signorine 0.1
+silverfish pN: silverfish, silverfishes {:1}
+sing v: sang | sung
+sink v: sank, sunk 1 | sunk, sunken 1
+sit v: sat
+sixpence pN: sixpence, sixpences 0.1
+skate pN: skates {fish}, skate {fish:1}, skates {roller}
+ski pN: skis, ski 1, skies 2
+skunk pN: skunks, skunk {:1}
+sky v: skied, skyed 1
+slay v: slew | slain
+sleep v: slept
+slide v: slid
+sling v: slung
+slink v: slunk, slinked 1
+slit v: slit {cut}, slitted {narrow}
+sly A: slier, slyer 1 | sliest, slyest 1
+smartypants pN: smartypants
+smell v: smelled, smelt 1
+smelt pN: smelts, smelt {:1}
+smite v: smote | smitten, smote 1, smit 1.1
+smooth p: smooths, smoothes 1
+snapper pN: snappers, snapper {fish}, snappers {fish:1}
+snapshot v: snapshotted, snapshot 0.1
+sneak v: sneaked, snuck 1
+snipe pN: snipe, snipes {:1}
+sock pN: socks, sox 1
+sole pN: sole {fish}, soles {fish:1}, soles {shoe}
+soliloquy pN: soliloquies, 2soliloquys
+sow v: sowed | sown, sowed 1
+spacecraft pN: spacecrafts, spacecraft 0.1
+spat pN: spats {oyster}, spat 1 {oyster}, spats {quarrel}
+speak v: spoke, spake 2 | spoken, spoke 2
+spearfish pN: spearfish, spearfishes {:1}
+spec V: spec'd, specked 1, specced 1.1 | spec'ing, specking 1, speccing 1.1 | specs
+special A: specialer | specialist
+speed v: sped, speeded 1
+spell v: spelled, spelt 1
+spend v: spent
+sphinx pN: sphinxes, sphinges 1
+spill v: spilled, spilt 1
+spin v: spun
+spit v: spitted {pierce}, spit {saliva}, spat 1 {saliva}
+split v: split
+spoil v: spoiled, spoilt 1
+spoonful pN: spoonfuls, spoonsful 1
+sprat pN: sprats, sprat {:1}
+spread v: spread
+spring v: sprang, sprung 1 | sprung
+springbok pN: springbok, springboks {:1}
+spry A: sprier, spryer 1 | spriest, spryest 1
+squab pN: squab, squabs {:1}
+squash pN: squashes, squash 1
+squid pN: squid, squids {:1}
+squirrel pN: squirrels, squirrel {:1}
+staff pN: staffs {people}, staves {rod_music}, staffs 0.1 {rod_music}
+stag pN: stags, stag 1
+stand v: stood
+starfish pN: starfish, starfishes {:1}
+stave v: staved, stove 1
+stay v: stayed, staid 2
+steal v: stole | stolen
+steer pN: steers, steer {:1}
+stick v: stuck
+stigma pN: stigmas {disgrace}, stigmata {wounds}
+sting v: stung
+stink v: stank, stunk 1 | stunk
+stone pN: stones {rock}, stone {weight}
+strew v: strewed | strewed, strewn 0.1
+strike v: struck | struck, stricken 1
+string v: strung
+strip v: stripped, stript 1
+strive v: strove, strived 1 | striven, strived 1
+sturgeon pN: sturgeon, sturgeons {:1}
+subspecies pN: subspecies
+sunburn v: sunburned, sunburnt 1
+sunfish pN: sunfish, sunfishes {:1}
+swan pN: swans, swan 1
+swear v: swore | sworn
+sweat v: sweat, sweated 1, sweaten 2
+sweep v: swept
+swell v: swelled | swollen, swelled 0.1
+swim v: swam | swum
+swine pN: swine
+swing v: swung
+swordfish pN: swordfish, swordfishes {:1}
+tablespoonful pN: tablespoonfuls, tablespoonsful 1
+take v: took | taken
+talus pN: tali {anklebone}, taluses {debris}
+tapir pN: tapirs, tapir {:1}
+tarpon pN: tarpon, tarpons {:1}
+tatami pN: tatami, tatamis {:1}
+taxi V: taxied | taxiing, taxying 1 | taxis, taxies 1
+teach v: taught
+teacupful pN: teacupfuls, teacupsful 2
+teal pN: teal, teals {:1}
+tear v: teared {cry}, tore {rip} | torn
+teaspoonful pN: teaspoonfuls, teaspoonsful 1
+tell v: told
+think v: thought
+thou pN: thous, thou {counting}
+thousand pN: thousands, thousand {counting}
+threepence pN: threepence, threepences 1
+thrive v: thrived, throve 1 | thrived, thriven 1
+throw v: threw | thrown
+thrust v: thrust, thrusted 2
+timpani pN: timpani
+ton pN: tons, ton 1
+tooth pN: teeth
+toss v: tossed, tost 1
+transfix v: transfixed, transfixt 1
+tread v: trod | trodden, trod 1
+triceps pN: triceps, tricepses 0.1
+triceratops pN: triceratops, triceratopses 1
+trillion pN: trillions, trillion {counting}
+trivia pN: trivia
+trout pN: trout, trouts {:1}
+tuba pN: tubae {Roman}, tubas {modern}
+tuna pN: tuna, tunas {:1}
+tunny pN: tunnies, tunny {:1}
+turbot pN: turbots, turbot {:1}
+turtle pN: turtles, turtle {:1}
+twopence pN: twopence {amount}, twopences {coin}
+tympani pN: tympani, tympanies 2
+undergo v: underwent | undergone
+underlie v: underlay | underlain
+understand v: understood
+undo v: undid | undone
+unwind v: unwound
+up v: upped, up 1
+upset v: upset
+upthrust v: upthrust
+veg p: veges, vegs 0.1
+ventriloquy pN: ventriloquies
+vermicelli pN: vermicelli, vermicellis 0.1
+vermin pN: vermin
+vertigo pN: vertigoes, vertigines 1, vertigos 1.1
+viscus pN: viscera
+wake v: woke, waked 0.1 | waked, woken 1, woke 1.1
+wallaby pN: wallabies, wallaby {:1}
+walleye pN: walleye, walleyes {:1}
+walrus pN: walruses, walrus {:1}
+wapiti pN: wapitis, wapiti {:1}
+watercraft pN: watercraft
+wax v: waxed | waxed, waxen 2
+weakfish pN: weakfish, weakfishes {:1}
+wear v: wore | worn
+weasel pN: weasels, weasel {:1}
+weave v: wove {fabric}, weaved {zigzag} | woven
+wed v: wedded, wed 1
+weep v: wept
+well A: better | best
+wend v: wended, went 2
+wet v: wet, wetted 1
+whale pN: whales, whale {:1}
+whereabouts pN: whereabouts
+whipsaw v: whipsawed | whipsawed, whipsawn 1
+whitefish pN: whitefish, whitefishes {:1}
+whiting pN: whitings {chalk}, whiting {fish}, whitings {fish:1}
+widgeon pN: widgeons, widgeon {:1}
+wigeon pN: wigeons, wigeon {:1}
+wildcat pN: wildcats, wildcat {:1}
+wildebeest pN: wildebeests, wildebeest {:1}
+wildfowl pN: wildfowl, wildfowls 1
+will V: willed, would {future}, wouldst 2 {future} | willing | wills, will {future}, wilt 2 {future}
+win v: won
+wind v: winded {blow}, wound 1 {blow}, wound {curve}, winded 1 {curve}, winded {scent_tire}
+wit V: wist | witting | wot | wost | wot | wit, wite 0.1
+wolf pN: wolves, wolf 1
+wolverine pN: wolverines, wolverine 1
+woman pN: women
+won pN: won
+work v: worked, wrought 1
+wrap v: wrapped, wrapt 1
+wring v: wrung
+write v: wrote | written, writ 1
+wry A: wryer, wrier 1 | wryest, wriest 1
+yen pN: yens {craving}, yen {money}
+yeoman pN: yeomen
+yeshiva pN: yeshivas, yeshivoth 1
+yeshivah pN: yeshivahs, yeshivoth 1
+young pN: young
+yuan pN: yuan
+zebra pN: zebras, zebra {:1}
+zillion pN: zillions, zillion {counting}
+zinc V: zincked, zinced 1 | zincking, zincing 1 | zincs, zincks 2
+zucchini pN: zucchinis, zucchini 1

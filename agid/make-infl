@@ -1,0 +1,827 @@
+#!/usr/bin/perl -w
+
+# Make-infl Version .50 beta 
+# by Kevin Atkinson <kevina@users.sourceforge.net> 
+#
+# Copyright 2000 by Kevin Atkisnon 
+#
+# Permission to use, copy, modify, distribute and sell this script,
+# and the results produces from it is hereby granted without fee,
+# provided that the above copyright notice appears in all copies and
+# that both that copyright notice and this permission notice appear in
+# supporting documentation. Kevin Atkinson makes no representations
+# about the suitability of this array for any purpose. It is provided
+# "as is" without express or implied warranty.
+
+# Uncomment these lines to greatly reduce memory usage but at a 
+# serious cost (The script will take over 3 times as long to run)
+#use DB_File;
+#$HASH = new DB_File::HASHINFO;
+#$HASH->{cachesize} = 16*1024**2;
+#tie %word,  'DB_File', undef, O_CREAT|O_RDWR, 0666, $HASH;
+
+use strict;
+use Data::Dumper;
+
+#
+# Global constants
+#
+
+use vars qw($pos_file $filter_file 
+	    $variant_file
+            $irregular_file $dontuse_file 
+	    $prefix_file $suffix_file
+	    $variant_new_file
+            $out_file $notin_file 
+	    $WITH_POS_ONLY
+            $con $vol $y_end $vol_con);
+
+#$WITH_POS_ONLY = 1;
+
+# normal mode
+$pos_file       = "pos.txt";
+$filter_file    = "all.lst";
+$out_file       = "infl.txt";
+
+# test mode
+#$pos_file        = "pos.tmp";
+#$filter_file     = "temp.lst";
+#$out_file        = "infl-temp.txt";
+
+#$filter_file    = "almost-all.lst";
+#$pos_file       = "../pos/part-of-speech.txt";
+
+# jargon file
+#$pos_file       = "/home/kevina/jargon-4.2.0/html/entry/pos.txt";
+#$out_file       = "/home/kevina/jargon-4.2.0/html/entry/infl.txt";
+
+$variant_file     = "variant";
+$irregular_file   = "irregular";
+$dontuse_file     = "dontuse";
+$prefix_file      = "prefixes";
+$suffix_file      = "suffixes";
+
+$variant_new_file = "variant.new";
+
+$notin_file       = "$out_file-notin";
+
+
+$con = "bcdfghjklmnpqrstvwxyz";
+$vol = "aeiou";
+
+$y_end     = "([$con])y\$";
+$vol_con   = "([$con][$vol])([bdfghjklmnpqrstvz])\$";
+
+#
+# Global variables
+#
+
+use vars qw(%word %special %notin %variant %dontuse 
+	    %prefix %suffix %equal_variant
+            $word $inflections_c @inflections
+            $is_verb);
+
+use vars qw(@a);
+
+#
+# Utility functions
+#
+
+sub strip (\$) {
+    ${$_[0]} =~ y/~?!\\<//d;
+}
+
+sub lookup ($$)
+{
+    my $w = $_[1];
+    strip $w;
+    return $_[0]->{$w} if exists $_[0]->{$w};
+    return '0';
+}
+
+sub have ($$)
+{
+    my $w = $_[1];
+    strip $w;
+    return exists $_[0]->{$w};
+}
+
+#
+# Infl Utility Functions
+#
+
+sub copy_infl_list($)
+{
+    return map {ref $_ ? {%$_} : $_} @{$_[0]};
+}
+
+sub copy_infl_list_set_level($)
+{
+    return map {ref $_ ? {%$_, level_set=>1} : $_} @{$_[0]};
+}
+
+#
+# Try specific inflections
+#
+
+sub try_volcon2 ($)
+#NOTE: uses and modifies semi-global variable @a
+{
+    local $_ = $word;
+    if (/$vol_con$/i) {
+	my $m = exists $word{"${_}e"} ? '!' : '';
+	if (/l$/) {
+	    $a[0] .= '<';
+	    push @a, "$word$_[0]$m";
+	} else {
+	    push @a, "$word$_[0]$m<";
+	}
+    } elsif (s/([$vol])([$con])$/$1$2$2$_[0]/) {
+	my $m = exists $word{"${word}$2e"} ? '!' : '';
+	if ($m eq '!' || $word !~ /[bdfghjkmnpqrstvz]$/) {
+	    push @a, "$_$m<";
+	} else {
+	    $a[0] .= '<';
+	    push @a, $_;
+	}
+    }
+}
+
+sub compound_find ($$$)
+{
+    my ($word,
+	$have,    # a function with sig $, returns true if suffix exists
+	$action)  # an action function with takes in 3 parameters: prefix,suffix,ques
+                  # where ques is true if the compound is questionable.  
+      = @_;
+    my $prev_pre = '';
+    my $prev_suf = '';
+    foreach my $i (3 .. length($word) - 2) 
+    {
+	my $suf = substr($word,-$i);
+	next unless &$have($suf);
+	my $pre = substr($word, 0, length($word)-$i);
+	next unless (exists $word{$pre} || exists $prefix{$pre});
+	next if (exists $prefix{$prev_pre} && ! exists $prefix{$pre});
+	print STDERR ("Warning: Both suffix $prev_suf and $suf found ",
+                      "for word $word, using $suf\n")           if $prev_suf ne '';
+	my $ques = ((length($pre) < 3 && !exists $prefix{$pre})
+		    || (length($suf) < 4 && !exists $suffix{$suf}));
+	&$action($pre,$suf,$ques);
+	$prev_pre = $pre;
+	$prev_suf = $suf;
+    }
+}
+
+sub try_irregular_suffix ($)
+{
+    my $p = $_[0];
+    my @if;
+    my $have = sub {exists $special{"$_[0] $p"}};
+    my $action = sub {
+	my ($pre,$suf,$ques) = @_;
+	@if = ();
+	foreach (@{$special{"$suf $p"}}) {push @if, {%$_} if $_->{expl} eq ''}
+	map {$_->{word} =~ s/^([A-Za-z])/$pre$1/} @if;
+	if ($ques) {
+	    foreach (@if) {$_->{word} =~ s/^([A-Za-z]+)/$1~~/}
+	} else {
+	    foreach (@a) {die if ref $_; $_ .= '~';}
+	}
+    };
+    compound_find $word, $have, $action;
+    push @a, @if;
+}
+
+sub lookup_variant ($) 
+{
+    my $word = $_[0];
+    strip $word;
+    my $level = $variant{$word};
+    my $have = sub {exists $variant{$_[0]}};
+    my $action = sub {
+	my ($pre,$suf,$ques) = @_;
+	return if $ques;
+	my $l = $variant{$suf};
+	if (defined $level) {
+	    if ($level == $l) {
+		print STDERR ("Redundant variant entry, \"$word\"", 
+			      " because of \"$suf\" entry.\n");
+		delete $variant{$word};
+	    } else {
+		print STDERR ("Conflicting variant entries: ",
+			      "\"$word $level\" vs. \"$suf $l\". Using $level.\n");
+	    }
+	} else {
+	    $level = $l;
+	}
+    };
+    compound_find $word, $have, $action;
+    return $level;
+}
+
+
+sub plural ($) 
+{
+    local $_;
+    $_ = $word;
+    my $p = $_[0];
+    return copy_infl_list_set_level $special{"$_ p"}   if exists $special{"$_ p"};
+    return copy_infl_list_set_level $special{"$_ p$p"} if exists $special{"$_ p$p"};
+    s/([aeiouyw])([z])$/$1$2$2es/
+    or s/(s|j|x|z|ch|sh)$/$1es/i
+    or s/$y_end/$1ies/
+    or s/$/s/i;
+    local @a = ($_);
+    try_irregular_suffix 'p';
+    try_irregular_suffix "p$p";
+    $_ = $word; s/o$/oes/                     and push @a, $_;
+    $_ = $word; s/ch$/chs</                   and push @a, $_;
+    $_ = $word; (s/([aeiouyw][z])$/$1es/ or s/([dilry])$/$1es/)
+      and ($_ .= exists $word{"${word}e"} ? '!<' : '<'), push @a, $_;
+    $_ = $word; s/([$con][$vol])s$/$1sses</   and push @a, $_;
+    if ($p eq 'N') {
+        $_ = $word; s/$y_end/$1ys</         and push @a, $_;
+	$_ = $word; s/fe?$/ves</            and push @a, $_;
+	$_ = $word; s/a$/ae~/               and push @a, $_;
+	$_ = $word; s/us$/i~/               and push @a, $_;
+	$_ = $word; s/um$/a~/               and push @a, $_;
+	$_ = $word; ((s/([eoy])sis$/$1ses/ and $a[0] .= '<')
+		     or s/is$/es~/)	    and push @a, $_;
+	$_ = $word; s/on$/a~/               and push @a, $_;
+	$_ = $word; s/o$/i~/                and push @a, $_;
+	$_ = $word; s/[ei]x$/ices</         and push @a, $_;
+	$_ = $word; s/([aouy])x$/$1ces</    and push @a, $_;
+	$_ = $word; s/e(a?)u$/e$1ux~/       and push @a, $_;
+	$_ = $word; s/ma$/mata~/            and push @a, $_;
+	$_ = $word; s/itis$/itides</        and push @a, $_;
+    }
+    return @a;
+}
+
+sub plural_noun () {
+    return plural('N');
+}
+
+sub plural_verb () {
+    return plural('V');
+}
+
+sub ed ()
+{
+    local $_;
+    $_ = $word;
+    return copy_infl_list_set_level $special{"$_ v"} if exists $special{"$_ v"};
+    s/e$/ed/i
+    or s/$y_end$/$1ied/i
+    or s/$vol_con$/$1$2$2ed/i
+    or s/([^s])c$/$1cked/
+    or s/$/ed/;
+    local @a = ($_);
+    try_irregular_suffix 'v';
+    try_volcon2("ed");
+#   $_ = $word; s/([$vol]e)$/$1ed~/   and push @a, $_;
+    $_ = $word; s/e$/eed/             and push @a, $_;
+    $_ = $word; s/([^s])c$/$1ced/     and push @a, $_;
+    return @a;
+}
+
+sub ing ()
+{
+    local $_;
+    $_ = $word;
+    s/([^ei])e$/$1ing/i
+    or s/$vol_con$/$1$2$2ing/i
+    or s/([^s])c$/$1cking/
+    or s/$/ing/;
+    local @a = ($_);
+    try_volcon2("ing");
+    $_ = $word; s/ie$/ying/                         and push @a, $_;
+#   $_ = $word; (s/([aou]e)$/$1ing/ or s/e$/eing/)  and push @a, $_;
+    $_ = $word; s/e$/eing/                          and push @a, $_;
+    $_ = $word; s/([^s])c$/$1cing/                  and push @a, $_;
+    return @a;
+}
+
+sub er ()
+{
+    local $_;
+    $_ = $word;
+    s/E$/er/i
+    or s/$y_end$/$1ier/i
+    or s/ey$/ier/i
+    or s/$vol_con$/$1$2$2er/i
+    or s/$/er/;
+    local @a = ($_);
+    try_volcon2("er");
+    $_ = $word; s/ey$/eyer</ and push @a, $_;
+    return @a;
+}
+
+sub est ()
+{
+    local $_;
+    $_ = $word;
+    s/e$/est/i
+    or s/$y_end$/$1iest/i
+    or s/ey$/iest/i
+    or s/$vol_con$/$1$2$2est/i
+    or s/$/est/i;
+    local @a = ($_);
+    try_volcon2("est");
+    $_ = $word; s/ey$/eyest</ and push @a, $_;
+    return @a;
+}
+
+#
+# Proc results
+#
+
+sub low_variant ($)
+{
+  return $_[0] == 0;
+#  return $_[0] < 2;
+}
+
+sub infl_eq ($$)
+{
+    return ($_[0]->{word} eq $_[1]->{word}
+	    && $_[0]->{level} == $_[1]->{level}
+	    && $_[0]->{expl}  eq $_[1]->{expl}
+	    && $_[0]->{order} == $_[1]->{order});
+}
+
+sub infl_list_eq_no_order (\@\@)
+{
+    return 0 if $#{$_[0]} != $#{$_[1]};
+    foreach (0 .. $#{$_[0]}) {
+	return 0 unless ($_[0]->[$_]{word} eq $_[1]->[$_]{word}
+			 && $_[0]->[$_]{level} == $_[1]->[$_]{level}
+			 && $_[0]->[$_]{expl}  eq $_[1]->[$_]{expl})
+    }
+    return 1;
+}
+
+sub compare_infl_list 
+{
+    return $a->{order} <=> $b->{order} unless $a->{order} eq $b->{order};
+    return $a->{expl}  cmp $a->{expl}  unless $a->{expl}  eq $b->{expl};
+    return $a->{level} <=> $b->{level} unless $a->{level} == $b->{level};
+     
+    return -1 if ($a->{word} !~ /[\!\~<]/ && $b->{word} =~ /[\!\~<]/);
+    return  1 if ($b->{word} !~ /[\!\~<]/ && $a->{word} =~ /[\!\~<]/);
+
+    return -1 if ($a->{word} !~ /[\!\~]/ && $b->{word} =~ /[\!\~]/);
+    return  1 if ($b->{word} !~ /[\!\~]/ && $a->{word} =~ /[\!\~]/);
+
+    return -1 if ($a->{word} !~ /\!/ && $b->{word} =~ /\~/);
+    return  1 if ($b->{word} !~ /\!/ && $a->{word} =~ /\~/);
+
+    return $a->{word} cmp $b->{word};
+}
+
+sub set_level ($$)
+{
+    $_[0]->{level} = $_[1];
+    $_[0]->{level_set} = 1;
+}
+
+sub separate0 ($$) # $in $order_num
+
+# Separates the possible inflections from $in (a refrence to an array)
+# and stores the result into $in
+
+{
+    my $in = $_[0];
+    my $order_num = $_[1];
+    foreach (@$in) {
+	$_ = {word  => $_, 
+	      level => 0,
+	      expl  => '',
+	      order => 0} unless ref $_;
+	$_->{order} += $order_num;
+    }
+
+    my (@in0,@in1);
+    foreach (@$in)
+    {
+	push @in0,$_ if $_->{order} == $order_num;
+	push @in1,$_ if $_->{order} != $order_num;
+    }
+
+    foreach my $i (\@in0,\@in1) {
+	next if @$i == 0;
+	my $num_not_set;
+	my $update_state = sub () {
+	    $num_not_set = 0;
+	    foreach (@$i) {$num_not_set++ unless $_->{level_set}}
+	};
+	
+	&$update_state;
+	next unless $num_not_set > 1;
+	@$i = grep !(!$_->{level_set} && have(\%dontuse, $_->{word})), @$i;
+	foreach (@$i) {
+	    next if $_->{level_set};
+	    my $l = lookup_variant $_->{word};
+	    if (defined $l) {
+		set_level $_, $l;
+		$_->{word} =~ tr/~<//d;
+	    }
+	}
+	
+	&$update_state;
+        next unless $num_not_set > 1;
+	foreach (@$i) {set_level $_, 1 if !$_->{level_set} && $_->{word} =~ /~~/}
+	
+	&$update_state; 
+	next unless $num_not_set > 1;
+	foreach (@$i) {set_level $_, 1 if !$_->{level_set} && $_->{word} =~ /~/}
+	
+	&$update_state; 
+	next unless $num_not_set > 1;
+	foreach (@$i) {set_level $_, 1 if !$_->{level_set} && $_->{word} =~ /</}
+    }
+    @$in = (@in0,@in1);
+
+    #                  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+    #  $lowvar[0]......0  +  0  +  0  +  0  +  0  +  0  +  0  +  0  +
+    #  $   var[0]......0  0  +  +  0  0  +  +  0  0  +  +  0  0  +  +
+    #  $lowvar[1]......0  0  0  0  +  +  +  +  0  0  0  0  +  +  +  +
+    #  $   var[1]......0  0  0  0  0  0  0  0  +  +  +  +  +  +  +  +
+    my @valid_end = qw(X  X  !  X  !  X  !  X  !  !  !  !  !  X  !  X);
+
+    my (@lowvar)      = (0,0);
+    my (@var)         = (0,0);
+    my (@num_not_set) = (0,0);
+    foreach (@$in) {
+	if (low_variant $_->{level}) {$lowvar[$_->{order} - $order_num]++}
+	else                         {$   var[$_->{order} - $order_num]++}
+	if (!$_->{level_set})   {$num_not_set[$_->{order} - $order_num]++}
+    }
+ 
+    # possibly correct invalid states if some words don't have there level set yet
+
+    if ($lowvar[0] == 0 && $num_not_set[0] != 0) 
+    {
+	$var[0] = 0;
+	foreach (@$in) {
+	    set_level $_, 0 if $_->{order} == $order_num && !$_->{level_set};
+	    $var[0]++       if $_->{order} == $order_num && $_->{level_set};
+	}
+	$lowvar[0] = 1;
+    }
+
+    if ($lowvar[1] == 0 && $num_not_set[1] != 0) 
+    {
+	$var[1] = 0;
+	foreach (@$in) {
+	    set_level $_, 0 if $_->{order} != $order_num && !$_->{level_set};
+	    $var[1]++       if $_->{order} == $order_num && $_->{level_set};
+	}
+	$lowvar[1] = 1;
+    }
+
+    # Make final adjustments to correct invalid states
+
+    if ($lowvar[0] != 0 && $lowvar[1] == 0 && $var[1] != 0) # 9 11 -> 13 15 
+    {
+	my @in0 = copy_infl_list 
+	  [grep {$_->{order} == $order_num && low_variant $_->{level}} @$in];
+	foreach (@in0) {$_->{order} = $order_num + 1};
+	push @$in, @in0;
+	$lowvar[1] = 1;
+    }
+
+    # invalid cases left: 2 4 6 8 10 12 14
+    if ($lowvar[1] == 0 && $var[1] != 0) # 8 10 -> 4 6
+    {
+	foreach (@$in) 
+        {
+	    if ($_->{order} != $order_num) 
+	    {
+		$_->{level} = 0;
+	    }
+	}
+	$lowvar[1] = 1; $var[1] = 0;
+    }
+    # invalid cases left: 2 4 6 12 14
+    if ($lowvar[0] == 0 && $var[0] != 0) # 2 6 14 -> 1 5 13
+    {
+	foreach (@$in)
+        {
+	    if ($_->{order} == $order_num)
+	    {
+		$_->{level} = 0;
+	    }
+	}
+	$lowvar[0] = 1; $var[0] = 0;
+    }
+    # invalid cases left: 4 12
+    if ($lowvar[0] == 0 && $var[0] == 0) # 4 12 -> 1 3
+    {
+	foreach (@$in) 
+	{
+	    $_->{order} = $order_num;
+	}
+    }
+    # no invalid cases left
+}
+
+sub separate ($$;$) # $in $order_num ; $notin
+
+{
+    my $in = [copy_infl_list $_[0]];
+    my $order_num = $_[1];
+    my $notin = $_[2];
+    separate0 $in,$order_num;
+    
+    if (@$in == 0) {
+
+	$in = [copy_infl_list $_[0]];
+	foreach (@$notin) {if (ref $_) 
+			     {$_->{word}.='?'} 
+			   else 
+			     {$_.='?'} 
+			   push @$in, $_}
+	separate0 $in,$order_num;
+
+    } else {
+
+	$inflections_c++ if @$in != 0;
+
+    }
+
+    map {$_->{word} =~ y/~<//d if $_->{level} < 1; $_->{word} =~ s/~+/~/;}  @$in;
+    
+    @$in = sort compare_infl_list @$in;
+
+    my %already_in;
+    my $prev_order = -1;
+    @$in = grep {%already_in = () if $_->{order} != $prev_order;
+		 my $w = $_->{word};
+		 strip $w;
+		 $w .= ":$_->{expl}" unless $_->{expl} eq '';
+		 my $s=exists $already_in{$w}; 
+		 $already_in{$w} = 1;
+		 $prev_order = $_->{order};
+		 !$s}                                @$in;
+
+    my (@in0,@in1);
+    foreach (@$in) 
+    {
+	push @in0,$_ if $_->{order} == $order_num;
+	push @in1,$_ if $_->{order} != $order_num;
+    }
+    $in = \@in0 if infl_list_eq_no_order @in0,@in1;
+
+    push @inflections, @$in;
+}
+
+sub try ($$)
+{
+    my($fun,$order_num) = @_;
+    my(@res,@in,@notin);
+    @res = &$fun;
+    foreach my $a (@res) {
+	if    (have \%word, (ref $a ? $a->{word} : $a)) {push @in, $a} 
+	else                                            {push @notin, $a}
+    }
+    separate \@in,$order_num,\@notin ;
+}
+
+sub combine_inflections ($)
+# combines the inflection info into a single string
+{
+    my $pos = $_[0];
+
+    my $str = ' ';
+
+    foreach my $i (0 .. $#inflections) {
+	my ($cur)  = $inflections[$i];
+	my ($next) = $inflections[$i+1];
+	
+	$cur->{word} =~ y/!//d   if $cur->{level} < 1 && $pos !~ /\?$/;
+
+	$str .= $cur->{word};
+	$str .= " $cur->{level}" if $cur->{level} != 0;
+	$str .= " $cur->{expl}" if $cur->{expl} ne '';
+
+	if (defined $next) {
+	    if ($cur->{order} != $next->{order}) {
+		$str .= " | ";
+	    } else {
+		$str .= ", ";
+	    }
+	}
+    }
+
+    return $str;
+}
+
+sub output ($)
+#uses globule variables $word, @inflections
+{
+    my($pos) = @_;
+
+    print OUT "$word $pos:",combine_inflections($pos),"\n";
+}
+
+sub output_notin ($)
+{
+    my ($pos) = @_;
+
+    print NOTIN "$word $pos:",combine_inflections($pos),"\n";
+}
+
+sub proc_infl_str ($$)
+{
+    my ($line, $info) = @_;
+    my @l;
+    my $i = 0;
+    foreach (split / *\| */, $info) {
+	foreach (split / *, */) {
+	    my ($word, @extra) = split / +/;
+	    push @l, {word  => $word,
+		      level => 0,
+		      expl  => '',
+		      order => $i};
+	    foreach (@extra) {
+		if (/^[0-9.]+$/) {
+		    $l[$#l]->{level} = $_;
+		} elsif (/^\{.*\}$/) {
+		    $l[$#l]->{expl} = $_;
+		} else {
+		    die "Bad Line: $line"
+		}
+	    }
+	}
+	$i++;
+    }
+    @inflections = @l;
+    return @l;
+}
+
+open F, $filter_file or die;
+while (<F>) { chop; $word{$_} = ''; }
+
+open F, $pos_file;
+while (<F>) { 
+    chop;
+    next if $_ eq '';
+    my ($word,$POSes) = /^(.+)\t(.+)$/ or die "$pos_file: Bad Line: $_";
+    next if $word !~ /^[A-Za-z]+$/;
+    $word{$word} .= $POSes;
+}
+
+open F, $variant_file or die;
+while (<F>) { 
+    chop;
+    next if $_ eq '';
+    my ($word, $level) = split / /;
+    $level = 1 unless defined $level;
+    $variant{$word} = $level;
+}
+
+open F, $irregular_file or die;
+while (<F>) {
+    next if $_ eq '\n';
+    my ($word, $pos, $info) 
+      = /^([^ ]+) ([^ ]+): (.+)\n/ or die "Bad Line: $_";
+    my $line = $_;
+    if ($pos =~ /^[A-Z]/) {
+	$special{"$word $pos"} .= $line;
+    } else {
+	$special{"$word $pos"} = [proc_infl_str $line, $info];
+    }
+}
+
+open F, $dontuse_file or die;
+while (<F>) { s/\r?\n//; $dontuse{$_} = 1; 
+	      print STDERR "Warning: \"$_\" in both dontuse and variant.\n" if delete $variant{$_}; }
+
+open F, $prefix_file or die;
+while (<F>) { s/\r?\n//; $prefix{$_} = 1; }
+
+open F, $suffix_file or die;
+while (<F>) { s/\r?\n//; $suffix{$_} = 1; }
+
+open OUT, ">$out_file";
+open NOTIN, ">$notin_file";
+
+sub try_V () 
+{
+    return if ($WITH_POS_ONLY && !/[Vti]/);
+    $is_verb = 0;
+    if (exists $special{"$word V"})
+    {
+	print OUT $special{"$word V"};
+	$is_verb = 1;
+    } else {
+	$inflections_c = 0; @inflections = ();
+	try(\&ed,          0);
+	try(\&ing,         2);
+	try(\&plural_verb, 3);
+	$is_verb = /[Vti]/;
+	if ($inflections_c == 3) {
+	    if ($is_verb) {
+		output 'V';
+	    } elsif (length $word > 2) {
+		output 'V?';
+		$is_verb = 1;
+	    }
+	} elsif ($is_verb) {
+	    output_notin 'V';
+	}
+    }
+}
+
+sub try_N () {
+    return if ($WITH_POS_ONLY && !/N/);
+    $inflections_c = 0; @inflections = ();
+    try(\&plural_noun,0);
+    if ($inflections_c == 1) {
+	if (/N/) {
+	    output 'N';
+	} elsif (!$is_verb && length $word > 2) {
+	    output 'N?';
+	}
+    } elsif (/N/) {
+	output_notin 'N';
+    }
+}
+
+sub try_A () {
+    return if ($WITH_POS_ONLY && !/[Av]/);
+    $inflections_c = 0; @inflections = ();
+    if (exists $special{"$word A"}) {
+	
+	print OUT $special{"$word A"};
+
+    } else {
+
+	try(\&er,  0);
+	try(\&est, 1);
+	if ($inflections_c == 2) {
+	    if (/[Av]/) {
+		output 'A';
+	    } elsif (length $word > 2) {
+		output 'A?';
+	    }
+	} elsif (/[Av]/) {
+	    output_notin 'A';
+	}
+
+    }
+}
+
+while (($word, $_) = each %word)
+{
+    try_V;
+    try_N;
+    try_A;
+}
+
+close OUT;
+close NOTIN;
+
+open IN, $out_file;
+
+%word = ();
+
+while (<IN>) {
+    my ($ws) = /: (.+)$/ or die "$out_file: Bad Line: $_";
+    foreach my $w (split / *[,|] */, $ws) {($word{$w}) = /^([A-Za-z\']+)/}
+}
+
+open IN, $notin_file;
+
+while (<IN>) {
+    my ($ws) = /: (.+)$/ or die "$out_file: Bad Line: $_";
+    foreach my $w (split / *[,|] */, $ws) {($word{$w}) = /^([A-Za-z\']+)/}
+}
+
+open IN , $notin_file;
+open OUT, ">>$out_file";
+
+use vars qw($prev);
+while (<IN>) {
+    my ($p);
+    ($word,$p) = /^([^ ]+) (.): .+$/ or die "$notin_file:: Bad Line: $_";
+    next if ($word =~ /\'/ || exists $word{$word});
+    if ($p eq 'A') {
+	local $_ = $word;
+	s/e$//i;
+	my @vowls = split /[^aeiou]+/i;
+	shift @vowls if @vowls != 0 && $vowls[0] eq '';
+	next if @vowls > 2;
+    }
+    print OUT $_;
+}
+
+open OUT, ">$variant_new_file";
+foreach (sort keys %variant) {
+  print OUT "$_";
+  print OUT " $variant{$_}" unless $variant{$_} eq '2';
+  print OUT "\n";
+}
+

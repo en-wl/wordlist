@@ -1,0 +1,156 @@
+#!/usr/bin/perl
+
+# Find-var 
+# by Kevin Atkinson <kevina@gnu.org>
+#
+# Copyright 2003 by Kevin Atkisnon 
+#
+# Permission to use, copy, modify, distribute and sell this script,
+# and the results produces from it is hereby granted without fee,
+# provided that the above copyright notice appears in all copies and
+# that both that copyright notice and this permission notice appear in
+# supporting documentation. Kevin Atkinson makes no representations
+# about the suitability of this array for any purpose. It is provided
+# "as is" without express or implied warranty.
+
+open IN, "infl.txt";
+
+use IPC::Open2;
+my($rdrfh, $wtrfh);
+$pid = open2($in, $out, '/usr/bin/aspell soundslike');
+
+sub get_soundslike($) {
+  my ($word) = @_;
+  print $out "$word\n";
+  local $_ = <$in>;
+  my ($sl) = /^\S+\t(\S+)\n$/ or die;
+  return $sl;
+}
+
+sub add 
+{
+  my @l;
+  foreach $w (@_) {
+    foreach $w2 ($w, exists $vt{$w} ? @{$vt{$w}} : ()) {
+      push @l, $w2 if !(grep {$_ eq $w2} @l);
+    }
+  }
+  @l = sort @l;
+  foreach $w (@l) {
+    $vt{$w} = \@l;
+  }
+}
+
+sub add_wroot 
+{
+  my $root = shift @_;
+  my @l;
+  foreach $w (@_) {
+    foreach $w2 ($w, exists $vt_wroot{$root}{$w} ? @{$vt_wroot{$root}{$w}} : ()) {
+      push @l, $w2 if !(grep {$_ eq $w2} @l);
+    }
+  }
+  @l = sort @l;
+  foreach $w (@l) {
+    $vt_wroot{$root}{$w} = \@l;
+  }
+}
+
+while (<IN>) {
+  my $form_count;
+  my ($root,$pos,$d0) = /^(\S+) (\S)\??: (.+)\n$/ or die;
+  my %variant_no;
+  my %variant_yes;
+  foreach my $d1 (split / \| /, $d0) {
+    my %data;
+    my $c = 0;
+    foreach (split /, /, $d1) {
+      my ($word,$tags,$level,$expl) 
+	= /^([A-Za-z\']+)([~<!?]*)(| [\d.]+)(| {\S+})$/ or die $_;
+      next if $tags =~ /~|\?|!</;
+      push @{$data{$expl}}, [$word, $level];
+      $c++;
+    }
+    $form_count++ if $c > 0;
+    foreach (values %data) {
+      $variant_no{$_->[0][0]} = 1;
+      next if @$_ == 1;
+      add (map {$_->[0]} @$_);
+      add_wroot $root, (map {$_->[0]} @$_);
+      my $base = shift @$_;
+      my $base_sl = get_soundslike $base->[0];
+      die "$base->[0] $base->[1]" unless $base->[1] == 0;
+      my $v = shift @$_;
+      while ($v && $v->[1] == 0) {
+	$variant_no{$v->[0]} = 1;
+	$v = shift @$_;
+      }
+      while ($v  && $v->[1] < 1) {
+	my $v_sl = get_soundslike $v->[0];
+        $v[0]{$v->[0]}        = 1 if $base_sl eq $v_sl;
+	$variant_yes{$v->[0]} = 1 if $base_sl eq $v_sl;
+	$variant_no {$v->[0]} = 1 if $base_sl ne $v_sl;
+	$v = shift @$_;
+      }
+      while ($v && $v->[1] < 2) {
+	$v[1]{$v->[0]}        = 1;
+	$variant_yes{$v->[0]} = 1;
+	$v = shift @$_;
+      }
+      while ($v) {
+	$v[2]{$v->[0]} = 1;
+	$variant_yes{$v->[0]} = 1;
+	$v = shift @$_;
+      }
+    }
+  }
+  foreach (keys %variant_no) {
+    $used{$_} = 1 if $variant_yes{$_};
+  }
+  #$used{$word} = 1 if ($pos eq 'N' && $form_count >= 1
+  #		       || $pos eq 'V' && $form_count >= 3
+  #		       || $pos eq 'A');
+}
+
+qx'
+  cd ../../
+  cat r/alt12dicts/not-variant.lst \
+    | src/filter | src/add-affixes 0.0 \
+    | sort | uniq \
+    > r/infl/not-variant.lst
+  ';
+
+open IN, "not-variant.lst" or die;
+while (<IN>) {
+  tr/\n\r//d;
+  $used{$_} = 1;
+}
+
+open OUT, ">variant.tab";
+$prev = [];
+foreach $r (sort { $a->[0] cmp $b->[0] } values %vt) 
+{
+  print OUT (join("\t", @{$r}),"\n") unless $r == $prev;
+  $prev = $r;
+}
+
+open OUT, ">variant-wroot.tab";
+foreach $base (sort keys %vt_wroot) {
+  $prev = [];
+  foreach $r (sort { $a->[0] cmp $b->[0] } values %{$vt_wroot{$base}}) 
+  {
+    print OUT (join("\t", "$base:", @{$r}),"\n") unless $r == $prev;
+    $prev = $r;
+  }
+}
+
+foreach $i (0..2) {
+  open OUT, ">variant_$i.lst";
+  foreach (sort keys %{$v[$i]}) {
+    next if $used{$_};
+    $used{$_} = 1;
+    print OUT "$_\n";
+  }
+}
+
+

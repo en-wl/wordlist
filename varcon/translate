@@ -1,0 +1,96 @@
+#!/usr/bin/perl
+
+sub usage {
+    print STDERR "Usage   : $0 <options> [<translation array>] <from> <to>\n";
+    print STDERR "For help: $0 -h\n";
+    exit 2;
+}
+
+$to   = -1;
+$from = -1;
+@what = (\$from, \$to);
+$file = "abbc.tab";
+$ques = 0;
+
+while ($#ARGV != -1) {
+    $p = shift @ARGV;
+    if ($p eq "--mark" || $p eq "-m") {
+	$ques = 2;
+    } elsif ($p eq "--include" || $p eq "-i") {
+	$ques = 1;
+    } elsif ($p eq '-h' || $p eq '--help' || $p eq '-?') {
+	print 
+	    "translate 1.1 by Kevin Atkinson\n",
+	    "Usage: $0 <options> [<translation array>] <from> <to>\n",
+	    "<options> is any of\n",
+	    "  -?,-h,--help this screen\n",
+	    "  -m,--mark     mark words where the translation is questionable\n",
+	    "  -i,--include  include words where the translation is questionable\n",
+	    "<translation array> is the file name of the translation array,\n",
+	    "                    defaults to \"abbc.tab\".\n",
+	    "<from> and <to> are one of: american, british, or canadian\n";
+	exit (0);
+    } elsif ($p eq "american" || $p eq "American") {
+	&usage if $#what == -1;
+	$w = shift @what;
+	$$w = 0;
+    } elsif ($p eq "british" || $p eq "British" ||
+             $p eq "british-ise" || $p eq "British-ise") {
+	&usage if $#what == -1;
+	$w = shift @what;
+	$$w = 1;
+    } elsif ($p eq "british_z" || $p eq "British_z" ||
+             $p eq "british-ize" || $p eq "British-ize") {
+	&usage if $#what == -1;
+	$w = shift @what;
+	$$w = 2;
+    } elsif ($p eq "canadian" || $p eq "Canadian") {
+	&usage if $#what == -1;
+	$w = shift @what;
+	$$w = 3;
+    } else {
+	$file = $p;
+    }
+}
+
+&usage if ($to == -1 || $from == -1);
+    
+$s = open IN, $file;
+
+if (!$s) {
+    print STDERR "Unable to open $file\n";
+    exit (1);
+}
+
+while(<IN>) {
+    chop;
+    @line = split /\t/;
+    next if ($ques == 0 && $line[4] ne "");
+    if ($ques == 2 && $line[4] ne "") {
+	$trans{$line[$from]} = '?'.$line[$to].'?';
+    } else {
+	$trans{$line[$from]} = $line[$to];
+    }
+}
+
+while (<>) {
+    @words = split /(\'?[^A-Za-z\']+\'?)/;
+    foreach $w (@words) {
+	if (exists $trans{$w}) {
+	    print $trans{$w};
+	} else {
+	    print $w;
+	}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+#!/usr/bin/perl
+
+sub add 
+{
+    my @l;
+    foreach $w (@_) 
+    {
+	foreach $w2 ($w, exists $lookup{$w} ? @{$lookup{$w}} : ())
+	{
+	    push @l, $w2 if !(grep {$_ eq $w2} @l);
+	}
+    }
+    @l = sort @l;
+    foreach $w (@l)
+    {
+	$lookup{$w} = \@l;
+    }
+}
+
+open F, "abbc.tab" or die;
+
+while (<F>) {
+    chop;
+    @l = /^(\S+)\t(\S+)\t(\S+)\t(\S+)\t/ or die "Bad Line: $_";
+    &add(@l);
+}
+
+open F, "variant-also.tab" or die;
+
+while (<F>) {
+    @l = split /\s+/;
+    &add(@l);
+}
+
+if ($ARGV[0] eq 'no-infl') {
+
+  print "Skipping variant-infl.tab\n";
+
+} else {
+
+  open F, "variant-infl.tab" or die;
+  
+  while (<F>) {
+    @l = split /\s+/;
+    &add(@l);
+  }
+
+}
+  
+open F, ">variant.tab";
+
+$prev = [];
+foreach $r (sort { $a->[0] cmp $b->[0] } values %lookup) 
+{
+    print F (join("\t", @{$r}),"\n") unless $r == $prev;
+    $prev = $r;
+}
+

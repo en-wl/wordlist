@@ -1,0 +1,236 @@
+Automatically Generated Inflection Database (AGID)
+
+August 19, 2000
+Revision 2
+
+Copyright 2000 by Kevin Atkinson <kevina@users.sourceforge.net>
+
+The file "infl.txt" is an automatically created database of the
+inflected forms of words from an insanely large word list.
+
+The latest version can be found at http://aspell.sourceforge.net/wl/.
+
+Entries are in the following form.
+
+<word> <pos>: <inflected forms>
+
+Where <pos> is V for verb, N for noun, or A or adjective or adverb.
+If <pos> is followed by a ? that means that the part-of-speech was not
+in the part-of-speech database however the inflected forms of the word
+where found in the word list.
+
+The inflected forms are in the following order for verbs (except for
+the verb "be"):
+  <past tense>  [<past participle>]  <-ing form>  <plural form>
+and for adjective or adverbs:
+  <-er form>  <-est form>
+There are two spaces between each form.
+
+A word in parentheses mean that it is considered a less preferred form
+of the previous inflection.  Two parentheses means that the word is
+even less preferred, etc.  A / between two words means that the two
+words are considered almost equal variants or that is is difficult to
+tell which one is the primary form.  They are ordered by preference
+however sometime this distinction is so slight it is meaningless.  A
+"|" between words means that both inflections are used depending on
+the meaning of the word.  If the distinction between the two forms can
+be described in a word than that word is found after the word in
+braces, for example:
+
+  hang V: hung {suspend} | hanged {execute}  hanging  hangs
+
+Notice how there is two spaces between the past tense, -ing form and
+plural form but not between the alternate forms of the past tense.  In
+general, if the "|" symbol would be needed more than once the words
+the entry is split up into multiple lines like so:
+
+  <word> [{explanation}] <POS>: <inflected forms>
+
+However, the past particle as past tense form are considered a single
+form. Thus, a "|" may appear more than once when the word contains
+both a past participial and past tense form.
+
+A /? between words means that both inflections were found in the word
+list but the script was not sure which one to use.  A ~ after a word
+means that there is a slight chance that it is the plural of a word.
+A ! after a word indicates that the word is likely an inflections of a
+similar word (generally one ending in e) and not the current word.  A
+? after a word means that the word was not in the word list but if it
+was it would be considered an inflected form of the base word.
+
+Fell free to send me corrections to correct any of these questionable
+words.  I am mostly interested in the preferred form of the word in
+the case of /? or words marked with a ~ that are actually valid.
+
+Words are in mixed case but all accents have been scripted thus words
+like café are instead cafe.
+
+The file "variant" contains a list of alternate inflections.
+
+The file "irregular" contains extra information where a noun or verb
+has irregular inflected forms.
+
+The file "dontuse" contains a list of words not to consider an
+inflected form of a word if more than one inflected form of a word is
+found.
+
+The files "prefixes" and "suffixes" contains a list of common prefixes
+and suffixes respectfully.  These files are used by the script to
+produce inflected forms for words that end in a word in the
+"irregular" file. If the beginning appears in the word list or the
+prefixes file and the ending appears in the irregular file I also
+consider <prefix>+<irregular inflections>.  If the prefix is 3 letters
+or more OR appears in the prefixes file and the suffix is 4 letters or
+more OR appears in the suffixes file I consider it the most likely
+choice, otherwise I consider it as a possible candidate but not the
+most likely choice.
+
+The file "make-infl" is the actual Perl script used to create the
+data base.
+
+CHANGES:
+
+From Revision 1 to 2 (August 18, 2000)
+
+  Classified variants as either almost equal, also used, or
+  secondary.
+
+  The / is now used to indicate equal variants.  "/?" is now used to
+  mean what "/" used to be.
+
+  Lots of additional rules added which greatly improved the results.
+
+COPYRIGHT AND SOURCE:
+
+The final product is under the following copyright, as well as any
+copyrights mentioned below.
+
+  Copyright 2000 by Kevin Atkinson
+
+  Permission to use, copy, modify, distribute and sell this database,
+  the associated scripts, the output created form the scripts and its
+  documentation for any purpose is hereby granted without fee,
+  provided that the above copyright notice appears in all copies and
+  that both that copyright notice and this permission notice appear in
+  supporting documentation. Kevin Atkinson makes no representations
+  about the suitability of this array for any purpose. It is provided
+  "as is" without express or implied warranty.
+
+The part-of-speech database used is created form the Moby
+part-of-speech database which is in the public domain:
+
+    The Moby lexicon project is complete and has
+    been place into the public domain. Use, sell,
+    rework, excerpt and use in any way on any platform.
+    
+    Placing this material on internal or public servers is
+    also encouraged. The compiler is not aware of any
+    export restrictions so freely distribute world-wide.
+    
+    You can verify the public domain status by contacting
+    
+    Grady Ward
+    3449 Martha Ct.
+    Arcata, CA  95521-4884
+    
+    grady@netcom.com
+    grady@northcoast.com
+
+and the WordNet database which is under the following copyright:
+
+    This software and database is being provided to you, the LICENSEE, by
+    Princeton University under the following license.  By obtaining, using  
+    and/or copying this software and database, you agree that you have  
+    read, understood, and will comply with these terms and conditions.:  
+  
+    Permission to use, copy, modify and distribute this software and
+    database and its documentation for any purpose and without fee or
+    royalty is hereby granted, provided that you agree to comply with  
+    the following copyright notice and statements, including the disclaimer,  
+    and that the same appear on ALL copies of the software, database and  
+    documentation, including modifications that you make for internal  
+    use or for distribution.  
+  
+    WordNet 1.6 Copyright 1997 by Princeton University.  All rights reserved.  
+  
+    THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON  
+    UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR  
+    IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PRINCETON  
+    UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES OF MERCHANT-  
+    ABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE  
+    OF THE LICENSED SOFTWARE, DATABASE OR DOCUMENTATION WILL NOT  
+    INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR  
+    OTHER RIGHTS.
+  
+    The name of Princeton University or Princeton may not be used in  
+    advertising or publicity pertaining to distribution of the software  
+    and/or database.  Title to copyright in this software, database and  
+    any associated documentation shall at all times remain with  
+    Princeton University and LICENSEE agrees to preserve same.  
+
+The word list used is a combination of several word list:
+
+1) Most of the word lists from the Moby Words package:
+
+     10196pla.ces 113809of.fic 21986na.mes 256772co.mpo 354984si.ngl
+     3897male.nam 4160offi.cia 4946fema.len 6213acro.nym 74550com.mon
+   
+   The Moby Word package, like the Part-Of-Speech database is in the
+   public domain.
+
+2) The ENABLE2K word lists which is in the public domain:
+
+     The ENABLE master word list, WORD.LST, is herewith formally
+     released into the Public Domain. Anyone is free to use it or
+     distribute it in any manner they see fit. No fee or registration
+     is required for its use nor are "contributions" solicited (if you
+     feel you absolutely must contribute something for your own peace
+     of mind, the authors of the ENABLE list ask that you make a
+     donation on their behalf to your favorite charity). This word
+     list is our gift to the Scrabble community, as an alternate to
+     "official" word lists. Game designers may feel free to
+     incorporate the WORD.LST into their games. Please mention the
+     source and credit us as originators of the list. Note that if
+     you, as a game designer, use the WORD.LST in your product, you
+     may still copyright and protect your product, but you may *not*
+     legally copyright or in any way restrict redistribution of the
+     WORD.LST portion of your product. This *may* under law restrict
+     your rights to restrict your users' rights, but that is only
+     fair.
+
+3) All of the word lists in the ENABLE2K Supplemnt which consists of:
+
+     2DICTS.LST  ALSO.LST   LETTERS.LST  OSPDADD.LST  UCACR.LST
+     ABLE.LST    LCACR.LST  NOPOS.LST    PLURALS.LST  UPPER.LST
+
+   All of these word lists are also in the public domain.
+
+4) The list of signature words from the YAWL package which is in the
+   public domain.
+
+5) The UK Advanced Cryptics Dictionary which in under the following
+   copyright:
+
+     Copyright (c) J Ross Beresford 1993-1999. All Rights Reserved.
+
+     The following restriction is placed on the use of this
+     publication: if The UK Advanced Cryptics Dictionary is used
+     in a software package or redistributed in any form, the
+     copyright notice must be prominently displayed and the text
+     of this document must be included verbatim.
+
+     There are no other restrictions: I would like to see the
+     list distributed as widely as possible.
+
+6) Some extra words found in the Part-Of-Speech database that was not
+   found in any of the above word list.
+
+7) Words found in the Jargon File Word List package, available at
+   http://aspell.sourceforge.net/wl/, which is in the Public Domain.
+
+8) And finally some extra words that I added myself.  These words can be
+   found in the file "extra-words"
+
+The "dontuse", "irregular", and "variant" file was created by me
+(Kevin Atkinson) from numerous sources.
+

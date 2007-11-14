@@ -1,0 +1,165 @@
+From: Alan Beale <biljir@pobox.com>
+Date: Sun, 02 Jul 2000 08:58:28 -0400
+
+With regard to "naught" vs. "nought", 11 dictionaries list "nought".
+5 consider it a variant of "naught", 6 (by my rules) do not.  Two of
+the 12 in fact consider "naught" to be the primary spelling for the
+meaning "nothing", but "nought" to be the primary spelling for the
+meaning "the digit zero".  This is a close call, but I think that
+6of12 actually got this one right.
+
+Here are some other words where the decision as to whether a word is a
+variant is very close:
+
+ambience: The majority think it is a variant of "ambiance".  A
+minority think it's a distinct word.  In this case, I think the
+minority is "right".
+
+amuck: Majority says not a variant of "amok".  I tend to disagree.
+
+analog: Majority says different from "analogue".  Minority disagrees.
+
+arithmetical: Majority says variant of "arithmetic".
+
+beaux: Majority says this is the preferred plural of "beau".
+
+blond: Majority says different from "blonde", minority says variant.
+
+bosun: Majority says different from "boatswain", minority says
+variant.
+
+caldron: Majority shows distinct from "cauldron".  Very strange.
+
+camomile: Majority says distinct from "chamomile".  Peculiar.
+
+chateaux: Equal evidence for being the primary plural of "chateau" or
+a variant.
+
+crawfish: Majority says variant of "crayfish", minority lists
+separately.
+
+eucalypti: Equal division between primary or alternate plural of
+"eucalyptus".
+
+expedience: Majority says variant of "expediency", minority disagrees.
+
+faggot: Majority show as variant of either "fag" or "fagot", minority
+considers separate.  This is a good example where my sources have
+introduced distortion, since I consider it pretty clear that "faggot"
+is a word in its own right.
+
+fibre: Majority says British spelling of "fiber", minority says
+American variant.
+
+filet: Majority says separate word, minority says variant of "fillet".
+
+forwards: Majority says separate word, minority says variant of
+"forward".  (Of course, adding inflections solves this one.)
+
+geographic, geographical: Half believe these are variants, half list
+separately or show only one.
+
+geological: Majority consider distinct from (or do not list)
+"geologic", remainder consider a variant.
+
+girt: Majority considers a word in its own right, minority shows only
+as alternate past tense of "gird".
+
+goitre: EVenly divided between British spelling or American variant of
+"goiter".
+
+henceforward: Majority: variant of "henceforth", minority: distinct.
+
+hewn: Majority says alternate past participle of "hew", minority says
+primary.
+
+jeweller: Majority: variant of "jeweler", minority: British spelling.
+
+marvellous: Majority: British spelling of "marvelous", minority:
+American variant.
+
+meagre: Majority: British spelling of "meager", minority: American
+variant.
+
+notary, notary public: Majority: distinct (or only one listed),
+minority: variants.
+
+offence: Majority: British spelling of "offense", minority: American
+variant.
+
+optima: Majority: primary plural of "optimum", minority: alternate
+plural.
+
+panelling: Evenly divided between being a British spelling or an
+American variant of "paneling".
+
+papyri: Evenly divided (among those that listed it) between primary or
+alternate plural of "papyrus".
+
+pedagogical: Majority lists as distinct from "pedagogic", or lists
+only "pedagogical"...minority considers it a variant.
+
+plushy: Equal division between variant of "plush" and distinct word
+camps.
+
+practise: Equal division between British spelling and American variant
+camps.
+
+resiliency: Equal division between variant of "resilience" and
+distinct word camps.
+
+rigamarole: Majority: separate word.  Minority: variant of
+"rigmarole".
+
+sceptic: Majority: British spelling of "skeptic", minority: American
+variant.
+
+smoulder: Majority: American variant of "smolder", minority: British
+spelling.
+
+sunburnt: Majority: Alternate past tense of "sunburn", minority: word
+in its own right.  I have to agree with the minority.
+
+sweepstake: Majority: Variant of "sweepstakes".  Minority: word in its
+own right.  Two dictionaries list only "sweepstake".
+
+tee shirt: Equal division between separate word and variant of
+"T-shirt".  (Not that this matters for your application.)
+
+thru: Majority: separate word, minority: variant of "through".  In
+this case, the majority is substantial, but I thought it worth
+mentioning since I imagine from the spell-checker perspective, you
+want only to accept "through".
+
+towelling: Majority: American variant of "toweling", minority: British
+spelling.
+
+townsfolk: Majority: Variant of "townspeople", minority: separate
+word.  I presume a spell-checker would have to consider them separate.
+
+tuberculous: Even division between variant of "tubercular" and
+separate word camps.
+
+unrivalled: Majority: American variant of "unrivaled", minority:
+British spelling.
+
+utopian: Half of the dictionaries consider this a variant of
+"Utopian".  Most of the remainder list only "utopian".  One lists both
+as distinct.
+
+Date: Thu, 06 Jul 2000 18:03:35 -0400
+
+On Thu, 6 Jul 2000 13:33:29 -0400 (EDT), Kevin Atkinson wrote:
+
+  In case your interested here is the list of additional words [that
+  were not marked as variants in 6of12.txt] that I considers variants
+  and removed form the main dictionary: amuck blonde caldron camomile
+  nought rigamarole
+
+These seem reasonable choices to me, except possibly for "blonde".
+There seems to be a bit of consensus that "blond" is masculine and
+"blonde" is feminine.  But not everyone accepts this, and I'm sure
+some would disagree on principle with having gender-specific words of
+this sort anyway.
+
+

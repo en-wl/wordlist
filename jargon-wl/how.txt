@@ -1,0 +1,29 @@
+
+NEED: infl script (from AGID), filter script from (SCOWL)
+  (http://aspell.sourceforge.net/wl/)
+
+cd <html/entry dir>
+perl proc.pl
+modify infl script to use jargon pos.txt and to only use words with POS and
+  output to html/entry dir
+run infl script
+perl infl-proc.pl < infl.txt > /dev/null
+add extra.lst to the word list used by infl script
+run infl script
+perl infl-proc.pl < infl.txt | sort > infl-final.txt
+cat base.lst | src/filter (from SCOWL) | sort -u > base.lst
+cd <scowl dir>/final
+cat special-* | sort -u > special.lst
+cat *.{10,20,35,50,60,70,80} | sort -u | comm -23 - special.lst \
+  > <html/entry dir>/all.lst
+cd <html/entry dir>
+comm -12 base.lst all.lst > word-base.lst
+cat word-base.lst common-base.lst | comm -23 base.lst - > other-base.lst
+cat word-base.lst | perl expand.pl | sort -u > word.lst
+cat common-base.lst | perl expand.pl | sort -u > common.lst
+cat other-base.lst | perl expand.pl | sort -u > other.lst
+mkdir jargon-wl/
+cp proc.pl infl-proc.pl expand.pl infl-final.txt \
+  word.lst common.lst common-base.lst other.lst  jargon-wl/
+cd jargon-wl/
+mv infl-final.txt infl.txt

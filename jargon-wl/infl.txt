@@ -1,0 +1,1136 @@
+ABEND N: ABENDs
+ADVENT N: ADVENTs
+AFAIK N: AFAIKs
+AFJ N: AFJes
+AI N: AIs
+AIDS N: AIDSes
+AIDX N: AIDXes
+ANSI N: ANSIs
+ARMM N: ARMMs
+ASCII N: ASCIIs
+Acme N: Acmes
+Ada N: Adas
+Angband N: Angbands
+BASIC N: BASICs
+BBS N: BBSes
+BCPL N: BCPLs
+BFI N: BFIs
+BITNET N: BITNETs
+BLOB N: BLOBs
+BLOB V: BLOBBed  BLOBBing  BLOBs
+BLT N: BLTs
+BNF N: BNFs
+BOF N: BOFs
+BOFH N: BOFHs
+BRS N: BRSes
+BSD N: BSDs
+BUAF N: BUAFs
+BUAG N: BUAGs
+BWQ N: BWQs
+Befunge N: Befunges
+Berzerkeley N: Berzerkeleys
+BiCapitalization N: BiCapitalizations
+Borg N: Borgs
+BrokenWindows N: BrokenWindowses
+C N: Cs
+CHOP N: CHOPs
+CLM N: CLMs
+COBOL N: COBOLs
+CTSS N: CTSSes
+CrApTeX N: CrApTeXes
+DAU N: DAUs
+DDT N: DDTs
+DEADBEEF N: DEADBEEFs
+DEC N: DECs
+DEC V: DECed  DECing  DECs
+DED N: DEDs
+DP N: DPs
+DPB V: DPBed  DPBing  DPBs
+DPer N: DPers
+DRECNET N: DRECNETs
+DWIM N: DWIMs
+Datamation N: Datamations
+Dilbert N: Dilberts
+Discordianism N: Discordianisms
+EBCDIC N: EBCDICs
+ECP N: ECPs
+EMACS N: EMACSes
+EMACS V: EMACSed  EMACSing  EMACSes
+EOF N: EOFs
+EOL N: EOLs
+EOU N: EOUs
+EXCH V: EXCHed  EXCHing  EXCHes
+EXE N: EXEs
+English N: Englishes
+Eris N: Erises
+Exploder N: Exploders
+FAQ N: FAQs
+FAQL N: FAQLs
+FIXME V: FIXMed  FIXMing  FIXMEs
+FM N: FMs
+FOAF N: FOAFs
+FOD V: FODDed  FODDing  FODs
+FRS N: FRSes
+FTP N: FTPs
+FTP V: FTPed  FTPing  FTPs
+FUBAR N: FUBARs
+FUD N: FUDs
+FidoNet N: FidoNets
+Foonly N: Foonlies
+Fortrash N: Fortrashes
+GC N: GCs
+GC V: GCed  GCing  GCs
+GCOS N: GCOSes
+GECOS N: GECOSes
+GFR V: GFRed  GFRing  GFRs
+GIPS N: GIPSes
+GNUMACS N: GNUMACSes
+GOSMACS N: GOSMACSes
+GPL N: GPLs
+GPV N: GPVs
+Godzillagram N: Godzillagrams
+Gosperism N: Gosperisms
+HAKMEM N: HAKMEMs
+HCF N: HCFs
+HLL N: HLLs
+Hackintosh N: Hackintoshes
+IDP V: IDPed  IDPing  IDPs
+INTERCAL N: INTERCALs
+IRC N: IRCs
+ITS N: ITSes
+Infocom N: Infocoms
+Internet N: Internets
+JCL N: JCLs
+JEDR N: JEDRs
+K N: Ks
+KIPS N: KIPSes
+Knuth N: Knuths
+LART N: LARTs
+LART V: LARTed  LARTing  LARTs
+LDB V: LDBed  LDBing  LDBs
+LER N: LERs
+LERP V: LERPed  LERPing  LERPs
+LISP N: LISPs
+LPT N: LPTs
+Lintel N: Lintels
+Linux N: Linuxes
+MEGO N: MEGOs
+MFTL N: MFTLs
+MIPS N: MIPSes
+MOTAS N: MOTASes
+MOTOS N: MOTOSes
+MOTSS N: MOTSSes
+MUD N: MUDs
+MUD V: MUDDed  MUDDing  MUDs
+Macintoy N: Macintoys
+Macintrash N: Macintrashes
+Mars N: Marses
+Matrix N: Matrixes
+MicroDroid N: MicroDroids
+Moof N: Moofs
+Moof V: Mooffed  Mooffing  Moofs
+Multics N: Multicses
+NMI N: NMIs
+NSP N: NSPs
+NeWS N: NeWSes
+NetBOLLIX N: NetBOLLIXes
+Netscrape N: Netscrapes
+OS N: OSes
+OSU N: OSUs
+PARC N: PARCs
+PBD N: PBDs
+PDL N: PDLs
+PDL V: PDLed  PDLing  PDLs
+PETSCII N: PETSCIIs
+PFY N: PFYs
+PM N: PMs
+PM V: PMed  PMing  PMs
+POM N: POMs
+POPJ N: POPJes
+PPN N: PPNs
+Pascal N: Pascals
+Pentium N: Pentiums
+Perl N: Perls
+PostScript N: PostScripts
+RE N: REs
+RETI V: RETIed  RETIing  RETIs
+RFC N: RFCs
+RFE N: RFEs
+RL N: RLs
+RTBM V: RTBMed  RTBMing  RTBMs
+RTFAQ V: RTFAQQed  RTFAQQing  RTFAQs
+RTFB V: RTFBed  RTFBing  RTFBs
+RTFM V: RTFMed  RTFMing  RTFMs
+RTFS V: RTFSed  RTFSing  RTFSes
+RTS V: RTSed  RTSing  RTSes
+SAIL N: SAILs
+SCSI N: SCSIs
+SED N: SEDs
+SEX N: SEXes
+SIG N: SIGs
+SMOP N: SMOPs
+SO N: SOs
+SOS N: SOSes
+SPACEWAR N: SPACEWARs
+STFW V: STFWed  STFWing  STFWs
+ScumOS N: ScumOSes
+Slowlaris N: Slowlarises
+Stupids N: Stupidses
+Sun N: Suns
+SysVile N: SysViles
+TCB N: TCBs
+TECO N: TECOs
+TECO V: TECOed  TECOing  TECOs
+TELNET V: TELNETTed  TELNETTing  TELNETs
+TLA N: TLAs
+TMRC N: TMRCs
+TMRCie N: TMRCies
+TWENEX N: TWENEXes
+TeX N: TeXes
+TechRef N: TechRefs
+Telerat N: Telerats
+UBD N: UBDs
+UBE N: UBEs
+UCE N: UCEs
+UDP V: UDPed  UDPing  UDPs
+URL N: URLs
+UTSL N: UTSLs
+UUCPNET N: UUCPNETs
+Unix N: Unixes
+Usenet N: Usenets
+VAX N: VAXes
+VAXectomy N: VAXectomies
+VAXen N: VAXens
+VMS N: VMSes
+VR N: VRs
+WAITS N: WAITSes
+WIBNI N: WIBNIs
+Weenix N: Weenixes
+Winchester N: Winchesters
+Windoze N: Windozes
+Wintel N: Wintels
+X N: Xes
+XOFF N: XOFFs
+XON N: XONs
+XXX N: XXXes
+YABA N: YABAs
+YAUN N: YAUNs
+Zork N: Zorks
+abbrev N: abbrevs
+accumulator N: accumulators
+acolyte N: acolytes
+adger V: adgerred  adgerring  adgers
+admin N: admins
+alt N: alts
+amoeba N: amoebas (amoebae)
+amper N: ampers
+annoybot N: annoybots
+annoyware N: annoywares
+app N: apps
+arena N: arenas 
+arg N: args
+astroturfing N: astroturfings
+attoparsec N: attoparsecs
+autobogotiphobia N: autobogotiphobias
+avatar N: avatars
+awk N: awks
+awk V: awked  awking  awks
+background N: backgrounds
+backreference N: backreferences
+backronym N: backronyms
+bagbiter N: bagbiters
+bagbiter V: bagbiterred  bagbiterring  bagbiters
+bandwidth N: bandwidths
+bang N: bangs
+banner N: banners
+bar N: bars
+barf N: barfs
+barf V: barfed  barfing  barfs
+barfmail N: barfmails
+barn N: barns
+barney N: barneys
+batbelt N: batbelts
+baud N: bauds
+baz N: bazes
+bazaar N: bazaars
+bboard N: bboards
+beam V: beamed  beaming  beams
+beep N: beeps
+benchmark N: benchmarks
+berklix N: berklixes
+beta N: betas
+bible N: bibles
+biff V: biffed  biffing  biffs
+bignum N: bignums
+bigot N: bigots
+bit N: bits
+bitblt N: bitblts
+bixie N: bixies
+blammo V: blammoed  blammoing  blammos
+blargh N: blarghs
+blast V: blasted  blasting  blasts
+blat N: blats
+blink V: blinked  blinking  blinks
+blinkenlights N: blinkenlightses
+blit V: blitted  blitting  blits
+blitter N: blitters
+blivet N: blivets
+bloatware N: bloatwares
+block V: blocked  blocking  blocks
+blurgle N: blurgles
+boa N: boas
+board N: boards
+bob N: bobs
+bogometer N: bogometers
+bogon N: boga
+bogosity N: bogosities
+bogotify V: bogotified  bogotifying  bogotifies
+boink N: boinks
+boink V: boinked  boinking  boinks
+bomb N: bombs
+bomb V: bombed  bombing  bombs
+boot V: booted  booting  boots
+bounce V: bounced  bouncing  bounces
+boustrophedon N: boustrophedons
+box N: boxes
+boxology N: boxologies
+braino N: brainos
+break V: broke  broken  breaking  breaks
+breedle N: breedles
+brittle A: brittler  brittlest
+brochureware N: brochurewares
+broket N: brokets
+browser N: browsers
+bug N: bugs
+buglix N: buglixes
+bum N: bums 
+bum V: bummed  bumming  bums
+bump V: bumped  bumping  bumps
+burble V: burbled  burbling  burbles
+buzz V: buzzed  buzzing  buzzes
+byte N: bytes
+calculator N: calculators
+can V: canned   canning   cans
+candygrammar N: candygrammars
+careware N: carewares
+cascade N: cascades
+cat V: catted  catting   cats
+cathedral N: cathedrals
+cdr V: cdred  cdring  cdrs
+chad N: chads
+chain N: chains
+chain V: chained  chaining  chains
+channel N: channels
+chanop N: chanops
+char N: chars
+charityware N: charitywares
+chawmp N: chawmps
+check N: checks
+chemist N: chemists
+choad N: choads
+choke V: choked  choking  chokes
+chomp V: chomped  chomping  chomps
+chomper N: chompers
+chrome N: chromes
+chug V: chugged  chugging  chugs
+clean A: cleaner  cleanest
+clean V: cleaned  cleaning  cleans
+clobber V: clobbered  clobbering  clobbers
+clock V: clocked  clocking  clocks
+clone N: clones
+clone V: cloned  cloning  clones
+clustergeeking N: clustergeekings
+coaster N: coasters
+code N: codes
+codewalker N: codewalkers
+cokebottle N: cokebottles
+compact A: compacter  compactest
+compo N: compos
+compress V: compressed  compressing  compresses
+computron N: computrons
+con N: cons 
+condom N: condoms
+confuser N: confusers
+cons V: consed  consing  conses
+console N: consoles
+cookbook N: cookbooks
+cookie N: cookies
+copper N: coppers
+copycenter N: copycenters
+copyleft N: copylefts
+copyparty N: copyparties
+core N: cores
+corge N: corges
+cowboy N: cowboys
+cracker N: crackers
+cracking N: crackings
+crank V: cranked  cranking  cranks
+crapplet N: crapplets
+crash N: crashes
+crash V: crashed  crashing  crashes
+cray N: crays
+crayola N: crayolas
+crayon N: crayons
+creationism N: creationisms
+creep V: crept  creeping  creeps
+cretin N: cretins
+crippleware N: cripplewares
+crlf N: crlfs
+crock N: crocks
+crudware N: crudwares
+cruft N: crufts
+cruft V: crufted  crufting  crufts
+cruftsmanship N: cruftsmanships
+crufty N: crufties
+crumb N: crumbs
+crunch N: crunches
+crunch V: crunched  crunching  crunches
+cryppie N: cryppies
+cube N: cubes
+cubing V: cubinged  cubinging  cubings
+cybercrud N: cybercruds
+cyberpunk N: cyberpunks
+cyberspace N: cyberspaces
+cycle N: cycles
+cycle V: cycled  cycling  cycles
+cypherpunk N: cypherpunks
+daemon N: daemons
+dahmum N: dahmums
+dd V: dded  dding  dds
+dead A: deader  deadest
+deadlock N: deadlocks
+decay N: decays
+deckle N: deckles
+defenestration N: defenestrations
+dehose V: dehosed  dehosing  dehoses
+deliminator N: deliminators
+delint V: delinted  delinting  delints
+delta N: deltas
+demigod N: demigods
+demo N: demos 
+demo V: demoed  demoing  demos
+demoeffect N: demoeffects
+demogroup N: demogroups
+demon N: demons
+demoparty N: demoparties
+depeditate N: depeditates
+derf V: derfed  derfing  derfs
+despew V: despewed  despewing  despews
+diddle N: diddles
+diddle V: diddled  diddling  diddles
+die V: died  dying  dies
+diff N: diffs
+diff V: diffed  diffing  diffs
+digit N: digits
+dike V: diked  diking  dikes
+ding N: dings
+dink A: dinker  dinkest
+dinosaur N: dinosaurs
+dirtball N: dirtballs
+disclaimer N: disclaimers
+dispress V: dispressed  dispressing  dispresses
+distribution N: distributions
+doc N: docs
+documentation N: documentations
+dodgy A: dodgier  dodgiest
+dogcow N: dogcows
+dogfood N: dogfoods
+dogpile V: dogpiled  dogpiling  dogpiles
+dogwash N: dogwashes
+dogwash V: dogwashed  dogwashing  dogwashes
+dongle N: dongles
+donuts N: donutses
+doorstop N: doorstops
+down V: downed  downing  downs
+download V: downloaded  downloading  downloads
+dragon N: dragons
+drain V: drained  draining  drains
+driver N: drivers
+droid N: droids
+drone N: drones
+drum N: drums
+dump N: dumps
+dynner N: dynners
+earthquake N: earthquakes
+echo N: echoes (echos)
+ed N: eds
+egosurf V: egosurfed  egosurfing  egosurfs
+elvish N: elvishes
+email N: emails
+email V: emailed  emailing  emails
+emoticon N: emoticons
+empire N: empires
+engine N: engines
+enhancement N: enhancements
+epoch N: epochs
+epsilon N: epsilons
+erotics N: eroticses
+evil A: eviler (eviller)  evilest (evillest)
+excl N: excls
+exec V: execked  execking  execs
+exploit N: exploits
+factor N: factors
+fairings N: fairingses
+fan N: fans
+faradize V: faradized  faradizing  faradizes
+farming N: farmings
+faulty A: faultier  faultiest
+feature N: features
+featurectomy N: featurectomies
+feep N: feeps
+feep V: feepped  feepping  feeps
+feeper N: feepers
+fence N: fences
+filk N: filks
+filter N: filters
+fine A: finer  finest
+finger N: fingers
+finger V: fingered  fingering  fingers
+finn V: finned  finning  finns
+firebottle N: firebottles
+firefighting N: firefightings
+firmware N: firmwares
+firmy N: firmies
+fish N: fishes
+fix N: fixes 
+flag N: flags
+flaky A: flakier  flakiest
+flamage N: flamages
+flame N: flames
+flame V: flamed  flaming  flames
+flamer N: flamers
+flap V: flapped  flapping  flaps
+flarp N: flarps
+flat A: flatter  flattest
+flatten V: flattened  flattening  flattens
+flavor N: flavors
+flippy N: flippies
+flood V: flooded  flooding  floods
+flowchart N: flowcharts
+flush V: flushed  flushing  flushes
+flypage N: flypages
+flytrap N: flytraps
+fnord N: fnords
+followup N: followups
+fontology N: fontologies
+foobar N: foobars
+fool N: fools
+footprint N: footprints
+foreground V: foregrounded  foregrounding  foregrounds
+forum N: forums 
+fossil N: fossils
+frag N: frags
+fragile A: fragiler  fragilest
+fred N: freds
+frednet N: frednets
+freeware N: freewares
+freeze V: froze  frozen  freezing  freezes
+frink V: frinked  frinking  frinks
+friode N: friodes
+fritterware N: fritterwares
+frob N: frobs
+frob V: frobbed  frobbing  frobs
+frobnicate V: frobnicated  frobnicating  frobnicates
+frobnitz N: frobnitzes
+frog N: frogs
+frogging V: frogginged  frogginging  froggings
+frotz N: frotzes
+frowney N: frowneys
+fry V: fried  frying  fries
+fudge N: fudges
+fudge V: fudged  fudging  fudges
+fum N: fums 
+functino N: functinos
+funky A: funkier  funkiest
+fuzzball N: fuzzballs
+gabriel N: gabriels
+gag V: gagged   gagging   gags
+garply N: garplies
+gas N: gases / gasses
+gas V: gassed  gassing  gases
+gawble N: gawbles
+geef V: geeffed  geeffing  geefs
+gen N: gens
+generate V: generated  generating  generates
+gensym N: gensyms
+gensym V: gensymed  gensyming  gensyms
+gig N: gigs
+gilley N: gilleys
+gillion N: gillions
+glark V: glarked  glarking  glarks
+glass N: glasses
+glassfet N: glassfets
+glitch N: glitches
+glitch V: glitched  glitching  glitches
+glob V: globed  globing  globs
+glork V: glorked  glorking  glorks
+glue N: glues
+gnarly A: gnarlier  gnarliest
+gnubie N: gnubies
+gobble V: gobbled  gobbling  gobbles
+golden A: goldener  goldenest
+gonk V: gonked  gonking  gonks
+gonkulator N: gonkulators
+gopher N: gophers
+gorets N: goretses
+gorp N: gorps
+gotcha N: gotchas
+grault N: graults
+greenbar N: greenbars
+grep V: grepped  grepping  greps
+gribble N: gribbles
+grilf N: grilfs
+grind V: ground  grinding  grinds
+gripenet N: gripenets
+gritch N: gritches
+gritch V: gritched  gritching  gritches
+grok V: grokked  grokking  groks
+gronk V: gronked  gronking  gronks
+grovel V: groveled (grovelled)  groveling (grovelling)  grovels
+grue N: grues
+grunge N: grunges
+gubbish N: gubbishes
+guiltware N: guiltwares
+gumby N: gumbies
+gun V: gunned  gunning  guns
+gunch V: gunched  gunching  gunches
+guru N: gurus
+gweep N: gweeps
+gweep V: gweepped  gweepping  gweeps
+hack N: hacks
+hack V: hacked  hacking  hacks
+hacker N: hackers
+hackish N: hackishes
+hackishness N: hackishnesses
+hackitude N: hackitudes
+hair N: hairs
+hairball N: hairballs
+hairy A: hairier  hairiest
+hakspek N: hakspeks
+hammer V: hammered  hammering  hammers
+hamster N: hamsters
+handle N: handles
+handshaking N: handshakings
+handwave N: handwaves
+handwave V: handwaved  handwaving  handwaves
+hang V: hung  hanging  hangs
+haque N: haques
+hat N: hats
+heartbeat N: heartbeats
+heatseeker N: heatseekers
+heisenbug N: heisenbugs
+hex N: hexes
+hexadecimal N: hexadecimals
+hexit N: hexits
+hing N: hings
+hoarding N: hoardings
+hobbit N: hobbits
+hog N: hogs
+hole N: holes
+hook N: hooks
+hop N: hops
+hop V: hopped   hopping   hops
+hose N: hoses
+hose V: hosed  hosing  hoses
+hotlink N: hotlinks
+huff V: huffed  huffing  huffs
+hyperspace N: hyperspaces
+ice N: ices
+inc V: inced  incing  incs
+incantation N: incantations
+include V: included  including  includes
+infinity N: infinities
+inflate V: inflated  inflating  inflates
+initgame N: initgames
+interrupt N: interrupts
+intro N: intros
+iron N: irons 
+ironmonger N: ironmongers
+jaggies N: jaggieses
+jello N: jellos
+jiffy N: jiffies
+jock N: jocks
+jolix N: jolixes
+jupiter V: jupiterred  jupiterring  jupiters
+kahuna N: kahunas
+ken N: kens
+kgbvax N: kgbvaxes
+kiboze V: kibozed  kibozing  kibozes
+kibozo N: kibozos
+kick V: kicked  kicking  kicks
+kit N: kits
+klone N: klones
+kludge N: kludges
+kludge V: kludged  kludging  kludges
+kluge N: kluges
+kluge V: kluged  kluging  kluges
+koan N: koans
+kremvax N: kremvaxes
+kyrka N: kyrkas
+lag N: lags
+lamer N: lamers
+lase V: lased  lasing  lases
+lasherism N: lasherisms
+laundromat N: laundromats
+leak N: leaks
+leech N: leeches
+legalese N: legaleses
+letterbomb N: letterbombs
+lexer N: lexers
+lexiphage N: lexiphages
+life N: lives
+lint N: lints
+lint V: linted  linting  lints
+live A: liver  livest
+livelock N: livelocks
+liveware N: livewares
+lobotomy N: lobotomies
+lose N: loses
+lose V: lost  losing  loses
+loser N: losers
+loss N: losses
+lossage N: lossages
+lurker N: lurkers
+luser N: lusers
+macdink V: macdinked  macdinking  macdinks
+machoflops N: machoflopses
+macro N: macros
+macrology N: macrologies
+macrotape N: macrotapes
+maggotbox N: maggotboxes
+magic N: magics
+mailbomb N: mailbombs
+mailbomb V: mailbombed  mailbombing  mailbombs
+mainframe N: mainframes
+management N: managements
+mandelbug N: mandelbugs
+manged N: mangeds
+mangle V: mangled  mangling  mangles
+mangler N: manglers
+manularity N: manularities
+marketroid N: marketroids
+martian N: martians
+massage V: massaged  massaging  massages
+meatspace N: meatspaces
+meatware N: meatwares
+meeces N: meeceses
+meg N: megs
+megapenny N: megapennies
+meme N: memes
+memetics N: memeticses
+menuitis N: menuitises
+mickey N: mickeys
+microLenat N: microLenats
+microReid N: microReids
+microfloppies N: microfloppieses
+microfortnight N: microfortnights
+milliLampson N: milliLampsons
+minifloppies N: minifloppieses
+misbug N: misbugs
+misfeature N: misfeatures
+miswart N: miswarts
+moby N: mobies
+mockingbird N: mockingbirds
+mod V: modded  modding  mods
+mode N: modes
+monstrosity N: monstrosities
+monty N: monties
+moria N: morias
+mouso N: mousos
+muddie N: muddies
+mudhead N: mudheads
+multician N: multicians
+multitask N: multitasks
+mumblage N: mumblages
+munch V: munched  munching  munches
+munchkin N: munchkins
+mundane N: mundanes
+mung V: munged  munging  mungs
+munge V: munged  munging  munges
+music N: musics
+mutter V: muttered  muttering  mutters
+nadger V: nadgerred  nadgerring  nadgers
+nagware N: nagwares
+naive A: naiver  naivest
+nano N: nanos
+nanoacre N: nanoacres
+nanobot N: nanobots
+nanocomputer N: nanocomputers
+nanofortnight N: nanofortnights
+nanotechnology N: nanotechnologies
+nastygram N: nastygrams
+nature N: natures
+neophilia N: neophilias
+nerd N: nerds
+netburp N: netburps
+netdead N: netdeads
+nethack N: nethacks
+netiquette N: netiquettes
+netlag N: netlags
+netnews N: netnewses
+netrock N: netrocks
+netsplit N: netsplits
+netter N: netters
+newbie N: newbies
+newline N: newlines
+newsfroup N: newsfroups
+newsgroup N: newsgroups
+nick N: nicks
+nickle N: nickles
+node N: nodes
+notwork N: notworks
+nroff N: nroffs
+nude A: nuder  nudest
+nugry N: nugries
+nuke V: nuked  nuking  nukes
+numbers N: numberses
+nybble N: nybbles
+nybble V: nybbled  nybbling  nybbles
+nyetwork N: nyetworks
+obscure A: obscurer  obscurest
+ogg V: ogged  ogging  oggs
+ooblick N: ooblicks
+op N: ops
+open N: opens
+optimism N: optimisms
+orphan N: orphans
+overclock V: overclocked  overclocking  overclocks
+overrun N: overruns
+param N: params
+parm N: parms
+parse V: parsed  parsing  parses
+pastie N: pasties
+patch N: patches
+patch V: patched  patching  patches
+path N: paths
+payware N: paywares
+peek N: peeks
+peon N: peons 
+perf N: perves
+pessimal V: pessimaled  pessimaling  pessimals
+phage N: phages
+phase N: phases
+phreaker N: phreakers
+phreaking N: phreakings
+ping N: pings
+ping V: pinged  pinging  pings
+pipe N: pipes
+pistol N: pistols
+playpen N: playpens
+plingnet N: plingnets
+plokta V: ploktaed  ploktaing  ploktas
+plonk V: plonked  plonking  plonks
+plugh V: plughed  plughing  plughs
+plumbing N: plumbings
+pod N: pods
+poke N: pokes
+poll V: polled  polling  polls
+pop V: popped  popping  pops
+poser N: posers
+post V: posted  posting  posts
+postcardware N: postcardwares
+posting N: postings
+postmaster N: postmasters
+prepend V: prepended  prepending  prepends
+prestidigitization N: prestidigitizations
+prettyprint V: prettyprinted  prettyprinting  prettyprints
+priesthood N: priesthoods
+print V: printed  printing  prints
+profile N: profiles
+progasm N: progasms
+proggy N: proggies
+proglet N: proglets
+program N: programs
+programming N: programmings
+protocol N: protocols
+prowler N: prowlers
+pseudo N: pseudos
+pseudoprime N: pseudoprimes
+pseudosuit N: pseudosuits
+psychedelicware N: psychedelicwares
+psyton N: psytons
+puff V: puffed  puffing  puffs
+pumpking N: pumpkings
+punt V: punted  punting  punts
+push V: pushed  pushing  pushes
+quad N: quads
+quarter N: quarters
+ques N: queses
+quine N: quines
+quotient N: quotients
+quux N: quuxes
+random N: randoms
+randomness N: randomnesses
+rape V: raped  raping  rapes
+rasterbation N: rasterbations
+rave V: raved  raving  raves
+ravs N: ravses
+real A: realer  realest
+reaper N: reapers
+recursion N: recursions
+regexp N: regexps
+replicator N: replicators
+reply N: replies
+restriction N: restrictions
+retcon N: retcons
+retcon V: retconned  retconning  retcons
+retrocomputing N: retrocomputings
+rip V: ripped   ripping   rips
+ripoff N: ripoffs
+roach V: roached  roaching  roaches
+robot N: robots
+robust A: robuster  robustest
+rogue N: rogues
+root N: roots
+rude A: ruder  rudest
+saga N: sagas
+sagan N: sagans
+salescritter N: salescritters
+salt N: salts
+samizdat N: samizdats
+samurai N: samurais
+sandbender N: sandbenders
+sandbox N: sandboxes
+say V: said  saying  says
+scag V: scagged  scagging  scags
+scanno N: scannos
+schroedinbug N: schroedinbugs
+scratch V: scratched  scratching  scratches
+screen N: screens
+screw N: screws
+screwage N: screwages
+scribble N: scribbles
+scrog V: scrogged  scrogging  scrogs
+scrool N: scrools
+scrozzle V: scrozzled  scrozzling  scrozzles
+scruffies N: scruffieses
+segfault N: segfaults
+seggie N: seggies
+segment V: segmented  segmenting  segments
+segv N: segvs
+selvage N: selvages
+semi N: semis
+server N: servers
+sharchive N: sharchives
+shareware N: sharewares
+shebang N: shebangs
+shelfware N: shelfwares
+shell N: shells
+shim N: shims
+shitogram N: shitograms
+shovelware N: shovelwares
+showstopper N: showstoppers
+shriek N: shrieks
+sidecar N: sidecars
+silicon N: silicons 
+silo N: silos
+sitename N: sitenames
+skrog V: skrogged  skrogging  skrogs
+skulker N: skulkers
+slab N: slabs
+slab V: slabbed  slabbing  slabs
+slack N: slacks
+slash N: slashes
+sleep V: slept  sleeping  sleeps
+slim N: slims
+slop N: slops
+slopsucker N: slopsuckers
+slurp V: slurped  slurping  slurps
+smart A: smarter  smartest
+smiley N: smileys
+smoke V: smoked  smoking  smokes
+smurf N: smurfs
+snail V: snailed  snailing  snails
+snap V: snapped  snapping  snaps
+snarf V: snarfed  snarfing  snarfs
+snark N: snarks
+sneaker N: sneakers
+sneakernet N: sneakernets
+sniff V: sniffed  sniffing  sniffs
+snivitz N: snivitzes
+softcopy N: softcopies
+softy N: softies
+spam V: spammed  spamming  spams
+spamblock N: spamblocks
+spamhaus N: spamhauses
+spamvertize V: spamvertized  spamvertizing  spamvertizes
+spangle N: spangles
+spawn N: spawns
+speedometer N: speedometers
+spell N: spells
+spiffy A: spiffier  spiffiest
+spike V: spiked  spiking  spikes
+spin V: spun  spinning  spins
+splat N: splats
+spod N: spods
+spoiler N: spoilers
+sponge N: sponges
+spoof V: spoofed  spoofing  spoofs
+spool V: spooled  spooling  spools
+spungle N: spungles
+squirrelcide N: squirrelcides
+stack N: stacks
+state N: states
+stiffy N: stiffies
+stoppage N: stoppages
+store N: stores
+stroke N: strokes
+strudel N: strudels
+stubroutine N: stubroutines
+studly A: studlier  studliest
+studlycaps N: studlycapses
+suit N: suits
+sunspots N: sunspotses
+superloser N: superlosers
+superprogrammer N: superprogrammers
+superuser N: superusers
+support N: supports
+surf V: surfed  surfing  surfs
+swab N: swabs
+swab V: swabbed  swabbing  swabs
+swap V: swapped  swapping  swaps
+swizzle V: swizzled  swizzling  swizzles
+sync N: syncs
+sysadmin N: sysadmins
+sysape N: sysapes
+sysop N: sysops
+system N: systems
+tarball N: tarballs
+tardegy N: tardegies
+taste N: tastes
+tayste N: taystes
+tee N: tees
+teergrube N: teergrubes
+teledildonics N: teledildonicses
+tense A: tenser  tensest
+tentacle N: tentacles
+terminak N: terminaks
+terpri V: terpried  terpriing  terpris
+test N: tests
+text N: texts
+theology N: theologies
+theory N: theories
+thinko N: thinkos
+thrash V: thrashed  thrashing  thrashes
+thread N: threads
+thud N: thuds
+thumb N: thumbs
+thunk N: thunks
+tick N: ticks
+toad V: toadded  toadding  toads
+toast N: toasts
+toast V: toasted  toasting  toasts
+toaster N: toasters
+toeprint N: toeprints
+toggle V: toggled  toggling  toggles
+tool N: tools
+tool V: tooled  tooling  tools
+toolsmith N: toolsmiths
+toor N: toors
+tourist N: tourists
+toy N: toys
+trampoline N: trampolines
+trap N: traps
+trap V: trapped   trapping   traps
+trash V: trashed  trashing  trashes
+trawl V: trawled  trawling  trawls
+treeware N: treewares
+trit N: trits
+troff N: troffs
+troglodyte N: troglodytes
+troll V: trolled  trolling  trolls
+tron V: tronned  tronning  trons
+tty N: ttys
+tube N: tubes
+tunafish N: tunafishes
+tune V: tuned  tuning  tunes
+turist N: turists
+tweak V: tweaked  tweaking  tweaks
+tweeter N: tweeters
+twiddle N: twiddles
+twiddle V: twiddled  twiddling  twiddles
+twink N: twinks
+twonkie N: twonkies
+unixism N: unixisms
+unswizzle V: unswizzled  unswizzling  unswizzles
+up V: upped  upping  ups
+upload V: uploaded  uploading  uploads
+urchin N: urchins
+user N: users
+vadding N: vaddings
+vannevar N: vannevars
+vaporware N: vaporwares
+var N: vars
+vaston N: vastons
+vaxherd N: vaxherds
+vaxism N: vaxisms
+vaxocentrism N: vaxocentrisms
+vdiff V: vdiffed  vdiffing  vdiffs
+veeblefester N: veeblefesters
+velveeta N: velveetas
+verbage N: verbages
+verbiage N: verbiages
+vgrep V: vgrepped  vgrepping  vgreps
+vi N: vis
+videotex N: videotexes
+virus N: viruses
+visionary N: visionaries
+voice V: voiced  voicing  voices
+wabbit N: wabbits
+waldo N: waldoes / waldos
+walk N: walks
+wall V: walled  walling  walls
+wallpaper N: wallpapers
+wango N: wangos
+wank N: wanks
+wank V: wanked  wanking  wanks
+wannabee N: wannabees
+warez N: warezes
+warlording V: warlordinged  warlordinging  warlordings
+wart N: warts
+weasel N: weasels
+webify N: webifies
+webmaster N: webmasters
+wedgie N: wedgies
+wedgitude N: wedgitudes
+weeds N: weedses
+weenie N: weenies
+wetware N: wetwares
+whack V: whacked  whacking  whacks
+whacker N: whackers
+whales N: whaleses
+whalesong N: whalesongs
+wheel N: wheels
+wibble N: wibbles
+widget N: widgets
+wiggles N: wiggleses
+win N: wins
+win V: won  winning   wins
+windoid N: windoids
+winkey N: winkeys
+winnage N: winnages
+winner N: winners
+winnitude N: winnitudes
+wired N: wireds
+wirehead N: wireheads
+wirewater N: wirewaters
+wizard N: wizards
+womble N: wombles
+wonky A: wonkier  wonkiest
+woofer N: woofers
+workaround N: workarounds
+worm N: worms
+wormhole N: wormholes
+wumpus N: wumpuses
+xref V: xreffed  xreffing  xrefs
+zap N: zaps
+zap V: zapped  zapping  zaps
+zen V: zenned  zenning  zens
+zero V: zeroed  zeroing  zeros (zeroes)
+zigamorph N: zigamorphs
+zip V: zipped  zipping  zips
+zipperhead N: zipperheads
+zombie N: zombies
+zorch N: zorches
+zorch V: zorched  zorching  zorches
+zorkmid N: zorkmids

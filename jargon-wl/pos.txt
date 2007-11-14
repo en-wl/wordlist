@@ -1,0 +1,2093 @@
+120 reset	N
+1TBS	N
+404 compliant	Av
+404	N
+4.2	N
+abbrev	N
+ABEND	N
+accumulator	N
+ACK	!
+Acme	N
+acolyte	N
+Ada	N
+address harvester	N
+adger	t
+ad-hockery	N
+admin	N
+ADVENT	N
+AFAIK	N
+AFJ	N
+AI-complete	Av
+AIDS	N
+AIDX	N
+AI	N
+AI koans	P
+airplane rule	N
+Alderson loop	N
+aliasing bug	N
+Alice and Bob	N
+all-elbows	Av
+alpha geek	N
+alpha particles	N
+alt bit	Av
+alt	N
+Aluminum Book	N
+ambimouseterous	Av
+Amiga Persecution Complex	N
+amoeba	N
+amper	N
+amp off	t
+Angband	N
+angle brackets	N
+angry fruit salad	N
+annoybot	N
+annoyware	N
+ANSI	N
+AOL!	N
+app	N
+arena	N
+arg	N
+ARMM	N
+armor-plated	N
+asbestos cork award	N
+asbestos	Av
+asbestos longjohns	N
+ASCII art	N
+ASCIIbetical order	Av
+ASCII	N
+astroturfing	N
+atomic	Av
+attoparsec	N
+autobogotiphobia	N
+avatar	N
+awk	Nt
+B1FF	N
+backbone cabal	N
+backbone site	N
+back door	N
+background	N
+backreference	N
+backronym	N
+backspace and overstrike	!
+backward combatability	N
+Bad and Wrong	Av
+BAD	Av
+Bad Thing	N
+bagbiter	Ni
+bagbiting	Av
+baggy pantsing	V
+bag on the side	NV
+balloonian variable	N
+bamf	!
+banana label	N
+banana problem	N
+bandwidth	N
+bang	N!
+bang on	t
+bang path	N
+banner ad	N
+banner	N
+bare metal	N
+barf	Ni!
+barfmail	N
+barfulation	!
+barfulous	Av
+bar	N
+barney	N
+barn	N
+baroque	Av
+BASIC	N
+batbelt	N
+batch	Av
+bathtub curve	N
+baud barf	N
+baud	N
+bazaar	N
+baz	N!
+bboard	N
+BBS	N
+BCPL	N
+beam	t
+beanie key	N
+beep	N
+Befunge	N
+beige toaster	N
+bells and whistles	N
+bells whistles and gongs	N
+benchmark	N
+Berkeley Quality Software	Av
+berklix	N
+Berzerkeley	N
+beta	N
+BFI	N
+bible	N
+BiCapitalization	N
+biff	t
+big-endian	Av
+Big Gray Wall	N
+big iron	N
+bignum	N
+bigot	N
+Big Red Switch	N
+Big Room	N
+big win	N
+binary four	N
+bit bang	N
+bit bashing	N
+bitblt	N
+bit bucket	N
+bit decay	N
+bit	N
+BITNET	N
+bit-paired keyboard	N
+bit rot	N
+bits	P
+bit twiddling	N
+bitty box	N
+bixen	P
+bixie	N
+black art	N
+black hole	N
+black magic	N
+Black Screen of Death	N
+Black Thursday	N
+blammo	V
+blargh	N
+blast	t
+blat	N
+bletcherous	Av
+bletch	!
+blinkenlights	N
+blink	i
+blit	t
+blitter	N
+blivet	N
+bloatware	N
+BLOB	NV
+block	ti
+block transfer computations	N
+Bloggs Family	N
+blow an EPROM	V
+blow away	t
+blow out	i
+blow past	t
+blow up	i
+BLT	N
+Blue Book	N
+blue box	N
+Blue Glue	N
+blue goo	N
+Blue Screen of Death	N
+blue wire	N
+blurgle	N
+BNF	N
+boa	N
+board	N
+boat anchor	N
+bob	N
+bodysurf code	N
+BOFH	N
+BOF	N
+bogometer	N
+bogon filter	N
+bogon flux	N
+bogon	N
+bogosity	N
+bogo-sort	N
+bogotify	t
+bogue out	i
+bogus	Av
+Bohr bug	N
+boink	NV
+bomb	NV
+bondage-and-discipline language	N
+bonk/oif	!
+boot	V
+Borg	N
+borken	Av
+bot spot	N
+bottom feeder	N
+bottom-up implementation	N
+bounce	V
+bounce message	N
+boustrophedon	N
+boxed comments	N
+boxen	P
+box	N
+boxology	N
+bozotic	Av
+BQS	Av
+brain-damaged	Av
+brain-dead	Av
+brain dump	N
+brain fart	N
+braino	N
+branch to Fishkill	N
+bread crumbs	N
+break-even point	N
+break	ti
+breath-of-life packet	N
+breedle	N
+bring X to its knees	V
+brittle	Av
+broadcast storm	N
+brochureware	N
+broken arrow	N
+broken	Av
+BrokenWindows	N
+broket	N
+brown-paper-bag bug	N
+browser	N
+BRS	N
+brute force and ignorance	N
+brute force	Av
+BSD	N
+BUAF	N
+BUAG	N
+bubble sort	N
+bucky bits	N
+buffer chuck	N
+buffer overflow	N
+bug-compatible	Av
+bug-for-bug compatible	N
+bug	N
+buglix	N
+bug-of-the-month club	N
+bulletproof	Av
+bum	Nt
+bump	t
+burble	V
+buried treasure	N
+burn-in period	N
+burst page	N
+busy-wait	i
+buzz	i
+BWQ	N
+byte	N
+byte sex	N
+bytesexual	Av
+calculator	N
+Camel Book	N
+candygrammar	N
+can	t
+canonical	Av
+card walloper	N
+careware	N
+cargo cult programming	N
+cascade	N
+case and paste	N
+casters-up mode	N
+casting the runes	N
+catatonic	Av
+cathedral	N
+cat	t
+cdr	t
+cd tilde	i
+chad box	N
+chad	N
+chain	Ni
+channel hopping	N
+channel	N
+channel op	N
+chanop	N
+char	N
+charityware	N
+chase pointers	i
+chawmp	N
+check	N
+chemist	N
+Chernobyl chicken	N
+Chernobyl packet	N
+chicken head	N
+chiclet keyboard	N
+Chinese Army technique	N
+choad	N
+choke	i
+chomper	N
+chomp	i
+CHOP	N
+Christmas tree	N
+Christmas tree packet	N
+chrome	N
+C	N
+C++	N
+chug	i
+Church of the SubGenius	N
+CI$	N
+Cinderella Book	N
+Classic C	N
+clean	VAv
+CLM	NAv
+clobber	t
+clock	t
+clocks	N
+clone-and-hack coding	N
+clone	NV
+clover key	N
+clustergeeking	N
+C|N>K	N
+coaster	N
+COBOL fingers	N
+COBOL	N
+cobweb site	N
+code grinder	N
+code	N
+Code of the Geeks	N
+code police	N
+codes	N
+codewalker	N
+coefficient of X	N
+cokebottle	N
+cold boot	N
+COME FROM	N
+command key	N
+comment out	t
+comm mode	N
+Commonwealth Hackish	N
+compact	Av
+compiler jock	N
+compo	N
+compress	t
+Compu$erve	N
+computer confetti	N
+computer geek	N
+computron	N
+condition out	t
+condom	N
+confuser	N
+connector conspiracy	N
+cons	t
+considered harmful	Av
+console	N
+console jockey	N
+content-free	Av
+control-C	i!
+control-O	i
+control-Q	i
+control-S	i
+cookbook	N
+cooked mode	N
+cookie bear	N
+cookie file	N
+cookie	N
+cookie jar	N
+cookie monster	N
+copious free time	N
+copper	N
+copybroke	Av
+copycenter	N
+copyleft	N
+copyparty	N
+copy protection	N
+copywronged	Av
+core cancer	N
+core dump	N
+core	N
+core leak	N
+Core Wars	N
+corge	N
+cosmic rays	N
+cough and die	V
+cowboy	N
+cow orker	N
+CP/M	N
+C Programmer's Disease	N
+CPU Wars	N
+cracker	N
+cracking	N
+crack root	V
+crank	t
+crapplet	N
+CrApTeX	N
+crash and burn	i
+crash	Ni
+crawling horror	N
+cray	N
+cray instability	N
+crayola books	N
+crayola	N
+crayon	N
+creationism	N
+creep	V
+creeping elegance	N
+creeping featurism	N
+creeping featuritis	N
+cretin	N
+cretinous	Av
+crippleware	N
+critical mass	N
+crlf	N
+crock	N
+cross-post	i
+crudware	N
+cruft	Nt
+cruftsmanship	N
+cruft together	t
+crufty	NAv
+crumb	N
+crunch	Nti
+cryppie	N
+CTSS	N
+cube	N
+cubing	i
+cup holder	N
+cursor dipped in X	N
+cuspy	Av
+cut a tape	i
+cybercrud	N
+cyberpunk	N
+cyberspace	N
+cycle crunch	N
+cycle drought	N
+cycle	Nt
+cycle of reincarnation	N
+cycle server	N
+cypherpunk	N
+daemon book	N
+daemon	N
+dahmum	N
+dancing frog	N
+dangling pointer	N
+dark-side hacker	N
+Datamation	N
+DAU	N
+Dave the Resurrector	N
+day mode	N
+D. C. Power Lab	N
+dd	t
+DDT	N
+DEADBEEF	N
+dead code	N
+dead	Av
+dead link	N
+deadlock	N
+deadly embrace	N
+death code	N
+Death Square	N
+Death Star	N
+decay	N
+DEC	NV
+deckle	N
+DEC Wars	N
+DED	N
+deep hack mode	N
+deep magic	N
+deep space	N
+defenestration	N
+defined as	Av
+dehose	t
+deliminator	N
+delint	V
+delta	N
+demented	Av
+demigod	N
+demoeffect	N
+demogroup	N
+demo	NV
+demo mode	N
+demon dialer	N
+demon	N
+demoparty	N
+depeditate	N
+deprecated	Av
+de-rezz	ti
+derf	V
+deserves to lose	Av
+desk check	N
+despew	V
+Devil Book	N
+/dev/null	N
+dickless workstation	N
+dictionary flame	N
+diddle	Nt
+die horribly	V
+die	V
+diff	NV
+digit	N
+dike	t
+Dilbert	N
+ding	N
+dink	Av
+dinosaur	N
+dinosaur pen	N
+dinosaurs mating	N
+dirtball	N
+dirty power	N
+disclaimer	N
+Discordianism	N
+disk farm	N
+display hack	N
+dispress	t
+Dissociated Press	N!
+distribution	N
+disusered	Av
+doc	N
+documentation	N
+dodgy	Av
+dogcow	N
+dogfood	N
+dogpile	V
+dogwash	NV
+domainist	Av
+dongle-disk	N
+dongle	N
+Don't do that then!	V
+donuts	N
+doorstop	N
+do protocol	i
+dot file	N
+double bucky	Av
+doubled sig	N
+down	tiAv
+download	t
+DPB	t
+DPer	N
+DP	N
+Dragon Book	N
+dragon	N
+drain	V
+dread high-bit disease	N
+Dread Questionmark Disease	N
+DRECNET	N
+Dr. Fred Mbogo	N
+driver	N
+droid	N
+drone	N
+drool-proof paper	N
+drop-ins	N
+drop on the floor	t
+drop-outs	N
+drugged	Av
+drum	N
+drunk mouse syndrome	N
+Duff's device	N
+dumbass attack	N
+dumbed down	Av
+dumb terminal	N
+dump	N
+dumpster diving	N
+dup killer	N
+dup loop	N
+dusty deck	N
+DWIM	NAv
+dynner	N
+earthquake	N
+Easter egg	N
+Easter egging	N
+eat flaming death	V
+EBCDIC	N
+echo	N
+ECP	N
+ed	N
+egosurf	i
+eighty-column mind	N
+El Camino Bignum	N
+elder days	N
+elegant	Av
+elephantine	Av
+elevator controller	N
+elite	Av
+ELIZA effect	N
+elvish	N
+EMACS	Ni
+email	Nt
+emoticon	N
+empire	N
+engine	N
+English	N
+enhancement	N
+EOF	N
+EOL	N
+EOU	N
+epoch	N
+epsilon	NAv
+epsilon squared	N
+era the	N
+Eric Conspiracy	N
+Eris	N
+erotics	N
+error 33	N
+evil and rude	Av
+Evil Empire	N
+evil	Av
+examining the entrails	N
+EXCH	t
+excl	N
+exec	t
+EXE	N
+exercise left as an	Av
+Exploder	N
+exploit	N
+external memory	N
+eyeball search	N
+eye candy	N
+face time	N
+factor	N
+fairings	N
+fall over	i
+fall through	NV
+fandango on core	N
+fan	N
+FAQ	N
+FAQL	N
+FAQ list	N
+faradize	V
+farkled	Av
+farming	N
+fascist	Av
+fat electrons	N
+fat-finger	t
+faulty	Av
+fd leak	N
+fear and loathing	N
+feature creature	N
+feature creep	N
+featurectomy	N
+feature	N
+feature key	N
+feature shock	N
+feeper	N
+feep	Ni
+feeping creature	N
+feeping creaturism	N
+feetch feetch	!
+fence	N
+fencepost error	N
+FidoNet	N
+field circus	N
+field servoid	N
+Fight-o-net	N
+File Attach	Nt
+File Request	Nt
+file signature	N
+filk	N
+filter	N
+Finagle's Law	N
+fine	Av
+finger	Nt
+finger-pointing syndrome	N
+finger trouble	N
+finn	V
+firebottle	N
+firefighting	N
+firehose syndrome	N
+firewall code	N
+firewall machine	N
+fireworks mode	N
+firmware	N
+firmy	N
+fish	N
+FISH queue	N
+FITNR	Av
+fix	N
+FIXME	V
+flag day	N
+flag	N
+flaky	Av
+flamage	N
+flame bait	N
+flame	Nti
+flame on	i
+flamer	N
+flame war	N
+flap	t
+flarp	N
+flat-ASCII	Av
+flat-file	Av
+flat	Av
+flatten	t
+flavorful	Av
+flavor	N
+flippy	N
+flood	V
+flowchart	N
+flower key	N
+flush	V
+flypage	N
+Flyspeck 3	N
+flytrap	N
+FM	N
+fnord	N
+FOAF	N
+FOD	V
+fold case	V
+followup	N
+fontology	N
+foobar	N
+foo	!
+fool file	N
+fool	N
+Foonly	N
+footprint	N
+fora	P
+foreground	t
+for free	Av
+fork bomb	N
+forked	Av
+for the rest of us	Av
+Fortrash	N
+fortune cookie	N
+forum	NP
+fossil	N
+four-color glossies	N
+frag	N
+fragile	Av
+Fred Foobar	N
+fred	N
+frednet	N
+free software	N
+freeware	N
+freeze	V
+fried	Av
+frink	V
+friode	N
+fritterware	N
+frob	Nt
+frobnicate	t
+frobnitz	NP
+frogging	V
+frog	NAv!
+front end	N
+frotzed	Av
+frotz	N
+frowney	N
+FRS	N
+fry	ti
+fscking	Av
+FTP	Nt
+FUBAR	N
+fudge factor	N
+fudge	Nt
+FUD	N
+FUD wars	N
+fuel up	i
+Full Monty	N
+fum	N
+functino	N
+funky	Av
+funny money	N
+fuzzball	N
+gabriel	N
+gag	i
+gang bang	N
+garbage collect	Ni
+garply	N
+gaseous	Av
+gas	Nt!
+gawble	N
+GC	Nt
+GCOS	N
+GECOS	N
+gedanken	Av
+geef	t
+geek code	N
+geek out	i
+gender mender	N
+General Public Virus	N
+generate	t
+gen	N
+Genius From Mars Technique	N
+gensym	NV
+Get a life!	V
+Get a real computer!	V
+g-file	N
+GFR	t
+gig	N
+gilley	N
+gillion	N
+GIPS	N
+glark	t
+glassfet	N
+glass	N
+glass tty	N
+glitch	Nti
+glob	V
+glork	t!
+glue	N
+gnarly	Av
+gnubie	N
+GNUMACS	N
+gobble	t
+Godzillagram	N
+go-faster stripes	N
+go flatline	V
+golden	Av
+golf-ball printer	N
+gonk	i
+gonkulator	N
+gonzo	Av
+Good Thing	N
+gopher hole	N
+gopher	N
+gorets	N
+gorilla arm	N
+go root	i
+gorp	N
+GOSMACS	N
+Gosperism	N
+gotcha	N
+GPL	N
+GPV	N
+grault	N
+gray goo	N
+Great Renaming	N
+Great Runes	N
+great-wall	i
+Great Worm	N
+greenbar	N
+Green Book	N
+green bytes	N
+green card	N
+green lightning	N
+green machine	N
+grep	i
+gribble	N
+grilf	N
+grind crank	N
+grind	t
+gripenet	N
+gritch	Ni
+grok	t
+gronked	Av
+gronk	t
+gronk out	i
+grovel	i
+grue	N
+grunge	N
+gubbish	N
+guiltware	N
+gumby	NAv
+gunch	t
+gun	t
+gunpowder chicken	N
+gurfle	!
+guru	N
+guru meditation	N
+gweep	NV
+hack attack	N
+hacked off	Av
+hacked up	Av
+hacker ethic	N
+hacker	N
+Hackers (the movie)	N
+hack	Nti
+hacking run	N
+Hacking X for Y	N
+Hackintosh	N
+hackish	NAv
+hackishness	N
+hackitude	N
+hack mode	N
+hack on	t
+hack together	t
+hack up	t
+hack value	N
+hairball	N
+hair	N
+hairy	Av
+HAKMEM	N
+hakspek	N
+Halloween Documents	N
+hammer	t
+hamster	N
+hand cruft	t
+hand-hacking	NV
+handle	N
+hand-roll	V
+handshaking	N
+handwave	NV
+hang	V
+haque	N
+hard boot	N
+hardcoded	Av
+hardwired	Av
+hash bucket	N
+hash collision	N
+has the X nature	Av
+hat	N
+HCF	N
+heads down	Av
+heartbeat	N
+heatseeker	N
+heavy metal	N
+heavyweight	Av
+heavy wizardry	N
+heisenbug	N
+Helen Keller mode	N
+hello sailor!	!
+hello world	!
+hexadecimal	N
+hex	N
+hexit	N
+hidden flag	N
+high bit	N
+high moby	N
+hing	N
+hired gun	N
+hirsute	Av
+HLL	N
+hoarding	N
+hobbit	N
+hog	N
+hole	N
+hollised	Av
+holy wars	N
+home box	N
+home machine	N
+home page	N
+hook	N
+hop	NV
+hosed	Av
+hose	Nt
+hot chat	N
+hotlink	N
+hot spot	N
+house wizard	N
+HP-SUX	N
+huff	V
+hung	Av
+hungry puppy	N
+hungus	Av
+hyperspace	N
+hysterical reasons	N
+IBM discount	N
+ICBM address	N
+ice	N
+idempotent	Av
+I didn't change anything!	!
+IDP	V
+ifdef out	V
+ill-behaved	Av
+incantation	N
+inc	V
+include	t
+include war	N
+indent style	N
+index of X	N
+infant mortality	N
+infinite	Av
+infinite loop	N
+Infinite-Monkey Theorem	N
+infinity	N
+inflate	t
+Infocom	N
+initgame	N
+insanely great	Av
+INTERCAL	N
+interesting	Av
+Internet address	N
+Internet Exploiter	N
+Internet	N
+interrupt	N!
+interrupt list	N
+interrupts locked out	Av
+in the extreme	Av
+intro	N
+IRC	N
+Iron Age	N
+iron box	N
+iron	N
+ironmonger	N
+ISO standard cup of tea	N
+ITS	N
+jack in	V
+jaggies	N
+JCL	N
+JEDR	N
+jello	N
+jiffy	N
+job security	N
+jock	N
+joe code	N
+jolix	N
+J. Random Hacker	N
+J. Random	N
+juggling eggs	i
+jump off into never-never land	V
+jupiter	t
+kahuna	N
+kamikaze packet	N
+K&R	N
+kangaroo code	N
+ken	N
+kgbvax	N
+K	N
+kiboze	V
+kibozo	N
+kick	V
+killer micro	N
+killer poke	N
+kill file	N
+KIPS	N
+KISS Principle	N
+kit	N
+klone	N
+kludge	NV
+kluge around	t
+kluge	Nt
+kluge up	t
+Knights of the Lambda Calculus	N
+knobs	P
+Knuth	N
+koan	N
+kremvax	N
+kyrka	N
+lace card	N
+lag	N
+lamer	N
+language lawyer	N
+languages of choice	N
+LART	NV!
+larval stage	N
+lase	t
+laser chicken	N
+lasherism	N
+laundromat	N
+LDB	t
+leaf site	N
+leak	N
+leaky heap	N
+leapfrog attack	N
+leech	N
+legalese	N
+legal	Av
+LER	N
+LERP	i
+letterbomb	N
+let the smoke out	V
+lexer	N
+lexiphage	N
+life	N
+light pipe	N
+lightweight	Av
+like kicking dead whales down the beach	Av
+like nailing jelly to a tree	Av
+line 666	N
+linearithmic	Av
+line eater the	N
+line noise	N
+line starve	Ni
+link-dead	Av
+link farm	N
+link rot	N
+Lintel	N
+lint	Nt
+Linux	N
+lion food	N
+Lions Book	N
+LISP	N
+list-bomb	V
+lithium lick	N
+little-endian	Av
+live data	N
+Live Free Or Die!	V
+live	Av
+livelock	N
+liveware	N
+lobotomy	N
+locals the	P
+locked and loaded	Av
+locked up	Av
+logical	Av
+logic bomb	N
+loop through	t
+loose bytes	N
+lord high fixer	N
+lose	Ni
+lose lose	!
+loser	N
+losing	Av
+lossage	N
+loss	N
+lost in the noise	Av
+lost in the underflow	Av
+lots of MIPS but no I/O	Av
+low-bandwidth	Av
+LPT	N
+Lumber Cartel	N
+lunatic fringe	N
+lurker	N
+luser	N
+macdink	t
+machinable	Av
+machoflops	N
+Macintoy	N
+Macintrash	N
+macro	N
+macrology	N
+macrotape	N
+maggotbox	N
+magic cookie	N
+magic	NAv
+magic number	N
+magic smoke	N
+mailbomb	NV
+mailing list	N
+mail storm	N
+mainframe	N
+main loop	N
+management	N
+mandelbug	N
+manged	NAv
+mangled name	N
+mangle	t
+mangler	N
+manularity	N
+marbles	P
+Marginal Hacks	N
+marginal	Av
+marketroid	N
+Mars	N
+martian	N
+massage	t
+math-out	N
+Matrix	N
+maximum Maytag mode	N
+meatspace	N
+meatware	N
+meeces	N
+megapenny	N
+meg	N
+MEGO	N
+meltdown network	N
+meme	N
+meme plague	N
+memetics	N
+memory farts	N
+memory leak	N
+memory smash	N
+menuitis	N
+mess-dos	N
+meta bit	N
+meta	Av
+metasyntactic variable	N
+MFTL	NAv
+M	s
+mickey	N
+mickey mouse program	N
+MicroDroid	N
+microfloppies	N
+microfortnight	N
+microLenat	N
+microReid	N
+Microsloth Windows	N
+middle-endian	Av
+milliLampson	N
+minifloppies	N
+MIPS	N
+misbug	N
+misfeature	N
+Missed'em-five	N
+missile address	N
+miswart	N
+moby	NAv
+mockingbird	N
+mode bit	N
+mode	N
+mod	t
+molly-guard	N
+Mongolian Hordes technique	N
+monkey scratch	N
+monkey up	t
+monstrosity	NAv
+monty	N
+Moof	NVAv
+moose call	N
+moria	N
+MOTAS	N
+MOTOS	N
+MOTSS	N
+mouse ahead	i
+mouse around	i
+mouse belt	N
+mouse droppings	N
+mouse elbow	N
+mouso	N
+MS-DOS	N
+muddie	N
+mudhead	N
+MUD	Ni
+multician	N
+Multics	N
+multitask	N
+mumblage	N
+mumble	!
+munch	t
+munching	N
+munching squares	N
+munchkin	N
+mundane	N
+munge	t
+mung	t
+music	N
+mutter	t
+nadger	V
+nagware	N
+nailed to the wall	Av
+nailing jelly	i
+naive	Av
+naive user	N
+NAK	!
+nanoacre	N
+nanobot	N
+nanocomputer	N
+nanofortnight	N
+nano	N
+nanotechnology	N
+nasal demons	N
+nastygram	N
+Nathan Hale	N
+nature	N
+neat hack	N
+neats vs. scruffies	N
+neep-neep	N
+neophilia	N
+nerd	N
+nerd knob	N
+NetBOLLIX	N
+netburp	N
+netdead	N
+net.god	N
+nethack	N
+netiquette	N
+netlag	N
+netnews	N
+net.personality	N
+net.police	N
+netrock	N
+Netscrape	N
+netsplit	N
+netter	N
+network address	N
+network meltdown	N
+newbie	N
+newgroup wars	N
+New Jersey	Av
+newline	N
+newsfroup	N
+newsgroup	N
+NeWS	N
+New Testament	N
+N	Av
+nick	N
+nickle	N
+Nightmare File System	N
+night mode	N
+Ninety-Ninety Rule	N
+nipple mouse	N
+NMI	N
+noddy	Av
+node	N
+Nominal Semidestructor	N
+nonlinear	Av
+non-optimal solution	N
+nontrivial	Av
+no-op	N
+not ready for prime time	Av
+notwork	N
+nroff	N
+NSA line eater	N
+NSP	N
+nude	Av
+nugry	NAv
+nuke	t
+number-crunching	N
+numbers	N
+NUXI problem	N
+nybble	NV
+nyetwork	N
+Obfuscated C Contest	N
+obi-wan error	N
+Objectionable-C	N
+obscure	Av
+octal forty	N
+off-by-one error	N
+off the trolley	Av
+ogg	V
+-oid	s
+old fart	N
+Old Testament	N
+one-banana problem	N
+one-line fix	N
+one-liner wars	N
+ooblick	N
+open	N
+open source	NAv
+open switch	N
+operating system	N
+op	N
+optical diff	N
+optical grep	N
+optimism	N
+Orange Book	N
+oriental food	N
+orphaned i-node	N
+orphan	N
+orthogonal	Av
+OS/2	N
+OS	N
+OSU	N
+out-of-band	Av
+overclock	t
+overflow bit	N
+overflow pdl	N
+overrun	N
+overrun screw	N
+padded cell	N
+page in	V
+page out	i
+pain in the net	N
+Pangloss parity	N
+paper-net	N
+param	N
+PARC	N
+parent message	N
+parity errors	P
+parm	N
+parse	t
+@-party	N
+Pascal	N
+pastie	N
+patch	Nt
+patch pumpkin	N
+patch space	N
+path	N
+pathological	Av
+payware	N
+PBD	N
+PC-ism	N
+PD	Av
+PDL	NV
+PDP-10	N
+PDP-20	N
+peek	N
+pencil and paper	N
+Pentagram Pro	N
+Pentium	N
+peon	N
+percent-S	N
+perfect programmer syndrome	N
+perf	N
+Perl	N
+person of no account	N
+pessimal	tAv
+pessimizing compiler	N
+PETSCII	N
+PFY	N
+phage	N
+phase	N
+phase of the moon	N
+phase-wrapping	N
+phreaker	N
+phreaking	N
+pilot error	N
+ping	Nt
+Ping O' Death	N
+ping storm	N
+pink wire	Ni
+pipe	N
+pistol	N
+pixel sort	N
+pizza box	N
+plaid screen	N
+plan file	N
+platinum-iridium	Av
+playpen	N
+plingnet	N
+plokta	V
+plonk	t
+plug-and-pray	Av
+plugh	V
+plumbing	N
+P-mail	N
+PM	NV
+pod	N
+point-and-drool interface	N
+pointy-haired	Av
+pointy hat	N
+poke	N
+poll	V
+polygon pusher	N
+POM	N
+pop	t
+POPJ	N
+poser	N
+postcardware	N
+post	V
+posting	NV
+postmaster	N
+PostScript	N
+pound on	t
+power cycle	t
+power hit	N
+PPN	N
+precedence lossage	N
+prepend	t
+prestidigitization	N
+pretty pictures	N
+prettyprint	V
+pretzel key	N
+priesthood	N
+prime time	N
+print	V
+printing discussion	N
+priority interrupt	N
+profile	N
+progasm	N
+proggy	N
+proglet	N
+program	N
+programming fluid	N
+programming	N
+propeller head	N
+propeller key	N
+proprietary	Av
+protocol	N
+provocative maintenance	N
+prowler	N
+pseudo	N
+pseudoprime	N
+pseudosuit	N
+psychedelicware	N
+psyton	N
+pubic directory	N
+puff	t
+pumpking	N
+pumpkin holder	N
+punched card	N
+punt	V
+Purple Book	N
+purple wire	N
+push	i
+quad	N
+quadruple bucky	N
+quantum bogodynamics	N
+quarter	N
+ques	N!
+quick-and-dirty	Av
+quine	N
+quote chapter and verse	V
+quotient	N
+quux	NAv!
+QWERTY	Av
+rabbit job	N
+rainbow series	N
+rain dance	N
+random	NAv
+randomness	N
+random numbers	N
+rape	t
+rare mode	Av
+rasterbation	N
+raster blaster	N
+raster burn	N
+rat belt	N
+rat dance	N
+rave	i
+rave on!	V
+ravs	N
+raw mode	N
+rc file	N
+README file	N
+read-only user	N
+real estate	N
+real hack	N
+real	Av
+reality check	N
+reality-distortion field	N
+real operating system	N
+Real Programmer	N
+real time	Av
+real user	N
+Real World	N
+reaper	N
+rectangle slinger	N
+recursion	N
+recursive acronym	N
+Red Book	N
+red wire	N
+regexp	N
+register dancing	N
+RE	N
+reincarnation cycle of	N
+reinvent the wheel	V
+relay rape	N
+religion of CHI	N
+religious issues	N
+replicator	N
+reply	N
+restriction	N
+retcon	Nt
+RETI	V
+retrocomputing	N
+return from the dead	V
+RFC	N
+RFE	N
+rib site	N
+rice box	N
+Right Thing	N
+rip	V
+ripoff	N
+RL	N
+roach	t
+robot	N
+robust	Av
+rococo	Av
+rogue	NAv
+root	N
+root mode	N
+rot13	N
+rotary debugger	N
+round tape	N
+RSN	Av
+RTBM	V
+RTFAQ	V
+RTFB	V
+RTFM	V
+RTFS	V
+RTI	!
+RTS	V
+rude	Av
+runes	P
+runic	Av
+rusty iron	N
+rusty memory	N
+rusty wire	N
+sacred	Av
+saga	N
+sagan	N
+SAIL	N
+salescritter	N
+salt	N
+salt mines	N
+salt substrate	N
+same-day service	N
+samizdat	N
+samurai	N
+sandbender	N
+sandbox	N
+sanity check	N
+Saturday-night special	N
+say	t
+scag	t
+scanno	N
+scary devil monastery	N
+schroedinbug	N
+science-fiction fandom	N
+scram switch	N
+scratch	tAv
+scratch monkey	N
+scream and die	V
+screaming tty	N
+screen	N
+screen name	N
+screwage	N
+screw	N
+scribble	N
+script kiddies	P
+scrog	t
+scrool	N
+scrozzle	t
+scruffies	N
+SCSI	N
+ScumOS	N
+search-and-destroy mode	N
+secondary damage	N
+second-system effect	N
+SED	N
+segfault	N
+seggie	N
+segmentation fault	N
+segment	i
+segv	N
+self-reference	N
+selvage	N
+semi-automated	Av
+semi	N
+semi-infinite	N
+senior bit	N
+server	N
+sex changer	N
+SEX	N
+con	N
+shambolic link	N
+sharchive	N
+Share and enjoy!	V
+shareware	N
+shar file	N
+shebang	N
+shelfware	N
+shell	N
+shell out	i
+shift left (or right) logical	i
+shim	N
+shitogram	N
+short card	N
+shotgun debugging	N
+shovelware	N
+showstopper	N
+shriek	N
+Shub-Internet	N
+sidecar	N
+sig block	N
+SIG	N
+signal-to-noise ratio	N
+sig quote	N
+sig virus	N
+silicon	N
+silly walk	i
+silo	N
+Silver Book	N
+sitename	N
+skrog	V
+skulker	N
+slab	Ni
+slack	N
+slap on the side	N
+slashdot effect	N
+slash	N
+sleep	i
+slim	N
+slop	N
+slopsucker	N
+Slowlaris	N
+slurp	t
+smart	Av
+smart terminal	N
+smash case	i
+smash the stack	N
+smiley	N
+smoke and mirrors	N
+smoke	i
+smoke test	N
+smoking clover	N
+SMOP	N
+smurf	N
+SNAFU principle	N
+snail	t
+snail-mail	N
+snap	V
+snarf & barf	N
+snarf down	V
+snarf	t
+snark	N
+sneaker	N
+sneakernet	N
+sniff	V
+snivitz	N
+'Snooze	N
+S/N ratio	N
+social engineering	N
+social science number	N
+sock puppet	N
+sodium substrate	N
+soft boot	N
+softcopy	N
+software bloat	N
+software hoarding	N
+software laser	N
+software rot	N
+softy	N
+SO	N
+some random X	Av
+sorcerer's apprentice mode	N
+SOS	N
+source of all good bits	N
+space-cadet keyboard	N
+spaceship operator	N
+SPACEWAR	N
+spaghetti code	N
+spaghetti inheritance	N
+spamblock	N
+spamhaus	N
+spam	t
+spamvertize	V
+spangle	N
+spawn	N
+special-case	t
+speedometer	N
+spell	N
+spelling flame	N
+spider food	N
+spiffy	Av
+spike	V
+spin	i
+splash screen	N
+splat	N
+spod	N
+spoiler	N
+sponge	N
+spoof	i
+spool file	N
+spool	i
+spungle	N
+square tape	N
+squirrelcide	N
+stack	N
+stack puke	N
+stale pointer bug	N
+star out	V
+state	N
+stealth manager	N
+steam-powered	Av
+STFW	V
+stiffy	N
+stir-fried random	N
+stomp on	t
+Stone Age	N
+stone knives and bearskins	N
+stoppage	N
+store	N
+strided	Av
+stroke	N
+strudel	N
+stubroutine	N
+studlycaps	N
+studly	Av
+stunning	Av
+Stupids	N
+stupid-sort	N
+sucking mud	Av
+sufficiently small	Av
+suitable win	N
+suitably small	Av
+suit	N
+Sun	N
+sun lounge	N
+sunspots	N
+sun-stools	N
+superloser	N
+superprogrammer	N
+super source quench	N
+superuser	N
+support	N
+surf	V
+Suzie COBOL	N
+swab	Nt
+swap	t
+swapped in	N
+swapped out	N
+swap space	N
+swizzle	V
+sync	N
+syntactic salt	N
+syntactic sugar	N
+sysadmin	N
+sysape	N
+sys-frog	N
+sysop	N
+system	N
+system mangler	N
+systems jock	N
+SysVile	N
+tail recursion	N
+talker system	N
+talk mode	N
+tall card	N
+tanked	Av
+tape monkey	N
+tar and feather	i
+tarball	N
+tardegy	N
+taste	N
+tayste	N
+TCB	N
+TCP/IP	N
+TechRef	N
+TECO	Nt
+tee	N
+teergrube	N
+teledildonics	N
+Telerat	N
+TELNET	t
+ten-finger interface	N
+tense	Av
+tentacle	N
+tenured graduate student	N
+teraflop club	N
+terminak	N
+terminal brain death	N
+terminal illness	N
+terminal junkie	N
+terpri	i
+test	N
+TeX	N
+text	N
+the literature	N
+the network	N
+theology	N
+theory	N
+thinko	N
+thrash	i
+thread	N
+three-finger salute	N
+throwaway account	N
+thud	N
+thumb	N
+thunk	N
+tick	N
+tickle a bug	t
+tick-list features	N
+tiger team	N
+time bomb	N
+time sink	N
+time T	N
+Tinkerbell program	N
+tip of the ice-cube	N
+tired iron	N
+tits on a keyboard	N
+TLA	N
+TMRC	N
+TMRCie	N
+toad	t
+to a first approximation	Av
+toaster	N
+toast	Nt
+toeprint	N
+toggle	t
+tool	Ni
+toolsmith	N
+toor	N
+topic drift	N
+topic group	N
+TOPS-10	N
+TOPS-20	N
+tourist	N
+touristic	Av
+tourist information	N
+toy	N
+toy language	N
+toy problem	N
+toy program	N
+trampoline	N
+trap door	N
+trap	Ni
+trash	t
+trawl	V
+tree-killer	N
+treeware	N
+trit	N
+trivial	Av
+troff	N
+troglodyte	N
+troglodyte mode	N
+Trojan horse	N
+troll	V
+Troll-O-Meter	N
+tron	V
+true-hacker	N
+tty	N
+tube	N
+tube time	N
+tunafish	N
+tune	t
+turbo nerd	N
+Turing tar-pit	N
+turist	N
+tweak	t
+tweeter	N
+TWENEX	N
+twiddle	Nt
+twilight zone	N
+twink	N
+twirling baton	N
+twonkie	N
+UBD	N
+UBE	N
+UCE	N
+UDP	V
+under the hood	Av
+undocumented feature	N
+uninteresting	Av
+Unix brain damage	N
+Unix conspiracy	N
+Unix	N
+unixism	N
+Unix weenie	N
+unswizzle	V
+unwind-protect	N
+unwind the stack	i
+UN*X	N
+up	tiAv
+upload	V
+urchin	N
+URL	N
+Usenet	N
+user-friendly	Av
+user	N
+user-obsequious	Av
+USG Unix	N
+UTSL	N
+UUCPNET	N
+V7	N
+vadding	N
+vanilla	Av
+vanity domain	N
+vannevar	N
+vaporware	N
+var	N
+vaston	N
+VAXectomy	N
+VAXen	N
+vaxherd	N
+VAX	N
+vaxism	N
+vaxocentrism	N
+vdiff	V
+veeblefester	N
+velveeta	N
+ventilator card	N
+Venus flytrap	N
+verbage	N
+verbiage	N
+Version 7	N
+vgrep	V
+videotex	N
+video toaster	N
+vi	N
+virgin	Av
+virtual beer	N
+virtual Friday	N
+virtual	Av
+virtual reality	N
+virtual shredder	N
+virus	N
+visionary	N
+VMS	N
+voice	t
+voice-net	N
+voodoo programming	N
+VR	N
+Vulcan nerve pinch	N
+vulture capitalist	N
+wabbit	N
+WAITS	N
+waldo	N
+walk	N
+walking drives	N
+walk off the end of	t
+wall follower	N
+wall	V!
+wallpaper	N
+wall time	N
+wall wart	N
+wango	N
+wank	NV
+wannabee	N
+war dialer	N
+-ware	s
+warez d00dz	N
+warez	N
+warez kiddies	N
+warlording	V
+warm boot	N
+wart	N
+washing machine	N
+washing software	N
+water MIPS	N
+wave a dead chicken	V
+weasel	N
+webify	N
+webmaster	N
+web pointer	N
+web ring	N
+web toaster	N
+wedged	Av
+wedgie	N
+wedgitude	N
+weeble	!
+weeds	N
+weenie	N
+Weenix	N
+well-behaved	Av
+well-connected	Av
+wetware	N
+whack-a-mole	N
+whacker	N
+whack	V
+whales	N
+whalesong	N
+wheel bit	N
+wheel	N
+wheel wars	N
+White Book	N
+whizzy	Av
+wibble	N
+WIBNI	N
+widget	N
+wiggles	N
+WIMP environment	N
+win big	i
+Winchester	N
+windoid	N
+window shopping	N
+Windoze	N
+winged comments	N
+win	Ni
+winkey	N
+winnage	N
+winner	N
+winnitude	N
+Wintel	N
+wired	N
+wirehead	N
+wirewater	N
+wish list	N
+within delta of	Av
+within epsilon of	Av
+Wizard Book	N
+wizard hat	N
+wizard	N
+wizardly	Av
+wizard mode	N
+wok-on-the-wall	N
+WOMBAT	Av
+womb box	N
+womble	N
+wonky	Av
+woofer	N
+workaround	N
+working as designed	Av
+wormhole	N
+worm	N
+wound around the axle	Av
+wrap around	Ni
+write-only code	N
+write-only language	N
+write-only memory	N
+Wrong Thing	N
+wugga wugga	N
+wumpus	N
+WYSIAYG	Av
+WYSIWYG	Av
+XEROX PARC	N
+X	N
+XOFF	N
+XON	N
+xor	C
+xref	V
+XXX	N
+xyzzy	Av
+YABA	N
+YAFIYGI	Av
+YAUN	N
+Yellow Book	N
+yellow card	N
+yellow wire	N
+Yet Another	Av
+Yow!	!
+yoyo mode	N
+Yu-Shiang Whole Fish	N
+zap	Nt
+zapped	Av
+zen	t
+zero-content	Av
+zero	t
+zeroth	Av
+zigamorph	N
+zip	t
+zipperhead	N
+zombie	N
+zorch	NV
+Zork	N
+zorkmid	N

@@ -16,11 +16,11 @@ rem ()
 }
 
 cat r/alt12dicts/not-variant.lst \
-  | src/filter | src/add-affixes 0.0 use-all | sort -u \
+  | src/filter | src/add-affixes 0.0 use-all | src/add-possessive | sort -u \
   > working/variant-no.lst
 
 cat r/alt12dicts/variant-maybe.lst \
-  | src/filter | src/add-affixes 0.9 use-all | sort -u \
+  | src/filter | src/add-affixes 0.9 use-all | src/add-possessive | sort -u \
   > working/variant-maybe.lst
 
 cat r/alt12dicts/variant-yes.lst \
@@ -28,7 +28,7 @@ cat r/alt12dicts/variant-yes.lst \
   > working/variant-yes-bare.lst
 
 cat r/alt12dicts/variant-yes.lst \
-  | src/filter | src/add-affixes 1.9 use-all | sort -u \
+  | src/filter | src/add-affixes 1.9 use-all | src/add-possessive | sort -u \
   > working/variant-yes.lst
 
 start \

@@ -38,7 +38,7 @@ make_final = $(shell src/list-combin final/ $(1) ):                        \
    src/make-final working/with-accents.lst src/add-accents                 \
    $(shell src/list-combin working/ $(1).pre)                              \
    $(shell src/list-combin working/ $(shell src/get-level prev $(1)).pre); \
-	src/make-final $(1)
+	src/make-final  $(1)
 -include working/make_final.mk
 
 #
@@ -55,6 +55,10 @@ working/variant_0.lst working/variant_1.lst working/variant_2.lst: \
   r/infl/variant_0.lst  r/infl/variant_1.lst  r/infl/variant_2.lst \
   r/special/variant_0  r/special/variant_1  r/special/variant_2 \
   r/special/never-variant
+	touch working/possessive.lst
+	$<
+	rm working/possessive.lst
+	$(MAKE) working/possessive.lst
 	$<
 
 working/contractions.lst: src/make-contractions.lst working/words.80
@@ -90,7 +94,7 @@ working/possessive.lst: src/make-possessive.lst src/extract-possessive \
 	$<
 
 working/with-accents.lst working/without-accents.lst: \
-  src/make-accent-lists src/deaccent src/find-accented l/accented/*
+  src/make-accent-lists src/deaccent src/find-accented l/accented/squashed-accented.lst
 	$<
 
 # 
@@ -151,14 +155,14 @@ r/varcon/variant.tab: r/varcon/make-variant r/varcon/abbc.tab r/varcon/variant-a
 	cd r/varcon; ./make-variant no-infl
 
 r/ukacd/deaccented.lst: src/make-ukacd-deaccented.lst \
-  r/ukacd/UKACD17.TXT src/deaccent
+  r/ukacd/ukacd17.txt src/deaccent
 	$<
 
 r/ukacd/squashed.lst: src/make-ukacd-squashed.lst r/ukacd/deaccented.lst
 	$<
 
 r/ukacd/squashed-accented.lst: \
-  src/make-ukacd-squashed-accented.lst r/ukacd/UKACD17.TXT
+  src/make-ukacd-squashed-accented.lst r/ukacd/ukacd17.txt
 	$<
 
 r/pos/word.lst: r/pos/part-of-speech.txt

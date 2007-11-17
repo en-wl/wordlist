@@ -22,7 +22,8 @@ while (<IN>) {
     s/\r?\n$// or die;
     ($w, $f, $s) = /^(.+):?\t(.)([!?]?)$/ or die "Bad Line: $_";
     next unless $w =~ /^[A-Za-z\']+$/;
-    $already_variant{$w} = 1;
+   #print "$w -- $f -- $s\n";
+   $already_variant{$w} = 1;
     if ($s eq '!' || $s eq '') {
 	print OYES $w, "\n" if $f eq '#';
 	print BYES $w, "\n" if $f eq '&';

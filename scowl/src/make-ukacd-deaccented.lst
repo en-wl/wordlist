@@ -1,4 +1,6 @@
 #!/bin/sh
 
-cat r/ukacd/UKACD17.TXT | src/deaccent > r/ukacd/deaccented.lst
+set -e
+
+cat r/ukacd/ukacd17.txt | src/deaccent > r/ukacd/deaccented.lst
 

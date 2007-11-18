@@ -1,4 +1,14 @@
 #
+# Make dam sure that the locale is set to C
+#
+
+LANG=C
+LC_ALL=C
+LC_CTYPE=C
+LC_COLLATE=C
+export LANG LC_ALL LC_CTYPE LC_COLLATE
+
+#
 # Special targets
 #
 

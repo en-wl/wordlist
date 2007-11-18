@@ -25,6 +25,7 @@ while (<F>) {
     my ($word) = grep {valid_entry $_} (split /[,\t\n]/);
     next unless defined $word;
     y/,\t -/\n/;
+    s/(^|\n)\n/\n/g;
     $words{$word} .= $_;
 }
 

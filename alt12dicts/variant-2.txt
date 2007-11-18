@@ -1,0 +1,2466 @@
+A 1	#!
+abbrev.	#
+ABCs	#
+abetter	#!
+Abnaki	#!
+Abolitionist	#!
+abridgement	#
+absinth	#
+absorbant	#!
+a/c	&?
+a capella	#!
+accessary	#!
+accidently	#!
+accouterment	#!
+accoutre	#?
+accoutrements	#
+accurst	#!
+acknowledgement	#
+adaptor	#
+addible	#!
+adieux	#
+adjudgement	#!
+adjustor	#!
+Administration	#!
+admixt	#!
+advertize	#!
+advertizement	#!
+advertizer	#!
+advisor	#
+adze	#
+aeon	#
+aerogramme	&!
+aeroplane	&!
+aery	#!
+aetiology	&!
+afficionado	#!
+afterall	#!
+ageing	#!
+aggrandisement	&!
+agism	#!
+Ahmedabad	#!
+aid-de-camp	#!
+aids-de-camp	#!
+air brush	#!
+airgun	&!
+airletter	&!
+air lift	#!
+air mail	#!
+air-mail	#!
+air space	#?
+airstrike	#?
+akvavit	#!
+alamode	#!
+alarum	#!
+al fresco	#!
+aline	#!
+alinement	#!
+aliya	#!
+all-round	#
+altho	#!
+aluminium	&!
+ambience	#
+ameba	#
+amebae	#!
+amebic	#
+ameboid	#?
+ameer	#!
+amir	#!
+amoebae	#!
+amortise	&!
+amphitheatre	#!
+ampoul	#!
+ampoule	#
+ampul	#
+amuck	#?
+anaemia	#!
+anaemic	#!
+anaesthesia	#!
+anaesthetic	#!
+anaesthetise	&!
+anaesthetist	#!
+anaesthetize	#!
+analyse	&!
+anapaest	#!
+anapaestic	&!
+aneurism	#!
+anglicise	&!
+Anglophil	#!
+annexe	&!
+anomy	#!
+antichrist	#?
+anti-depressant	#!
+any more	#!
+A-Okay	#!
+apanage	#!
+Apostolic	#!
+appal	#!
+appetiser	&!
+appetising	&!
+apprize	#!
+aquiculture	#?
+Arapahoe	#!
+Arbela	#!
+Arbil	#!
+arbour	&!
+Archangel	#!
+archeological	#!
+archeologist	#!
+archeology	#
+archetypical	#
+archetypically	#!
+Ardebil	#!
+ardour	&!
+argyll	#!
+armour	&!
+armoured	&!
+armourer	&!
+armour-plated	&!
+armoury	&!
+Army	#!
+arse	&!
+arsehole	&!
+artefact	#
+arty-crafty	&!
+arty-farty	&!
+asafoetida	#!
+asbestus	#!
+ascendance	#?
+ascendence	#!
+ascendency	#!
+ascendent	#!
+ash tray	#!
+Asmera	#!
+assertor	#!
+assuror	#!
+Athabascan	#!
+Athabaska	#?
+Athapaskan	#!
+atheneum	#!
+audiobook	#!
+auld	&!
+aunty	#?
+aureola	#!
+Aurungabad	#!
+authorisation	&!
+awestricken	#!
+awe-stricken	#?
+awol	#!
+axe	#
+ay	#!
+Babar	#!
+babies'-breath	#!
+baboo	&!
+babu	&!
+Babur	#!
+backbencher	&?
+back-up	#
+back yard	#
+baddy	#!
+Bagdad	#!
+Baky	#!
+ball-point	#!
+bandaid	#!
+band-aid	#?
+bandana	#
+banderol	#!
+bandolier	#
+banger	&!
+bannister	#!
+banqueteer	#!
+banshie	#!
+baptistry	#!
+barbeque	#!
+barcarolle	#!
+Bar Mitzvah	#!
+Baroque	#!
+barque	#
+barrelled	#!
+base line	#?
+Basic	#?
+Basle	#!
+bastardise	&!
+bastile	#!
+bathyscaph	#?
+bathyscaphe	#?
+batteau	#!
+battleax	#?
+battleaxe	#?
+battle-axe	#
+baulk	&!
+B&B	#!
+B & B	#?
+beaux	#?
+bed bug	#!
+Beduin	#!
+beduin	#!
+behaviour	&!
+behavioural	&!
+behaviourally	&!
+behaviourism	&!
+behaviourist	&!
+behove	&!
+bejewelled	#!
+belabour	&!
+beldame	#!
+Belorussia	#
+Benares	#?
+bench mark	#?
+Beograd	#!
+Berne	#!
+Bev	#!
+bevelled	&?
+bhajee	#!
+biassed	#!
+Biblical	#?
+Big Brother	#?
+biggy	#!
+birth rate	#?
+biryani	#!
+Bisayas	#!
+Black	#?
+black marketer	#!
+blameable	#?
+blank cheque	&!
+blast-off	#?
+blest	#!
+blether	&!
+blindman's bluff	#!
+blonde	#?
+blowsy	#
+blub	#!
+blueblood	#!
+blueing	#!
+bluejay	#?
+blue riband	#!
+boarding house	#
+board room	#!
+bobbysox	#!
+bobby sox	#!
+bobbysoxer	#?
+bocce	#!
+bocci	#!
+body-builder	#!
+body-building	#?
+bogie	#
+bogieman	#!
+bogy	#
+boiler plate	#!
+boloney	#
+bolshevik	#?
+bolshy	&!
+bonafide	#!
+bona-fide	#!
+bonemeal	#!
+boney	#!
+bongoes	#!
+bonnie	&!
+boobie	#!
+booboo	#
+boogeyman	#?
+boombox	#?
+bootie	#
+border line	#!
+borsch	#!
+borshch	#!
+bo's'n	#!
+Bosnia-Herzegovina	#!
+bosun	#?
+Boudicca	#!
+bougainvillaea	#!
+bourn	#!
+bowlder	#!
+Brahmanee	#!
+Brahmin	#
+Brahminism	#!
+brand-name	#?
+breadthwise	#!
+breakeven	#?
+breathalyser	&!
+Breughel	#!
+briar	#
+brimfull	#!
+brinksmanship	#
+briquet	#!
+broad-brush	#!
+broncho	#!
+Brueghel	#!
+Brugge	#!
+brusk	#!
+build-up	#
+bull horn	#!
+bull's eye	#!
+bumble bee	#!
+bunco	#?
+buncombe	#?
+bunko	#?
+bureaux	#!
+burk	&!
+burnous	#?
+bus boy	#!
+bus girl	#!
+busses	#
+bussing	#!
+buttoned down	#!
+buttoned-down	#!
+bye-election	#!
+Byelarus	#!
+byelaw	#!
+Byelorussia	#
+by-pass	#!
+by-path	#
+by-play	#!
+cabbie	#
+cabby	#?
+Cabinet	#!
+cable-car	#!
+cache pot	#!
+caddy	#
+caecum	#!
+Caesarean	#
+caesarean	#
+Caesarian	#!
+caesarian	#!
+caesarian section	#!
+caesium	&!
+caffein	#!
+cagy	#!
+caiman	#?
+Cajan	#!
+cakey	#!
+caldron	#?
+calibrater	#!
+calibre	&!
+calif	#!
+calix	#!
+calk	#!
+calker	#!
+calliper	#!
+callipers	#!
+callisthenics	#!
+camelhair	#?
+camp-site	#!
+canceller	#!
+candour	&!
+cannibalise	&!
+cantaloup	#
+cantelope	#!
+canteloupe	#!
+caracul	#
+caravanserai	#
+carbonise	&!
+carbureter	#!
+carburetter	&!
+carburettor	&!
+carcase	&!
+carney	#!
+carnie	#!
+caroller	#!
+carrageenin	#!
+carrell	#!
+carrousel	#
+case load	#!
+casette	#!
+cashpoint	&!
+cassaba	#!
+cassino	#!
+Castile	#?
+castor	#
+catalogue	#
+cataloguer	#!
+catechise	#!
+catheterise	&!
+catsup	#
+catty-corner	#
+catty-cornered	#
+cauterise	&!
+caviare	#
+caviller	#!
+cedarwood	#!
+Celebes	#?
+celeste	#!
+cellaret	#!
+Center	#!
+centigramme	#!
+centilitre	&!
+centimetre	&!
+centre	&!
+centrefold	&!
+centrepiece	&!
+Cesarian	#!
+cesarian	#!
+cesarian section	#!
+cesura	#!
+cesurae	#!
+chaise lounge	#
+Chaldaea	#!
+challie	#!
+Chamber	#!
+chammy	#!
+chamoix	#!
+chancellory	#!
+channelling	&!
+chanty	#
+Chanukah	#
+chapeaux	#
+chaperone	#
+characterise	&!
+char-broil	#!
+chateaux	#?
+chaunt	#!
+check list	#!
+check-out	#!
+check-up	#?
+Cheng-chou	#!
+Ch'eng-tu	#!
+cheque	&!
+chequebook	&!
+chequer	&!
+chequered	&!
+chequered flag	&!
+cheque stub	&!
+chi-chi	#?
+Ch'i-ch'i-ha-erh	#!
+Chief Justice	#?
+child-proof	#!
+chile	#!
+chile con carne	#!
+Chilin	#!
+chilli	#!
+chilli powder	&!
+chimaera	#!
+Chinan	#!
+Chin-chou	#!
+Chinchow	#!
+Chinese chequers	&!
+chiseller	#!
+chitlings	#!
+chitlins	#!
+chivy	&!
+chlorophyl	#!
+chocaholic	#!
+chock-a-block	#?
+chocolatey	#
+chokey	&!
+choosey	#!
+Christy	#!
+christy	#!
+chuck-full	#!
+Ch'ung-ch'ing	#!
+Chungking	#!
+chunnel	#!
+chutnee	#!
+cicatrix	#?
+cigaret	#!
+ciggy	&!
+cinderblock	#!
+circularise	&!
+circumventor	#!
+cissy	&!
+citrous	#?
+civies	#!
+civilisation	&!
+civilise	&!
+civilised	&!
+clamour	&!
+clangour	&!
+clarinettist	#!
+clipt	#!
+cliquy	#!
+closeable	#!
+cloverleaves	#!
+clutz	#!
+Cnut	#!
+cocain	#!
+cockamamy	#!
+cocoanut	#!
+codein	#!
+codependence	#!
+co-dependency	#!
+co-dependent	#!
+co-ed	#
+coffee klatch	#?
+coffee klatsch	#!
+cognisance	&!
+cognisant	&!
+cold-turkey	#!
+cole slaw	#
+Coliseum	#!
+collectable	#?
+Colonial	#!
+Colored	#!
+colosseum	#!
+colour	&!
+colour bar	&!
+colour-blind	&!
+colour-coordinated	&!
+coloured	&!
+colourfast	&!
+colourful	&!
+colouring	&!
+colourise	&!
+colourize	&!
+colourless	&!
+colour scheme	&!
+combinations	&!
+Commander in Chief	#!
+community centre	&!
+computerise	&!
+Comrade	#!
+conceptualise	&!
+concoctor	#!
+condemnor	#!
+coney	#
+conjuror	#
+connectability	#!
+connectable	#?
+connecter	#
+connexion	&!
+consigner	#!
+constitutor	#!
+constructer	#!
+Consulate	#!
+convenor	#!
+convertor	#?
+conveyer	#
+cooky	#!
+co-operate	#!
+co-operation	#!
+co-operative	#!
+co-ordinate	#!
+co-ordination	#!
+co-ordinator	#!
+coppice	#
+copy cat	#!
+Cordova	#!
+corn flakes	#?
+corn meal	#?
+correctible	#!
+corruptor	#!
+corslet	#!
+Cortez	#!
+cosily	&!
+cosiness	&!
+cosy	#!
+cotillon	#!
+cottar	#!
+cotton-pickin'	#!
+councillor	#
+counsellor	#!
+countryfied	#!
+courtezan	#!
+courtsey	#!
+coverup	#?
+cowry	#!
+crabways	#!
+crack house	#!
+crawdaddy	#!
+crawfish	#
+crawl space	#?
+crenelated	#?
+crenellate	#!
+crenellated	&?
+crewcut	#!
+criminalise	&!
+crossways	#
+Crown	#!
+crozier	#
+Crusade	#!
+cryer	#!
+cufflink	#!
+cullender	#
+cumquat	#!
+cunnilinctus	#!
+curari	#!
+curlycue	#!
+curst	#!
+curtsey	#!
+curvacious	#!
+customise	&!
+cut-and-dry	#!
+cutesie	#!
+cutlas	#!
+cyclicly	#!
+cyclopaedia	#?
+cyder	&!
+cypher	&!
+Cypriote	#!
+Dacca	#
+daishiki	#!
+damndest	#!
+danish pastry	#!
+daquiri	#!
+dashed	&!
+databank	#!
+data base	#!
+day care centre	&!
+daydreamt	#!
+deadweight	#
+deaf mute	#!
+dearie	#!
+debonaire	#!
+Decalog	#!
+decolletee	#!
+defence	&!
+defenceless	&!
+defence mechanism	&!
+de-ice	#?
+de-icer	#?
+Delawarian	#!
+delly	#!
+demagnetise	&!
+demagog	#!
+demeanour	&!
+demilitarise	&!
+demobilise	&!
+denationalise	&!
+dentine	#
+deodorise	&!
+dependance	#!
+dependancy	#!
+dependant	#!
+depictor	#!
+deputise	&!
+descendent	#?
+desensitise	&!
+desexualise	&!
+deshabille	#!
+despatch	#
+destabilise	&!
+detectible	#!
+detention centre	&!
+Deutschmark	#?
+Devil	#?
+devilled	#!
+devitalise	&!
+dextrous	#
+dextrously	#!
+dextrousness	#!
+dialog	#
+diarrhoea	#
+Diaz	#!
+dicky	#
+diehard	#?
+Diesel	#!
+dietician	#
+digitise	&!
+dingdong	#?
+discernable	#!
+discolour	&!
+disfavour	&!
+dishevelled	#!
+dishonour	&!
+dishonourable	&!
+disorganised	&!
+diss	#?
+Dissenter	#!
+distil	#
+ditzy	#!
+Djakarta	#!
+djellabah	#?
+djinn	#?
+Dnepr	#?
+Dnieper	#?
+Doc	#!
+dogear	#?
+dogey	#!
+doggie	#!
+doggoned	#?
+dogmatise	&!
+dogy	#!
+doh	#?
+dolour	&!
+dominos	#!
+donut	#
+doofah	#!
+doozie	#!
+dopy	#!
+Dostoyevsky	#!
+double-barrelled	&!
+doubletalk	#!
+Down syndrome	#?
+doyley	&!
+drachm	#!
+dramatise	&!
+draught	&!
+draughtsman	&!
+draughty	&!
+dreadnaught	#!
+drily	#
+driveller	#!
+drop-out	#?
+drouth	#!
+druggy	#!
+drug store	#!
+Druid	#?
+Dryad	#!
+dueller	#!
+duellist	#!
+duffle coat	&!
+dulcimore	#!
+dulness	#!
+dumfound	#
+durrie	#!
+dwarves	#
+dyke	#?
+ear lobe	#
+Earth	#
+economise	&!
+edgeways	#?
+eery	#!
+egads	#!
+egg foo young	#!
+egis	#!
+Eighties	#!
+Eldorado	#!
+email	#!
+E-mail	#
+emeer	#!
+empanel	#
+emphasise	&!
+employe	#!
+enameller	#!
+enamour	&!
+enamoured	&!
+encyclopaedia	#!
+encyclopaedic	#!
+endeavour	&!
+endwise	#
+energise	&!
+engrained	#!
+enjambement	#!
+enquire	#
+enquiry	#
+enrol	#!
+enrolment	#!
+enthral	#!
+enure	#!
+epaulette	#!
+epicentre	&!
+epilog	#!
+epinephrin	#!
+epithalmion	#!
+equalise	&!
+equals sign	#?
+Ericson	#?
+Ericsson	#?
+Eriksson	#!
+escalop	#!
+Esfahan	#!
+esthete	#
+esthetic	#
+esthetics	#
+Euclidean	#?
+Euclidian	#!
+euclidian	#!
+eulogise	&!
+evangelise	&!
+exhibiter	#!
+exorcize	#
+expandibility	#!
+expandible	#!
+expeditor	#!
+extemporise	&!
+extendable	#?
+extendible	#?
+externalise	&!
+extoll	#!
+extraversion	#!
+extravert	#!
+extraverted	#!
+eying	#!
+eyrie	#
+eyry	#!
+facelift	#?
+face lift	#!
+facia	#!
+faciae	#!
+factorise	&!
+faecal	#!
+faeces	#!
+faery	#
+faggot	#
+faggoting	#!
+fall-out	#!
+familiarise	&!
+fantasise	&!
+farfetched	#?
+Fascism	#
+Fascist	#?
+favour	&!
+favourable	&!
+favoured	&!
+favourite	&!
+favouritism	&!
+feaze	#!
+felafel	#!
+fellow traveller	&!
+felspar	#!
+fender bender	#!
+fervour	&!
+fetich	#!
+fettuccini	#!
+fiber glass	#!
+fiberoptics	#!
+fibre	&!
+fibreboard	&!
+fibreglass	&!
+fictionalise	&!
+Fifties	#!
+filet	#?
+filtrable	#!
+finalise	&!
+Finn.	#!
+fiord	#
+fire fighter	#?
+fire power	#!
+first-hand	#
+First Lady	#?
+flannelette	#?
+flash bulb	#
+flashpoint	#?
+flat-bed	#!
+flat foot	#!
+flavour	&!
+flavoured	&!
+flavouring	&!
+fledgeling	#!
+flesh-coloured	&!
+fleur-de-lys	#!
+fleurs-de-lys	#!
+flexitime	#!
+floatation	&!
+floozie	#!
+fluidram	#!
+flukey	#
+flunkey	#
+fly-by	#!
+flyer	#
+fo'c'sle	#
+fo'c's'le	#?
+focussed	&!
+foetal	#!
+foetus	#
+fogey	#
+fohn	#!
+fold-out	#!
+followup	#!
+fondu	#!
+fontanelle	#!
+Foochow	#!
+foot race	#!
+forbad	#!
+forefend	#!
+foregather	#!
+forego	#
+foreswear	#!
+for ever	#!
+formalise	&!
+Forties	#!
+fossilise	&!
+franchisor	#?
+frankforter	#!
+fraternise	&!
+freakout	#?
+free-base	#!
+freebee	#!
+french fries	#!
+french-fry	#!
+fresh-water	#!
+frier	#!
+frijole	#!
+friz	#!
+frontrunner	#
+frowsty	#!
+frowsy	#!
+fuehrer	#!
+fulfil	#!
+fulfilment	#!
+fulness	#!
+fund-raiser	#?
+furore	&
+fusileer	#!
+fuze	#!
+fuzee	#!
+gaberdine	#
+Gaddafi	#!
+gage	#
+galabia	#!
+galabiya	#!
+gall bladder	#?
+galoshe	#!
+galvanise	&!
+galvanised	&!
+gamey	#
+gangly	#
+gaol	&!
+gaolbird	&!
+gaoler	&!
+garote	#?
+garotte	#!
+garrotte	#
+gasolene	#!
+'gator	#!
+gayety	#!
+gayly	#
+geegaw	#
+geez	#!
+gelatine	#
+gelt	#!
+gemmologist	#!
+gemmology	#!
+generalise	&!
+Gentile	#
+gerbile	#!
+gerbille	#!
+Ghanian	#!
+ghettoise	&!
+ghi	#!
+ghost writer	#!
+gilt-edge	#!
+gingko	#!
+gip	#!
+Gipsy	#
+gipsy	#!
+girl friend	#?
+girly	#?
+gismo	#?
+give and take	#?
+gizmo	#?
+glamor	#
+glamorise	&!
+glamourize	#!
+glamourous	#!
+Glen plaid	#!
+glycerine	#
+Glyndwr	#!
+gobbledegook	#!
+goddam	#!
+goddamned	#!
+Godlike	#!
+go-fer	#!
+goitre	#!
+gold medallist	&!
+Gomorrha	#!
+gonadotrophic	#!
+gonadotrophin	#!
+gonorrhoea	#
+goodby	#!
+good-by	#
+good-humoured	&!
+goodie	#
+good will	#
+gooseflesh	#?
+Gor'kiy	#!
+Gothenburg	#!
+gramme	&!
+grandad	&!
+grandaddy	&!
+grandame	#!
+grandfather's clock	#!
+grannie	#!
+grantor	#
+great aunt	#?
+great uncle	#?
+green belt	#?
+grey	#
+greyish	#!
+griffon	#!
+groveller	#!
+growbag	&!
+gruelling	#!
+gryphon	#!
+guerilla	#!
+guineafowl	#!
+gullable	#!
+gulley	#!
+gums	#?
+gunnel	#
+gunny sack	#!
+gussie	#!
+gybe	#!
+gynaecological	&!
+gynaecologist	&!
+gynaecology	&!
+hack saw	#
+hadj	#!
+hadji	#!
+haematology	&!
+haemoglobin	#!
+haemophilia	#!
+haemophiliac	&!
+haemorrhage	#!
+haemorrhoids	#!
+Ha-erh-pin	#!
+hah	#
+Haidarabad	#!
+hairdrier	#!
+haji	#!
+halbert	#!
+half-arsed	&!
+half life	#!
+half-time	#!
+hallal	#!
+halleluiah	#!
+halliard	#!
+hallo	&?
+halloo	#?
+Hallowe'en	#
+Hammurapi	#!
+handkerchieves	#!
+Hang-chou	#!
+Hangchow	#!
+hankey-pankey	#!
+hanky	#?
+hansel	#!
+Hanukah	#?
+harbour	&!
+hard-hat	#!
+hard labour	&!
+hardline	#
+hard on	#!
+hari-kari	#!
+harken	#
+harmonise	&!
+hasheesh	#
+healthcare	#!
+health-care	#!
+health centre	&!
+Heaven	#!
+Hejira	#!
+hektare	#!
+Hell	#
+helpmeet	#
+Heraklion	#!
+heterogenous	#!
+hiccough	#!
+highfaluting	#!
+highjack	#!
+high light	#!
+highrise	#!
+high rise	#?
+hijinks	#!
+hippy	#!
+hi-tech	#?
+hitman	#!
+hmm	#!
+hoagie	#?
+hoagy	#
+hognosed snake	#!
+holloware	#!
+homewards	#
+homie	#!
+hominess	#
+homogenise	&!
+homogenous	#!
+homy	#!
+honey bee	#!
+honied	#!
+honkey	#!
+honkie	#!
+honour	&!
+honourable	&!
+honourable mention	&!
+hooka	#!
+hookey	#
+hoorah	#!
+hootch	#!
+horsy	#?
+hospitalise	&!
+hotchpotch	&!
+hotdog	#?
+hotline	#?
+hot shot	#!
+hotspot	#!
+houmous	#!
+houmus	#!
+house fly	#!
+howe'er	#!
+Hugli	#!
+Huhehot	#!
+hullo	&!
+humanise	&!
+humour	&!
+humourless	&!
+humungous	#!
+hurray	#
+Husain	#!
+hutzpa	#?
+hutzpah	#!
+huzza	#!
+Hwang	#!
+hyaena	#!
+hydrocephaly	#!
+hypnotise	&!
+hypothenuse	#!
+Ia.	#!
+ice ax	#!
+idealise	&!
+idealogy	#!
+idolator	#!
+idolise	&!
+idyl	#!
+ignitible	#!
+Ijssel	#!
+ikon	#
+ill-favoured	&!
+ill usage	#!
+Imam	#?
+imbed	#
+immobilise	&!
+immortalise	&!
+immoveable	#!
+immunise	&!
+impellor	#!
+imposter	#
+improvisor	#!
+incase	#!
+inclose	#!
+inclosure	#!
+incrust	#
+incumber	#!
+incumbrance	#!
+individualise	&!
+indorse	#!
+indue	#!
+industrialise	&!
+inflexion	&!
+inflight	#?
+infold	#
+inhibiter	#!
+inline skates	#!
+insigne	#
+instal	#!
+instalment	#!
+instil	#!
+institutionalise	&!
+institutionalised	&!
+institutor	#!
+intercepter	#!
+internalise	&!
+International Date Line	#!
+internationalise	&!
+interne	#!
+intransigeant	#!
+intreat	#!
+intrench	#!
+intrust	#!
+ionise	&!
+ioniser	&!
+Irbil	#!
+iron-grey	&!
+Ispahan	#!
+italicise	&!
+itemise	&!
+itsy-bitsy	#
+jack-in-a-box	#!
+jailor	#!
+JATO	#!
+Jedda	#!
+jehad	#!
+jellabah	#!
+jello	#?
+jeopardise	&!
+jessamine	#
+jetlag	#!
+jewelled	#!
+jeweller	#!
+jewellery	&!
+Jews' harp	#!
+jibb	#!
+jig saw	#!
+jinnee	#!
+jinni	#
+jinricksha	#!
+jinriksha	#!
+jiujitsu	#!
+Jnr	&!
+joky	#!
+Joliet	#?
+judgement	#!
+judgemental	&!
+Jugoslavia	#!
+Jugoslavian	#!
+jujutsu	#!
+juke box	#?
+junketer	#!
+junky	#?
+junto	#!
+kaffee klatsch	#!
+kaftan	#!
+kaoline	#!
+kaputt	#!
+kashmir	#!
+Katmandu	#?
+kebob	#!
+Kelt	#!
+kerb	&!
+kerchieves	#!
+kerosine	#!
+khalif	#!
+khalifate	#!
+kick-off	#?
+kiddy	#
+kidnaper	#!
+kids' stuff	#!
+kilogramme	&!
+kilometre	&!
+kindergartener	#!
+kinema	&!
+king-sized	#
+Kirghiz Republic	#!
+kirk	&
+Kishinyov	#!
+kissagram	#!
+kitbag	#?
+kitchenet	#!
+kitty-corner	#
+kitty-cornered	#
+klatsch	#!
+kleenex	#!
+kleig light	#!
+knockwurst	#?
+knowledgable	#!
+Knut	#!
+Koblenz	#!
+Koln	#!
+kookie	#!
+kopek	#
+Krakatau	#?
+Kuei-yang	#!
+Kurile	#!
+Kwangchow	#?
+Kwanza	#!
+Ky.	#!
+La.	#?
+labour	&!
+labour camp	&!
+laboured	&!
+labourer	&!
+labour force	&!
+labour-intensive	&!
+labour market	&!
+labour movement	&!
+labour relations	&!
+labour-saving	&!
+Labradorian	#?
+lacklustre	&!
+lacrimal	#
+laddy	&!
+lady slipper	#!
+lady-slipper	#?
+lagnappe	#!
+laisser faire	#!
+laisser-faire	#!
+lambast	#
+Lanchou	#!
+Lan-chou	#!
+laniard	#!
+lanoline	#!
+Lao-tse	#?
+Lao-tsu	#!
+Lao-tsze	#!
+Laozi	#!
+largesse	#
+lasagne	#!
+laundrette	&?
+lavalier	#!
+leaf mould	&!
+leant	&!
+leapt	#!
+learnt	#!
+leastways	#!
+leftie	#!
+left-of-centre	&!
+Left Wing	#!
+legalise	&!
+leger line	#!
+leggin	#!
+Legion	#!
+legitimise	&!
+Leif Ericsson	#!
+lengthways	#
+lenten	#!
+lept	#!
+lergy	&!
+lese majeste	#?
+letch	&!
+leucocyte	#!
+leukaemia	&
+leveller	#!
+levis	#!
+libeller	#!
+libellous	#!
+liberalise	&!
+licence	#!
+licenced	#!
+licencee	#!
+lichee	#?
+lichgate	#!
+lichi	#!
+lifecare	#!
+life-sized	#
+life style	#
+life-style	#!
+likeability	#!
+likeable	#!
+likeableness	#!
+likeably	#!
+linctus	&!
+linguini	#
+Linnean	#!
+lionise	&!
+lipide	#!
+lip-synch	#
+liquidise	&!
+liquidiser	&!
+liquify	#!
+liquorice	&!
+lissom	#
+litre	&
+liveable	#!
+loadstar	#
+loadstone	#
+lobotomise	&!
+local colour	&!
+localise	&!
+localised	&!
+locator	#?
+loch	&
+lock box	#!
+lodgement	#!
+lollygag	#
+lollypop	#
+longwise	#!
+loofa	#!
+looney	#!
+loth	#!
+louvre	&!
+louvred	#!
+loveable	#!
+loveseat	#?
+lowball	#!
+Lowlander	#!
+lowlives	#!
+LOX	#!
+lubricous	#!
+lupin	#!
+lustre	&!
+lutecium	#!
+luv	&!
+luvvie	&!
+Luxemburg	#!
+lychee	#
+lynchpin	#!
+Machiavelian	#!
+mach number	#!
+macintosh	#!
+mack	&!
+Magna Charta	#!
+magnetise	&!
+maharaja	#
+maharanee	#
+mahjong	#
+mah-jong	#!
+mahjongg	#!
+Mahomet	#!
+maid of honour	&!
+maiolica	#!
+make-up	#
+malarky	#!
+mamma	#!
+Mammon	#?
+Manaus	#!
+mandril	#!
+manila hemp	#!
+manila paper	#
+manilla	#!
+mannikin	#!
+manoeuvrability	&!
+manoeuvrable	&!
+manoeuvre	&!
+manoeuvring	&!
+man-o'-war	#!
+man servant	#!
+man-size	#
+mantlepiece	#!
+mantram	#!
+manual labour	&!
+Mao Tse-tung	#!
+Mao tse-tung	#?
+marabout	#!
+marginalise	&!
+marihuana	#!
+marlinspike	#
+Marseille	#
+marsh mallow	#!
+marvellous	&!
+marvellously	#!
+massage parlour	&!
+materialise	&!
+Matins	#!
+matron of honour	&!
+matt	#
+mattins	#!
+matzah	#!
+matzoth	#?
+mavin	#!
+maximise	&!
+mazourka	#!
+Me.	#?
+meagre	&!
+meany	#!
+mechanise	&!
+medallist	&!
+Medal of Honour	&!
+mediaeval	#!
+medium-size	#!
+memorise	&!
+men's wear	#!
+meou	#!
+merchandize	#!
+merchandizer	#!
+Meshed	#?
+mesmerise	&!
+mesquit	#!
+Messrs	&!
+metabolise	&!
+methadon	#!
+metre	&!
+midsize	#!
+midwived	#!
+midwiving	#!
+miladi	#!
+milage	#!
+milieux	#
+militarised	&!
+milking parlour	&!
+millepede	#!
+milligramme	&!
+millilitre	&!
+millimetre	&!
+millionnaire	#!
+milometer	&!
+mina	#!
+mind-set	#?
+miniaturise	&!
+minimise	&!
+miniscule	#
+mini-van	#!
+misbehaviour	&!
+misdemeanour	&!
+mishmosh	#!
+misjudgement	#!
+missilry	#!
+missis	#?
+misspelt	#
+mitre	&!
+mixt	#!
+mixup	#!
+mizen	#!
+Mo.	#?
+Mob	#!
+mockup	#!
+modeller	&!
+modelling	&!
+modernise	&!
+Mogadiscio	#!
+moggie	&!
+Mohammed	#
+Mohican	#
+moisturise	&!
+moisturiser	&!
+mollie	#!
+mollusc	#!
+molluscan	#?
+molluskan	#?
+mommie	#!
+moneygrubber	#?
+moneygrubbing	#?
+monicker	#!
+monied	#
+monolog	#!
+monologuist	#
+monopolise	&!
+moolah	#!
+moon shot	#!
+mopy	#
+moralise	&!
+morning-glory	#!
+mortgager	#!
+mortice	#!
+Moslem	#
+motorised	&!
+mould	&!
+moulder	&!
+moulding	&!
+mouldy	&!
+moult	&!
+Mounty	#!
+mousey	#
+moustache	#
+moustachioed	#!
+moveable	#!
+Mr	&!
+Mrs	&!
+Ms	&!
+muckluck	#!
+mucluc	#!
+Muhammedan	#!
+Muhammedanism	#!
+mujahedeen	#!
+mujahedin	#!
+mullen	#!
+multicoloured	&!
+multiplexor	#!
+mumble-the-peg	#!
+Munchkin	#!
+Myanma	#!
+mynah	#
+naan	#!
+Nabatea	#!
+Nabatean	#!
+Naiad	#!
+Nanking	#
+nark	#!
+narwal	#!
+narwhale	#!
+nasalise	&!
+Nashik	#!
+nationalise	&!
+naturalise	&!
+Nature	#?
+Navaho	#!
+Naziism	#
+nb:	#!
+N.C.	#!
+N.D.	#!
+Neandertal	#!
+'neath	#
+neckerchieves	#!
+neglige	#!
+neighbour	&!
+neighbourhood	&!
+neighbouring	&!
+neighbourliness	&!
+neighbourly	&!
+nellie	&!
+nerve centre	&!
+nerve-wracking	#
+nett	&!
+neurone	&!
+neutralise	&!
+Newburgh	#!
+N.H.	#!
+nicknack	#!
+nick-nack	#!
+night club	#!
+nighty	#!
+Nikolayev	#?
+nite	#!
+nitre	&!
+nitroglycerine	#
+N.J.	#!
+Noh	#!
+nonco-operation	#!
+none the less	#!
+nonplused	#!
+nonsuch	#!
+no place	#?
+normalise	&!
+Northern	#?
+nosey	#!
+nought	#?
+novelle	#!
+numbskull	#
+nurseling	#!
+N.Y.	#!
+Nyasaland	#!
+ocean-going	#?
+ochre	#!
+octette	#
+odalisk	#!
+odour	&!
+odourless	&!
+oecumenical	&!
+oedema	&!
+oesophagus	&!
+oestrogen	&!
+off-centre	&!
+off-colour	&!
+offence	&!
+offline	#?
+ogrish	#!
+Ojibway	#!
+okay	#
+okey-dokey	#!
+olde	#!
+olde-worlde	&!
+old fogey	#
+oldy	#!
+oleomargarin	#!
+olympiad	#!
+omelette	#
+omikron	#!
+one's self	#!
+one-upsmanship	#!
+online	#?
+onsides	#!
+open-face	#?
+optimise	&!
+orangoutan	#!
+orangoutang	#!
+orangutang	#?
+orchestrater	#!
+organdie	#
+organisation	&!
+organise	&!
+organised	&!
+organophosphorous	#!
+orgastic	#!
+orthopaedic	#!
+orthopaedics	#!
+orthopaedist	#!
+ostracise	&!
+outmanoeuvre	#!
+out-patient	#!
+outsized	#!
+overhanded	#?
+oversized	#
+overspill	&?
+paederast	&!
+paederasty	&!
+paediatric	&!
+paediatrician	&!
+paediatrics	&!
+paedophile	&!
+paillasse	#!
+Paisley	#!
+palaeolithic	&!
+palaeontology	&!
+palankeen	#!
+Palau	#?
+panama hat	#!
+panelling	#!
+panellist	&!
+panier	#
+pantalettes	#!
+pantihose	#!
+pants suit	#!
+panty	#!
+Pao-t'ou	#!
+pappoose	#!
+pap test	#!
+paraffine	#!
+paralyse	&
+paralysed	&!
+Parkinson's Law	#?
+parlour	&!
+parlour game	&!
+parlour maid	&!
+parmigiano	#!
+parrakeet	#!
+Parsee	#?
+Parsi	#?
+parti-colored	#?
+particularise	&!
+partizan	#!
+passer-by	#?
+passers-by	#?
+passivise	&!
+pasteurise	&!
+pater	&!
+pattie	#!
+pauperise	&!
+pawpaw	#
+paycheque	&!
+pay rise	&!
+pease	#!
+pedagog	#!
+pedestrianise	&!
+pedlar	#
+pein	#!
+Pekinese	#!
+pekinese	#?
+pellmell	#!
+pemican	#!
+penalise	&!
+peneplane	#!
+penlite	#!
+penuchi	#!
+per cent	#!
+Pergamus	#!
+pernickety	#!
+personalise	&!
+petalled	#!
+peyotl	#!
+phantasy	#
+pharmacopeia	#?
+phenobarbitone	&!
+philosophise	&!
+philtre	&
+phoney	#!
+photosensitise	&!
+phrenetic	#!
+piastre	&?
+pickaback	#
+pickaxe	#
+piggie	#!
+Pigmy	#!
+pigmy	#?
+pilaff	#
+pilau	#
+pile-up	#?
+pillow case	#!
+pilsener	#!
+piney	#
+pinky	#
+pinocle	#!
+pinyon	#?
+pipet	#!
+piroshki	#?
+pitta bread	&!
+pixy	#
+pizzaz	#!
+pizzazz	#?
+Place	#?
+plagiarise	&!
+plain-clothes	#?
+plainclothes man	#?
+plateaux	#!
+platys	#?
+plexiglass	#?
+plough	#!
+ploughshare	#!
+pocket book	#!
+pocket-handkerchief	&!
+podgy	#!
+Po Hai	#!
+pointilliste	#!
+pokey	#
+polarise	&!
+politicise	&!
+politicised	&!
+pollock	#!
+pollywog	#
+pompon	#
+poncey	&!
+ponton	#!
+Pop Art	#!
+poppadum	#!
+popsicle	#!
+popularise	&!
+portalled	#!
+portmanteaux	#!
+Porto Rican	#!
+Porto Rico	#!
+post card	#?
+postillion	#!
+power broker	#?
+powerplant	#!
+poxy	&!
+p.pr.	#!
+practise	#!
+practised	#!
+practising	&!
+praesidium	#!
+precancelled	#!
+predacious	#!
+pre-eminence	#!
+pre-eminent	#
+pre-eminently	#?
+pre-empt	#
+pre-exist	#?
+premie	#!
+premiss	#!
+preppie	#
+Presidency	#!
+President	#
+pressurise	&!
+pressurised	&!
+pretence	#
+preterite	#
+preventible	#
+prevue	#!
+pricy	#!
+primaeval	#!
+princesse	#!
+prioritise	&!
+prise	&!
+privatise	&!
+prize fight	#!
+pro-bono	#!
+processer	#!
+prochoice	#!
+programer	#!
+programing	#!
+programme	&!
+programme music	&!
+prolog	#!
+propagandise	&!
+propellent	#
+proselytise	&!
+protestor	#!
+prothalmium	#!
+protozoon	#!
+Province	#!
+pryer	#!
+publicise	&!
+pukha	&!
+puky	#!
+pullup	#
+pulverise	&!
+punkin	#!
+Purgatory	#?
+pushup	#?
+putdown	#?
+pyjama	&!
+pyorrhoea	&!
+quadrophonic	#!
+quahaug	#!
+quarreller	#!
+Quarter	#!
+quartette	#!
+Quebecker	#?
+queen-sized	#!
+quintette	#!
+Qur'an	#
+racoon	#!
+racquet	#
+radial tyre	&!
+raincheck	#!
+rainforest	#!
+raja	#
+Ralegh	#!
+ramequin	#!
+Rameses	#!
+rancour	&
+rani	#
+rarify	#!
+rase	#!
+ratable value	&!
+rationalise	&!
+ratlin	#!
+razzamatazz	#!
+read-out	#
+readymade	#!
+realisable	&!
+realisation	&!
+realise	&!
+Realism	#!
+realtor	#?
+Rebecca	#!
+Rebel	#!
+rec'd.	#!
+recognise	&!
+rectilineal	#!
+Red	#?
+re-direct	#!
+red-lining	#!
+red-neck	#!
+re-echo	#
+re-educate	#?
+reenforce	#?
+re-enter	#!
+re-entry	#
+re-examine	#!
+reflexion	&!
+regularise	&!
+relator	#!
+relearnt	#!
+reorganise	&!
+repellant	#!
+restauranteur	#!
+retro-rocket	#?
+Revd	&!
+reveller	#!
+revery	#!
+revisor	#!
+revitalise	&!
+revokable	#!
+revolutionise	&!
+rhapsodise	&!
+R.I.	#!
+ricksha	#
+ricrac	#!
+rigamarole	#?
+right-angle	#!
+Right Wing	#!
+rigour	&!
+ripost	#!
+rock and roll	#?
+rock-'n'-roll	#!
+Roentgen	#!
+Romanoff	#!
+Romantic	#?
+romanticise	&!
+rontgen	#!
+ropy	#?
+Rosh Hashana	#?
+Roumania	#!
+Roumanian	#!
+roundtable	#
+Ruanda	#!
+Rugby	#?
+Rumania	#!
+Rumanian	#?
+rumour	&!
+rumoured	&!
+rumourmonger	&!
+sabre	#!
+saki	#!
+saleable	#
+saloon bar	&!
+saltpetre	#!
+salt-water	#?
+samaritan	#!
+Sanaa	#?
+sand-lot	#!
+sanitise	&!
+sanitorium	#!
+Sanscrit	#!
+Santa Klaus	#!
+sarape	#!
+saree	#!
+satirise	&!
+Sauterne	#!
+sauterne	#
+sauternes	#?
+savannah	#!
+saveable	#!
+saviour	#!
+savour	&!
+savoury	&!
+S.C.	#!
+scag	#!
+scallywag	&!
+scaloppini	#!
+scandalise	&!
+scarey	#!
+sceptic	&!
+sceptical	&!
+scepticism	&!
+sceptre	&!
+Schelde	#!
+schematise	&!
+schlepp	#?
+schmalz	#!
+schmoe	#!
+schnaps	#!
+schnorkel	#!
+schrod	#!
+schtick	#!
+scimiter	#!
+scollop	#!
+Scotty	#!
+Scout	#
+Scouting	#!
+scrunchie	#!
+scrutinise	&!
+sea shell	#!
+seborrhoea	#!
+Secession	#!
+secularise	&!
+sec'y.	#!
+sec'y:	#!
+see-thru	#!
+seigniorial	#?
+seignorial	#!
+self-centred	&!
+self-defence	&!
+self-raising flour	&!
+Seltzer	#!
+selvedge	#
+Senator	#
+sensationalise	&!
+sensitise	&!
+sentimentalise	&!
+septette	#!
+septicaemia	&!
+sepulchre	&
+sequinned	#
+serialise	&!
+sermonise	&!
+service man	#!
+service woman	#!
+Seventies	#!
+sextette	#!
+shammy	#?
+sharpy	#!
+sheikh	#
+sheikhdom	#?
+shellack	#!
+sherbert	#!
+sherd	#!
+Shiah	#!
+shiatzu	#!
+Shihkiachwang	#!
+shillalah	#!
+shish kabob	#!
+shite	&!
+shlemiel	#!
+shlep	#!
+shlepp	#!
+shlock	#!
+shmaltz	#!
+shnook	#!
+shock-proof	#!
+shoe-horn	#!
+shopping centre	&!
+shortie	#?
+Shoshoni	#!
+shrivelled	&!
+shtik	#!
+shwa	#!
+Sian	#?
+sickle-cell anaemia	&!
+sidewise	#
+signalise	&!
+signaller	#!
+silicious	#!
+sillabub	#!
+silvan	#!
+Sinkiang Uighur	#!
+siree	#!
+sirup	#
+Sister	#?
+sit-com	#!
+situp	#
+Sixties	#!
+sizeable	#
+skilful	#!
+skimmed milk	#
+skinflick	#?
+skullduggery	#
+sky line	#!
+slave labour	&!
+slily	#!
+slip knot	#!
+slumbrous	#?
+smart alec	#!
+smart-aleck	#?
+smart arse	&!
+smart-arse	&!
+smidgeon	#!
+smidgin	#
+smoothy	#!
+smoulder	#!
+snigger	#?
+Snow Belt	#!
+snow plough	&!
+soap box	#!
+socialise	&!
+sofabed	#!
+softie	#!
+soh	#!
+soignee	#
+solemnise	&!
+sombre	&!
+sonofabitch	#!
+so so	#!
+soubriquet	#!
+sound track	#?
+Southern	#?
+sox	#
+soya	#!
+soya bean	#!
+space age	#?
+spacy	#
+spare tyre	&!
+Speaker	#
+specialise	&!
+specialised	&!
+spectre	&!
+spelt	#!
+spic-and-span	#!
+spik	#!
+spilt	#
+spinoff	#?
+spiraea	#!
+spirochaete	#!
+spirt	#!
+splendour	&!
+spoilt	#!
+spumone	#!
+squaddie	&!
+stabilise	&!
+stabiliser	&!
+stage-struck	#?
+stagey	#!
+stair well	#!
+standardise	&!
+stand-by	#!
+stand-off	#!
+stand-offish	#?
+stand-out	#!
+standup	#?
+'stat	#!
+Statehood	#!
+Statehouse	#?
+Stateside	#?
+staves	#
+stepping stone	#
+sterilise	&!
+stigmatise	&!
+stimy	#!
+St. John	#!
+stockinet	#!
+stogie	#?
+stoney	#!
+storey	#!
+storeyed	&!
+stow away	#!
+straightjacket	#
+straightlaced	#!
+straight-laced	#!
+strip search	#?
+stript	#!
+stud book	#!
+stye	#!
+stylised	&!
+stymy	#!
+subpena	#!
+subsidise	&!
+sub-zero	#?
+succour	&!
+Suchow	#!
+Sukkoth	#?
+sulphate	&!
+sulphide	&!
+sulphur	#!
+sulphur dioxide	&!
+sulphuric acid	#!
+sulphurous	#!
+sumach	#!
+summarise	&!
+Sun Belt	#
+sunburnt	#
+Sunnah	#!
+sun screen	#!
+Sun Yi-xian	#!
+Surabaja	#?
+Surinam	#!
+surprize	#!
+swansdown	#?
+sweated labour	&!
+sweepstake	#?
+sweetbriar	#!
+swob	#!
+swop	#!
+symbolise	&!
+sympathise	&!
+sympathiser	&!
+synagog	#!
+synch	#!
+synchronise	&!
+synthesise	&!
+synthesiser	&!
+syphon	#!
+systematise	&!
+Szechuan	#!
+Szechwan	#!
+tabouli	#!
+tabour	#!
+tabu	#!
+tabuli	#!
+Tadzhikistan	#
+tail spin	#!
+Taipeh	#!
+takeable	#!
+Takla Makan	#!
+Tallin	#!
+tameable	#!
+Tangiers	#!
+tantalise	&!
+tantalising	&!
+Tartar	#?
+tartare sauce	#
+tasselled	&!
+Tatra	#!
+taxonomical	#?
+taxying	#!
+T-bill	#?
+teazel	#!
+teazle	#!
+technicolour	&!
+Tee-ball	#!
+teen-age	#?
+teenaged	#
+teen-aged	#!
+teensy	#
+teepee	#!
+tee shirt	#?
+teetotaller	#!
+Teheran	#
+Teletext	#!
+templet	#!
+temporise	&!
+tenderise	&!
+tendonitis	#!
+tenour	&!
+Territorial	&?
+Territory	#?
+terrorise	&!
+Testament	#!
+theatre	#!
+theatregoer	&!
+theorise	&!
+thiamin	#
+thick-set	#!
+thigh bone	#!
+Thirties	#!
+tho'	#
+thraldom	#!
+throughway	#
+thru	#?
+thrustor	#!
+thyroxin	#!
+tictactoe	#!
+tic-tac-toe	#
+tiddledywinks	#!
+Tien Shan	#!
+Tientsin	#?
+tie tac	#!
+tike	#!
+'til	#?
+time-honoured	&!
+time lapse	#!
+tinselled	#!
+tipi	#!
+Tirana	#
+tiro	#!
+titbit	#!
+tittivate	#!
+toe-hold	#!
+toffy	#!
+Tolstoi	#!
+topi	#!
+Tora	#!
+tora	#!
+torah	#?
+tormenter	#!
+tortoise shell	#?
+tortoise-shell	#?
+tory	#!
+tost	#!
+totalisator	#!
+toteable	#!
+touch screen	#?
+towards	#
+towelling	#!
+towny	#!
+toxaemia	&!
+tradeable	#!
+tradeoff	#
+tranquility	#
+tranquillise	&!
+tranquilliser	&!
+tranquillize	#!
+tranquillizer	#!
+transfixt	#!
+transgender	#!
+transistorise	&!
+traumatised	&!
+travelator	&!
+travelled	#!
+traveller	#!
+traveller's check	#!
+travelling	&!
+travelling salesman	&!
+travelog	#!
+tressel	#!
+tricolour	&!
+trinitrotoluol	#!
+trivialise	&!
+trolly	#!
+tsar	#
+tsarina	#?
+Tsinan	#!
+Tsingtao	#
+tumbril	#!
+tumour	&!
+tunneller	#!
+turnround	&!
+turquois	#!
+turves	#
+Tutankhaten	#!
+Twenties	#!
+twinight	#?
+twirp	#!
+tyrannise	&!
+tyre	&
+Tyrol	#
+tzar	#
+tzarina	#
+tzarism	#!
+tzarist	#!
+tzetze	#!
+tzetze fly	#!
+Tzupo	#!
+ukelele	#
+Ulaanbaatar	#!
+umiaq	#!
+unauthorised	&!
+unbeknownst	#
+unbiassed	#!
+unblest	#!
+uncivilised	&!
+undercapitalise	&!
+Underground Railroad	#!
+undersize	#!
+undreamt	#
+undreamt-of	#
+unequalled	#!
+unfavourable	&!
+unfocussed	#!
+unionise	&!
+unmistakeable	#!
+unorganised	&!
+unparallelled	&!
+unrecognisable	&!
+unrecognised	&!
+unrivalled	#!
+unsavoury	&!
+unshakeable	#?
+unskilful	&!
+unspoilt	&!
+untravelled	#!
+ups-a-daisy	#!
+up tight	#!
+up-tight	#!
+urbanise	&!
+Urumchi	#!
+useability	#!
+useable	#!
+usurous	#!
+Utahn	#!
+utilise	&!
+utopian	#?
+Va.	#
+Valentine Day	#!
+valour	&!
+vandalise	&!
+vaporise	&!
+vapour	&!
+vapour trail	&!
+varment	#!
+Veep	#?
+veldt	#
+velours	#!
+vender	#
+verandah	#!
+verbalise	&!
+Vergil	#!
+vermillion	#
+Vespers	#!
+V.I.	#!
+vice-president	#
+victimise	&!
+victualer	#!
+Viet Nam	#!
+vigour	&!
+Visakhapatnam	#?
+visualise	&!
+vitamine	#!
+vizir	#!
+vizor	#!
+vocal chords	#!
+Vt.	#!
+vulcanise	&!
+vulgarise	&!
+wabble	#!
+wadeable	#!
+waggon	&!
+wainscotting	#!
+walla	&!
+wanna-be	#?
+warmup	#?
+washer-drier	#!
+Wasp	#
+waste paper	#?
+waterbed	#?
+waterglass	#!
+waterpower	#?
+water vapour	&!
+waxed paper	#?
+waxpaper	#!
+weathervane	#!
+Website	#!
+week end	#!
+week-end	#!
+weepie	#!
+weevilly	#!
+Welch	#!
+welch	#!
+Welsh rarebit	#
+werwolf	#!
+werwolves	#!
+westernise	&!
+westernised	&!
+whacky	#!
+whimsey	#!
+whiney	#!
+whirr	#
+whisky	#
+whizbang	#!
+whizz	#!
+whizzgig	#!
+whizzkid	#!
+whodunnit	#!
+widgeon	#?
+widthways	#!
+wild flower	#
+wild fowl	#!
+wild West	#!
+wilful	#
+wilfully	#!
+wilfulness	#!
+willie	&!
+will power	#!
+willywaw	#!
+winge	&!
+wintery	#
+wistaria	#
+wiz	#?
+wizbang	#!
+woful	#!
+womaniser	&!
+wonton	#!
+woolie	#!
+woolies	#!
+woollen	&!
+woollens	&!
+wooly	#
+work station	#?
+World	#!
+worshipper	#
+wouldest	#!
+wowzer	&!
+wrapt	#!
+wrist watch	#!
+Wu-hsi	#!
+wysiwyg	#!
+Xantippe	#!
+X ray	#
+x ray	#
+yack	#
+yadda-yadda-yadda	#!
+Yahveh	#!
+Yahwe	#!
+yarmelke	#!
+ycleped	#!
+y-clept	#!
+yeshivah	#!
+yodeller	#!
+yoghourt	#!
+yoghurt	#
+yogin	#!
+yuppy	#
+Zairean	#!
+Zambesi	#!
+Zaragoza	#!
+Zeppelin	#?
+Zetland	#!
+Zhou Enlai	#!
+zombi	#!
+Z's	#!

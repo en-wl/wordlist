@@ -1,0 +1,38 @@
+#!/usr/bin/perl
+
+#
+# This script takes infl.txt and attempts to recreate the source files
+# it was created from.  However, make-infl behavior may in influenced
+# by words nit in infl.txt....
+#
+
+use strict;
+use warnings;
+
+my %pos;
+my %words;
+
+while (<>) {
+  my ($lemma, $pos, $pos_flag, $rest) = /^(.+?) ([A-Z])([?]?): (.+)$/ or die;
+  $pos{$lemma} .= $pos unless ($pos_flag eq '?');
+  $words{$lemma}++;
+  foreach my $a (split / \| /, $rest) {
+    foreach (split /, /, $a) {
+      my ($w,$flags) = (/^([A-Za-z\']+)([~<!?]*)/) or die;
+      $words{$w}++ unless ($flags =~ /\?/);
+    }
+  }
+}
+
+open F, ">pos.txt";
+foreach (sort keys %pos) {
+  print F "$_\t$pos{$_}\n";
+}
+close F;
+
+open F, ">all.lst";
+foreach (sort keys %words) {
+  print F "$_\n";
+}
+close F;
+

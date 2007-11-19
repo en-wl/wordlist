@@ -7,7 +7,7 @@ all:
 	touch .aspell
 aspell: .aspell
 
-.hunspell: .aspell make-hunspell-dict add-no-suggest en_US.aff en_US.dic.supp
+.hunspell: .aspell make-hunspell-dict add-no-suggest en.aff en.dic.supp
 	./make-hunspell-dict
 	touch .hunspell
 hunspell: .hunspell

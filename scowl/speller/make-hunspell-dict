@@ -5,44 +5,55 @@ HUNSPELL=/usr/local/bin/hunspell
 
 set -e
 
+export LANG=C
+export LC_ALL=C
 export LC_CTYPE=C
 export LC_COLLATE=C
 
-echo prep
+prep() {
+  echo prep 
 
-cat misc/{offensive.1,offensive.2,profane.1} | sort -u > nosug
+  cat misc/{offensive.1,offensive.2,profane.1} | sort -u > nosug
 
-cat en-common.wl en_US-wo_accents-only.wl | sort -u > en_US.0
+  cp en.aff eng_affix.dat
 
-comm en_US.0 nosug -12 > en_US-nosug.1
-
-comm en_US.0 nosug -23 > en_US.1
-
-cp en_US.aff eng_affix.dat
-
-cat << EOF > eng.dat
+  cat << EOF > eng.dat
 name eng
 charset iso8859-1
 special ' -*-
 affix eng
 EOF
+}
 
-echo munch
+doit() {
+  echo creating en_$1.dic
 
-$ASPELL -l ./eng munch-list < en_US-nosug.1 | ./add-no-suggest > en_US.2
+  cat en-common.wl en_$1-wo_accents-only.wl | sort -u > en_$1.0
 
-$ASPELL -l ./eng munch-list < en_US.1 >> en_US.2
+  comm en_$1.0 nosug -12 > en_$1-nosug.1
 
-echo finalize
+  comm en_$1.0 nosug -23 > en_$1.1
 
-cat en_US.dic.supp >> en_US.2
+  $ASPELL -l ./eng munch-list < en_$1-nosug.1 | ./add-no-suggest > en_$1.2
 
-wc -l en_US.2 | cut -d' ' -f1 > en_US.dic
-cat en_US.2 | sort >> en_US.dic
+  $ASPELL -l ./eng munch-list < en_$1.1 >> en_$1.2
 
-#echo check
+  cat en.dic.supp >> en_$1.2
 
-#hunspell -l -d ./en_US < en_US.dic.0 > misspelled
+  wc -l en_$1.2 | cut -d' ' -f1 > en_$1.dic
+  cat en_$1.2 | sort >> en_$1.dic
 
-rm eng*.dat nosug en_US*.?
+  cp en.aff en_$1.aff
 
+  #echo check
+
+  #hunspell -l -d ./en_$1 < en_$1.dic.0 > misspelled
+}
+
+
+prep
+
+doit US
+doit CA
+
+rm eng*.dat nosug en_US*.? en_CA*.?

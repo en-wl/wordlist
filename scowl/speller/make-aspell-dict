@@ -5,6 +5,8 @@ set -e
 
 rm -f *.twl
 
+export LANG=C
+export LC_ALL=C
 export LC_CTYPE=C
 export LC_COLLATE=C
 
@@ -45,12 +47,15 @@ done
 
 echo common
 
-cat *.twl | sort -u > en-common.wl.0
+# find the intersection of all *.twl word lists
 
+cat *.twl | sort -u > en-common.wl.0
 for f in *.twl
 do
   comm -12 en-common.wl.0 $f > en-common.wl
+  mv en-common.wl en-common.wl.0
 done
+mv en-common.wl.0 en-common.wl
 
 echo finish
 
@@ -59,6 +64,6 @@ do
   b=`basename $f .twl`
   comm -13 en-common.wl $f > $b-only.wl
 done
-        
+ 
 
 rm -f *.wl.* *.twl *.wl{0,1} *.vwl

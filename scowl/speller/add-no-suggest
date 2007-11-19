@@ -1,23 +1,9 @@
 #!/usr/bin/perl
 
-my @files = qw(offensive.1 offensive.2 profane.1);
-
-my %words;
-
-foreach my $f (@files) {
-  open F, "misc/$f" or die;
-  while (<F>) {
-    chop;
-    $words{$_}++;
-  }
-}
-
 while (<>) {
   chop;
   my ($w, $a) = split /\//;
-  if ($words{$w}) {
-    $a .= '!';
-  }
+  $a .= '!';
   print "$w";
   print "/$a" if length($a) > 0;
   print "\n";

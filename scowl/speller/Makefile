@@ -14,6 +14,6 @@ hunspell: .hunspell
 
 clean:
 	rm -f .aspell .hunspell
-	rm -f *.wl en_US.dic
+	rm -f *.wl en_*.dic en_*.aff
 
 

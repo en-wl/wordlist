@@ -1,3 +1,7 @@
+#!/bin/bash
+
+shopt -s nullglob
+set -e
 
 rm -f *.twl
 
@@ -41,12 +45,11 @@ done
 
 echo common
 
-cat *.twl | sort -u > en-common.wl
+cat *.twl | sort -u > en-common.wl.0
 
 for f in *.twl
 do
-  comm -12 en-common.wl $f > en-common.wl0
-  mv en-common.wl0 en-common.wl
+  comm -12 en-common.wl.0 $f > en-common.wl
 done
 
 echo finish
@@ -58,4 +61,4 @@ do
 done
         
 
-rm -f *.twl *.wl{0,1} *.vwl
+rm -f *.wl.* *.twl *.wl{0,1} *.vwl

@@ -1,0 +1,44 @@
+#!/bin/bash
+
+ASPELL=$HOME/aspell-0.60-cvs/inst/bin/aspell
+HUNSPELL=/usr/local/bin/hunspell
+
+set -e
+
+export LC_CTYPE=C
+export LC_COLLATE=C
+
+echo prep
+
+cat en-common.wl en_US-wo_accents-only.wl | sort -u > en_US.dic.0
+
+wc -l en_US.dic.0 | cut -d' ' -f1 > en_US.dic
+cat en_US.dic.0 >> en_US.dic
+
+cp en_US.aff eng_affix.dat
+
+cat << EOF > eng.dat
+name eng
+charset iso8859-1
+special ' -*-
+affix eng
+EOF
+
+echo munch
+
+$ASPELL -l ./eng munch-list < en_US.dic.0 > en_US.dic.1
+
+echo finalize
+
+cat en_US.dic.supp >> en_US.dic.1
+
+wc -l en_US.dic.1 | cut -d' ' -f1 > en_US.dic
+cat en_US.dic.1 | ./add-no-suggest | sort >> en_US.dic
+
+#echo check
+
+#hunspell -l -d ./en_US < en_US.dic.0 > misspelled
+
+rm eng*.dat
+rm en_US.dic.?
+

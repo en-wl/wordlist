@@ -4,6 +4,7 @@
 doit() 
 {
   sed "s/^\(.*\)'s\$/\1/"                   \
+    | sort -u                               \
     | comm -12 - working/possessive.lst     \
     | sed "s/^\(.*\)/\1 \1's/"              \
     | tr ' ' '\n'

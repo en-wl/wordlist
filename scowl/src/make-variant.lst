@@ -15,44 +15,76 @@ rem ()
   comm -23 - $1;
 }
 
+#
+# process lists from alt12dicts
+#
+
 cat r/alt12dicts/not-variant.lst \
   | src/filter | src/add-affixes 0.0 use-all | src/add-possessive | sort -u \
   > working/variant-no.lst
 
+cat r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst \
+  | src/filter | sort -u \
+  > working/nonamer.lst
+
+
+expand() {
+    tmpfile=`mktemp working/variant.XXXXXX`
+    cat | src/filter | sort -u > $tmpfile
+    cat $tmpfile                                                  \
+      | src/add-affixes $1 use-all | src/add-possessive | sort -u \
+      | rem working/variant-no.lst                                \
+      | add $tmpfile
+    rm $tmpfile
+}
+
 cat r/alt12dicts/variant-maybe.lst \
-  | src/filter | src/add-affixes 0.9 use-all | src/add-possessive | sort -u \
+  | expand 0.9                     \
   > working/variant-maybe.lst
 
 cat r/alt12dicts/variant-yes.lst \
-  | src/filter | sort -u \
-  > working/variant-yes-bare.lst
-
-cat r/alt12dicts/variant-yes.lst \
-  | src/filter | src/add-affixes 1.9 use-all | src/add-possessive | sort -u \
+  | expand 1.9                   \
   > working/variant-yes.lst
+
+cat r/alt12dicts/nonamer-maybe.lst    \
+  | expand 1.9                        \
+  | rem working/nonamer.lst           \
+  > working/variant-nonamer-maybe.lst 
+
+cat r/alt12dicts/nonamer-yes.lst      \
+  | expand 1.9                        \
+  | rem working/nonamer.lst           \
+  > working/variant-nonamer-yes.lst
+
+#
+# Create the initial variant lists
+#
 
 start \
   | add working/variant-maybe.lst    \
-  | rem working/variant-no.lst       \
   | add r/special/variant_0          \
   | rem r/special/never-variant      \
   > working/variant_0-pre.lst
 
 start \
   | add working/variant-yes.lst      \
-  | rem working/variant-no.lst       \
-  | add working/variant-yes-bare.lst \
+  | add working/variant-nonamer-maybe.lst \
   | add r/special/variant_1          \
   | rem working/variant_0-pre.lst    \
   | rem r/special/never-variant      \
   > working/variant_1-pre.lst
 
 start \
+  | add working/variant-nonamer-yes.lst \
   | add r/special/variant_2          \
   | rem working/variant_1-pre.lst    \
   | rem working/variant_0-pre.lst    \
   | rem r/special/never-variant      \
   > working/variant_2-pre.lst
+
+#
+# Now take into account variant info from AGID
+#
 
 start \
   | add r/infl/variant_0.lst         \
@@ -77,9 +109,3 @@ start \
   | rem working/variant_1.lst | rem working/variant_0.lst        \
   | rem r/special/never-variant      \
   > working/variant_2.lst
-
-
-
-
-
-

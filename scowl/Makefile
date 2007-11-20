@@ -63,6 +63,7 @@ working/variant_0.lst working/variant_1.lst working/variant_2.lst: \
   src/make-variant.lst         r/alt12dicts/variant-also.lst \
   r/alt12dicts/variant-yes.lst r/alt12dicts/variant-maybe.lst \
   r/infl/variant_0.lst  r/infl/variant_1.lst  r/infl/variant_2.lst \
+  r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst \
   r/special/variant_0  r/special/variant_1  r/special/variant_2 \
   r/special/never-variant
 	touch working/possessive.lst

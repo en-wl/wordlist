@@ -13,15 +13,15 @@ equivalent forms of other variants.
 The latest version can be found at http://wordlist.sourceforge.net/.
 
 The abbc.tab contains mappings between American, British with "ise"
-spelling, British with "ize" spelling, and Canadian spellings.  The
-fields are separated by a tab character and have the Unix EOL
-character.  The first four columns are the spellings respectively.
-The last column is used to mark words where the American or British
-spelling is also used in the British or American spelling but only
-when the word has a certain meaning.  American words that are also
-used in British / Canadian spellings are marked with a "A" while
-British words that are also used in American / Canadian spellings are
-marked with a "B".
+spelling, British with "ize" spelling (OED Spelling), and Canadian
+spellings.  The fields are separated by a tab character and have the
+Unix EOL character.  The first four columns are the spellings
+respectively.  The last column is used to mark words where the
+American or British spelling is also used in the British or American
+spelling but only when the word has a certain meaning.  American words
+that are also used in British / Canadian spellings are marked with a
+"A" while British words that are also used in American / Canadian
+spellings are marked with a "B".
 
 The file voc.tab is like abbc.tab except that it converts between
 vocabulary instead of spelling.  If more than one word if often uses to
@@ -121,6 +121,10 @@ As well as several online dicionaries:
   Cambridge (ESL): http://dictionary.cambridge.org/
 
 CHANGELOG:
+
+From Revision 4.1 to ... 
+
+  - British-ize column now corresponds with spelling according to the OED.
 
 From Revision 4 to Revision 4.1 (August 10, 2004)
 

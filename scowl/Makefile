@@ -56,7 +56,7 @@ make_final = $(shell src/list-combin final/ $(1) ):                        \
 #
 
 working/all.lst working/all.lst-unfiltered: \
-  src/make-all.lst $(shell find l/supplement/ l/add-affixes/ -type l)
+  src/make-all.lst $(shell find l/supplement/ l/add-affixes/ l/add-possessive -type l)
 	$<
 
 working/variant_0.lst working/variant_1.lst working/variant_2.lst: \
@@ -66,10 +66,10 @@ working/variant_0.lst working/variant_1.lst working/variant_2.lst: \
   r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst \
   r/special/variant_0  r/special/variant_1  r/special/variant_2 \
   r/special/never-variant
-	touch working/possessive.lst
+	touch working/possessive-also.lst
 	$<
-	rm working/possessive.lst
-	$(MAKE) working/possessive.lst
+	rm working/possessive-also.lst
+	$(MAKE) working/possessive-also.lst
 	$<
 
 working/contractions.lst: src/make-contractions.lst working/words.80
@@ -95,13 +95,12 @@ working/abbreviations.lst: src/make-abbreviations.lst \
 	$<
 
 working/upper.lst: src/make-upper.lst \
-  src/add-possessive working/possessive.lst \
+  src/add-affixes working/possessive-also.lst \
   working/known-upper.lst working/abbreviations.lst
 	$<
 
-working/possessive.lst: src/make-possessive.lst src/extract-possessive \
-  r/pos/part-of-speech.txt working/abbreviations.lst.pre \
-  working/proper-names.lst
+working/possessive-also.lst: src/make-possessive.lst \
+  working/abbreviations.lst.pre working/proper-names.lst
 	$<
 
 working/with-accents.lst working/without-accents.lst: \

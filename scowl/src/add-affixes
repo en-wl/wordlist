@@ -1,38 +1,72 @@
 #!/usr/bin/perl
 
-$inc_level = 0;
-if ($ARGV[0] ne '') {
+use strict;
+#use warnings;
+#no warnings 'uninitialized';
+
+# Usage: add-affixes [<inc_level>] [<flags>]
+
+my $inc_level = 0;
+if ($ARGV[0] =~ /^[\d.]+$/) {
   $inc_level = $ARGV[0];
+  shift @ARGV;
 }
 
-print STDERR "Include Level: $inc_level\n";
+#print STDERR "Include Level: $inc_level\n";
 
-if ($ARGV[1] eq 'use-all') {
-
-  print STDERR "Skipping Remove List\n";
-
-} else {
-  
-  open F, "r/alt12dicts/2of12id.txt" or die;
-  
-  while (<F>) {
-    s/\r?\n$// or die;
-    ($d,$w,$p,$a) = /^(\-?)(\w+) (.).*: ?(.*)$/ or die;
-    my @a = $a =~ /([~@-]*\w+)/g;
-    @a = map {"$d$_"} @a if ($d);
-    my (@a0,@a1);
-    foreach (@a) {if (s/^[~-]//) {push @a0, $_} else {push @a1, $_}}
-    $remove{"$w:$p"} = 1 unless @a1;
-    foreach (@a0) {$remove{"$w:$p:$_"} = 1}
-  }
+my $use_all = 0;
+my $just_possessive = 0;
+my $no_possessive = 0;
+foreach (@ARGV) {
+  if ($_ eq 'use-all') {$use_all = 2}
+  elsif ($_ eq 'use-some') {$use_all = 1}
+  elsif ($_ eq 'just-possessive') {$just_possessive = 1}
+  elsif ($_ eq 'no-possessive') {$no_possessive = 1}
+  else {die "ERROR: Invalid flag $_\n";}
 }
+
+open F, "r/alt12dicts/2of12id.txt" or die;
+
+my %lookup;
+my %remove;
+my %possessive;
+
+while (<F>) {
+  s/\r?\n$// or die;
+  # (flags, base word, part of speach, infl forms)
+  my ($d,$w,$p,$a) = /^(\-?)(\w+) (.).*: ?(.*)$/ or die;
+  $possessive{$w} = "$w\'s\n" if $p eq 'N' && ($d eq '' || $use_all);
+  next if $use_all;
+  my @a = $a =~ /([~@-]*\w+)/g;
+  @a = map {"$d$_"} @a if ($d);
+  my (@a0,@a1);
+  foreach (@a) {if (s/^[~-]//) {push @a0, $_} else {push @a1, $_}}
+  $remove{"$w:$p"} = 1 unless @a1;
+  foreach (@a0) {$remove{"$w:$p:$_"} = 1}
+}
+
+# Maybe using AGID isn't a good idea here, many of the entries in AGID
+# are unchecked, for example "associationism" may be an uncountable
+# noun, but since the base entry is not in 2of12id it is not flagged
+# that way, thus the plural "associationisms" gets included.  However,
+# AGID still needs to be used for uppercase words since they are not
+# in 2of12id.  For now I won't worry about it since it primary effects
+# level 70 of SCOWL.
 
 open F, "r/infl/infl.txt" or die;
 
 while (<F>) {
-  ($w,$p,$a) = /(\S+) (.).*: (.+)/ or die;
+  # (base word, part of speach, guess flag, infl forms)
+  my ($w,$p,$q,$a) = /(\S+) (.)(.*): (.+)/ or die;
+  # Add possive form if
+  #  AGID things it is a noun and "use-some" or Uppercase 
+  #    (since 2of12id doesn't include uppercase)
+  #  AGIG is guessing it is a noun and "use-all"
+  $possessive{$w} = "$w\'s\n" if $p eq 'N' && (($q eq '' && ($use_all || $w =~ /^[A-Z]/)) 
+                                               || $use_all >= 2);
   next if $remove{"$w:$p"};
-  @a = split /, | \| /, $a;
+  next unless $q eq '' || $use_all >= 2;
+  my @a = split /, | \| /, $a;
   @a = grep {my ($word,$tags,$level) 
 		 = /^([A-Za-z\']+)([~<!?]*)(| [\d.]+)(| {\S+})$/ or die $_;
 	     $_ = $word;
@@ -42,8 +76,19 @@ while (<F>) {
   $lookup{$w} .= join("\n",@a)."\n";
 }
 
+unless ($no_possessive) {
+
+  open F, "working/possessive-also.lst" or die;
+  
+  while (<F>) {
+    chop;
+    $possessive{$_} = "$_\'s\n";
+  }
+}
+
 while (<STDIN>) {
   print;
   chop;
-  print $lookup{$_};
+  print $lookup{$_} unless $just_possessive;
+  print $possessive{$_} unless $no_possessive;
 }

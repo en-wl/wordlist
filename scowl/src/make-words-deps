@@ -2,9 +2,9 @@
 
 shopt -s nullglob
 
-echo -n src/get-all-below src/filter working/possessive.lst ''
+echo -n src/get-all-below src/filter working/possessive-also.lst ''
 echo -n src/add-other-spellings r/varcon/voc.tab r/varcon/variant.tab ''
-echo -n src/add-possessive src/make-words ''
+echo -n src/make-words ''
 echo -n `src/get-all-below $1 supplement` ''
 echo -n `src/get-all-below $1 include` ''
 echo -n `src/get-all-below $1 add-affixes` ''

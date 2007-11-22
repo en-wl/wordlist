@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cat `find l/supplement/ l/add-affixes -type l` | tr -d '\r' | sort | uniq > working/all.lst-unfiltered
+cat `find l/supplement/ l/add-affixes l/add-possessive -type l` | tr -d '\r' | sort | uniq > working/all.lst-unfiltered
 cat working/all.lst-unfiltered   \
   | src/filter                   \
   | sort | uniq                  \

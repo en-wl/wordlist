@@ -20,7 +20,7 @@ rem ()
 #
 
 cat r/alt12dicts/not-variant.lst \
-  | src/filter | src/add-affixes 0.0 use-all | src/add-possessive | sort -u \
+  | src/filter | src/add-affixes 0.0 use-all | sort -u \
   > working/variant-no.lst
 
 cat r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst \
@@ -32,7 +32,7 @@ expand() {
     tmpfile=`mktemp working/variant.XXXXXX`
     cat | src/filter | sort -u > $tmpfile
     cat $tmpfile                                                  \
-      | src/add-affixes $1 use-all | src/add-possessive | sort -u \
+      | src/add-affixes $1 use-all | sort -u \
       | rem working/variant-no.lst                                \
       | add $tmpfile
     rm $tmpfile

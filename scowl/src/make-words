@@ -9,21 +9,39 @@ max_level=`src/get-level max`
 if [ $1 -ne $max_level ]
 then
 
+  supplement=`src/get-all-below $1 supplement`  
   add_affixes="`src/get-all-below $1 add-affixes`"
+  add_possessive="`src/get-all-below $1 add-possessive`"
 
-  cat `src/get-all-below $1 supplement` $add_affixes l/include/$1/* \
-    | src/filter | sort | uniq > working/words.$1.tmp
+  cat $supplement $add_affixes $add_possessive l/include/$1/* \
+    | src/filter                                              \
+    > working/words.$1.tmp
+  cp working/words.$1.tmp working/words.$1.tmp.0
 
   if [ -n "$add_affixes" ] && [ $1 -le `cat l/add-affixes/max-level` ]
   then
     echo "Adding affixes"
-    cat $add_affixes | src/add-affixes >> working/words.$1.tmp
+    cat $add_affixes | src/filter | src/add-affixes >> working/words.$1.tmp
+    cp working/words.$1.tmp working/words.$1.tmp.1
   fi
 
-  src/add-possessive working/words.$1.tmp
+  if [ $1 -lt 80 ]
+  then
+    if [ -n "$add_possessive" ]
+    then
+      echo "Adding possessive"
+      cat $add_possessive | src/filter | src/add-affixes just-possessive >> working/words.$1.tmp
+      cp working/words.$1.tmp working/words.$1.tmp.2
+    fi
+  else
+    echo "Adding possessive"
+    cat working/words.$1.tmp                       \
+      | src/add-affixes use-some just-possessive   \
+      > working/words.$1.tmp2
+    mv working/words.$1.tmp2 working/words.$1.tmp
+  fi
 
   cat working/words.$1.tmp    \
-    | src/filter              \
     | src/add-other-spellings \
     | src/add-other-forms     \
     | src/add-other-spellings \
@@ -31,12 +49,12 @@ then
     | comm -12  - working/words.`src/get-level next $1` \
     > working/words.$1
 
-  rm working/words.$1.tmp
+  #rm working/words.$1.tmp
 
 else
 
   cat working/all.lst           \
-    | src/add-possessive        \
+    | src/add-affixes use-all just-possessive \
     | src/add-other-spellings   \
     | sort -u                   \
     > working/words.$1

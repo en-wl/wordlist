@@ -17,7 +17,7 @@ cat working/all.lst                                \
 
 cat l/not-abbreviations/* working/known-upper.lst  \
   | src/filter                                     \
-  | src/add-affixes                                \
+  | src/add-affixes no-possessive                  \
   | sort | uniq                                    \
   > working/not-abbreviations.tmp
 

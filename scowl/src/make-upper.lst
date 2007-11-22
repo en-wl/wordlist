@@ -1,7 +1,7 @@
 #!/bin/sh
 
 comm -23 working/known-upper.lst working/abbreviations.lst  \
-  | src/add-possessive                                      \
+  | src/add-affixes just-possessive use-all                 \
   | src/add-other-spellings                                 \
   | sort | uniq                                             \
   > working/upper.lst

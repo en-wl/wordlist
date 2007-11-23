@@ -1,0 +1,15 @@
+This directory contains miscellaneous other files not directly used by
+SCOWL.
+
+It currently contains list of various taboo words.
+
+The file "profane.1" contains vulgar or swear words which should
+generally not be said around children.  The file "profane.3" contains
+words which are considered vulgar, offensive, or taboo by some
+dictionaries, but are not nearly as strong as those in "profane.1",
+and generally not considered swear words today.
+
+The file "offensive.1" contains extremely offensive racial slurs which
+should generally not be used.  The file "offensive.2" contains
+offensive racial slurs which should, also, in general, not be used but
+don't have the stigma in modern society as those in "offensive.1".

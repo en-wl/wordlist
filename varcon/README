@@ -16,12 +16,34 @@ The abbc.tab contains mappings between American, British with "ise"
 spelling, British with "ize" spelling (OED Spelling), and Canadian
 spellings.  The fields are separated by a tab character and have the
 Unix EOL character.  The first four columns are the spellings
-respectively.  The last column is used to mark words where the
-American or British spelling is also used in the British or American
-spelling but only when the word has a certain meaning.  American words
-that are also used in British / Canadian spellings are marked with a
-"A" while British words that are also used in American / Canadian
-spellings are marked with a "B".
+respectively.
+
+The last column is used for miscellaneous notes.  With the following
+meaning (C-OED = Compact Oxford English Dictionary)
+  A: American words that are also used in British / Canadian spellings
+  a: Like A but it not really considered a separate word, rather 
+     a variant.  For example "spelled" vs "spelt".
+  B: British words that are also used in American / Canadian spellings
+  VV: According to C-OED the American spelling is the correct one,
+      however, I found some evidence that the British spelling is
+      still used.
+  V: According to C-OED the American spelling is the preferred form,
+      however, the British spelling is also correct
+  V?: Same as V, but it seamed inconsistent to me.  Explained below.
+  v: According to C-OED the British spelling is the preferred form,
+      however the American spelling is also correct.
+  !: Explained below.
+
+I am not British, so I don't know the correct Britsh spelling of
+words, however a few entries in the C-OED seamed odd to me.  "Color"
+is generally spelled "Colour", unless the word is "coloration", as the
+C-OED marked "colouration" as a variant.  Thus I marked the entry in
+the table with a "V?" instead of a "V?".  "Vapor" is spelled "Vapour"
+unless the word is "vaporize".  This seams odd to be, but I could not
+find any evidence that "vapourize" or "vapourise" is a legal word,
+although I could find some evidence it was used.  Nevertheless since
+"vapourize/-ise" doesn't seam to be a valid word, this spelling was
+not included.  Effected entries are marked with a "!"
 
 The file voc.tab is like abbc.tab except that it converts between
 vocabulary instead of spelling.  If more than one word if often uses to
@@ -47,12 +69,18 @@ and variant-infl.tab into one huge mapping and will output the result
 to "variant.tab".  If the "no-infl" option is given than
 variant-infl.tab will not be included.
 
-The "split" script will create 5 words lists from abbc.tab:
-american.lst, british.lst, british_z.lst, canadian.lst, and
-common.lst.  The common.lst file contains words that were marked in
-the last column as explained above and the other four contain all the
-possible words that might be used by that particular country, included
-some of the words marked in the last column.
+The "split" script will create 6 words lists from abbc.tab:
+american.lst, british.lst, british_z.lst, british_variant.lst,
+canadian.lst, and common.lst.  Its usage is:
+  ./split [VV|V|V?|v]
+where the argument is the variant level to use for the British
+Canadian lists.  The default is 'V?' which means the American spelling
+will be used for all entries marked with 'VV', 'V' or 'V?'.  Any
+entries flagged with a variant level but not used will be put into
+"british_variant.lst".  The common.lst file contains words that were
+marked in the last column with 'A', 'B' or 'b'.  The other four
+contain all the possible words that might be used by that particular
+country, included some of the words marked in the last column.
 
 The "translate" Perl script will translate a text file from one
 spelling to another. Its usage is:
@@ -70,6 +98,9 @@ british-ise and british-ize can also be used.
 Text is read in from standard input and is outputted to standard out.
 Words are marked with a '?' before and after the questionable word
 when the option is enabled.
+
+FIXME: Translate needs to be updated to take variant flags into
+account.
 
 If you discover any errors in these mappings, besides the strange
 affixations, or have suggestions for additions be sure and let me know

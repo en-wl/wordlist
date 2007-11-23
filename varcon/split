@@ -1,12 +1,15 @@
 #!/bin/sh
 
-perl split.pl
+set -e
 
-cat american.lst.tmp  | sort | uniq > american.lst
-cat british.lst.tmp   | sort | uniq > british.lst
-cat british_z.lst.tmp | sort | uniq > british_z.lst
-cat canadian.lst.tmp  | sort | uniq > canadian.lst
-cat common.lst.tmp    | sort | uniq > common.lst
+perl split.pl "$@"
 
-rm {american,british,british_z,canadian,common}.lst.tmp
+cat american.lst.tmp        | sort | uniq > american.lst
+cat british.lst.tmp         | sort | uniq > british.lst
+cat british_z.lst.tmp       | sort | uniq > british_z.lst
+cat british_variant.lst.tmp | sort | uniq > british_variant.lst
+cat canadian.lst.tmp        | sort | uniq > canadian.lst
+cat common.lst.tmp          | sort | uniq > common.lst
+
+rm {american,british,british_z,british_variant,canadian,common}.lst.tmp
 

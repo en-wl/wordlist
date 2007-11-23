@@ -44,6 +44,10 @@ doit() {
   cat en_$1.2 | sort >> en_$1.dic
 
   cp en.aff en_$1.aff
+  
+  cp README_en README_en_$1.txt
+
+  zip -9 en_$1.zip README_en_$1.txt en_$1.dic en_$1.aff
 
   #echo check
 

@@ -34,9 +34,9 @@ doit() {
 
   comm en_$1.0 nosug -23 > en_$1.1
 
-  $ASPELL -l ./eng munch-list < en_$1-nosug.1 | ./add-no-suggest > en_$1.2
+  $ASPELL -l ./eng munch-list < en_$1-nosug.1 | grep -v '^\(XXX\|>>>\)' | ./add-no-suggest > en_$1.2
 
-  $ASPELL -l ./eng munch-list < en_$1.1 >> en_$1.2
+  $ASPELL -l ./eng munch-list < en_$1.1 | grep -v '^\(XXX\|>>>\)' >> en_$1.2
 
   cat en.dic.supp >> en_$1.2
 

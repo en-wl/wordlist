@@ -65,7 +65,7 @@ working/variant_0.lst working/variant_1.lst working/variant_2.lst: \
   r/infl/variant_0.lst  r/infl/variant_1.lst  r/infl/variant_2.lst \
   r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst \
   r/special/variant_0  r/special/variant_1  r/special/variant_2 \
-  r/special/never-variant
+  r/special/never-variant r/varcon/variant.tab
 	touch working/possessive-also.lst
 	$<
 	rm working/possessive-also.lst

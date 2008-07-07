@@ -130,18 +130,20 @@ spelling category for each size:
 (The "Words" column does not include the proper name count.)
 
 Size 35 is the recommended small size, 50 the medium and 70 the large.
-Sizes 70 and below contain words found in most dictionaries while the
-80 size contains all the strange and unusual words people like to use
-in word games such as Scrabble (TM).  While a lot of the the words in
-the 80 size are not used very often, they are all generally considered
-valid words in the English language.  The 95 contains just about every
-English word in existence and then some.  Many of the words at the 95
-level will probally not be considered valid english words by most
-people.  I don't recommend anyone use levels above 70 for spell
-checking as they contain rarely used words which can hide misspellings
-of similar more commonly used words.  For example the word "ort" can
-hide a common typo of "or".  No one should need to use a size larger
-than 80, the 95 size is labeled insane for a reason.
+For spell checking I recommend using 60.  Sizes 70 and below contain
+words found in most dictionaries while the 80 size contains all the
+strange and unusual words people like to use in word games such as
+Scrabble (TM).  While a lot of the the words in the 80 size are not
+used very often, they are all generally considered valid words in the
+English language.  The 95 contains just about every English word in
+existence and then some.  Many of the words at the 95 level will
+probably not be considered valid English words by most people.  I use
+the 60 size for the English dictionary for Aspell, and I don't
+recommend anyone use levels above 70 for spell checking.  Levels above
+70 contain rarely used words which can hide misspellings of similar
+more commonly used words.  For example the word "ort" can hide a
+common typo of "or".  No one should need to use a size larger than 80,
+the 95 size is labeled insane for a reason.
 
 Accents are present on certain words such as café in iso8859-1 format.
 

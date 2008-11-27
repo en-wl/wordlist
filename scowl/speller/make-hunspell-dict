@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ASPELL=$HOME/aspell-0.60-cvs/inst/bin/aspell
-HUNSPELL=/usr/local/bin/hunspell
+ASPELL=aspell
+HUNSPELL=hunspell
 
 set -e
 

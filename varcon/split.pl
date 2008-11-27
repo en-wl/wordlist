@@ -41,7 +41,7 @@ while (<F>) {
 	print Z "$z\n";
 	print C "$c\n";
     } else {
-        die unless $b eq $z;
+        die "$b != $z" unless $b eq $z;
 	print c "$a\n$b\n$c\n";
 	if ($s eq 'A' || $s eq 'a') {
 	    $al = "$a\n";

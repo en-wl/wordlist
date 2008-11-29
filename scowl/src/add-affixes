@@ -78,8 +78,15 @@ while (<F>) {
 
 unless ($no_possessive) {
 
+  open F, "r/special/not-possessive" or die;
+
+  while (<F>) {
+    chop;
+    delete $possessive{$_};
+  }
+
   open F, "working/possessive-also.lst" or die;
-  
+
   while (<F>) {
     chop;
     $possessive{$_} = "$_\'s\n";

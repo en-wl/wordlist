@@ -99,7 +99,7 @@ working/upper.lst: src/make-upper.lst \
   working/known-upper.lst working/abbreviations.lst
 	$<
 
-working/possessive-also.lst: src/make-possessive.lst \
+working/possessive-also.lst: src/make-possessive.lst r/special/add-possessive \
   working/abbreviations.lst.pre working/proper-names.lst
 	$<
 

@@ -51,7 +51,9 @@ doit() {
 
   #echo check
 
-  #hunspell -l -d ./en_$1 < en_$1.dic.0 > misspelled
+  #cat en_$1-nosug.1 en_$1.1 > en_$1.tocheck
+
+  #hunspell -l -d ./en_$1 < en_$1.dic.tocheck > misspelled
 }
 
 

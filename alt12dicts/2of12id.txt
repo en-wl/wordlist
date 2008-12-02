@@ -8131,7 +8131,7 @@ confederate N: confederates
 confederate V: confederated  confederating  confederates
 confederation N: confederations
 confer V: conferred  conferring  confers
-conferable A:
+conferrable A:
 conferee N: conferees
 conference N: conferences
 -conference V: conferenced  conferencing  conferences
@@ -27299,7 +27299,7 @@ nonobligatory A:
 nonobservance N: ~nonobservances
 nonobservant A:
 nonoccupational A:
-nonoccurence N: ~nonoccurences
+nonoccurrence N: ~nonoccurrences
 nonofficial A:
 nonoperational A:
 nonoperative A:
@@ -33681,7 +33681,7 @@ redundantly A:
 reduplicate V: reduplicated  reduplicating  reduplicates
 reduplication N: ~reduplications
 redwood N: redwoods
-redye V: redyed  redying  redyes
+redye V: redyed  redyeing  redyes
 reecho V: reechoed  reechoing  reechoes
 reed N: reeds
 -reed V: reeded  reeding  reeds

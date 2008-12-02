@@ -10831,7 +10831,7 @@ Confederate
 confederate
 confederation
 confer
-conferable
+conferrable
 conferee
 conference
 conferer
@@ -36486,7 +36486,7 @@ nonobligatory
 nonobservance
 nonobservant
 nonoccupational
-nonoccurence
+nonoccurrence
 nonofficial
 nonofficially
 nonoily
@@ -45430,7 +45430,7 @@ renunciatory
 reoccupation
 reoccupy
 reoccur
-reoccurence
+reoccurrence
 reopen
 reorder
 reorganization

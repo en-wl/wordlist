@@ -9517,7 +9517,7 @@
 12: 12  -#  -&   confederate
 11: 11  -#  -&   confederation
 12: 12  -#  -&   confer
- 2:  2  -#  -&   conferable
+ 2:  2  -#  -&   conferrable
  3:  3  -#  -&   conferee
 12: 12  -#  -&   conference
  4:  4  -#  -&   conference call
@@ -31684,7 +31684,7 @@
  3:  3  -#  -&   nonobservance
  3:  3  -#  -&   nonobservant
  2:  2  -#  -&   nonoccupational
- 3:  3  -#  -&   nonoccurence
+ 3:  3  -#  -&   nonoccurrence
  4:  4  -#  -&   nonofficial
  6:  6  -#  -&   no-nonsense
  2:  2  -#  -&   nonoperational

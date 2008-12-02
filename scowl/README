@@ -149,6 +149,11 @@ Accents are present on certain words such as café in iso8859-1 format.
 
 CHANGES:
 
+From Revision 6 to ?
+
+  Moved Moby names lists (3897male.nam 4946fema.len 21986na.mes) to 95
+  level since they contain too many errors and rare names.
+
 From Revision 5 to 6 (August 10, 2004)
 
   Updated to version 4.0 of the 12dicts package.
@@ -372,14 +377,13 @@ in the public domain.
 
 The 60 level includes Brian's frequency class 0 and all words
 appearing in at least 2 of the 12 dictionaries as indicated by the
-12Dicts package.  A large number of names are also included: The 4,946
-female names and the 3,897 male names from the MWords package.
+12Dicts package.  
 
-The 70 level includes the 74,550 common dictionary words and the
-21,986 names list from the MWords package The common dictionary words,
-like those from the 12Dicts package, have had all likely inflections
-added.  The 70 level also included the 5desk list from version 4.0 of
-the 12Dics package which is the public domain
+The 70 level includes the 74,550 common dictionary words from the
+MWords package The common dictionary words, like those from the
+12Dicts package, have had all likely inflections added.  The 70 level
+also included the 5desk list from version 4.0 of the 12Dics package
+which is the public domain
 
 The 80 level includes the ENABLE word list, all the lists in the
 ENABLE supplement package (except for ABLE), the "UK Advanced Cryptics
@@ -419,10 +423,11 @@ following copyright:
   There are no other restrictions: I would like to see the list
   distributed as widely as possible.
 
-The 95 level includes the 354,984 single words and 256,772 compound
-words from the MWords package, ABLE.LST from the ENABLE Supplement,
-and some additional words found in my part-of-speech database that
-were not found anywhere else.
+The 95 level includes the 354,984 single words, 256,772 compound
+words, 4,946 female names and the 3,897 male names, and 21,986 names
+from the MWords package, ABLE.LST from the ENABLE Supplement, and some
+additional words found in my part-of-speech database that were not
+found anywhere else.
 
 Accent information was taken from UKACD.
 

@@ -20,10 +20,12 @@ chdir "r/census";
 
 foreach $f (@files) {
     open IN, $f;
-    $of = $f.".lst";
-    open OUT, ">$of";
+    open OUT, ">$f.lst";
     $i = 0;
-    while ($_ = <IN> and $i++ != 1000) {
+    while (<IN>) {
+        if ($i++ == 1000) {
+            open OUT, ">$f-rest.lst";
+        }
 	($_) = /^(\S+)/;
 	if (exists $proper{$_}) {
 	    print OUT "$proper{$_}\n";
@@ -35,5 +37,6 @@ foreach $f (@files) {
     }
     close IN;
     close OUT;
-    qx"sort $of -o $of";
+    qx"sort $f.lst -o $f.lst";
+    qx"sort $f-rest.lst -o $f-rest.lst";
 }

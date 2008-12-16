@@ -3,7 +3,7 @@
 README file for en_US and en_CA Hunspell dictionaries
 
 These dictionaries are created using the speller/make-hunspell-dict
-dictionary in SCOWL, SVN revision 74.
+script in SCOWL, SVN revision 74.
 
 The NOSUGGEST flag was added to certain taboo words.  While I made an
 honest attempt to flag the strongest taboo words with the NOSUGGEST

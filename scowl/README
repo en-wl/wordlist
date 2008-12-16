@@ -154,6 +154,9 @@ From Revision 6 to ?
   Moved Moby names lists (3897male.nam 4946fema.len 21986na.mes) to 95
   level since they contain too many errors and rare names.
 
+  Moved frequently class 0 from Brian Kelk's Wordlist from 
+  level 60 to 70, and also filter it with level 80...
+
 From Revision 5 to 6 (August 10, 2004)
 
   Updated to version 4.0 of the 12dicts package.

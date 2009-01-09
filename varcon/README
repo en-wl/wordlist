@@ -71,16 +71,13 @@ variant-infl.tab will not be included.
 
 The "split" script will create 6 words lists from abbc.tab:
 american.lst, british.lst, british_z.lst, british_variant.lst,
-canadian.lst, and common.lst.  Its usage is:
-  ./split [VV|V|V?|v]
-where the argument is the variant level to use for the British
-Canadian lists.  The default is 'V?' which means the American spelling
-will be used for all entries marked with 'VV', 'V' or 'V?'.  Any
-entries flagged with a variant level but not used will be put into
-"british_variant.lst".  The common.lst file contains words that were
-marked in the last column with 'A', 'B' or 'b'.  The other four
-contain all the possible words that might be used by that particular
-country, included some of the words marked in the last column.
+canadian.lst, and common.lst.  The files american.lst, british.lst,
+british_z.lst, canadian.lst contain all the possible words that might
+be used by that particular country, except for spelling variants.  The
+common.lst file contains words that are included in both the american
+and one of the other lists.  The british_variant.lst contains words
+which are considered a spelling variant in British English and not
+already included in either british.lst or british_z.lst.
 
 The "translate" Perl script will translate a text file from one
 spelling to another. Its usage is:

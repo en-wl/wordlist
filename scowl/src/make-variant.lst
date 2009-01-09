@@ -35,10 +35,13 @@ cat r/alt12dicts/not-variant.lst \
   | src/filter | src/add-affixes 0.0 use-all | sort -u \
   > working/variant-no.lst
 
+cat r/varcon/american.lst \
+  | src/filter | sort -u \
+  > working/amer.lst
+
 cat r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst \
   | src/filter | sort -u \
   > working/nonamer.lst
-
 
 expand() {
     tmpfile=`mktemp working/variant.XXXXXX`
@@ -49,6 +52,11 @@ expand() {
       | add $tmpfile
     rm $tmpfile
 }
+
+cat r/varcon/british_variant.lst  \
+  | rem working/amer.lst          \
+  | rem working/nonamer.lst       \
+  > working/variant-british.lst
 
 cat r/alt12dicts/variant-maybe.lst \
   | expand 0.9                     \
@@ -89,6 +97,7 @@ start \
 start \
   | add working/variant-nonamer-yes.lst \
   | add r/special/variant_2          \
+  | add working/variant-british.lst  \
   | rem working/variant_1-pre.lst    \
   | rem working/variant_0-pre.lst    \
   | rem r/special/never-variant      \

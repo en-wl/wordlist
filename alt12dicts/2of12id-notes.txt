@@ -1,0 +1,88 @@
+Date: Thu, 1 Jan 2009 13:50:33 -0500
+From: Alan Beale
+To: Kevin Atkinson
+
+I've gone through your list of differences and updated 2of12id.txt
+appropriately, I hope.  Your list of differences exposed that some of them
+were in fact wrong, representing changes that should not have been made to
+2of12inf.  The next time I release 12dicts, I will correct these.  (Let me
+know if you think it highly desirable that I release one immediately due to
+these errors.)  Here is my commentary on all the entries which were not
+straightforward:
+
+escaloped, escaloping - These words should not have been removed.
+
+meds - This word should not have been added, as "med" is not listed.  I
+believe this is a thoughtless edit resulting from the presence of "med" in
+the 2of4brif list.
+
+metred, metring - These words should not have been removed.
+
+narced, narcing - This is very difficult.  One of my source dictionaries
+lists "narc" as a verb.  I think it's wrong - every other source I've seen
+shows the verb as "nark".  To make it worse, the dictionary that lists the
+verb "narc" neither lists inflections, nor shows an inflected usage.  Its
+regular inflections ought to be "narcked" and "narcking", not "narced" and
+"narcing".  However, the Google n-gram data I purchased shows no uses at all
+of the -ck- forms, but a few of the -c- forms.  It is hard to know whether
+to take the verb "narc" out of 2of12id, or to put the inflections back into
+2of12inf.  In the realm of spelling checking, it is almost certainly best
+for "narced" and "narcing" not be present in the dictionary.  I've rather
+reluctantly marked the entry for "narc V:" with a "-", as being the result
+that works out best for most users of the list.
+
+weaselled, weaselling - These inflections are not shown, as far as I can
+tell, in my dictionaries.  But I have other sources for these forms,
+including a bigger dictionary by a publisher of one of my sources which
+lists the word.  You could argue this either way, but since I'm sure that
+these spellings exist, I'm going to be inclusive and remove the hyphens from
+the "weasel V:" entry in 2of12id.
+
+I'm attaching my edited 2of12id.txt.  Feel free to argue with me about any
+of my conclusions.  And thanks for calling these errors to my attention
+(even if you didn't realize that was what you were doing).
+
+
+Date: Fri, 9 Jan 2009 06:39:18 -0500
+From: Alan Beale
+
+Friday, January 9, 2009, 1:34:49 AM, Kevin Atkinson wrote:
+
+> On Thu, 1 Jan 2009, Alan Beale wrote:
+
+> Thank you for the updated file, I have a few questions on your entries:
+
+> You changed:
+>    -nett N: netts
+>    -nett V: netted  netting  netts
+> to
+>    nett N: netts
+>    nett V: netted  netting  netts
+
+> All my dictionaries point to nett as a British variant of net.  However
+> the Compact Oxford English Dictionary only marks it as a variant for the
+> verb form only, see
+> http://www.askoxford.com/concise_oed/net_2?view=uk. 
+> Do you have any evidence nett is used as a noun.
+
+net (2) is also a noun, an abbreviated form of "net profit" or "net income".
+
+Shorter OED makes this explicit.  "Gross income of these companies
+improved last year, but their netts are still in decline."  (That's my
+sentence, not the SOED's.)
+
+> You added:
+>    antiviral N: antivirals
+> What evidence do you have that antiviral is a noun?
+
+American Heritage dictionary (CD ROM).
+
+> Why did you change:
+>    syrup N: ~syrups
+> to
+>    syrup N: syrups
+
+Common sense.  This seems to be a minority opinion, but I claim a
+usage like "Our pancake house offers twenty-eight different syrups" is
+not in any way unusual.  The Macmillan Dictionary for Advanced
+Learners backs me up on this.

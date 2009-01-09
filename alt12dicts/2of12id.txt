@@ -133,7 +133,7 @@ absentmindedly A:
 absentmindedness N: ~absentmindednesses
 absinth N: ~absinths
 absinthe N: ~absinthes
-absolute A: -absoluter  -absolutest
+absolute A: -absoluter  absolutest
 absolute N: absolutes
 absolutely A:
 absoluteness N: ~absolutenesses
@@ -1666,6 +1666,7 @@ antitoxin N: antitoxins
 antitrust A:
 antivenin N: antivenins
 antiviral A:
+antiviral N: antivirals
 antivivisectionist N: antivivisectionists
 antiwar A:
 antler N: antlers
@@ -1681,6 +1682,7 @@ anxiously A:
 anxiousness N: ~anxiousnesses
 any A:
 anybody P:
+anybody N: anybodies
 anyhow A:
 anymore A:
 anyone P:
@@ -5293,6 +5295,7 @@ butcher N: butchers
 butcher V: butchered  butchering  butchers
 butchery N: butcheries
 butler N: butlers
+buts N:
 butt N: butts
 butt V: butted  butting  butts
 butte N: buttes
@@ -9975,10 +9978,10 @@ dark N: ~darks
 -dark V: darked  darking  darks
 darken V: darkened  darkening  darkens
 darkener N: darkeners
-darkly A: darklier  darkliest
+darkly A: ~darklier  ~darkliest
 darkness N: ~darknesses
 darkroom N: darkrooms
-darling A:
+darling A:  -  darlingest
 darling N: darlings
 darn A:
 darn I:
@@ -11167,7 +11170,7 @@ digress V: digressed  digressing  digresses
 digression N: digressions
 digressive A:
 dike N: dikes
--dike V: diked  diking  dikes
+dike V: diked  diking  dikes
 dilapidated A:
 dilapidation N: ~dilapidations
 dilatation N: ~dilatations
@@ -13681,6 +13684,7 @@ escalation N: escalations
 escalator N: escalators
 escallop N: escallops
 escallop V: escalloped  escalloping  escallops
+escalop N: escalops
 escalop V: escaloped  escaloping  escalops
 escapade N: escapades
 escape A:
@@ -24144,6 +24148,7 @@ magnolia N: magnolias
 magnum A:
 magnum N: magnums
 magpie N: magpies
+magus N: magi
 maharaja N: maharajas
 maharajah N: maharajahs
 maharanee N: maharanees
@@ -24723,7 +24728,7 @@ maximize V: maximized  maximizing  maximizes
 maximum A:
 maximum N: maximums (maxima)
 may N: ~mays
-may V: might  -  may (@mayst)
+may V: might  -  may (@mayest  @mayst)
 maybe A:
 maybe N: maybes
 mayday N: maydays
@@ -26571,7 +26576,7 @@ napper N: nappers
 nappy A: nappier  nappiest
 nappy N: nappies
 narc N: narcs
-narc V: narced  narcing  narcs
+-narc V: narced  narcing  narcs
 narcissism N: ~narcissisms
 narcissist A:
 narcissist N: narcissists
@@ -26646,7 +26651,7 @@ naturally A:
 naturalness N: ~naturalnesses
 nature N: natures
 -naught A:
-naught N: ~naughts
+naught N: naughts
 naughtily A:
 naughtiness N: ~naughtinesses
 naughty A: naughtier  naughtiest
@@ -26835,8 +26840,8 @@ nether A:
 nethermost A:
 netherworld N: ~netherworlds
 nett A:
--nett N: netts
--nett V: netted  netting  netts
+nett N: netts
+nett V: netted  netting  netts
 netting N: ~nettings
 nettle N: nettles
 nettle V: nettled  nettling  nettles
@@ -27321,7 +27326,7 @@ nonperson N: nonpersons
 nonphysical A:
 nonphysically A:
 -nonplus N: nonpluses
-nonplus V: nonplussed (nonplused)  nonplussing (nonplusing)  nonpluses
+nonplus V: nonplussed (nonplused)  nonplussing (nonplusing)  nonplusses (nonpluses)
 nonpoisonous A:
 nonpolitical A:
 nonpolluting A:
@@ -29577,8 +29582,8 @@ pectin N: ~pectins
 pectoral A:
 pectoral N: pectorals
 peculate V: peculated  peculating  peculates
-peculation N: peculations
-peculator N: ~peculators
+peculation N: ~peculations
+peculator N: peculators
 peculiar A:
 -peculiar N: peculiars
 peculiarity N: peculiarities
@@ -30390,7 +30395,7 @@ pilgrimage N: pilgrimages
 -pilgrimage V: pilgrimaged  pilgrimaging  pilgrimages
 piling N: pilings
 pill N: pills
--pill V: pilled  pilling  pills
+pill V: pilled  pilling  pills
 pillage N: ~pillages
 pillage V: pillaged  pillaging  pillages
 pillager N: pillagers
@@ -30781,7 +30786,7 @@ pluckiness N: ~pluckinesses
 plucky A: pluckier  pluckiest
 plug N: plugs
 plug V: plugged  plugging  plugs
-plum A:
+plum A: plummer  plummest
 plum N: plums
 plumage N: ~plumages
 plumb A:
@@ -32155,7 +32160,7 @@ prosciutto N: ~prosciutti / ~prosciuttos
 proscribe V: proscribed  proscribing  proscribes
 proscription N: proscriptions
 prose A:
-prose N: proses
+prose N: ~proses
 -prose V: prosed  prosing  proses
 prosecute V: prosecuted  prosecuting  prosecutes
 prosecution N: prosecutions
@@ -33767,7 +33772,7 @@ reflexion N: reflexions
 reflexive A:
 reflexive N: reflexives
 reflexively A:
-refocus V: refocused (refocussed)  refocusing (refocussing)  refocuses
+refocus V: refocused (refocussed)  refocusing (refocussing)  refocuses (refocusses)
 refold V: refolded  refolding  refolds
 reforest V: reforested  reforesting  reforests
 reforestation N: ~reforestations
@@ -34358,7 +34363,7 @@ reset N: resets
 reset V: reset  resetting  resets
 resettle V: resettled  resettling  resettles
 resettlement N: ~resettlements
-resew V: resewed  resewing  resews
+resew V: resewed  resewn  resewing  resews
 reshape V: reshaped  reshaping  reshapes
 resharpen V: resharpened  resharpening  resharpens
 reship V: reshipped  reshipping  reships
@@ -35414,7 +35419,7 @@ safe A: safer  safest
 safe N: safes
 safeguard N: safeguards
 safeguard V: safeguarded  safeguarding  safeguards
-safekeeping N: safekeepings
+safekeeping N: ~safekeepings
 safely A:
 safeness N: ~safenesses
 safety A:
@@ -36846,7 +36851,7 @@ sheath V: sheathed  sheathing  sheaths
 sheathe V: sheathed  sheathing  sheathes
 sheathing N: sheathings
 sheave N: sheaves
--sheave V: sheaved  sheaving  sheaves
+sheave V: sheaved  sheaving  sheaves
 shebang N: shebangs
 shed N: sheds
 shed V: shed  shedding  sheds
@@ -39403,6 +39408,7 @@ stir N: stirs
 stir V: stirred  stirring  stirs
 stirrer N: stirrers
 stirringly A:
+stirrings N:
 stirrup N: stirrups
 stitch N: stitches
 stitch V: stitched  stitching  stitches
@@ -39541,7 +39547,7 @@ straightforwardly A:
 straightforwardness N: ~straightforwardnesses
 straightforwards A:
 straightjacket N: straightjackets
--straightjacket V: straightjacketed  straightjacketing  straightjackets
+straightjacket V: straightjacketed  straightjacketing  straightjackets
 straightly A:
 straightness N: ~straightnesses
 straightway A:
@@ -40487,7 +40493,7 @@ swerve N: swerves
 swerve V: swerved  swerving  swerves
 swift A: swifter  swiftest
 swift N: swifts
-swiftly A: swiftlier  swiftliest
+swiftly A: -swiftlier  -swiftliest
 swiftness N: ~swiftnesses
 swig N: swigs
 swig V: swigged  swigging  swigs
@@ -40639,7 +40645,7 @@ syphon N: syphons
 syphon V: syphoned  syphoning  syphons
 syringe N: syringes
 syringe V: syringed  syringing  syringes
-syrup N: ~syrups
+syrup N: syrups
 -syrup V: syruped  syruping  syrups
 syrupy A:
 system N: systems
@@ -41205,7 +41211,7 @@ tenet N: tenets
 tenfold A:
 tennis N: ~tennises
 tenon N: tenons
--tenon V: tenoned  tenoning  tenons
+tenon V: tenoned  tenoning  tenons
 tenor A:
 tenor N: tenors
 tenpin N: tenpins
@@ -41340,7 +41346,7 @@ textual A:
 textually A:
 textural A:
 texture N: textures
--texture V: textured  texturing  textures
+texture V: textured  texturing  textures
 textured A:
 thalamus N: thalami
 thalidomide N: ~thalidomides
@@ -41755,7 +41761,7 @@ tilt N: tilts
 tilt V: tilted  tilting  tilts
 timber I:
 timber N: timbers
--timber V: timbered  timbering  timbers
+timber V: timbered  timbering  timbers
 timbered A:
 timberland N: ~timberlands
 timberline N: timberlines
@@ -44224,7 +44230,7 @@ unseeingly A:
 unseemliness N: ~unseemlinesses
 unseemly A: unseemlier  unseemliest
 unseen A:
-unseen N: unseens
+unseen N: ~unseens
 unsegmented A:
 unsegregated A:
 unselfish A:
@@ -45690,7 +45696,7 @@ weaken V: weakened  weakening  weakens
 weakener N: weakeners
 weakfish N: weakfish | weakfishes
 weakling N: weaklings
-weakly A: weaklier  weakliest
+weakly A: ~weaklier  ~weakliest
 weakness N: weaknesses
 weal N: weals
 wealth N: ~wealths
@@ -45713,7 +45719,7 @@ wearisomely A:
 weary A: wearier  weariest
 weary V: wearied  wearying  wearies
 weasel N: weasels | weasel
-weasel V: weaseled (-weaselled)  weaseling (-weaselling)  weasels
+weasel V: weaseled (weaselled)  weaseling (weaselling)  weasels
 weaselly A:
 weather A:
 weather N: ~weathers
@@ -46243,6 +46249,7 @@ winkle N: winkles
 winkle V: winkled  winkling  winkles
 winnable A:
 winner N: winners
+winning A: -  winningest
 winning N: winnings
 winningly A:
 -winnow N: winnows
@@ -46302,7 +46309,7 @@ wistfully A:
 wistfulness N: ~wistfulnesses
 wit A:
 wit N: wits
-wit V: wist  witting  wot  wost  wot  wit / wite
+wit V: wist  witting  wot  -wost  -wot  wit / -wite
 witch N: witches
 witch V: witched  witching  witches
 witchcraft N: ~witchcrafts

@@ -38,7 +38,6 @@ while (<F>) {
         die "$b != $z" unless $b eq $z;
 	print c "$a\n$b\n$c\n";
 	if ($s eq 'A' || $s eq 'a') {
-            print $_ if $s eq 'a';
 	    $al = "$a\n";
 	    $bl = "$a\n$b\n";
 	} elsif ($s eq 'B') {

@@ -15,18 +15,6 @@ rem ()
   comm -23 - $1;
 }
 
-filter ()
-{
-  comm -12 - working/variant-filter.lst
-}
-
-#
-# make list of all variants that I know about in a varcon
-#
-
-cat r/varcon/variant.tab r/varcon/variant-infl.tab \
-  | tr '\t' '\n' | sort -u > working/variant-filter.lst
-
 #
 # process lists from alt12dicts
 #
@@ -112,7 +100,6 @@ start \
   | rem working/variant_2-pre.lst | rem working/variant_1-pre.lst    \
   | add working/variant_0-pre.lst    \
   | rem r/special/never-variant      \
-  | filter                           \
   > working/variant_0.lst
 
 start \
@@ -122,7 +109,6 @@ start \
   | add r/infl/variant_0.lst         \
   | rem working/variant_0.lst        \
   | rem r/special/never-variant      \
-  | filter                           \
   > working/variant_1.lst
 
 start \
@@ -131,5 +117,4 @@ start \
   | add r/infl/variant_1.lst  | add r/infl/variant_0.lst         \
   | rem working/variant_1.lst | rem working/variant_0.lst        \
   | rem r/special/never-variant      \
-  | filter                           \
   > working/variant_2.lst

@@ -46309,7 +46309,7 @@ wistfully A:
 wistfulness N: ~wistfulnesses
 wit A:
 wit N: wits
-wit V: wist  witting  wot  -wost  -wot  wit / -wite
+@wit V: wist  witting  wot  -wost  -wit / -wite
 witch N: witches
 witch V: witched  witching  witches
 witchcraft N: ~witchcrafts

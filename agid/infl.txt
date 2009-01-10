@@ -111009,7 +111009,7 @@ wistfully A: wistfullier? | wistfulliest?
 wistfulness N: wistfulnesses
 wistiti N?: wistitis
 wit N: wits
-wit V: wist | witting | wot | wost | wot | wit, wite 0.1
+wit V: wist | witting | wot | wit, wost 2 | wit, wite 2
 witan N?: witans
 witblits N?: witblitses
 witch N: witches

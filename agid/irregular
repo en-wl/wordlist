@@ -761,7 +761,7 @@ wildfowl pN: wildfowl, wildfowls 1
 will V: willed, would {future}, wouldst 2 {future} | willing | wills, will {future}, wilt 2 {future}
 win v: won
 wind v: winded {blow}, wound 1 {blow}, wound {curve}, winded 1 {curve}, winded {scent_tire}
-wit V: wist | witting | wot | wost | wot | wit, wite 0.1
+wit V: wist | witting | wot | wit, wost 2 | wit, wite 2
 wolf pN: wolves, wolf 1
 wolverine pN: wolverines, wolverine 1
 woman pN: women

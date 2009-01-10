@@ -42,7 +42,16 @@ a few special verbs):
   <past tense> [<past participle>] <-ing form> <-s form> 
 and for adjective or adverbs:
   <-er form> <-est form>
-Each form is seperated by a ' | '.  
+Each form is seperated by a ' | '.
+
+Special cases:
+be:
+  <past 1st & 3d singular> <2d singular, plural, past subjunctive>
+  <past participle> <present participle> <present 1st singular>
+  <2d singular> <3d singular> <plural present>
+wit:
+  <past & past participle> <present participle> <present participle>
+  <present 1st & 3d singular> <2d singular> <plural present>
 
 An absence of a variant level implies a variant level of 0.  Two words
 with the same whole number variant level are considered almost equal

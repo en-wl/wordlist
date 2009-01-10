@@ -34,7 +34,7 @@ my %possessive;
 while (<F>) {
   s/\r?\n$// or die;
   # (flags, base word, part of speach, infl forms)
-  my ($d,$w,$p,$a) = /^(\-?)(\w+) (.).*: ?(.*)$/ or die;
+  my ($d,$w,$p,$a) = /^([-@]?)(\w+) (.).*: ?(.*)$/ or die;
   $possessive{$w} = "$w\'s\n" if $p eq 'N' && ($d eq '' || $use_all);
   next if $use_all;
   my @a = $a =~ /([~@-]*\w+)/g;

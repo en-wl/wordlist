@@ -5,8 +5,8 @@ open F, "r/alt12dicts/2of12id.txt" or die;
 while (<F>) {
   s/\r?\n$// or die;
   # (uncommon flag, base word, part of speach, inflected forms)
-  ($d,$w,$p,$a) = /^(\-?)(\w+) (.).*: ?(.*?)$/ or die;
-  next if $d eq '-'; #
+  ($d,$w,$p,$a) = /^([-@]?)(\w+) (.).*: ?(.*?)$/ or die;
+  next if $d; #
   @a0 = split /  /, $a;
   splice @a0, -1, 0, "'" if $p eq 'V' && @a0 >= 3; # insert placeholder
   @a = ();

@@ -9,7 +9,8 @@ while(<STDIN>) {
 sub valid_entry ( $ ){local $_ = $_[0]; /^[A-Za-z\']+$/ && exists $words{$_}}
 
 foreach my $f (qw(working/variant_0.lst working/variant_1.lst 
-		  working/variant_2.lst r/varcon/abbc.tab))
+		  working/variant_2.lst r/varcon/american.lst
+                  r/varcon/british.lst r/varcon/british_z.lst))
 {
   open F, $f or die "Unable to open $f\n";
   while (<F>) {

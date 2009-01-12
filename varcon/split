@@ -1,15 +1,32 @@
-#!/bin/sh
+#!/usr/bin/perl
 
-set -e
+use strict;
+use warnings;
+use IO::Handle;
 
-perl split.pl "$@"
+use varcon qw(%map);
 
-cat american.lst.tmp        | sort | uniq > american.lst
-cat british.lst.tmp         | sort | uniq > british.lst
-cat british_z.lst.tmp       | sort | uniq > british_z.lst
-cat british_variant.lst.tmp | sort | uniq > british_variant.lst
-cat canadian.lst.tmp        | sort | uniq > canadian.lst
-cat common.lst.tmp          | sort | uniq > common.lst
+open F, "abbc.tab";
 
-rm {american,british,british_z,british_variant,canadian,common}.lst.tmp
+my %F;
 
+foreach my $s (sort keys %map) {
+    $F{"${s}0"} = new IO::Handle;
+    open $F{"${s}0"}, "| sort -u > $map{$s}.lst";
+    foreach my $v (1..3) {
+        $F{"$s$v"} = new IO::Handle;
+        open $F{"$s$v"}, "| sort -u > $map{$s}-v$v.lst";
+    }
+}
+
+open F, "varcon.txt";
+while (<F>) {
+    my %r = varcon::flatten(varcon::readline($_));
+    foreach my $k (sort keys %r) {
+        print "!$k: @{$r{$k}}\n" if (@{$r{$k}} > 1);
+        foreach (@{$r{$k}}) {
+            print "Bad key: $k\n" unless defined $F{$k};
+            $F{$k}->print("$_\n");
+        }
+    }
+}

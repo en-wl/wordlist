@@ -17,11 +17,13 @@ sub add
     }
 }
 
-open F, "abbc.tab" or die;
+open F, "varcon.txt" or die;
 
 while (<F>) {
     chop;
-    @l = /^(\S+)\t(\S+)\t(\S+)\t(\S+)\t/ or die "Bad Line: $_";
+    my ($d) = split / *\| */;
+    my (@d) = split / *\/ */, $d;
+    @l = map {/^.+?: (.+)/; $1} @d;
     &add(@l);
 }
 

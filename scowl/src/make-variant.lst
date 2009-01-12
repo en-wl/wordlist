@@ -41,7 +41,7 @@ expand() {
     rm $tmpfile
 }
 
-cat r/varcon/british_variant.lst  \
+cat r/varcon/british*-v?.lst  \
   | rem working/amer.lst          \
   | rem working/nonamer.lst       \
   > working/variant-british.lst

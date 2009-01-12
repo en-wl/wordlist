@@ -158,10 +158,10 @@ r/alt12dicts/signature.lst: r/alt12dicts/signature.txt src/clean-alan-list
 #	src/proc-12dicts
 
 r/varcon/american.lst r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst r/varcon/common.lst: \
-  r/varcon/split r/varcon/abbc.tab
+  r/varcon/split r/varcon/varcon.txt
 	cd r/varcon; ./split
 
-r/varcon/variant.tab: r/varcon/make-variant r/varcon/abbc.tab r/varcon/variant-also.tab r/varcon/variant-infl.tab
+r/varcon/variant.tab: r/varcon/make-variant r/varcon/varcon.txt r/varcon/variant-also.tab r/varcon/variant-infl.tab
 	cd r/varcon; ./make-variant no-infl
 
 r/ukacd/deaccented.lst: src/make-ukacd-deaccented.lst \

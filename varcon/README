@@ -12,6 +12,29 @@ equivalent forms of other variants.
 
 The latest version can be found at http://wordlist.sourceforge.net/.
 
+<<< NEW TEXT
+
+The varcon.txt file:
+  A = American
+  B = British "ise" spelling
+  Z = British "ize" spelling (OED Spelling)
+  C = Canadian
+
+Variants marked
+  v = variant (orig. v or V)
+  V = seldom used variant (m-w also...)
+  - = possible variant (orig. VV)
+ 
+If more than one 'A' (or 'B' ...) on a line than equal variants with
+slight preference given the the first one listed.
+
+Sometimes the variant used depends on the meaning, in this case the
+same word may be on seperate lines, explaination often given after |.
+
+ends with "| -" means for an obscure meaning of the word
+
+>>> ORIG TEXT
+
 The abbc.tab contains mappings between American, British with "ise"
 spelling, British with "ize" spelling (OED Spelling), and Canadian
 spellings.  The fields are separated by a tab character and have the
@@ -24,6 +47,7 @@ meaning (C-OED = Compact Oxford English Dictionary of Current English)
   a: Like A but it not really considered a separate word, rather 
      a variant.  For example "spelled" vs "spelt".
   B: British words that are also used in American / Canadian spellings
+  b: Like B but a variant.
   VV: According to C-OED the American spelling is the correct one,
       however, I found some evidence that the British spelling is
       still used.
@@ -44,6 +68,8 @@ find any evidence that "vapourize" or "vapourise" is a legal word,
 although I could find some evidence it was used.  Nevertheless since
 "vapourize/-ise" doesn't seam to be a valid word, this spelling was
 not included.  Effected entries are marked with a "!"
+
+===
 
 The file voc.tab is like abbc.tab except that it converts between
 vocabulary instead of spelling.  If more than one word if often uses to

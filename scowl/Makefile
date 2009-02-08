@@ -18,11 +18,19 @@ programs := src/deaccent src/find-accented
 
 .PHONY: all
 all: $(foreach l, $(levels), final/english-words.$(l)) \
-  final/special-roman-numerals.35 final/special-hacker.50
+  final/special-roman-numerals.35 final/special-hacker.50 \
+  README
 
 .PHONY: clean
 clean:
 	rm -f working/* $(programs) r/varcon/*.lst r/varcon/variant.tab r/mwords/*.lst r/alt12dicts/*.lst r/ispell/all.* r/pos/word.lst r/uk-freq-class/uk.?? r/census/*.lst
+
+#
+# README
+#
+
+README: src/make-README $(foreach l, $(levels), final/english-words.$(l))
+	src/make-README
 
 #
 # Actual word list creation

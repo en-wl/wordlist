@@ -1,10 +1,37 @@
-#!/bin/sh
+#!/usr/bin/perl
 
-c=0
-for f in 10 20 35 40 50 55 60 70 80 95
-do
-  n=`cat final/english-{words,abbreviations,contractions}.$f 2> /dev/null | wc -l `
-  p=`cat final/english-{proper-names,upper}.$f 2> /dev/null | wc -l`
-  c=`expr $c + $n + $p`
-  echo $f $n $p $c
-done
+use strict;
+use warnings;
+
+my @data;
+
+my $c = 0;
+my $hc = 0;
+foreach my $f (10,20,35,40,50,55,60,70,80,95) {
+  my $n = `cat final/{american,english}-{words,abbreviations,contractions}.$f 2> /dev/null | wc -l ` + 0;
+  my $p = `cat final/{american,english}-{proper-names,upper}.$f 2> /dev/null | wc -l` + 0;
+  my $c0 = $c;
+  $c = $c + $n + $p;
+  my $h;
+  for (my $i = $c0+1; $i <= $c; ++$i) {
+      $h += 1/$i;
+  }
+  $hc += $h;
+  push @data, [$f, $n, $p, $c, $hc];
+}
+
+sub commify {
+    local $_  = shift;
+    1 while s/^([-+]?\d+)(\d{3})/$1,$2/;
+    return $_;
+}
+
+print "  Size   Words       Names    Running Total  %        Zipf's law\n";
+
+foreach (@data) {
+    my ($f, $n, $p, $c0, $h) = @$_;
+    my $cp = 100*$c0/$c;
+    my $hp = 100*$h/$hc;
+    printf("   %2d  %7s     %7s      %7s   %5.1f         %6.2f\n", $f, commify($n), commify($p), commify($c0), $cp, $hp);
+    #print "$f $n $p $c0   $cp $hp\n";
+}

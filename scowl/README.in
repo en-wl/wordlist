@@ -58,76 +58,14 @@ Final the "words" category contains all the normal English words.
 To give you an idea of what the words in the various sizes look like
 here is a sample of 25 random words found only in that size:
 
-10: began both buffer cause collection content documenting easiest
-    equally examines expecting first firstly hence inclining
-    irrelevant justified little logs necessarily ought sadly six
-    thing visible
+@`src/rand-samples`
 
-20: chunks commodity contempt contexts cruelty crush dictatorship
-    disgusted dose elementary evolved frog god hordes notion overdraft
-    overlong overlook phoning poster recordings sand skull substituted
-    throughput
+And here is a count on the number of in each spelling category
+(american + english spelling category):
 
-35: aliasing blackouts blowout bluntness corroborated derrick
-    dredging elopements entrancing excising fellowship flagpole
-    germination glimpse gondola guidebook madams minimalism minnows
-    partisans petitions shelling swarmed throng welding
+@`src/count`
 
-40: altercation blender castigation chump coffeehouse determiners
-    doggoning exhibitor finders flophouse gazebo lumbering masochism
-    mopeds poetically pubic refinance reggae scragglier softhearted
-    stubbornness teargassed township underclassman whoosh
-
-50: accumulative adulterant allegorically amorousness astrophysics
-    camphor coif dickey elusiveness enviousness fakers fetishistic
-    flippantly headsets liefs midyears myna pacification persiflage
-    phosphoric pinhole sappy seres unrealistically unworldly
-
-55: becquerel brickie centralist cine conveyancing courgette
-    disarmingly garçon gobstopper infilling insipidity
-    internationalist kabuki lyrebirds obscurantism rejigged
-    revisionist satsuma slapper sozzled sublieutenants teletext vino
-    wellness wracking
-
-60: absorber acceptableness adventurousness antifascists arrhythmia
-    audiology cartage cruses fontanel forelimbs granter hairlike
-    installers jugglery lappets libbers mandrels micrometeorite
-    mineshaft reconsecrates saccharides smellable spavined sud timbrel
-
-70: atomisms benedict carven coxa cyanite detraining diazonium
-    dogberry dogmatics entresol fatherlessnesses firestone imprecator
-    laterality legitimisms maxwell microfloppies nonteaching pelerine
-    pentane pestiferousness piscator profascist tusche twirp
-
-80: cotransfers embrangled forkednesses giftwrapped globosity hatpegs
-    hepsters hermitess interspecific inurbanities lamiae
-    literaehumaniores literatures masulas misbegun plook prerupt
-    quaalude rosanilin sabbatism scowder subreptive thumbstalls
-    understrata yakows
-
-95: anatropal anientise bakshi brouzes corsie daimiote dhaw dislikened
-    ectoretina fortuitisms guardeen hyperlithuria nonanachronistic
-    overacceleration pamphletic parma phytolith starvedly
-    trophoplasmic ulorrhagia undared undertide unplunderously
-    unworkmanly vasoepididymostomy
-
-And here is a rough count on the number of words in the "english"
-spelling category for each size:
-
-  Size  Words   Proper Names  Running Total 
-
-   10    5,000                    5,000                
-   20    8,700                   14,000
-   35   34,500         200       48,000
-   40    6,000         500       55,000
-   50   23,200      17,200       95,000
-   55    7,500                  103,000
-   60   16,000      12,800      132,000
-   70   45,100      34,300      211,000
-   80  137,000      30,400      379,000
-   95  198,000      51,800      628,000
-
-(The "Words" column does not include the proper name count.)
+(The "Words" column does not include the name count.)
 
 Size 35 is the recommended small size, 50 the medium and 70 the large.
 For spell checking I recommend using 60.  Sizes 70 and below contain

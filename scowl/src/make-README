@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+
+sub bc {
+    local $_ = `$_[0]`;
+    chop;
+    return $_;
+}
+
+$/ = undef;
+open F, "README.in";
+$_ = <F>;
+s/\@\`([^\`]+)\`/bc($1)/ge;
+
+open F, ">README";
+print F;
+

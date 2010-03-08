@@ -24728,7 +24728,7 @@ maximize V: maximized  maximizing  maximizes
 maximum A:
 maximum N: maximums (maxima)
 may N: ~mays
-may V: might  -  may (@mayest  @mayst)
+may V: might  -  may (@mayest @mayst)
 maybe A:
 maybe N: maybes
 mayday N: maydays

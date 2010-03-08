@@ -220,7 +220,6 @@ A Z: Celticize's / B: Celticise's
 A Z: Celticizes / B: Celticises
 A: Cenis / B: Caenis
 A: Cenis's / B: Caenis's
-A: Center's / B: Centre's
 A: Centerville / B: Centreville
 A: Centerville's / B: Centreville's
 A: Cesaria / B: Caesaria
@@ -1307,6 +1306,7 @@ A Z: accessorized / B: accessorised
 A Z: accessorizes / B: accessorises
 A Z: accessorizing / B: accessorising
 A Z: acclimatizable / B: acclimatisable
+A Z: acclimatization / B: acclimatisation
 A Z: acclimatization's / B: acclimatisation's
 A Z: acclimatizer / B: acclimatiser
 A Z: acclimatizers / B: acclimatisers
@@ -1314,6 +1314,14 @@ A: accorage / B: accourage
 A: accoraged / B: accouraged
 A: accorages / B: accourages
 A: accoraging / B: accouraging
+A: accouter / Av B: accoutre
+A: accoutered / Av B: accoutred
+A: accoutering / Av B: accoutring
+A: accouterment / Av B: accoutrement
+A: accouterment's / Av B: accoutrement's
+A: accouterments / Av B: accoutrements
+A: accouterments / Av B: accoutrements's
+A: accouters / Av B: accoutres
 A: acetonemia / B: acetonaemia
 A: acetonemic / B: acetonaemic
 A: achenia / B: achaenia
@@ -1909,6 +1917,7 @@ A: appall / B: appal
 A: appalls / B: appals
 A: appareled / B: apparelled
 A: appareling / B: apparelling
+A Bv: appendixes / B Av: appendices
 A Z: appetize / B: appetise
 A Z: appetized / B: appetised
 A Z: appetizement / B: appetisement
@@ -2940,8 +2949,6 @@ A: check / B: cheque | bank
 A B: check | verify
 A: check's / B: cheque's | bank
 A B: check's | verify
-A: checks / B: cheques | bank
-A B: checks | verify
 A: checkbook / B: chequebook
 A: checkbook's / B: chequebook's
 A: checkbooks / B: chequebooks
@@ -2962,6 +2969,8 @@ A: checkers's / B: chequers's | pattern
 A B: checkers's | verify
 A: checking / B: chequing | bank
 A B: checking | verify
+A: checks / B: cheques | bank
+A B: checks | verify
 A Z: cheerfulize / B: cheerfulise
 A Z: cheerfulizes / B: cheerfulises
 A: cheerly / B: cherely
@@ -4347,7 +4356,6 @@ A Z: destalinizing / B: destalinising
 A Z: desterilize / B: desterilise
 A Z: destigmatization / B: destigmatisation
 A: desulfurization / B: desulphurisation / Z: desulphurization
-A Z: desulfurization's / B: desulfurisation's
 A: desulfurization's / B: desulphurisation's / Z: desulphurization's
 A: desulfurizations / B: desulphurisations / Z: desulphurizations
 A: desulfurize / B: desulphurise / Z: desulphurize
@@ -4431,15 +4439,15 @@ A: dialist / B: diallist
 A: dialist's / B: diallist's
 A: dialists / B: diallists
 A B: dialog / Bv: dialogue | dialog box
-AV: dialog / A B: dialogue
-AV: dialog's / A B: dialogue's
-AV: dialogged / A B: dialogued
-AV: dialogging / A B: dialoguing
 A Z: dialogize / B: dialogise
 A Z: dialogized / B: dialogised
 A Z: dialogizes / B: dialogises
 A Z: dialogizing / B: dialogising
+AV: dialog / A B: dialogue
+AV: dialog's / A B: dialogue's
+AV: dialogged / A B: dialogued
 AV: dialogs / A B: dialogues
+AV: dialogging / A B: dialoguing
 A: dialyzabilities / B: dialysabilities
 A: dialyzability / B: dialysability
 A: dialyzability's / B: dialysability's
@@ -5368,7 +5376,6 @@ A: esthesiogen / B: aesthesiogen
 A: esthesiogenic / B: aesthesiogenic
 A: esthesiogens / B: aesthesiogens
 A: esthesis / B: aesthesis
-A: esthete's / B: aesthete's
 A: esthetical / B: aesthetical
 A: esthetician / B: aesthetician
 A: esthetician's / B: aesthetician's
@@ -6257,6 +6264,11 @@ A Z: ghettoizes / B: ghettoises
 A Z: ghettoizing / B: ghettoising
 A Z: giantize / B: giantise
 A Z: giantizes / B: giantises
+Av B: jibe / A Bv: gibe | insult
+Av B: jibe's / A Bv: gibe's | insult
+Av B: jibed / A Bv: gibed | insult
+Av B: jibes / A Bv: gibes | insult
+Av B: jibing / A Bv: gibing | insult
 A: gimbaled / B: gimballed
 A: gimbaling / B: gimballing
 A Z: glacialize / B: glacialise
@@ -6379,6 +6391,8 @@ A Z: governmentalize / B: governmentalise
 A Z: governmentalized / B: governmentalised
 A Z: governmentalizes / B: governmentalises
 A Z: governmentalizing / B: governmentalising
+A B: gram / Bv: gramme | metric unit
+A B: gram | chickpeas
 A Z: grammaticize / B: grammaticise
 A Z: grammaticized / B: grammaticised
 A Z: grammaticizes / B: grammaticises
@@ -6414,13 +6428,16 @@ A Z: graphitizes / B: graphitises
 A Z: graphitizing / B: graphitising
 A: graveled / B: gravelled
 A: graveling / B: gravelling
-A: gray / B: grey
-A: gray's / B: grey's
-A: grayed / B: greyed
-A: grayer / B: greyer
-A: grayest / B: greyest
-A: graying / B: greying
-A: grays / B: greys
+A: gray / AV B: grey
+A B: gray | physical unit | -
+A: gray's / AV B: grey's
+A: grayed / AV B: greyed
+A: grayer / AV B: greyer
+A: grayest / AV B: greyest
+A: graying / AV B: greying
+A: grayist / AV B: greyish
+A: grays / AV B: greys
+A B: grays | physical unit | -
 A: grecian / B: graecian
 A: grecism / B: graecism
 A Z: grecize / B: grecise
@@ -6799,7 +6816,6 @@ A Z: herborized / B: herborised
 A Z: herborizes / B: herborises
 A Z: herborizing / B: herborising
 A: heredes / B: haeredes
-A: heres's / B: haeres's
 A Z: hereticize / B: hereticise
 A Z: hereticizes / B: hereticises
 A Z: heroinize / B: heroinise
@@ -7704,18 +7720,13 @@ A: jewelers / B: jewellers
 A: jewelery / B: jewellery
 A: jeweling / B: jewelling
 A: jibe / AV B: gybe | sailing
-Av B: jibe / A Bv: gibe | insult
 A B: jibe | agree
 A: jibe's / AV B: gybe's | sailing
-Av B: jibe's / A Bv: gibe's | insult
 A: jibed / AV B: gybed | sailing
-Av B: jibed / A Bv: gibed | insult
 A B: jibed | agree
 A: jibes / AV B: gybes | sailing
-Av B: jibes / A Bv: gibes | insult
 A B: jibes | agree
 A: jibing / AV B: gybing | sailing
-Av B: jibing / A Bv: gibing | insult
 A B: jibing | agree
 A: jor / B: jour
 A: jors / B: jours
@@ -8039,11 +8050,11 @@ A: license / B: licence | noun
 A B: license / Bv: licence | verb
 A: license's / B: licence's
 A B: licensed / Bv: licenced
+A: licenseless / B: licenceless
+A: licenselesses / B: licencelesses
 A: licenses / B: licences | noun
 A B: licenses / Bv: licences | verb
 A B: licensing / Bv: licencing
-A: licenseless / B: licenceless
-A: licenselesses / B: licencelesses
 A Z: lichenization / B: lichenisation
 A Z: lichenization's / B: lichenisation's
 A Z: lichenizations / B: lichenisations
@@ -8627,10 +8638,10 @@ A: meter / B: metre | metric meter, rhythmic pattern
 A B: meter | measure
 A: meter's / B: metre's | metric meter, rhythmic pattern
 A B: meter's | measure
-A: meters / B: metres | metric meter, rhythmic pattern
-A B: meters | measure
 A: metergram / B: metregram
 A: meterless / B: metreless
+A: meters / B: metres | metric meter, rhythmic pattern
+A B: meters | measure
 A: metership / B: metreship
 A: metestrus / B: metoestrus
 A: metestrus's / B: metoestrus's
@@ -14083,6 +14094,9 @@ A: thermosiphons / B: thermosyphons
 A: thesmothete / B: thesmothetae
 A Z: thronize / B: thronise
 A Z: thronizes / B: thronises
+A Bv: thruway / B Av: throughway
+A Bv: thruway's / B Av: throughway's
+A Bv: thruways / B Av: throughways
 A Z: thymectomize / B: thymectomise
 A Z: thyroidectomized / B: thyroidectomised
 A Z: thyroidization / B: thyroidisation
@@ -14097,6 +14111,9 @@ A B: tire | exhausted
 A: tire's / B: tyre's
 A: tires / B: tyres | whell
 A B: tires | exhausted
+A Bv: tiro / B: tyro
+A Bv: tiro's / B: tyro's
+A Bv: tiros / B: tyros
 A: titer / B: titre
 A: titer's / B: titre's
 A: titers / B: titres

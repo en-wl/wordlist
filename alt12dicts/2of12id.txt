@@ -4354,7 +4354,7 @@ bonnie A: bonnier  bonniest
 bonny A: bonnier  bonniest
 -bonny N: bonnies
 bonsai A:
-bonsai N:(-bonsais)
+bonsai N: bonsai (-bonsais)
 bonus N: bonuses
 bony A: bonier  boniest
 boo I:
@@ -9981,7 +9981,7 @@ darkener N: darkeners
 darkly A: ~darklier  ~darkliest
 darkness N: ~darknesses
 darkroom N: darkrooms
-darling A:  -  darlingest
+darling A: -  darlingest
 darling N: darlings
 darn A:
 darn I:
@@ -25527,7 +25527,7 @@ miscible A:
 misconceive V: misconceived  misconceiving  misconceives
 misconception N: misconceptions
 misconduct N: ~misconducts
-misconduct V: misconducted  misconducting
+misconduct V: misconducted  misconducting  misconducts
 misconstruction N: misconstructions
 misconstrue V: misconstrued  misconstruing  misconstrues
 miscount N: miscounts
@@ -30930,7 +30930,7 @@ policeman N: policemen
 policewoman N: policewomen
 policy N: policies
 policyholder N: policyholders
-polio A: polio
+polio A:
 polio N: polios
 poliomyelitis N: ~poliomyelitides
 polish N: polishes

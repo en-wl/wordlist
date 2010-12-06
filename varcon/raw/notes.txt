@@ -1,0 +1,191 @@
+OAmerE: The Oxford American Dictionary of Current English
+NewOAmer: The New Oxford American Dictionary
+AmerHer: The American Heritage Dictionary of the English Language
+M-W: Merriam-Webster (online)
+
+adze:
+  m-w adz "also"
+  Amer ox (both): adz variant
+  American Heritage Equal Var
+Ox: adze / adz
+m-w: adze (adz)
+AmerHer: adz / adze
+ 9:  7  2#  -&   adz
+ 9:  2  7#  -&   adze
+
+blowzy:
+  m-w: browsy, browzy "also"
+  2of12full no agreement
+  Amer Ox (both): browzy
+  American Her: browzy
+
+The Oxford American Dictionary of Current English:
+  amoeba / ameba
+  amoebas / amoebae
+The New Oxford American Dictionary:
+  ameba / amoeba
+  amebas / amebae ## amoebas / amoebae
+American Her:
+  amoeba (ameba)
+  amoebas /also/ amebas /or/ amoebae /also/ amebae
+M-w:
+  amoeba (ameba)
+  amoebas / amoebae
+
+M-W:     briar (brier)
+AmerHer: brier (briar)
+Ox:      brier / briar
+10:  3  7#  -&   briar
+10:  8  2#  -&   brier
+
+M-W:     caiman (cayman)
+AmerHer: caiman (cayman)
+Ox:      caiman / cayman
+ 3:  2  1#  -&   caiman
+ 3:  3  -#  -&   cayman
+
+M-w:     connectable (connectible)
+Ox:      connectable (connectible not found)
+AmerHer: onnectible / connectable 
+ 2:  1  1#  -&   connectable
+ 2:  2  -#  -&   connectible
+
+ 7:  7  -#  -&   connector
+ 4:  1  3#  -&   connecter
+
+M-w: extendable (extendible)
+AmerHer: extendable / extendible
+Ox: seperate word?
+ 3:  2  1#  -&   extensible
+ 5:  3  2#  -&   extendible
+
+flannelet: Not a common word, in some unabridged both forms are listed,
+  in m-w and AmerHer. only flannelette is listed
+ 5:  3  2#  -&   flannelette
+ 3:  2  1#  -&   flannelet
+
+M-W, AmerHer: gizmo (gismo)
+Ox: gizmo (gismo)
+10:  6  4#  -&   gizmo
+ 7:  4  3#  -&   gismo
+
+m-w: hollo / halloo (hallo)
+AmerHer: halloo (other not listed) (Alteration of obsolete holla)
+Ox: halloo (others not listed)
+<NOT LISTED>     hollo
+ 2:  1  1#  -&   halloo
+ 2:  1  -#  1&   hallo
+
+ 6:  4  2#  -&   horsey
+ 8:  4  4#  -&   horsy
+m-w:     horsey (horsy)
+AmerHer: horsy (horsey)
+Ox: horsey / horsy
+
+M-w: knockwurst (knackwurst)
+AmerH: knackwurst / knockwurst
+OAmerEng: knockwurst / knackwurst
+ONewAmer: knackwurst / knockwurst
+ 7:  4  3#  -&   knockwurst
+ 6:  4  2#  -&   knackwurst
+
+M-w: lollygag (lallygag)
+amerH: lollygag (lallygag)
+OxNew: lollygag / lallygag
+ 6:  3  3#  -&   lollygag
+ 4:  4  -#  -&   lallygag
+
+m-w amerh: molluscan (molluskan)
+m-w: mollusk / mollusc
+ox: mollusk / mollusc
+ox: molluskan / molluscan
+
+m-w amerh: sirree (siree)
+OxAmerEng: sirree (siree not listed)
+ONewAmer: siree / sirree
+ 2:  1  1#  -&   siree
+ 2:  1  1#  -&   sirree
+
+M-w: piney (piny)
+Ox: piny (piney)
+OAmerEng: piny / piney
+NewAmer: piney / piny
+ 4:  2  2#  -&   piney
+ 3:  2  1#  -&   piny
+
+m-w: drily / dryly
+AmerH: dryly / drily (I think, entry is dry'ly, dri'ly adv)
+11: 11  -#  -&   dryly
+10:  3  7#  -&   drily
+
+
+M-w: aeon / eon
+AmerH: eon (aeon)
+ox: eon / aeon
+ 9:  4  5#  -&   aeon
+11: 11  -#  -&   eon
+
+M-w: forecastle / fo'c'sle
+AmerH: forecastle (fo'c'sle not listed)
+Ox: forecastle / fo'c'sle
+Dictionary.com Unabridged: forecastle / fo'c'sle / fo'c's'le
+ 8:  8  -#  -&   forecastle
+ 5:  1  3#  1&   fo'c'sle
+ 2:  1  1#  -&   fo'c's'le
+
+M-w: hyena 
+AmerH: hyena (hyaena)
+OAmerEng: hyena / hyaena
+NewOx: hyena
+M-w: hyenas (hyena) | plural
+12: 12  -#  -&   hyena
+ 2:  -  2#  -&   hyaena
+
+M-w: mollusk / mollusc
+AmerH: mollusk (mollusc)
+Ox: mollusk / mollusc
+12: 12  -#  -&   mollusk
+ 6:  -  5#  1&   mollusc
+
+M-W AmerH: molluscan (molluskan)
+Ox: molluskan / molluscan
+ 2:  1  1#  -&   molluskan
+ 2:  1  1#  -&   molluskan
+
+M-w: pawpaw (papaw)
+AmerH: papaw (pawpaw)
+Ox: pawpaw / papaw
+ 9:  4  4#  1&   pawpaw
+ 8:  5  3#  -&   papaw
+
+m-w: unbeknownst (unbeknown)
+AmerH: unbeknownst // unbeknown (seperate words)
+Ox: unbeknown / unbeknownst
+ 6:  4  2#  -&   unbeknown
+ 6:  2  4#  -&   unbeknownst
+
+
+M-W: garrote / garotte
+AmerH: garrote / garrotte
+OAmerEng: garrote / garotte / garrotte
+ONewAmer: garrote / garrotte / garotte
+ 5:  5  -#  -&   garrote
+ 2:  1  1#  -&   garote
+ 6:  1  5#  -&   garrotte
+ 3:  -  3#  -&   garotte
+
+M-w AmerH: kebab / kebob (kabob)
+ONewAmer: <not listed>
+OAmerEng: kabob / kebab / kebob
+ 8:  6  2#  -&   kebab
+ 6:  4  2#  -&   kabob
+ 5:  -  5#  -&   kebob
+
+---
+
+hooray / hurrah and friends
+
+Too many variants.  I wanted to allow both hooray / hurrah in the
+American dictionary since I think they are pronounced differently.
+Manually tweaked result from "vvv" script...
+

@@ -72,6 +72,7 @@ working/variant_0.lst working/variant_1.lst working/variant_2.lst: \
   r/alt12dicts/variant-yes.lst r/alt12dicts/variant-maybe.lst \
   r/infl/variant_0.lst  r/infl/variant_1.lst  r/infl/variant_2.lst \
   r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst \
+  r/varcon/w_variant-amer.lst r/varcon/w_variant-nonamer.lst  \
   r/special/variant_0  r/special/variant_1  r/special/variant_2 \
   r/special/never-variant
 	touch working/possessive-also.lst
@@ -165,9 +166,13 @@ r/alt12dicts/signature.lst: r/alt12dicts/signature.txt src/clean-alan-list
 #src/proc-12dicts r/12dicts/6of12.txt
 #	src/proc-12dicts
 
-r/varcon/american.lst r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst r/varcon/common.lst: \
+r/varcon/american.lst r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst: \
   r/varcon/split r/varcon/varcon.txt
 	cd r/varcon; ./split
+
+r/varcon/w_variant-amer.lst r/varcon/w_variant-nonamer.lst: \
+  r/varcon/split r/varcon/varcon.txt
+	cd r/varcon; ./w_variant
 
 r/varcon/variant.tab: r/varcon/make-variant r/varcon/varcon.txt r/varcon/variant-also.tab r/varcon/variant-infl.tab
 	cd r/varcon; ./make-variant no-infl

@@ -16,20 +16,52 @@ rem ()
 }
 
 #
-# process lists from alt12dicts
+# perform additional proc. on varcon
+#
+
+rm -f everything.lst
+cat r/varcon/*.lst \
+  | src/filter | sort -u \
+  > r/varcon/everything.lst
+
+cat r/varcon/american.lst r/varcon/other.lst \
+  | src/filter | sort -u \
+  > r/varcon/nonvariant-amer.lst
+
+cat r/varcon/american-v?.lst r/varcon/other-v?.lst \
+  | src/filter | sort -u \
+  > r/varcon/variant-amer.lst
+
+cat r/varcon/british-v?.lst r/varcon/british_z-v?.lst r/varcon/canadian-v?.lst \
+  | src/filter | sort -u \
+  > r/varcon/variant-nonamer.lst
+
+#
+# We let some british variants into the variant lists..
+# see below
+#
+
+for l in 0 1 2 3; do
+
+  cat r/varcon/british-v$l.lst r/varcon/british_z-v$l.lst r/varcon/canadian-v$l.lst \
+    | src/filter | sort -u \
+    > r/varcon/variant-nonamer-v$l.lst
+
+  comm -12 r/varcon/nonvariant-amer.lst r/varcon/variant-nonamer-v$l.lst \
+    > r/varcon/variant-nonamer-v$l-filtered.lst
+
+done
+
+#
+# perform additional proc. on 12dicts
+#
+# for each of the lists remove any variants that are known about in
+# varcon
 #
 
 cat r/alt12dicts/not-variant.lst \
   | src/filter | src/add-affixes 0.0 use-all | sort -u \
   > working/variant-no.lst
-
-cat r/varcon/american.lst \
-  | src/filter | sort -u \
-  > working/amer.lst
-
-cat r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst \
-  | src/filter | sort -u \
-  > working/nonamer.lst
 
 expand() {
     tmpfile=`mktemp working/variant.XXXXXX`
@@ -41,27 +73,24 @@ expand() {
     rm $tmpfile
 }
 
-cat r/varcon/british*-v?.lst  \
-  | rem working/amer.lst          \
-  | rem working/nonamer.lst       \
-  > working/variant-british.lst
-
 cat r/alt12dicts/variant-maybe.lst \
   | expand 0.9                     \
+  | rem r/varcon/w_variant-amer.lst \
   > working/variant-maybe.lst
 
 cat r/alt12dicts/variant-yes.lst \
   | expand 1.9                   \
+  | rem r/varcon/w_variant-amer.lst \
   > working/variant-yes.lst
 
 cat r/alt12dicts/nonamer-maybe.lst    \
   | expand 1.9                        \
-  | rem working/nonamer.lst           \
+  | rem r/varcon/everything.lst       \
   > working/variant-nonamer-maybe.lst 
 
 cat r/alt12dicts/nonamer-yes.lst      \
   | expand 1.9                        \
-  | rem working/nonamer.lst           \
+  | rem r/varcon/everything.lst       \
   > working/variant-nonamer-yes.lst
 
 #
@@ -70,13 +99,25 @@ cat r/alt12dicts/nonamer-yes.lst      \
 
 start \
   | add working/variant-maybe.lst    \
+  | add r/varcon/american-v0.lst     \
+  | add r/varcon/american-v1.lst     \
+  | add r/varcon/other-v0.lst        \
+  | add r/varcon/other-v1.lst        \
+  | add r/varcon/variant-nonamer-v0-filtered.lst \
+  | add r/varcon/variant-nonamer-v1-filtered.lst \
   | add r/special/variant_0          \
   | rem r/special/never-variant      \
+  | egrep -v "wards?$"               \
   > working/variant_0-pre.lst
 
 start \
   | add working/variant-yes.lst      \
   | add working/variant-nonamer-maybe.lst \
+  | add r/varcon/american-v2.lst     \
+  | add r/varcon/other-v2.lst        \
+  | add r/varcon/variant-nonamer-v0.lst \
+  | add r/varcon/variant-nonamer-v1.lst \
+  | add r/varcon/variant-nonamer-v2-filtered.lst \
   | add r/special/variant_1          \
   | rem working/variant_0-pre.lst    \
   | rem r/special/never-variant      \
@@ -84,8 +125,11 @@ start \
 
 start \
   | add working/variant-nonamer-yes.lst \
+  | add r/varcon/american-v3.lst     \
+  | add r/varcon/other-v3.lst        \
   | add r/special/variant_2          \
-  | add working/variant-british.lst  \
+  | add r/varcon/variant-nonamer-v2.lst \
+  | add r/varcon/variant-nonamer-v3.lst \
   | rem working/variant_1-pre.lst    \
   | rem working/variant_0-pre.lst    \
   | rem r/special/never-variant      \
@@ -100,6 +144,7 @@ start \
   | rem working/variant_2-pre.lst | rem working/variant_1-pre.lst    \
   | add working/variant_0-pre.lst    \
   | rem r/special/never-variant      \
+  | egrep -v "wards?$"               \
   > working/variant_0.lst
 
 start \

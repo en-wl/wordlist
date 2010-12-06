@@ -1,3 +1,4 @@
+_: AWOL / _v: awol
 A: Acemetae / B: Acoemetae
 A: Acemetae's / B: Acoemetae's
 A: Acemetic / B: Acoemetic
@@ -744,6 +745,7 @@ A: Manicheus / B: Manichaeus
 A: Manicheus's / B: Manichaeus's
 A: Marte / B: Martae
 A: Marte's / B: Martae's
+_: Matt | :1
 A: Matthean / B: Matthaean
 A: Med / B: Moed
 A: Med's / B: Moed's
@@ -858,6 +860,12 @@ A Z: Northernize / B: Northernise
 A Z: Northernize's / B: Northernise's
 A: Notogea / B: Notogaea
 A: Notogea's / B: Notogaea's
+_: OK / _v: okay | : 1
+_: OK | Oklahoma
+_: OK's / _v: okay's | :1
+_: OKed / _v: okayed | :1
+_: OKing / _v: okaying | :1
+_: OKs / _v: okays | :1
 A: Obe / B: Oboe
 A: Obe's / B: Oboe's
 A Z: Occidentalization / B: Occidentalisation
@@ -907,6 +915,8 @@ A: Pavior's / B: Paviour's
 A Z: Paynize / B: Paynise
 A Z: Paynize's / B: Paynise's
 A Z: Paynizes / B: Paynises
+_: Pekingese / _v: Pekinese
+_: Pekingese's / _v: Pekinese's
 A: Perse / B: Persae
 A: Perse's / B: Persae's
 A Z: Persianization / B: Persianisation
@@ -978,6 +988,7 @@ A Z: Platonizer / B: Platoniser
 A Z: Platonizer's / B: Platoniser's
 A Z: Platonizes / B: Platonises
 A Z: Platonizing / B: Platonising
+_: Pollock | name
 A Z: Polonization / B: Polonisation
 A Z: Polonization's / B: Polonisation's
 A Z: Presbyterianize / B: Presbyterianise
@@ -1048,6 +1059,7 @@ A: Rexford's / B: Rexfourd's
 A: Rhetian / B: Rhaetian
 A: Rhetian's / B: Rhaetian's
 A: Rhetic / B: Rhaetic
+_: Roentgen / _v: Röntgen
 A: Romania / B: Roumania
 A: Romania's / B: Roumania's
 A: Romanias / B: Roumanias
@@ -1083,6 +1095,7 @@ A Z: Sanforizing / B: Sanforising
 A Z: Sanskritize / B: Sanskritise
 A Z: Sanskritize's / B: Sanskritise's
 A: Sassanide / B: Sassanidae
+_: Savannah | :1
 A Z: Saxonization / B: Saxonisation
 A Z: Saxonization's / B: Saxonisation's
 A Z: Saxonizations / B: Saxonisations
@@ -1288,6 +1301,9 @@ A: Warford's / B: Warfourd's
 A Z: Whitmanize / B: Whitmanise
 A Z: Whitmanize's / B: Whitmanise's
 A Z: Whitmanizes / B: Whitmanises
+_: abettor / _V: abetter
+_: abettor's / _V: abetter's
+_: abettors / _V: abetters
 A Z: abnormalize / B: abnormalise
 A Z: abnormalized / B: abnormalised
 A Z: abnormalizing / B: abnormalising
@@ -1297,6 +1313,9 @@ A Z: abolitionizing / B: abolitionising
 A: abridgment / B: abridgement
 A: abridgment's / B: abridgement's
 A: abridgments / B: abridgements
+_: absinthe / _V: absinth
+_: absinthe's / _V: absinth's
+_: absinthes / _V: absinth
 A Z: academize / B: academise
 A Z: academized / B: academised
 A Z: academizing / B: academising
@@ -1322,6 +1341,7 @@ A: accouterment's / Av B: accoutrement's
 A: accouterments / Av B: accoutrements
 A: accouterments / Av B: accoutrements's
 A: accouters / Av B: accoutres
+_: accursed / _v: accurst
 A: acetonemia / B: acetonaemia
 A: acetonemic / B: acetonaemic
 A: achenia / B: achaenia
@@ -1354,6 +1374,11 @@ A: acuesthesia / B: acuaesthesia
 A Bv: adapter / B: adaptor
 A Bv: adapter's / B: adaptor's
 A Bv: adapters / B: adaptors
+_: addable / _v: addible
+_: addenda / _V: addendums
+_: adjuster / _V: adjustor
+_: adjuster's / _V: adjustor's
+_: adjusters / _V: adjustors
 A Z: adonize / B: adonise
 A Z: adonized / B: adonised
 A Z: adonizes / B: adonises
@@ -1367,10 +1392,30 @@ A Z: adverbialize / B: adverbialise
 A Z: adverbialized / B: adverbialised
 A Z: adverbializes / B: adverbialises
 A Z: adverbializing / B: adverbialising
+_: advertise / _-: advertize
+_: advertised / _-: advertized
+_: advertisement / _-: advertizement
+_: advertisement's / _-: advertizement's
+_: advertisements / _-: advertizements
+_: advertises / _-: advertizes
+_: advertising / _-: advertizing
 A Z: advertizable / B: advertisable
+_: adviser / _v: advisor
+_: adviser's / _v: advisor's
+_: advisers / _v: advisors
+_: adze / _: adz
+_: adze's / _: adz's
+_: aegis / _V: egis
+_: aegis's / _V: egis's
+_: aegises / _V: egises
 A: aerialness / B: aaerialness
 A: aerialness's / B: aaerialness's
 A: aeric / B: areic
+_: aerie / _V: aery / _-: eyry
+_: aerie's / _V: aery's / _-: eyry's
+_: aeries / _-: eyries
+_: aerogram / _v: aerogramme
+_: aerograms / _v: aerogrammes
 A: aerographer / B: areographer
 A: aerographic / B: areographic
 A: aerographical / B: areographical
@@ -1388,6 +1433,9 @@ A: aerometer / B: areometer
 A: aerometers / B: areometers
 A: aerometric / B: areometric
 A: aerometry / B: areometry
+_: aesthete / _V: esthete
+_: aesthete's / _V: esthete's
+_: aesthetes / _V: esthetes
 A Z: aestheticize / B: aestheticise
 A Z: aestheticized / B: aestheticised
 A Z: aestheticizes / B: aestheticises
@@ -1397,6 +1445,7 @@ A B: afterwards / A: afterward
 A: agathodemon / B: agathodaemon
 A Z: agatize / B: agatise
 A Z: agatizes / B: agatises
+_: ageism / _V: agism
 A Z: agenize / B: agenise
 A: ager / B: agre
 A Z: aggrandizable / B: aggrandisable
@@ -1442,6 +1491,8 @@ A Z: aguized / B: aguised
 A Z: aguizes / B: aguises
 A Z: aguizing / B: aguising
 A: aiger / B: aigre
+_: air_gun / _v: airgun
+_: air_letter / _v: airletter
 A: airfoil / B: aerofoil
 A: airfoil's / B: aerofoil's
 A: airfoils / B: aerofoils
@@ -1449,6 +1500,9 @@ A: airgel / B: aerogel
 A: airplane / B: aeroplane
 A: airplane's / B: aeroplane's
 A: airplanes / B: aeroplanes
+_: airstrike / _v: air_strike
+_: airstrike's / _v: air_strike's
+_: airstrikes / _v: air_strikes
 A: aker / B: akre
 A Z: albitize / B: albitise
 A Z: albitized / B: albitised
@@ -1486,6 +1540,13 @@ A Z: algebraizes / B: algebraises
 A: algesthesis / B: algaesthesis
 A Z: alienize / B: alienise
 A Z: alienizes / B: alienises
+_: align / _V: aline
+_: aligned / _V: alined
+_: aligning / _V: alining
+_: alignment / _V: alinement
+_: alignment's / _V: alinement's
+_: alignments / _V: alinements
+_: aligns / _V: alines
 A Z: alkalinization / B: alkalinisation
 A Z: alkalinization's / B: alkalinisation's
 A Z: alkalinizations / B: alkalinisations
@@ -1513,7 +1574,11 @@ A Z: allegorizer's / B: allegoriser's
 A Z: allegorizers / B: allegorisers
 A Z: allegorizes / B: allegorises
 A Z: allegorizing / B: allegorising
+_: alleluia / _V: halleluiah
+_: alleluia's / _V: halleluiah's
+_: alleluias / _V: halleluiahs
 A: alloxuremia / B: alloxuraemia
+_: alphabetical / _v: alphabetic
 A Z: alphabetization / B: alphabetisation
 A Z: alphabetization's / B: alphabetisation's
 A Z: alphabetizations / B: alphabetisations
@@ -1530,6 +1595,7 @@ A: althea / B: althaea
 A: althea's / B: althaea's
 A: altheas / B: althaeas
 A: althein / B: althaein
+_: although / _V: altho
 A Z: aluminization / B: aluminisation
 A Z: aluminize / B: aluminise
 A Z: aluminized / B: aluminised
@@ -1538,6 +1604,7 @@ A Z: aluminizing / B: aluminising
 A: aluminum / B: aluminium
 A: aluminum's / B: aluminium's
 A: aluminums / B: aluminiums
+_: alumni / _-: alumnuses
 A: alveole / B: alveolae
 A Z: amalgamatize / B: amalgamatise
 A Z: amalgamatizes / B: amalgamatises
@@ -1546,6 +1613,9 @@ A Z: amalgamization's / B: amalgamisation's
 A Z: amalgamizations / B: amalgamisations
 A Z: amalgamize / B: amalgamise
 A Z: amalgamizes / B: amalgamises
+_: ambiance / _: ambience
+_: ambiance's / _: ambience's
+_: ambiances / _: ambiences
 A: ambicolorate / B: ambicolourate
 A: ambicoloration / B: ambicolouration
 A: ambilevous / B: ambilaevous
@@ -1573,10 +1643,20 @@ A: amenorrheas / B: amenorrhoeas
 A: amenorrheic / B: amenorrhoeic
 A Z: americanization / B: americanisation
 A Z: americanized / B: americanised
+_: amid / _v: amidst
 A: ammocete / B: ammocoete
 A: ammocete's / B: ammocoete's
 A: ammocetes / B: ammocoetes
 A: ammoniemia / B: ammoniaemia
+_: amoeba / _v: ameba
+_: amoeba's / _v: ameba's
+_: amoebas / _v: amoebae / _v: amebas / _v: amebae
+_: amoebic / _v: amebic
+_: amoeboid / _v: ameboid
+_: amok / _: amuck
+_: amok's / _: amuck's
+_: amoks / _: amucks
+_: among / _V: amongst
 A Z: amoralize / B: amoralise
 A Z: amoralizes / B: amoralises
 A: amoret / B: amouret
@@ -1609,6 +1689,9 @@ A: amphigean / B: amphigaean
 A: amphitheater / B: amphitheatre
 A: amphitheater's / B: amphitheatre's
 A: amphitheaters / B: amphitheatres
+_: ampule / _v: ampoule / _V: ampul
+_: ampule's / _v: ampoule's / _V: ampul's
+_: ampules / _v: ampoules / _V: ampuls
 A: amygdale / B: amygdalae
 A: amyxorrhea / B: amyxorrhoea
 A Z: anabaptize / B: anabaptise
@@ -1623,6 +1706,11 @@ A Z: analogize / B: analogise
 A Z: analogized / B: analogised
 A Z: analogizes / B: analogises
 A Z: analogizing / B: analogising
+_: analytic / _v: analytical
+_: analytically / _v: analyticalally
+_: analyticiti / _v: analyticaliti
+_: analyticitis / _v: analyticalitis
+_: analyticity / _v: analyticality
 A C: analyzability / B: analysability
 A C: analyzability's / B: analysability's
 A C: analyzable / B: analysable
@@ -1713,6 +1801,9 @@ A: anestrus's / B: anoestrus's
 A: anestruses / B: anoestruses
 A: anetic / B: anoetic
 A: anetiological / B: anaetiological
+_: aneurysm / _V: aneurism
+_: aneurysm's / _V: aneurism's
+_: aneurysms / _V: aneurisms
 A Z: angelicize / B: angelicise
 A Z: angelicizes / B: angelicises
 A Z: angelize / B: angelise
@@ -1781,6 +1872,7 @@ A Z: antagonizer / B: antagoniser
 A Z: antagonizers / B: antagonisers
 A Z: antagonizes / B: antagonises
 A Z: antagonizing / B: antagonising
+_: antennae / _v: antennas
 A: anthecological / B: anthoecological
 A: anthecologist / B: anthoecologist
 A: anthecology / B: anthoecology
@@ -1917,7 +2009,7 @@ A: appall / B: appal
 A: appalls / B: appals
 A: appareled / B: apparelled
 A: appareling / B: apparelling
-A Bv: appendixes / B Av: appendices
+A Bv: appendixes / Av B: appendices
 A Z: appetize / B: appetise
 A Z: appetized / B: appetised
 A Z: appetizement / B: appetisement
@@ -1933,6 +2025,8 @@ A Z: apprizal / B: apprisal
 A Z: apprizer / B: appriser
 A Z: apprizers / B: apprisers
 A Z: apprizings / B: apprisings
+_: aquaculture / _V: aquiculture
+_: aquaculture's / _V: aquiculture's
 A Z: arabization / B: arabisation
 A Z: arabization's / B: arabisation's
 A Z: arabizations / B: arabisations
@@ -1953,6 +2047,14 @@ A Z: arborized / B: arborised
 A Z: arborizes / B: arborises
 A Z: arborizing / B: arborising
 A: arbors / B: arbours
+_: archaeological / _v: archeological
+_: archaeologically / _v: archeologically
+A B: archaeologies / Av: archeologies
+_: archaeologist / _v: archeologist
+_: archaeologist's / _v: archeologist's
+_: archaeologists / _v: archeologists
+A B: archaeology / Av: archeology
+A B: archaeology's / Av: archeology's
 A Z: archaize / B: archaise
 A Z: archaized / B: archaised
 A Z: archaizer / B: archaiser
@@ -1972,13 +2074,12 @@ A: archeol / B: archaeol
 A: archeolithic / B: archaeolithic
 A: archeologian / B: archaeologian
 A: archeologic / B: archaeologic
-A: archeologies / B: archaeologies
-A: archeology / B: archaeology
-A: archeology's / B: archaeology's
 A: archeometries / B: archaeometries
 A: archeometry / B: archaeometry
 A: archeopteryx / B: archaeopteryx
 A: archeozoic / B: archaeozoic
+_: archetypal / _v: archetypical
+_: archetypally / _V: archetypically
 A: archeus / B: archaeus
 A Z: arcticize / B: arcticise
 A Z: arcticizes / B: arcticises
@@ -2045,6 +2146,13 @@ A: arytenoids / B: arytaenoids
 A: asafetida / B: asafoetida
 A: asafetida's / B: asafoetida's
 A: asafetidas / B: asafoetidas
+_: ascendance / _V: ascendence
+_: ascendance's / _V: ascendence's
+_: ascendancy / _V: ascendency
+_: ascendancy's / _V: ascendency's
+_: ascendant / _V: ascendent
+_: ascendant's / _V: ascendent's
+_: ascendants / _V: ascendents
 A Z: asepticize / B: asepticise
 A Z: asepticized / B: asepticised
 A Z: asepticizes / B: asepticises
@@ -2119,6 +2227,10 @@ A Z: attitudinizes / B: attitudinises
 A Z: attitudinizing / B: attitudinising
 A Z: attitudinizings / B: attitudinisings
 A: aunter / B: auntre
+_: auntie / _V: aunty
+_: aunties / _V: aunty's
+_: aureole / _v: aureola
+_: aureole's / _v: aureola's
 A: autecious / B: autoecious
 A: auteciously / B: autoeciously
 A: auteciousness / B: autoeciousness
@@ -2176,6 +2288,7 @@ A Z: avize / B: avise
 A Z: avized / B: avised
 A Z: avizes / B: avises
 A Z: avizing / B: avising
+_: awestruck / _V: awestricken
 A: ax / B: axe
 A: ax's / B: axe's
 A Z: axiomatization / B: axiomatisation
@@ -2185,6 +2298,8 @@ A Z: axiomatize / B: axiomatise
 A Z: axiomatized / B: axiomatised
 A Z: axiomatizes / B: axiomatises
 A Z: axiomatizing / B: axiomatising
+_: aye / _V: ay
+_: aye's / _V: ay's
 A: azotemia / B: azotaemia
 A Z: azotization / B: azotisation
 A Z: azotize / B: azotise
@@ -2196,18 +2311,24 @@ A Z: bachelorize / B: bachelorise
 A Z: bachelorizes / B: bachelorises
 A: bacillemia / B: bacillaemia
 A: bacillemias / B: bacillaemias
+_: bacilli / _-: bacilluses
 A: backpedaled / B: backpedalled
 A: backpedaling / B: backpedalling
+_: backward / _v: backwards | :1
+_: backward | :2
 A Z: baconize / B: baconise
 A Z: baconizes / B: baconises
 A: bacteremia / B: bacteraemia
 A: bacteremia's / B: bacteraemia's
 A: bacteremias / B: bacteraemias
+_: bacteria / _V: bacterias
 A: bacteriemia / B: bacteriaemia
 A Z: bacterize / B: bacterise
 A Z: bacterized / B: bacterised
 A Z: bacterizes / B: bacterises
 A Z: bacterizing / B: bacterising
+_: baddie / _v: baddy
+_: baddie's / _v: baddy's
 A Z: balkanization / B: balkanisation
 A Z: balkanization's / B: balkanisation's
 A Z: balkanizations / B: balkanisations
@@ -2219,6 +2340,8 @@ A Z: balladize / B: balladise
 A Z: balladized / B: balladised
 A Z: balladizes / B: balladises
 A Z: balladizing / B: balladising
+_: baloney / _V: boloney
+_: baloney's / _V: boloney's
 A Z: balsamize / B: balsamise
 A Z: balsamizes / B: balsamises
 A Z: banalization / B: banalisation
@@ -2227,8 +2350,23 @@ A Z: banalize / B: banalise
 A Z: banalized / B: banalised
 A Z: banalizes / B: banalises
 A Z: banalizing / B: banalising
+_: bandanna / _v: bandana
+_: bandanna's / _v: bandana's
+_: bandannas / _v: bandanas
+_: bandoleer / _: bandolier
+_: bandoleer's / _: bandolier's
+_: bandoleers / _: bandoliers
+_: banister / _V: bannister
+_: banister's / _V: bannister's
+_: banisters / _V: bannisters
+_: banshee / _-: banshie
+_: banshee's / _-: banshie's
+_: banshees / _-: banshies
 A Z: bantamize / B: bantamise
 A Z: bantamizes / B: bantamises
+_: baptisteries / _v: baptistries
+_: baptistery / _v: baptistry
+_: baptistery's / _v: baptistry's
 A Z: baptizable / B: baptisable
 A Z: baptizable's / B: baptisable's
 A Z: baptizables / B: baptisables
@@ -2251,6 +2389,20 @@ A Z: barbarize / B: barbarise
 A Z: barbarized / B: barbarised
 A Z: barbarizes / B: barbarises
 A Z: barbarizing / B: barbarising
+_: barbecue / _V: barbeque
+_: barbecue's / _V: barbeque's
+_: barbecued / _V: barbequed
+_: barbecues / _V: barbeques
+_: barbecuing / _V: barbequing
+_: barcarole / _V: barcarolle
+_: barcarole's / _V: barcarolle's
+_: barcaroles / _V: barcarolles
+_: bark | :1
+_: bark / _v: barque | (-) ship
+_: bark's | :1
+_: bark's / _v: barque's | (-) ship
+_: barks | :1
+_: barks / _v: barques | (-) ship
 A Z: baronetize / B: baronetise
 A Z: baronetized / B: baronetised
 A Z: baronetizing / B: baronetising
@@ -2271,6 +2423,11 @@ A Z: bastardizes / B: bastardises
 A Z: bastardizing / B: bastardising
 A: bastinaded / B: bastinadoed
 A: bastinades / B: bastinadoes
+_: bathyscaphe / _: bathyscaph
+_: bathyscaphe's / _: bathyscaph's
+_: bathyscaphes / _: bathyscaphs
+_: battleax / _: battleaxe
+_: battleax's / _: battleaxe's
 A Z: battologize / B: battologise
 A Z: battologized / B: battologised
 A Z: battologizing / B: battologising
@@ -2291,6 +2448,8 @@ A Z: bedlamizes / B: bedlamises
 A Z: bedlamizing / B: bedlamising
 A: bedriveled / B: bedrivelled
 A: bedriveling / B: bedrivelling
+_: beefs | <V>
+_: beeves / _v: beefs | <N>
 A: befavor / B: befavour
 A: beglamor / B: beglamour
 A: beglamored / B: beglamoured
@@ -2337,6 +2496,8 @@ A: ber / B: boer
 A: bere / B: beroe
 A: bere / B: bree
 A: beres / B: brees
+_: berk / _-: burk
+_: berks / _-: burks
 A: berloque / B: breloque
 A: berme / B: breme
 A: bern / B: bren
@@ -2395,16 +2556,60 @@ A Z: bize / B: bise
 A Z: bize's / B: bise's
 A Z: bizet / B: biset
 A Z: blaize / B: blaise
+_: blamable / _v: blameable
 A: blastocele / B: blastocoele
 A: blastule / B: blastulae
 A: blennemesis / B: blennoemesis
 A: blennorrhea / B: blennorrhoea
+_: blond / _v: blonde
+_: blond's / _v: blonde's
+_: blonds / _v: blondes
+A Bv: blowzier / Av B: blowsier
+A Bv: blowziest / Av B: blowsiest
+A Bv: blowzy / Av B: blowsy
+_: bluing / _v: blueing
+_: bluing's / _v: blueing's
+_: boatswain / _v: bosun / _V: bo'sun / _V: bos'n / _V: bo's'n
+_: boatswain's / _v: bosun's / _V: bo'sun's / _V: bo's'n's / _V: bos'n's
+_: boatswains / _v: bosuns / _V: bo's'ns / _V: bo'suns / _V: bos'ns
+_: bobbysoxer / _v: bobby-soxer
+_: bobbysoxer's / _v: bobby-soxer's
+_: bobbysoxers / _v: bobby-soxers
+_: boccie / _v: bocce / _v: bocci
+_: boccie's / _v: bocce's / _v: bocci's
+_: bogey / _V: bogy / _V: bogie | :2
+_: bogey's / _V: bogy's / _V: bogie's | :2
+_: bogeys / _V: bogies | :2
+_: bogie / _V: bogey | :1
+_: bogie's / _V: bogey's | :1
+_: bogies / _V: bogeys | :1 
 A: boled / B: boloed
 A Z: bolshevize / B: bolshevise
 A Z: bolshevized / B: bolshevised
 A Z: bolshevizes / B: bolshevises
 A Z: bolshevizing / B: bolshevising
+_: bolshie / _v: bolshy
 A Z: bonderize / B: bonderise
+_: bonny / _V: bonnie
+_: bony / _V: boney
+_: boo-boo / _v: booboo
+_: boo-boo's / _v: booboo's
+_: boo-boos / _v: booboos
+_: boogeyman / _V: boogerman
+_: boogeyman's / _V: boogerman's
+_: boogeymen / _V: boogermans
+_: boombox / _v: boom_box
+_: boombox's / _v: boom_box's
+_: boomboxes / _v: boom_boxes
+_: bootee / _v: bootie | boot
+_: bootee's / _v: bootie's | boot
+_: bootees / _v: booties | boot
+_: booties | plunder taken
+_: booties | buttocks
+_: booty | plunder taken
+_: booty / _V: bootie | buttocks
+_: booty's | plunder taken
+_: booty's / _V: bootie's | buttocks
 A: bor / B: bour
 A: borage / B: bourage
 A: borasque / B: bourasque
@@ -2413,12 +2618,19 @@ A: bords / B: bourds
 A: borg / B: bourg
 A Z: borize / B: borise
 A Z: borizes / B: borises
+_: borscht / _v: borsch
+_: borscht's / _v: borsch's
 A Z: botanize / B: botanise
 A Z: botanized / B: botanised
 A Z: botanizer / B: botaniser
 A Z: botanizer's / B: botaniser's
 A Z: botanizes / B: botanises
 A Z: botanizing / B: botanising
+_: bougainvillea / _V: bougainvillaea
+_: bougainvilleas / _V: bougainvillaeas
+_: boulder / _V: bowlder
+_: boulder's / _V: bowlder's
+_: boulders / _V: bowlders
 A Z: boulevardize / B: boulevardise
 A Z: boulevardizes / B: boulevardises
 A Z: bourbonize / B: bourbonise
@@ -2436,10 +2648,21 @@ A Z: bowdlerizing / B: bowdlerising
 A: boweled / B: bowelled
 A: boweling / B: bowelling
 A: bradypnea / B: bradypnoea
+_: break_even / _v: breakeven's
+_: breakeven / _v: break_even
 A C: breathalyze / B: breathalyse
 A C: breathalyzed / B: breathalysed
 A C: breathalyzes / B: breathalyses
 A C: breathalyzing / B: breathalysing
+_: brier / _v: briar
+_: brier's / _v: briar's
+_: briers / _v: briars
+_: brimful / _V: brimfull
+_: brinkmanship / _V: brinksmanship
+_: brinkmanship / _V: brinksmanship's
+_: briquette / _v: briquet
+_: briquette's / _v: briquet's
+_: briquettes / _v: briquets
 A Z: briza / B: brisa
 A Z: briza's / B: brisa's
 A: bromethylene / B: bromoethylene
@@ -2450,6 +2673,16 @@ A Z: bromization's / B: bromisation's
 A Z: bromize / B: bromise
 A Z: bromized / B: bromised
 A Z: bromizing / B: bromising
+_: bronco / _V: broncho
+_: bronco / _V: broncho's
+_: broncos / _V: bronchos
+_: brusque / _V: brusk
+_: brusquely / _V: bruskly
+_: brusqueness / _V: bruskness
+_: brusqueness's / _V: bruskness's
+_: brusquenesses / _V: brusknesses
+_: brusquer / _V: brusker
+_: brusquest / _V: bruskest
 A Z: brutalization / B: brutalisation
 A Z: brutalization's / B: brutalisation's
 A Z: brutalizations / B: brutalisations
@@ -2457,6 +2690,16 @@ A Z: brutalize / B: brutalise
 A Z: brutalized / B: brutalised
 A Z: brutalizes / B: brutalises
 A Z: brutalizing / B: brutalising
+_: bunco / _v: bunko
+_: bunco's / _v: bunko's
+_: buncos / _v: bunkos
+_: bunko / _v: bunco
+_: bunko's / _v: bunco's
+_: bunkoed / _v: buncoed
+_: bunkoing / _v: buncoing
+_: bunkum / _v: buncombe
+_: bunkum's / _v: buncombe's
+_: bunkums / _v: buncombes
 A Z: bureaucratization / B: bureaucratisation
 A Z: bureaucratization's / B: bureaucratisation's
 A Z: bureaucratizations / B: bureaucratisations
@@ -2472,12 +2715,24 @@ A Z: burnettize / B: burnettise
 A Z: burnettized / B: burnettised
 A Z: burnettizes / B: burnettises
 A Z: burnettizing / B: burnettising
+_: burnoose / _v: burnous
+_: burnoose's / _v: burnous's
+_: burnooses / _v: burnouses
+_: bused / _V: bussed
 A: busheled / B: bushelled
 A: busheler / B: busheller
 A: busheler's / B: busheller's
 A: bushelers / B: bushellers
 A: busheling / B: bushelling
 A: bushelings / B: bushellings
+_: busing / _V: bussing
+_: busing's / _V: bussing's
+_: busings / _V: bussings
+_: bylaw / _V: byelaw
+_: bylaw's / _V: byelaw's
+_: bylaws / _V: byelaws
+_: cabby / _: cabbie
+_: cabby's / _: cabbie's
 A: cacesthesia / B: cacaesthesia
 A: cachemia / B: cachaemia
 A: cachemic / B: cachaemic
@@ -2496,6 +2751,16 @@ A Z: cadaverizes / B: cadaverises
 A Z: cadmiumize / B: cadmiumise
 A Z: cadmiumizes / B: cadmiumises
 A: caffer / B: caffre
+_: caftan / _V: kaftan
+_: caftan's / _V: kaftan's
+_: caftans / _V: kaftans
+_: cagey / _V: cagy
+_: caginess / _V: cageyness
+_: caginess's / _V: cageyness's
+_: caginesses / _V: cageynesses
+_: caiman / _V: cayman
+_: caiman's / _V: cayman's
+_: caimans / _V: caymans
 A: calander / B: calandre
 A: calcemia / B: calcaemia
 A Z: calendarization / B: calendarisation
@@ -2513,7 +2778,16 @@ A: calipered / B: callipered
 A: calipering / B: callipering
 A: calipers / B: callipers
 A: calipers's / B: callipers's
+_: caliph / _V: calif / _-: khalif
+_: caliph's / _V: calif's / _-: khalif's
+_: caliphes / _V: califs / _-: khalifs
+_: calk / _v: caulk | :1
+_: calk's / _v: caulk's | :1
+_: calked / _v: caulked | :1
+_: calking / _v: caulking | :1
+_: calks / _v: caulks | :1
 A: calodemon / B: calodaemon
+_: camelhair | camel hair (camel's hair)
 A: camisades / B: camisadoes
 A Z: camize / B: camise
 A: canaled / B: canalled
@@ -2569,6 +2843,9 @@ A Z: canonizer's / B: canoniser's
 A Z: canonizers / B: canonisers
 A Z: canonizes / B: canonises
 A Z: canonizing / B: canonising
+_: cantaloupe / _V: cantaloup
+_: cantaloupe's / _V: cantaloup's
+_: cantaloupes / _V: cantaloups
 A Z: cantonization / B: cantonisation
 A Z: cantonizations / B: cantonisations
 A Z: cantonize / B: cantonise
@@ -2612,6 +2889,9 @@ A Z: caramelize / B: caramelise
 A Z: caramelized / B: caramelised
 A Z: caramelizes / B: caramelises
 A Z: caramelizing / B: caramelising
+_: caravansaries / _v: caravansarais / _v: caravansarai
+_: caravansary / _v: caravanserai
+_: caravansary's / _v: caravanserai's
 A Z: carbolization / B: carbolisation
 A Z: carbolize / B: carbolise
 A Z: carbolized / B: carbolised
@@ -2651,12 +2931,18 @@ A Z: carnalize / B: carnalise
 A Z: carnalized / B: carnalised
 A Z: carnalizes / B: carnalises
 A Z: carnalizing / B: carnalising
+_: carnies / _v: carneys
+_: carny / _v: carney / _v: carnie
+_: carny's / _v: carnie's / _v: carney's
 A: caroled / B: carolled
 A: caroler / B: caroller
 A: caroler's / B: caroller's
 A: carolers / B: carollers
 A: caroling / B: carolling
 A: carotinemia / B: carotinaemia
+_: carousel / _V: carrousel
+_: carousel's / _V: carrousel's
+_: carousels / _V: carrousels
 A Z: cartelization / B: cartelisation
 A Z: cartelization's / B: cartelisation's
 A Z: cartelizations / B: cartelisations
@@ -2664,6 +2950,15 @@ A Z: cartelize / B: cartelise
 A Z: cartelized / B: cartelised
 A Z: cartelizes / B: cartelises
 A Z: cartelizing / B: cartelising
+_: casino | :1
+_: casino / _V: cassino | card game
+_: casino's | :1 
+_: casino's / _V: cassino's | card game
+_: casinos | :1
+_: casinos / _V: cassinos | card game
+_: caster / _v: castor | :2
+_: caster's / _v: castor's | :2
+_: casters / _v: castors | :2
 A Z: castorized / B: castorised
 A Z: castorized's / B: castorised's
 A Z: castorizeds / B: castoriseds
@@ -2739,6 +3034,16 @@ A Z: catholicizer's / B: catholiciser's
 A Z: catholicizers / B: catholicisers
 A Z: catholicizes / B: catholicises
 A Z: catholicizing / B: catholicising
+_: cauldron / _: caldron
+_: cauldron's / _: caldron's
+_: cauldrons / _: caldrons
+_: caulk / _v: calk | :2
+_: caulk / _v: calk / _V: caulking / _V: calking | :3
+_: caulk's / _v: calk's / _V: caulking's / _V: calking's | :3
+_: caulked / _v: calked | :2
+_: caulking / _v: calking | :2
+_: caulks / _v: calks | :2
+_: caulks / _v: calks / _V: caulkings / _V: calkings | :3
 A Z: causticization / B: causticisation
 A Z: causticization's / B: causticisation's
 A Z: causticizations / B: causticisations
@@ -2753,6 +3058,9 @@ A Z: cauterize / B: cauterise
 A Z: cauterized / B: cauterised
 A Z: cauterizes / B: cauterises
 A Z: cauterizing / B: cauterising
+_: caviar / _V: caviare
+_: caviar's / _V: caviare's
+_: caviars / _V: caviares
 A: cavilation / B: cavillation
 A: caviled / B: cavilled
 A: caviler / B: caviller
@@ -2889,6 +3197,9 @@ A: cerolite / B: creolite
 A: cerule / B: caerule
 A: ceruleolactite / B: coeruleolactite
 A: cesar / B: caesar
+_: cesarean / _v: caesarean / _V: caesarian / _V: cesarian
+_: cesarean's / _v: caesarean's / _V: caesarian's / _V: cesarian's
+_: cesareans / _v: caesareans / _V: caesarians / _V: cesarians
 A: cesious / B: caesious
 A: cesium / B: caesium
 A: cesium's / B: caesium's
@@ -2903,6 +3214,17 @@ A: chaces / B: chacoes
 A: chalaze / B: chalazae
 A Z: chameleonize / B: chameleonise
 A Z: chameleonizes / B: chameleonises
+_: chamois / _V: chamoix
+_: chamois / _V: chammies / _V: shammies
+_: chamois / _V: shammy / _V: chammy
+_: chamois | :1
+_: chamois / _V: shammy / _V: chammy | :2
+_: chamois / _V: chamoix | plural
+_: chamois's / _V: chammy's / _V: shammy's
+_: chamois's / _V: chammy's / _V: shammy's | :2
+_: chamomile / _v: camomile
+_: chamomile's / _v: camomile's
+_: chamomiles / _v: camomiles
 A Z: championize / B: championise
 A Z: championizes / B: championises
 A: channeled / B: channelled
@@ -2918,6 +3240,9 @@ A Z: channelize / B: channelise
 A Z: channelized / B: channelised
 A Z: channelizes / B: channelises
 A Z: channelizing / B: channelising
+_: chaperon / _v: chaperone
+_: chaperon's / _v: chaperone's
+_: chaperons / _v: chaperones
 A Z: chaptalization / B: chaptalisation
 A Z: chaptalizations / B: chaptalisations
 A Z: chaptalize / B: chaptalise
@@ -2945,7 +3270,7 @@ A Z: chattelization's / B: chattelisation's
 A Z: chattelizations / B: chattelisations
 A Z: chattelize / B: chattelise
 A Z: chattelizes / B: chattelises
-A: check / B: cheque | bank 
+A: check / B: cheque | bank
 A B: check | verify
 A: check's / B: cheque's | bank
 A B: check's | verify
@@ -2985,10 +3310,23 @@ A: chenixes / B: choenixes
 A: chetopod / B: chaetopod
 A: chiffer / B: chiffre
 A: childer / B: childre
+_: chili / _V: chile / _V: chilli
+_: chili's / _V: chile's / _V: chilli's
+_: chilies / _V: chilis / _V: chillies / _V: chiles
 A: chimerid / B: chimaerid
 A: chimerids / B: chimaerids
 A: chimerism / B: chimaerism
 A: chimerisms / B: chimaerisms
+_: chiseled / _v: chiselled
+_: chiseler / _v: chiseller
+_: chiseler's / _v: chiseller's
+_: chiselers / _v: chisellers
+_: chiseling / _v: chiselling
+_: chitterlings / _v: chitlins / _V: chitlings
+_: chivied / _v: chivvied
+_: chivies / _v: chivvies
+_: chivy / _v: chivvy
+_: chivying / _v: chivvying
 A: chloranemia / B: chloranaemia
 A: chloremia / B: chloraemia
 A Z: chloridize / B: chloridise
@@ -3007,9 +3345,15 @@ A Z: chloroformization's / B: chloroformisation's
 A Z: chloroformizations / B: chloroformisations
 A Z: chloroformize / B: chloroformise
 A Z: chloroformizes / B: chloroformises
+_: chlorophyll / _-: chlorophyl
+_: chocoholic / _V: chocaholic
+_: chocoholic's / _V: chocaholic's
+_: chocoholics / _V: chocaholics
+_: chocolaty / _v: chocolatey
 A: cholemia / B: cholaemia
 A: cholemias / B: cholaemias
 A: cholophein / B: cholophaein
+_: choosy / _V: choosey
 A Z: chorization / B: chorisation
 A Z: chorization's / B: chorisation's
 A Z: chorizations / B: chorisations
@@ -3034,7 +3378,13 @@ A Z: chronologize / B: chronologise
 A Z: chronologized / B: chronologised
 A Z: chronologizes / B: chronologises
 A Z: chronologizing / B: chronologising
+_: chutzpah / _V: hutzpa / _V: hutzpah / _V: chutzpa
+_: chutzpah's / _V: hutzpa's / _V: chutzpa's / _V: hutzpah's
+_: chutzpahes / _V: hutzpas / _V: chutzpas / _V: hutzpahes
+_: cicatrice / _-: cicatrixes
 A: cicatricule / B: cicatriculae
+_: cicatrix / _V: cicatrice
+_: cicatrix's / _V: cicatrice's
 A Z: cicatrizant / B: cicatrisant
 A Z: cicatrizate / B: cicatrisate
 A Z: cicatrization / B: cicatrisation
@@ -3046,6 +3396,9 @@ A Z: cicatrizer / B: cicatriser
 A Z: cicatrizer's / B: cicatriser's
 A Z: cicatrizes / B: cicatrises
 A Z: cicatrizing / B: cicatrising
+_: cigarette / _V: cigaret
+_: cigarette's / _V: cigaret's
+_: cigarettes / _V: cigarets
 A: cimicide / B: cimicidae
 A Z: cinchonization / B: cinchonisation
 A Z: cinchonization's / B: cinchonisation's
@@ -3105,6 +3458,9 @@ A Z: civilizer's / B: civiliser's
 A Z: civilizers / B: civilisers
 A Z: civilizes / B: civilises
 A Z: civilizing / B: civilising
+_: civvies / _V: civies
+_: civvy / _V: civie
+_: civvy's / _V: civie's
 A Z: cize / B: cise
 A: clamor / B: clamour
 A: clamor's / B: clamour's
@@ -3124,6 +3480,9 @@ A: clangored / B: clangoured
 A: clangoring / B: clangouring
 A: clangors / B: clangours
 A: clares / B: claroes
+_: clarinetist / _v: clarinettist
+_: clarinetist's / _v: clarinettist's
+_: clarinetists / _v: clarinettists
 A Z: classicalize / B: classicalise
 A Z: classicalizes / B: classicalises
 A Z: classicization / B: classicisation
@@ -3146,6 +3505,7 @@ A Z: coalizer / B: coaliser
 A Z: coalizers / B: coalisers
 A Z: coalizes / B: coalises
 A Z: coalizing / B: coalising
+_: cocaine / _-: cocain
 A Z: cocainization / B: cocainisation
 A Z: cocainization's / B: cocainisation's
 A Z: cocainizations / B: cocainisations
@@ -3153,6 +3513,9 @@ A Z: cocainize / B: cocainise
 A Z: cocainized / B: cocainised
 A Z: cocainizes / B: cocainises
 A Z: cocainizing / B: cocainising
+_: coconut / _V: cocoanut
+_: coconut's / _V: cocoanut's
+_: coconuts / _V: cocoanuts
 A Z: cocuiza / B: cocuisa
 A Z: coeducationalize / B: coeducationalise
 A Z: coeducationalizes / B: coeducationalises
@@ -3186,7 +3549,16 @@ A Z: cognizer's / B: cogniser's
 A Z: cognizers / B: cognisers
 A Z: cognizes / B: cognises
 A Z: cognizing / B: cognising
+_: colander / _v: cullender
+_: colander's / _v: cullender's
+_: colanders / _v: cullenders
 A Z: collateralize / B: collateralise
+_: collectibilities / _v: collectabilities
+_: collectibility / _v: collectability
+_: collectibility's / _v: collectability's
+_: collectible / _v: collectable
+_: collectible's / _v: collectable's
+_: collectibles / _v: collectables
 A Z: collectivization / B: collectivisation
 A Z: collectivization's / B: collectivisation's
 A Z: collectivizations / B: collectivisations
@@ -3252,7 +3624,7 @@ A: colorant / B: colourant
 A: colorant's / B: colourant's
 A: colorants / B: colourants
 A: colorate / B: colourate
-A Z: coloration / Bv: colouration | ?
+A B: coloration / B: colouration | ?
 A B: coloration's / Bv: colouration's | ?
 A B: colorational / Bv: colourational | ?
 A B: colorationaler / Bv: colourationaler | ?
@@ -3460,6 +3832,7 @@ A Z: concretizes / B: concretises
 A Z: concretizing / B: concretising
 A Z: conditionalize / B: conditionalise
 A Z: conditionalizes / B: conditionalises
+_: coneys / _v: conies
 A Z: confederatize / B: confederatise
 A Z: confederatizes / B: confederatises
 A Z: congenialize / B: congenialise
@@ -3467,6 +3840,13 @@ A Z: congenializes / B: congenialises
 A: conges / B: congoes
 A Z: congregationalize / B: congregationalise
 A Z: congregationalizes / B: congregationalises
+_: conjurer / _v: conjuror
+_: conjurer's / _v: conjuror's
+_: conjurers / _v: conjurors
+_: connectable / _V: connectible
+_: connector / _V: connecter
+_: connector's / _V: connecter's
+_: connectors / _V: connecters
 A Z: conservatize / B: conservatise
 A Z: conservatized / B: conservatised
 A Z: conservatizes / B: conservatises
@@ -3504,6 +3884,9 @@ A Z: controversialize / B: controversialise
 A Z: controversializes / B: controversialises
 A Z: conundrumize / B: conundrumise
 A Z: conundrumizes / B: conundrumises
+_: convener / _v: convenor
+_: convener's / _v: convenor's
+_: conveners / _v: convenors
 A Z: conventionalization / B: conventionalisation
 A Z: conventionalization's / B: conventionalisation's
 A Z: conventionalizations / B: conventionalisations
@@ -3515,12 +3898,25 @@ A Z: conventionize / B: conventionise
 A Z: conventionizes / B: conventionises
 A Z: conversationize / B: conversationise
 A Z: conversationizes / B: conversationises
+_: converter | :1
+_: converter / _v: convertor | :2
+_: converter's | :1
+_: converter's / _v: convertor's | :2
+_: converters | :1
+_: converters / _v: convertors | :2
+_: conveyor / _V: conveyer
+_: conveyor's / _V: conveyer's
 A Z: conveyorize / B: conveyorise
 A Z: conveyorized / B: conveyorised
 A Z: conveyorizes / B: conveyorises
 A Z: conveyorizing / B: conveyorising
+_: conveyors / _V: conveyers
 A Z: convivialize / B: convivialise
 A Z: convivializes / B: convivialises
+_: cony / _v: coney
+_: cony's / _v: coney's
+_: cookie / _v: cooky
+_: cookie's / _v: cooky's
 A Z: copolymerization / B: copolymerisation
 A Z: copolymerization's / B: copolymerisation's
 A Z: copolymerizations / B: copolymerisations
@@ -3584,7 +3980,13 @@ A Z: cosmopolitanizing / B: cosmopolitanising
 A: cosplendor / B: cosplendour
 A: coste / B: costae
 A: costumier / B: costumire
+_: cottar / _v: cotter | :1
+_: cottar's / _v: cotter's | :1
+_: cottars / _v: cotters | :1
 A: cotte / B: cottae
+_: cotter | :2
+_: cotter's | :2
+_: cotters | :2
 A Z: cottonization / B: cottonisation
 A Z: cottonization's / B: cottonisation's
 A Z: cottonizations / B: cottonisations
@@ -3675,6 +4077,9 @@ A Z: crofterization's / B: crofterisation's
 A Z: crofterizations / B: crofterisations
 A Z: crofterize / B: crofterise
 A Z: crofterizes / B: crofterises
+_: crosier / _v: crozier
+_: crosier's / _v: crozier's
+_: crosiers / _v: croziers
 A Z: cruelize / B: cruelise
 A Z: cruelizes / B: cruelises
 A: cryesthesia / B: cryaesthesia
@@ -3733,17 +4138,28 @@ A C: curb / B: kerb | street edge
 A B: curb | restrain
 A C: curb's / B: kerb's | street edge
 A B: curb's | restrain
-A C: curbed / B: kerbed  | street edge
+A C: curbed / B: kerbed | street edge
 A B: curbed | restrain
 A C: curbing / B: kerbing | street edge
 A B: curbing | restrain
 A C: curbs / B: kerbs | street edge
 A B: curbs | restrain
+_: curlicue / _V: curlycue | <N>
+_: curlicue | <V>
+_: curlicue's / _V: curlycue's | <N>
+_: curlicues / _V: curlycues | <N>
+_: curlicues | <V>
 A Z: curricularization / B: curricularisation
 A Z: curricularization's / B: curricularisation's
 A Z: curricularizations / B: curricularisations
 A Z: curricularize / B: curricularise
 A Z: curricularizes / B: curricularises
+_: curtsied / _V: curtseyed
+_: curtsies / _V: curtseys
+_: curtsy / _V: curtsey
+_: curtsy's / _V: curtsey's
+_: curtsying / _V: curtseying
+_: curvaceous / _V: curvacious
 A Z: customizable / B: customisable
 A Z: customization / B: customisation
 A Z: customization's / B: customisation's
@@ -3754,6 +4170,7 @@ A Z: customizer / B: customiser
 A Z: customizers / B: customisers
 A Z: customizes / B: customises
 A Z: customizing / B: customising
+_: cutesy / _-: cutesie
 A: cuticolor / B: cuticolour
 A Z: cutinization / B: cutinisation
 A Z: cutinization's / B: cutinisation's
@@ -3765,6 +4182,9 @@ A Z: cutinizing / B: cutinising
 A Z: cutization / B: cutisation
 A Z: cutization's / B: cutisation's
 A Z: cutizations / B: cutisations
+_: cutlass / _-: cutlas
+_: cutlass's / _-: cutlas's
+_: cutlasses / _-: cutlases
 A: cuve / B: cuvae
 A Z: cyanize / B: cyanise
 A Z: cyanized / B: cyanised
@@ -3778,14 +4198,28 @@ A Z: cyclize / B: cyclise
 A Z: cyclized / B: cyclised
 A Z: cyclizes / B: cyclises
 A Z: cyclizing / B: cyclising
+_: cyclopedia / _v: cyclopaedia
+_: cyclopedia's / _v: cyclopaedia's
+_: cyclopedias / _v: cyclopaedias
 A: cyclopedic / B: cyclopaedic
 A: cyclopedically / B: cyclopaedically
 A: cyclopedist / B: cyclopaedist
 A: cyclopedist's / B: cyclopaedist's
 A: cyme / B: cymae
-A Bv: czar / B: tsar
-A Bv: czar's / B: tsar's
-A Bv: czars / B: tsars
+A Bv: czar / AV: tzar / AV B: tsar
+A Bv: czar's / AV: tzar's / AV B: tsar's
+_: czardom / _V: tzardom / _V: tsardom
+_: czardom's / _V: tzardom's / _V: tsardom's
+_: czardoms / _V: tzardoms / _V: tsardoms
+_: czarina / _V: tzarina / _V: tsarina
+_: czarina's / _V: tzarina's / _V: tsarina's
+_: czarinas / _V: tsarinas / _V: tzarinas
+_: czarism / _V: tsarism / _V: tzarism
+_: czarism's / _V: tzarism's / _V: tsarism's
+_: czarisms / _V: tsarisms / _V: tzarisms
+_: czarist / _V: tzarist / _V: tsarist
+A Bv: czars / AV: tzars / AV B: tsars
+_: d'oh / _v: doh
 A: danaide / B: danaidae
 A Z: dandizette / B: dandisette
 A Z: dandyize / B: dandyise
@@ -3802,6 +4236,7 @@ A Z: dealcoholized / B: dealcoholised
 A Z: dealcoholizes / B: dealcoholises
 A Z: dealcoholizing / B: dealcoholising
 A Z: deaminize / B: deaminise
+_: deary / _v: dearie
 A: decaliter / B: decalitre
 A: decaliter's / B: decalitre's
 A: decaliters / B: decalitres
@@ -4054,6 +4489,14 @@ A Z: demagnetizer's / B: demagnetiser's
 A Z: demagnetizers / B: demagnetisers
 A Z: demagnetizes / B: demagnetises
 A Z: demagnetizing / B: demagnetising
+_: demagogue / _V: demagog
+_: demagogue's / _V: demagog's
+_: demagogued / _V: demagoged
+_: demagogueri / _V: demagogri
+_: demagogueris / _V: demagogris
+_: demagoguery / _V: demagogry
+_: demagogues / _V: demagogs
+_: demagoguing / _V: demagoging
 A Z: demasculinization / B: demasculinisation
 A Z: demasculinization's / B: demasculinisation's
 A Z: demasculinize / B: demasculinise
@@ -4175,6 +4618,9 @@ A Z: dentalize / B: dentalise
 A Z: dentalized / B: dentalised
 A Z: dentalizes / B: dentalises
 A Z: dentalizing / B: dentalising
+_: dentin / _v: dentine
+_: dentin's / _v: dentine's
+_: dentins / _v: dentines
 A Z: denuclearization / B: denuclearisation
 A Z: denuclearization's / B: denuclearisation's
 A Z: denuclearizations / B: denuclearisations
@@ -4223,8 +4669,11 @@ A Z: depauperize / B: depauperise
 A Z: depauperized / B: depauperised
 A Z: depauperizes / B: depauperises
 A Z: depauperizing / B: depauperising
-A Bv: dependent / B: dependant | noun
-A B: dependent | adj
+_: dependence / _V: dependance
+_: dependence's / _V: dependance's
+_: dependences / _V: dependances
+A Bv: dependent / B: dependant | <N>
+A B: dependent | <Adj>
 A Bv: dependent's / B: dependant's
 A Bv: dependents / B: dependants
 A Z: depersonalization / B: depersonalisation
@@ -4313,6 +4762,9 @@ A Z: desalinize / B: desalinise
 A Z: desalinized / B: desalinised
 A Z: desalinizes / B: desalinises
 A Z: desalinizing / B: desalinising
+_: descendant / _V: descendent
+_: descendant's / _V: descendent's
+_: descendants / _V: descendents
 A Z: desensitization / B: desensitisation
 A Z: desensitization's / B: desensitisation's
 A Z: desensitizations / B: desensitisations
@@ -4413,6 +4865,9 @@ A Z: devolatilize / B: devolatilise
 A Z: devolatilized / B: devolatilised
 A Z: devolatilizes / B: devolatilises
 A Z: devolatilizing / B: devolatilising
+_: dexterous / _V: dextrous
+_: dexterously / _V: dextrously
+_: dexterousness / _V: dextrousness
 A Z: diabolization / B: diabolisation
 A Z: diabolization's / B: diabolisation's
 A Z: diabolizations / B: diabolisations
@@ -4443,11 +4898,11 @@ A Z: dialogize / B: dialogise
 A Z: dialogized / B: dialogised
 A Z: dialogizes / B: dialogises
 A Z: dialogizing / B: dialogising
-AV: dialog / A B: dialogue
-AV: dialog's / A B: dialogue's
-AV: dialogged / A B: dialogued
-AV: dialogs / A B: dialogues
-AV: dialogging / A B: dialoguing
+A B: dialogue / AV: dialog
+A B: dialogue's / AV: dialog's
+A B: dialogued / AV: dialogged
+A B: dialogues / AV: dialogs
+A B: dialoguing / AV: dialogging
 A: dialyzabilities / B: dialysabilities
 A: dialyzability / B: dialysability
 A: dialyzability's / B: dialysability's
@@ -4493,6 +4948,9 @@ A Z: dichotomize / B: dichotomise
 A Z: dichotomized / B: dichotomised
 A Z: dichotomizes / B: dichotomises
 A Z: dichotomizing / B: dichotomising
+_: dickey / _v: dicky / _V: dickie
+_: dickey's / _v: dicky's / _V: dickie's
+_: dickeys / _v: dickies
 A: diecious / B: dioecious
 A: dieciously / B: dioeciously
 A: diene / B: diaene
@@ -4512,6 +4970,9 @@ A: diestrus's / B: dioestrus's
 A: diestruses / B: dioestruses
 A: diethylstilbestrol / B: diethylstilboestrol
 A: diethylstilbestrol's / B: diethylstilboestrol's
+_: dietitian / _v: dietician
+_: dietitian's / _v: dietician's
+_: dietitians / _v: dieticians
 A Z: differentialize / B: differentialise
 A Z: differentializes / B: differentialises
 A Z: digitalization / B: digitalisation
@@ -4531,6 +4992,9 @@ A Z: digitizer's / B: digitiser's
 A Z: digitizers / B: digitisers
 A Z: digitizes / B: digitises
 A Z: digitizing / B: digitising
+_: dike | :1
+_: dike's | :1
+_: dikes | :1
 A Z: dimensionalization / B: dimensionalisation
 A Z: dimensionalize / B: dimensionalise
 A Z: dimensionalized / B: dimensionalised
@@ -4545,6 +5009,7 @@ A Z: dimerizes / B: dimerises
 A Z: dimerizing / B: dimerising
 A Z: diminutivize / B: diminutivise
 A Z: diminutivizes / B: diminutivises
+_: dingoes / _-: dingos
 A Z: dionize / B: dionise
 A: diopter / B: dioptre
 A: diopter's / B: dioptre's
@@ -4563,6 +5028,8 @@ A Z: diplomatize / B: diplomatise
 A Z: diplomatized / B: diplomatised
 A Z: diplomatizes / B: diplomatises
 A Z: diplomatizing / B: diplomatising
+_: dis / _V: diss
+_: dis's / _V: diss's
 A Z: disangularize / B: disangularise
 A Z: disangularizes / B: disangularises
 A Z: disauthorize / B: disauthorise
@@ -4606,6 +5073,7 @@ A Z: disequalize's / B: disequalise's
 A Z: disequalizer / B: disequaliser
 A Z: disequalizers / B: disequalisers
 A Z: disequalizes / B: disequalises
+_: dises / _V: disses
 A: disfavor / B: disfavour
 A: disfavor's / B: disfavour's
 A: disfavored / B: disfavoured
@@ -4614,6 +5082,9 @@ A: disfavorer's / B: disfavourer's
 A: disfavorers / B: disfavourers
 A: disfavoring / B: disfavouring
 A: disfavors / B: disfavours
+_: dishabille / _v: deshabille
+_: dishabille's / _v: deshabille's
+_: dishabilles / _v: deshabilles
 A Z: disharmonize / B: disharmonise
 A Z: disharmonized / B: disharmonised
 A Z: disharmonizes / B: disharmonises
@@ -4688,6 +5159,11 @@ A Z: disozonize / B: disozonise
 A Z: disozonizes / B: disozonises
 A Z: dispapalize / B: dispapalise
 A Z: dispapalizes / B: dispapalises
+_: dispatch / _V: despatch
+_: dispatch's / _V: despatch's
+_: dispatched / _V: despatched
+_: dispatches / _V: despatches
+_: dispatching / _V: despatching
 A Z: dispauperize / B: dispauperise
 A Z: dispauperized / B: dispauperised
 A Z: dispauperizes / B: dispauperises
@@ -4723,8 +5199,16 @@ A Z: dissyllabized / B: dissyllabised
 A Z: dissyllabizing / B: dissyllabising
 A Z: dissympathize / B: dissympathise
 A Z: dissympathizes / B: dissympathises
+_: distill / _V: distil
+_: distilled / _V: distiled
+_: distills / _V: distils
 A Z: disutilize / B: disutilise
 A Z: disutilizes / B: disutilises
+_: ditsier / _v: ditzier
+_: ditsy / _v: ditzy
+_: ditziness / _v: ditsiness
+_: ditziness's / _v: ditsiness's
+_: ditzinesses / _v: ditsinesses
 A: diversicolored / B: diversicoloured
 A: divinister / B: divinistre
 A Z: divinization / B: divinisation
@@ -4736,6 +5220,9 @@ A Z: divinizes / B: divinises
 A Z: divinizing / B: divinising
 A Z: divisionalization / B: divisionalisation
 A Z: divisionalizations / B: divisionalisations
+_: djellaba / _V: djellabah
+_: djellaba's / _V: djellabah's
+_: djellabas / _V: djellabahes
 A Z: dockization / B: dockisation
 A Z: dockization's / B: dockisation's
 A Z: dockizations / B: dockisations
@@ -4761,6 +5248,13 @@ A Z: documentarizes / B: documentarises
 A Z: documentarizing / B: documentarising
 A Z: documentize / B: documentise
 A Z: documentizes / B: documentises
+_: doggone / _v: doggoned
+_: doggoner / _v: doggoneder
+_: doggonest / _v: doggonedest
+_: doggy / _v: doggie
+_: doggy's / _v: doggie's
+_: dogie / _-: dogy
+_: dogies / _-: dogy's
 A Z: dogmatization / B: dogmatisation
 A Z: dogmatization's / B: dogmatisation's
 A Z: dogmatizations / B: dogmatisations
@@ -4790,17 +5284,23 @@ A Z: domesticized / B: domesticised
 A Z: domesticizes / B: domesticises
 A Z: domesticizing / B: domesticising
 A: domine / B: dominae
+_: dopey / _V: dopy
 A: dora / B: doura
 A Z: dorize / B: dorise
 A Z: dorized / B: dorised
 A Z: dorizes / B: dorises
 A Z: dorizing / B: dorising
 A: doryline / B: dorylinae
+_: doughnut / _V: donut
+_: doughnut's / _V: donut's
+_: doughnuts / _V: donuts
 A: doweled / B: dowelled
 A: doweler / B: doweller
 A: doweling / B: dowelling
 A: downdraft / B: downdraught
 A: downdraft's / B: downdraught's
+_: downward / _v: downwards | <Adv>
+_: downward | <Adj>
 A: dracena / B: dracaena
 A: dracenaceae / B: dracaenaceae
 A: dracenas / B: dracaenas
@@ -4849,11 +5349,24 @@ A Z: dramatizers / B: dramatisers
 A Z: dramatizes / B: dramatises
 A Z: dramatizing / B: dramatising
 A Bv Z: dreamed / B Zv: dreamt
+_: drier / _V: dryer | <Adj>
+_: driest / _V: dryest | <Adj>
 A: driveled / B: drivelled
 A: driveler / B: driveller
 A: driveler's / B: driveller's
 A: drivelers / B: drivellers
 A: driveling / B: drivelling
+_: drought / _V: drouth
+_: drought's / _V: drouth's
+_: droughtiness / _V: drouthiness
+_: droughts / _V: drouthes
+_: droughty / _V: drouthy
+_: druggie / _V: druggy | <N>
+_: druggie's / _V: druggy's | <N>
+_: druggies | <N>
+_: druggy / _V: druggie | <Adj>
+_: dryer / _: drier | <N>
+_: dryly / _v: drily
 A Z: dualization / B: dualisation
 A Z: dualization's / B: dualisation's
 A Z: dualizations / B: dualisations
@@ -4871,6 +5384,20 @@ A: duelist / B: duellist
 A: duelist's / B: duellist's
 A: duelists / B: duellists
 A: duer / B: dure
+_: dullness / _V: dulness
+_: dullness's / _V: dulness's
+_: dullnesses / _V: dulnesses
+_: dumbfound / _V: dumfound
+_: dumbfounded / _V: dumfounded
+_: dumbfounding / _V: dumfounding
+_: dumbfoundingly / _V: dumfoundingly
+_: dumbfounds / _V: dumfounds
+_: dyke / _V: dike | lesbian
+_: dyke's / _V: dike's | lesbian
+_: dykes / _V: dikes | lesbian
+_: dykey / _V: dikey | lesbian
+_: dykier / _V: dikier | lesbian
+_: dykiest / _V: dikiest | lesbian
 A Z: dynamize / B: dynamise
 A Z: dynamized / B: dynamised
 A Z: dynamizes / B: dynamises
@@ -4955,6 +5482,7 @@ A Z: editorializer / B: editorialiser
 A Z: editorializer's / B: editorialiser's
 A Z: editorializes / B: editorialises
 A Z: editorializing / B: editorialising
+_: eerie / _V: eery
 A Z: effectualize / B: effectualise
 A Z: effectualizes / B: effectualises
 A Z: effeminatize / B: effeminatise
@@ -5035,6 +5563,12 @@ A: eleomargaric / B: elaeomargaric
 A: eleometer / B: elaeometer
 A: eleoptene / B: elaeoptene
 A: eleoptene's / B: elaeoptene's
+_: embed / _V: imbed
+_: embedded / _V: imbedded
+_: embedding / _V: imbedding
+_: embedment / _V: imbedment
+_: embedments / _V: imbedments
+_: embeds / _V: imbeds
 A Z: emblematicize / B: emblematicise
 A Z: emblematicizes / B: emblematicises
 A Z: emblematization / B: emblematisation
@@ -5049,6 +5583,9 @@ A Z: emblemizing / B: emblemising
 A Z: embolization / B: embolisation
 A: emboweled / B: embowelled
 A: emboweling / B: embowelling
+_: emir / _v: amir / _V: ameer
+_: emir's / _v: amir's / _V: ameer's
+_: emirs / _v: amirs / _V: ameers
 A Z: emotionalization / B: emotionalisation
 A Z: emotionalization's / B: emotionalisation's
 A Z: emotionalizations / B: emotionalisations
@@ -5075,6 +5612,11 @@ A Z: emphasizer / B: emphasiser
 A Z: emphasizers / B: emphasisers
 A Z: emphasizes / B: emphasises
 A Z: emphasizing / B: emphasising
+_: employee / _V: employe
+_: employee's / _V: employe's
+_: employees / _V: employes
+_: emprise / _-: emprize
+_: emprises / _-: emprizes
 A Z: empyreumatize / B: empyreumatise
 A Z: empyreumatized / B: empyreumatised
 A Z: empyreumatizes / B: empyreumatises
@@ -5118,14 +5660,32 @@ A Z: encarnalized / B: encarnalised
 A Z: encarnalizes / B: encarnalises
 A Z: encarnalizing / B: encarnalising
 A: encephalocele / B: encephalocoele
+_: enclose / _V: inclose
+_: enclosed / _V: inclosed
+_: encloses / _V: incloses
+_: enclosing / _V: inclosing
+_: enclosure / _V: inclosure
+_: enclosure's / _V: inclosure's
+_: enclosures / _V: inclosures
 A: encolor / B: encolour
 A: encolor's / B: encolour's
 A: encolored / B: encoloured
 A: encoloring / B: encolouring
 A: encolors / B: encolours
+_: encrust / _V: incrust
+_: encrusted / _V: incrusted
+_: encrusting / _V: incrusting
+_: encrusts / _V: incrusts
+_: encumber / _-: incumber
+_: encumbered / _-: incumbered
+_: encumbering / _-: incumbering
+_: encumbers / _-: incumbers
+_: encyclopedia / _-: encyclopaedia
 A: encyclopediac / B: encyclopaediac
 A: encyclopedial / B: encyclopaedial
 A: encyclopedian / B: encyclopaedian
+_: encyclopedias / _-: encyclopaedias
+_: encyclopedic / _-: encyclopaedic
 A: encyclopedical / B: encyclopaedical
 A: encyclopedically / B: encyclopaedically
 A: encyclopedism / B: encyclopaedism
@@ -5145,6 +5705,17 @@ A: endeavorer's / B: endeavourer's
 A: endeavorers / B: endeavourers
 A: endeavoring / B: endeavouring
 A: endeavors / B: endeavours
+_: endorse / _V: indorse
+_: endorsed / _V: indorsed
+_: endorsement / _V: indorsement
+_: endorsement's / _V: indorsement's
+_: endorsements / _V: indorsements
+_: endorses / _V: indorses
+_: endorsing / _V: indorsing
+_: endue / _v: indue
+_: endued / _v: indued
+_: endues / _v: indues
+_: enduing / _v: induing
 A: eneid / B: aeneid
 A Z: energization / B: energisation
 A Z: energize / B: energise
@@ -5172,6 +5743,9 @@ A Z: enigmatize / B: enigmatise
 A Z: enigmatized / B: enigmatised
 A Z: enigmatizes / B: enigmatises
 A Z: enigmatizing / B: enigmatising
+_: enjambment / _V: enjambement
+_: enjambment's / _V: enjambement's
+_: enjambments / _V: enjambements
 A: enocyte / B: oenocyte
 A: enolic / B: oenolic
 A Z: enolization / B: enolisation
@@ -5221,6 +5795,19 @@ A Z: entomologized / B: entomologised
 A Z: entomologizes / B: entomologises
 A Z: entomologizing / B: entomologising
 A: entre / B: entrae
+_: entrench / _V: intrench
+_: entrenched / _V: intrenched
+_: entrenches / _V: intrenches
+_: entrenching / _V: intrenching
+_: entrenchment / _V: intrenchment
+_: entrenchment's / _V: intrenchment's
+_: entrenchmentxs / _V: intrenchments
+_: entrust / _V: intrust
+_: entrusted / _V: intrusted
+_: entrusting / _V: intrusting
+_: entrustment / _V: intrustment
+_: entrustments / _V: intrustments
+_: entrusts / _V: intrusts
 A: envapor / B: envapour
 A: envapor's / B: envapour's
 A: envapors / B: envapours
@@ -5231,10 +5818,16 @@ A: eolipile / B: aeolipile
 A: eolipile's / B: aeolipile's
 A: eolipiles / B: aeolipiles
 A: eolotropic / B: aeolotropic
+_: eon / _v: aeon
+_: eon's / _v: aeon's
 A: eonian / B: aeonian
 A: eonism / B: aeonism
 A: eonism's / B: aeonism's
 A: eonisms / B: aeonisms
+_: eons / _v: aeons
+_: epaulet / _V: epaulette
+_: epaulet's / _V: epaulette's
+_: epaulets / _V: epaulettes
 A: epenetic / B: epaenetic
 A: ephete / B: ephetae
 A: epicele / B: epicoele
@@ -5261,6 +5854,9 @@ A Z: epilogize / B: epilogise
 A Z: epilogized / B: epilogised
 A Z: epilogizes / B: epilogises
 A Z: epilogizing / B: epilogising
+_: epilogue / _V: epilog
+_: epilogue's / _V: epilog's
+_: epilogues / _V: epilogs
 A Z: epiloguize / B: epiloguise
 A Z: epiloguized / B: epiloguised
 A Z: epiloguizes / B: epiloguises
@@ -5268,6 +5864,9 @@ A Z: epiloguizing / B: epiloguising
 A Z: epimerize / B: epimerise
 A Z: epimerized / B: epimerised
 A Z: epimerizing / B: epimerising
+_: epinephrine / _V: epinephrin
+_: epinephrine's / _V: epinephrin's
+_: epinephrines / _V: epinephrins
 A Z: epiphanize / B: epiphanise
 A Z: epiphanized / B: epiphanised
 A Z: epiphanizing / B: epiphanising
@@ -5347,6 +5946,9 @@ A: erythrean / B: erythraean
 A: erythremia / B: erythraemia
 A: esc / B: aesc
 A: escalades / B: escaladoes
+_: escalope / _V: escollope / _-: escalop
+_: escalope's / _V: escollope's / _-: escalop's
+_: escalopes / _V: escollopes / _-: escalops
 A: eschynite / B: aeschynite
 A: esculapian / B: aesculapian
 A: esculetin / B: aesculetin
@@ -5568,11 +6170,18 @@ A Z: exhibitionize / B: exhibitionise
 A Z: exhibitionizes / B: exhibitionises
 A Z: existentialize / B: existentialise
 A Z: existentializes / B: existentialises
+_: exorcise / _V: exorcize
+_: exorcised / _V: exorcized
+_: exorcises / _V: exorcizes
+_: exorcising / _V: exorcizing
 A Z: exorcization / B: exorcisation
 A Z: exorcizement / B: exorcisement
 A Z: exorcizer / B: exorciser
 A Z: exorcizer's / B: exorciser's
 A Z: exorcizers / B: exorcisers
+_: expediter / _V: expeditor
+_: expediter's / _V: expeditor's
+_: expediters / _V: expeditors
 A Z: experimentalize / B: experimentalise
 A Z: experimentalized / B: experimentalised
 A Z: experimentalizes / B: experimentalises
@@ -5592,6 +6201,7 @@ A Z: extemporizer's / B: extemporiser's
 A Z: extemporizers / B: extemporisers
 A Z: extemporizes / B: extemporises
 A Z: extemporizing / B: extemporising
+_: extendable / _v: extendible
 A Z: exteriorization / B: exteriorisation
 A Z: exteriorization's / B: exteriorisation's
 A Z: exteriorizations / B: exteriorisations
@@ -5606,6 +6216,12 @@ A Z: externalize / B: externalise
 A Z: externalized / B: externalised
 A Z: externalizes / B: externalises
 A Z: externalizing / B: externalising
+_: extol / _V: extoll
+_: extols / _V: extolls
+_: extrovert / _V: extravert
+_: extrovert's / _V: extravert's
+_: extroverted / _V: extraverted
+_: extroverts / _V: extraverts
 A: eyer / B: eyre
 A: eyer's / B: eyre's
 A: eyers / B: eyres
@@ -5625,13 +6241,17 @@ A Z: factorizes / B: factorises
 A Z: factorizing / B: factorising
 A: faence / B: faoence
 A: faence's / B: faoence's
-A: fagot / B: faggot
-A: fagot's / B: faggot's
-A: fagoted / B: faggoted
-A: fagoting / B: faggoting
-A: fagots / B: faggots
+_: faerie / _V: faery
+_: faerie's / _V: faery's
+A: fagot / A B: faggot | bundle
+A: fagot's / A B: faggot's | bundle
+A: fagoted / Av B: faggoted | bundle
+A: fagoting / Av B: faggoting | bundle
+A: fagots / A B: faggots | bundle
 A: faitor / B: faitour
 A: faitors / B: faitours
+_: falafel / _V: felafel
+_: falafel's / _V: felafel's
 A Z: familiarization / B: familiarisation
 A Z: familiarization's / B: familiarisation's
 A Z: familiarizations / B: familiarisations
@@ -5647,11 +6267,18 @@ A Z: fanaticize / B: fanaticise
 A Z: fanaticized / B: fanaticised
 A Z: fanaticizes / B: fanaticises
 A Z: fanaticizing / B: fanaticising
+_: fantasied / _-: phantasied | <V>
+_: fantasies / _V: phantasies | <N>
+_: fantasies / _-: phantasies | <V> 
 A Z: fantasize / B: fantasise
 A Z: fantasized / B: fantasised
 A Z: fantasizer / B: fantasiser
 A Z: fantasizes / B: fantasises
 A Z: fantasizing / B: fantasising
+_: fantasy / _V: phantasy | <N>
+_: fantasy / _-: phantasy | <V>
+_: fantasy's / _V: phantasy's | <N>
+_: fantasying / _-: phantasying | <V>
 A Z: faradization / B: faradisation
 A Z: faradization's / B: faradisation's
 A Z: faradizations / B: faradisations
@@ -5806,6 +6433,9 @@ A: fetider / B: foetider
 A: fetidest / B: foetidest
 A: fetiferous / B: foetiferous
 A: fetiparous / B: foetiparous
+_: fetish / _V: fetich
+_: fetish's / _V: fetich's
+_: fetishes / _V: fetiches
 A Z: fetishization / B: fetishisation
 A Z: fetishization's / B: fetishisation's
 A Z: fetishizations / B: fetishisations
@@ -5876,8 +6506,17 @@ A Z: fictionizes / B: fictionises
 A Z: fictionizing / B: fictionising
 A Z: figurize / B: figurise
 A Z: figurizes / B: figurises
+_: filet | :1
+_: fillet / _V: filet | <N>
+_: fillet / _-: filet | <V>
+_: fillet's / _V: filet's | <N>
+_: filleted / _-: fileted | <V>
+_: filleting / _-: fileting | <V>
+_: fillets / _V: filets | <N>
+_: fillets / _-: filets | <V>
 A Z: filmize / B: filmise
 A Z: filmizes / B: filmises
+_: filterable / _V: filtrable
 A Z: finalization / B: finalisation
 A Z: finalization's / B: finalisation's
 A Z: finalizations / B: finalisations
@@ -5890,9 +6529,14 @@ A Z: fiscalization's / B: fiscalisation's
 A Z: fiscalizations / B: fiscalisations
 A Z: fiscalize / B: fiscalise
 A Z: fiscalizes / B: fiscalises
+_: fjord / _V: fiord
+_: fjord's / _V: fiord's
+_: fjords / _V: fiords
 A Z: flamboyantize / B: flamboyantise
 A Z: flamboyantizes / B: flamboyantises
 A: flanneled / B: flannelled
+_: flannelette / _V: flannelet
+_: flannelette's / _V: flannelet's
 A: flanneling / B: flannelling
 A: flavor / B: flavour
 A: flavor's / B: flavour's
@@ -5921,11 +6565,25 @@ A: flavorsome / B: flavoursome
 A: flavorsomer / B: flavoursomer
 A: flavorsomest / B: flavoursomest
 A: flavory / B: flavoury
+_: fledgling / _V: fledgeling
+_: fledgling's / _V: fledgeling's
+_: fledglings / _V: fledgelings
+_: flextime / _V: flexitime
+_: flextime's / _V: flexitime's
+_: flextimes / _V: flexitimes
 A: fley / B: floey
+_: flier / _V: flyer
+_: flier's / _V: flyer's
+_: fliers / _V: flyers
 A: floey / B: flooey
+_: floozy / _v: floozie
+_: floozy's / _v: floozie's
 A Z: floralize / B: floralise
 A Z: floralizes / B: floralises
 A: floramor / B: floramour
+_: flotation / _V: floatation
+_: flotation's / _V: floatation's
+_: flotations / _V: floatations
 A Z: fluidization / B: fluidisation
 A Z: fluidization's / B: fluidisation's
 A Z: fluidizations / B: fluidisations
@@ -5936,6 +6594,10 @@ A Z: fluidizer's / B: fluidiser's
 A Z: fluidizers / B: fluidisers
 A Z: fluidizes / B: fluidises
 A Z: fluidizing / B: fluidising
+_: fluky / _V: flukey
+_: flunkies / _V: flunkeys
+_: flunky / _V: flunkie / _V: flunkey
+_: flunky's / _V: flunkey's / _V: flunkie's
 A Z: fluoridization / B: fluoridisation
 A Z: fluoridization's / B: fluoridisation's
 A Z: fluoridizations / B: fluoridisations
@@ -5950,15 +6612,30 @@ A Z: focalize / B: focalise
 A Z: focalized / B: focalised
 A Z: focalizes / B: focalises
 A Z: focalizing / B: focalising
+_: focused / _V: focussed
+_: focusing / _V: focussing
 A Bv: fogies / B: fogeys
 A Bv: fogy / B: fogey
 A Bv: fogy's / B: fogey's
+_: fondue / _V: fondu
+_: fondue's / _V: fondu's
+_: fondues / _V: fondus
+_: fontanel / _v: fontanelle
+_: fontanel's / _v: fontanelle's
+_: fontanels / _v: fontanelles
 A Z: foolhardize / B: foolhardise
 A Z: foolhardized / B: foolhardised
 A Z: foolhardizes / B: foolhardises
 A Z: foolhardizing / B: foolhardising
 A: forb / B: fourb
 A: forche / B: fourche
+_: forecastle / _v: fo'c'sle / _V: fo'c's'le
+_: forecastle's / _v: fo'c'sle's / _V: fo'c's'le's
+_: forecastles / _v: fo'c'sles / _V: fo'c's'les
+_: forego | :2
+_: foregoes | :2
+_: foregoing | :2
+_: foregone | :2
 A Z: foreignization / B: foreignisation
 A Z: foreignization's / B: foreignisation's
 A Z: foreignizations / B: foreignisations
@@ -5968,6 +6645,15 @@ A: forejudgment / B: forejudgement
 A: forejudgment's / B: forejudgement's
 A: forejudgments / B: forejudgements
 A Z: foreprize / B: foreprise
+_: forewent | :2
+_: forgather / _v: foregather
+_: forgathered / _v: foregathered
+_: forgathering / _v: foregathering
+_: forgathers / _v: foregathers
+_: forgo / _V: forego | :1
+_: forgoes / _V: foregoes | :1
+_: forgoing / _V: foregoing | :1
+_: forgone / _V: foregone | :1
 A Z: formalizable / B: formalisable
 A Z: formalization / B: formalisation
 A Z: formalization's / B: formalisation's
@@ -6003,8 +6689,15 @@ A Z: formulizer / B: formuliser
 A Z: formulizer's / B: formuliser's
 A Z: formulizes / B: formulises
 A Z: formulizing / B: formulising
+_: forswear / _V: foreswear | :1
+_: forswearing / _V: foreswearing | :1
+_: forswears / _V: foreswears | :1
+_: forswore / _V: foreswore | :1
+_: forsworn / _V: foresworn | :1
+_: forsworn / _V: foresworn | :2
 A Z: forumize / B: forumise
 A Z: forumizes / B: forumises
+_: forwent / _V: forewent | :1
 A: fosse / B: fossae
 A: fossiled / B: fossilled
 A Z: fossilizable / B: fossilisable
@@ -6058,7 +6751,11 @@ A Z: fraternizer's / B: fraterniser's
 A Z: fraternizers / B: fraternisers
 A Z: fraternizes / B: fraternises
 A Z: fraternizing / B: fraternising
+_: freebie / _v: freebee
+_: freebie's / _v: freebee's
+_: freebies / _v: freebees
 A: frena / B: fraena
+_: frenetic / _-: phrenetic
 A: frenula / B: fraenula
 A: frenular / B: fraenular
 A: frenulum / B: fraenulum
@@ -6079,6 +6776,17 @@ A Z: frize / B: frise
 A Z: frizette / B: frisette
 A Z: frizette's / B: frisette's
 A Z: frizettes / B: frisettes
+_: frizz / _-: friz
+_: frizz's / _-: friz's
+A B: frowzier / Av Bv: frowsier
+A B: frowziest / Av Bv: frowsiest
+A B: frowzy / Av Bv: frowsy
+_: fryer / _V: frier
+_: fryer's / _V: frier's
+_: fryers / _V: friers
+_: fuehrer / _v: führer
+_: fuehrer's / _v: führer's
+_: fuehrers / _v: führers
 A: fueled / B: fuelled
 A: fueler / B: fueller
 A: fueler's / B: fueller's
@@ -6095,6 +6803,9 @@ A: fulfills / B: fulfils
 A: fulgor / B: fulgour
 A: fulgorous / B: fulgourous
 A: fulgors / B: fulgours
+_: fullness / _V: fulness
+_: fullness's / _V: fulness's
+_: fullnesses / _V: fulnesses
 A Z: functionalize / B: functionalise
 A Z: functionalizes / B: functionalises
 A Z: functionize / B: functionise
@@ -6105,6 +6816,13 @@ A: funneled / B: funnelled
 A: funneler / B: funneller
 A: funneling / B: funnelling
 A: furcule / B: furculae
+_: fuse / _V: fuze | detonating device
+_: fused / _V: fuzed | detonating device
+_: fuses / _V: fuzes | detonating device
+_: fusilier / _v: fusileer
+_: fusilier's / _v: fusileer's
+_: fusiliers / _v: fusileers
+_: fusing / _V: fuzing | detonating device
 A Z: fustianize / B: fustianise
 A Z: fustianized / B: fustianised
 A Z: fustianizes / B: fustianises
@@ -6113,10 +6831,21 @@ A Z: futilize / B: futilise
 A Z: futilizes / B: futilises
 A Z: futurize / B: futurise
 A Z: futurizes / B: futurises
+_: gabardine | :1
+_: gabardine's | :1
+_: gabardines | :1
+_: gaberdine / _V: gabardine | :2
+_: gaberdine's / _V: gabardine's | :2
+_: gaberdines / _V: gabardines | :2
 A Z: gaelicize / B: gaelicise
 A Z: gaelicized / B: gaelicised
 A Z: gaelicizes / B: gaelicises
 A Z: gaelicizing / B: gaelicising
+_: gage | :1
+_: gage's | :1
+_: gaged | :1
+_: gages | :1
+_: gaging | :1
 A: galactorrhea / B: galactorrhoea
 A: galactorrheas / B: galactorrhoeas
 A: galactosemia / B: galactosaemia
@@ -6137,6 +6866,8 @@ A Z: gallize / B: gallise
 A Z: gallized / B: gallised
 A Z: gallizes / B: gallises
 A Z: gallizing / B: gallising
+_: galosh / _v: galoshes / _-: galoshe
+_: galosh's / _v: galoshes' / _-: galoshe's
 A Z: galvanization / B: galvanisation
 A Z: galvanization's / B: galvanisation's
 A Z: galvanizations / B: galvanisations
@@ -6150,24 +6881,43 @@ A Z: galvanizing / B: galvanising
 A: gambades / B: gambadoes
 A: gamboled / B: gambolled
 A: gamboling / B: gambolling
+_: gamy / _v: gamey
 A Z: gargarize / B: gargarise
 A Z: gargarized / B: gargarised
 A Z: gargarizes / B: gargarises
 A Z: gargarizing / B: gargarising
+_: garrote / _v: garotte / _v: garrotte / _V: garote
+_: garrote's / _v: garotte's / _v: garrotte's / _V: garote's
+_: garroted / _v: garotted / _v: garrotted / _V: garoted
+_: garrotes / _v: garottes / _v: garrottes / _V: garotes
+_: garroting / _v: garrotting / _v: garotting / _V: garoting
 A: garruline / B: garrulinae
+_: gasoline / _V: gasolene
+_: gasoline's / _V: gasolene's
+_: gasolines / _V: gasolenes
 A: gastrea / B: gastraea
 A: gastreas / B: gastraeas
 A: gastrocele / B: gastrocoele
 A: gaufer / B: gaufre
 A: gaufers / B: gaufres
 A: gauffer / B: gauffre
+_: gauge / _V: gage | :2
+_: gauge's / _V: gage's | :2
+_: gauged / _V: gaged | :2
+_: gauges / _V: gages | :2
+_: gauging / _V: gaging | :2
 A: gaveled / B: gavelled
 A: gaveler / B: gaveller
 A: gaveling / B: gavelling
+_: gayety
+_: gayety's
+_: gayly
 A: ge / B: gae
 A: ge / B: goe
 A: ged / B: gaed
 A: geer / B: gere
+_: gelatin / _V: gelatine
+_: gelatin's / _V: gelatine's
 A Z: gelatinizabilities / B: gelatinisabilities
 A Z: gelatinizability / B: gelatinisability
 A Z: gelatinizability's / B: gelatinisability's
@@ -6184,7 +6934,11 @@ A Z: gelatinizer's / B: gelatiniser's
 A Z: gelatinizers / B: gelatinisers
 A Z: gelatinizes / B: gelatinises
 A Z: gelatinizing / B: gelatinising
+_: gelatins / _V: gelatines
 A: gelofer / B: gelofre
+_: gemologies / _v: gemmologies
+_: gemology / _v: gemmology
+_: gemology's / _v: gemmology's
 A Z: genealogize / B: genealogise
 A Z: genealogized / B: genealogised
 A Z: genealogizes / B: genealogises
@@ -6254,6 +7008,9 @@ A: gers / B: gres
 A: gessed / B: gessoed
 A: gesses / B: gessoes
 A: geste / B: gestae
+_: gewgaw / _V: geegaw
+_: gewgaw's / _V: geegaw's
+_: gewgaws / _V: geegaws
 A: gey / B: goey
 A Z: ghettoization / B: ghettoisation
 A Z: ghettoization's / B: ghettoisation's
@@ -6264,28 +7021,35 @@ A Z: ghettoizes / B: ghettoises
 A Z: ghettoizing / B: ghettoising
 A Z: giantize / B: giantise
 A Z: giantizes / B: giantises
-Av B: jibe / A Bv: gibe | insult
-Av B: jibe's / A Bv: gibe's | insult
-Av B: jibed / A Bv: gibed | insult
-Av B: jibes / A Bv: gibes | insult
-Av B: jibing / A Bv: gibing | insult
+A Bv: gibe / Av B: jibe | insult
+A Bv: gibe's / Av B: jibe's | insult
+A Bv: gibed / Av B: jibed | insult
+A Bv: gibes / Av B: jibes | insult
+A Bv: gibing / Av B: jibing | insult
 A: gimbaled / B: gimballed
 A: gimbaling / B: gimballing
+_: ginkgo / _V: gingko
+_: ginkgo's / _V: gingko's
+_: ginkgoes / _v: ginkgos / _V: gingkos / _V: gingkoes
+_: girly / _v: girlie
+_: gizmo / _V: gismo
+_: gizmo's / _V: gismo's
+_: gizmos / _V: gismos
 A Z: glacialize / B: glacialise
 A Z: glacializes / B: glacialises
 A: glamor / B: glamour
 A: glamor's / B: glamour's
 A: glamored / B: glamoured
 A: glamoring / B: glamouring
-A Z: glamorization / B: glamorisation
+A Z: glamorization / AV: glamourization / B: glamorisation
 A Z: glamorization's / B: glamorisation's
 A Z: glamorizations / B: glamorisations
-A Z: glamorize / B: glamorise
+A Z: glamorize / AV: glamourize / B: glamorise
 A Z: glamorized / B: glamorised
-A Z: glamorizer / B: glamoriser
+A Z: glamorizer / AV: glamourizer / B: glamoriser
 A Z: glamorizer's / B: glamoriser's
 A Z: glamorizers / B: glamorisers
-A Z: glamorizes / B: glamorises
+A Z: glamorizes / AV: glamourizes / B: glamorises
 A Z: glamorizing / B: glamorising
 A: glamorless / B: glamourless
 A B: glamorous / B-: glamourous
@@ -6318,8 +7082,11 @@ A Z: gluttonizes / B: gluttonises
 A Z: gluttonizing / B: gluttonising
 A: glycemia / B: glycaemia
 A: glycemic / B: glycaemic
+_: glycerin / _v: glycerine
+_: glycerin's / _v: glycerine's
 A Z: glycerinize / B: glycerinise
 A Z: glycerinizes / B: glycerinises
+_: glycerins / _v: glycerines
 A Z: glycerolize / B: glycerolise
 A Z: glycerolized / B: glycerolised
 A Z: glycerolizes / B: glycerolises
@@ -6331,6 +7098,14 @@ A Z: gnosticize / B: gnosticise
 A Z: gnosticizer / B: gnosticiser
 A Z: gnosticizers / B: gnosticisers
 A Z: gnosticizes / B: gnosticises
+_: gobbledygook / _V: gobbledegook
+_: gobbledygook's / _V: gobbledegook's
+_: gobbledygooks / _V: gobbledegooks
+_: goddamn / _v: goddam
+_: goddamn's / _v: goddam's
+_: goddamned / _v: goddamed
+_: goddamning / _v: goddaming
+_: goddamns / _v: goddams
 A Z: goddize / B: goddise
 A Z: goddizes / B: goddises
 A: goiter / B: goitre
@@ -6349,6 +7124,11 @@ A: gonorrhealer / B: gonorrhoealer
 A: gonorrhealest / B: gonorrhoealest
 A: gonorrheas / B: gonorrhoeas
 A: gonorrheic / B: gonorrhoeic
+_: goodbies / _v: goodbys
+_: goodbye / _v: goodby
+_: goodbye's / _v: goodby's
+_: goody / _v: goodie
+_: goody's / _v: goodie's
 A: gor / B: gour
 A: gora / B: goura
 A: goramies / B: gouramies
@@ -6397,6 +7177,9 @@ A Z: grammaticize / B: grammaticise
 A Z: grammaticized / B: grammaticised
 A Z: grammaticizes / B: grammaticises
 A Z: grammaticizing / B: grammaticising
+_: granddad / _v: grandad
+_: granddad's / _v: grandad's
+_: granddads / _v: grandads
 A Z: grangerization / B: grangerisation
 A Z: grangerization's / B: grangerisation's
 A Z: grangerizations / B: grangerisations
@@ -6414,10 +7197,15 @@ A Z: granitize / B: granitise
 A Z: granitized / B: granitised
 A Z: granitizes / B: granitises
 A Z: granitizing / B: granitising
+_: granny / _v: grannie
+_: granny's / _v: grannie's
 A Z: granulitization / B: granulitisation
 A Z: granulitizations / B: granulitisations
 A Z: granulize / B: granulise
 A Z: granulizes / B: granulises
+_: graphic / _V: graphical | <Adj>
+_: graphic | <N>
+_: graphical | graphical user interface
 A Z: graphitizable / B: graphitisable
 A Z: graphitization / B: graphitisation
 A Z: graphitization's / B: graphitisation's
@@ -6429,7 +7217,7 @@ A Z: graphitizing / B: graphitising
 A: graveled / B: gravelled
 A: graveling / B: gravelling
 A: gray / AV B: grey
-A B: gray | physical unit | -
+A B: gray | (-) physical unit
 A: gray's / AV B: grey's
 A: grayed / AV B: greyed
 A: grayer / AV B: greyer
@@ -6437,7 +7225,7 @@ A: grayest / AV B: greyest
 A: graying / AV B: greying
 A: grayist / AV B: greyish
 A: grays / AV B: greys
-A B: grays | physical unit | -
+A B: grays | (-) physical unit
 A: grecian / B: graecian
 A: grecism / B: graecism
 A Z: grecize / B: grecise
@@ -6450,6 +7238,12 @@ A Z: greisenize / B: greisenise
 A Z: greisenized / B: greisenised
 A Z: greisenizes / B: greisenises
 A Z: greisenizing / B: greisenising
+_: griffin / _v: griffon / _V: gryphon | animal
+_: griffin's / _v: griffon's / _V: gryphon's | animal
+_: griffins / _v: griffons / _V: gryphons | animal
+_: griffon
+_: griffon's
+_: griffons
 A Z: grizard / B: grisard
 A Z: grize / B: grise
 A Z: grizes / B: grises
@@ -6469,9 +7263,21 @@ A: grueling / B: gruelling
 A: grueling's / B: gruelling's
 A: gruelingly / B: gruellingly
 A: gruelings / B: gruellings
+_: guerrilla / _v: guerilla | <N>
+_: guerrilla's / _v: guerilla's <N>
+_: guerrillas / _v: guerillas | <N>
 A Z: guizer / B: guiser
 A Z: guizers / B: guisers
 A: gule / B: gulae
+_: gullies / _-: gulleys
+_: gully / _V: gulley | <N> trench
+_: gully's / _V: gulley's | <N> trench
+_: gunnel | :1
+_: gunnel's | :1
+_: gunnels | :1
+_: gunwale / _V: gunnel | :2
+_: gunwale's / _V: gunnel's | :2
+_: gunwales / _V: gunnels | :2
 A: gutte / B: guttae
 A: guttule / B: guttulae
 A Z: gutturalization / B: gutturalisation
@@ -6525,13 +7331,31 @@ A: gyneocracy / B: gynaeocracy
 A: gyneolater / B: gynaeolater
 A: gyneolatry / B: gynaeolatry
 A: gynomonecious / B: gynomonoecious
+_: gypsies / _V: gipsies
+_: gypsy / _V: gipsy
+_: gypsy's / _V: gipsy's
 A Z: gyrostabilization / B: gyrostabilisation
 A Z: gyrostabilizations / B: gyrostabilisations
 A Z: gyrostabilizer / B: gyrostabiliser
 A Z: gyrostabilizer's / B: gyrostabiliser's
 A Z: gyrostabilizers / B: gyrostabilisers
+_: ha / _v: hah
 A Z: habitualize / B: habitualise
 A Z: habitualizes / B: habitualises
+_: hairdryer / _v: hairdrier
+_: hairdryer's / _v: hairdrier's
+_: hairdryers / _v: hairdriers
+_: hajj / _V: hadj
+_: hajj's / _V: hadj's
+_: hajji / _V: hadji
+_: hajji's / _V: hadji's
+_: hajjis / _V: hadjis
+_: hajjs / _V: hadjs
+_: halloo / _V: hallo / _V: hollo
+_: halloo's / _V: hallo's / _V: hollo's
+A: hallooed / AV: halloed / AV: holloed / B: holloaed
+_: hallooing / _V: halloing / _V: holloing
+_: halloos / _V: hollos / _V: hallos
 A Z: hamletization / B: hamletisation
 A Z: hamletization's / B: hamletisation's
 A Z: hamletizations / B: hamletisations
@@ -6539,6 +7363,8 @@ A Z: hamletize / B: hamletise
 A Z: hamletizes / B: hamletises
 A: handseled / B: handselled
 A: handseling / B: handselling
+_: hankie / _: hanky
+_: hankie's / _: hanky's
 A Z: hansardize / B: hansardise
 A Z: hansardized / B: hansardised
 A Z: hansardizes / B: hansardises
@@ -6579,6 +7405,8 @@ A Z: harmonizer's / B: harmoniser's
 A Z: harmonizers / B: harmonisers
 A Z: harmonizes / B: harmonises
 A Z: harmonizing / B: harmonising
+_: hashish / _V: hasheesh / _-: haschisch
+_: hashish's / _V: hasheesh's / _-: haschisch's
 A: hatcheled / B: hatchelled
 A: hatcheling / B: hatchelling
 A Z: haussmannization / B: haussmannisation
@@ -6857,7 +7685,23 @@ A B: hiccups / Bv: hiccoughs
 A Z: hierarchize / B: hierarchise
 A Z: hierarchized / B: hierarchised
 A Z: hierarchizing / B: hierarchising
+_: high_jinks / _V: hijinks
+_: highfalutin / _V: hifalutin / _V: highfaluting
+_: hijack / _V: highjack
+_: hijacked / _V: highjacked
+_: hijacker / _V: highjacker
+_: hijacker's / _V: highjacker's
+_: hijackers / _V: highjackers
+_: hijacking / _V: highjacking
+_: hijacks / _V: highjacks
+_: hijacks's / _V: highjack's
 A: hilloed / B: hilloaed
+_: hippie / _v: hippy | :1
+_: hippie's / _v: hippy's | :1
+_: hippieness / _v: hippiness
+_: hippieness's / _v: hippiness's
+_: hippienesses / _v: hippinesses
+_: hippy | :2
 A: hirseled / B: hirselled
 A: hirseling / B: hirselling
 A Z: hispanicize / B: hispanicise
@@ -6872,7 +7716,9 @@ A Z: historicize / B: historicise
 A Z: historicized / B: historicised
 A Z: historicizes / B: historicises
 A Z: historicizing / B: historicising
-A: holloed / B: holloaed
+_: hmm / _v: hm
+_: hoagie / _V: hoagy
+_: hoagie's / _V: hoagy's
 A: holloed / B: hollooed
 A: homeoblastic / B: homoeoblastic
 A: homeobox / B: homoeobox
@@ -6932,6 +7778,14 @@ A: homeotype / B: homoeotype
 A: homeotypic / B: homoeotypic
 A: homeotypical / B: homoeotypical
 A: homeozoic / B: homoeozoic
+_: homeward / _v: homewards
+_: homey / _V: homy | <Adj>
+_: homey / _v: homie | <N>
+_: homey's / _v: homie's | <N>
+_: homeyness / _v: hominess
+_: homeyness's / _v: hominess's
+_: homeynesses / _v: hominesses
+_: homeys / _v: homies | <N>
 A Z: hominization / B: hominisation
 A Z: hominized / B: hominised
 A Z: homogenization / B: homogenisation
@@ -6952,6 +7806,9 @@ A Z: homologizer's / B: homologiser's
 A Z: homologizers / B: homologisers
 A Z: homologizes / B: homologises
 A Z: homologizing / B: homologising
+_: honkies / _V: honkeys
+_: honky / _v: honkie / _V: honkey
+_: honky's / _v: honkie's / _V: honkey's
 A: honor / B: honour
 A: honor's / B: honour's
 A: honorabilities / B: honourabilities
@@ -6983,10 +7840,17 @@ A: honorlesser / B: honourlesser
 A: honorlesses / B: honourlesses
 A: honorlessest / B: honourlessest
 A: honors / B: honours
+_: hooch / _v: hootch | :2
+_: hooch's / _v: hootch's | hut
+_: hooches / _v: hootches | hut
 A Z: hoodlumize / B: hoodlumise
 A Z: hoodlumizes / B: hoodlumises
+_: hookies / _V: hookeys
+_: hooky / _V: hookey
+_: hooky's / _V: hookey's
 A Z: hooliganize / B: hooliganise
 A Z: hooliganizes / B: hooliganises
+A: hooray / Av: hurrah / Av: hurray | <Inj>
 A: hore / B: horae
 A Z: horizontalization / B: horizontalisation
 A Z: horizontalization's / B: horizontalisation's
@@ -6997,6 +7861,7 @@ A Z: hormonize / B: hormonise
 A Z: hormonizes / B: hormonises
 A Z: horrorize / B: horrorise
 A Z: horrorizes / B: horrorises
+_: horsey / _: horsy
 A Z: hospitalization / B: hospitalisation
 A Z: hospitalization's / B: hospitalisation's
 A Z: hospitalizations / B: hospitalisations
@@ -7035,6 +7900,8 @@ A Z: humanizer's / B: humaniser's
 A Z: humanizers / B: humanisers
 A Z: humanizes / B: humanises
 A Z: humanizing / B: humanising
+_: hummus / _V: hoummos / _-: houmus / _-: humus
+_: humongous / _V: humungous
 A: humor / B: humour
 A: humor's / B: humour's
 A: humoral / B: humoural
@@ -7055,12 +7922,20 @@ A: humorlessnesses / B: humourlessnesses
 A: humors / B: humours
 A: humorsome / B: humoursome
 A: humorsomeness / B: humoursomeness
-A Bv: hurray / B: hurrah
-A Bv: hurrayed / B: hurrahed
-A Bv: hurraying / B: hurrahing
-A Bv: hurrays / B: hurrahs
+_: humus |  
+A B: hurrah / Av Bv: hooray / AV: hoorah / AV Bv: hurray | :1
+A B: hurrah's / Av Bv: hooray's / AV: hoorah's / AV Bv: hurray's | :1
+A B: hurrahed / AV Bv: hoorayed / AV Bv: hurrayed | :1
+A B: hurrahing / AV Bv: hooraying / AV Bv: hurraying | :1
+A B: hurrahs / Av Bv: hoorays / AV: hoorahs / AV Bv: hurrays / A-: hurrahes | :1
 A Z: hurricanize / B: hurricanise
 A Z: hurricanizes / B: hurricanises
+_: huzzah / _v: huzza
+_: huzzah's / _v: huzza's
+_: huzzahed / _v: huzzaed
+_: huzzahes / _v: huzzas
+_: huzzahing / _v: huzzaing
+_: hyaenas / _V: hyaena | plural
 A Z: hyalinization / B: hyalinisation
 A Z: hyalinization's / B: hyalinisation's
 A Z: hyalinizations / B: hyalinisations
@@ -7088,6 +7963,9 @@ A: hydremia's / B: hydraemia's
 A: hydremias / B: hydraemias
 A: hydremic / B: hydraemic
 A: hydrocele / B: hydrocoele
+_: hydrocephalus / _V: hydrocephaly
+_: hydrocephalus's / _V: hydrocephaly's
+_: hydrocephaluses / _V: hydrocephalies
 A Z: hydrogenization / B: hydrogenisation
 A Z: hydrogenization's / B: hydrogenisation's
 A Z: hydrogenizations / B: hydrogenisations
@@ -7118,6 +7996,8 @@ A Z: hydroxylization's / B: hydroxylisation's
 A Z: hydroxylizations / B: hydroxylisations
 A Z: hydroxylize / B: hydroxylise
 A Z: hydroxylizes / B: hydroxylises
+_: hyena / _V: hyaena
+_: hyenas / _V: hyena | plural
 A: hyenic / B: hyaenic
 A Z: hygienization / B: hygienisation
 A Z: hygienization's / B: hygienisation's
@@ -7295,10 +8175,15 @@ A Z: ichneumonized's / B: ichneumonised's
 A Z: ichneumonizeds / B: ichneumoniseds
 A: ichorrhea / B: ichorrhoea
 A: ichorrhemia / B: ichorrhaemia
+_: icon / _V: ikon
+_: icon's / _V: ikon's
+_: iconic / _V: ikonic
+_: iconically / _V: ikonically
 A Z: iconize / B: iconise
 A Z: iconized / B: iconised
 A Z: iconizes / B: iconises
 A Z: iconizing / B: iconising
+_: icons / _V: ikons
 A Z: idealization / B: idealisation
 A Z: idealization's / B: idealisation's
 A Z: idealizations / B: idealisations
@@ -7333,6 +8218,13 @@ A Z: idolizer's / B: idoliser's
 A Z: idolizers / B: idolisers
 A Z: idolizes / B: idolises
 A Z: idolizing / B: idolising
+_: idyll / _V: idyl
+_: idyll's / _V: idyl's
+_: idylls / _V: idyls
+_: ignitable / _V: ignitible
+_: igniter / _V: ignitor
+_: igniter's / _V: ignitor's
+_: igniters / _V: ignitors
 A: ileocecal / B: ileocaecal
 A Z: illegalization / B: illegalisation
 A Z: illegalization's / B: illegalisation's
@@ -7398,8 +8290,10 @@ A Z: immunizes / B: immunises
 A Z: immunizing / B: immunising
 A Z: impactionize / B: impactionise
 A Z: impactionizes / B: impactionises
-A: impaneled / B: impanelled
-A: impaneling / B: impanelling
+_: impanel / _v: empanel
+A: impaneled / Av: empaneled / B: impanelled
+A: impaneling / Av: empaneling / B: impanelling
+_: impanels / _v: empanels
 A: impasted / B: impastoed
 A Z: imperialization / B: imperialisation
 A Z: imperialization's / B: imperialisation's
@@ -7418,6 +8312,12 @@ A Z: impersonalize / B: impersonalise
 A Z: impersonalized / B: impersonalised
 A Z: impersonalizes / B: impersonalises
 A Z: impersonalizing / B: impersonalising
+_: impostor / _v: imposter
+_: impostor's / _v: imposter's
+_: impostors / _v: imposters
+_: improviser / _v: improvisor
+_: improviser's / _v: improvisor's
+_: improvisers / _v: improvisors
 A: improvizatorize / B: improvisatorise / Z: improvisatorize
 A: improvizatorizes / B: improvisatorises / Z: improvisatorizes
 A Z: incarnalize / B: incarnalise
@@ -7483,6 +8383,7 @@ A Z: infidelize / B: infidelise
 A Z: infidelizes / B: infidelises
 A Z: infinitize / B: infinitise
 A Z: infinitizes / B: infinitises
+_: inflexion
 A Z: informalize / B: informalise
 A Z: informalizes / B: informalises
 A Z: inhumanize / B: inhumanise
@@ -7512,6 +8413,9 @@ A Bv: inquiries / B: enquiries
 A Bv: inquiring / B: enquiring
 A Bv: inquiry / B: enquiry
 A Bv: inquiry's / B: enquiry's
+_: insignia / _V: insigne
+_: insignia / _v: insignias
+_: insignia's / _V: insigne's
 A Z: insolubilization / B: insolubilisation
 A Z: insolubilization's / B: insolubilisation's
 A Z: insolubilize / B: insolubilise
@@ -7521,6 +8425,9 @@ A Z: insolubilizing / B: insolubilising
 A: installment / B: instalment
 A: installment's / B: instalment's
 A: installments / B: instalments
+_: instituter / _v: institutor
+_: instituter's / _v: institutor's
+_: instituters / _v: institutors
 A Z: institutionalization / B: institutionalisation
 A Z: institutionalization's / B: institutionalisation's
 A Z: institutionalizations / B: institutionalisations
@@ -7581,6 +8488,9 @@ A Z: interjectionizes / B: interjectionises
 A: interjudgment / B: interjudgement
 A: interjudgment's / B: interjudgement's
 A: interjudgments / B: interjudgements
+_: intern / _v: interne | <Adj>
+_: intern / _V: interne | <N>
+_: intern's / _V: interne's | <N>
 A Z: internalization / B: internalisation
 A Z: internalization's / B: internalisation's
 A Z: internalizations / B: internalisations
@@ -7595,12 +8505,23 @@ A Z: internationalize / B: internationalise
 A Z: internationalized / B: internationalised
 A Z: internationalizes / B: internationalises
 A Z: internationalizing / B: internationalising
+_: internment / _v: internement
+_: internments / _v: internements
+_: interns / _V: internes | <N>
+_: internship / _v: interneship
+_: internships / _v: interneships
 A Z: interorganizational / B: interorganisational
 A: intime / B: intimae
 A Z: intraorganization / B: intraorganisation
 A Z: intraorganization's / B: intraorganisation's
 A Z: intraorganizations / B: intraorganisations
+_: inure / _v: enure
+_: inured / _v: enured
+_: inures / _v: enures
+_: inuring / _v: enuring
 A: invigor / B: invigour
+_: inward | <Adj>
+_: inward / _v: inwards | <Adv>
 A Z: iodization / B: iodisation
 A Z: iodization's / B: iodisation's
 A Z: iodize / B: iodise
@@ -7694,6 +8615,9 @@ A Z: itemizes / B: itemises
 A Z: itemizing / B: itemising
 A Z: izing / B: ising
 A: jacobean / B: jacobaean
+_: jailer / _V: jailor
+_: jailer's / _V: jailor's
+_: jailers / _V: jailors
 A Z: janizaries / B: janisaries
 A Z: janizary / B: janisary
 A Z: jargonization / B: jargonisation
@@ -7703,10 +8627,14 @@ A Z: jargonize / B: jargonise
 A Z: jargonized / B: jargonised
 A Z: jargonizes / B: jargonises
 A Z: jargonizing / B: jargonising
+_: jasmine / _V: jessamine
+_: jasmine's / _V: jessamine's
+_: jasmines / _V: jessamines
 A Z: jasperize / B: jasperise
 A Z: jasperized / B: jasperised
 A Z: jasperizes / B: jasperises
 A Z: jasperizing / B: jasperising
+_: jeez / _V: geez
 A Z: jeopardization / B: jeopardisation
 A Z: jeopardize / B: jeopardise
 A Z: jeopardized / B: jeopardised
@@ -7728,6 +8656,16 @@ A: jibes / AV B: gybes | sailing
 A B: jibes | agree
 A: jibing / AV B: gybing | sailing
 A B: jibing | agree
+_: jihad / _V: jehad
+_: jihad's / _V: jehad's
+_: jihads / _V: jehads
+_: jinn / _v: jinns / _V: djinns / _V: djinn
+_: jinni / _v: jinn / _V: djinni / _V: djinn
+_: jinni's / _v: jinn's / _V: djinni's / _V: djinn's
+_: jinrikisha / _v: jinricksha / _-: jinriksha
+_: jinrikisha's / _v: jinricksha's / _-: jinriksha's
+_: jinrikishas / _v: jinrickshas / _-: jinrikshas
+_: jokey / _V: joky
 A: jor / B: jour
 A: jors / B: jours
 A Z: journalization / B: journalisation
@@ -7751,10 +8689,16 @@ A: judgmentalest / B: judgementalest
 A: judgments / B: judgements
 A Z: judicialize / B: judicialise
 A Z: judicializes / B: judicialises
+_: jujitsu / _V: jujutsu / _V: jiujitsu
+_: jujitsu's / _V: jiujitsu's / _V: jujutsu's
+_: jujitsus / _V: jujutsus / _V: jiujitsus
 A Z: jumboize / B: jumboise
 A Z: jumboized / B: jumboised
 A Z: jumboizes / B: jumboises
 A Z: jumboizing / B: jumboising
+_: junketeer / _v: junketer
+_: junketeer's / _v: junketer's
+_: junketeers / _v: junketers
 A Z: juvenilize / B: juvenilise
 A Z: juvenilizes / B: juvenilises
 A: kane / B: kanae
@@ -7765,6 +8709,9 @@ A Z: kaolinize / B: kaolinise
 A Z: kaolinized / B: kaolinised
 A Z: kaolinizes / B: kaolinises
 A Z: kaolinizing / B: kaolinising
+_: kebab / _v: kabob / _v: kebob
+_: kebab's / _v: kebob's / _v: kabob's
+_: kebabs / _v: kabobs / _v: kebobs
 A: ked / B: kaed
 A: kellia / B: koellia
 A: kembed / B: kemboed
@@ -7779,12 +8726,28 @@ A Z: keratinizes / B: keratinises
 A Z: keratinizing / B: keratinising
 A: kerneled / B: kernelled
 A: kerneling / B: kernelling
+_: kerosene / _V: kerosine
+_: kerosene's / _V: kerosine's
+_: kerosenes / _V: kerosines
+_: ketchup / _v: catsup / _V: catchup
+_: ketchup's / _v: catsup's / _V: catchup's
+_: ketchups / _v: catsups / _V: catchups
 A: ketonemia / B: ketonaemia
 A Z: ketonization / B: ketonisation
 A Z: ketonization's / B: ketonisation's
 A Z: ketonizations / B: ketonisations
 A Z: ketonize / B: ketonise
 A Z: ketonizes / B: ketonises
+_: kiddie / _V: kiddy
+_: kiddie's / _V: kiddy's
+_: kidnapped / _V: kidnaped
+_: kidnappee / _v: kidnapee
+_: kidnappee's / _v: kidnapee's
+_: kidnappees / _v: kidnapees
+_: kidnapper / _V: kidnaper
+_: kidnapper's / _V: kidnaper's
+_: kidnappers / _V: kidnapers
+_: kidnapping / _V: kidnaping
 A C: kilogram / B: kilogramme
 A C: kilogram's / B: kilogramme's
 A C: kilograms / B: kilogrammes
@@ -7794,6 +8757,9 @@ A: kiloliters / B: kilolitres
 A: kilometer / B: kilometre
 A: kilometer's / B: kilometre's
 A: kilometers / B: kilometres
+_: kindergartner / _V: kindergartener
+_: kindergartner's / _V: kindergartener's
+_: kindergartners / _V: kindergarteners
 A: kinestheses / B: kinaestheses
 A: kinesthesia / B: kinaesthesia
 A: kinesthesia's / B: kinaesthesia's
@@ -7807,6 +8773,22 @@ A: kinesthetically / B: kinaesthetically
 A: kinestheticer / B: kinaestheticer
 A: kinestheticest / B: kinaestheticest
 A: kinesthetics / B: kinaesthetics
+_: kissogram / _-: kissagram
+_: kissogram's / _-: kissagram's
+_: kissograms / _-: kissagrams
+_: knickknack / _V: nicknack
+_: knickknack's / _V: nicknack's
+_: knickknacks / _V: nicknacks
+_: knockwurst / _: knackwurst
+_: knockwurst's / _: knackwurst's
+_: knockwursts / _: knackwursts
+_: kooky / _V: kookie
+_: kopeck / _v: kopek / _V: copeck
+_: kopeck's / _v: kopek's / _V: copeck's
+_: kopecks / _v: kopeks / _V: copecks
+_: kumquat / _V: cumquat
+_: kumquat's / _V: cumquat's
+_: kumquats / _V: cumquats
 A Z: kyanize / B: kyanise
 A Z: kyanized / B: kyanised
 A Z: kyanizes / B: kyanises
@@ -7883,6 +8865,7 @@ A: labors / B: labours
 A: laborsaving / B: laboursaving
 A: laborsome / B: laboursome
 A: laborsomely / B: laboursomely
+_: lachrymal / _v: lacrimal
 A: lackluster / B: lacklustre
 A: lackluster's / B: lacklustre's
 A: lacklusterrer / B: lacklustrer
@@ -7895,6 +8878,9 @@ A Z: laconizing / B: laconising
 A Z: lactonized / B: lactonised
 A: laer / B: lare
 A: laers / B: lares
+_: lagniappe / _-: lagnappe
+_: lagniappe's / _-: lagnappe's
+_: lagniappes / _-: lagnappes
 A Z: laicization / B: laicisation
 A Z: laicization's / B: laicisation's
 A Z: laicizations / B: laicisations
@@ -7906,11 +8892,19 @@ A Z: lairize / B: lairise
 A Z: lairized / B: lairised
 A Z: lairizes / B: lairises
 A Z: lairizing / B: lairising
+_: lambaste / _v: lambast
+_: lambastes / _v: lambasts
 A Z: laminarize / B: laminarise
 A Z: laminarized / B: laminarised
 A Z: laminarizes / B: laminarises
 A Z: laminarizing / B: laminarising
 A: lapeled / B: lapelled
+_: lasagna / _v: lasagne | :1
+_: lasagna | :2
+_: lasagna's / _v: lasagne's | :1
+_: lasagna's | :2
+_: lasagnas / _v: lasagnes | :1
+_: lasagnas | :2
 A: laster / B: lastre
 A Z: latentize / B: latentise
 A Z: latentizes / B: latentises
@@ -7923,15 +8917,23 @@ A Z: laterization / B: laterisation
 A Z: laterization's / B: laterisation's
 A Z: laterizations / B: laterisations
 A Z: latinize / B: latinise
+_: launderette / _V: laundrette
+_: launderette's / _V: laundrette's
+_: launderettes / _V: laundrettes
 A: laure / B: laurae
 A: laureled / B: laurelled
 A: laureling / B: laurelling
+_: lavalier_microphone / _V: lavaliere_microphone
+_: lavalier_microphone's / _V: lavaliere_microphone's
+_: lavalier_microphones / _V: lavaliere_microphones
 A: lavolted / B: lavoltaed
 A: le / B: loe
 A: le's / B: loe's
 A Bv Z: learned / B Zv: learnt
 A Z: leatherize / B: leatherise
 A Z: leatherizes / B: leatherises
+_: lefty / _V: leftie
+_: lefty's / _V: leftie's
 A Z: legalization / B: legalisation
 A Z: legalization's / B: legalisation's
 A Z: legalizations / B: legalisations
@@ -7939,6 +8941,9 @@ A Z: legalize / B: legalise
 A Z: legalized / B: legalised
 A Z: legalizes / B: legalises
 A Z: legalizing / B: legalising
+_: legging / _v: leggin
+_: legging's / _v: leggin's
+_: leggings / _v: leggins
 A Z: legitimatize / B: legitimatise
 A Z: legitimatized / B: legitimatised
 A Z: legitimatizes / B: legitimatises
@@ -8046,14 +9051,14 @@ A Z: liberalizers / B: liberalisers
 A Z: liberalizes / B: liberalises
 A Z: liberalizing / B: liberalising
 A: libre / B: librae
-A: license / B: licence | noun
-A B: license / Bv: licence | verb
+A: license / B: licence | <N>
+A B: license / Bv: licence | <V>
 A: license's / B: licence's
 A B: licensed / Bv: licenced
 A: licenseless / B: licenceless
 A: licenselesses / B: licencelesses
-A: licenses / B: licences | noun
-A B: licenses / Bv: licences | verb
+A: licenses / B: licences | <N>
+A B: licenses / Bv: licences | <V>
 A B: licensing / Bv: licencing
 A Z: lichenization / B: lichenisation
 A Z: lichenization's / B: lichenisation's
@@ -8066,6 +9071,16 @@ A Z: lignitize / B: lignitise
 A Z: lignitizes / B: lignitises
 A: lignose / B: lignosae
 A: ligule / B: ligulae
+_: likabilities / _v: likeabilities
+_: likability / _v: likeability
+_: likability's / _v: likeability's
+_: likable / _v: likeable
+_: likableness / _v: likeableness
+_: likableness's / _v: likeableness's
+_: likablenesses / _v: likeablenesses
+_: linchpin / _V: lynchpin
+_: linchpin's / _V: lynchpin's
+_: linchpins / _V: lynchpins
 A Z: linearizable / B: linearisable
 A Z: linearization / B: linearisation
 A Z: linearization's / B: linearisation's
@@ -8082,6 +9097,9 @@ A Z: linenizes / B: linenises
 A: linge / B: lingoe
 A Z: lingualize / B: lingualise
 A Z: lingualizes / B: lingualises
+_: linguine / _v: linguini
+_: linguine's / _v: linguini's
+_: linguines / _v: linguinis
 A Z: lionizable / B: lionisable
 A Z: lionizable's / B: lionisable's
 A Z: lionizables / B: lionisables
@@ -8098,6 +9116,12 @@ A Z: lionizing / B: lionising
 A: lipemia / B: lipaemia
 A: lipemic / B: lipaemic
 A: lipoidemia / B: lipoidaemia
+_: liquefied / _V: liquified
+_: liquefier / _V: liquifier
+_: liquefiers / _V: liquifiers
+_: liquefies / _V: liquifies
+_: liquefy / _V: liquify
+_: liquefying / _V: liquifying
 A Z: liquidization / B: liquidisation
 A Z: liquidize / B: liquidise
 A Z: liquidized / B: liquidised
@@ -8106,6 +9130,13 @@ A Z: liquidizer's / B: liquidiser's
 A Z: liquidizers / B: liquidisers
 A Z: liquidizes / B: liquidises
 A Z: liquidizing / B: liquidising
+_: lissome / _V: lissom
+_: lissomely / _V: lissomly
+_: lissomeness / _V: lissomness
+_: lissomenesses / _V: lissomnesses
+_: litchi / _v: lychee / _V: lichee
+_: litchi's / _v: lychee's / _V: lichee's
+_: litchis / _v: lychees / _V: lichees
 A: liter / B: litre
 A: liter's / B: litre's
 A Z: literalization / B: literalisation
@@ -8131,6 +9162,10 @@ A Z: lithotritize / B: lithotritise
 A Z: lithotritized / B: lithotritised
 A Z: lithotritizes / B: lithotritises
 A Z: lithotritizing / B: lithotritising
+_: livable / _V: liveable
+_: livableness / _V: liveableness
+_: loath / _V: loth / _V: loathe | reluctant
+_: loathe | detest
 A Z: lobotomize / B: lobotomise
 A Z: lobotomized / B: lobotomised
 A Z: lobotomizes / B: lobotomises
@@ -8150,6 +9185,15 @@ A Z: localizer's / B: localiser's
 A Z: localizers / B: localisers
 A Z: localizes / B: localises
 A Z: localizing / B: localising
+_: locator / _V: locater
+_: locator's / _V: locater's
+_: locators / _V: locaters
+_: lodestar / _V: loadstar
+_: lodestar's / _V: loadstar's
+_: lodestars / _V: loadstars
+_: lodestone / _V: loadstone
+_: lodestone's / _V: loadstone's
+_: lodestones / _V: loadstones
 A: lodicule / B: lodiculae
 A: loed / B: looed
 A Z: logicalization / B: logicalisation
@@ -8167,8 +9211,21 @@ A: logopedics's / B: logopaedics's
 A: logorrhea / B: logorrhoea
 A: logorrhea's / B: logorrhoea's
 A: logorrheas / B: logorrhoeas
+_: lollipop / _v: lollypop
+_: lollipop's / _v: lollypop's
+_: lollipops / _v: lollypops
+_: lollygag / _v: lallygag
+_: lollygagged / _v: lallygagged
+_: lollygagging / _v: lallygagged
+_: lollygags / _v: lallygags
+_: lollygags
 A: longeval / B: longaeval
 A: longevous / B: longaevous
+_: loonier / _V: looneyier
+_: loonies / _V: looneyies
+_: loonies / _V: looneys
+_: loony / _V: looney
+_: loony's / _V: looney's
 A: lordy / B: lourdy
 A: lorings / B: lourings
 A: lory / B: loury
@@ -8177,6 +9234,14 @@ A: louver / B: louvre
 A: louver's / B: louvre's
 A: louvered / B: louvred
 A: louvers / B: louvres
+_: lovability / _V: lovaebility
+_: lovable / _V: loveable
+_: lovableness / _V: loveableness
+_: lovably / _V: loveably
+_: love / _-: luv
+_: loves / _-: luvs
+_: lovey / _-: luvvie | :2
+_: loveys / _-: luvvies | :2
 A Z: loyalize / B: loyalise
 A Z: loyalizes / B: loyalises
 A Z: lumbarization / B: lumbarisation
@@ -8208,6 +9273,7 @@ A Z: luteinized / B: luteinised
 A Z: luteinizes / B: luteinises
 A Z: luteinizing / B: luteinising
 A: lutrine / B: lutrinae
+_: luvvy / _V: luvvie | :1
 A: lymphedema / B: lymphoedema
 A: lymphemia / B: lymphaemia
 A Z: lyophilization / B: lyophilisation
@@ -8229,6 +9295,8 @@ A Z: lysogenize / B: lysogenise
 A Z: lysogenized / B: lysogenised
 A Z: lysogenizes / B: lysogenises
 A Z: lysogenizing / B: lysogenising
+_: mac / _v: mack
+_: mac's / _v: mack's
 A Z: macadamization / B: macadamisation
 A Z: macadamization's / B: macadamisation's
 A Z: macadamizations / B: macadamisations
@@ -8245,7 +9313,11 @@ A Z: machinization's / B: machinisation's
 A Z: machinizations / B: machinisations
 A Z: machinize / B: machinise
 A Z: machinizes / B: machinises
+_: mackintosh / _V: macintosh
+_: mackintosh's / _V: macintosh's
+_: mackintoshes / _V: macintoshes
 A: macrander / B: macrandre
+_: macs / _v: macks
 A: macule / B: maculae
 A Z: maderization / B: maderisation
 A Z: maderizations / B: maderisations
@@ -8272,6 +9344,15 @@ A Z: magnetizer's / B: magnetiser's
 A Z: magnetizers / B: magnetisers
 A Z: magnetizes / B: magnetises
 A Z: magnetizing / B: magnetising
+_: mah-jongg / _v: mahjong
+_: mah-jongg's / _v: mahjong's
+_: mah-jonggs / _v: mahjongs
+_: maharajah / _v: maharaja
+_: maharajah's / _v: maharaja's
+_: maharajahes / _v: maharajas
+_: maharani / _v: maharanee
+_: maharani's / _v: maharanee's
+_: maharanis / _v: maharanees
 A Z: mahoganize / B: mahoganise
 A Z: mahoganized / B: mahoganised
 A Z: mahoganizes / B: mahoganises
@@ -8281,6 +9362,9 @@ A: mainor / B: mainour
 A: mainors / B: mainours
 A Z: mainprize / B: mainprise
 A: maisters / B: maistres
+_: majolica / _V: maiolica
+_: majolica's / _V: maiolica's
+_: majolicas / _V: maiolicas
 A Z: majorize / B: majorise
 A Z: majorizes / B: majorises
 A: majuscule / B: majusculae
@@ -8290,9 +9374,18 @@ A: malodor / B: malodour
 A: malodor's / B: malodour's
 A: malodorousness / B: malodourousness
 A: malodors / B: malodours
+_: mama / _V: momma / _V: mamma | mother
+_ _V: mama's / _V: momma's | mother
+_: mamas / _V: mommas / _V: mammas | mother
+_: mamma | gland
+_: mamma's | gland
+_: mammae / _-: mammas | gland
 A Z: mandarinize / B: mandarinise
 A Z: mandarinizes / B: mandarinises
 A: mandoer / B: mandore
+_: mandrel / _V: mandril
+_: mandrel's / _V: mandril's
+_: mandrels / _V: mandrils
 A: maneuver / B: manoeuvre
 A: maneuver's / B: manoeuvre's
 A: maneuverabilities / B: manoeuvrabilities
@@ -8307,9 +9400,22 @@ A: maneuverer's / B: manoeuvrer's
 A: maneuverers / B: manoeuvrers
 A: maneuvering / B: manoeuvring
 A: maneuvers / B: manoeuvres
+_: manikin / _V: mannikin
+_: manikin's / _V: mannikin's
+_: manikins / _V: mannikins
+_: manila / _V: manilla
+_: manila's / _V: manilla's
 A Z: mannerize / B: mannerise
 A Z: mannerizes / B: mannerises
+_: mantelpiece / _V: mantlepiece
+_: mantelpieces / _V: mantlepieces
 A: mantes / B: mantoes
+_: marabou / _V: marabout | :1
+_: marabou's / _V: marabout's | :1
+_: marabous / _V: marabouts | :1
+_: marabout | :2
+_: marabout's | :2
+_: marabouts | :2
 A Z: marbleize / B: marbleise
 A Z: marbleized / B: marbleised
 A Z: marbleizes / B: marbleises
@@ -8320,6 +9426,13 @@ A Z: marginalize / B: marginalise
 A Z: marginalized / B: marginalised
 A Z: marginalizes / B: marginalises
 A Z: marginalizing / B: marginalising
+_: marijuana / _V: marihuana
+_: marijuana's / _V: marihuana's
+_: marijuanas / _V: marihuanas
+_: marlinespike / _V: marlinspike
+_: marlinespike's / _V: marlinspike's
+_: marlinespikes / _V: marlinspikes
+_: marlinspike
 A Z: marmarize / B: marmarise
 A Z: marmarized / B: marmarised
 A Z: marmarizes / B: marmarises
@@ -8368,6 +9481,8 @@ A Z: masculinize / B: masculinise
 A Z: masculinized / B: masculinised
 A Z: masculinizes / B: masculinises
 A Z: masculinizing / B: masculinising
+_: mat | :2
+_: mat's | :2
 A Z: materialization / B: materialisation
 A Z: materialization's / B: materialisation's
 A Z: materializations / B: materialisations
@@ -8398,9 +9513,19 @@ A Z: matronize / B: matronise
 A Z: matronized / B: matronised
 A Z: matronizes / B: matronises
 A Z: matronizing / B: matronising
+_: mats | :2
+_: matte / _V: matt / _V: mat | :3
+_: matte | :4
+_: matte's | :4
+_: matted | :2
+_: mattes | :4
+_: matting | :2
 A Z: maudlinize / B: maudlinise
 A Z: maudlinizes / B: maudlinises
 A: mauger / B: maugre
+_: maven / _V: mavin
+_: maven's / _V: mavin's
+_: mavens / _V: mavins
 A Z: maximization / B: maximisation
 A Z: maximization's / B: maximisation's
 A Z: maximizations / B: maximisations
@@ -8411,11 +9536,18 @@ A Z: maximizer's / B: maximiser's
 A Z: maximizers / B: maximisers
 A Z: maximizes / B: maximises
 A Z: maximizing / B: maximising
+_: mazurka / _V: mazourka
+_: mazurka's / _V: mazourka's
+_: mazurkas / _V: mazourkas
 A: meager / B: meagre
 A: meagerrer / B: meagrer
 A: meagerrest / B: meagrest
 A: meandrine / B: maeandrine
 A: meandriniform / B: maeandriniform
+_: meanie / _V: meany | :1
+_: meanie's / _V: meany's | :1
+_: meany | :2
+_: meany's | :2
 A Z: mechanicalization / B: mechanicalisation
 A Z: mechanicalization's / B: mechanicalisation's
 A Z: mechanicalizations / B: mechanicalisations
@@ -8458,11 +9590,14 @@ A Z: medicalize / B: medicalise
 A Z: medicalized / B: medicalised
 A Z: medicalizes / B: medicalises
 A Z: medicalizing / B: medicalising
+_: medieval / _V: mediaeval
+_: medieval's / _V: mediaeval's
 A: medievalism / B: mediaevalism
 A: medievalism's / B: mediaevalism's
 A: medievalisms / B: mediaevalisms
+_: medievally / _V: mediaevally
 A: medievally / B: mediaevally
-A: medievals / B: mediaevals
+A: medievals / AV B: mediaevals
 A Z: mediumization / B: mediumisation
 A Z: mediumization's / B: mediumisation's
 A Z: mediumizations / B: mediumisations
@@ -8550,6 +9685,13 @@ A Z: mercerizer's / B: merceriser's
 A Z: mercerizers / B: mercerisers
 A Z: mercerizes / B: mercerises
 A Z: mercerizing / B: mercerising
+_: merchandise / _V: merchandize | <V>
+_: merchandised / _V: merchandized | <V>
+_: merchandiser / _-: merchandizer
+_: merchandiser's / _-: merchandizer's
+_: merchandisers / _-: merchandizers
+_: merchandises / _V: merchandizes | <V>
+_: merchandising / _V: merchandizing | <V>
 A Z: mercurialization / B: mercurialisation
 A Z: mercurialization's / B: mercurialisation's
 A Z: mercurializations / B: mercurialisations
@@ -8582,6 +9724,9 @@ A: mesogleal / B: mesogloeal
 A: mesogleas / B: mesogloeas
 A Z: mesprize / B: mesprise
 A Z: mesprizes / B: mesprises
+_: mesquite / _-: mesquit | o: possible austrian variant
+_: mesquite's / _-: mesquit's | o: possible austrian variant
+_: mesquites / _-: mesquits | o: possible austrian variant
 A Z: metabolizable / B: metabolisable
 A Z: metabolizable's / B: metabolisable's
 A Z: metabolizables / B: metabolisables
@@ -8645,6 +9790,9 @@ A B: meters | measure
 A: metership / B: metreship
 A: metestrus / B: metoestrus
 A: metestrus's / B: metoestrus's
+_: methadone / _V: methadon
+_: methadone's / _V: methadon's
+_: methadones / _V: methadons
 A: methemoglobin / B: methaemoglobin
 A Z: methodization / B: methodisation
 A Z: methodization's / B: methodisation's
@@ -8710,6 +9858,9 @@ A Z: micropolarizations / B: micropolarisations
 A Z: microscopize / B: microscopise
 A Z: microscopizes / B: microscopises
 A: microspheric / B: microsphaeric
+_: midsize / _V: midsized
+_: midwifed / _v: midwived
+_: midwifing / _v: midwiving
 A Z: migniardize / B: migniardise
 A Z: militarization / B: militarisation
 A Z: militarization's / B: militarisation's
@@ -8727,8 +9878,17 @@ A: milliliters / B: millilitres
 A: millimeter / B: millimetre
 A: millimeter's / B: millimetre's
 A: millimeters / B: millimetres
+_: millionaire / _-: millionnaire
+_: millionaire's / _-: millionnaire's
+_: millionaires / _-: millionnaires
 A Z: millionize / B: millionise
 A Z: millionizes / B: millionises
+_: millipede / _V: millepede
+_: millipede's / _V: millepede's
+_: millipedes / _V: millepedes
+_: milometer / _-: mileometer
+_: milometer's / _-: mileometer's
+_: milometers / _-: mileometers
 A Z: mineralizable / B: mineralisable
 A Z: mineralizable's / B: mineralisable's
 A Z: mineralizables / B: mineralisables
@@ -8763,6 +9923,9 @@ A Z: minimizer's / B: minimiser's
 A Z: minimizers / B: minimisers
 A Z: minimizes / B: minimises
 A Z: minimizing / B: minimising
+_: minuscule / _V: miniscule
+_: minuscule's / _V: miniscule's
+_: minuscules / _V: miniscules
 A Z: miraculize / B: miraculise
 A Z: miraculized / B: miraculised
 A Z: miraculizes / B: miraculises
@@ -8834,6 +9997,8 @@ A Z: misrealizes / B: misrealises
 A Z: misrecognize / B: misrecognise
 A Z: misrecognizes / B: misrecognises
 A: misrouting / B: misrouteing
+_: missilery / _-: missilry
+_: missilery's / _-: missilry's
 A Z: missionarize / B: missionarise
 A Z: missionarized / B: missionarised
 A Z: missionarizes / B: missionarises
@@ -8845,6 +10010,9 @@ A Z: missionizer / B: missioniser
 A Z: missionizers / B: missionisers
 A Z: missionizes / B: missionises
 A Z: missionizing / B: missionising
+_: missus / _v: missis
+_: missus's / _v: missis's
+_: missuses / _v: missises
 A: miter / B: mitre
 A: miter's / B: mitre's
 A: mitered / B: mitred
@@ -8903,6 +10071,8 @@ A Z: modularize / B: modularise
 A Z: modularized / B: modularised
 A Z: modularizes / B: modularises
 A Z: modularizing / B: modularising
+_: moggy / _V: moggie
+_: moggy's / _V: moggie's
 A Z: moisturization / B: moisturisation
 A Z: moisturize / B: moisturise
 A Z: moisturized / B: moisturised
@@ -8923,10 +10093,16 @@ A: molding's / B: moulding's
 A: moldings / B: mouldings
 A: molds / B: moulds
 A: moldy / B: mouldy
+_: molluscan / _v: molluskan
+_: mollusk / _v: mollusc
+_: mollusk's / _v: mollusc's
+_: mollusks / _v: molluscs
 A Z: molochize / B: molochise
 A Z: molochized / B: molochised
 A Z: molochizes / B: molochises
 A Z: molochizing / B: molochising
+_: mommy / _-: mommie
+_: mommy's / _-: mommie's
 A Z: monarchize / B: monarchise
 A Z: monarchized / B: monarchised
 A Z: monarchizer / B: monarchiser
@@ -8945,6 +10121,7 @@ A Z: monetize / B: monetise
 A Z: monetized / B: monetised
 A Z: monetizes / B: monetises
 A Z: monetizing / B: monetising
+_: moneyed / _V: monied
 A Z: mongrelization / B: mongrelisation
 A Z: mongrelization's / B: mongrelisation's
 A Z: mongrelizations / B: mongrelisations
@@ -8953,12 +10130,21 @@ A Z: mongrelized / B: mongrelised
 A Z: mongrelizer / B: mongreliser
 A Z: mongrelizes / B: mongrelises
 A Z: mongrelizing / B: mongrelising
+_: moniker / _V: monicker
+_: moniker's / _V: monicker's
+_: monikers / _V: monickers
 A Z: monochordize / B: monochordise
 A Z: monochordizes / B: monochordises
+_: monologist / _v: monologuist
+_: monologist's / _v: monologuist's
+_: monologists / _v: monologuists
 A Z: monologize / B: monologise
 A Z: monologized / B: monologised
 A Z: monologizes / B: monologises
 A Z: monologizing / B: monologising
+_: monologue / _V: monolog
+_: monologue's / _V: monolog's
+_: monologues / _V: monologs
 A Z: monologuize / B: monologuise
 A Z: monologuized / B: monologuised
 A Z: monologuizes / B: monologuises
@@ -9025,6 +10211,14 @@ A Z: mortalizes / B: mortalises
 A Z: mortalizing / B: mortalising
 A Z: mortarize / B: mortarise
 A Z: mortarizes / B: mortarises
+_: mortgagor / _V: mortgager
+_: mortgagor's / _V: mortgager's
+_: mortgagors / _V: mortgagers
+_: mortise / _V: mortice
+_: mortise's / _V: mortice's
+_: mortised / _V: morticed
+_: mortises / _V: mortices
+_: mortising / _V: morticing
 A: morule / B: morulae
 A Z: motorization / B: motorisation
 A Z: motorization's / B: motorisation's
@@ -9033,8 +10227,18 @@ A Z: motorize / B: motorise
 A Z: motorized / B: motorised
 A Z: motorizes / B: motorises
 A Z: motorizing / B: motorising
+_: mousy / _v: mousey
+_: movability / _v: moveability
+_: movable / _v: moveable
+_: movable's / _v: moveable's
+_: movableness / _v: moveableness
+_: movablenesses / _v: moveablenesses
+_: movables / _v: moveables
+_: movably / _v: moveably
 A: mucorrhea / B: mucorrhoea
 A: mucose / B: mucosae
+_: mujahideen / _v: mujahedin / _V: mujahedeen
+_: mujahideen's / _v: mujahedin's / _V: mujahedeen's
 A: multicolor / B: multicolour
 A: multicolor's / B: multicolour's
 A: multicolored / B: multicoloured
@@ -9046,6 +10250,9 @@ A: multifibered / B: multifibred
 A: multifibered's / B: multifibred's
 A: multifibereds / B: multifibreds
 A: multileveled / B: multilevelled
+_: multiplexer / _V: multiplexor
+_: multiplexer's / _V: multiplexor's
+_: multiplexers / _V: multiplexors
 A Z: municipalization / B: municipalisation
 A Z: municipalization's / B: municipalisation's
 A Z: municipalizations / B: municipalisations
@@ -9072,6 +10279,9 @@ A: mustache / B: moustache
 A: mustache's / B: moustache's
 A: mustached / B: moustached
 A: mustaches / B: moustaches
+_: mustachio / _V: moustachio
+_: mustachio's / _V: moustachio's
+_: mustachioed / _V: moustachioed
 A Z: mutagenize / B: mutagenise
 A Z: mutagenized / B: mutagenised
 A Z: mutagenizes / B: mutagenises
@@ -9095,6 +10305,9 @@ A Z: mylonitize / B: mylonitise
 A Z: mylonitized / B: mylonitised
 A Z: mylonitizes / B: mylonitises
 A Z: mylonitizing / B: mylonitising
+_: myna / _v: mynah
+_: myna's / _v: mynah's
+_: mynas / _v: mynahes
 A: myocele / B: myocoele
 A: myohematin / B: myohaematin
 A: myrialiter / B: myrialitre
@@ -9135,6 +10348,9 @@ A: myxedemas / B: myxoedemas
 A: myxedematous / B: myxoedematous
 A: myxedemic / B: myxoedemic
 A: myxemia / B: myxaemia
+_: naan / _V: nan
+_: naan's / _V: nan's
+_: naans / _V: nans
 A Z: nakedize / B: nakedise
 A Z: nakedizes / B: nakedises
 A Z: nanization / B: nanisation
@@ -9149,6 +10365,8 @@ A Z: naphthalize / B: naphthalise
 A Z: naphthalized / B: naphthalised
 A Z: naphthalizes / B: naphthalises
 A Z: naphthalizing / B: naphthalising
+_: narc / _V: nark | :1
+_: narc's / _V: nark's | :1
 A Z: narcotization / B: narcotisation
 A Z: narcotization's / B: narcotisation's
 A Z: narcotizations / B: narcotisations
@@ -9156,6 +10374,8 @@ A Z: narcotize / B: narcotise
 A Z: narcotized / B: narcotised
 A Z: narcotizes / B: narcotises
 A Z: narcotizing / B: narcotising
+_: narcs / _V: narks | :1
+_: nark | :2
 A Z: nasalization / B: nasalisation
 A Z: nasalization's / B: nasalisation's
 A Z: nasalizations / B: nasalisations
@@ -9185,9 +10405,9 @@ A Z: naturalizes / B: naturalises
 A Z: naturalizing / B: naturalising
 A Z: naturize / B: naturise
 A Z: naturizes / B: naturises
-A Bv: naught / B: nought
-A Bv: naught's / B: nought's
-A Bv: naughts / B: noughts
+A Bv: naught / Av B: nought
+A Bv: naught's / Av B: nought's
+A Bv: naughts / Av B: noughts
 A Z: nebularization / B: nebularisation
 A Z: nebularization's / B: nebularisation's
 A Z: nebularizations / B: nebularisations
@@ -9215,6 +10435,9 @@ A Z: nectarizing / B: nectarising
 A: neebor / B: neebour
 A: neencephalon / B: neoencephalon
 A: neer / B: nere
+_: negligee / _V: negligé
+_: negligee's / _V: negligé
+_: negligees / _V: negligé
 A: neighbor / B: neighbour
 A: neighbor's / B: neighbour's
 A: neighbored / B: neighboured
@@ -9271,6 +10494,7 @@ A B: nets / Bv: netts
 A: neurepithelium / B: neuroepithelium
 A: neurocele / B: neurocoele
 A: neurocelian / B: neurocoelian
+_: neuronal / _V: neuronic
 A Z: neuroticize / B: neuroticise
 A Z: neuroticizes / B: neuroticises
 A Z: neutralization / B: neutralisation
@@ -9307,6 +10531,11 @@ A Z: niggardize / B: niggardise
 A Z: niggardized / B: niggardised
 A Z: niggardizes / B: niggardises
 A Z: niggardizing / B: niggardising
+_: night / _v: nite
+_: night / _v: nite's
+_: night / _v: nites
+_: nightie / _v: nighty
+_: nightie's / _v: nighty's
 A Z: nightingalize / B: nightingalise
 A Z: nightingalizes / B: nightingalises
 A: niter / B: nitre
@@ -9324,6 +10553,9 @@ A Z: nitrogenize / B: nitrogenise
 A Z: nitrogenized / B: nitrogenised
 A Z: nitrogenizes / B: nitrogenises
 A Z: nitrogenizing / B: nitrogenising
+_: nitroglycerin / _v: nitroglycerine
+_: nitroglycerin's / _v: nitroglycerine's
+_: nitroglycerins / _v: nitroglycerines
 A Z: nodalize / B: nodalise
 A Z: nodalized / B: nodalised
 A Z: nodalizes / B: nodalises
@@ -9563,6 +10795,9 @@ A Z: nuclearize / B: nuclearise
 A Z: nuclearized / B: nuclearised
 A Z: nuclearizes / B: nuclearises
 A Z: nuclearizing / B: nuclearising
+_: numskull / _v: numbskull
+_: numskull's / _v: numbskull's
+_: numskulls / _v: numbskulls
 A Z: nuptialize / B: nuptialise
 A Z: nuptializes / B: nuptialises
 A: nympheum / B: nymphaeum
@@ -9597,6 +10832,9 @@ A: ocherrer / B: ochrer
 A: ocherrest / B: ochrest
 A: ochers / B: ochres
 A: ochery / B: ochrey
+_: octet / _V: octette
+_: octet's / _V: octette's
+_: octets / _V: octettes
 A: odor / B: odour
 A: odor's / B: odour's
 A: odored / B: odoured
@@ -9626,6 +10864,9 @@ A Z: officialization's / B: officialisation's
 A Z: officializations / B: officialisations
 A Z: officialize / B: officialise
 A Z: officializes / B: officialises
+_: oleomargarine / _-: oleomargarin
+_: oleomargarine's / _-: oleomargarin's
+_: oleomargarines / _-: oleomargarins
 A: oligemia / B: oligaemia
 A: oligochete / B: oligochaete
 A: oligocythemia / B: oligocythaemia
@@ -9633,12 +10874,17 @@ A: olpe / B: olpae
 A: omber / B: ombre
 A: omber's / B: ombre's
 A: ombers / B: ombres
+_: omelet / _v: omelette
+_: omelet's / _v: omelette's
+_: omelets / _v: omelettes
 A: oneyer / B: oneyre
 A: oneyers / B: oneyres
 A Z: onionized / B: onionised
 A Z: onionized's / B: onionised's
 A Z: onionizeds / B: onioniseds
 A Z: ontologize / B: ontologise
+_: onward / _V: onwards | <Adv>
+_: onward | <Adj>
 A: ooglea / B: oogloea
 A Z: oophorectomize / B: oophorectomise
 A Z: oophorectomized / B: oophorectomised
@@ -9685,9 +10931,14 @@ A: orang / B: ourang
 A Z: orangize / B: orangise
 A Z: orangizes / B: orangises
 A: orangs / B: ourangs
+_: orangutan / _V: orangutang
+_: orangutan's / _V: orangutang's
+_: orangutans / _V: orangutangs
 A Z: oratorize / B: oratorise
 A Z: oratorizes / B: oratorises
 A: orchester / B: orchestre
+_: organdy / _V: organdie
+_: organdy's / _V: organdie's
 A Z: organizabilities / B: organisabilities
 A Z: organizability / B: organisability
 A Z: organizability's / B: organisability's
@@ -9809,6 +11060,7 @@ A: outsavor / B: outsavour
 A: outsavor's / B: outsavour's
 A: outsavoring / B: outsavouring
 A: outsavors / B: outsavours
+_: outsize / _V: outsized | <Adj>
 A: outsplendor / B: outsplendour
 A: outsplendor's / B: outsplendour's
 A: outsplendors / B: outsplendours
@@ -9908,6 +11160,7 @@ A Z: overrationalize / B: overrationalise
 A Z: overrationalizes / B: overrationalises
 A Z: oversentimentalize / B: oversentimentalise
 A Z: oversentimentalizes / B: oversentimentalises
+_: oversize / _v: oversized
 A Z: overspecialization / B: overspecialisation
 A Z: overspecialization's / B: overspecialisation's
 A Z: overspecializations / B: overspecialisations
@@ -10237,12 +11490,17 @@ A: panesthesia / B: panaesthesia
 A: panesthesias / B: panaesthesias
 A: panesthetic / B: panaesthetic
 A: pangea / B: pangaea
+_: pannier / _V: panier
+_: pannier's / _V: panier's
+_: panniers / _V: paniers
 A: panomphean / B: panomphaean
 A Z: pantheonization / B: pantheonisation
 A Z: pantheonization's / B: pantheonisation's
 A Z: pantheonizations / B: pantheonisations
 A Z: pantheonize / B: pantheonise
 A Z: pantheonizes / B: pantheonises
+_: pantie / _v: panty
+_: pantie's / _v: panty's
 A Z: papalization / B: papalisation
 A Z: papalization's / B: papalisation's
 A Z: papalizations / B: papalisations
@@ -10264,6 +11522,9 @@ A Z: paraffinize / B: paraffinise
 A Z: paraffinizes / B: paraffinises
 A Z: paragraphize / B: paragraphise
 A Z: paragraphizes / B: paragraphises
+_: parakeet / _V: parrakeet
+_: parakeet's / _V: parrakeet's
+_: parakeets / _V: parrakeets
 A Z: parallelization / B: parallelisation
 A Z: parallelization's / B: parallelisation's
 A Z: parallelizations / B: parallelisations
@@ -10352,6 +11613,7 @@ A: parlor's / B: parlour's
 A: parlorish / B: parlourish
 A: parlormaid / B: parlourmaid
 A: parlors / B: parlours
+_: parmigiana / _v: parmigiano
 A Z: parochialization / B: parochialisation
 A Z: parochialization's / B: parochialisation's
 A Z: parochializations / B: parochialisations
@@ -10379,9 +11641,19 @@ A Z: particularizer / B: particulariser
 A Z: particularizer's / B: particulariser's
 A Z: particularizes / B: particularises
 A Z: particularizing / B: particularising
+_: partisan / _V: partizan | :1
+_: partisan / _v: partizan | :2
+_: partisan's / _V: partizan's | :1
+_: partisan's / _v: partizan's | :2
 A Z: partisanize / B: partisanise
 A Z: partisanizes / B: partisanises
+_: partisans / _V: partizans | :1
+_: partisans / _v: partizans | :2
 A: passades / B: passadoes
+_: passivize / _-: passivise
+_: passivized / _-: passivised
+_: passivizes / _-: passivises
+_: passivizing / _-: passivising
 A Z: pasteurization / B: pasteurisation
 A Z: pasteurization's / B: pasteurisation's
 A Z: pasteurizations / B: pasteurisations
@@ -10443,6 +11715,9 @@ A Z: pauperizing / B: pauperising
 A: pavior / B: paviour
 A: pavior's / B: paviour's
 A: paviors / B: paviours
+_: pawpaw / _: papaw
+_: pawpaw's / _: papaw's
+_: pawpaws / _: papaws
 A: pe / B: poe
 A Z: pearlization / B: pearlisation
 A Z: pearlize / B: pearlise
@@ -10463,6 +11738,9 @@ A Z: peculiarized / B: peculiarised
 A Z: peculiarizes / B: peculiarises
 A Z: peculiarizing / B: peculiarising
 A: pedagogism / B: paedagogism
+_: pedagogue / _V: pedagog
+_: pedagogue's / _V: pedagog's
+_: pedagogues / _V: pedagogs
 A: pedaled / B: pedalled
 A: pedaler / B: pedaller
 A: pedaler's / B: pedaller's
@@ -10478,6 +11756,9 @@ A Z: pedantizes / B: pedantises
 A Z: pedantizing / B: pedantising
 A: pedatrophia / B: paedatrophia
 A: pedatrophy / B: paedatrophy
+_: peddler / _V: pedlar
+_: peddler's / _V: pedlar's
+_: peddlers / _V: pedlars
 A: pederastic / B: paederastic
 A: pederastically / B: paederastically
 A: pedestaled / B: pedestalled
@@ -10490,9 +11771,10 @@ A Z: pedestrianized / B: pedestrianised
 A Z: pedestrianizes / B: pedestrianises
 A Z: pedestrianizing / B: pedestrianising
 A: pediatric / B: paediatric
-A: pediatrician / B: paediatrician
+A: pediatrician / AV: pediatrist / B: paediatrician
+_: pediatrician's / _V: pediatrist's
+A: pediatricians / AV: pediatrists / B: paediatrists
 A: pediatrist / B: paediatrist
-A: pediatrists / B: paediatrists
 A: pediatry / B: paediatry
 A: pedobaptism / B: paedobaptism
 A: pedobaptism's / B: paedobaptism's
@@ -10568,6 +11850,9 @@ A Z: penelopize / B: penelopise
 A Z: penelopized / B: penelopised
 A Z: penelopizes / B: penelopises
 A Z: penelopizing / B: penelopising
+_: penlight / _V: penlite
+_: penlight's / _V: penlite's
+_: penlights / _V: penlites
 A: penne / B: pennae
 A: pense / B: pensae
 A Z: peptizable / B: peptisable
@@ -10709,12 +11994,17 @@ A: phagedenical / B: phagedaenical
 A: phagedenous / B: phagedaenous
 A Z: phagocytize / B: phagocytise
 A Z: phagocytizes / B: phagocytises
+_: phalanges | :1
+_: phalanxes / _v: phalanges | :2
 A Z: phantomize / B: phantomise
 A Z: phantomizer / B: phantomiser
 A Z: phantomizers / B: phantomisers
 A Z: phantomizes / B: phantomises
-A: pharmacopeial / B: pharmacopoeial
 A: pharmacopeian / B: pharmacopoeian
+_: pharmacopoeia / _v: pharmacopeia
+_: pharmacopoeia's / _v: pharmacopeia's
+A B: pharmacopoeial / AV: pharmacopeial
+_: pharmacopoeias / _v: pharmacopeias
 A: phelonion / B: phaelonion
 A: phelonions / B: phaelonions
 A: phenicia / B: phoenicia
@@ -10795,6 +12085,11 @@ A Z: phonetize / B: phonetise
 A Z: phonetized / B: phonetised
 A Z: phonetizes / B: phonetises
 A Z: phonetizing / B: phonetising
+_: phonied / _V: phoneyed
+_: phonies / _V: phoneys | <N>
+_: phony / _V: phoney | <N>
+_: phony's / _V: phoney's | <N>
+_: phonying / _V: phoneying
 A: phorrhea / B: phorrhoea
 A Z: phosphatization / B: phosphatisation
 A Z: phosphatization's / B: phosphatisation's
@@ -10883,9 +12178,17 @@ A Z: pidginize / B: pidginise
 A Z: pidginized / B: pidginised
 A Z: pidginizes / B: pidginises
 A Z: pidginizing / B: pidginising
+_: piggyback / _V: pickaback
+_: piggyback's / _V: pickaback's
+_: piggybacking / _V: pickabacking
+_: piggybacks / _V: pickabacks
+_: pigiedback / _V: pickabacked
 A: pigmean / B: pigmaean
 A Z: pigmentize / B: pigmentise
 A Z: pigmentizes / B: pigmentises
+_: pilaf / _V: pilaw / _V: pilau / _V: pilaff
+_: pilaf's / _V: pilaw's / _V: pilaff's / _V: pilau's
+_: pilafs / _V: pilaus / _V: pilaws / _V: pilaffs
 A Z: pilgrimize / B: pilgrimise
 A Z: pilgrimized / B: pilgrimised
 A Z: pilgrimizes / B: pilgrimises
@@ -10897,13 +12200,31 @@ A Z: pillorized / B: pillorised
 A Z: pillorizes / B: pillorises
 A Z: pillorizing / B: pillorising
 A: pillowbeer / B: pillowbere
+_: piney / _: piny
+_: pinkie | :1
+_: pinkie / _v: pinky | :2
+_: pinkie's / _v: pinky's | :2
 A: pinnule / B: pinnulae
+_: pinochle / _-: pinocle
+_: pinochle's / _-: pinocle's
+_: pinyon / _v: piñon
+_: pinyon's / _v: piñon's
+_: pinyons / _v: piñons
 A Z: piratize / B: piratise
 A Z: piratizes / B: piratises
+_: piroshki / _v: pirozhki
+_: piroshki's / _v: pirozhki's
 A: piscine / B: piscinae
 A: pistoled / B: pistolled
 A: pistoling / B: pistolling
+_: pixie / _V: pixy
+_: pixie's / _V: pixy's
+_: pixieish / _V: pixyish
 A Z: pizes / B: pises
+_: pizzazz / _: pizazz
+_: pizzazz's / _: pizazz's
+_: pizzazzes / _v: pizazzes
+_: placebos / _-: placeboes
 A: plage / B: plagae
 A Z: plagiarization / B: plagiarisation
 A Z: plagiarization's / B: plagiarisation's
@@ -11010,6 +12331,12 @@ A Z: poetizes / B: poetises
 A Z: poetizing / B: poetising
 A Z: pogromize / B: pogromise
 A Z: pogromizes / B: pogromises
+_: pokey | :1
+_: pokey's | :1
+_: pokeys | :1
+_: pokier | :2
+_: pokiest | :2
+_: poky / _v: pokey | :2
 A Z: polarizabilities / B: polarisabilities
 A Z: polarizability / B: polarisability
 A Z: polarizability's / B: polarisability's
@@ -11054,12 +12381,17 @@ A Z: politicizes / B: politicises
 A Z: politicizing / B: politicising
 A Z: politize / B: politise
 A Z: politizes / B: politises
+_: pollack / _v: pollock
+_: pollack's / _v: pollock's
 A Z: pollenizer / B: polleniser
 A Z: pollinize / B: pollinise
 A Z: pollinized / B: pollinised
 A Z: pollinizer / B: polliniser
 A Z: pollinizes / B: pollinises
 A Z: pollinizing / B: pollinising
+_: polliwog / _v: pollywog
+_: polliwog's / _v: pollywog's
+_: polliwogs / _v: pollywogs
 A Z: polonize / B: polonise
 A Z: polonized / B: polonised
 A Z: polonizes / B: polonises
@@ -11140,6 +12472,9 @@ A: postcenal / B: postcoenal
 A Z: posterize / B: posterise
 A Z: posterizes / B: posterises
 A: postfetal / B: postfoetal
+_: postilion / _v: postillion
+_: postilion's / _v: postillion's
+_: postilions / _v: postillions
 A: postmedieval / B: postmediaeval
 A Z: postsynchronization / B: postsynchronisation
 A Z: posturize / B: posturise
@@ -11170,14 +12505,14 @@ A Z: powellize / B: powellise
 A Z: powellized / B: powellised
 A Z: powellizes / B: powellises
 A Z: powellizing / B: powellising
-A: practice / AV B: practise | verb
-A B: practice / AV: practise | noun
+A: practice / AV B: practise | <V>
+A B: practice / AV: practise | <N>
 A: practiced / AV B: practised
 A: practicer / B: practiser
 A: practicer's / B: practiser's
 A: practicers / B: practisers
-A: practices / AV B: practises | verb
-A B: practices / AV: practises | noun
+A: practices / AV B: practises | <V>
+A B: practices / AV: practises | <N>
 A: practicing / AV B: practising
 A Z: pragmatization / B: pragmatisation
 A Z: pragmatizations / B: pragmatisations
@@ -11326,6 +12661,10 @@ A: premial / B: proemial
 A Z: premillennialize / B: premillennialise
 A Z: premillennialized / B: premillennialised
 A Z: premillennializing / B: premillennialising
+_: premise / _V: premiss | <N>
+_: premise | <V>
+_: premise's / _V: premiss's | <N>
+_: premises / _V: premisses | <N>
 A Z: premonopolize / B: premonopolise
 A Z: premonopolizes / B: premonopolises
 A: premunire / B: praemunire
@@ -11356,6 +12695,8 @@ A: preposter / B: praeposter
 A: prepostor / B: praepostor
 A: prepostor's / B: praepostor's
 A: prepostors / B: praepostors
+_: preppy / _v: preppie
+_: preppy's / _v: preppie's
 A C: preprogram / B: preprogramme
 A: prepubis / B: praepubis
 A Z: prerealization / B: prerealisation
@@ -11366,6 +12707,9 @@ A Z: prerealizes / B: prerealises
 A Z: prerecognize / B: prerecognise
 A Z: prerecognizes / B: prerecognises
 A: prescutum / B: praescutum
+_: presidia / _v: presidiums
+_: presidium / _V: praesidium
+_: presidium's / _V: praesidium's
 A Z: prespecialize / B: prespecialise
 A Z: prespecializes / B: prespecialises
 A: presphenoid / B: praesphenoid
@@ -11397,6 +12741,9 @@ A: pretense / B: pretence
 A: pretense's / B: pretence's
 A: pretenses / B: pretences
 A: pretensive / B: pretencive
+_: preterit / _v: preterite
+_: preterit's / _v: preterite's
+_: preterits / _v: preterites
 A: pretexta / B: praetexta
 A: pretexta's / B: praetexta's
 A: pretextae / B: praetextae
@@ -11411,8 +12758,17 @@ A Z: preutilization's / B: preutilisation's
 A Z: preutilizations / B: preutilisations
 A Z: preutilize / B: preutilise
 A Z: preutilizes / B: preutilises
+_: preventable / _V: preventible
+_: preview / _V: prevue | movie preview
+_: preview | otherwise
+_: preview's / _V: prevue's | movie preview
+_: previews / _V: prevues | movie preview
 A Z: previze / B: previse
 A: prezygapophysis / B: praezygapophysis
+_: pricey / _V: pricy
+_: prier / _V: pryer
+_: prier's / _V: pryer's
+_: priers / _V: pryers
 A: primevally / B: primaevally
 A Z: prioritization / B: prioritisation
 A Z: prioritization's / B: prioritisation's
@@ -11491,8 +12847,11 @@ A: program / B: programme
 A B: program | computer program
 A: program's / B: programme's
 A B: program's | computer program
-Av: programed / A B: programmed
-Av: programing / A B: programming
+A B: programmed / Av: programed
+_: programmer / _V: programer
+_: programmer's / _V: programer's
+_: programmers / _V: programers
+A B: programming / Av: programing
 A: programs / B: programmes
 A B: programs | computer program
 A Z: proindustrialization / B: proindustrialisation
@@ -11512,6 +12871,9 @@ A Z: prologize / B: prologise
 A Z: prologized / B: prologised
 A Z: prologizes / B: prologises
 A Z: prologizing / B: prologising
+_: prologue / _V: prolog
+_: prologue's / _V: prolog's
+_: prologues / _V: prologs
 A Z: prologuize / B: prologuise
 A Z: prologuized / B: prologuised
 A Z: prologuizer / B: prologuiser
@@ -11527,6 +12889,9 @@ A Z: propagandize / B: propagandise
 A Z: propagandized / B: propagandised
 A Z: propagandizes / B: propagandises
 A Z: propagandizing / B: propagandising
+_: propellant / _V: propellent
+_: propellant's / _V: propellent's
+_: propellants / _V: propellents
 A Z: prophetize / B: prophetise
 A Z: prophetizes / B: prophetises
 A Z: propositionize / B: propositionise
@@ -11561,6 +12926,9 @@ A: prostatorrhea / B: prostatorrhoea
 A Z: protectionize / B: protectionise
 A Z: protectionizes / B: protectionises
 A: proteide / B: proteidae
+_: protester / _v: protestor
+_: protester's / _v: protestor's
+_: protesters / _v: protestors
 A: protoarcheology / B: protoarchaeology
 A: protocoled / B: protocolled
 A: protocoling / B: protocolling
@@ -11663,6 +13031,9 @@ A Z: pulvilized / B: pulvilised
 A: pummeled / B: pummelled
 A: pummeler / B: pummeller
 A: pummeling / B: pummelling
+_: pumpkin / _-: punkin
+_: pumpkin's / _-: punkin's
+_: pumpkins / _-: punkins
 A Z: pupilize / B: pupilise
 A Z: pupilizes / B: pupilises
 A Z: puppetize / B: puppetise
@@ -11676,6 +13047,9 @@ A: pyemia's / B: pyaemia's
 A: pyemias / B: pyaemias
 A: pyemic / B: pyaemic
 A: pygmean / B: pygmaean
+_: pygmies / _V: pigmies
+_: pygmy / _V: pigmy
+_: pygmy's / _V: pigmy's
 A: pyorrhea / B: pyorrhoea
 A: pyorrhea's / B: pyorrhoea's
 A: pyorrheal / B: pyorrhoeal
@@ -11707,6 +13081,11 @@ A: pyrolyzing / B: pyrolysing
 A: pythonine / B: pythoninae
 A Z: pythonize / B: pythonise
 A Z: pythonizes / B: pythonises
+_: quadraphonic / _V: quadriphonic / _-: quadrophonic
+_: quadraphonics / _v: quadriphonics | o: noun plural but singular in construction
+_: quahog / _V: quahaug
+_: quahog's / _V: quahaug's
+_: quahogs / _V: quahaugs
 A Z: quantization / B: quantisation
 A Z: quantization's / B: quantisation's
 A Z: quantizations / B: quantisations
@@ -11726,6 +13105,9 @@ A: quarrelous / B: quarrellous
 A Z: quarterization / B: quarterisation
 A Z: quarterization's / B: quarterisation's
 A Z: quarterizations / B: quarterisations
+_: quartet / _V: quartette
+_: quartet's / _V: quartette's
+_: quartets / _V: quartettes
 A: quaters / B: quatres
 A: que / B: quae
 A: querele / B: querelae
@@ -11744,6 +13126,12 @@ A Z: quintessentialize / B: quintessentialise
 A Z: quintessentialized / B: quintessentialised
 A Z: quintessentializes / B: quintessentialises
 A Z: quintessentializing / B: quintessentialising
+_: quintet / _-: quintette
+_: quintet's / _-: quintette's
+_: quintets / _-: quintettes
+_: raccoon / _V: racoon
+_: raccoon / _v: raccoons / _V: racoons / _V: racoon | plural
+_: raccoon's / _V: racoon's
 A Z: racemization / B: racemisation
 A Z: racemization's / B: racemisation's
 A Z: racemizations / B: racemisations
@@ -11756,6 +13144,12 @@ A Z: racialization's / B: racialisation's
 A Z: racializations / B: racialisations
 A Z: racialize / B: racialise
 A Z: racializes / B: racialises
+_: racket / _v: racquet | :1
+_: racket | :2
+_: racket's / _v: racquet's | :1
+_: racket's | :2
+_: rackets / _v: racquets | :1
+_: rackets | :2
 A Z: radialization / B: radialisation
 A Z: radialization's / B: radialisation's
 A Z: radializations / B: radialisations
@@ -11785,6 +13179,12 @@ A Z: radiumization's / B: radiumisation's
 A Z: radiumizations / B: radiumisations
 A Z: radiumize / B: radiumise
 A Z: radiumizes / B: radiumises
+_: rajah / _v: raja
+_: rajah's / _v: raja's
+_: rajahes / _v: rajas
+_: ramekin / _V: ramequin
+_: ramekin's / _V: ramequin's
+_: ramekins / _V: ramequins
 A: rampier / B: rampire
 A: rancor / B: rancour
 A: rancor's / B: rancour's
@@ -11799,6 +13199,9 @@ A Z: randomizer's / B: randomiser's
 A Z: randomizers / B: randomisers
 A Z: randomizes / B: randomises
 A Z: randomizing / B: randomising
+_: ranee / _v: rani
+_: ranee's / _v: rani's
+_: ranees / _v: ranis
 A: raphe / B: raphae
 A: raphide / B: raphidae
 A Z: rapturize / B: rapturise
@@ -11821,6 +13224,9 @@ A Z: rationalizers / B: rationalisers
 A Z: rationalizes / B: rationalises
 A Z: rationalizing / B: rationalising
 A: ratite / B: ratitae
+_: ratline / _-: ratlin | o: usually plural
+_: ratline's / _-: ratlin's
+_: ratlines / _-: ratlins
 A: raveled / B: ravelled
 A: raveler / B: raveller
 A: raveler's / B: raveller's
@@ -12064,6 +13470,11 @@ A Z: reindustrialize / B: reindustrialise
 A Z: reindustrialized / B: reindustrialised
 A Z: reindustrializes / B: reindustrialises
 A Z: reindustrializing / B: reindustrialising
+_: reinforce / _V: reenforce
+_: reinforceable / _V: reenforceable
+_: reinforced / _V: reenforced
+_: reinforces / _V: reenforces
+_: reinforcing / _V: reenforcing
 A Z: reinitialization / B: reinitialisation
 A Z: reinitialize / B: reinitialise
 A Z: reinitialized / B: reinitialised
@@ -12180,6 +13591,9 @@ A Z: repaganizers / B: repaganisers
 A Z: repaganizes / B: repaganises
 A Z: repatronize / B: repatronise
 A Z: repatronizes / B: repatronises
+_: repellent / _V: repellant
+_: repellent's / _V: repellant's
+_: repellents / _V: repellants
 A Z: repersonalize / B: repersonalise
 A Z: rephosphorization / B: rephosphorisation
 A Z: rephosphorization's / B: rephosphorisation's
@@ -12241,6 +13655,9 @@ A Z: restandardization's / B: restandardisation's
 A Z: restandardizations / B: restandardisations
 A Z: restandardize / B: restandardise
 A Z: restandardizes / B: restandardises
+_: restaurateur / _V: restauranteur
+_: restaurateur's / _V: restauranteur's
+_: restaurateurs / _V: restauranteurs
 A Z: resterilize / B: resterilise
 A Z: resterilizes / B: resterilises
 A Z: restigmatize / B: restigmatise
@@ -12295,6 +13712,8 @@ A: reveler's / B: reveller's
 A: revelers / B: revellers
 A: reveling / B: revelling
 A: revelings / B: revellings
+_: reverie / _V: revery
+_: reverie's / _V: revery's
 A: revigor / B: revigour
 A Z: revisualization / B: revisualisation
 A Z: revisualization's / B: revisualisation's
@@ -12312,6 +13731,7 @@ A Z: revitalizes / B: revitalises
 A Z: revitalizing / B: revitalising
 A Z: revivalize / B: revivalise
 A Z: revivalizes / B: revivalises
+_: revocable / _V: revokable
 A Z: revolatilize / B: revolatilise
 A Z: revolatilizes / B: revolatilises
 A Z: revolutionize / B: revolutionise
@@ -12363,12 +13783,18 @@ A Z: rhythmize / B: rhythmise
 A Z: rhythmized / B: rhythmised
 A Z: rhythmizes / B: rhythmises
 A Z: rhythmizing / B: rhythmising
+_: rickshaw / _V: ricksha
+_: rickshaw's / _V: ricksha's
+_: rickshaws / _V: rickshas
 A Z: ridiculize / B: ridiculise
 A Z: ridiculizes / B: ridiculises
 A Z: rigidize / B: rigidise
 A Z: rigidized / B: rigidised
 A Z: rigidizes / B: rigidises
 A Z: rigidizing / B: rigidising
+_: rigmarole / _v: rigamarole
+_: rigmarole's / _v: rigamarole's
+_: rigmaroles / _v: rigamaroles
 A: rigor / B: rigour
 A: rigor's / B: rigour's
 A: rigorism / B: rigourism
@@ -12379,6 +13805,9 @@ A: rigoristic / B: rigouristic
 A: rigors / B: rigours
 A Z: riotize / B: riotise
 A Z: riotizes / B: riotises
+_: riposte / _-: ripost
+_: riposte's / _-: ripost's
+_: ripostes / _-: riposts
 A: ritornelle / B: ritournelle
 A: ritornelles / B: ritournelles
 A Z: ritualization / B: ritualisation
@@ -12418,6 +13847,9 @@ A Z: romanticize / B: romanticise
 A Z: romanticized / B: romanticised
 A Z: romanticizes / B: romanticises
 A Z: romanticizing / B: romanticising
+_: ropier
+_: ropiest
+_: ropy / _V: ropey
 A Z: routinization / B: routinisation
 A Z: routinization's / B: routinisation's
 A Z: routinizations / B: routinisations
@@ -12518,6 +13950,12 @@ A Z: sacramentizes / B: sacramentises
 A Z: sailorizing / B: sailorising
 A Z: sailorizing's / B: sailorising's
 A Z: sailorizings / B: sailorisings
+_: sake | :1
+_: sake / _v: saki | :2
+_: sake's | :1
+_: sake's / _v: saki's | :2
+_: sakes | :1
+_: sakes / _v: sakis | :2
 A: salable / B: saleable
 A: salabler / B: saleabler
 A: salablest / B: saleablest
@@ -12554,6 +13992,9 @@ A: sapremia's / B: sapraemia's
 A: sapremias / B: sapraemias
 A: sapremic / B: sapraemic
 A: sarcine / B: sarcinae
+_: sari / _V: saree
+_: sari's / _V: saree's
+_: saris / _V: sarees
 A Z: satanize / B: satanise
 A Z: satanizes / B: satanises
 A Z: satellitize / B: satellitise
@@ -12574,8 +14015,12 @@ A Z: satirizers / B: satirisers
 A Z: satirizes / B: satirises
 A Z: satirizing / B: satirising
 A: sative / B: sativae
+_: savable / _v: saveable
 A Z: savagize / B: savagise
 A Z: savagizes / B: savagises
+_: savanna / _V: savannah | :2
+_: savanna's / _V: savannah's | :2
+_: savannas / _V: savannahes | :2
 A: savior / B: saviour
 A: savior's / B: saviour's
 A: savioress / B: saviouress
@@ -12616,6 +14061,14 @@ A: savorousest / B: savourousest
 A: savors / B: savours
 A: savory / B: savoury
 A: savory's / B: savoury's
+_: scalawag / _v: scallywag
+_: scalawag's / _v: scallywag's
+_: scalawags / _v: scallywags
+_: scallop / _V: scollop
+_: scallop's / _V: scollop's
+_: scalloped / _V: scolloped
+_: scalloping / _V: scolloping
+_: scallops / _V: scollops
 A: scandaled / B: scandalled
 A: scandaling / B: scandalling
 A Z: scandalization / B: scandalisation
@@ -12631,6 +14084,7 @@ A Z: scandalizing / B: scandalising
 A: scaped / B: scapaed
 A: scarer / B: scarre
 A: scarers / B: scarres
+_: scary / _-: scarey
 A: scena / B: scaena
 A Z: scenarioization / B: scenarioisation
 A Z: scenarioization's / B: scenarioisation's
@@ -12654,6 +14108,7 @@ A: scepterlesses / B: sceptrelesses
 A: scepters / B: sceptres
 A Z: schedulize / B: schedulise
 A Z: schedulizes / B: schedulises
+_: schemata / _V: schemas
 A Z: schematization / B: schematisation
 A Z: schematization's / B: schematisation's
 A Z: schematizations / B: schematisations
@@ -12674,6 +14129,23 @@ A Z: schismatized / B: schismatised
 A Z: schismatizes / B: schismatises
 A Z: schismatizing / B: schismatising
 A: schistocelia / B: schistocoelia
+_: schlemiel / _V: shlemiel
+_: schlemiel's / _V: shlemiel's
+_: schlemiels / _V: shlemiels
+_: schlep / _v: schlepp / _V: shlep / _V: shlepp
+_: schlep's / _v: schlepp's / _V: shlepp's / _V: shlep's
+_: schlepped / _V: shlepped
+_: schlepping / _V: shlepping
+_: schleps / _v: schlepps / _V: shleps / _V: shlepps
+_: schlock / _v: schlocky / _V: shlock / _V: shlocky
+_: schmaltz / _V: schmalz / _-: shmaltz
+_: schmaltz's / _V: schmalz's / _-: shmaltz's
+_: schmaltzes / _V: schmalzes / _-: shmaltzes
+_: schmaltzy / _V: schmalzy
+_: schmo / _v: schmoe
+_: schmo's / _v: schmoe's
+_: schnapps / _-: schnaps
+_: schnapps's / _-: schnaps's
 A Z: scientize / B: scientise
 A Z: scientized / B: scientised
 A Z: scientizes / B: scientises
@@ -12692,6 +14164,11 @@ A: scorses / B: scourses
 A: scorsing / B: scoursing
 A Z: scripturalize / B: scripturalise
 A Z: scripturalizes / B: scripturalises
+_: scrod / _V: schrod
+_: scrod's / _V: schrod's
+_: scrods / _V: schrods
+_: scrunchy / _v: scrunchie
+_: scrunchy's / _v: scrunchie's
 A Z: scrutinization / B: scrutinisation
 A Z: scrutinization's / B: scrutinisation's
 A Z: scrutinizations / B: scrutinisations
@@ -12761,6 +14238,9 @@ A Z: seizin's / B: seisin's
 A Z: seizings / B: seisings
 A Z: seizins / B: seisins
 A: selle / B: sellae
+_: selvage / _v: selvedge
+_: selvage's / _v: selvedge's
+_: selvages / _v: selvedges
 A: semianesthetic / B: semianaesthetic
 A Z: semicarbonize / B: semicarbonise
 A Z: semicarbonizes / B: semicarbonises
@@ -12847,6 +14327,9 @@ A: sepaled / B: sepalled
 A: sepaledder / B: sepalledder
 A: sepaleddest / B: sepalleddest
 A: septemia / B: septaemia
+_: septet / _V: septette
+_: septet's / _V: septette's
+_: septetes / _V: septettes
 A: septicemia / B: septicaemia
 A: septicemia's / B: septicaemia's
 A: septicemias / B: septicaemias
@@ -12866,6 +14349,9 @@ A Z: sequentialize / B: sequentialise
 A Z: sequentialized / B: sequentialised
 A Z: sequentializes / B: sequentialises
 A Z: sequentializing / B: sequentialising
+_: serape / _V: sarape
+_: serape's / _V: sarape's
+_: serapes / _V: sarapes
 A Z: serenize / B: serenise
 A Z: serenizes / B: serenises
 A Z: serializability / B: serialisability
@@ -12910,6 +14396,9 @@ A Z: severization's / B: severisation's
 A Z: severizations / B: severisations
 A Z: severize / B: severise
 A Z: severizes / B: severises
+_: sextet / _V: sextette
+_: sextet's / _V: sextette's
+_: sextetes / _V: sextettes
 A Z: sexualization / B: sexualisation
 A Z: sexualization's / B: sexualisation's
 A Z: sexualizations / B: sexualisations
@@ -12917,6 +14406,21 @@ A Z: sexualize / B: sexualise
 A Z: sexualized / B: sexualised
 A Z: sexualizes / B: sexualises
 A Z: sexualizing / B: sexualising
+_: shard / _v: sherd | pottery fragments
+_: shard's / _v: sherd's | pottery fragments
+_: shards / _v: sherds | pottery fragments
+_: sharpie / _v: sharpy
+_: sharpie's / _v: sharpy's
+_: sheik / _v: sheikh
+_: sheik's / _v: sheikh's
+_: sheikdom / _v: sheikhdom
+_: sheikdom's / _v: sheikhdom's
+_: sheikdoms / _v: sheikhdoms
+_: sheiks / _v: sheikhes
+_: shellac / _-: shellack
+_: shellac's / _-: shellack's
+_: shellacs / _-: shellacks
+_: shelves / _-: shelfs
 A Z: shepherdize / B: shepherdise
 A Z: shepherdizes / B: shepherdises
 A: sher / B: shoer
@@ -12924,7 +14428,16 @@ A Z: sherardize / B: sherardise
 A Z: sherardized / B: sherardised
 A Z: sherardizes / B: sherardises
 A Z: sherardizing / B: sherardising
+_: sherbet / _V: sherbert
+_: sherbet's / _V: sherbert's
+_: sherbets / _V: sherberts
 A: shere / B: shree
+_: shillelagh / _V: shillalah
+_: shillelagh's / _V: shillalah's
+_: shillelaghes / _V: shillalahes
+_: shit / _v: shat
+_: shorty / _v: shortie
+_: shorty's / _v: shortie's
 A: shoveled / B: shovelled
 A: shoveler / B: shoveller
 A: shoveler's / B: shoveller's
@@ -12932,6 +14445,9 @@ A: shovelers / B: shovellers
 A: shoveling / B: shovelling
 A: shriveled / B: shrivelled
 A: shriveling / B: shrivelling
+_: shtick / _V: shtik / _V: schtick
+_: shtick's / _V: schtick's / _V: shtik's
+_: shticks / _V: shtiks / _V: schticks
 A: sialorrhea / B: sialorrhoea
 A Z: siderealize / B: siderealise
 A Z: siderealizes / B: siderealises
@@ -12949,6 +14465,7 @@ A: siled / B: siloed
 A Z: silicatization / B: silicatisation
 A Z: silicatization's / B: silicatisation's
 A Z: silicatizations / B: silicatisations
+_: siliceous / _V: silicious
 A Z: silicidize / B: silicidise
 A Z: silicidizes / B: silicidises
 A Z: siliconize / B: siliconise
@@ -13000,9 +14517,15 @@ A Z: sirenize / B: sirenise
 A Z: sirenized / B: sirenised
 A Z: sirenizes / B: sirenises
 A Z: sirenizing / B: sirenising
+_: sirree / _v: siree
+_: sirree's / _v: siree's
+_: sirrees / _v: sirees
 A Z: sisterize / B: sisterise
 A Z: sisterizes / B: sisterises
 A: sistern / B: sistren
+_: sizable / _v: sizeable
+_: sizableness / _v: sizeableness
+_: sizably / _v: sizeably
 A Z: sizel / B: sisel
 A: skeer / B: skere
 A Z: skeletonization / B: skeletonisation
@@ -13028,6 +14551,8 @@ A: skepticisms / B: scepticisms
 A Z: skepticize / B: skepticise
 A Z: skepticizes / B: skepticises
 A: skeptics / B: sceptics
+_: skulduggery / _v: skullduggery
+_: skulduggery's / _v: skullduggery's
 A: skyer / B: skyre
 A: skyers / B: skyres
 A: sle / B: slae
@@ -13035,6 +14560,8 @@ A Z: slenderize / B: slenderise
 A Z: slenderized / B: slenderised
 A Z: slenderizes / B: slenderises
 A Z: slenderizing / B: slenderising
+_: slier / _v: slyer
+_: sliest / _v: slyest
 A Z: sloganize / B: sloganise
 A Z: sloganized / B: sloganised
 A Z: sloganizes / B: sloganises
@@ -13044,8 +14571,18 @@ A Z: sluggardize / B: sluggardise
 A Z: sluggardized / B: sluggardised
 A Z: sluggardizes / B: sluggardises
 A Z: sluggardizing / B: sluggardising
-A: smolder / B: smoulder
-A: smoldering / B: smouldering
+_: slumberous / _v: slumbrous
+_: slyly / _V: slily
+_: smidgen / _V: smidgeon / _V: smidge / _V: smidgin
+_: smidgen's / _V: smidgeon's / _V: smidge's / _V: smidgin's
+_: smidgens / _V: smidgeons / _V: smidges / _V: smidgins
+A: smolder / Av B: smoulder
+_: smolder's / _v: smoulder's
+_: smoldered / _v: smouldered
+A: smoldering / Av B: smouldering
+_: smolders / _v: smoulders
+_: smoothie / _v: smoothy
+_: smoothie's / _v: smoothy's
 A: sniveled / B: snivelled
 A: sniveler / B: sniveller
 A: sniveler's / B: sniveller's
@@ -13055,10 +14592,14 @@ A: snivelings / B: snivellings
 A: snobsniveling / B: snobsnivelling
 A: snowshed / B: snowshoed
 A: snuffcolored / B: snuffcoloured
+_: so | :1
 A Z: soberize / B: soberise
 A Z: soberized / B: soberised
 A Z: soberizes / B: soberises
 A Z: soberizing / B: soberising
+_: sobriquet / _V: soubriquet
+_: sobriquet's / _V: soubriquet's
+_: sobriquets / _V: soubriquets
 A Z: socialization / B: socialisation
 A Z: socialization's / B: socialisation's
 A Z: socializations / B: socialisations
@@ -13073,6 +14614,13 @@ A Z: sodomize / B: sodomise
 A Z: sodomized / B: sodomised
 A Z: sodomizes / B: sodomises
 A Z: sodomizing / B: sodomising
+_: softy / _v: softie
+_: softy's / _v: softie's
+_: soignee
+_: sol / _V: so | :2
+_: sol | :3
+_: sol's / _V: so's | :2
+_: sol's | :3
 A Z: solarization / B: solarisation
 A Z: solarization's / B: solarisation's
 A Z: solarizations / B: solarisations
@@ -13112,6 +14660,8 @@ A Z: solmization's / B: solmisation's
 A Z: solmizations / B: solmisations
 A Z: solonization / B: solonisation
 A Z: solonizations / B: solonisations
+_: sols / _V: sos | :2
+_: sols | :3
 A Z: solubilization / B: solubilisation
 A Z: solubilization's / B: solubilisation's
 A Z: solubilizations / B: solubilisations
@@ -13124,9 +14674,12 @@ A Z: solutizer / B: solutiser
 A Z: solutizer's / B: solutiser's
 A Z: solutizers / B: solutisers
 A Z: solutizes / B: solutises
+_: somber / _v: sombre
+_: somberer / _v: sombrer
+_: somberest / _v: sombrest
 A: somberish / B: sombreish
-A: somberly / B: sombrely
-A: somberness / B: sombreness
+A: somberly / Av B: sombrely
+A: somberness / Av B: sombreness
 A: somberness's / B: sombreness's
 A: sombernesses / B: sombrenesses
 A: sombers / B: sombres
@@ -13173,6 +14726,10 @@ A Z: sovietize / B: sovietise
 A Z: sovietized / B: sovietised
 A Z: sovietizes / B: sovietises
 A Z: sovietizing / B: sovietising
+_: soy | sauce
+_: soy / _V: soya | soybean
+_: soy's / _V: soya's | soybean
+_: spacey / _V: spacy
 A: spanemia / B: spanaemia
 A: spanemic / B: spanaemic
 A Z: spaniolize / B: spaniolise
@@ -13232,6 +14789,9 @@ A Z: spheroidized / B: spheroidised
 A Z: spheroidizes / B: spheroidises
 A Z: spheroidizing / B: spheroidising
 A: spherosome / B: sphaerosome
+_: spic / _V: spick / _-: spik
+_: spic's / _V: spick's / _-: spik's
+_: spics / _V: spicks / _-: spiks
 A Bv: spilled / AV B: spilt
 A: spinule / B: spinulae
 A: spiraled / B: spiralled
@@ -13241,6 +14801,9 @@ A Z: spiralization's / B: spiralisation's
 A Z: spiralizations / B: spiralisations
 A Z: spiralize / B: spiralise
 A Z: spiralizes / B: spiralises
+_: spirea / _v: spiraea
+_: spirea's / _v: spiraea's
+_: spireas / _v: spiraeas
 A Z: spiritize / B: spiritise
 A Z: spiritizes / B: spiritises
 A Z: spiritualization / B: spiritualisation
@@ -13270,6 +14833,9 @@ A Z: splenectomized / B: splenectomised
 A Z: splenization / B: splenisation
 A Z: splenizations / B: splenisations
 A Bv: spoiled / B: spoilt
+_: spumoni / _V: spumone
+_: spumoni's / _V: spumone's
+_: spumonis / _V: spumones
 A: spyer / B: spyre
 A: squame / B: squamae
 A: squamule / B: squamulae
@@ -13288,6 +14854,8 @@ A Z: stabilizer's / B: stabiliser's
 A Z: stabilizers / B: stabilisers
 A Z: stabilizes / B: stabilises
 A Z: stabilizing / B: stabilising
+_: stageyness
+_: stagy / _v: stagey
 A Z: stallionize / B: stallionise
 A Z: stallionizes / B: stallionises
 A Z: stalwartize / B: stalwartise
@@ -13346,6 +14914,10 @@ A Z: sterilizers / B: sterilisers
 A Z: sterilizes / B: sterilises
 A Z: sterilizing / B: sterilising
 A: stert / B: stret
+_: stied | :2
+_: sties | :1
+_: sties | :2
+_: sties / _v: styes | :3
 A Z: stigmatization / B: stigmatisation
 A Z: stigmatization's / B: stigmatisation's
 A Z: stigmatizations / B: stigmatisations
@@ -13359,13 +14931,20 @@ A Z: stigmatizing / B: stigmatising
 A: stilbestrol / B: stilboestrol
 A: stilbestrol's / B: stilboestrol's
 A: stilbestrols / B: stilboestrols
+_: stimuli / _-: stimuluses
 A: stipule / B: stipulae
+_: stockinette / _v: stockinet
+_: stockinette's / _v: stockinet's
+_: stockinettes / _v: stockinets
+_: stogie / _: stogy
+_: stogie's / _: stogy's
 A: stomatodeum / B: stomatodaeum
 A: stomodea / B: stomodaea
 A: stomodeal / B: stomodaeal
 A: stomodeum / B: stomodaeum
 A: stomodeum's / B: stomodaeum's
 A: stomodeums / B: stomodaeums
+_: stony / _V: stoney
 A: stor / B: stour
 A: storier / B: stourier
 A Bv: stories / AV B: storeys | level of building
@@ -13376,6 +14955,12 @@ A: story's / AV B: storey's | level of building
 A B: story's | book
 A: stower / B: stowre
 A: stowers / B: stowres
+_: straitjacket / _V: straightjacket
+_: straitjacket's / _V: straightjacket's
+_: straitjacketed / _V: straightjacketed
+_: straitjacketing / _V: straightjacketing
+_: straitjackets / _V: straightjackets
+_: strata / _V: stratums
 A: stre / B: strae
 A: strobile / B: strobilae
 A Z: strobilization / B: strobilisation
@@ -13392,6 +14977,12 @@ A Z: strychninizations / B: strychninisations
 A Z: strychninize / B: strychninise
 A Z: strychninizes / B: strychninises
 A: stumor / B: stumour
+_: sty | :1
+_: sty | :2
+_: sty / _v: stye | :3
+_: sty's | :1
+_: sty's / _v: stye's | :3
+_: stying | :2
 A Z: stylization / B: stylisation
 A Z: stylization's / B: stylisation's
 A Z: stylizations / B: stylisations
@@ -13403,6 +14994,9 @@ A Z: stylizers / B: stylisers
 A Z: stylizes / B: stylises
 A Z: stylizing / B: stylising
 A Z: stylopized / B: stylopised
+_: stymie / _-: stymy
+_: stymie's / _-: stymy's
+_: stymied / _-: stymyed
 A: subarmor / B: subarmour
 A: subarmor's / B: subarmour's
 A: subarmors / B: subarmours
@@ -13444,6 +15038,11 @@ A Z: subminiaturize / B: subminiaturise
 A Z: subminiaturized / B: subminiaturised
 A Z: subminiaturizes / B: subminiaturises
 A Z: subminiaturizing / B: subminiaturising
+_: subpoena / _-: subpena
+_: subpoena's / _-: subpena's
+_: subpoenaed / _-: subpenaed
+_: subpoenaing / _-: subpenaing
+_: subpoenas / _-: subpenas
 A Z: subpulverizer / B: subpulveriser
 A Z: subpulverizer's / B: subpulveriser's
 A Z: subpulverizers / B: subpulverisers
@@ -13545,6 +15144,9 @@ A: sulfurous / B: sulphurous
 A: sulfurs / B: sulphurs
 A Z: sultanize / B: sultanise
 A Z: sultanizes / B: sultanises
+_: sumac / _V: sumach
+_: sumac's / _V: sumach's
+_: sumacs / _V: sumaches
 A Z: summarizable / B: summarisable
 A Z: summarization / B: summarisation
 A Z: summarization's / B: summarisation's
@@ -13613,6 +15215,15 @@ A Z: surgerize / B: surgerise
 A Z: surgerizes / B: surgerises
 A Z: surprizal / B: surprisal
 A Z: sursize / B: sursise
+_: swab / _-: swob
+_: swab's / _-: swob's
+_: swabbed / _-: swobbed
+_: swabbing / _-: swobbing
+_: swabs / _-: swobs
+_: sweepstakes / _V: sweepstake / _V: sweep-stake
+_: sweetbrier / _v: sweetbriar
+_: sweetbrier's / _v: sweetbriar's
+_: sweetbriers / _v: sweetbriars
 A: swiveled / B: swivelled
 A: swiveling / B: swivelling
 A Z: sycophantize / B: sycophantise
@@ -13631,6 +15242,7 @@ A Z: syllogizer / B: syllogiser
 A Z: syllogizers / B: syllogisers
 A Z: syllogizes / B: syllogises
 A Z: syllogizing / B: syllogising
+_: sylvan / _v: silvan
 A Z: sylvanize / B: sylvanise
 A Z: sylvanizes / B: sylvanises
 A: sylviine / B: sylviinae
@@ -13646,6 +15258,11 @@ A Z: symbolizer's / B: symboliser's
 A Z: symbolizers / B: symbolisers
 A Z: symbolizes / B: symbolises
 A Z: symbolizing / B: symbolising
+_: symmetric | math
+_: symmetrical / _v: symmetric
+_: symmetrically / _v: symmetricly
+_: symmetricalness / _v: symmetricness
+_: symmetricalnesses / _v: symmetricnesses
 A Z: symmetrization / B: symmetrisation
 A Z: symmetrization's / B: symmetrisation's
 A Z: symmetrizations / B: symmetrisations
@@ -13676,9 +15293,15 @@ A Z: symptomatizes / B: symptomatises
 A Z: symptomatizing / B: symptomatising
 A Z: symptomize / B: symptomise
 A Z: symptomizes / B: symptomises
+_: synagogue / _V: synagog
+_: synagogue's / _V: synagog's
+_: synagogues / _V: synagogs
 A: synalepha / B: synaloepha
 A: synalephas / B: synaloephas
 A: synalephe / B: synaloephe
+_: sync / _V: synch
+_: sync's / _V: synch's
+_: synced / _V: synched
 A Z: synchronizable / B: synchronisable
 A Z: synchronizable's / B: synchronisable's
 A Z: synchronizables / B: synchronisables
@@ -13693,10 +15316,12 @@ A Z: synchronizers / B: synchronisers
 A Z: synchronizes / B: synchronises
 A Z: synchronizing / B: synchronising
 A Z: synchronizing's / B: synchronising's
+_: syncing / _V: synching
 A Z: syncretize / B: syncretise
 A Z: syncretized / B: syncretised
 A Z: syncretizes / B: syncretises
 A Z: syncretizing / B: syncretising
+_: syncs / _V: synches
 A Z: syndicalize / B: syndicalise
 A Z: syndicalizes / B: syndicalises
 A: synecious / B: synoecious
@@ -13759,6 +15384,9 @@ A Z: syphilize / B: syphilise
 A Z: syphilized / B: syphilised
 A Z: syphilizing / B: syphilising
 A: syringocele / B: syringocoele
+_: syrup / _V: sirup
+_: syrup's / _V: sirup's
+_: syrups / _V: sirups
 A Z: systematization / B: systematisation
 A Z: systematization's / B: systematisation's
 A Z: systematizations / B: systematisations
@@ -13784,6 +15412,11 @@ A Z: systemizer's / B: systemiser's
 A Z: systemizers / B: systemisers
 A Z: systemizes / B: systemises
 A Z: systemizing / B: systemising
+_: taboo / _V: tabu
+_: taboo's / _V: tabu's
+_: tabooed / _V: tabued
+_: tabooing / _V: tabuing
+_: taboos / _V: tabus
 A: tabored / B: taboured
 A: taborer / B: tabourer
 A: taborer's / B: tabourer's
@@ -13812,10 +15445,12 @@ A Z: tailorization's / B: tailorisation's
 A Z: tailorizations / B: tailorisations
 A Z: tailorize / B: tailorise
 A Z: tailorizes / B: tailorises
+_: tamable / _v: tameable
 A: tambor / B: tambour
 A: tambura / B: tamboura
 A: tambura's / B: tamboura's
 A: tamburas / B: tambouras
+_: tameable
 A Z: tanalized / B: tanalised
 A Z: tandemize / B: tandemise
 A Z: tandemizes / B: tandemises
@@ -13859,13 +15494,18 @@ A Z: taxidermized / B: taxidermised
 A Z: taxidermizes / B: taxidermises
 A Z: taxidermizing / B: taxidermising
 A: te / B: tae
-A: teaseled / B: teaselled
+_: teasel / _V: teazle / _V: teazel | <N>
+_: teasel | <V>
+_: teasel's / _V: teazel's / _V: teazle's | <N>
+A: teaseled / B: teaselled | <V>
 A: teaseler / B: teaseller
 A: teaseler's / B: teaseller's
 A: teaselers / B: teasellers
-A: teaseling / B: teaselling
+A: teaseling / B: teaselling | <V>
 A: teaseling's / B: teaselling's
 A: teaselings / B: teasellings
+_: teasels / _V: teazels / _V: teazles | <N>
+_: teasels | <V>
 A: teazeled / B: teazelled
 A: teazeling / B: teazelling
 A Z: technicalization / B: technicalisation
@@ -13879,6 +15519,7 @@ A: technicolor / B: technicolour
 A: technicolored / B: technicoloured
 A Z: technologize / B: technologise
 A: ted / B: taed
+_: teenage / _v: teenaged
 A: teer / B: teaer
 A: teers / B: teres
 A: teetotaled / B: teetotalled
@@ -13903,6 +15544,7 @@ A Z: tellurized / B: tellurised
 A Z: tellurizes / B: tellurises
 A Z: tellurizing / B: tellurising
 A: tels / B: taels
+_: tempi / _v: tempos / _-: tempoes
 A Z: templize / B: templise
 A Z: templizes / B: templises
 A Z: temporalize / B: temporalise
@@ -13934,6 +15576,9 @@ A Z: tenderizer's / B: tenderiser's
 A Z: tenderizers / B: tenderisers
 A Z: tenderizes / B: tenderises
 A Z: tenderizing / B: tenderising
+_: tendinitis / _v: tendonitis
+_: tendinitis's / _v: tendonitis's
+_: tendinitises / _v: tendonitises
 A: tendriled / B: tendrilled
 A Z: tenementization / B: tenementisation
 A Z: tenementization's / B: tenementisation's
@@ -13956,6 +15601,9 @@ A: teniasis / B: taeniasis
 A: teniasis's / B: taeniasis's
 A: tenioid / B: taenioid
 A: tenthmeter / B: tenthmetre
+_: tepee / _v: teepee / _V: tipi
+_: tepee's / _v: teepee's / _V: tipi's
+_: tepees / _v: teepees / _V: tipis
 A: terf / B: tref
 A: terma / B: trema
 A: termatic / B: trematic
@@ -14092,16 +15740,26 @@ A: thermosiphon / B: thermosyphon
 A: thermosiphon's / B: thermosyphon's
 A: thermosiphons / B: thermosyphons
 A: thesmothete / B: thesmothetae
+_: thiamine / _V: thiamin
+_: thiamine's / _V: thiamin's
+_: thiamines / _V: thiamins
+_: thralldom / _v: thraldom
+_: thralldom's / _v: thraldom's
+_: thralldoms / _v: thraldoms
 A Z: thronize / B: thronise
 A Z: thronizes / B: thronises
-A Bv: thruway / B Av: throughway
-A Bv: thruway's / B Av: throughway's
-A Bv: thruways / B Av: throughways
+_: through / _v: thru
+A Bv: thruway / Av B: throughway
+A Bv: thruway's / Av B: throughway's
+A Bv: thruways / Av B: throughways
 A Z: thymectomize / B: thymectomise
 A Z: thyroidectomized / B: thyroidectomised
 A Z: thyroidization / B: thyroidisation
 A Z: thyroidization's / B: thyroidisation's
 A Z: thyroidizations / B: thyroidisations
+_: tidbit / _V: titbit
+_: tidbit's / _V: titbit's
+_: tidbits / _V: titbits
 A: tinseled / B: tinselled
 A: tinselier / B: tinsellier
 A: tinseliest / B: tinselliest
@@ -14111,20 +15769,37 @@ A B: tire | exhausted
 A: tire's / B: tyre's
 A: tires / B: tyres | whell
 A B: tires | exhausted
-A Bv: tiro / B: tyro
 A Bv: tiro's / B: tyro's
-A Bv: tiros / B: tyros
 A: titer / B: titre
 A: titer's / B: titre's
 A: titers / B: titres
+_: titivate / _v: tittivate
+_: titivated / _v: tittivated
+_: titivates / _v: tittivates
+_: titivating / _v: tittivating
+_: titivation / _v: tittivation
+_: titivation's / _v: tittivation's
+_: titivations / _v: tittivations
 A: tittuped / B: tittupped
 A: tittuping / B: tittupping
 A: tittupy / B: tittuppy
+_: toffee / _V: toffy
+_: toffee's / _V: toffy's
+_: toffees / _V: toffies
 A: toge / B: togae
+_: togged / _-: toged
+_: togging / _-: toging
 A Z: tonicize / B: tonicise
 A Z: tonicizes / B: tonicises
+_: topee / _v: topi | hat
+_: topee's / _v: topi's | hat
+_: topees / _v: topis | hat
 A: topesthesia / B: topaesthesia
+_: topi / _v: topis | plural of topi, an antelope
 A: toret / B: touret
+_: tormentor / _V: tormenter
+_: tormentor's / _V: tormenter's
+_: tormentors / _V: tormenters
 A Z: torporize / B: torporise
 A Z: torporizes / B: torporises
 A: torses / B: torsoes
@@ -14152,6 +15827,8 @@ A Z: totemization's / B: totemisation's
 A Z: totemizations / B: totemisations
 A Z: tourize / B: tourise
 A Z: tourizes / B: tourises
+_: toward | <Adj>
+_: toward / _v: towards | prep
 A: toweled / B: towelled
 A: toweling / B: towelling
 A: toweling's / B: towelling's
@@ -14226,6 +15903,7 @@ A: transcoloration's / B: transcolouration's
 A: transcolorations / B: transcolourations
 A: transcolorrer / B: transcolourer
 A: transcolorrest / B: transcolourest
+_: transgender / _: transgendered
 A Z: transistorization / B: transistorisation
 A Z: transistorization's / B: transistorisation's
 A Z: transistorizations / B: transistorisations
@@ -14249,6 +15927,9 @@ A: travelers / B: travellers
 A: traveling / B: travelling
 A: traveling's / B: travelling's
 A: travelings / B: travellings
+_: travelogue / _v: travelog
+_: travelogue's / _v: travelog's
+_: travelogues / _v: travelogs
 A Z: trialization / B: trialisation
 A Z: triangularization / B: triangularisation
 A Z: triangularizations / B: triangularisations
@@ -14290,6 +15971,11 @@ A Z: trivialize / B: trivialise
 A Z: trivialized / B: trivialised
 A Z: trivializes / B: trivialises
 A Z: trivializing / B: trivialising
+_: trolley / _V: trolly
+_: trolley's / _V: trolly's
+_: trolleyed / _V: trollied
+_: trolleying / _V: trollying
+_: trolleys / _V: trollies
 A: tropeolin / B: tropaeolin
 A: tropeolin's / B: tropaeolin's
 A Z: tropicalization / B: tropicalisation
@@ -14337,6 +16023,9 @@ A Z: tubulizations / B: tubulisations
 A: tularemia / B: tularaemia
 A: tularemias / B: tularaemias
 A: tularemic / B: tularaemic
+_: tumbrel / _v: tumbril
+_: tumbrel's / _v: tumbril's
+_: tumbrels / _v: tumbrils
 A: tumor / B: tumour
 A: tumor's / B: tumour's
 A: tumored / B: tumoured
@@ -14359,6 +16048,9 @@ A Z: tutorizing / B: tutorising
 A: tweer / B: twere
 A: twier / B: twire
 A: twiers / B: twires
+_: tyke / _V: tike
+_: tyke's / _V: tike's
+_: tykes / _V: tikes
 A: typhemia / B: typhaemia
 A: typhemia / B: typhoemia
 A: typhlenteritis / B: typhloenteritis
@@ -14375,6 +16067,12 @@ A Z: tyrannizinglier / B: tyrannisinglier
 A Z: tyrannizingliest / B: tyrannisingliest
 A Z: tyrannizingly / B: tyrannisingly
 A Z: tyrannizings / B: tyrannisings
+A B: tyro / AV Bv: tiro / A-: tyreo
+A B: tyros / AV Bv: tiros
+_: ujitsu / _V: jujutsu / _V: jiujitsu
+_: ukulele / _V: ukelele
+_: ukulele's / _V: ukelele's
+_: ukuleles / _V: ukeleles
 A Z: ultracentralizer / B: ultracentraliser
 A Z: ultracentralizer's / B: ultracentraliser's
 A Z: ultracentralizers / B: ultracentralisers
@@ -14452,6 +16150,7 @@ A: unbarricaded / B: unbarricadoed
 A Z: unbastardized / B: unbastardised
 A Z: unbastardizedder / B: unbastardisedder
 A Z: unbastardizeddest / B: unbastardiseddest
+_: unbeknownst / _: unbeknown
 A Z: unbrutalize / B: unbrutalise
 A Z: unbrutalized / B: unbrutalised
 A Z: unbrutalizes / B: unbrutalises
@@ -14626,6 +16325,7 @@ A Z: underrealizing / B: underrealising
 A: undersavior / B: undersaviour
 A: undersavior's / B: undersaviour's
 A: undersaviors / B: undersaviours
+_: undersized / _V: undersize
 A Z: underutilization / B: underutilisation
 A Z: underutilization's / B: underutilisation's
 A Z: underutilizations / B: underutilisations
@@ -14656,6 +16356,7 @@ A Z: undramatizablest / B: undramatisablest
 A Z: undramatized / B: undramatised
 A Z: undramatized's / B: undramatised's
 A Z: undramatizeds / B: undramatiseds
+_: undreamed / _v: undreamt
 A Z: undualize / B: undualise
 A Z: undualizes / B: undualises
 A Z: uneconomizing / B: uneconomising
@@ -14736,6 +16437,7 @@ A: unflavored / B: unflavoured
 A: unflavoredder / B: unflavouredder
 A: unflavoreddest / B: unflavoureddest
 A: unflavorous / B: unflavourous
+_: unfocused / _V: unfocussed
 A Z: unformalized / B: unformalised
 A Z: unformalizedder / B: unformalisedder
 A Z: unformalizeddest / B: unformaliseddest
@@ -15090,6 +16792,7 @@ A Z: unpanegyrized / B: unpanegyrised
 A Z: unparagonized / B: unparagonised
 A Z: unparagonized's / B: unparagonised's
 A Z: unparagonizeds / B: unparagoniseds
+_: unparalleled / _-: unparallelled
 A: unparalyzed / B: unparalysed
 A: unparalyzed's / B: unparalysed's
 A: unparalyzedder / B: unparalysedder
@@ -15318,6 +17021,7 @@ A: unsepulcher / B: unsepulchre
 A: unsepulchered / B: unsepulchred
 A: unsepulchers / B: unsepulchres
 A Z: unserialized / B: unserialised
+_: unshakable / _v: unshakeable
 A: unshed / B: unshoed
 A Z: unsignalized / B: unsignalised
 A Z: unsignalized's / B: unsignalised's
@@ -15355,6 +17059,7 @@ A Z: unspiritualizes / B: unspiritualises
 A Z: unspiritualizing / B: unspiritualising
 A: unsplendorous / B: unsplendourous
 A: unsplendorously / B: unsplendourously
+_: unspoiled / _V: unspoilt
 A Z: unstabilized / B: unstabilised
 A Z: unstabilizing / B: unstabilising
 A Z: unstandardizable / B: unstandardisable
@@ -15501,6 +17206,8 @@ A Z: unwomanizes / B: unwomanises
 A: updraft / B: updraught
 A: updraft's / B: updraught's
 A: updrafts / B: updraughts
+_: upward / _v: upwards | <Adv>
+_: upward | <Adj>
 A Z: uralitization / B: uralitisation
 A Z: uralitizations / B: uralitisations
 A Z: uralitize / B: uralitise
@@ -15527,6 +17234,9 @@ A: urinemia / B: urinaemia
 A: urinemic / B: urinaemic
 A: urohematin / B: urohaematin
 A: urophein / B: urophaein
+_: usability / _V: useability
+_: usability's / _V: useability's
+_: usable / _V: useable
 A Z: utilitarianize / B: utilitarianise
 A Z: utilitarianized / B: utilitarianised
 A Z: utilitarianizes / B: utilitarianises
@@ -15694,12 +17404,19 @@ A Z: velarize / B: velarise
 A Z: velarized / B: velarised
 A Z: velarizes / B: velarises
 A Z: velarizing / B: velarising
+_: veld / _V: veldt
+_: veld's / _V: veldt's
+_: velds / _V: veldts
 A: velor / B: velour
+_: velours's
 A Z: venalization / B: venalisation
 A Z: venalization's / B: venalisation's
 A Z: venalizations / B: venalisations
 A Z: venalize / B: venalise
 A Z: venalizes / B: venalises
+_: vendor / _V: vender
+_: vendor's / _V: vender's
+_: vendors / _V: venders
 A Z: venomization / B: venomisation
 A Z: venomization's / B: venomisation's
 A Z: venomizations / B: venomisations
@@ -15712,6 +17429,9 @@ A Z: ventriloquized / B: ventriloquised
 A Z: ventriloquizes / B: ventriloquises
 A Z: ventriloquizing / B: ventriloquising
 A: venule / B: venulae
+_: veranda / _v: verandah
+_: veranda's / _v: verandah's
+_: verandas / _v: verandahs
 A Z: verbalization / B: verbalisation
 A Z: verbalization's / B: verbalisation's
 A Z: verbalizations / B: verbalisations
@@ -15725,6 +17445,8 @@ A Z: verbalizing / B: verbalising
 A: vermeiled / B: vermeilled
 A: vermeiles / B: vermeilles
 A: vermeiling / B: vermeilling
+_: vermilion / _V: vermillion
+_: vermilion / _V: vermillion's
 A Z: vermilionize / B: vermilionise
 A Z: vermilionizes / B: vermilionises
 A Z: vernacularization / B: vernacularisation
@@ -15796,8 +17518,12 @@ A Z: virilized / B: virilised
 A Z: virilizing / B: virilising
 A Z: virtualize / B: virtualise
 A Z: virtualizes / B: virtualises
+_: virtuosi / _v: virtuosos / _-: virtuosoes
 A Z: visionize / B: visionise
 A Z: visionizes / B: visionises
+_: visor / _V: vizor
+_: visor's / _V: vizor's
+_: visors / _V: vizors
 A Z: visualizable / B: visualisable
 A Z: visualization / B: visualisation
 A Z: visualization's / B: visualisation's
@@ -15921,6 +17647,9 @@ A Z: vulgarizers / B: vulgarisers
 A Z: vulgarizes / B: vulgarises
 A Z: vulgarizing / B: vulgarising
 A: wackes / B: wackoes
+_: wackier / _V: whackier
+_: wackiest / _V: whackiest
+_: wacky / _V: whacky
 A B: wagon / Bv: waggon
 A B: wagon's / Bv: waggon's
 A B: wagoned / Bv: waggoned
@@ -15933,12 +17662,24 @@ A B: wagonette's / Bv: waggonette's
 A B: wagonettes / Bv: waggonettes
 A B: wagoning / Bv: waggoning
 A B: wagons / Bv: waggons
+_: wainscoted / _v: wainscotted
+_: wainscoting / _v: wainscotting
+_: wainscoting's / _v: wainscotting's
+_: wainscotings / _v: wainscottings
+_: wallah / _-: walla
+_: wallahs / _-: wallas
 A Z: wantonize / B: wantonise
 A Z: wantonized / B: wantonised
 A Z: wantonizes / B: wantonises
 A Z: wantonizing / B: wantonising
 A: warer / B: warre
+_: warm-up / _v: warmup
+_: warm-up's / _v: warmup's
+_: warm-ups / _v: warmups
 A Z: warrantize / B: warrantise
+_: waterbed / _v: water_bed
+_: waterbed's / _v: water_bed's
+_: waterbeds / _v: water_beds
 A: watercolor / B: watercolour
 A: watercolor's / B: watercolour's
 A: watercolored / B: watercoloured
@@ -15953,13 +17694,22 @@ A Z: weatherize / B: weatherise
 A Z: weatherized / B: weatherised
 A Z: weatherizes / B: weatherises
 A Z: weatherizing / B: weatherising
+_: weepie | :2
+_: weepy | :1
 A: weeviled / B: weevilled
 A Z: weftwize / B: weftwise
 A Z: weize / B: weise
 A Z: weized / B: weised
 A Z: weizes / B: weises
 A Z: weizing / B: weising
+_: welsh / _V: welch
+_: welshed / _V: welched
+_: welshes / _V: welches
+_: welshing / _V: welching
 A: wer / B: waer
+_: werewolf / _-: werwolf
+_: werewolf's / _-: werwolf's
+_: werewolves / _-: werwolves
 A Z: westernization / B: westernisation
 A Z: westernization's / B: westernisation's
 A Z: westernizations / B: westernisations
@@ -15967,19 +17717,40 @@ A Z: westernize / B: westernise
 A Z: westernized / B: westernised
 A Z: westernizes / B: westernises
 A Z: westernizing / B: westernising
+_: whimsy / _V: whimsey
+_: whimsy's / _V: whimsey's
+_: whimsys / _V: whimseys
+_: whir / _V: whirr
+_: whir's / _V: whirr's
+_: whirs / _V: whirrs
 A: whiskey / Av B: whisky | drink
-A: whiskey | code word | -
+A B: whiskey | (-) code word
 A: whiskey's / Av B: whisky's | drink
-A: whiskey's | code word | -
+A B: whiskey's | (-) code word
 A: whiskeys / Av B: whiskies
-A Bv: whiz / B: whizz
-A Bv: whiz's / B: whizz's
-A: willful / B: wilful
+A Bv: whiz / Av B: whizz | :1
+A Bv: whiz / Av B: whizz | :2
+A Bv: whiz / AV: wiz / B: whizz | :3
+A Bv: whiz's / Av B: whizz's | :2
+A Bv: whiz's / AV: wiz's / B: whizz's | :3
+_: whizes / _v: whizzes | :1
+_: whizzes | :2
+_: whizzes / _V: wizzes | :3
+_: whodunit / _V: whodunnit
+_: whodunit / _V: whodunnits's
+_: whodunit's / _V: whodunnit's
+_: wigeon / _v: widgeon
+_: wigeon / _v: widgeons / _v: wigeons / _v: widgeon | plural
+_: wigeon's / _v: widgeon's
+A: willful / Av B: wilful
 A: willfuler / B: wilfuler
 A: willfulest / B: wilfulest
 A: willfullier / B: wilfullier
 A: willfulliest / B: wilfulliest
 A: willfully / B: wilfully
+_: willfulness / _v: wilfulness
+_: willfulness's / _v: wilfulness's
+_: willy / _V: willie
 A Z: winterization / B: winterisation
 A Z: winterization's / B: winterisation's
 A Z: winterizations / B: winterisations
@@ -15987,7 +17758,15 @@ A Z: winterize / B: winterise
 A Z: winterized / B: winterised
 A Z: winterizes / B: winterises
 A Z: winterizing / B: winterising
+_: wintrier / _V: winterier
+_: wintriest / _V: winteriest
+_: wintry / _V: wintery
+_: wisteria / _V: wistaria
+_: wisteria's / _V: wistaria's
+_: wisterias / _V: wistarias
+_: wiz | :4
 A Z: wizen / B: wisen
+_: wolves / _-: wolfs
 A Z: womanization / B: womanisation
 A Z: womanization's / B: womanisation's
 A Z: womanizations / B: womanisations
@@ -15998,6 +17777,9 @@ A Z: womanizer's / B: womaniser's
 A Z: womanizers / B: womanisers
 A Z: womanizes / B: womanises
 A Z: womanizing / B: womanising
+_: woning / _v: wonning
+_: woning's / _v: wonning's
+_: wonings / _v: wonnings
 A Z: woodcockize / B: woodcockise
 A Z: woodcockizes / B: woodcockises
 A: woolen / B: woollen
@@ -16010,17 +17792,47 @@ A: woolenizes / B: woollenises / Z: woollenizes
 A: woolenner / B: woollenner
 A: woolennest / B: woollennest
 A: woolens / B: woollens
+_: woollier / _V: woolier | <Adj>
+_: woollies / _V: woolies | <N>
+_: woolliest / _V: wooliest | <Adj>
+_: woolly / _V: wooly | <Adj>
+_: woolly / _V: wooly / _V: woolie | <N>
+_: woolly's / _V: woolie's / _V: wooly's | <N>
 A: wornil / B: wournil
 A: worshiped / B: worshipped
 A: worshiper / B: worshipper
 A: worshiper's / B: worshipper's
 A: worshipers / B: worshippers
 A: worshiping / B: worshipping
+_: yak | :1
+_: yak / _V: yack | :2
+_: yak / _V: yack | :3
+_: yak's | :1
+_: yak's / _V: yack's | :3
+_: yakked / _V: yacked | :2
+_: yakking / _V: yacking | :2
+_: yaks / _V: yak | :1
+_: yaks / _V: yacks | :2
+_: yaks / _V: yacks | :3
+_: yeshiva / _V: yeshivah
+_: yeshiva's / _V: yeshivah's
+_: yeshivas / _v: yeshivot / _V: yeshivahs
 A: yodeled / B: yodelled
 A: yodeler / B: yodeller
 A: yodeler's / B: yodeller's
 A: yodelers / B: yodellers
 A: yodeling / B: yodelling
+_: yogi / _V: yogin
+_: yogi's / _V: yogin's
+_: yogis / _V: yogins
+_: yuck / _V: yuk | :4
+_: yuk / _v: yuck / _V: yak / _V: yock | :5
+_: yuk / _v: yuck | :6
+_: yuk's / _v: yuck's / _V: yock's / _V: yak's | :5
+_: yukked / _v: yucked | :6
+_: yukking / _v: yucking | :6
+_: yuks / _v: yucks / _V: yocks / _V: yaks | :5
+_: yuks / _v: yucks | :6
 A: zaffer / B: zaffre
 A: zaffers / B: zaffres
 A: zea / B: zoea
@@ -16037,6 +17849,9 @@ A: zoeal / B: zooeal
 A: zoeas / B: zooeas
 A: zoecia / B: zooecia
 A: zoecium / B: zooecium
+_: zombie / _V: zombi
+_: zombie's / _V: zombi's
+_: zombies / _V: zombis
 A: zonesthesia / B: zonaesthesia
 A: zonule / B: zonulae
 A: zooglea / B: zoogloea

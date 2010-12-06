@@ -10,24 +10,26 @@ export LC_ALL=C
 export LC_CTYPE=C
 export LC_COLLATE=C
 
+FINAL=final
+
 echo base
 
-cat final/english-*.{10,20,35,40,50,55,60} final/special-* \
+cat $FINAL/english-*.{10,20,35,40,50,55,60} $FINAL/special-* \
   | sort -u > en.wl0
-cat en.wl0 final/american-*.{10,20,35,40,50,55,60} \
+cat en.wl0 $FINAL/american-*.{10,20,35,40,50,55,60} \
   | sort -u > en_US-w_accents.twl
-cat en.wl0 final/british-*.{10,20,35,40,50,55,60} \
+cat en.wl0 $FINAL/british-*.{10,20,35,40,50,55,60} \
   | sort -u > en_GB-ise-w_accents.twl
-cat en.wl0 final/british_z-*.{10,20,35,40,50,55,60} \
+cat en.wl0 $FINAL/british_z-*.{10,20,35,40,50,55,60} \
   | sort -u > en_GB-ize-w_accents.twl
-cat en.wl0 final/canadian-*.{10,20,35,40,50,55,60} \
+cat en.wl0 $FINAL/canadian-*.{10,20,35,40,50,55,60} \
   | sort -u > en_CA-w_accents.twl
 
-cat final/variant_0-*.{10,20,35,40,50,55,60} \
+cat $FINAL/variant_0-*.{10,20,35,40,50,55,60} \
   | sort -u > en-variant_0.wl0
-cat en-variant_0.wl0 final/variant_1-*.{10,20,35,40,50,55,60} \
+cat en-variant_0.wl0 $FINAL/variant_1-*.{10,20,35,40,50,55,60} \
   | sort -u > en-variant_1.wl0
-cat en-variant_1.wl0 final/variant_2-*.{10,20,35,40,50,55,60} \
+cat en-variant_1.wl0 $FINAL/variant_2-*.{10,20,35,40,50,55,60} \
   | sort -u > en-variant_2.wl0
 
 echo deaccent

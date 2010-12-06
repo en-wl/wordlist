@@ -1,0 +1,390 @@
+use strict;
+#use warnings;
+use sort 'stable';
+
+open F, "../alt12dicts/variant.txt" or die;
+
+my %var;
+while (<F>) {
+    chop;
+    my ($v, $w) = split /\t/;
+    $var{$v} = "$v $w";
+}
+
+open F, "../alt12dicts/2of12full.txt" or die;
+
+my %full;
+while (<F>) {
+    chop;
+    my ($t,$n,$v,$b,$w) = /\s*(\d+):\s+(\d+|-)\s+(\d+|-)\#\s+(\d+|-)\&\s+(.+)/ or die "?$_\n";
+    next if ($b > $n);
+    $full{$w} = [$t, $n, $v, $b];
+}
+
+open F, "variant-plus.txt" or die;
+
+#while (<F>) {
+#    last if /^---/;
+#}
+
+sub proc ($) {
+    local $_ = $_[0];
+    my ($note, $data, $info) = /^(b:|\?|-b |-|)\s*(\w.+?)\s*(\|.*)?$/ or die "?$_";
+    my $node;
+    ($note) = $info =~ m/^\|\s*(.+)/ if $info;
+    local $_ = $data;
+    my @v;
+    s/^(\w\S+)\s*// or die "?$_";    push @v, [$1, [0,1, 0]];
+    while (s/^\/\s*(\w\S+)\s*//)    {push @v, [$1, [0,1, 0]]}
+    while (s/^\((\w\S+)\)\s*//)     {push @v, [$1, [2,2, 2]]}
+    while (s/^\(\((\w\S+)\)\)\s*//) {push @v, [$1, [3,3, 3]]}
+    die "?$_" unless $_ eq '';
+    return (\@v, $note);
+}
+
+sub yank(\@$) {
+    my ($a,$w) = @_;
+    my $l = @$a;
+    my $i;
+    for ($i = 0; $i < @$a; $i++) {
+        last if $a->[$i][0] eq $w;
+    }
+    die "Not found: $w" if $i == @$a;
+    return splice @$a,$i,1;
+}
+
+sub min($$) {
+    return $_[0] < $_[1] ? $_[0] : $_[1];
+}
+
+sub merge($$) {
+    @_ = sort {$a->[0] <=> $b->[0]} @_;
+    my ($a0,$b0) = @{$_[0]};
+    my ($a1,$b1) = @{$_[1]};
+    die "No Intersection!\n" if $b0 < $a1;
+    my $a = $a1;
+    my $b = min($b0, $b1);
+    die "More Than One [$a0,$b0]i[$a1,$b1] = [$a,$b]!\n" if $a != $b;
+    return $a;
+}
+
+sub find_affix($$;$) {
+    my ($w,$root,$hint) = @_;
+    my $i = 0;
+    if (defined $hint && substr($w, -length($hint)) eq $hint) {
+        $i = length($w) - length($hint);
+    } else {
+        while (substr($w, 0, $i) eq substr($root, 0, $i) && $i < length($w)) {$i++}
+        $i--;
+    }
+    my $common = substr($w, 0, $i);
+    my $suffix = substr($w, $i);
+    my $orig_suffix = $suffix;
+    my $extra =  substr($root, $i);
+    #print "--== ($w,$root) => $common/$suffix /$extra\n";
+    if ($common eq '') {
+        return (undef);
+    } elsif ($extra eq '' && $suffix eq 'es' && $common =~ /[sxzh]$/) {
+        my ($l) = $common =~ /(.)$/;
+        return ('s', "$l$extra", "$l$orig_suffix");
+    } elsif ($extra eq '' ) {
+        my ($l) = $common =~ /(..)$/;
+        return ($suffix, "$l$extra", "$l$orig_suffix");
+    } elsif (($extra eq 'y' || $extra eq 'ey') && $suffix =~ /^i/) {
+        my ($l) = $common =~ /(..)$/;
+        $suffix =~ s/^i//;
+        return ($suffix, "$l$extra", "$l$orig_suffix");
+    } elsif ($extra eq 'e' && $suffix =~ /^[aeiouy]/) {
+        my ($l) = $common =~ /(..)$/;
+        return ($suffix, "$l$extra", "$l$orig_suffix");
+    } else {
+        #print "---- $common/$suffix /$extra\n" if $extra;
+        return (undef);
+    }
+}
+
+sub num_syllables($) {
+    local ($_) = @_;
+    return 1 if length($_) <= 3;
+    s/(es|ed|e)$//;
+    my @res = m/([aeiouy]+)/gi;
+    return @res + 0;
+}
+
+sub apply_affix($$;$$) {
+    my ($w, $suffix, $strip, $add) = @_;
+    if (defined $strip && defined $add && $w =~ s/$strip$/$add/) {
+        return $w;
+    } elsif ($w =~ m/[^aeiou]y$/ && $suffix !~ m/^i\'/) {
+        $w =~ s/y$/i$suffix/;
+        return $w;
+    } elsif ($w =~ m/e$/ && $suffix !~ m/^[aeiou]/i) {
+        return "$w$suffix";
+    } elsif ($w =~ m/[sxzh]$/ && $suffix eq 's') {
+        return "${w}es";
+    } elsif ($w !~ m/[ey]$/i && $suffix !~ m/^[aeiou]/i) {
+        return "$w$suffix";
+    } elsif ($w !~ m/[ey]$/i && num_syllables($w) > 1) {
+        return "$w$suffix";
+    } else {
+        return undef;
+    }
+}
+
+my @clusters;
+
+my $i = 0;
+
+outer:
+while (<F>) {
+    #print;
+    if (m/^\s+$/) {$i++; next;}
+    my $d = {'line' => $_};
+    push @{$clusters[$i]}, $d;
+    if (/^=== (\w+) noun/) {
+        my $w = $1;
+        my @r;
+        foreach my $s ("s", "'s") {
+            my $r = apply_affix($w, $s);
+            last unless defined $r;
+            #print "$w $s $r\n";
+            push @r, $r;
+        }
+        if (@r == 2) {
+            push @{$clusters[$i]}, {'line' => "=== $r[0] n\n"};
+            push @{$clusters[$i]}, {'line' => "=== $r[1] n\n"};
+        }
+    }
+    next if m/^\w+:/;
+    next if m/^\s*$/;
+    next unless m/^\w/;
+    next if m/\/\//; #FIXME split...
+    my ($v, $note) = proc $_;
+    my @v = @$v;
+    next if @v <= 1;
+    $d->{orig} = [@v];
+    #print "--- $note :: $d->{line}";
+    $d->{orig_note} = $note if defined $note;
+    #print "\n";
+    #print join(' / ',map {'A'.$_->[0].": ".($var{$_->[1]} ? $var{$_->[1]} : $_->[1])} @v);
+    my @v1;
+    my $max = 0;
+    foreach (@v) {
+        my ($w, $l) = @$_;
+        next outer if !$full{$w} && $l->[2] < 3;
+        next if !$full{$w};
+        my $d = $full{$w};
+        $max = $d->[0] if $d->[0] > $max;
+        push @v1, [$w, $d->[1]];
+    }
+    next if @v1 <= 1;
+    @v1 = map {[$_->[0], (($_->[1]-($max-$_->[1]))/$max)]} @v1;
+    @v1 = sort {$b->[1] <=> $a->[1]} @v1;
+    my @v2;
+    push @v2, [$v1[0][0], [0,0]];
+    my $fl = $v1[0][1];
+    foreach (@v1[1..$#v1]) {
+        my ($w, $l) = @$_;
+        my $r;
+        if    ($l >  0.32)                 {$r = [0,0]}
+        elsif ($l == -1)                   {$r = [1,3]}
+        elsif ($fl >= -0.32 && $l < -0.32) {$r = [1,2]}
+        elsif ($fl - $l <= 0.65)           {$r = [0,0]}
+        #elsif ($l < -0.32)                 {$r = [1,2]}
+        else                               {$r = [1,1]}
+        push @v2, [$w,$r];
+    }
+    $d->{rank} = \@v1;
+    #print join(' / ',map {'A'.$_->[0].": ".$_->[1]." ".sprintf("%.2g",)} @v1);
+    #print "    ".join(' / ', map {"$_->[1][2]: $_->[0]"} @v), (defined $note ? " $note" : ""), "\n";
+    #print "    ".join(' / ', map {"$_->[1][0]: $_->[0]"} @v2), "\n";
+    #print "??? ".join(' / ', map {sprintf("%s %.2g", $_->[0], $_->[1])} @v1), "\n";
+
+    # merge @v @v2
+    my @vf;
+    eval {
+        foreach (@v2) {
+            my ($w, $l1) = @$_;
+            my $other = yank @v, $w;
+            die unless $other;
+            my $l2 = $other->[1];
+            my $new = [$w, merge $l1, $l2];
+            push @vf, $new;
+        }
+        foreach (@v) {
+            my ($w, $l) = @$_;
+            push @vf, [$w, 3];
+        }
+        @vf = sort {$a->[1] <=> $b->[1]} @vf;
+        #print "::: ".join(' / ', map {"$_->[1]: $_->[0]"} @vf), "\n";
+        $d->{final} = \@vf;
+    };
+    $d->{error} = $@ if $@;
+    #print "*** $@" if $@;
+}
+
+my @suffex = (
+    "s", "ed", "ing", "'s",
+    "er", "ers", "er's",
+    "est",
+    "ness", "nesses", "ness's",
+    "ly",
+    "ment", "ments", "ment's",
+    "ity", "ities", "ity's",
+    "ion", "ions", "ion's",
+    "age", "ages", "age's", "aged", "ageing",
+    "al", "als", "al's",
+    );
+
+# my @affix_rules = (
+#     ["s",   [["y", "ies", "[^aeiou]y"],
+#              ["", "s", "[aeiou]y"],
+#              ["", "es","[sxzh]"],
+#              ["", "s", "[^sxzhy]"]]],
+#     ["ed",  [["", "d", "e"],
+#              ["y", "ied", "[^aeiou]y"],
+#              ["", "ed","[^ey]"],
+#              ["", "ed","[aeiou]y"]]],
+#     ["ing", [["e", "ing", "e"],
+#              ["", "ing", "[^e]"]]],
+#     ["'s", [["", "'s", ""]]],
+#     ["er", [["","r","e"],
+#             ["y", "ier", "[^aeiou]y"],
+#             ["","er","[aeiou]y"],
+#             ["","er","[^ey]"]]],
+#     ["ers", [["","rs","e"],
+#             ["y", "iers", "[^aeiou]y"],
+#             ["","ers","[aeiou]y"],
+#             ["","ers","[^ey]"]]],
+#     ["er's", [["","r's","e"],
+#             ["y", "ier's", "[^aeiou]y"],
+#             ["","er's","[aeiou]y"],
+#             ["","er's","[^ey]"]]],
+#     ["est", [["","st","e"],
+#              ["y","iest","[^aeiou]y"],
+#              ["","est","[aeiou]y"],
+#              ["","est"."[^ey]"]]],
+#     ["ness", [["y","iness","[^aeiou]y"],
+#               ["","ness","[aeiou]y"],
+#               ["","ness","[^y]"]]],
+#     ["nesses", [["y","ineses","[^aeiou]y"],
+#                 ["","nesses","[aeiou]y"],
+#                 ["","nesses","[^y]"]]],
+#     ["ness's", [["y","iness's","[^aeiou]y"],
+#                 ["","ness's","[aeiou]y"],
+#                 ["","ness's","[^y]"]]],
+#     ["ment", [["y","iment","[^aeiou]y"],
+#               ["","ment","[aeiou]y"],
+#               ["","ment","[^y]"]]],
+#     ["mentes", [["y","ineses","[^aeiou]y"],
+#                 ["","mentes","[aeiou]y"],
+#                 ["","mentes","[^y]"]]],
+#     ["ment's", [["y","iment's","[^aeiou]y"],
+#                 ["","ment's","[aeiou]y"],
+#                 ["","ment's","[^y]"]]],
+#     );
+
+# sub find_affix($$) {
+#     my ($w,$root) = @_;
+#     foreach my $r (@affix_rules) {
+#         foreach my $q (@{$r->[1]}) {
+#             local $_ = $root;
+#             m/$q->[2]$/ or next;
+#             s/$q->[0]$/$q->[1]/ or die;
+#             return $r->[0] if $_ eq $w;
+#         }
+#     }
+#     return;
+# }
+
+# sub find_affix($$) {
+#     my ($w,$root) = @_;
+#     foreach my $s (@suffex) {
+#         local $_ = $root;
+#         if ("$root$s" eq $w) {
+#             $_ = "$root$s";
+#         } elsif (/[^aeiou]y$/) {
+#             s/y$/i$s/;
+#         } elsif (/e$/ && $s =~ /[aeiou]$/) {
+#             s/e$/$s/;
+#         }
+#         return $s if $_ eq $w;
+#     }
+#     return;
+# }
+
+foreach my $cluster (@clusters) {
+    my $main_d = $cluster->[0]{orig};
+    my $main = $main_d ? $main_d->[0][0] : undef;
+    my $last;
+    foreach my $d (@$cluster) {
+        #print $d->{line};
+        if ($d->{line} =~ /^=== (\w+)/) {
+            my $w = $1;
+            my $pos = $2;
+            my ($aff,$strip,$add) = find_affix($1, $main);
+            if ($aff) {
+                #print "<<$main/$aff (-$strip,+$add) = $w\n";
+                my @n;
+                foreach (@$main_d) {
+                    my ($w, @r) = @$_;
+                    my $n = apply_affix($w, $aff, $strip, $add);
+                    #print ".. $w $n\n";
+                    last unless $n;
+                    push @n, [$n, @r];
+                }
+                if (@n + 0 == @$main_d + 0) {
+                    #print "YES $w\n";
+                    $d->{orig} = \@n if (@n + 0 == @$main_d + 0);
+                }
+            } else {
+                #print "WARNING on $w\n";
+            }
+        }
+        my $note = $d->{orig_note} ? " | $d->{orig_note} " : "";
+        if (exists $d->{rank}) {
+            if ($d->{final}) {
+                $last = $d;
+                print join(' / ', map {"$_->[1]: $_->[0]"} @{$d->{final}}), $note, "\n";
+                #print "?? ".join(' / ', map {sprintf("%s %.2g", $_->[0], $_->[1])} @{$d->{rank}}), "\n";
+            } else {
+                undef $last;
+                print "#? $d->{line}";
+                print "?? ".join(' / ', map {sprintf("%s %.2g", $_->[0], $_->[1])} @{$d->{rank}}), "\n";
+                print "** ", $d->{error};
+            }
+        } elsif (defined $last && $d->{orig}) {
+            my $num = @{$last->{orig}} + 0;
+            my $i;
+            my %map;
+            my $aff;
+            my $f = sub {
+                my ($hint) = @_;
+                undef $aff;
+                foreach ($i = 0; $i < $num; $i++) {
+                    my $w = $d->{orig}[$i][0];
+                    my $root = $last->{orig}[$i][0];
+                    last unless defined $w && defined $root;
+                    my ($a) = find_affix($d->{orig}[$i][0], $last->{orig}[$i][0], $hint);
+                    last unless defined $a;
+                    #print ">>$root/$a = $w\n";
+                    $aff = $a unless defined $aff;
+                    last unless $aff eq $a;
+                    $map{$root} = $w;
+                }
+            };
+            &$f;
+            &$f("e$aff") if $i != $num;
+            if ($i == $num) {
+                print join(' / ', map {"$_->[1]: $map{$_->[0]}"} @{$last->{final}}), $note,  "\n";
+            } else {
+                print "#? $d->{line}";
+            }
+        } elsif ($d->{orig}) {
+            print "#? $d->{line}";
+        } else {
+            print "## $d->{line}";
+        }
+    }
+    print "\n";
+}

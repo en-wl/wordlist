@@ -1,0 +1,47 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use IO::Handle;
+
+use varcon qw(%map);
+
+my %F;
+
+my %lists_pre;
+
+# $cat = 'normal' or 'uncommon'
+# $sp = spelling
+# $vl = variant_level
+
+sub have_variants ( $ ) 
+{
+    local $_ = shift;
+    return 0 unless defined $_;
+    return 1 if @$_ > 1;
+    return 1 if @{$_->[0]} > 1;
+    return 0;
+}
+
+open F, "varcon.txt";
+
+$ENV{LC_ALL} = 'C';
+open A, "| sort -u > w_variant-amer.lst";
+open B, "| sort -u > w_variant-nonamer.lst";
+
+while (<F>) {
+    #print;
+    my %notes;
+    my %r = varcon::readline($_,\%notes);
+    if (have_variants $r{A} || have_variants $r{_}) {
+        foreach (varcon::get_words(\%r)) {
+            print A "$_\n";
+        }
+    }
+    if (have_variants $r{B} || have_variants $r{Z} || have_variants $r{Z}) {
+        foreach (varcon::get_words(\%r)) {
+            print B "$_\n";
+        }
+    }
+}
+

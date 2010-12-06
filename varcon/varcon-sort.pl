@@ -1,3 +1,5 @@
+#!/usr/bin/perl
+
 use strict;
 use warnings;
 
@@ -26,7 +28,8 @@ open F, $infile or die;
 while (<F>) {
     my $line = $_;
     my %d = varcon::readline($line);
-    push @{$data{"$d{'A'}[0][0]"}}, $line;
+    push @{$data{"$d{'A'}[0][0]"}}, $line if     exists $d{A};
+    push @{$data{"$d{'_'}[0][0]"}}, $line unless exists $d{A};
 }
 
 open F, ">$outfile" or die;

@@ -1,0 +1,19 @@
+No clear agreement and variants pronounced significantly differently
+than include them both.
+
+No clear agreement otherwise: variant_0
+
+Clear agreement with mostly equal variants: variant_1
+
+Seldom used variants: variant_2
+
+Everything else: variant_3
+
+NEW RULES:
+
+0: No clear agreemen (ie nearly equal split)
+1: Mostly clear agreement (more than 2/3), considerd equal by M-W and AmerH
+   Between (1/2 and 2/3 agreement) but "also" by M-W and/or AmerH
+2: Mostly Clear agreement, considered "also" by M-W and/or AmerH
+3: Generally not listed but in unabridged dictionaries
+

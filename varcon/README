@@ -19,6 +19,8 @@ The varcon.txt file:
   B = British "ise" spelling
   Z = British "ize" spelling (OED Spelling)
   C = Canadian
+  _ = Other (Variant info based on American dictionaries, never used
+             with any of the above)
 
 Variants marked
   v = variant (orig. v or V)

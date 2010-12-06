@@ -6,27 +6,59 @@ use IO::Handle;
 
 use varcon qw(%map);
 
-open F, "abbc.tab";
-
 my %F;
 
-foreach my $s (sort keys %map) {
-    $F{"${s}0"} = new IO::Handle;
-    open $F{"${s}0"}, "| sort -u > $map{$s}.lst";
-    foreach my $v (1..3) {
-        $F{"$s$v"} = new IO::Handle;
-        open $F{"$s$v"}, "| sort -u > $map{$s}-v$v.lst";
-    }
-}
+my %lists_pre;
+
+# $cat = 'normal' or 'uncommon'
+# $sp = spelling
+# $vl = variant_level
 
 open F, "varcon.txt";
 while (<F>) {
-    my %r = varcon::flatten(varcon::readline($_));
+    #print;
+    my %notes;
+    my %r = varcon::flatten(varcon::readline($_,\%notes));
+    my $cat = $notes{uncommon} ? 'uncommon' : 'normal';
     foreach my $k (sort keys %r) {
-        print "!$k: @{$r{$k}}\n" if (@{$r{$k}} > 1);
-        foreach (@{$r{$k}}) {
-            print "Bad key: $k\n" unless defined $F{$k};
-            $F{$k}->print("$_\n");
+        #print ">>$k<<\n";
+        my ($sp, $vl) = $k =~ /^(.)(.)?$/ or die;
+        $vl = ' ' unless defined $vl;
+        foreach my $word (@{$r{$k}}) {
+            $lists_pre{$cat}{$sp}{$vl}{$word}++;
         }
     }
 }
+
+my %lists;
+
+foreach my $cat (sort keys %lists_pre) {
+    foreach my $sp (sort keys %{$lists_pre{$cat}}) {
+        my %already_have;
+        foreach my $vl (sort keys %{$lists_pre{$cat}{$sp}}) {
+            foreach my $word (keys %{$lists_pre{$cat}{$sp}{$vl}}) {
+                next if $already_have{$word};
+                $already_have{$word}++;
+                push @{$lists{$sp}{$vl}}, $word;
+            }
+        }
+    }
+}
+
+foreach my $sp (sort keys %lists) {
+    my %already_have;
+    foreach my $vl (sort keys %{$lists{$sp}}) {
+        my $name = $map{$sp};
+        $name .= "-v$vl" if $vl ne ' ';
+        $name .= ".lst";
+        my @words = sort @{$lists{$sp}{$vl}};
+        open F, ">$name";
+        my $prev = '';
+        foreach (@words) {
+            next if $_ eq $prev;
+            $prev = $_;
+            print F "$_\n";
+        }
+    }
+}
+

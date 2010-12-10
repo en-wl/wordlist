@@ -2648,8 +2648,6 @@ A Z: bowdlerizing / B: bowdlerising
 A: boweled / B: bowelled
 A: boweling / B: bowelling
 A: bradypnea / B: bradypnoea
-_: break_even / _v: breakeven's
-_: breakeven / _v: break_even
 A C: breathalyze / B: breathalyse
 A C: breathalyzed / B: breathalysed
 A C: breathalyzes / B: breathalyses

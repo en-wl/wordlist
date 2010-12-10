@@ -62,8 +62,7 @@ sub flatten(%) {
     return %r;
 }
 
-
-sub get_words($) {
+sub get_words_tally($) {
     my $r = shift;
     my %res;
     if (ref $r) {
@@ -88,5 +87,10 @@ sub get_words($) {
             $res{$w} = 1;
         }
     }
-    return sort keys %res;
+    return \%res;
+}
+
+sub get_words($) {
+    my $res = &get_words_tally(@_);
+    return sort keys %$res;
 }

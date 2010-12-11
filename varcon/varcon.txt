@@ -1367,10 +1367,8 @@ A: antisiphon's / B: antisyphon's
 A Z: antithesize / B: antithesise
 A Z: antithesizes / B: antithesises
 
-# anviled (level 80)
+# anvil (level 80)
 A: anviled / B: anvilled
-
-# anviling (level 80)
 A: anviling / B: anvilling
 
 # apesthesia (level 95)
@@ -1478,10 +1476,8 @@ A Z: apotheosizes / B: apotheosises
 A: appall / B: appal
 A: appalls / B: appals
 
-# appareled (level 35)
+# apparel (level 35)
 A: appareled / B: apparelled
-
-# appareling (level 35)
 A: appareling / B: apparelling
 
 # appendixes (level 35)
@@ -2249,10 +2245,8 @@ A: bacillemias / B: bacillaemias
 # bacilli (level 50)
 _: bacilli / _-: bacilluses
 
-# backpedaled (level 50)
+# backpedal (level 50)
 A: backpedaled / B: backpedalled
-
-# backpedaling (level 50)
 A: backpedaling / B: backpedalling
 
 # backward (level 10)
@@ -2430,10 +2424,8 @@ A Z: baronetizing / B: baronetising
 A Z: baronize / B: baronise
 A Z: baronizes / B: baronises
 
-# barreled (level 35)
+# barrel (level 35)
 A: barreled / B: barrelled
-
-# barreling (level 35)
 A: barreling / B: barrelling
 
 # bartizan (level 70)
@@ -2457,10 +2449,8 @@ A Z: bastardized / B: bastardised
 A Z: bastardizing / B: bastardising
 A Z: bastardizes / B: bastardises
 
-# bastinaded (level 70)
+# bastinade (level 70)
 A: bastinaded / B: bastinadoed
-
-# bastinades (level 70)
 A: bastinades / B: bastinadoes
 
 # bathyscaphe (level 60)
@@ -2494,16 +2484,12 @@ A: beclamors / B: beclamours
 # becolor (level 95)
 A: becolor / B: becolour
 
-# becudgeled (level 80)
+# becudgel (level 80)
 A: becudgeled / B: becudgelled
-
-# becudgeling (level 80)
 A: becudgeling / B: becudgelling
 
-# bedeviled (level 50)
+# bedevil (level 50)
 A: bedeviled / B: bedevilled
-
-# bedeviling (level 50)
 A: bedeviling / B: bedevilling
 
 # bedlamize (level 95)
@@ -2512,10 +2498,8 @@ A Z: bedlamized / B: bedlamised
 A Z: bedlamizing / B: bedlamising
 A Z: bedlamizes / B: bedlamises
 
-# bedriveled (level 80)
+# bedrivel (level 80)
 A: bedriveled / B: bedrivelled
-
-# bedriveling (level 80)
 A: bedriveling / B: bedrivelling
 
 # Beera (level 95)
@@ -2597,10 +2581,8 @@ A: behooving's / B: behoving's
 # behoovingly (level 95)
 A: behoovingly / B: behovingly
 
-# bejeweled (level 55)
+# bejewel (level 55)
 A: bejeweled / B: bejewelled
-
-# bejeweling (level 55)
 A: bejeweling / B: bejewelling
 
 # bel (level 70)
@@ -2679,15 +2661,11 @@ A Z: bestialized / B: bestialised
 A Z: bestializing / B: bestialising
 A Z: bestializes / B: bestialises
 
-# beveled (level 40)
+# bevel (level 40)
 A: beveled / B: bevelled
-
-# beveler (level 80)
 A: beveler / B: beveller
 A: bevelers / B: bevellers
 A: beveler's / B: beveller's
-
-# beveling (level 40)
 A: beveling / B: bevelling
 A: bevelings / B: bevellings
 
@@ -2973,10 +2951,8 @@ A Z: bowdlerizer / B: bowdleriser
 A Z: bowdlerizers / B: bowdlerisers
 A Z: bowdlerizer's / B: bowdleriser's
 
-# boweled (level 80)
+# bowel (level 80)
 A: boweled / B: bowelled
-
-# boweling (level 80)
 A: boweling / B: bowelling
 
 # bradypnea (level 95)
@@ -3106,25 +3082,21 @@ _: burnoose / _v: burnous
 _: burnooses / _v: burnouses
 _: burnoose's / _v: burnous's
 
-# bused (level 35)
+# bus (level 35)
 _: bused / _V: bussed
+_: busing / _V: bussing
+_: busings / _V: bussings
+_: busing's / _V: bussing's
 
-# busheled (level 35)
+# bushel (level 35)
 A: busheled / B: bushelled
+A: busheling / B: bushelling
+A: bushelings / B: bushellings
 
 # busheler (level 80)
 A: busheler / B: busheller
 A: bushelers / B: bushellers
 A: busheler's / B: busheller's
-
-# busheling (level 35)
-A: busheling / B: bushelling
-A: bushelings / B: bushellings
-
-# busing (level 35)
-_: busing / _V: bussing
-_: busings / _V: bussings
-_: busing's / _V: bussing's
 
 # bylaw (level 40)
 _: bylaw / _V: byelaw
@@ -3299,15 +3271,13 @@ A Z: Canadianize / B: Canadianise
 A Z: Canadianizes / B: Canadianises
 A Z: Canadianize's / B: Canadianise's
 
-# canaled (level 80)
+# canal (level 80)
 A: canaled / B: canalled
+A: canaling / B: canalling
 
 # canaler (level 80)
 A: canaler / B: canaller
 A: canalers / B: canallers
-
-# canaling (level 80)
-A: canaling / B: canalling
 
 # canalization (level 55)
 A Z: canalization / B: canalisation
@@ -3326,6 +3296,10 @@ A: Cananean / B: Cananaean
 # Cananean's (level 95)
 A: Cananean's / B: Cananaean's
 
+# cancel (level 20)
+A: canceled / B: cancelled
+A: canceling / B: cancelling
+
 # cancelable (level 70)
 A: cancelable / B: cancellable
 
@@ -3335,16 +3309,10 @@ A: cancelate / B: cancellate
 # cancelated (level 80)
 A: cancelated / B: cancellated
 
-# canceled (level 20)
-A: canceled / B: cancelled
-
 # canceler (level 60)
 A: canceler / B: canceller
 A: cancelers / B: cancellers
 A: canceler's / B: canceller's
-
-# canceling (level 20)
-A: canceling / B: cancelling
 
 # cancelous (level 80)
 A: cancelous / B: cancellous
@@ -3470,10 +3438,8 @@ A Z: capsulized / B: capsulised
 A Z: capsulizing / B: capsulising
 A Z: capsulizes / B: capsulises
 
-# caracoled (level 70)
+# caracol (level 70)
 A: caracoled / B: caracolled
-
-# caracoling (level 70)
 A: caracoling / B: caracolling
 
 # caramelization (level 70)
@@ -3566,16 +3532,14 @@ _: carny / _v: carney / _v: carnie
 _: carnies / _v: carneys
 _: carny's / _v: carnie's / _v: carney's
 
-# caroled (level 35)
+# carol (level 35)
 A: caroled / B: carolled
+A: caroling / B: carolling
 
 # caroler (level 50)
 A: caroler / B: caroller
 A: carolers / B: carollers
 A: caroler's / B: caroller's
-
-# caroling (level 35)
-A: caroling / B: carolling
 
 # carotinemia (level 95)
 A: carotinemia / B: carotinaemia
@@ -3765,20 +3729,18 @@ _: caviar / _V: caviare
 _: caviars / _V: caviares
 _: caviar's / _V: caviare's
 
+# cavil (level 50)
+A: caviled / B: cavilled
+A: caviling / B: cavilling
+A: cavilings / B: cavillings
+
 # cavilation (level 80)
 A: cavilation / B: cavillation
-
-# caviled (level 50)
-A: caviled / B: cavilled
 
 # caviler (level 60)
 A: caviler / B: caviller
 A: cavilers / B: cavillers
 A: caviler's / B: caviller's
-
-# caviling (level 50)
-A: caviling / B: cavilling
-A: cavilings / B: cavillings
 
 # cecally (level 70)
 A: cecally / B: caecally
@@ -4136,17 +4098,15 @@ _: chamomile's / _v: camomile's
 A Z: championize / B: championise
 A Z: championizes / B: championises
 
-# channeled (level 35)
+# channel (level 35)
 A: channeled / B: channelled
+A: channeling / B: channelling
+A: channeling's / B: channelling's
 
 # channeler (level 80)
 A: channeler / B: channeller
 A: channelers / B: channellers
 A: channeler's / B: channeller's
-
-# channeling (level 35)
-A: channeling / B: channelling
-A: channeling's / B: channelling's
 
 # channelization (level 60)
 A Z: channelization / B: channelisation
@@ -4286,16 +4246,14 @@ A: chimerids / B: chimaerids
 A: chimerism / B: chimaerism
 A: chimerisms / B: chimaerisms
 
-# chiseled (level 35)
+# chisel (level 35)
 _: chiseled / _v: chiselled
+_: chiseling / _v: chiselling
 
 # chiseler (level 50)
 _: chiseler / _v: chiseller
 _: chiselers / _v: chisellers
 _: chiseler's / _v: chiseller's
-
-# chiseling (level 35)
-_: chiseling / _v: chiselling
 
 # chitterlings (level 50)
 _: chitterlings / _v: chitlins / _V: chitlings
@@ -4840,10 +4798,10 @@ A Z: colonizer's / B: coloniser's
 # color (level 10)
 A: color / B: colour
 A: colored / B: coloured
+A: colored's / B: coloured's
 A: colorer / B: colourer
 A: color's / B: colour's
 A: coloreds / B: coloureds
-A: colored's / B: coloured's
 A: colorers / B: colourers
 A: colorer's / B: colourer's
 A: coloring / B: colouring
@@ -5464,10 +5422,8 @@ A: corbe / B: courbe
 # corbed (level 95)
 A: corbed / B: courbed
 
-# corbeled (level 80)
+# corbel (level 80)
 A: corbeled / B: corbelled
-
-# corbeling (level 80)
 A: corbeling / B: corbelling
 A: corbeling's / B: corbelling's
 A: corbelings / B: corbellings
@@ -5579,14 +5535,12 @@ A: councilorship / B: councillorship
 A: councilorships / B: councillorships
 A: councilorship's / B: councillorship's
 
-# counseled (level 20)
+# counsel (level 20)
 A: counseled / B: counselled
+A: counseling / B: counselling
 
 # counselee (level 80)
 A: counselee / B: counsellee
-
-# counseling (level 20)
-A: counseling / B: counselling
 
 # counselor (level 35)
 A: counselor / B: counsellor
@@ -5614,9 +5568,9 @@ A B: coziness
 A C: cozy / B: cosy
 A C: cozied / B: cosied
 A C: cozier / B: cosier
+A C: coziest / B: cosiest
 A C: cozying / B: cosying
 A C: cozies / B: cosies
-A C: coziest / B: cosiest
 A C: cozy's / B: cosy's
 
 # craizey (level 95)
@@ -5633,6 +5587,10 @@ A Z: crawlerizes / B: crawlerises
 A Z: creaturize / B: creaturise
 A Z: creaturizes / B: creaturises
 
+# crenel (level 70)
+A Bv: creneled / B: crenelled
+A Bv: creneling / B: crenelling
+
 # crenelate (level 55)
 A Bv: crenelate / B: crenellate
 A Bv: crenelated / B: crenellated
@@ -5645,12 +5603,6 @@ A Bv: crenelating / B: crenellating
 A Bv: crenelation / B: crenellation
 A Bv: crenelations / B: crenellations
 A Bv: crenelation's / B: crenellation's
-
-# creneled (level 70)
-A Bv: creneled / B: crenelled
-
-# creneling (level 70)
-A Bv: creneling / B: crenelling
 
 # Creolization (level 80)
 A Z: Creolization / B: Creolisation
@@ -5785,17 +5737,15 @@ A Z: cuckoldized / B: cuckoldised
 A Z: cuckoldizing / B: cuckoldising
 A Z: cuckoldizes / B: cuckoldises
 
-# cudgeled (level 50)
+# cudgel (level 50)
 A: cudgeled / B: cudgelled
+A: cudgeling / B: cudgelling
+A: cudgelings / B: cudgellings
 
 # cudgeler (level 80)
 A: cudgeler / B: cudgeller
 A: cudgelers / B: cudgellers
 A: cudgeler's / B: cudgeller's
-
-# cudgeling (level 50)
-A: cudgeling / B: cudgelling
-A: cudgelings / B: cudgellings
 
 # culicide (level 95)
 A: culicide / B: culicidae
@@ -5809,19 +5759,17 @@ A Z: culturization's / B: culturisation's
 A Z: culturize / B: culturise
 A Z: culturizes / B: culturises
 
+# cupel (level 80)
+A: cupeled / B: cupelled
+A: cupeling / B: cupelling
+
 # cupelation (level 70)
 A: cupelation / B: cupellation
-
-# cupeled (level 80)
-A: cupeled / B: cupelled
 
 # cupeler (level 80)
 A: cupeler / B: cupeller
 A: cupelers / B: cupellers
 A: cupeler's / B: cupeller's
-
-# cupeling (level 80)
-A: cupeling / B: cupelling
 
 # cupule (level 70)
 A: cupule / B: cupulae
@@ -7082,16 +7030,12 @@ A Z: devalorized / B: devalorised
 A Z: devalorizing / B: devalorising
 A Z: devalorizes / B: devalorises
 
-# develed (level 80)
+# devel (level 80)
 A: develed / B: develled
-
-# develing (level 80)
 A: develing / B: develling
 
-# deviled (level 35)
+# devil (level 35)
 A: deviled / B: devilled
-
-# deviling (level 35)
 A: deviling / B: devilling
 
 # devilize (level 95)
@@ -7162,22 +7106,20 @@ A Z: diagonalized / B: diagonalised
 A Z: diagonalizing / B: diagonalising
 A Z: diagonalizes / B: diagonalises
 
+# dial (level 20)
+A: dialed / B: dialled
+A: dialing / B: dialling
+A: dialings / B: diallings
+A: dialing's / B: dialling's
+
 # dialecticize (level 95)
 A Z: dialecticize / B: dialecticise
 A Z: dialecticizes / B: dialecticises
-
-# dialed (level 20)
-A: dialed / B: dialled
 
 # dialer (level 70)
 A: dialer / B: dialler
 A: dialers / B: diallers
 A: dialer's / B: dialler's
-
-# dialing (level 20)
-A: dialing / B: dialling
-A: dialings / B: diallings
-A: dialing's / B: dialling's
 
 # dialist (level 80)
 A: dialist / B: diallist
@@ -7433,10 +7375,8 @@ A Z: disauthorized / B: disauthorised
 A Z: disauthorizing / B: disauthorising
 A Z: disauthorizes / B: disauthorises
 
-# disboweled (level 80)
+# disbowel (level 80)
 A: disboweled / B: disbowelled
-
-# disboweling (level 80)
 A: disboweling / B: disbowelling
 
 # discanonization (level 95)
@@ -7527,14 +7467,12 @@ A Z: disharmonized / B: disharmonised
 A Z: disharmonizing / B: disharmonising
 A Z: disharmonizes / B: disharmonises
 
-# disheveled (level 40)
+# dishevel (level 40)
 A: disheveled / B: dishevelled
+A: disheveling / B: dishevelling
 
 # disheveler (level 99)
 A: disheveler / B: disheveller
-
-# disheveling (level 40)
-A: disheveling / B: dishevelling
 
 # dishonor (level 35)
 A: dishonor / B: dishonour
@@ -7847,10 +7785,8 @@ A Z: dogmatizer / B: dogmatiser
 A Z: dogmatizers / B: dogmatisers
 A Z: dogmatizer's / B: dogmatiser's
 
-# dognaped (level 80)
+# dognap (level 80)
 A: dognaped / B: dognapped
-
-# dognaping (level 80)
 A: dognaping / B: dognapping
 
 # d'oh (level 55)
@@ -7910,14 +7846,12 @@ _: doughnut / _V: donut
 _: doughnuts / _V: donuts
 _: doughnut's / _V: donut's
 
-# doweled (level 50)
+# dowel (level 50)
 A: doweled / B: dowelled
+A: doweling / B: dowelling
 
 # doweler (level 99)
 A: doweler / B: doweller
-
-# doweling (level 50)
-A: doweling / B: dowelling
 
 # downdraft (level 60)
 A: downdraft / B: downdraught
@@ -8007,23 +7941,19 @@ A Z: dramatizer's / B: dramatiser's
 # dreamed (level 20)
 A Bv Z: dreamed / B Zv: dreamt
 
-# drier (level 35)
+# drey (level 35)
 _: drier / _V: dryer | <Adj>
+_: driest / _V: dryest | <Adj>
 _: dryer / _: drier | <N>
 
-# driest (level 35)
-_: driest / _V: dryest | <Adj>
-
-# driveled (level 35)
+# drivel (level 35)
 A: driveled / B: drivelled
+A: driveling / B: drivelling
 
 # driveler (level 60)
 A: driveler / B: driveller
 A: drivelers / B: drivellers
 A: driveler's / B: driveller's
-
-# driveling (level 35)
-A: driveling / B: drivelling
 
 # drought (level 35)
 _: drought / _V: drouth
@@ -8058,17 +7988,15 @@ A Z: dualizes / B: dualises
 A Z: ductilize / B: ductilise
 A Z: ductilizes / B: ductilises
 
-# dueled (level 35)
+# duel (level 35)
 A: dueled / B: duelled
+A: dueling / B: duelling
+A: duelings / B: duellings
 
 # dueler (level 60)
 A: dueler / B: dueller
 A: duelers / B: duellers
 A: dueler's / B: dueller's
-
-# dueling (level 35)
-A: dueling / B: duelling
-A: duelings / B: duellings
 
 # duelist (level 50)
 A: duelist / B: duellist
@@ -8512,10 +8440,8 @@ A Z: emblemizes / B: emblemises
 # embolization (level 80)
 A Z: embolization / B: embolisation
 
-# emboweled (level 80)
+# embowel (level 80)
 A: emboweled / B: embowelled
-
-# emboweling (level 80)
 A: emboweling / B: embowelling
 
 # emir (level 35)
@@ -8598,17 +8524,15 @@ A Z: emulsionized / B: emulsionised
 A Z: emulsionizing / B: emulsionising
 A Z: emulsionizes / B: emulsionises
 
-# enameled (level 35)
+# enamel (level 35)
 A: enameled / B: enamelled
+A: enameling / B: enamelling
+A: enamelings / B: enamellings
 
 # enameler (level 60)
 A: enameler / B: enameller
 A: enamelers / B: enamellers
 A: enameler's / B: enameller's
-
-# enameling (level 35)
-A: enameling / B: enamelling
-A: enamelings / B: enamellings
 
 # enamelist (level 80)
 A: enamelist / B: enamellist
@@ -8854,10 +8778,8 @@ A: ensepulcherring / B: ensepulchring
 A: ensepulchers / B: ensepulchres
 A: ensepulcher's / B: ensepulchre's
 
-# ensorceled (level 80)
+# ensorcel (level 80)
 A: ensorceled / B: ensorcelled
-
-# ensorcels (level 80)
 A: ensorcels / B: ensorcells
 
 # entameba (level 80)
@@ -9112,10 +9034,8 @@ A Z: epitomizer's / B: epitomiser's
 # eq (level 70)
 A: eq / B: aeq
 
-# equaled (level 35)
+# equal (level 35)
 A: equaled / B: equalled
-
-# equaling (level 35)
 A: equaling / B: equalling
 
 # equalization (level 50)
@@ -9163,12 +9083,10 @@ A: eres / B: rees
 # erke (level 95)
 A: erke / B: reke
 
-# ern (level 80)
+# ern (level 70)
 A: ern / B: ren
-A: erns / B: rens
-
-# ernes (level 70)
 A: ernes / B: renes
+A: erns / B: rens
 
 # ernest (level 80)
 A: ernest / B: renest
@@ -9666,10 +9584,8 @@ A Z: eventualized / B: eventualised
 A Z: eventualizing / B: eventualising
 A Z: eventualizes / B: eventualises
 
-# eviler (level 35)
+# evil (level 35)
 A: eviler / B: eviller
-
-# evilest (level 35)
 A: evilest / B: evillest
 
 # eviternal (level 80)
@@ -9728,10 +9644,8 @@ A Z: experimentalizes / B: experimentalises
 A Z: experimentize / B: experimentise
 A Z: experimentizes / B: experimentises
 
-# expertized (level 80)
+# expertize (level 80)
 A Z: expertized / B: expertised
-
-# expertizing (level 80)
 A Z: expertizing / B: expertising
 
 # exsiccate (level 70)
@@ -10089,10 +10003,8 @@ A: Ferneau / B: Freneau
 # Ferneau's (level 95)
 A: Ferneau's / B: Freneau's
 
-# ferreled (level 80)
+# ferrel (level 80)
 A: ferreled / B: ferrelled
-
-# ferreling (level 80)
 A: ferreling / B: ferrelling
 
 # ferritization (level 95)
@@ -10173,10 +10085,8 @@ A: feticide / B: foeticide
 A: feticides / B: foeticides
 A: feticide's / B: foeticide's
 
-# fetider (level 95)
+# fetid (level 95)
 A: fetider / B: foetider
-
-# fetidest (level 95)
 A: fetidest / B: foetidest
 
 # fetiferous (level 95)
@@ -10366,15 +10276,13 @@ _: fjord's / _V: fiord's
 A Z: flamboyantize / B: flamboyantise
 A Z: flamboyantizes / B: flamboyantises
 
-# flanneled (level 35)
+# flannel (level 35)
 A: flanneled / B: flannelled
+A: flanneling / B: flannelling
 
 # flannelette (level 50)
 _: flannelette / _V: flannelet
 _: flannelette's / _V: flannelet's
-
-# flanneling (level 35)
-A: flanneling / B: flannelling
 
 # flavor (level 10)
 A: flavor / B: flavour
@@ -10513,10 +10421,8 @@ A Z: focalized / B: focalised
 A Z: focalizing / B: focalising
 A Z: focalizes / B: focalises
 
-# focused (level 35)
+# focus (level 35)
 _: focused / _V: focussed
-
-# focusing (level 35)
 _: focusing / _V: focussing
 
 # fogy (level 35)
@@ -10806,16 +10712,14 @@ A: friborg / B: fribourg
 A Z: frictionize / B: frictionise
 A Z: frictionizes / B: frictionises
 
-# frivoled (level 70)
+# frivol (level 70)
 A: frivoled / B: frivolled
+A: frivoling / B: frivolling
 
 # frivoler (level 80)
 A: frivoler / B: frivoller
 A: frivolers / B: frivollers
 A: frivoler's / B: frivoller's
-
-# frivoling (level 70)
-A: frivoling / B: frivolling
 
 # frizado (level 95)
 A Z: frizado / B: frisado
@@ -10847,16 +10751,14 @@ _: fuehrer / _v: führer
 _: fuehrers / _v: führers
 _: fuehrer's / _v: führer's
 
-# fueled (level 35)
+# fuel (level 35)
 A: fueled / B: fuelled
+A: fueling / B: fuelling
 
 # fueler (level 70)
 A: fueler / B: fueller
 A: fuelers / B: fuellers
 A: fueler's / B: fueller's
-
-# fueling (level 35)
-A: fueling / B: fuelling
 
 # fuelizer (level 95)
 A Z: fuelizer / B: fueliser
@@ -10896,14 +10798,12 @@ A Z: functionizes / B: functionises
 A Z: funeralize / B: funeralise
 A Z: funeralizes / B: funeralises
 
-# funneled (level 35)
+# funnel (level 35)
 A: funneled / B: funnelled
+A: funneling / B: funnelling
 
 # funneler (level 99)
 A: funneler / B: funneller
-
-# funneling (level 35)
-A: funneling / B: funnelling
 
 # furcule (level 80)
 A: furcule / B: furculae
@@ -11047,10 +10947,8 @@ A Z: galvanizer's / B: galvaniser's
 # gambades (level 80)
 A: gambades / B: gambadoes
 
-# gamboled (level 50)
+# gambol (level 50)
 A: gamboled / B: gambolled
-
-# gamboling (level 50)
 A: gamboling / B: gambolling
 
 # gamy (level 50)
@@ -11091,14 +10989,12 @@ A: gaufers / B: gaufres
 # gauffer (level 70)
 A: gauffer / B: gauffre
 
-# gaveled (level 80)
+# gavel (level 80)
 A: gaveled / B: gavelled
+A: gaveling / B: gavelling
 
 # gaveler (level 95)
 A: gaveler / B: gaveller
-
-# gaveling (level 80)
-A: gaveling / B: gavelling
 
 # gayety (level 50)
 _: gayety
@@ -11332,10 +11228,8 @@ A Z: ghettoizes / B: ghettoises
 A Z: giantize / B: giantise
 A Z: giantizes / B: giantises
 
-# gimbaled (level 80)
+# gimbal (level 80)
 A: gimbaled / B: gimballed
-
-# gimbaling (level 80)
 A: gimbaling / B: gimballing
 
 # ginkgo (level 50)
@@ -11719,10 +11613,8 @@ A Z: graphitized / B: graphitised
 A Z: graphitizing / B: graphitising
 A Z: graphitizes / B: graphitises
 
-# graveled (level 35)
+# gravel (level 35)
 A: graveled / B: gravelled
-
-# graveling (level 35)
 A: graveling / B: gravelling
 
 # gray (level 10)
@@ -11788,34 +11680,30 @@ A Z: grizard / B: grisard
 A Z: grize / B: grise
 A Z: grizes / B: grises
 
-# groveled (level 35)
+# grovel (level 35)
 A: groveled / B: grovelled
+A: groveling / B: grovelling
 
 # groveler (level 50)
 A: groveler / B: groveller
 A: grovelers / B: grovellers
 A: groveler's / B: groveller's
 
-# groveling (level 35)
-A: groveling / B: grovelling
-
 # grovelingly (level 70)
 A: grovelingly / B: grovellingly
 A: grovelinglier / B: grovellinglier
 A: grovelingliest / B: grovellingliest
 
-# grueled (level 80)
+# gruel (level 35)
 A: grueled / B: gruelled
+A: grueling / B: gruelling
+A: gruelings / B: gruellings
+A: grueling's / B: gruelling's
 
 # grueler (level 80)
 A: grueler / B: grueller
 A: gruelers / B: gruellers
 A: grueler's / B: grueller's
-
-# grueling (level 35)
-A: grueling / B: gruelling
-A: gruelings / B: gruellings
-A: grueling's / B: gruelling's
 
 # gruelingly (level 55)
 A: gruelingly / B: gruellingly
@@ -12006,10 +11894,8 @@ A Z: hamletization's / B: hamletisation's
 A Z: hamletize / B: hamletise
 A Z: hamletizes / B: hamletises
 
-# handseled (level 80)
+# handsel (level 80)
 A: handseled / B: handselled
-
-# handseling (level 80)
 A: handseling / B: handselling
 
 # hankie (level 40)
@@ -12032,10 +11918,8 @@ A Z: hansardized / B: hansardised
 A Z: hansardizing / B: hansardising
 A Z: hansardizes / B: hansardises
 
-# hanseled (level 80)
+# hansel (level 80)
 A: hanseled / B: hanselled
-
-# hanseling (level 80)
 A: hanseling / B: hanselling
 
 # harbor (level 35)
@@ -12128,10 +12012,8 @@ A: Hasidean's / B: Hasidaean's
 A: Hasmonean / B: Hasmonaean
 A: Hasmoneans / B: Hasmonaeans
 
-# hatcheled (level 70)
+# hatchel (level 70)
 A: hatcheled / B: hatchelled
-
-# hatcheling (level 70)
 A: hatcheling / B: hatchelling
 
 # Hattize (level 95)
@@ -12844,10 +12726,8 @@ _: hippieness / _v: hippiness
 _: hippienesses / _v: hippinesses
 _: hippieness's / _v: hippiness's
 
-# hirseled (level 80)
+# hirsel (level 80)
 A: hirseled / B: hirselled
-
-# hirseling (level 80)
 A: hirseling / B: hirselling
 
 # Hispanicization (level 80)
@@ -13229,22 +13109,18 @@ A Z: hotelization's / B: hotelisation's
 A Z: hotelize / B: hotelise
 A Z: hotelizes / B: hotelises
 
-# houseled (level 80)
+# housel (level 80)
 A: houseled / B: houselled
-
-# houseling (level 80)
 A: houseling / B: houselling
 A: houselings / B: housellings
 
-# hoveled (level 80)
+# hovel (level 80)
 A: hoveled / B: hovelled
+A: hoveling / B: hovelling
 
 # hoveler (level 80)
 A: hoveler / B: hoveller
 A: hovelers / B: hovellers
-
-# hoveling (level 80)
-A: hoveling / B: hovelling
 
 # hucksterize (level 95)
 A Z: hucksterize / B: hucksterise
@@ -14035,10 +13911,8 @@ A Z: imperialized / B: imperialised
 A Z: imperializing / B: imperialising
 A Z: imperializes / B: imperialises
 
-# imperiled (level 35)
+# imperil (level 35)
 A: imperiled / B: imperilled
-
-# imperiling (level 35)
 A: imperiling / B: imperilling
 
 # imperscriptible (level 70)
@@ -14221,16 +14095,14 @@ A: Ingweonic's / B: Ingwaeonic's
 A Z: inhumanize / B: inhumanise
 A Z: inhumanizes / B: inhumanises
 
-# initialed (level 35)
+# initial (level 35)
 A: initialed / B: initialled
+A: initialing / B: initialling
 
 # initialer (level 80)
 A: initialer / B: initialler
 A: initialers / B: initiallers
 A: initialer's / B: initialler's
-
-# initialing (level 35)
-A: initialing / B: initialling
 
 # initializable (level 99)
 A Z: initializable / B: initialisable
@@ -14815,8 +14687,9 @@ A Z: Jesuitized / B: Jesuitised
 A Z: Jesuitizing / B: Jesuitising
 A Z: Jesuitizes / B: Jesuitises
 
-# jeweled (level 35)
+# jewel (level 35)
 A: jeweled / B: jewelled
+A: jeweling / B: jewelling
 
 # jeweler (level 35)
 A: jeweler / B: jeweller
@@ -14826,9 +14699,6 @@ A: jeweler's / B: jeweller's
 # jewelery (level 55)
 A: jewelery / B: jewellery
 A: jeweleries / B: jewelleries
-
-# jeweling (level 35)
-A: jeweling / B: jewelling
 
 # jibe (level 35)
 A B: jibe | agree
@@ -14994,10 +14864,8 @@ A: kellia / B: koellia
 # kembed (level 80)
 A: kembed / B: kemboed
 
-# kenneled (level 35)
+# kennel (level 35)
 A: kenneled / B: kennelled
-
-# kenneling (level 35)
 A: kenneling / B: kennelling
 
 # Keppel (level 95)
@@ -15023,10 +14891,8 @@ A: Kerin / B: Krein
 # Kerin's (level 95)
 A: Kerin's / B: Krein's
 
-# kerneled (level 80)
+# kernel (level 80)
 A: kerneled / B: kernelled
-
-# kerneling (level 80)
 A: kerneling / B: kernelling
 
 # kerosene (level 35)
@@ -15055,8 +14921,9 @@ A Z: ketonizes / B: ketonises
 _: kiddie / _V: kiddy
 _: kiddie's / _V: kiddy's
 
-# kidnapped (level 20)
+# kidnap (level 20)
 _: kidnapped / _V: kidnaped
+_: kidnapping / _V: kidnaping
 
 # kidnappee (level 80)
 _: kidnappee / _v: kidnapee
@@ -15067,9 +14934,6 @@ _: kidnappee's / _v: kidnapee's
 _: kidnapper / _V: kidnaper
 _: kidnappers / _V: kidnapers
 _: kidnapper's / _V: kidnaper's
-
-# kidnapping (level 20)
-_: kidnapping / _V: kidnaping
 
 # kilogram (level 35)
 A C: kilogram / B: kilogramme
@@ -15155,19 +15019,17 @@ A Z: kyanizes / B: kyanises
 # kyles (level 70)
 A B: kyles / Bv: kyloes
 
+# label (level 10)
+A: labeled / B: labelled
+A: labeling / B: labelling
+
 # labelable (level 80)
 A: labelable / B: labellable
-
-# labeled (level 10)
-A: labeled / B: labelled
 
 # labeler (level 70)
 A: labeler / B: labeller
 A: labelers / B: labellers
 A: labeler's / B: labeller's
-
-# labeling (level 10)
-A: labeling / B: labelling
 
 # labialization (level 80)
 A Z: labialization / B: labialisation
@@ -15423,10 +15285,8 @@ _: launderette's / _V: laundrette's
 # laure (level 80)
 A: laure / B: laurae
 
-# laureled (level 80)
+# laurel (level 80)
 A: laureled / B: laurelled
-
-# laureling (level 80)
 A: laureling / B: laurelling
 
 # lavalier_microphone (level 99)
@@ -15570,18 +15430,12 @@ A: leukorrhea / B: leukorrhoea
 # leukorrheal (level 80)
 A: leukorrheal / B: leukorrhoeal
 
-# leveled (level 35)
+# level (level 35)
 A: leveled / B: levelled
-
-# leveler (level 35)
 A: leveler / B: leveller
 A: levelers / B: levellers
 A: leveler's / B: leveller's
-
-# levelest (level 35)
 A: levelest / B: levellest
-
-# leveling (level 35)
 A: leveling / B: levelling
 A: leveling's / B: levelling's
 
@@ -15639,13 +15493,14 @@ A Z: lexicalizations / B: lexicalisations
 A Z: lexiconize / B: lexiconise
 A Z: lexiconizes / B: lexiconises
 
+# libel (level 35)
+A: libeled / B: libelled
+A: libeling / B: libelling
+
 # libelant (level 70)
 A: libelant / B: libellant
 A: libelants / B: libellants
 A: libelant's / B: libellant's
-
-# libeled (level 35)
-A: libeled / B: libelled
 
 # libelee (level 70)
 A: libelee / B: libellee
@@ -15656,9 +15511,6 @@ A: libelee's / B: libellee's
 A: libeler / B: libeller
 A: libelers / B: libellers
 A: libeler's / B: libeller's
-
-# libeling (level 35)
-A: libeling / B: libelling
 
 # libelous (level 35)
 A: libelous / B: libellous
@@ -16536,14 +16388,12 @@ A Z: martyrizes / B: martyrises
 A Z: martyrizer / B: martyriser
 A Z: martyrizers / B: martyrisers
 
-# marveled (level 35)
+# marvel (level 35)
 A: marveled / B: marvelled
+A: marveling / B: marvelling
 
 # marveler (level 99)
 A: marveler / B: marveller
-
-# marveling (level 35)
-A: marveling / B: marvelling
 
 # marvelous (level 20)
 A: marvelous / B: marvellous
@@ -16718,10 +16568,8 @@ A: meck / B: moeck
 # Med (level 80)
 A: Med / B: Moed
 
-# medaled (level 80)
+# medal (level 80)
 A: medaled / B: medalled
-
-# medaling (level 80)
 A: medaling / B: medalling
 
 # medalist (level 40)
@@ -16774,8 +16622,8 @@ A: medievalisms / B: mediaevalisms
 A: medievalism's / B: mediaevalism's
 
 # medievally (level 70)
-_: medievally / _V: mediaevally
 A: medievally / B: mediaevally
+_: medievally / _V: mediaevally
 
 # Mediterraneanization (level 95)
 A Z: Mediterraneanization / B: Mediterraneanisation
@@ -17080,10 +16928,8 @@ A Z: metagrobolized / B: metagrobolised
 A Z: metagrobolizing / B: metagrobolising
 A Z: metagrobolizes / B: metagrobolises
 
-# metaled (level 55)
+# metal (level 55)
 A: metaled / B: metalled
-
-# metaling (level 80)
 A: metaling / B: metalling
 
 # metalization (level 80)
@@ -17300,10 +17146,8 @@ A Z: Midlandize's / B: Midlandise's
 # midsize (level 55)
 _: midsize / _V: midsized
 
-# midwifed (level 35)
+# midwife (level 35)
 _: midwifed / _v: midwived
-
-# midwifing (level 35)
 _: midwifing / _v: midwiving
 
 # migniardize (level 95)
@@ -17504,10 +17348,8 @@ A: misjudgment / B: misjudgement
 A: misjudgments / B: misjudgements
 A: misjudgment's / B: misjudgement's
 
-# mislabeled (level 60)
+# mislabel (level 60)
 A: mislabeled / B: mislabelled
-
-# mislabeling (level 60)
 A: mislabeling / B: mislabelling
 
 # mislabor (level 80)
@@ -17644,15 +17486,11 @@ A Z: mobilizer's / B: mobiliser's
 A Z: modalize / B: modalise
 A Z: modalizes / B: modalises
 
-# modeled (level 20)
+# model (level 20)
 A: modeled / B: modelled
-
-# modeler (level 55)
 A: modeler / B: modeller
 A: modelers / B: modellers
 A: modeler's / B: modeller's
-
-# modeling (level 20)
 A: modeling / B: modelling
 A: modelings / B: modellings
 A: modeling's / B: modelling's
@@ -17955,10 +17793,8 @@ A Z: morphinization's / B: morphinisation's
 A Z: morphinize / B: morphinise
 A Z: morphinizes / B: morphinises
 
-# morseled (level 80)
+# morsel (level 80)
 A: morseled / B: morselled
-
-# morseling (level 80)
 A: morseling / B: morselling
 
 # morselization (level 95)
@@ -18624,10 +18460,8 @@ A Z: newspaperized / B: newspaperised
 A Z: newspaperizeds / B: newspaperiseds
 A Z: newspaperized's / B: newspaperised's
 
-# nickeled (level 80)
+# nickel (level 80)
 A: nickeled / B: nickelled
-
-# nickeling (level 80)
 A: nickeling / B: nickelling
 
 # nickelization (level 95)
@@ -19643,10 +19477,8 @@ A Z: Ottomanize / B: Ottomanise
 A Z: Ottomanizes / B: Ottomanises
 A Z: Ottomanize's / B: Ottomanise's
 
-# outcaviled (level 80)
+# outcavil (level 80)
 A: outcaviled / B: outcavilled
-
-# outcaviling (level 80)
 A: outcaviling / B: outcavilling
 
 # outclamor (level 95)
@@ -19682,10 +19514,8 @@ A: outmaneuvered / B: outmanoeuvred
 A: outmaneuvering / B: outmanoeuvring
 A: outmaneuvers / B: outmanoeuvres
 
-# outrivaled (level 80)
+# outrival (level 80)
 A: outrivaled / B: outrivalled
-
-# outrivaling (level 80)
 A: outrivaling / B: outrivalling
 
 # outsavor (level 80)
@@ -20594,10 +20424,8 @@ A Z: panegyrized / B: panegyrised
 A Z: panegyrizing / B: panegyrising
 A Z: panegyrizes / B: panegyrises
 
-# paneled (level 35)
+# panel (level 35)
 A: paneled / B: panelled
-
-# paneling (level 35)
 A: paneling / B: panelling
 A: panelings / B: panellings
 A: paneling's / B: panelling's
@@ -20793,15 +20621,13 @@ A Z: parathyroidectomizes / B: parathyroidectomises
 # paratragedia (level 95)
 A: paratragedia / B: paratragoedia
 
-# parceled (level 35)
+# parcel (level 35)
 A: parceled / B: parcelled
+A: parceling / B: parcelling
+A: parceling's / B: parcelling's
 
 # parceler (level 99)
 A: parceler / B: parceller
-
-# parceling (level 35)
-A: parceling / B: parcelling
-A: parceling's / B: parcelling's
 
 # parchmentize (level 80)
 A Z: parchmentize / B: parchmentise
@@ -21113,15 +20939,11 @@ _: pedagogue / _V: pedagog
 _: pedagogues / _V: pedagogs
 _: pedagogue's / _V: pedagog's
 
-# pedaled (level 35)
+# pedal (level 35)
 A: pedaled / B: pedalled
-
-# pedaler (level 80)
 A: pedaler / B: pedaller
 A: pedalers / B: pedallers
 A: pedaler's / B: pedaller's
-
-# pedaling (level 35)
 A: pedaling / B: pedalling
 
 # pedanticize (level 80)
@@ -21153,10 +20975,8 @@ A: pederastic / B: paederastic
 # pederastically (level 80)
 A: pederastically / B: paederastically
 
-# pedestaled (level 80)
+# pedestal (level 80)
 A: pedestaled / B: pedestalled
-
-# pedestaling (level 80)
 A: pedestaling / B: pedestalling
 
 # pedestrianization (level 55)
@@ -21314,17 +21134,15 @@ A Z: penalized / B: penalised
 A Z: penalizing / B: penalising
 A Z: penalizes / B: penalises
 
-# penciled (level 35)
+# pencil (level 35)
 A: penciled / B: pencilled
+A: penciling / B: pencilling
+A: pencilings / B: pencillings
 
 # penciler (level 80)
 A: penciler / B: penciller
 A: pencilers / B: pencillers
 A: penciler's / B: penciller's
-
-# penciling (level 35)
-A: penciling / B: pencilling
-A: pencilings / B: pencillings
 
 # penelopize (level 80)
 A Z: penelopize / B: penelopise
@@ -21498,10 +21316,8 @@ A: pericope / B: pericopae
 # periesophageal (level 95)
 A: periesophageal / B: perioesophageal
 
-# periled (level 35)
+# peril (level 35)
 A: periled / B: perilled
-
-# periling (level 35)
 A: periling / B: perilling
 
 # periodicalize (level 95)
@@ -22175,10 +21991,8 @@ _: piroshki's / _v: pirozhki's
 # piscine (level 70)
 A: piscine / B: piscinae
 
-# pistoled (level 80)
+# pistol (level 80)
 A: pistoled / B: pistolled
-
-# pistoling (level 80)
 A: pistoling / B: pistolling
 
 # pixie (level 35)
@@ -22499,10 +22313,9 @@ A Z: politicizers / B: politicisers
 A Z: politize / B: politise
 A Z: politizes / B: politises
 
-# pollack (level 50)
+# pollack (level 60)
 _: pollack / _v: pollock
 _: pollack's / _v: pollock's
-_: Pollock | name
 
 # pollenizer (level 80)
 A Z: pollenizer / B: polleniser
@@ -22520,6 +22333,9 @@ A Z: pollinizer / B: polliniser
 _: polliwog / _v: pollywog
 _: polliwogs / _v: pollywogs
 _: polliwog's / _v: pollywog's
+
+# Pollock (level 50)
+_: Pollock | name
 
 # Polonization (level 80)
 A Z: Polonization / B: Polonisation
@@ -22616,10 +22432,8 @@ A: pomerium / B: pomoerium
 # pomme (level 95)
 A: pomme / B: pommae
 
-# pommeled (level 50)
+# pommel (level 50)
 A: pommeled / B: pommelled
-
-# pommeling (level 50)
 A: pommeling / B: pommelling
 
 # popliteal (level 70)
@@ -23345,10 +23159,10 @@ A C: prizable / B: prisable
 A C: prize / B: prise
 A C: prized / B: prised
 A C: prizer / B: priser
-A C: prize's / B: prise's
-A C: prizers / B: prisers
 A C: prizing / B: prising
 A C: prizes / B: prises
+A C: prize's / B: prise's
+A C: prizers / B: prisers
 
 # proadvertizing (level 95)
 A Z: proadvertizing / B: proadvertising
@@ -23607,10 +23421,8 @@ A: Prothoenor's / B: Prothoaenor's
 # protoarcheology (level 95)
 A: protoarcheology / B: protoarchaeology
 
-# protocoled (level 80)
+# protocol (level 80)
 A: protocoled / B: protocolled
-
-# protocoling (level 80)
 A: protocoling / B: protocolling
 
 # protocolization (level 95)
@@ -23808,14 +23620,12 @@ A Z: pulverizer's / B: pulveriser's
 # pulvilized (level 95)
 A Z: pulvilized / B: pulvilised
 
-# pummeled (level 35)
+# pummel (level 35)
 A: pummeled / B: pummelled
+A: pummeling / B: pummelling
 
 # pummeler (level 99)
 A: pummeler / B: pummeller
-
-# pummeling (level 35)
-A: pummeling / B: pummelling
 
 # pumpkin (level 35)
 _: pumpkin / _-: punkin
@@ -23966,16 +23776,14 @@ A Z: quantizer / B: quantiser
 A Z: quantizers / B: quantisers
 A Z: quantizer's / B: quantiser's
 
-# quarreled (level 35)
+# quarrel (level 35)
 A: quarreled / B: quarrelled
+A: quarreling / B: quarrelling
 
 # quarreler (level 60)
 A: quarreler / B: quarreller
 A: quarrelers / B: quarrellers
 A: quarreler's / B: quarreller's
-
-# quarreling (level 35)
-A: quarreling / B: quarrelling
 
 # quarrelous (level 95)
 A: quarrelous / B: quarrellous
@@ -24211,18 +24019,16 @@ _: ratlines / _-: ratlins
 _: ratline's / _-: ratlin's
 _: ratline / _-: ratlin | o: usually plural
 
-# raveled (level 35)
+# ravel (level 35)
 A: raveled / B: ravelled
+A: raveling / B: ravelling
+A: ravelings / B: ravellings
+A: raveling's / B: ravelling's
 
 # raveler (level 70)
 A: raveler / B: raveller
 A: ravelers / B: ravellers
 A: raveler's / B: raveller's
-
-# raveling (level 35)
-A: raveling / B: ravelling
-A: ravelings / B: ravellings
-A: raveling's / B: ravelling's
 
 # reacclimatization (level 95)
 A Z: reacclimatization / B: reacclimatisation
@@ -24486,14 +24292,12 @@ A Z: recrystallized / B: recrystallised
 A Z: recrystallizing / B: recrystallising
 A Z: recrystallizes / B: recrystallises
 
-# redialed (level 60)
+# redial (level 60)
 A: redialed / B: redialled
+A: redialing / B: redialling
 
 # redialer (level 99)
 A: redialer / B: redialler
-
-# redialing (level 60)
-A: redialing / B: redialling
 
 # redisseize (level 95)
 A Z: redisseize / B: redisseise
@@ -24565,10 +24369,8 @@ A Z: reforestizes / B: reforestises
 # reformades (level 80)
 A: reformades / B: reformadoes
 
-# refueled (level 35)
+# refuel (level 35)
 A: refueled / B: refuelled
-
-# refueling (level 35)
 A: refueling / B: refuelling
 
 # regalize (level 95)
@@ -24690,15 +24492,13 @@ A Z: rejuvenized / B: rejuvenised
 A Z: rejuvenizing / B: rejuvenising
 A Z: rejuvenizes / B: rejuvenises
 
-# relabeled (level 50)
+# relabel (level 50)
 A: relabeled / B: relabelled
+A: relabeling / B: relabelling
 
 # relabeler (level 99)
 A: relabeler / B: relabeller
 A: relabelers / B: relabellers
-
-# relabeling (level 50)
-A: relabeling / B: relabelling
 
 # relativization (level 80)
 A Z: relativization / B: relativisation
@@ -24766,10 +24566,8 @@ A Z: remobilization's / B: remobilisation's
 A Z: remobilize / B: remobilise
 A Z: remobilizes / B: remobilises
 
-# remodeled (level 35)
+# remodel (level 35)
 A: remodeled / B: remodelled
-
-# remodeling (level 35)
 A: remodeling / B: remodelling
 
 # remonetization (level 80)
@@ -25081,21 +24879,19 @@ A Z: revaporization's / B: revapourisation's | !
 A Z: revaporize / B: revaporise | !
 A Z: revaporizes / B: revaporises | !
 
+# revel (level 35)
+A: reveled / B: revelled
+A: reveling / B: revelling
+A: revelings / B: revellings
+
 # revelationize (level 95)
 A Z: revelationize / B: revelationise
 A Z: revelationizes / B: revelationises
-
-# reveled (level 35)
-A: reveled / B: revelled
 
 # reveler (level 35)
 A: reveler / B: reveller
 A: revelers / B: revellers
 A: reveler's / B: reveller's
-
-# reveling (level 35)
-A: reveling / B: revelling
-A: revelings / B: revellings
 
 # reverie (level 35)
 _: reverie / _V: revery
@@ -25299,16 +25095,14 @@ A Z: ritualized / B: ritualised
 A Z: ritualizing / B: ritualising
 A Z: ritualizes / B: ritualises
 
-# rivaled (level 35)
+# rival (level 35)
 A: rivaled / B: rivalled
+A: rivaling / B: rivalling
 
 # rivaless (level 80)
 A: rivaless / B: rivalless
 A: rivalesses / B: rivallesses
 A: rivaless's / B: rivalless's
-
-# rivaling (level 35)
-A: rivaling / B: rivalling
 
 # rivalize (level 80)
 A Z: rivalize / B: rivalise
@@ -25400,10 +25194,8 @@ A Z: routinized / B: routinised
 A Z: routinizing / B: routinising
 A Z: routinizes / B: routinises
 
-# roweled (level 50)
+# rowel (level 50)
 A: roweled / B: rowelled
-
-# roweling (level 50)
 A: roweling / B: rowelling
 
 # royalization (level 95)
@@ -25609,10 +25401,8 @@ A Z: sanctuarized / B: sanctuarised
 A Z: sanctuarizing / B: sanctuarising
 A Z: sanctuarizes / B: sanctuarises
 
-# sandaled (level 70)
+# sandal (level 70)
 A: sandaled / B: sandalled
-
-# sandaling (level 80)
 A: sandaling / B: sandalling
 
 # Sanferd (level 95)
@@ -25822,10 +25612,8 @@ _: scalloping / _V: scolloping
 _: scallops / _V: scollops
 _: scallop's / _V: scollop's
 
-# scandaled (level 80)
+# scandal (level 80)
 A: scandaled / B: scandalled
-
-# scandaling (level 80)
 A: scandaling / B: scandalling
 
 # scandalization (level 70)
@@ -26324,10 +26112,8 @@ A Z: sentimentalizes / B: sentimentalises
 A Z: sentimentalizer / B: sentimentaliser
 A Z: sentimentalizers / B: sentimentalisers
 
-# sentineled (level 80)
+# sentinel (level 80)
 A: sentineled / B: sentinelled
-
-# sentineling (level 80)
 A: sentineling / B: sentinelling
 
 # sepaled (level 70)
@@ -26566,21 +26352,17 @@ A: Shkoder's / B: Shkodaer's
 _: shorty / _v: shortie
 _: shorty's / _v: shortie's
 
-# shoveled (level 35)
+# shovel (level 35)
 A: shoveled / B: shovelled
+A: shoveling / B: shovelling
 
 # shoveler (level 70)
 A: shoveler / B: shoveller
 A: shovelers / B: shovellers
 A: shoveler's / B: shoveller's
 
-# shoveling (level 35)
-A: shoveling / B: shovelling
-
-# shriveled (level 35)
+# shrivel (level 35)
 A: shriveled / B: shrivelled
-
-# shriveling (level 35)
 A: shriveling / B: shrivelling
 
 # shtick (level 50)
@@ -26595,15 +26377,11 @@ A: sialorrhea / B: sialorrhoea
 A Z: siderealize / B: siderealise
 A Z: siderealizes / B: siderealises
 
-# signaled (level 20)
+# signal (level 20)
 A: signaled / B: signalled
-
-# signaler (level 60)
 A: signaler / B: signaller
 A: signalers / B: signallers
 A: signaler's / B: signaller's
-
-# signaling (level 20)
 A: signaling / B: signalling
 
 # signalization (level 60)
@@ -26847,10 +26625,8 @@ A Z: slenderized / B: slenderised
 A Z: slenderizing / B: slenderising
 A Z: slenderizes / B: slenderises
 
-# slier (level 35)
+# sley (level 35)
 _: slier / _v: slyer
-
-# sliest (level 35)
 _: sliest / _v: slyest
 
 # sloganize (level 80)
@@ -26888,17 +26664,15 @@ _: smolder's / _v: smoulder's
 _: smoothie / _v: smoothy
 _: smoothie's / _v: smoothy's
 
-# sniveled (level 50)
+# snivel (level 50)
 A: sniveled / B: snivelled
+A: sniveling / B: snivelling
+A: snivelings / B: snivellings
 
 # sniveler (level 60)
 A: sniveler / B: sniveller
 A: snivelers / B: snivellers
 A: sniveler's / B: sniveller's
-
-# sniveling (level 50)
-A: sniveling / B: snivelling
-A: snivelings / B: snivellings
 
 # snobsniveling (level 99)
 A: snobsniveling / B: snobsnivelling
@@ -27327,10 +27101,8 @@ A Bv: spilled / AV B: spilt
 # spinule (level 70)
 A: spinule / B: spinulae
 
-# spiraled (level 35)
+# spiral (level 35)
 A: spiraled / B: spiralled
-
-# spiraling (level 35)
 A: spiraling / B: spiralling
 
 # spiralization (level 95)
@@ -27424,10 +27196,8 @@ A: Squier / B: Squire
 # Squier's (level 95)
 A: Squier's / B: Squire's
 
-# squirreled (level 35)
+# squirrel (level 35)
 A: squirreled / B: squirrelled
-
-# squirreling (level 35)
 A: squirreling / B: squirrelling
 
 # stabilizable (level 99)
@@ -27514,16 +27284,14 @@ A: steatorrheas / B: steatorrhoeas
 # stele (level 70)
 A: stele / B: stelae
 
-# stenciled (level 35)
+# stencil (level 35)
 A: stenciled / B: stencilled
+A: stenciling / B: stencilling
 
 # stenciler (level 80)
 A: stenciler / B: stenciller
 A: stencilers / B: stencillers
 A: stenciler's / B: stenciller's
-
-# stenciling (level 35)
-A: stenciling / B: stencilling
 
 # stencilize (level 95)
 A Z: stencilize / B: stencilise
@@ -27878,10 +27646,8 @@ A Z: subtilizes / B: subtilises
 A Z: subtilizer / B: subtiliser
 A Z: subtilizers / B: subtilisers
 
-# subtotaled (level 50)
+# subtotal (level 50)
 A: subtotaled / B: subtotalled
-
-# subtotaling (level 50)
 A: subtotaling / B: subtotalling
 
 # suburbanization (level 70)
@@ -28129,10 +27895,8 @@ _: sweetbrier / _v: sweetbriar
 _: sweetbriers / _v: sweetbriars
 _: sweetbrier's / _v: sweetbriar's
 
-# swiveled (level 35)
+# swivel (level 35)
 A: swiveled / B: swivelled
-
-# swiveling (level 35)
 A: swiveling / B: swivelling
 
 # sycophantize (level 80)
@@ -28171,10 +27935,8 @@ A Z: sylvanizes / B: sylvanises
 # sylviine (level 80)
 A: sylviine / B: sylviinae
 
-# symboled (level 80)
+# symbol (level 80)
 A: symboled / B: symbolled
-
-# symboling (level 80)
 A: symboling / B: symbolling
 
 # symbolization (level 50)
@@ -28473,6 +28235,7 @@ _: taboo's / _V: tabu's
 
 # tabored (level 80)
 A: tabored / B: taboured
+A: taboring / B: tabouring
 
 # taborer (level 80)
 A: taborer / B: tabourer
@@ -28490,9 +28253,6 @@ A: taborins / B: tabourins
 
 # taborine (level 80)
 A: taborine / B: tabourine
-
-# taboring (level 80)
-A: taboring / B: tabouring
 
 # tabularization (level 80)
 A Z: tabularization / B: tabularisation
@@ -28603,13 +28363,9 @@ A Z: tartarized / B: tartarised
 A Z: tartarizing / B: tartarising
 A Z: tartarizes / B: tartarises
 
-# tasseled (level 35)
+# tassel (level 35)
 A: tasseled / B: tasselled
-
-# tasseling (level 35)
 A: tasseling / B: tasselling
-
-# tassels (level 35)
 A B: tassels / B-: tassells
 
 # tautologize (level 70)
@@ -28702,16 +28458,14 @@ _: teenage / _v: teenaged
 A: teer / B: teaer
 A: teers / B: teres
 
-# teetotaled (level 80)
+# teetotal (level 80)
 A: teetotaled / B: teetotalled
+A: teetotaling / B: teetotalling
 
 # teetotaler (level 35)
 A: teetotaler / B: teetotaller
 A: teetotalers / B: teetotallers
 A: teetotaler's / B: teetotaller's
-
-# teetotaling (level 80)
-A: teetotaling / B: teetotalling
 
 # tegu (level 80)
 A: tegu / B: taegu
@@ -29168,17 +28922,15 @@ A: Timor / B: Timour
 # Timor's (level 99)
 A: Timor's / B: Timour's
 
-# tinseled (level 35)
+# tinsel (level 35)
 A: tinseled / B: tinselled
+A: tinseling / B: tinselling
 
 # tinselier (level 99)
 A: tinselier / B: tinsellier
 
 # tinseliest (level 99)
 A: tinseliest / B: tinselliest
-
-# tinseling (level 35)
-A: tinseling / B: tinselling
 
 # tire's (level 20)
 A: tire's / B: tyre's
@@ -29208,10 +28960,8 @@ _: titivation / _v: tittivation
 _: titivations / _v: tittivations
 _: titivation's / _v: tittivation's
 
-# tittuped (level 80)
+# tittup (level 80)
 A: tittuped / B: tittupped
-
-# tittuping (level 80)
 A: tittuping / B: tittupping
 
 # tittupy (level 80)
@@ -29222,14 +28972,12 @@ _: toffee / _V: toffy
 _: toffees / _V: toffies
 _: toffee's / _V: toffy's
 
+# tog (level 55)
+_: togged / _-: toged
+_: togging / _-: toging
+
 # toge (level 35)
 A: toge / B: togae
-
-# togged (level 55)
-_: togged / _-: toged
-
-# togging (level 55)
-_: togging / _-: toging
 
 # tonicize (level 95)
 A Z: tonicize / B: tonicise
@@ -29270,16 +29018,14 @@ A Z: Toryize / B: Toryise
 A Z: Toryizes / B: Toryises
 A Z: Toryize's / B: Toryise's
 
-# totaled (level 35)
+# total (level 35)
 A: totaled / B: totalled
+A: totaling / B: totalling
 
 # totaler (level 95)
 A: totaler / B: totaller
 A: totalers / B: totallers
 A: totaler's / B: totaller's
-
-# totaling (level 35)
-A: totaling / B: totalling
 
 # totalitarianize (level 80)
 A Z: totalitarianize / B: totalitarianise
@@ -29318,10 +29064,8 @@ A Z: tourizes / B: tourises
 _: toward | <Adj>
 _: toward / _v: towards | prep
 
-# toweled (level 35)
+# towel (level 35)
 A: toweled / B: towelled
-
-# toweling (level 35)
 A: toweling / B: towelling
 A: towelings / B: towellings
 A: toweling's / B: towelling's
@@ -29384,16 +29128,14 @@ A: tragicolored / B: tragicoloured
 A Z: traitorize / B: traitorise
 A Z: traitorizes / B: traitorises
 
-# trammeled (level 50)
+# trammel (level 50)
 A: trammeled / B: trammelled
+A: trammeling / B: trammelling
 
 # trammeler (level 70)
 A: trammeler / B: trammeller
 A: trammelers / B: trammellers
 A: trammeler's / B: trammeller's
-
-# trammeling (level 50)
-A: trammeling / B: trammelling
 
 # tranquility (level 35)
 A: tranquility / B: tranquillity
@@ -29491,15 +29233,11 @@ A Z: traumatized / B: traumatised
 A Z: traumatizing / B: traumatising
 A Z: traumatizes / B: traumatises
 
-# traveled (level 20)
+# travel (level 20)
 A: traveled / B: travelled
-
-# traveler (level 35)
 A: traveler / B: traveller
 A: travelers / B: travellers
 A: traveler's / B: traveller's
-
-# traveling (level 20)
 A: traveling / B: travelling
 A: travelings / B: travellings
 A: traveling's / B: travelling's
@@ -29610,16 +29348,14 @@ A Z: tropicalized / B: tropicalised
 A Z: tropicalizing / B: tropicalising
 A Z: tropicalizes / B: tropicalises
 
-# troweled (level 35)
+# trowel (level 35)
 A: troweled / B: trowelled
+A: troweling / B: trowelling
 
 # troweler (level 80)
 A: troweler / B: troweller
 A: trowelers / B: trowellers
 A: troweler's / B: troweller's
-
-# troweling (level 35)
-A: troweling / B: trowelling
 
 # Trubenize (level 80)
 A Z: Trubenize / B: Trubenise
@@ -29712,17 +29448,15 @@ A: tumor's / B: tumour's
 # tumored (level 95)
 A: tumored / B: tumoured
 
-# tunneled (level 35)
+# tunnel (level 35)
 A: tunneled / B: tunnelled
+A: tunneling / B: tunnelling
+A: tunnelings / B: tunnellings
 
 # tunneler (level 60)
 A: tunneler / B: tunneller
 A: tunnelers / B: tunnellers
 A: tunneler's / B: tunneller's
-
-# tunneling (level 35)
-A: tunneling / B: tunnelling
-A: tunnelings / B: tunnellings
 
 # turdine (level 70)
 A: turdine / B: turdinae
@@ -30726,10 +30460,8 @@ A Z: unjeopardized / B: unjeopardised
 # unjournalized (level 95)
 A Z: unjournalized / B: unjournalised
 
-# unkenneled (level 80)
+# unkennel (level 80)
 A: unkenneled / B: unkennelled
-
-# unkenneling (level 80)
 A: unkenneling / B: unkennelling
 
 # unlabeled (level 35)
@@ -30769,10 +30501,8 @@ A Z: unlegalized / B: unlegalised
 A Z: unlegalizedder / B: unlegalisedder
 A Z: unlegalizeddest / B: unlegaliseddest
 
-# unleveled (level 80)
+# unlevel (level 80)
 A: unleveled / B: unlevelled
-
-# unleveling (level 80)
 A: unleveling / B: unlevelling
 
 # unliberalized (level 95)
@@ -31285,16 +31015,14 @@ A Z: unrationalized / B: unrationalised
 # unrationalizing (level 95)
 A Z: unrationalizing / B: unrationalising
 
-# unraveled (level 35)
+# unravel (level 35)
 A: unraveled / B: unravelled
+A: unraveling / B: unravelling
 
 # unraveler (level 80)
 A: unraveler / B: unraveller
 A: unravelers / B: unravellers
 A: unraveler's / B: unraveller's
-
-# unraveling (level 35)
-A: unraveling / B: unravelling
 
 # unrealizable (level 70)
 A Z: unrealizable / B: unrealisable
@@ -32288,14 +32016,12 @@ A Z: verbalizer / B: verbaliser
 A Z: verbalizers / B: verbalisers
 A Z: verbalizer's / B: verbaliser's
 
-# vermeiled (level 80)
+# vermeil (level 80)
 A: vermeiled / B: vermeilled
+A: vermeiling / B: vermeilling
 
 # vermeiles (level 80)
 A: vermeiles / B: vermeilles
-
-# vermeiling (level 80)
-A: vermeiling / B: vermeilling
 
 # vermilion (level 50)
 _: vermilion / _V: vermillion
@@ -32361,10 +32087,8 @@ A: veter's / B: vetoer's
 A Z: veteranize / B: veteranise
 A Z: veteranizes / B: veteranises
 
-# vialed (level 80)
+# vial (level 80)
 A: vialed / B: vialled
-
-# vialing (level 80)
 A: vialing / B: vialling
 
 # victimizable (level 95)
@@ -32393,13 +32117,14 @@ A Z: Victorianize / B: Victorianise
 A Z: Victorianizes / B: Victorianises
 A Z: Victorianize's / B: Victorianise's
 
+# victual (level 50)
+A: victualed / B: victualled
+A: victualing / B: victualling
+
 # victualage (level 70)
 A: victualage / B: victuallage
 A: victualages / B: victuallages
 A: victualage's / B: victuallage's
-
-# victualed (level 50)
-A: victualed / B: victualled
 
 # victualer (level 70)
 A: victualer / B: victualler
@@ -32408,9 +32133,6 @@ A: victualer's / B: victualler's
 
 # victualess (level 80)
 A: victualess / B: victualless
-
-# victualing (level 50)
-A: victualing / B: victualling
 
 # vier (level 70)
 A: vier / B: vire
@@ -32454,10 +32176,8 @@ A: viremic / B: viraemic
 A Z: virilization / B: virilisation
 A Z: virilizations / B: virilisations
 
-# virilized (level 80)
+# virilize (level 80)
 A Z: virilized / B: virilised
-
-# virilizing (level 80)
 A Z: virilizing / B: virilising
 
 # virtualize (level 95)
@@ -32715,10 +32435,8 @@ A B: wagonette / Bv: waggonette
 A B: wagonettes / Bv: waggonettes
 A B: wagonette's / Bv: waggonette's
 
-# wainscoted (level 50)
+# wainscot (level 50)
 _: wainscoted / _v: wainscotted
-
-# wainscoting (level 50)
 _: wainscoting / _v: wainscotting
 _: wainscotings / _v: wainscottings
 _: wainscoting's / _v: wainscotting's
@@ -32767,10 +32485,8 @@ A: watercolorist / B: watercolourist
 A: watercolorists / B: watercolourists
 A: watercolorist's / B: watercolourist's
 
-# weaseled (level 35)
+# weasel (level 35)
 A: weaseled / B: weaselled
-
-# weaseling (level 35)
 A: weaseling / B: weaselling
 
 # weatherize (level 50)
@@ -32959,16 +32675,14 @@ _: woolly's / _V: woolie's / _V: wooly's | <N>
 # wornil (level 95)
 A: wornil / B: wournil
 
-# worshiped (level 35)
+# worship (level 35)
 A: worshiped / B: worshipped
+A: worshiping / B: worshipping
 
 # worshiper (level 35)
 A: worshiper / B: worshipper
 A: worshipers / B: worshippers
 A: worshiper's / B: worshipper's
-
-# worshiping (level 35)
-A: worshiping / B: worshipping
 
 # yak (level 35)
 _: yak | :1
@@ -32995,16 +32709,14 @@ _: yeshiva / _V: yeshivah
 _: yeshivas / _v: yeshivot / _V: yeshivahs
 _: yeshiva's / _V: yeshivah's
 
-# yodeled (level 35)
+# yodel (level 35)
 A: yodeled / B: yodelled
+A: yodeling / B: yodelling
 
 # yodeler (level 50)
 A: yodeler / B: yodeller
 A: yodelers / B: yodellers
 A: yodeler's / B: yodeller's
-
-# yodeling (level 35)
-A: yodeling / B: yodelling
 
 # yogi (level 50)
 _: yogi / _V: yogin

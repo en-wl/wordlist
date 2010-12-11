@@ -107,13 +107,15 @@ sub set_add (\%@) {
     foreach (@_) {$set->{$_} = 1 if defined $_}
 }
 
-open F, "varcon.txt";
-while (<F>) {
-    next if varcon::filter $_;
-    my $line = $_;
+my @root_words;
+
+sub add_varcon_line ($) {
+    my $line = $_[0];
+    my $hack = $line =~ /^\*/;
     my %words;
-    varcon::get_words_set(%words, {varcon::readline($_)});
+    varcon::get_words_set(%words, {varcon::readline($line)});
     foreach my $w (keys %words) {
+        push @root_words, map {$_->[0]} @{$entry_order{$w}};
         set_add %words, @{$lookup{$w}};
         set_add %words, $possessive{$w}; 
     }
@@ -128,11 +130,26 @@ while (<F>) {
         set_add %words, @{$cluster->[0]};
     }
     set_add %words, map {lc} (keys %words);
+    return if $hack && (values %old_clusters) <= 1;
     my $new_cluster = [[keys %words],
                        [flatten($line, values %old_clusters)]];
     foreach (keys %words) {
         $clusters{$_} = $new_cluster;
     }
+}
+
+open F, "varcon.txt";
+while (<F>) {
+    next if varcon::filter $_;
+    add_varcon_line($_);
+}
+
+my %already_done;
+foreach my $word (@root_words) {
+    next if exists $clusters{$word} || $already_done{$word};
+    #print STDERR ">>*: $word\n";
+    add_varcon_line "*: $word";
+    $already_done{$word} = 1;
 }
 
 my %scowl;
@@ -237,7 +254,7 @@ foreach my $cluster (values %clusters) {
         my %notes;
         my %d = varcon::readline($line, \%notes);
         my @w = varcon::get_words(\%d);
-        push @words, @w;
+        push @words, @w unless $line =~ /^\*/;
         push @lines, {words => \@w, notes => \%notes, line => $line};
     }
     @lines = sort {line_cmp $a, $b} @lines;
@@ -248,6 +265,7 @@ foreach my $cluster (values %clusters) {
     my $lines_final = '';
     $lines_final .= "# $lines[0]{words}[0] (level $level)\n";
     foreach my $line (@lines) {
+        next if $line->{line} =~ /^\*/;
         $lines_final .= "$line->{line}\n";
     }
     $clusters_byword{$lines[0]{words}[0]} = $lines_final;

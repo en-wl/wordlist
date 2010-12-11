@@ -74,6 +74,7 @@ sub add(\@$) {
 }
 
 while (<IN>) {
+    next if varcon::filter $_;
     my %r = varcon::readline($_);
     foreach my $f ($from eq '-' ? (grep {$_ ne $to} keys %varcon::map) : $from) {
         foreach my $v (0..3) {

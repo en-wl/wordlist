@@ -17,6 +17,7 @@ my %lists_pre;
 open F, "varcon.txt";
 while (<F>) {
     #print;
+    next if varcon::filter $_;
     my %notes;
     my %r = varcon::flatten(varcon::readline($_,\%notes));
     my $cat = $notes{uncommon} ? 'uncommon' : 'normal';

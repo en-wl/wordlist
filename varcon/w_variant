@@ -31,6 +31,7 @@ open B, "| sort -u > w_variant-nonamer.lst";
 
 while (<F>) {
     #print;
+    next if varcon::filter $_;
     my %notes;
     my %r = varcon::readline($_,\%notes);
     if (have_variants $r{A} || have_variants $r{_}) {

@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+use varcon;
+
 sub add 
 {
     my @l;
@@ -20,11 +22,8 @@ sub add
 open F, "varcon.txt" or die;
 
 while (<F>) {
-    chop;
-    my ($d) = split / *\| */;
-    my (@d) = split / *\/ */, $d;
-    @l = map {/^.+?: (.+)/; $1} @d;
-    &add(@l);
+    next if varcon::filter $_;
+    &add(varcon::get_words($_));
 }
 
 open F, "variant-also.tab" or die;

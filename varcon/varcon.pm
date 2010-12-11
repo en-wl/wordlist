@@ -5,7 +5,7 @@ use warnings;
 
 use Exporter ();
 our @ISA = qw(Exporter);
-our @EXPORT_OK = qw(readline flatten get_words %map);
+our @EXPORT_OK = qw(readline flatten get_words filter %map);
 
 our %map = qw(A american B british Z british_z C canadian _ other);
 my %vmap = ('' => 0, 'v' => 1, 'V' => 2, '-' => 3,
@@ -62,18 +62,21 @@ sub flatten(%) {
     return %r;
 }
 
-sub get_words_tally($) {
-    my $r = shift;
-    my %res;
+sub get_words_set(\%$) {
+    my ($res,$r) = @_;
+    my $i = 0;
     if (ref $r) {
-        foreach (values %$r) {
+        foreach my $k (sort keys %$r) {
+            local $_ = $r->{$k};
             foreach (@$_) {
                 if (ref $_) {
                     foreach (@$_) {
-                        $res{$_} = 1;
+                        $res->{$_} = $i unless exists $res->{$_};
+                        $i++;
                     }
                 } elsif (defined $_) {
-                    $res{$_} = 1;
+                    $res->{$_} = $i unless exists $res->{$_};
+                    $i++;
                 }
             }
         }
@@ -84,13 +87,21 @@ sub get_words_tally($) {
         my (@d) = split / *\/ */, $d;
         foreach (@d) {
             my ($s, $w) = /^(.+?): (.+)$/ or die "Bad entry: $_";
-            $res{$w} = 1;
+            $res->{$w} = $i unless exists $res->{$_};
+            $i++;
         }
     }
-    return \%res;
 }
 
 sub get_words($) {
-    my $res = &get_words_tally(@_);
-    return sort keys %$res;
+    my %res;
+    &get_words_set(\%res, @_);
+    return sort {$res{$a} <=> $res{$b}} keys %res;
+}
+
+sub filter(\$) {
+    ${$_[0]} =~ s/^([^#\n]*).*/$1/;
+    ${$_[0]} =~ s/\s+$//;
+    return 1 if ${$_[0]} eq '';
+    return 0;
 }

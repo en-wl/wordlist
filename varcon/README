@@ -23,12 +23,14 @@ The varcon.txt file:
              with any of the above)
 
 Variants marked
+  . = equal
   v = variant (orig. v or V)
   V = seldom used variant (m-w also...)
   - = possible variant (orig. VV)
+  x = improper variant (should not use)
  
-If more than one 'A' (or 'B' ...) on a line than equal variants with
-slight preference given the the first one listed.
+-- If more than one 'A' (or 'B' ...) on a line than equal variants with
+-- slight preference given the the first one listed.
 
 Sometimes the variant used depends on the meaning, in this case the
 same word may be on seperate lines, explaination often given after |.

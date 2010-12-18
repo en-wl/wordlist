@@ -14,7 +14,10 @@ my %lists_pre;
 # $sp = spelling
 # $vl = variant_level
 
-open F, "varcon.txt";
+my $file = $ARGV[0];
+$file = "varcon.txt" unless defined $file;
+
+open F, $file;    
 while (<F>) {
     #print;
     next if varcon::filter $_;
@@ -23,7 +26,7 @@ while (<F>) {
     my $cat = $notes{uncommon} ? 'uncommon' : 'normal';
     foreach my $k (sort keys %r) {
         #print ">>$k<<\n";
-        my ($sp, $vl) = $k =~ /^(.)(.)?$/ or die;
+        my ($sp, $vl) = $k =~ /^(.)(.)?$/ or die "Bad: $k";
         $vl = ' ' unless defined $vl;
         foreach my $word (@{$r{$k}}) {
             $lists_pre{$cat}{$sp}{$vl}{$word}++;

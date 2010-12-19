@@ -5,4 +5,5 @@ then
   echo -n english ''
 fi
 
-echo american british british_z canadian variant_0 variant_1 variant_2
+echo american british british_z canadian variant_0 variant_1 variant_2 \
+  british_variant_0 british_variant_1 canadian_variant_0 canadian_variant_1

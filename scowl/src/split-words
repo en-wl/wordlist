@@ -5,7 +5,8 @@ rm -f working/*.$1.pre
 comm -12 working/words.$1 r/varcon/american.lst \
   > working/american-all.$1.pre
 
-comm -12 working/words.$1 r/varcon/british.lst \
+# note special list, see make-variant.lst
+comm -12 working/words.$1 r/varcon/british+.lst \
   > working/british-all.$1.pre
 
 comm -12 working/words.$1 r/varcon/british_z.lst \
@@ -22,6 +23,18 @@ comm -12 working/words.$1 working/variant_1.lst   \
 
 comm -12 working/words.$1 working/variant_2.lst   \
   > working/variant_2-all.$1.pre
+
+comm -12 working/words.$1 working/british_variant_0.lst   \
+  > working/british_variant_0-all.$1.pre
+
+comm -12 working/words.$1 working/british_variant_1.lst   \
+  > working/british_variant_1-all.$1.pre
+
+comm -12 working/words.$1 working/canadian_variant_0.lst   \
+  > working/canadian_variant_0-all.$1.pre
+
+comm -12 working/words.$1 working/canadian_variant_1.lst   \
+  > working/canadian_variant_1-all.$1.pre
 
 cat working/*-all.$1.pre         \
   | sort | uniq                  \

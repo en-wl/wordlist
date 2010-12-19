@@ -797,8 +797,8 @@ A B: amok / A. Bv: amuck
 A B: amoks / A. Bv: amucks
 A B: amok's / A. Bv: amuck's
 
-# among (level 10)
-_: among / _V: amongst
+# among <verified> (level 10)
+A B. Z: among / AV B Zv: amongst
 
 # amoralize (level 95)
 A Z: amoralize / B: amoralise
@@ -3085,11 +3085,11 @@ _: burnoose / _v: burnous
 _: burnooses / _v: burnouses
 _: burnoose's / _v: burnous's
 
-# bus (level 35)
-_: bused / _V: bussed
-_: busing / _V: bussing
-_: busings / _V: bussings
-_: busing's / _V: bussing's
+# bus <verified> (level 35)
+A Bv C: bused / AV B: bussed
+A Bv C: busing / AV B: bussing
+A Bv C: busings / AV B: bussings
+A Bv C: busing's / AV B: bussing's
 
 # bushel (level 35)
 A: busheled / B: bushelled
@@ -3698,10 +3698,10 @@ A Z: catholicizer / B: catholiciser
 A Z: catholicizers / B: catholicisers
 A Z: catholicizer's / B: catholiciser's
 
-# cauldron (level 50)
-_: cauldron / _.: caldron
-_: cauldrons / _.: caldrons
-_: cauldron's / _.: caldron's
+# cauldron <verified> (level 50)
+A B C: cauldron / A. Bv: caldron
+A B C: cauldrons / A. Bv: caldrons
+A B C: cauldron's / A. Bv: caldron's
 
 # causticization (level 95)
 A Z: causticization / B: causticisation
@@ -4860,8 +4860,8 @@ A Cv: colorant's / B C: colourant's
 # colorate (level 95)
 A: colorate / B: colourate
 
-# coloration (level 50)
-A B: coloration / B.: colouration | ?
+# coloration <verified> (level 50)
+A B: coloration / Bv: colouration | ?
 A B: colorations / Bv: colourations | ?
 A B: coloration's / Bv: colouration's | ?
 
@@ -7873,20 +7873,20 @@ A: dracenaceae / B: dracaenaceae
 
 # draft <hand-checked> (level 20)
 A C: draft / B: draught
-A C B: drafted / BV: draughted
-A C B: drafting / BV: draughting
+A B C: drafted / BV: draughted
+A B C: drafting / BV: draughting
 A C: drafts / B: draughts
 A C: draft's / B: draught's
-A C B: draft | writing, select
-A C B: drafts | writing, select
-A C B: draft's | writing, select
+A B: draft | writing, select
+A B: drafts | writing, select
+A B: draft's | writing, select
 A B: draught | (-) british: game of checkers
 A B: draughts | (-) british: game of checkers
 A B: draught's | (-) british: game of checkers
 
 # draftboard <verified> (level 55)
-A- C-: draftboard / A B C: draughtboard | british word
-A- C-: draftboards / A B C: draughtboards | british word
+A B C: draughtboard / A- C-: draftboard | british word
+A B C: draughtboards / A- C-: draftboards | british word
 
 # draftily <verified> (level 60)
 A C: draftily / B: draughtily
@@ -7946,7 +7946,7 @@ A Z: dramatizers / B: dramatisers
 A Z: dramatizer's / B: dramatiser's
 
 # dreamed (level 20)
-A Bv Z: dreamed / B Zv: dreamt
+A B Cv: dreamed / Bv C: dreamt
 
 # drey (level 35)
 _: drier / _V: dryer | <Adj>
@@ -8536,7 +8536,7 @@ A: enameled / B: enamelled
 A: enameling / B: enamelling
 A: enamelings / B: enamellings
 
-# enameler (level 60)
+# enameler <verified> (level 60)
 A: enameler / B: enameller
 A: enamelers / B: enamellers
 A: enameler's / B: enameller's
@@ -10248,8 +10248,8 @@ _: fillets / _-: filets | <V>
 A Z: filmize / B: filmise
 A Z: filmizes / B: filmises
 
-# filterable (level 50)
-_: filterable / _V: filtrable
+# filterable <verified> (level 50)
+A B C: filterable / AV Bv Cv: filtrable
 
 # finalization <verified> (level 55)
 A Z: finalization / B: finalisation
@@ -14081,9 +14081,6 @@ A Z: infidelizes / B: infidelises
 A Z: infinitize / B: infinitise
 A Z: infinitizes / B: infinitises
 
-# inflexion (level 50)
-_: inflexion
-
 # informalize (level 95)
 A Z: informalize / B: informalise
 A Z: informalizes / B: informalises
@@ -15309,8 +15306,8 @@ A: lavolted / B: lavoltaed
 # le (level 95)
 A: le / B: loe
 
-# learned (level 10)
-A Bv Z: learned / B Zv: learnt
+# learned <verified> (level 10)
+A B. Z: learned / B Zv: learnt
 
 # leatherize (level 95)
 A Z: leatherize / B: leatherise
@@ -16479,17 +16476,19 @@ A Z: matronized / B: matronised
 A Z: matronizing / B: matronising
 A Z: matronizes / B: matronises
 
-# Matt (level 35)
-_: Matt | :1
-_: mat | :2
-_: matted | :2
-_: matting | :2
-_: mats | :2
-_: mat's | :2
-_: matte / _V: matt / _V: mat | :3
-_: matte | :4
-_: mattes | :4
-_: matte's | :4
+# mat <hand-checked> (level 35)
+A Bv C: matte / Av: mat / AV B: matt | without lustre; cardboard ... picture
+A: mat / A. Bv C: matte / AV B: matt | make matte # Ox Amer thinks its matte, M-W: mat
+A: mats / A. Bv C: mattes / AV B: matts | make matte
+A B: mat | otherwise, most uses
+A B: mats | otherwise, most uses
+A B: mat's | otherwise, most uses
+A B: matte | otherwise, some uses
+A B: mattes | otherwise, some uses
+A B: matte's | otherwise, some uses
+A B: matted | -- regardless of how mat is spelled
+A B: matting | -- regardless of how mat is spelled
+A B: Matt | abbr of Matthew
 
 # Matthean (level 80)
 A: Matthean / B: Matthaean
@@ -17174,10 +17173,10 @@ A Z: militarized / B: militarised
 A Z: militarizing / B: militarising
 A Z: militarizes / B: militarises
 
-# milligram (level 35)
-A C: milligram / B: milligramme
-A C: milligrams / B: milligrammes
-A C: milligram's / B: milligramme's
+# milligram <verified> (level 35)
+A B: milligram / Bv: milligramme
+A B: milligrams / Bv: milligrammes
+A B: milligram's / Bv: milligramme's
 
 # milliliter <verified> (level 40)
 A: milliliter / B: millilitre
@@ -17393,11 +17392,11 @@ A Z: misorganizes / B: misorganises
 # misprizal (level 95)
 A Z: misprizal / B: misprisal
 
-# misprize (level 70)
-A Z: misprize / B: misprise
-A Z: misprized / B: misprised
-A Z: misprizing / B: misprising
-A Z: misprizes / B: misprises
+# misprize <verified> (level 70)
+A B: misprize / B-: misprise
+A B: misprized / B-: misprised
+A B: misprizing / B-: misprising
+A B: misprizes / B-: misprises
 
 # misprizer (level 80)
 A Z: misprizer / B: mispriser
@@ -20974,10 +20973,10 @@ A: pedatrophia / B: paedatrophia
 # pedatrophy (level 95)
 A: pedatrophy / B: paedatrophy
 
-# peddler (level 35)
-_: peddler / _V: pedlar
-_: peddlers / _V: pedlars
-_: peddler's / _V: pedlar's
+# peddler <verified> (level 35)
+A C: peddler / AV B Cv: pedlar
+A C: peddlers / AV B Cv: pedlars
+A C: peddler's / AV B Cv: pedlar's
 
 # pederastic (level 70)
 A: pederastic / B: paederastic
@@ -23165,14 +23164,21 @@ A Z: privatizers / B: privatisers
 # prizable (level 80)
 A C: prizable / B: prisable
 
-# prize (level 20)
-A C: prize / B: prise
-A C: prized / B: prised
-A C: prizer / B: priser
-A C: prizing / B: prising
-A C: prizes / B: prises
-A C: prize's / B: prise's
-A C: prizers / B: prisers
+# prize <hand-checked> (level 20)
+A B: prize | reward
+A B: prizes | reward
+A B: prize's | reward
+A B: prizer | (-) reward
+A B: prizers | (-) reward
+A B: prized | (-) reward
+A B: prizing | (-) reward
+A C: prize / B: prise | otherwise
+A C: prized / B: prised | otherwise
+A C: prizing / B: prising | otherwise
+A C: prizes / B: prises | otherwise
+A C: prizer / B: priser | (-) otherwise
+A C: prize's / B: prise's | (-) otherwise
+A C: prizers / B: prisers | (-) otherwise
 
 # proadvertizing (level 95)
 A Z: proadvertizing / B: proadvertising
@@ -24303,8 +24309,8 @@ A Z: recrystallizing / B: recrystallising
 A Z: recrystallizes / B: recrystallises
 
 # redial <verified> (level 60)
-A C: redialed / B C.: redialled
-A C: redialing / B C.: redialling
+A C: redialed / B Cv: redialled
+A C: redialing / B Cv: redialling
 
 # redialer (level 99)
 A: redialer / B: redialler
@@ -25205,8 +25211,8 @@ A Z: routinizing / B: routinising
 A Z: routinizes / B: routinises
 
 # rowel <verified> (level 50)
-A C.: roweled / B C: rowelled
-A C.: roweling / B C: rowelling
+A Cv: roweled / B C: rowelled
+A Cv: roweling / B C: rowelling
 
 # royalization (level 95)
 A Z: royalization / B: royalisation
@@ -27062,8 +27068,9 @@ A B: speleological / B-: spelaeological
 A: speleothem / B: spelaeothem
 A: speleothems / B: spelaeothems
 
-# spelled (level 10)
-A Bv Z: spelled / B Zv: spelt
+# spelled <verified> (level 10)
+A B. Z: spelled / B Zv: spelt
+A B: spelt | (-) species of wheat
 
 # spermatorrhea (level 80)
 A: spermatorrhea / B: spermatorrhoea
@@ -27124,10 +27131,10 @@ A Z: spiralization's / B: spiralisation's
 A Z: spiralize / B: spiralise
 A Z: spiralizes / B: spiralises
 
-# spirea (level 50)
-_: spirea / _v: spiraea
-_: spireas / _v: spiraeas
-_: spirea's / _v: spiraea's
+# spirea <verified> (level 50)
+A C: spirea / Av B Cv: spiraea
+A C: spireas / Av B Cv: spiraeas
+A C: spirea's / Av B Cv: spiraea's
 
 # spiritize (level 95)
 A Z: spiritize / B: spiritise
@@ -27183,8 +27190,8 @@ A Z: splenectomized / B: splenectomised
 A Z: splenization / B: splenisation
 A Z: splenizations / B: splenisations
 
-# spoiled (level 20)
-A Bv: spoiled / B: spoilt
+# spoiled <verified> (level 20)
+A B. Z: spoiled / B Zv: spoilt
 
 # spumoni (level 50)
 _: spumoni / _V: spumone
@@ -27407,8 +27414,8 @@ A: stomodeum's / B: stomodaeum's
 # stony (level 35)
 _: stony / _V: stoney
 
-# stor (level 70)
-A: stor / B: stour
+# stor <verified> (level 70)
+A: stor / B: stour / Bv: stoor
 
 # storier (level 95)
 A: storier / B: stourier
@@ -28192,10 +28199,10 @@ A Z: Syrianize's / B: Syrianise's
 # syringocele (level 95)
 A: syringocele / B: syringocoele
 
-# syrup (level 35)
-_: syrup / _V: sirup
-_: syrups / _V: sirups
-_: syrup's / _V: sirup's
+# syrup <verified> (level 35)
+A B: syrup / AV: sirup
+A B: syrups / AV: sirups
+A B: syrup's / AV: sirup's
 
 # systematization <verified> (level 55)
 A Z: systematization / B: systematisation
@@ -29463,7 +29470,7 @@ A: tunneled / B: tunnelled
 A: tunneling / B: tunnelling
 A: tunnelings / B: tunnellings
 
-# tunneler (level 60)
+# tunneler <verified> (level 60)
 A: tunneler / B: tunneller
 A: tunnelers / B: tunnellers
 A: tunneler's / B: tunneller's
@@ -30503,8 +30510,8 @@ A: unlaboringest / B: unlabouringest
 A: unlaborings / B: unlabourings
 A: unlaboring's / B: unlabouring's
 
-# unlearned (level 50)
-A Bv Z: unlearned / B Zv: unlearnt
+# unlearned <verified> (level 50)
+A B. Z: unlearned / B Zv: unlearnt
 
 # unlegalized (level 95)
 A Z: unlegalized / B: unlegalised
@@ -32992,9 +32999,9 @@ A C: hemorrhoid / B: haemorrhoid
 A C: hemorrhoids / B: haemorrhoids
 
 # inflection <verified> (level 35)
-A B C: inflection / B.: inflexion
-A B C: inflection's / B.: inflexion's
-A B C: inflections / B.: inflexions
+A B. C Z: inflection / B Zv: inflexion
+A B. C Z: inflection's / B Zv: inflexion's
+A B. C Z: inflections / B Zv: inflexions
 
 # install <verified> (level 10)
 A B: install / Bv: instal

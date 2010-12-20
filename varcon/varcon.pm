@@ -4,8 +4,8 @@ use strict;
 use warnings;
 use Carp;
 
-$SIG{__DIE__} = sub {die $_[0] unless defined $^S;
-                     confess $_[0];};
+#$SIG{__DIE__} = sub {die $_[0] unless defined $^S;
+#                     confess $_[0];};
 
 use Exporter ();
 our @ISA = qw(Exporter);
@@ -17,7 +17,7 @@ my %vmap = ('' =>  -1, '.' => 0, 'v' => 1, 'V' => 2, '-' => 3, 'x' => 8,
 my %rmap = ('' => '', 
             -1 => '', 0 => '.', 1 => 'v', 2 => 'V', 3 => '-', 8 => 'x');
 
-our $MAX_VARIANT_LEVEL = 9;
+our $MAX_VARIANT_LEVEL = 3; # can be up to 9
 
 sub readline_no_expand($;$) {
     local $_ = shift;
@@ -63,7 +63,7 @@ sub flatten(%) {
     my %r;
     foreach my $k (keys %p) {
         next unless defined $p{$k};
-        die "?$k" unless defined $p{$k}[0];
+        #die "?$k" unless defined $p{$k}[0];
         #my @d = @{$p{$k}[0]};
         #$r{$k} = [shift @d];
         #$r{"${k}0"} = [@d] if @d;

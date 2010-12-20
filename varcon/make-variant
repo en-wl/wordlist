@@ -23,6 +23,7 @@ open F, "varcon.txt" or die;
 
 while (<F>) {
     next if varcon::filter $_;
+    next if /\(-\)/;
     &add(varcon::get_words($_));
 }
 

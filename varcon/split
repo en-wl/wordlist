@@ -24,45 +24,61 @@ while (<F>) {
     my %notes;
     my %r = varcon::flatten(varcon::readline($_,\%notes));
     my $cat = $notes{uncommon} ? 'uncommon' : 'normal';
+    #if ($cat eq 'uncommon') {
+    #    print "UNCOMMON: $_\n";
+    #}
     foreach my $k (sort keys %r) {
         #print ">>$k<<\n";
         my ($sp, $vl) = $k =~ /^(.)(.)?$/ or die "Bad: $k";
         $vl = ' ' unless defined $vl;
         foreach my $word (@{$r{$k}}) {
-            $lists_pre{$cat}{$sp}{$vl}{$word}++;
+            $lists_pre{$sp}{$vl}{$cat}{$word}++;
         }
     }
 }
 
 my %lists;
 
-foreach my $cat (sort keys %lists_pre) {
-    foreach my $sp (sort keys %{$lists_pre{$cat}}) {
-        my %already_have;
-        foreach my $vl (sort keys %{$lists_pre{$cat}{$sp}}) {
-            foreach my $word (keys %{$lists_pre{$cat}{$sp}{$vl}}) {
+my $cat = 'normal';
+foreach my $sp (sort keys %lists_pre) {
+    my %already_have;
+    foreach my $vl (sort keys %{$lists_pre{$sp}}) {
+        foreach my $word (keys %{$lists_pre{$sp}{$vl}{$cat}}) {
+            next if $already_have{$word};
+            $already_have{$word}++;
+                push @{$lists{"$sp-$vl-$cat"}}, $word;
+        }
+    }
+}
+
+foreach my $sp (sort keys %lists_pre) {
+    my %already_have;
+    foreach my $vl (sort keys %{$lists_pre{$sp}}) {
+        foreach my $cat ('normal', 'uncommon') {
+            foreach my $word (keys %{$lists_pre{$sp}{$vl}{$cat}}) {
                 next if $already_have{$word};
                 $already_have{$word}++;
-                push @{$lists{$sp}{$vl}}, $word;
+                push @{$lists{"$sp-$vl-$cat"}}, $word if $cat eq 'uncommon';
             }
         }
     }
 }
 
-foreach my $sp (sort keys %lists) {
-    my %already_have;
-    foreach my $vl (sort keys %{$lists{$sp}}) {
-        my $name = $map{$sp};
-        $name .= "-v$vl" if $vl ne ' ';
-        $name .= ".lst";
-        my @words = sort @{$lists{$sp}{$vl}};
-        open F, ">$name";
-        my $prev = '';
-        foreach (@words) {
-            next if $_ eq $prev;
-            $prev = $_;
-            print F "$_\n";
-        }
+
+
+foreach my $k (sort keys %lists) {
+    my ($sp, $vl, $cat) = split '-', $k;
+    my $name = $map{$sp};
+    $name .= "-v$vl" if $vl ne ' ';
+    $name .= "-uncommon" if $cat eq 'uncommon';
+    $name .= ".lst";
+    my @words = sort @{$lists{$k}};
+    open F, ">$name";
+    my $prev = '';
+    foreach (@words) {
+        next if $_ eq $prev;
+        $prev = $_;
+        print F "$_\n";
     }
 }
 

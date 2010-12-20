@@ -3,7 +3,7 @@
 # Find-var 
 # by Kevin Atkinson <kevina@gnu.org>
 #
-# Copyright 2003 by Kevin Atkisnon 
+# Copyright 2003,2010 by Kevin Atkisnon 
 #
 # Permission to use, copy, modify, distribute and sell this script,
 # and the results produces from it is hereby granted without fee,
@@ -17,7 +17,8 @@ open IN, "infl.txt";
 
 use IPC::Open2;
 my($rdrfh, $wtrfh);
-$pid = open2($in, $out, '/usr/bin/aspell soundslike');
+# Needs aspell 0.60.6 or better.
+$pid = open2($in, $out, '/opt/aspell/bin/aspell soundslike');
 
 sub get_soundslike($) {
   my ($word) = @_;
@@ -67,7 +68,10 @@ while (<IN>) {
     foreach (split /, /, $d1) {
       my ($word,$tags,$level,$expl) 
 	= /^([A-Za-z\']+)([~<!?]*)(| [\d.]+)(| {\S+})$/ or die $_;
-      next if $tags =~ /~|\?|!</;
+      #next if $tags =~ /~|\?|!</;
+      #next if $tags =~ /!/;
+      #$level++ if $tags =~ /</; 
+      next if $tags ne '' || $level >= 2;
       push @{$data{$expl}}, [$word, $level];
       $c++;
     }
@@ -77,6 +81,7 @@ while (<IN>) {
       next if @$_ == 1;
       add (map {$_->[0]} @$_);
       add_wroot $root, (map {$_->[0]} @$_);
+      # OK, so what the devil is this doing!
       my $base = shift @$_;
       my $base_sl = get_soundslike $base->[0];
       die "$base->[0] $base->[1]" unless $base->[1] == 0;

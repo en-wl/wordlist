@@ -11081,7 +11081,7 @@ dick N: dicks
 -dick V: dicked  dicking  dicks
 -dicker N: dickers
 dicker V: dickered  dickering  dickers
--dickey A: dickier  dickiest
+-dickey A: -dickier  -dickiest
 dickey N: dickeys
 dicky A: -dickier  -dickiest
 dicky N: dickies
@@ -15660,7 +15660,7 @@ fondle V: fondled  fondling  fondles
 fondly A:
 fondness N: ~fondnesses
 -fondu A:
-fondu N: ~fondus
+fondu N: fondus
 fondue N: fondues
 font N: fonts
 fontanel N: fontanels
@@ -32916,7 +32916,7 @@ racketeer N: racketeers
 racketeer V: racketeered  racketeering  racketeers
 racketeering N: ~racketeerings
 raconteur N: raconteurs
-racoon N: racoons
+racoon N: racoons | racoon
 racquet N: racquets
 racquetball N: racquetballs
 racy A: racier  raciest
@@ -35737,7 +35737,7 @@ savor V: savored  savoring  savors
 savoriness N: ~savorinesses
 savory A: savorier  savoriest
 savory N: savories
-savour N: savours
+savour N: ~savours
 savour V: savoured  savouring  savours
 savoury A: savourier  savouriest
 savoury N: savouries
@@ -37911,7 +37911,7 @@ smokestack N: smokestacks
 smokiness N: ~smokinesses
 smoking N: ~smokings
 smoky A: smokier  smokiest
-smolder N: smolders
+smolder N: ~smolders
 smolder V: smoldered  smoldering  smolders
 smooch N: smooches
 smooch V: smooched  smooching  smooches

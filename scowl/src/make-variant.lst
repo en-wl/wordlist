@@ -112,11 +112,14 @@ cat r/alt12dicts/nonamer-yes.lst      \
   > working/variant-nonamer-yes.lst
 
 #
-# Special rule for british list
+# Special rule for british and canadian list
 #
 
 cat r/varcon/british.lst r/varcon/british-v0.lst\
   | sort -u > r/varcon/british+.lst
+
+cat r/varcon/canadian.lst r/varcon/canadian-v0.lst\
+  | sort -u > r/varcon/canadian+.lst
 
 #
 # Create the initial variant lists

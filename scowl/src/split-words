@@ -12,7 +12,8 @@ comm -12 working/words.$1 r/varcon/british+.lst \
 comm -12 working/words.$1 r/varcon/british_z.lst \
   > working/british_z-all.$1.pre
 
-comm -12 working/words.$1 r/varcon/canadian.lst \
+# note special list, see make-variant.lst
+comm -12 working/words.$1 r/varcon/canadian+.lst \
   > working/canadian-all.$1.pre
 
 comm -12 working/words.$1 working/variant_0.lst   \

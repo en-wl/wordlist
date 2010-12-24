@@ -1,0 +1,16 @@
+M-W things they are variants but Ox thinks they are separate words
+and I agree:
+  _: archetypal / _v: archetypical
+  _: symmetrical / _v: symmetric
+  _: teenage / _v: teenaged
+
+This one is a little less certain, Ox Can things thare are variants, but I 
+killed it anyway.
+  _: alphabetical / _v: alphabetic
+
+
+# sweepstakes <verified> (level 35)
+A Bv C: sweepstakes / AV B Cv: sweepstake / AV: sweep-stake
+## $$$ pronounced differently
+
+

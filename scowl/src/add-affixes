@@ -37,7 +37,7 @@ while (<F>) {
   my ($d,$w,$p,$a) = /^([-@]?)(\w+) (.).*: ?(.*)$/ or die;
   $possessive{$w} = "$w\'s\n" if $p eq 'N' && ($d eq '' || $use_all);
   next if $use_all;
-  my @a = $a =~ /([~@-]*\w+)/g;
+  my @a = $a =~ /([-~@\w]+)/g;
   @a = map {"$d$_"} @a if ($d);
   my (@a0,@a1);
   foreach (@a) {if (s/^[~-]//) {push @a0, $_} else {push @a1, $_}}

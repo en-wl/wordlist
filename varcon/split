@@ -39,6 +39,31 @@ while (<F>) {
 
 my %lists;
 
+my %sp_tally;
+my $sp_count = 0;
+foreach my $sp (sort keys %lists_pre) {
+    next if $sp eq '_';
+    $sp_count++;
+    foreach my $cat ('normal', 'uncommon') {
+        foreach my $word (keys %{$lists_pre{$sp}{' '}{$cat}}) {
+            $sp_tally{$cat}{$word}++;
+        }
+    }
+}
+sub in_all_sps($$$$) {
+    my ($sp,$vl,$cat,$word) = @_;
+    return 0 if $sp eq '_' || $vl ne ' ';
+    return defined $sp_tally{$cat}{$word} && $sp_tally{$cat}{$word} == 4;
+}
+
+foreach my $cat ('normal', 'uncommon') {
+    foreach my $word (sort keys %{$sp_tally{$cat}}) {
+        next unless (defined $sp_tally{$cat}{$word} 
+                     && $sp_tally{$cat}{$word} == 4);
+        push @{$lists{"Q- -$cat"}}, $word;
+    }
+}
+
 my $cat = 'normal';
 foreach my $sp (sort keys %lists_pre) {
     my %already_have;
@@ -46,7 +71,8 @@ foreach my $sp (sort keys %lists_pre) {
         foreach my $word (keys %{$lists_pre{$sp}{$vl}{$cat}}) {
             next if $already_have{$word};
             $already_have{$word}++;
-                push @{$lists{"$sp-$vl-$cat"}}, $word;
+            next if in_all_sps($sp,$vl,$cat,$word);
+            push @{$lists{"$sp-$vl-$cat"}}, $word;
         }
     }
 }
@@ -58,17 +84,16 @@ foreach my $sp (sort keys %lists_pre) {
             foreach my $word (keys %{$lists_pre{$sp}{$vl}{$cat}}) {
                 next if $already_have{$word};
                 $already_have{$word}++;
+                next if in_all_sps($sp,$vl,$cat,$word);
                 push @{$lists{"$sp-$vl-$cat"}}, $word if $cat eq 'uncommon';
             }
         }
     }
 }
 
-
-
 foreach my $k (sort keys %lists) {
     my ($sp, $vl, $cat) = split '-', $k;
-    my $name = $map{$sp};
+    my $name = $sp eq 'Q' ? 'common' : $map{$sp};
     $name .= "-v$vl" if $vl ne ' ';
     $name .= "-uncommon" if $cat eq 'uncommon';
     $name .= ".lst";

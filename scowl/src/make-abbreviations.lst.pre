@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cat r/special/roman-numerals | tr 'a-z' 'A-Z' \
   | cat - r/special/roman-numerals            \

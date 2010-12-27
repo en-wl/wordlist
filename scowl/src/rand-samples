@@ -5,7 +5,7 @@ use Text::Wrap;
 $Text::Wrap::columns = 78;
 
 foreach my $f (10,20,35,40,50,55,60,70,80,95) {
-    my $l = `cat final/{american,english}-words.$f | fgrep -v \\' | perl src/rand-sample.pl 25`;
+    my $l = `cat final/american-words.$f final/english-words.$f | fgrep -v \\' | perl src/rand-sample.pl 25`;
     chop $l;
     @w = split / /, $l;
     die unless @w == 25;

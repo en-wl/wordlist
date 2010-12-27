@@ -8,8 +8,8 @@ my @data;
 my $c = 0;
 my $hc = 0;
 foreach my $f (10,20,35,40,50,55,60,70,80,95) {
-  my $n = `cat final/{american,english}-{words,abbreviations,contractions}.$f 2> /dev/null | wc -l ` + 0;
-  my $p = `cat final/{american,english}-{proper-names,upper}.$f 2> /dev/null | wc -l` + 0;
+  my $n = `bash -c 'cat final/{american,english}-{words,abbreviations,contractions}.$f 2> /dev/null | wc -l'` + 0;
+  my $p = `bash -c 'cat final/{american,english}-{proper-names,upper}.$f 2> /dev/null | wc -l'` + 0;
   my $c0 = $c;
   $c = $c + $n + $p;
   my $h;

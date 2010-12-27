@@ -9,14 +9,18 @@ while(<STDIN>) {
 sub valid_entry ( $ ){local $_ = $_[0]; /^[A-Za-z\']+$/ && exists $words{$_}}
 
 foreach my $f (qw(working/variant_0.lst working/variant_1.lst 
-		  working/variant_2.lst r/varcon/american.lst
-                  r/varcon/british.lst r/varcon/british_z.lst))
+                  working/variant_2.lst
+                  working/british_variant_0.lst working/british_variant_1.lst
+                  working/canadian_variant_0.lst working/canadian_variant_1.lst
+                  r/varcon/american.lst
+                  r/varcon/british.lst r/varcon/british_z.lst
+                  r/varcon/canadian.lst))
 {
-  open F, $f or die "Unable to open $f\n";
-  while (<F>) {
-    my (@words) = split /[\t\n]+/;
-    $know_about{$_} = 1 foreach @words;
-  }
+    open F, $f or die "Unable to open $f\n";
+    while (<F>) {
+        chop;
+        $know_about{$_} = 1;
+    }
 }
 
 open F, "r/varcon/voc.tab" or die;

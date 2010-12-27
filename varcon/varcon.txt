@@ -21,7 +21,7 @@ A Z: abolitionized / B: abolitionised
 # abolitionizing (level 95)
 A Z: abolitionizing / B: abolitionising
 
-# abridgment <hand-checked> (level 40)
+# abridgment <verified> (level 40)
 A BV Cv: abridgment / B C: abridgement
 A BV Cv: abridgments / B C: abridgements
 A BV Cv: abridgment's / B C: abridgement's
@@ -383,7 +383,7 @@ A Z: aggrandizer / B: aggrandiser
 A Z: aggrandizers / B: aggrandisers
 A Z: aggrandizer's / B: aggrandiser's
 
-# aging <hand-checked> (level 20)
+# aging <verified> (level 20)
 A Bv C: aging / Av B Cv: ageing
 A Bv C: agings / Av B Cv: ageings
 A Bv C: aging's / Av B Cv: ageing's
@@ -767,7 +767,7 @@ A Z: Americanizer / B: Americaniser
 A Z: Americanizers / B: Americanisers
 A Z: Americanizer's / B: Americaniser's
 
-# amid <hand-checked> (level 35)
+# amid <verified> (level 35)
 A B: amid / Av Bv: amidst # amidst literary variant according to oxford dictionaries
 
 # ammocete (level 80)
@@ -2781,7 +2781,7 @@ A: blennemesis / B: blennoemesis
 # blennorrhea (level 80)
 A: blennorrhea / B: blennorrhoea
 
-# blond <hand-checked> (level 35)
+# blond <verified> (level 35)
 A Bv C: blond / Av B Cv: blonde | form generally used
 A Bv C: blonds / Av B Cv: blondes | form generally used
 A Bv C: blond's / Av B Cv: blonde's | form generally used
@@ -4190,7 +4190,7 @@ A: checkerboard / B: chequerboard
 A: checkerboards / B: chequerboards
 A: checkerboard's / B: chequerboard's
 
-# check <hand-checked> (level 10)
+# check <verified> (level 10)
 A CV: check / B C: cheque | bank
 A CV: checked / B C: chequed | bank
 A CV: checking / B C: chequing | bank
@@ -4869,19 +4869,21 @@ A Cv: colorant's / B C: colourant's
 A: colorate / B: colourate
 
 # coloration <verified> (level 50)
-A B: coloration / Bv: colouration | ?
-A B: colorations / Bv: colourations | ?
-A B: coloration's / Bv: colouration's | ?
+A B C: coloration / B. Cv: colouration
+A B C: colorations / B. Cv: colourations
+A B C: coloration's / B. Cv: colouration's
+## OED has coloration as the prefered spelling and discolouration as a
+## variant for British Engl or some reason
 
 # colorational (level 95)
-A B: colorational / Bv: colourational | ?
-A B: colorationaler / Bv: colourationaler | ?
-A B: colorationalest / Bv: colourationalest | ?
+A B: colorational / Bv: colourational
+A B: colorationaler / Bv: colourationaler
+A B: colorationalest / Bv: colourationalest
 
 # colorationally (level 95)
-A B: colorationally / Bv: colourationally | ?
-A B: colorationallier / Bv: colourationallier | ?
-A B: colorationalliest / Bv: colourationalliest | ?
+A B: colorationally / Bv: colourationally
+A B: colorationallier / Bv: colourationallier
+A B: colorationalliest / Bv: colourationalliest
 
 # colorative (level 95)
 A: colorative / B: colourative
@@ -7305,7 +7307,7 @@ A Z: digitizer / B: digitiser
 A Z: digitizers / B: digitisers
 A Z: digitizer's / B: digitiser's
 
-# dike <hand-checked> (level 35)
+# dike <verified> (level 35)
 A Bv C: dike / AV B Cv: dyke
 A Bv C: dikes / AV B Cv: dykes
 A Bv C: dike's / AV B Cv: dyke's
@@ -7417,8 +7419,7 @@ A: discolorated / B: discolourated
 A B C: discoloration / B. Cv: discolouration
 A B C: discolorations / B. Cv: discolourations
 A B C: discoloration's / B. Cv: discolouration's
-## Ox has discoloration as the prefered spelling and discolouration as a
-## variant for Brit. for some reason
+## See note for coloration
 
 # discoloredness (level 95)
 A: discoloredness / B: discolouredness
@@ -7669,7 +7670,7 @@ A Z: dissyllabizing / B: dissyllabising
 A Z: dissympathize / B: dissympathise
 A Z: dissympathizes / B: dissympathises
 
-# distill <hand-checked> (level 35)
+# distill <verified> (level 35)
 A C: distill / AV B Cv: distil
 A B: distilled
 A B: distilling
@@ -7881,7 +7882,7 @@ A: dracenas / B: dracaenas
 # dracenaceae (level 95)
 A: dracenaceae / B: dracaenaceae
 
-# draft <hand-checked> (level 20)
+# draft <verified> (level 20)
 A C: draft / B: draught
 A B C: drafted / BV: draughted
 A B C: drafting / BV: draughting
@@ -10509,16 +10510,16 @@ A Bv: forgathering / Av B: foregathering
 A Bv: forgathers / Av B: foregathers
 
 # forgo <verified> (level 35)
-A: forgo / AV Bv: forego | :1
-A: forwent / AV Bv: forewent | :1
-A: forgone / AV Bv: foregone | :1
-A: forgoing / AV Bv: foregoing | :1
-A: forgoes / AV Bv: foregoes | :1
-A: forego | :2
-A: forewent | :2
-A: foregone | :2
-A: foregoing | :2
-A: foregoes | :2
+A B: forgo / AV Bv: forego | :1
+A B: forwent / AV Bv: forewent | :1
+A B: forgone / AV Bv: foregone | :1
+A B: forgoing / AV Bv: foregoing | :1
+A B: forgoes / AV Bv: foregoes | :1
+A B: forego | :2
+A B: forewent | :2
+A B: foregone | :2
+A B: foregoing | :2
+A B: foregoes | :2
 
 # formalizable (level 80)
 A Z: formalizable / B: formalisable
@@ -15588,7 +15589,7 @@ A Z: liberalizer / B: liberaliser
 A Z: liberalizers / B: liberalisers
 A Z: liberalizer's / B: liberaliser's
 
-# license <hand-checked> (level 20)
+# license <verified> (level 20)
 A: license / B: licence | <N>
 A: licenses / B: licences | <N>
 A: license's / B: licence's | <N>
@@ -16511,7 +16512,7 @@ A Z: matronized / B: matronised
 A Z: matronizing / B: matronising
 A Z: matronizes / B: matronises
 
-# mat <hand-checked> (level 35)
+# mat <verified> (level 35)
 A Bv C: matte / Av: mat / AV B: matt | without lustre; cardboard ... picture
 A: mat / A. Bv C: matte / AV B: matt | make matte # Ox Amer thinks its matte, M-W: mat
 A: mats / A. Bv C: mattes / AV B: matts | make matte
@@ -22618,7 +22619,7 @@ A Z: powellized / B: powellised
 A Z: powellizing / B: powellising
 A Z: powellizes / B: powellises
 
-# practice <hand-checked> (level 10)
+# practice <verified> (level 10)
 A B C: practice / AV Cv: practise | <N>
 A B C: practices / AV Cv: practises | <N>
 A Cv: practice / AV B C: practise | <V>
@@ -23205,7 +23206,7 @@ A Z: privatizers / B: privatisers
 # prizable (level 80)
 A C: prizable / B: prisable
 
-# prize <hand-checked> (level 20)
+# prize <verified> (level 20)
 A B: prize | reward
 A B: prizes | reward
 A B: prize's | reward
@@ -24931,13 +24932,15 @@ A Z: revalorizing / B: revalorising
 A Z: revalorizes / B: revalorises
 
 # revaporization (level 95)
-A Z: revaporization / B: revapourisation | !
-A Z: revaporizations / B: revapourisations | !
-A Z: revaporization's / B: revapourisation's | !
+A Z: revaporization / B: revapourisation
+A Z: revaporizations / B: revapourisations
+A Z: revaporization's / B: revapourisation's
+## see note for "vaporize"
 
 # revaporize (level 95)
-A Z: revaporize / B: revaporise | !
-A Z: revaporizes / B: revaporises | !
+A Z: revaporize / B: revaporise
+A Z: revaporizes / B: revaporises
+## see note for "vaporize"
 
 # revel <verified> (level 35)
 A: reveled / B: revelled
@@ -25228,15 +25231,6 @@ A Z: romanticize / B: romanticise
 A Z: romanticized / B: romanticised
 A Z: romanticizing / B: romanticising
 A Z: romanticizes / B: romanticises
-
-# röntgenization (level 80)
-A Z: röntgenization / B: röntgenisation
-
-# röntgenize (level 80)
-A Z: röntgenize / B: röntgenise
-A Z: röntgenized / B: röntgenised
-A Z: röntgenizing / B: röntgenising
-A Z: röntgenizes / B: röntgenises
 
 # ropy (level 55)
 _: ropy / _V: ropey
@@ -26344,7 +26338,7 @@ _: shard's / _v: sherd's | pottery fragments
 _: sharpie / _v: sharpy
 _: sharpie's / _v: sharpy's
 
-# sheik <hand-checked> (level 35)
+# sheik <verified> (level 35)
 A B Cv: sheikh / Av Bv C: sheik / AV Bv Cv: shaykh / AV: shaikh | Arab chief
 A B Cv: sheikhs / Av Bv C: sheiks / AV Bv Cv: shaykhs / AV: shaikhs | Arab chief
 A B Cv: sheikh's / Av Bv C: sheik's / AV Bv Cv: shaykh's / AV: shaikh's | Arab chief
@@ -28457,7 +28451,7 @@ A Z: Taylorize's / B: Taylorise's
 A: te / B: tae
 A: tes / B: taes
 
-# teasel <hand-checked> (level 50)
+# teasel <verified> (level 50)
 A B: teasel / AV Bv: teazle / AV Bv: teazel | <N>
 A B: teaseling / Av: teaselling | <N>
 A B: teaselings / Bv: teasellings | <N>
@@ -28500,7 +28494,7 @@ A Z: technicized / B: technicised
 A Z: technicizing / B: technicising
 A Z: technicizes / B: technicises
 
-# Technicolor <hand-checked> (level 50)
+# Technicolor <verified> (level 50)
 A B: Technicolor | trademark
 A B: Technicolors | trademark
 A B: Technicolor's | trademark
@@ -29203,7 +29197,7 @@ A Z: tranquilization / B: tranquilisation
 A Z: tranquilizations / B: tranquilisations
 A Z: tranquilization's / B: tranquilisation's
 
-# tranquilize <hand-checked> (level 35)
+# tranquilize <verified> (level 35)
 A: tranquilize / AV Cv Z: tranquillize / B CV: tranquillise
 A: tranquilized / AV Cv Z: tranquillized / B CV: tranquillised
 A: tranquilizing / AV Cv Z: tranquillizing / B CV: tranquillising
@@ -31558,9 +31552,10 @@ A Z: unutilizable's / B: unutilisable's
 A Z: unutilized / B: unutilised
 
 # unvaporized (level 95)
-A Z: unvaporized / B: unvaporised | !
-A Z: unvaporizeds / B: unvaporiseds | !
-A Z: unvaporized's / B: unvaporised's | !
+A Z: unvaporized / B: unvaporised
+A Z: unvaporizeds / B: unvaporiseds
+A Z: unvaporized's / B: unvaporised's
+## see note for "vaporize"
 
 # unvectorizable (level 99)
 A Z: unvectorizable / B: unvectorisable
@@ -31867,27 +31862,35 @@ A: vaporishnesses / B: vapourishnesses
 A: vaporishness's / B: vapourishness's
 
 # vaporizable (level 80)
-A Z: vaporizable / B: vaporisable | !
-A Z: vaporizabler / B: vaporisabler | !
-A Z: vaporizables / B: vaporisables | !
-A Z: vaporizablest / B: vaporisablest | !
-A Z: vaporizable's / B: vaporisable's | !
+A Z: vaporizable / B: vaporisable
+A Z: vaporizabler / B: vaporisabler
+A Z: vaporizables / B: vaporisables
+A Z: vaporizablest / B: vaporisablest
+A Z: vaporizable's / B: vaporisable's
+## see note vaporize
 
 # vaporization <verified> (level 50)
-A Z: vaporization / B: vaporisation | !
-A Z: vaporizations / B: vaporisations | !
-A Z: vaporization's / B: vaporisation's | !
+A Z: vaporization / B: vaporisation
+A Z: vaporizations / B: vaporisations
+A Z: vaporization's / B: vaporisation's
+## see note for "vaporize"
 
 # vaporize <verified> (level 35)
-A Z: vaporize / B: vaporise | !
-A Z: vaporized / B: vaporised | !
-A Z: vaporizing / B: vaporising | !
-A Z: vaporizes / B: vaporises | !
+A Z: vaporize / B: vaporise
+A Z: vaporized / B: vaporised
+A Z: vaporizing / B: vaporising
+A Z: vaporizes / B: vaporises
+## "Vapor" is spelled "Vapour" unless the word is "vaporize".  This
+## seams odd to be, but I could not find any evidence that "vapourize"
+## or "vapourise" is a legal word, although I could find some evidence
+## it was used.  Nevertheless since "vapourize/-ise" doesn't seam to
+## be a valid word, this spelling was not included.
 
 # vaporizer (level 50)
-A Z: vaporizer / B: vaporiser | !
-A Z: vaporizers / B: vaporisers | !
-A Z: vaporizer's / B: vaporiser's | !
+A Z: vaporizer / B: vaporiser
+A Z: vaporizers / B: vaporisers
+A Z: vaporizer's / B: vaporiser's
+## see note for "vaporize"
 
 # vaporless (level 95)
 A: vaporless / B: vapourless
@@ -32609,7 +32612,7 @@ A Z: Whitmanize / B: Whitmanise
 A Z: Whitmanizes / B: Whitmanises
 A Z: Whitmanize's / B: Whitmanise's
 
-# whiz <hand-checked> (level 35)
+# whiz <verified> (level 35)
 A BV C: whiz / Av B Cv: whizz | :1
 A B: whizzes | :1
 A BV C: whiz's / Av B Cv: whizz's | :1
@@ -32834,7 +32837,7 @@ A Z: acclimatizes / B: acclimatises
 A B C: almanac / Bv: almanack
 A B C: almanacs / Bv: almanacks
 
-# analog <hand-checked> (level 10)
+# analog <verified> (level 10)
 A B: analogue / A.: analog | analogous
 A B: analogue's / A.: analog's | analogous
 A B: analogues / A.: analogs | analogous
@@ -32872,16 +32875,16 @@ A B: battleaxe's / Av: battleax's
 A B C: biased / Av Bv: biassed
 A B C: biasing / Av Bv: biassing
 
-# binge <hand-checked> (level 40)
+# binge <verified> (level 40)
 A B: bingeing / Av: binging
 
-# breathalyzer <hand-checked> (level 55)
+# breathalyzer <verified> (level 55)
 A: breathalyzer / B: breathalyser
 A: breathalyzer's / B: breathalyser's
 A B: Breathalyzer | trademark
 A: breathalyzers / B: breathalysers
 
-# bus <hand-checked> (level 20)
+# bus <verified> (level 20)
 A B: buses / AV: busses
 A Bv C: busing / AV B: bussing
 A Bv C: busing's / AV B: bussing's
@@ -32967,16 +32970,16 @@ A: philter / B: philtre
 A: philter's / B: philtre's
 A: philters / B: philtres
 
-# flutist <hand-checked> (level 35)
+# flutist <verified> (level 35)
 A C: flutist / B C.: flautist
 A C: flutist's / B C.: flautist's
 A C: flutists / B C.: flautists
 
-# gas <hand-checked> (level 35)
+# gas <verified> (level 35)
 A B: gases / AV: gasses | :1
 A B: gases | :2
 
-# gauge <hand-checked> (level 35)
+# gauge <verified> (level 35)
 A B: gauge / AV B-: gage | :1
 A B: gauge's / AV B-: gage's | :1
 A B: gauged / AV B-: gaged | :1
@@ -32992,10 +32995,10 @@ A B: gages | (-) archaic; nautical, historical
 A B C: glamour / Av Cv: glamor
 A B C: glamour's / Av Cv: glamor's
 
-# gluing <hand-checked> (level 35)
+# gluing <verified> (level 35)
 A B: gluing / AV Bv: glueing
 
-# grams <hand-checked> (level 35)
+# grams <verified> (level 35)
 A B C: gram / Bv: gramme | unit of mass
 A B C: gram's / Bv: gramme's | unit of mass
 A B C: grams / Bv: grammes | unit of mass
@@ -33122,7 +33125,7 @@ A C: pediatrics / B: paediatrics
 # pizzazz (level 40)
 A: pizzazz / B: pzazz
 
-# pouf <hand-checked> (level 55)
+# pouf <verified> (level 55)
 A B: pouffe / Av Bv: pouf | :1
 A B: pouffe's / Av Bv: pouf's | :1
 A B: pouf | :2
@@ -33164,7 +33167,7 @@ A Cv: sulfide / B C: sulphide
 A Cv: sulfide's / B C: sulphide's
 A Cv: sulfides / B C: sulphides
 
-# ton <hand-checked> (level 20)
+# ton <verified> (level 20)
 A B: ton
 A B: ton's
 A B: tonne | metric ton

@@ -9,33 +9,34 @@ scowl:
 clean:
 	$(MAKE) -C scowl clean
 
-prep: enable enable-sup ukacd yawl mwords census uk-freq-class
+prep: .enable .enable-sup .ukacd .yawl .mwords .census .uk-freq-class
 
-enable: other/enable2k.zip
-	mkdir -p enable
+.enable: other/enable2k.zip
 	unzip -LL other/enable2k.zip -d enable
+	touch .enable
 
-enable-sup: other/supp2k.zip
-	mkdir -p enable-sup
+.enable-sup: other/supp2k.zip
 	unzip -LL other/supp2k.zip -d enable-sup
 	cp other/supp2k-nopos.lst enable-sup/nopos.lst
+	touch .enable-sup
 
-ukacd: other/ukacd17.zip
-	mkdir -p ukacd
+.ukacd: other/ukacd17.zip
 	unzip -LL other/ukacd17.zip -d ukacd
+	touch .ukacd
 
-yawl: other/yawl-0.2.tar.gz
-	mkdir -p yawl
+.yawl: other/yawl-0.2.tar.gz
 	tar -x -v -z -C yawl -f other/yawl-0.2.tar.gz --strip-components=1
+	touch .yawl
 
-mwords: other/mwords.tar.gz
+.mwords: other/mwords.tar.gz
 	tar xfvz other/mwords.tar.gz
 	touch mwords
+	touch .mwords
 
-census: other/census-names-1990.zip
-	mkdir -p census
+.census: other/census-names-1990.zip
 	unzip other/census-names-1990.zip -d census
+	touch .census
 
-uk-freq-class: other/wlist.html.gz
-	mkdir -p uk-freq-class
+.uk-freq-class: other/wlist.html.gz
 	gunzip -c other/wlist.html.gz > uk-freq-class/wlist.html
+	touch .uk-freq-class

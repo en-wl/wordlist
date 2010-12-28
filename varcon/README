@@ -1,113 +1,171 @@
 Variant Conversion Info (VARCON)
 
-Revision 4.1
+Revision 5.0 (SVN revision 99)
 
-August 10, 2004
+December 27, 2010
 
-Copyright 2000-2004 by Kevin Atkinson (kevina@gnu.org)
+Copyright 2000-2010 by Kevin Atkinson (kevina@gnu.org)
 
-This package contains tables to convert between American, British, and
-Canadian spellings and vocabulary as well as well as a table listing the 
-equivalent forms of other variants.
+This package contains information to convert between American,
+British, and Canadian spellings and vocabulary as well and other
+variant information.
 
 The latest version can be found at http://wordlist.sourceforge.net/.
 
-<<< NEW TEXT
+The main data file is varcon.txt.  It contains information on the
+preferred American, British, and Canadian spelling of a word as well
+as other variant information.
 
-The varcon.txt file:
-  A = American
-  B = British "ise" spelling
-  Z = British "ize" spelling (OED Spelling)
-  C = Canadian
-  _ = Other (Variant info based on American dictionaries, never used
-             with any of the above)
+Each line contains a mapping between the various spellings of a word.
+Words are tageed to indicate where the spelling is used, and each
+word/tag pair is separated with a " / ".  For example in the line:
+  A Cv: acknowledgment / Av B C: acknowledgement
+"acknowledgment" and "acknowledgement" are two spellings of the same
+word and "A", "Cv", "B", etc are the tags.  Tags are seperated by
+spaces and the group of tags is seperated from the word with a ": ".
+Here, "acknowledgment" is the preferred American spelling (as
+indicated by the "A") of the word, and "acknowledgement" is the
+preferred Canadian and British spelling ("B" and "C").  However the
+American spelling is sometimes used in Canada (as indicated by "Cv",
+where the lowercase "v" indicated a variant form) and the British
+spelling is sometimes used in America (as indicated the the "Av").
 
-Variants marked
-  . = equal
-  v = variant (orig. v or V)
-  V = seldom used variant (m-w also...)
-  - = possible variant (orig. VV)
-  x = improper variant (should not use)
- 
--- If more than one 'A' (or 'B' ...) on a line than equal variants with
--- slight preference given the the first one listed.
+More generally each tag consists of a spelling category (for example
+"A") followed possible by a variant indicator.  The spelling
+categories are as follows:
+  A: American
+  B: British "ise" spelling
+  Z: British "ize" spelling or OED prefered Spelling
+  C: Canadian
+  _: Other (Variant info based on American dictionaries, never used
+            with any of the above).
+and the variants tags are as follows:
+  .: equal
+  v: variant
+  V: seldom used variant
+  -: possible variant, should generally not used
+  x: improper variant (should not use)
 
-Sometimes the variant used depends on the meaning, in this case the
-same word may be on seperate lines, explaination often given after |.
+The "." or equal variant tags are reserved for special cases when
+there is little agreement between dictionaries or when I think the
+dictionary is wrong.  The "v" indicator is used for most words marked
+as variants in the dictionary.  However, some variants will be demoted
+to a "V".  For example, if the variant is marked as "also" by
+Merriam-Webster, or also if only some dictionaries acknowledge the
+existence the variant.  "-" is used when the variant is generally not
+listed is the dictionary but I could find some evidence of it use, or
+when it is it marked as as a archaic spelling for the word.  The "x"
+is used when the spelling is almost generally considered a
+misspelling, and is only included for completeness.
 
-ends with "| -" means for an obscure meaning of the word
+For ease of reading and maintaining the data file, each line is
+grouped in a cluster of closely related words.  Each cluster is
+uniquely identifed by a headword, which is generally the American
+spelling of word on the first line of the cluster.  Each cluster is
+started with a '#' and is followed by the headword with some
+additional information after it.  For example the cluster for
+acknowledgment is:
+  # acknowledgment <verified> (level 35)
+  A Cv: acknowledgment / Av B C: acknowledgement
+  A Cv: acknowledgments / Av B C: acknowledgements
+  A Cv: acknowledgment's / Av B C: acknowledgement's
+The "<verified>" tag will be explained latter, and "(level 35)"
+indictated what level in SCOWL (see http://wordlist.sourceforge.net) 
+the headword is found in.  The levels generaly mean the following:
+  <= 35: Very common word
+  <= 70: Can be found in the dictionary
+     80: Likely a valid word, can likely be found in an
+         unabridged dictionary
+   > 80: May not even be a legal word
 
->>> ORIG TEXT
+Sometimes the spelling of a word depends on the usage.  If so the word
+is listed more than once within a cluster, with any usage information
+being indicated after a " | ".  For example here is part of the cluser
+for prize:
+  A B: prize | reward
+  A B: prizes | reward
+  A C: prize / B: prise | otherwise
+  A C: prizes / B: prises | otherwise
+which indicated than the preferred spelling of prize is always with a
+"z" when meaning a reward, but otherwise is spelled with a "s" is
+British English.  In the example above a brief definition of the word
+is given, but often no such attempt is made, and the definition simply
+consists of a number, for example:
+  A B: sake | :1
+  A C: sake / Av B Cv: saki | :2
 
-The abbc.tab contains mappings between American, British with "ise"
-spelling, British with "ize" spelling (OED Spelling), and Canadian
-spellings.  The fields are separated by a tab character and have the
-Unix EOL character.  The first four columns are the spellings
-respectively.
+Sometimes part-of-speach (POS) info is given to help distinguish which
+form is used.  For example:
+  A B C: practice / AV Cv: practise | <N>
+  A Cv: practice / AV B C: practise | <V>
+POS info is always given given in the form "<POS>" and if a definition
+is also given the the POS info is always first.  The POS tags used are as
+follows:
+  <N>: Noun
+  <V>: Verb
+  <Adj>: Adjective
+  <Adv>: Adverb
 
-The last column is used for miscellaneous notes.  With the following
-meaning (C-OED = Compact Oxford English Dictionary of Current English)
-  A: American words that are also used in British / Canadian spellings
-  a: Like A but it not really considered a separate word, rather 
-     a variant.  For example "spelled" vs "spelt".
-  B: British words that are also used in American / Canadian spellings
-  b: Like B but a variant.
-  VV: According to C-OED the American spelling is the correct one,
-      however, I found some evidence that the British spelling is
-      still used.
-  V: According to C-OED the American spelling is the preferred form,
-      however, the British spelling is also correct
-  V?: Same as V, but it seamed inconsistent to me.  Explained below.
-  v: According to C-OED the British spelling is the preferred form,
-      however the American spelling is also correct.
-  !: Explained below.
+A "(-)" before the definition indicated a rarly used or archaic form
+of a word, for example:
+  A B: bark | :1
+  A: bark / Av B: barque | (-) ship
 
-I am not British, so I don't know the correct Britsh spelling of
-words, however a few entries in the C-OED seamed odd to me.  "Color"
-is generally spelled "Colour", unless the word is "coloration", as the
-C-OED marked "colouration" as a variant.  Thus I marked the entry in
-the table with a "V?" instead of a "V?".  "Vapor" is spelled "Vapour"
-unless the word is "vaporize".  This seams odd to be, but I could not
-find any evidence that "vapourize" or "vapourise" is a legal word,
-although I could find some evidence it was used.  Nevertheless since
-"vapourize/-ise" doesn't seam to be a valid word, this spelling was
-not included.  Effected entries are marked with a "!"
+Misc. notes on a particular form of a word are given after a "#" on
+the same line.  Misc. notes for the cluster are given at the end of
+the cluster and are prefixed with "##", for example:
+  # coloration <verified> (level 50)
+  A B C: coloration / B. Cv: colouration
+  A B C: colorations / B. Cv: colourations
+  A B C: coloration's / B. Cv: colouration's
+  ## OED has coloration as the prefered spelling and discolouration as a
+  ## variant for British Engl or some reason
+In the notes OED stands for Oxford Dictionary of English, "Ox" is used
+for any Oxford dictionary, and "M-W" for Merriam-Webster.
 
-===
-
-The file voc.tab is like abbc.tab except that it converts between
-vocabulary instead of spelling.  If more than one word if often uses to
-describe the same thing the words are separated with commas.  The last
-column contains additional notes on when the word is used.  Unlike
-abbc.tab it is generally not suitable for automatic conversion.
+Earlier versions of varcon contained numerous errors.  With version
+5.0 massive effort has been made to correct many of these errors.
+Clusters that have undergone some form of verification (and likely
+correction) are marked with "<verified>".  As of version 5.0, most
+clusters with headwords word in common usage (SCOWL level 35 and
+below) should now be checked, as well as many others.  No effort was
+made to check clusters with headwords in SCOWL level 80 and above,
+many of those entries are unlikely to be in the dictionary anyway.
 
 The file variant-also.tab contains additional mappings between various
-spellings of a word which are not necessarily region dependent.  Only
-mappings that are not listed in abbc.tab are included in this mapping.
-No attempt is made to distinguish the primary form of a word.  The
-file variant-infl.tab is like variant-also.tab except that it is
-created automatically from the AGID inflection database.  The file
+spellings of a word which are not yet in varcon.txt.  No attempt is
+made to distinguish the primary form of a word.  The file
+variant-infl.tab is like variant-also.tab except that it is created
+automatically from the AGID inflection database.  The file
 variant-wroot.tab is like variant-infl.tab except that it also
 included the root form of the word.
 
-Both the translation array and variant table includes a lot of strange
-affixations of words which I have no intention of removing as some
-people might find them useful.
+The file voc.tab is similar to varcon.txt but converts between
+vocabulary instead of spelling.  Unlike varcon.tab it is a simple tab
+seperated file with the fields correspoding to the American, British,
+and Canadian words.  If more than one word if often used to describe
+the same thing the words are separated with commas.  The last column
+contains additional notes on when the word is used.  Unlike varcon.txt
+it is generally not suitable for automatic conversion.
 
-The "make-variant" Perl script will combine abbc.tab, variant-also.tab,
-and variant-infl.tab into one huge mapping and will output the result
-to "variant.tab".  If the "no-infl" option is given than
-variant-infl.tab will not be included.
+The "make-variant" Perl script will combine varcon.txt,
+variant-also.tab, and variant-infl.tab into one huge mapping and will
+output the result to "variant.tab".  If the "no-infl" option is given
+than variant-infl.tab will not be included.
 
-The "split" script will create 6 words lists from abbc.tab:
-american.lst, british.lst, british_z.lst, british_variant.lst,
-canadian.lst, and common.lst.  The files american.lst, british.lst,
-british_z.lst, canadian.lst contain all the possible words that might
-be used by that particular country, except for spelling variants.  The
-common.lst file contains words that are included in both the american
-and one of the other lists.  The british_variant.lst contains words
-which are considered a spelling variant in British English and not
-already included in either british.lst or british_z.lst.
+The "split" script will split out the information in varcon.txt into
+several word lists named as follows:
+  <spelling>[-v<variant level>][-uncommon].lst
+where <spelling> is one of: american, british, british_z, canadian,
+common, or other.  "common" is used for words which appear in
+varcon.txt, yet are used in all versions of english, such as "prize",
+and "other" is used for the "_" spelling category.  The mapping from
+the variant indicators in varcon.txt to the numberic variant level is
+as follows:
+  v => 0
+  V => 1
+  - => 2
+"-uncommon" is used for forms marked with "(-)" as already described.
 
 The "translate" Perl script will translate a text file from one
 spelling to another. Its usage is:
@@ -126,12 +184,14 @@ Text is read in from standard input and is outputted to standard out.
 Words are marked with a '?' before and after the questionable word
 when the option is enabled.
 
-FIXME: Translate needs to be updated to take variant flags into
-account.
+The file varcon.pm contains some library routines for parsing
+varcon.txt and is used by many of the scripts above.
 
-If you discover any errors in these mappings, besides the strange
-affixations, or have suggestions for additions be sure and let me know
-at kevina@gnu.org.
+If you discover any errors in these mappings or have suggestions for
+additions please file a bug report, which you can find instructions
+for at http://wordlist.sourceforge.net/, or alternativly email me
+directly at kevina@gnu.org, but I will likely tell you to file a bug
+report so that I don't forget about it.
 
 SOURCE:
 
@@ -178,11 +238,52 @@ As well as several online dicionaries:
   American Heritage: http://www.bartleby.com/61/
   Cambridge (ESL): http://dictionary.cambridge.org/
 
+Since version 5.0 massive effort to correct the numerous errors in
+Varcon.  The primary sources used for verification where:
+
+  Marriam-Webster: http://www.m-w.com/
+  Free version of Oxford Dictionaries Online: 
+    http://www.oxforddictionaries.com/
+  Oxford dictionaries available via Oxford Reference Online
+    (subscription service, http://www.oxfordreference.com/):
+    The New Oxford American Dictionary (2nd edition, 2006)
+      and sometimes: The Oxford American Dictionary of Current English (2002)
+    The Concise Oxford English Dictionary (11th edition revised, 2008)
+      and sometimes: The Oxford Dictionary of English (2nd edition revised, 2005)
+    The Canadian Oxford Dictionary (2004)
+
+I also used Tysto UK vs US spelling list available at:
+  http://www.tysto.com/articles05/q1/20050324uk-us.shtml
+to make sure I didn't leave out any information in Varcon, however any additions 
+from his lists where verified using the dictionaries mentioned above as his lists
+contained numerous errors (such as including archaic spellings of words)
+
+I also made indirect use of Luke's Canadian, British and American
+Spelling page available at:
+  http://www.lukemastin.com/testing/spelling/cgi-bin/database.cgi?database=spelling
+but only to perform some initial verification, in the end I rechecked
+his data using the dictionaries above.  (However, his data is, by far,
+more accurate than Tysto's)
+
 CHANGELOG:
 
-From Revision 4.1 to ... 
+From Revision 4.1 to Revision 5.0 (December 27, 2010)
 
-  - British-ize column now corresponds with spelling according to the OED.
+  - Completely new format for the main table which, in addition to
+    providing the preferred spelling of a word for various forms of
+    English, also records variant and other information.  To reflect
+    this change, the name of the file was renamed from abbc.tab to
+    varcon.txt.
+
+  - Massive effort to verify the variant information against
+    authoritative sources (mainly Oxford dictionaries).  Most entries
+    for common words (SCOWL level 35 and below) have been checked
+    against at least a British and Canadian dictionary.
+
+  - Added variant information for numerous other words, even when
+    there is no difference between the various forms on English.
+
+  - Other changes corresponding to the new format.
 
 From Revision 4 to Revision 4.1 (August 10, 2004)
 
@@ -218,7 +319,7 @@ From Revision 1 to Revision 2 (January 27, 2001)
 
 COPYRIGHT:
 
-Copyright 2000-2004 by Kevin Atkinson
+Copyright 2000-2010 by Kevin Atkinson
 
 Permission to use, copy, modify, distribute and sell this array, the
 associated software, and its documentation for any purpose is hereby

@@ -1,13 +1,13 @@
 Spell Checking Oriented Word Lists (SCOWL)
-Revision 6
-August 10, 2004
+Revision 7.0 (SVN Revision 126)
+December 27, 2010
 by Kevin Atkinson (kevina@gnu.org)
 
 The SCOWL is a collection of word lists split up in various sizes, and
 other categories, intended to be suitable for use in spell checkers.
 However, I am sure it will have numerous other uses as well.
 
-The latest version can be found at http://wordlist.sourceforge.net/
+The latest version can be found at http://wordlist.sourceforge.net/.
 
 The directory final/ contains the actual word lists broken up into
 various sizes and categories.  The r/ directory contains Readmes from
@@ -21,11 +21,13 @@ there.
 
 Except for the special word lists the files follow the following
 naming convention:
-  <spelling category>-<classification>.<size>
+  <spelling category>-<sub-category>.<size>
 Where the spelling category is one of
   english, american, british, british_z, canadian, 
-  variant_0, varaint_1, variant_2
-Classification is one of
+  variant_0, varaint_1, variant_2,
+  british_variant_0, british_variant_1,
+  canadian_variant_0, canadian_variant_1,
+Sub-category is one of
   abbreviations, contractions, proper-names, upper, words
 And size is one of
   10, 20, 35 (small), 40, 50 (medium), 55, 60, 70 (large), 
@@ -35,18 +37,35 @@ The special word lists follow are in the following format:
 Where description is one of:
   roman-numerals, hacker
 
-When combining the words lists the "english" spelling category should
-be used as well as one of "american", "british", "british_z" (british
-with ize spelling), or "canadian".  Great care has been taken so that
-that only one spelling for any particular word is included in the main
-list.  When two variants were considered equal I randomly picked one
-for inclusion in the main word list.  Unfortunately this means that my
-choice in how to spell a word may not match your choice.  If this is
-the case you can try including the "variant_0" spelling category which
+The perl script "mk-list" can be used to create a word list of the
+desired size, it usage is:
+  ./mk-list [-f] [-v#] <spelling categories> <size>
+where <spelling categories> is one of the above spelling categories
+(the english and special categories are automatically included as well
+as all sub-categories) and <size> is the desired desired size.  The
+"-v" option can be used to used to also include the appropriate
+variants file up to level '#'.  The normal output will be a sorted
+word list.  If you rather see what files will be included, use the
+"-f" option.
+
+When manually combining the words lists the "english" spelling
+category should be used as well as one of "american", "british",
+"british_z" (british with ize spelling), or "canadian".  Great care
+has been taken so that that only one spelling for any particular word
+is included in the main list (with some minor exceptions).  When two
+variants were considered equal I randomly picked one for inclusion in
+the main word list.  Unfortunately this means that my choice in how to
+spell a word may not match your choice.  If this is the case you can
+try including one of the "variant_0" spelling categories which
 includes most variants which are considered almost equal.  The
-"variant_1" spelling category include variants which are also
-generally considered acceptable, and "variant_2" contains variants
-which are seldom used.
+"variant_0" spelling category corresponds mostly to American variants,
+while the "british_variant_0" and "canadian_variant_0" are for British
+and Canadian variants, respectively.  The "variant_1" spelling
+categoies include variants which are also generally considered
+acceptable, and "variant_2" contains variants which are seldom used
+and may now even be considered correct.  There is no
+"british_variant_2" or "canadian_variant_2" spelling category since
+the distinction would be almost meaningless.
 
 The "abbreviation" category includes abbreviations and acronyms which
 are not also normal words. The "contractions" category should be self
@@ -87,13 +106,21 @@ Accents are present on certain words such as café in iso8859-1 format.
 
 CHANGES:
 
-From Revision 6 to ?
+From Revision 6 to 7 (December 27, 2010)
 
+  Updated to revision 5.0 of Varcon which corrected many errors,
+  especially in the British and Canadian spelling categories.  Also
+  added new spelling categories for the British and Canadian spelling
+  variants and separated them out from the main variant_* categories.
+  
   Moved Moby names lists (3897male.nam 4946fema.len 21986na.mes) to 95
   level since they contain too many errors and rare names.
 
   Moved frequently class 0 from Brian Kelk's Wordlist from 
-  level 60 to 70, and also filter it with level 80...
+  level 60 to 70, and also filter it with level 80 due to, too many
+  misspellings.
+
+  Many other minor fixes.
 
 From Revision 5 to 6 (August 10, 2004)
 
@@ -180,237 +207,7 @@ From Revision 1 to 2 (August 5, 2000)
 
 COPYRIGHT, SOURCES, and CREDITS:
 
-The collective work is Copyright 2000-2007 by Kevin Atkinson as well
-as any of the copyrights mentioned below:
-
-  Copyright 2000-2007 by Kevin Atkinson
-
-  Permission to use, copy, modify, distribute and sell these word
-  lists, the associated scripts, the output created from the scripts,
-  and its documentation for any purpose is hereby granted without fee,
-  provided that the above copyright notice appears in all copies and
-  that both that copyright notice and this permission notice appear in
-  supporting documentation. Kevin Atkinson makes no representations
-  about the suitability of this array for any purpose. It is provided
-  "as is" without express or implied warranty.
-
-Alan Beale <biljir@pobox.com> also deserves special credit as he has,
-in addition to providing the 12Dicts package and being a major
-contributor to the ENABLE word list, given me an incredible amount of
-feedback and created a number of special lists (those found in the
-Supplement) in order to help improve the overall quality of SCOWL.
-
-The 10 level includes the 1000 most common English words (according to
-the Moby (TM) Words II [MWords] package), a subset of the 1000 most
-common words on the Internet (again, according to Moby Words II), and
-frequently class 16 from Brian Kelk's "UK English Wordlist
-with Frequency Classification".
-
-The MWords package was explicitly placed in the public domain:
-
-    The Moby lexicon project is complete and has
-    been place into the public domain. Use, sell,
-    rework, excerpt and use in any way on any platform.
-
-    Placing this material on internal or public servers is
-    also encouraged. The compiler is not aware of any
-    export restrictions so freely distribute world-wide.
-
-    You can verify the public domain status by contacting
-
-    Grady Ward
-    3449 Martha Ct.
-    Arcata, CA  95521-4884
-
-    grady@netcom.com
-    grady@northcoast.com
-
-The "UK English Wordlist With Frequency Classification" is also in the
-Public Domain:
-
-  Date: Sat, 08 Jul 2000 20:27:21 +0100
-  From: Brian Kelk <Brian.Kelk@cl.cam.ac.uk>
-
-  > I was wondering what the copyright status of your "UK English
-  > Wordlist With Frequency Classification" word list as it seems to
-  > be lacking any copyright notice.
-
-  There were many many sources in total, but any text marked
-  "copyright" was avoided. Locally-written documentation was one
-  source. An earlier version of the list resided in a filespace called
-  PUBLIC on the University mainframe, because it was considered public
-  domain.
-
-  Date: Tue, 11 Jul 2000 19:31:34 +0100
-
-  > So are you saying your word list is also in the public domain?
-
-  That is the intention.
-
-The 20 level includes frequency classes 7-15 from Brian's word list.
-
-The 35 level includes frequency classes 2-6 and words appearing in at
-least 11 of 12 dictionaries as indicated in the 12Dicts package.  All
-words from the 12Dicts package have had likely inflections added via
-my inflection database.
-
-The 12Dicts package and Supplement is in the Public Domain.
-
-The WordNet database, which was used in the creation of the
-Inflections database, is under the following copyright:
-
-  This software and database is being provided to you, the LICENSEE,
-  by Princeton University under the following license.  By obtaining,
-  using and/or copying this software and database, you agree that you
-  have read, understood, and will comply with these terms and
-  conditions.:
-
-  Permission to use, copy, modify and distribute this software and
-  database and its documentation for any purpose and without fee or
-  royalty is hereby granted, provided that you agree to comply with
-  the following copyright notice and statements, including the
-  disclaimer, and that the same appear on ALL copies of the software,
-  database and documentation, including modifications that you make
-  for internal use or for distribution.
-
-  WordNet 1.6 Copyright 1997 by Princeton University.  All rights
-  reserved.
-
-  THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON
-  UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR
-  IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PRINCETON
-  UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES OF MERCHANT-
-  ABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE
-  LICENSED SOFTWARE, DATABASE OR DOCUMENTATION WILL NOT INFRINGE ANY
-  THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
-
-  The name of Princeton University or Princeton may not be used in
-  advertising or publicity pertaining to distribution of the software
-  and/or database.  Title to copyright in this software, database and
-  any associated documentation shall at all times remain with
-  Princeton University and LICENSEE agrees to preserve same.
-
-The 40 level includes words from Alan's 3esl list found in version 4.0
-of his 12dicts package.  Like his other stuff the 3esl list is also in the
-public domain.
-
-The 50 level includes Brian's frequency class 1, words words appearing
-in at least 5 of 12 of the dictionaries as indicated in the 12Dicts
-package, and uppercase words in at least 4 of the previous 12
-dictionaries.  A decent number of proper names is also included: The
-top 1000 male, female, and Last names from the 1990 Census report; a
-list of names sent to me by Alan Beale; and a few names that I added
-myself.  Finally a small list of abbreviations not commonly found in
-other word lists is included.
-
-The name files form the Census report is a government document which I
-don't think can be copyrighted.
-
-The file special-jargon.50 uses common.lst and word.lst from the
-"Unofficial Jargon File Word Lists" which is derived from "The Jargon
-File".  All of which is in the Public Domain.  This file also contain
-a few extra UNIX terms which are found in the file "unix-terms" in the
-special/ directory.
-
-The 55 level includes words from Alan's 2of4brif list found in version
-4.0 of his 12dicts package.  Like his other stuff the 2of4brif is also
-in the public domain.
-
-The 60 level includes Brian's frequency class 0 and all words
-appearing in at least 2 of the 12 dictionaries as indicated by the
-12Dicts package.  
-
-The 70 level includes the 74,550 common dictionary words from the
-MWords package The common dictionary words, like those from the
-12Dicts package, have had all likely inflections added.  The 70 level
-also included the 5desk list from version 4.0 of the 12Dics package
-which is the public domain
-
-The 80 level includes the ENABLE word list, all the lists in the
-ENABLE supplement package (except for ABLE), the "UK Advanced Cryptics
-Dictionary" (UKACD), the list of signature words in from YAWL package,
-and the 10,196 places list from the MWords package.
-
-The ENABLE package, mainted by M\Cooper <thegrendel@theriver.com>,
-is in the Public Domain:
-
-  The ENABLE master word list, WORD.LST, is herewith formally released
-  into the Public Domain. Anyone is free to use it or distribute it in
-  any manner they see fit. No fee or registration is required for its
-  use nor are "contributions" solicited (if you feel you absolutely
-  must contribute something for your own peace of mind, the authors of
-  the ENABLE list ask that you make a donation on their behalf to your
-  favorite charity). This word list is our gift to the Scrabble
-  community, as an alternate to "official" word lists. Game designers
-  may feel free to incorporate the WORD.LST into their games. Please
-  mention the source and credit us as originators of the list. Note
-  that if you, as a game designer, use the WORD.LST in your product,
-  you may still copyright and protect your product, but you may *not*
-  legally copyright or in any way restrict redistribution of the
-  WORD.LST portion of your product. This *may* under law restrict your
-  rights to restrict your users' rights, but that is only fair.
-
-UKACD, by J Ross Beresford <ross@bryson.demon.co.uk>, is under the
-following copyright:
-
-  Copyright (c) J Ross Beresford 1993-1999. All Rights Reserved.
-
-  The following restriction is placed on the use of this publication:
-  if The UK Advanced Cryptics Dictionary is used in a software package
-  or redistributed in any form, the copyright notice must be
-  prominently displayed and the text of this document must be included
-  verbatim.
-
-  There are no other restrictions: I would like to see the list
-  distributed as widely as possible.
-
-The 95 level includes the 354,984 single words, 256,772 compound
-words, 4,946 female names and the 3,897 male names, and 21,986 names
-from the MWords package, ABLE.LST from the ENABLE Supplement, and some
-additional words found in my part-of-speech database that were not
-found anywhere else.
-
-Accent information was taken from UKACD.
-
-My VARCON package was used to create the American, British, and
-Canadian word list. 
-
-Since the original word lists used used in the VARCON package came
-from the Ispell distribution they are under the Ispell copyright:
-
-  Copyright 1993, Geoff Kuenning, Granada Hills, CA
-  All rights reserved.
-
-  Redistribution and use in source and binary forms, with or without
-  modification, are permitted provided that the following conditions
-  are met:
-
-  1. Redistributions of source code must retain the above copyright
-     notice, this list of conditions and the following disclaimer.
-  2. Redistributions in binary form must reproduce the above copyright
-     notice, this list of conditions and the following disclaimer in the
-     documentation and/or other materials provided with the distribution.
-  3. All modifications to the source code must be clearly marked as
-     such.  Binary redistributions based on modified source code
-     must be clearly marked as modified versions in the documentation
-     and/or other materials provided with the distribution.
-  (clause 4 removed with permission from Geoff Kuenning)
-  5. The name of Geoff Kuenning may not be used to endorse or promote
-     products derived from this software without specific prior
-     written permission.
-
-  THIS SOFTWARE IS PROVIDED BY GEOFF KUENNING AND CONTRIBUTORS ``AS
-  IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-  FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL GEOFF
-  KUENNING OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-  POSSIBILITY OF SUCH DAMAGE.
+@`cat Copyright`
 
 The variant word lists were created from a list of variants found in
 the 12dicts supplement package as well as a list of variants I created
@@ -421,40 +218,50 @@ appropriate directory under the r/ directory.
 
 FUTURE PLANS:
 
-There is a very nice frequency analyse of the BNC corpus done by
-Adam Kilgarriff.  Unlike Brain's word lists the BNC lists include part
-of speech information.  I plan on somehow using these lists as Adam
-Kilgarriff has given me the OK to use it in SCOWL.  These lists will
-greatly reduce the problem of inflected forms of a word appearing at
-different levels due to the part-of-speech information.
+The process of "sort"s, "comm"s, and Perl scripts to combine the many
+word lists and separate out the variant information is inexact and
+error prone.  The whole things needs to be rewritten to deal with
+words in terms of lemmas.  When the exact lemma is not known a best
+guess should be made.  I'm not sure what form this should be in.  I
+originally thought this should be some sort of database, but maybe I
+should just slurp all that data into memory and process it in one
+giant perl script.  With the amount of memory available these days (at
+least 2 GB, often 4 GB or more) this should not really be a problem.
 
-I also plan on perhaps putting the data in a database and use SQL
-queries to create the wordlists instead of tons of "sort"s, "comm"s,
-and Perl scripts.
+In addition, there is a very nice frequency analyze of the BNC corpus
+done by Adam Kilgarriff.  Unlike Brain's word lists the BNC lists
+include part of speech information.  I plan on somehow using these
+lists as Adam Kilgarriff has given me the OK to use it in SCOWL.
+These lists will greatly reduce the problem of inflected forms of a
+word appearing at different levels due to the part-of-speech
+information.
+
+There is frequency information for some other corpus such as COCA
+(Corpus of Contemporary American English) and ANS (Corpus of
+Contemporary American English) which I might also be able to use.  The
+formal will require permission, and the latter is of questionable
+quality.
 
 RECREATING THE WORD LISTS:
 
 In order to recreate the word lists you need a modern version of Perl,
 bash, the traditional set of shell utilities, a system that supports
-symbolic links, and quite possibly GNU Make.  Once you have downloaded
-all the necessary raw data in the r/ directory you should be able to
-type "rm final/* && make all" and the word lists in the final/
-directory should be recreated.  If you have any problems fell free to
-contact me; however, unless you are interested in improving the
-scripts used, I will likely ignore you as there should be little need
-for anyone not interested in improving the word list to do so.
+symbolic links, and quite possibly GNU Make.  The easiest way to
+recreate the word lists is to checkout SVN revision 126 and simply
+type "make" (see http://wordlist.sourceforge.net).  You can try to
+download all the pieces manually, but you may not get the same result
+since the latest version of some parts used to create SCOWL may not
+have been released yet.
 
 The src/ directory contains the numerous scripts used in the creation
 of the final product. 
 
-The r/ directory contains the raw data used to
-create the final product.  In order for the scripts to work various
-word lists and databases need to be created and put into this
-directory.  See the README file in the r/ directory for more
-information.
+The r/ directory contains the raw data used to create the final
+product.  If you checkout from SVN this directory should be populated
+automatically for you.  If you insist on doing it the hard way see the
+README file in the r/ directory for more information.
 
 The l/ directory contains symbolic links used by the actual scripts.
 
 Finally, the working/ directory is where all the intermittent files go
 that are not specific to one source.
-

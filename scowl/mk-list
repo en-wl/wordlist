@@ -1,0 +1,72 @@
+#!/usr/bin/perl
+
+use Getopt::Long;
+
+Getopt::Long::Configure ("bundling");
+
+my $with_variants;
+my $file_names_only;
+
+GetOptions ("with-variants|v=i", => \$with_variants,
+            "file-names-only|f", \$file_names_only);
+
+sub usage() {
+    print STDERR "$0 [-v#] [-f] <spelling categories> <size>\n";
+    exit 1;
+}
+
+
+usage unless @ARGV >= 2;
+    
+my $SIZE = pop @ARGV;
+die "Invalid size: $SIZE\n" unless $SIZE =~ /^\d\d$/;
+my %SPS;
+$SPS{$_} = 1 foreach (@ARGV);
+
+$SPS{english} = 1;
+$SPS{special} = 1;
+
+if (defined $with_variants) {
+    $SPS{variant_0} = 1 if $SPS{american} && $with_variants >= 0;
+    $SPS{variant_1} = 1 if $SPS{american} && $with_variants >= 1;
+    $SPS{british_variant_0} = 1 if ($SPS{british} || $SPS{british_z}) && $with_variants >= 0;
+    $SPS{british_variant_1} = 1 if ($SPS{british} || $SPS{british_z}) && $with_variants >= 1;
+    $SPS{canadian_variant_0} = 1 if $SPS{canadian} && $with_variants >= 0;
+    $SPS{canadian_variant_1} = 1 if $SPS{canadian} && $with_variants >= 1;
+    $SPS{variant_2} = 1 if $with_variants >= 2;
+}
+
+opendir D, "final/";
+
+@files = readdir(D);
+
+my @words;
+
+foreach (sort @files) {
+    my ($sp, $type, $size) = /^(\w+)-(\w+)\.(\d\d)/ or next;
+    $SPD{$sp}++;
+    next unless $SPS{$sp};
+    next unless $size <= $SIZE;
+    if ($file_names_only) {
+        print "$_\n";
+    } else {
+        open F, "final/$_" or die "Unable to open final/$_ for reading";
+        while (<F>) {
+            chop;
+            push @words, $_;
+        }
+    }
+}
+
+my $prev = '';
+foreach (sort @words) {
+    next if $_ eq $prev;
+    print "$_\n";
+    $prev = $_;
+}
+
+
+                
+
+
+            

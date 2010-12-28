@@ -26,12 +26,15 @@ sub commify {
     return $_;
 }
 
-print "  Size   Words       Names    Running Total  %        Zipf's law\n";
+
+#print "  Size   Words       Names    Running Total  %        Zipf's law\n";
+print "  Size   Words       Names    Running Total  %\n";
 
 foreach (@data) {
     my ($f, $n, $p, $c0, $h) = @$_;
     my $cp = 100*$c0/$c;
     my $hp = 100*$h/$hc;
-    printf("   %2d  %7s     %7s      %7s   %5.1f         %6.2f\n", $f, commify($n), commify($p), commify($c0), $cp, $hp);
+    #printf("   %2d  %7s     %7s      %7s   %5.1f         %6.2f\n", $f, commify($n), commify($p), commify($c0), $cp, $hp);
+    printf("   %2d  %7s     %7s      %7s   %5.1f\n", $f, commify($n), commify($p), commify($c0), $cp);
     #print "$f $n $p $c0   $cp $hp\n";
 }

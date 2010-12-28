@@ -1,6 +1,7 @@
 This directory contains the source of the raw data.  In order for the
 word lists to compile you will need to unpack all of the various word
-lists in the proper directory.
+lists in the proper directory.  If you checkout SCOWL using SVN this
+should be done for you automatically.
 
 The following word lists, which are created or distributed by me,
 are available at http://wordlist.sourceforge.net/.
@@ -22,7 +23,7 @@ special:
   Nothing needs to be downloaded for this directory.
 
 Plus the following additinal word list from various locations: 
-(These files are also available at http://wordlist.sourceforge.net/src/)
+(These files are also available in SVN)
 
 census:
   1990 Census Name Files

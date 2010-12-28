@@ -4,6 +4,7 @@ while (<STDIN>) {
   chop;
   push @words, $_;
 }
+@words = grep {length $_ > 2} @words;
 @words = sort @words;
 @num = (0 .. $#words);
 

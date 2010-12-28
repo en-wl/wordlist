@@ -1,0 +1,87 @@
+INFORMATION ON THE PROVIDED DICTIONARIES
+
+This word list package supports the following dialects of English:
+
+  American (en_US)
+  British with "ise" spelling (en_GB-ise)
+  British with "ize" spelling (en_GB-ize)
+  Canadian (en_CA)
+
+In addition generic English (en) is supported which is a combination
+of all the above.
+
+For each dialect there is the option to either strip accents (for
+example cafe) or keep them (for example café).  The default is to
+strip them.
+
+Combining these two options gives the following dictionaries.  
+
+  en_US-wo_accents
+  en_US-w_accents
+  en_GB-ise-wo_accents
+  en_GB-ise-w_accents
+  en_GB-ize-wo_accents
+  en_GB-ize-w_accents
+  en_CA-wo_accents
+  en_CA-w_accents
+  en-wo_accents
+  en-w_accents
+
+in addition to the following aliases:
+
+  en_US = en_US-wo_accents
+  en_GB = en_GB-ise-wo_accents
+  en_GB-ise = en_GB-ise-wo_accents
+  en_GB-ize = en_GB-ize-wo_accents
+  en_GB-wo_accents = en_GB-ise-wo_accents
+  en_GB-w_accents = en_GB-ize-w_accents
+  en_CA = en_CA-wo_accents
+  en = en-wo_accents
+
+  american-* = en_US-*
+  britsh-* = en_GB-*
+  canadian-* = en_CA-*
+  english-* = en-*
+
+If you are using Aspell 0.60 these aliases can be changed locally via
+"dict-alias" option.  For example if you prefer the "ize" spelling for
+British English add the line:
+
+  add-dict-alias en_GB en_GB-ize
+
+to ".aspell.conf".
+
+Great care has been taken so that that, for the most part, only one
+spelling for any particular word is included in the main dictionary.
+When two variants were considered equal I randomly picked one for
+inclusion in the main word list.  Unfortunately this means that my
+choice in how to spell a word may not match your choice.  For this
+reason the following auxiliary dictionaries are provided:
+
+  en_US-variant_0
+  en_US-variant_1
+  en_GB-variant_0
+  en_GB-variant_1
+  en_CA-variant_0
+  en_CA-variant_1
+  en-variant_2
+
+These dictionaries are meant to be used in addition to one of the
+standard dictionaries. To specify them use the "extra-dicts" option.
+The "en_*-variant_0" dictionaries includes most variants which are
+considered almost equal, "variant_1" includes variants which are
+generally considered acceptable, and "variant_2" contains variants
+which are seldom used and may not even be considered correct.  It is
+only necessary to use on of these dictionaries since, for example,
+"en_US-variant_1" includes all the words in "en_US-variant_0".
+
+
+UPGRADING FROM ASPELL6-EN-0.01
+
+If you are upgrading from the aspell6-en-0.01 package you should do a
+
+  rm `aspell config dict-dir`/en[-_]*.alias
+
+to remove any old alias.  Otherwise aspell may get confused as this
+version installs the alias with the ".multi" extension instead of
+the ".alias" extension.

@@ -24,6 +24,11 @@ cat en.wl0 $FINAL/british_z-*.{10,20,35,40,50,55,60} \
   | sort -u > en_GB-ize-w_accents.twl
 cat en.wl0 $FINAL/canadian-*.{10,20,35,40,50,55,60} \
   | sort -u > en_CA-w_accents.twl
+cat en_??-w_accents.twl \
+  | sort -u > en-w_accents.twl
+
+#cat en_GB-ise-w_accents.twl en_GB-ize-w_accents.twl
+#  | sort -u > en_GB-w_accents.twl
 
 cat $FINAL/variant_0-*.{10,20,35,40,50,55,60} \
   | sort -u > en-variant_0.wl0
@@ -32,15 +37,26 @@ cat en-variant_0.wl0 $FINAL/variant_1-*.{10,20,35,40,50,55,60} \
 cat en-variant_1.wl0 $FINAL/variant_2-*.{10,20,35,40,50,55,60} \
   | sort -u > en-variant_2.wl0
 
+cat $FINAL/british_variant_0-*.{10,20,35,40,50,55,60} \
+  | sort -u > en_GB-variant_0.wl0
+cat en_GB-variant_0.wl0 $FINAL/british_variant_1-*.{10,20,35,40,50,55,60} \
+  | sort -u > en_GB-variant_1.wl0
+
+cat $FINAL/canadian_variant_0-*.{10,20,35,40,50,55,60} \
+  | sort -u > en_CA-variant_0.wl0
+cat en_CA-variant_0.wl0 $FINAL/canadian_variant_1-*.{10,20,35,40,50,55,60} \
+  | sort -u > en_CA-variant_1.wl0
+
 echo deaccent
 
 for f in *-w_accents.twl
 do
   b=`basename $f -w_accents.twl`
   src/deaccent < $f | sort -u > $b-wo_accents.twl
+  #cat $f $b-wo_accents.twl | sort -u > $b.twl
 done
 
-for f in en-variant_*.wl0
+for f in en*-variant_*.wl0
 do
   b=`basename $f .wl0`
   src/deaccent < $f > $b.wl1
@@ -67,5 +83,9 @@ do
   comm -13 en-common.wl $f > $b-only.wl
 done
  
-
 rm -f *.wl.* *.twl *.wl{0,1} *.vwl
+cp -p *.wl aspell/
+cp -p ../README aspell/doc/SCOWL-README
+cat aspell/Copyright.in ../Copyright > aspell/Copyright
+
+

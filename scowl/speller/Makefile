@@ -14,6 +14,4 @@ hunspell: .hunspell
 
 clean:
 	rm -f .aspell .hunspell
-	rm -f *.wl en_*.dic en_*.aff
-
-
+	rm -f *.wl en_*.dic en_*.aff *.zip *.tocheck README_en_??.txt

@@ -1,0 +1,41 @@
+7.0: December 27, 2010
+
+  Updated to SCOWL 7 which was created with a new version of Varcon
+  which corrected many errors, especially in the British and Canadian
+  dictionaries.  Numerous other corrections are also included.
+
+  Added en_CA-variant_* and en_GB-variant_* auxiliary dictionaries.
+
+6.0: August 10, 2004
+
+  Updated to SCOWL 6 which avoided using the original Ispell
+  dictionaries as they were a source of too many errors, among other
+  changes.
+  
+  Added en_GB-ize dictionary (British with "ize" spelling).
+
+  Added en-variant_* auxiliary dictionaries.
+
+  Avoided using the strip-accents options since Aspell 0.60 no longer
+  supports it.
+
+  Added affix support for the aspell6 package.  Affix compression is
+  not used though.
+
+0.51-0: January 3, 2003
+
+  Updated to SCOWL 5 which:
+
+    Added variants that were not really spelling variants (such as
+    forwards)
+
+    Removed some spelling variants and other strange words from the
+    word list (for example meaneing).
+
+    Removed rarely used inflections of a word.
+
+    Removed the DEC Word List due to the questionable license and
+    because removing it will not seriously decrease the quality of SCOWL
+    (there are a few less proper names).
+
+    Among others.

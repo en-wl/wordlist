@@ -58,6 +58,10 @@ when it is it marked as as a archaic spelling for the word.  The "x"
 is used when the spelling is almost generally considered a
 misspelling, and is only included for completeness.
 
+If there are no tags with the 'Z' spelling category on the line than
+'B' implies 'Z'.  Similarly if there are no 'C' tags than 'Z' implies
+'C'.
+
 For ease of reading and maintaining the data file, each line is
 grouped in a cluster of closely related words.  Each cluster is
 uniquely identifed by a headword, which is generally the American

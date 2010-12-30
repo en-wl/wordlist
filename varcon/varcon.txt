@@ -916,6 +916,7 @@ A C: analyze / B Cv: analyse
 A C: analyzed / B Cv: analysed
 A C: analyzing / B Cv: analysing
 A C: analyzes / B Cv: analyses
+A B: analyses | plural of analysis
 
 # analyzer <verified> (level 35)
 A C: analyzer / B: analyser
@@ -2542,6 +2543,7 @@ A Cv: behaviorism's / B C: behaviourism's
 # behaviorist <verified> (level 55)
 A Cv: behaviorist / B C: behaviourist
 A Cv: behaviorists / B C: behaviourists
+A Cv: behaviorist's / B C: behaviourist's
 
 # behavioristic <verified> (level 70)
 A Cv: behavioristic / B C: behaviouristic
@@ -3924,6 +3926,7 @@ A: centerers / B: centrers
 # centerfold <verified> (level 50)
 A: centerfold / B: centrefold
 A: centerfolds / B: centrefolds
+A: centerfold's / B: centrefold's
 
 # centerless (level 80)
 A: centerless / B: centreless
@@ -4268,6 +4271,7 @@ A: chiseler's / Av B: chiseller's
 
 # chitterlings (level 50)
 _: chitterlings / _v: chitlins / _V: chitlings
+_: chitterlings's / _v: chitlins's / _V: chitlings's
 
 # chivy (level 55)
 _: chivy / _v: chivvy
@@ -4311,6 +4315,8 @@ A Z: chloroformizes / B: chloroformises
 
 # chlorophyll (level 35)
 _: chlorophyll / _-: chlorophyl
+_: chlorophylls / _-: chlorophyl
+_: chlorophyll's / _-: chlorophyl's
 
 # chocoholic (level 55)
 _: chocoholic / _V: chocaholic
@@ -4641,6 +4647,7 @@ A Z: coalizers / B: coalisers
 
 # cocaine (level 35)
 _: cocaine / _-: cocain
+_: cocaine's / _-: cocain's
 
 # cocainization (level 80)
 A Z: cocainization / B: cocainisation
@@ -4900,6 +4907,7 @@ A: colorblind / B: colourblind
 # colorblindness (level 60)
 A: colorblindness / B: colourblindness
 A: colorblindnesses / B: colourblindnesses
+A: colorblindness's / B: colourblindness's
 
 # colorbreed (level 80)
 A: colorbreed / B: colourbreed
@@ -6005,6 +6013,7 @@ A Z: deaminize / B: deaminise
 
 # deary (level 55)
 _: deary / _v: dearie
+_: deary's / _v: dearie's
 
 # decaliter (level 70)
 A: decaliter / B: decalitre
@@ -6441,6 +6450,12 @@ A Z: demagnetizers / B: demagnetisers
 A Z: demagnetizer's / B: demagnetiser's
 
 # demagogue <verified> (level 35)
+A B: demagogue / AV: demagog
+A B: demagogued / AV: demagoged
+A B: demagoguing / AV: demagoging
+A B: demagogues / AV: demagogs
+A B: demagogue's / AV: demagog's
+
 A B: demagogue / AV: demagog
 A B: demagogue / AV: demagog
 A B: demagogue / AV: demagog
@@ -7805,6 +7820,8 @@ A: dognaping / B: dognapping
 
 # d'oh (level 55)
 _: d'oh / _v: doh
+_: d'ohs / _v: dohs
+_: d'oh's / _v: doh's
 
 # dollarization (level 80)
 A Z: dollarization / B: dollarisation
@@ -8633,6 +8650,7 @@ _: encumbers / _-: incumbers
 # encyclopedia <verified> (level 35)
 A B: encyclopedia / Bv: encyclopaedia
 A B: encyclopedias / Bv: encyclopaedias
+A B: encyclopedia's / Bv: encyclopaedia's
 
 # encyclopediac (level 95)
 A: encyclopediac / B: encyclopaediac
@@ -10189,6 +10207,7 @@ A: fibered / B: fibred
 # fiberfill <verified> (level 60)
 A: fiberfill / B: fibrefill
 A: fiberfills / B: fibrefills
+A: fiberfill's / B: fibrefill's
 
 # fiberglass <verified> (level 35)
 A: fiberglass / B: fibreglass
@@ -10305,7 +10324,7 @@ A Cv: flanneling / B C: flannelling
 
 # flannelette <verified> (level 50)
 A B: flannelette / AV: flannelet
-A B: flannelette / AV: flannelet
+A B: flannelette's / AV: flannelet's
 
 # flavor <verified> (level 10)
 A Cv: flavor / B C: flavour
@@ -11029,11 +11048,11 @@ A: gaveling / B: gavelling
 A: gaveler / B: gaveller
 
 # gayety (level 50)
-_: gayety
-_: gayety's
+_: gaiety / _V: gayety
+_: gaiety's / _V: gayety's
 
 # gayly (level 60)
-_: gayly
+_: gaily / _V: gayly
 
 # Geer (level 50)
 A: Geer / B: Gere
@@ -12498,6 +12517,7 @@ A: hemoglobic / B: haemoglobic
 
 # hemoglobin <verified> (level 35)
 A C: hemoglobin / B: haemoglobin
+A C: hemoglobin's / B: haemoglobin's
 
 # hemoglobinopathy (level 80)
 A: hemoglobinopathy / B: haemoglobinopathy
@@ -13052,6 +13072,8 @@ A: honorabliest / B: honourabliest
 
 # honoree (level 60)
 A: honoree / B: honouree
+A: honorees / B: honourees
+A: honoree's / B: honouree's
 
 # honorer (level 60)
 A: honorer / B: honourer
@@ -13359,6 +13381,7 @@ A Z: hydroxylizes / B: hydroxylises
 _: hyena / _V: hyaena
 _: hyaenas / _V: hyaena | plural
 _: hyenas / _V: hyena | plural
+_: hyena's / _V: hyaena's
 
 # hyenic (level 80)
 A: hyenic / B: hyaenic
@@ -15998,7 +16021,11 @@ A: lunule / B: lunulae
 
 # lupine <verified> (level 35)
 A C: lupine / AV B Cv: lupin | <N> plant
+A C: lupines / AV B Cv: lupins | <N> plant
+A C: lupine's / AV B Cv: lupin's | <N> plant
 A B: lupine | <Adj> wolfish
+A B: lupines | <Adj> wolfish
+A B: lupine's | <Adj> wolfish
 
 # luster <verified> (level 35)
 A: luster / AV B: lustre
@@ -18300,8 +18327,8 @@ A: neer / B: nere
 
 # negligee <verified> (level 35)
 A B: negligee / AV: neglig
-A B: negligee / AV: neglig
-A B: negligee / AV: neglig
+A B: negligees / AV: negligs
+A B: negligee's / AV: neglig's
 
 # Negritize (level 95)
 A Z: Negritize / B: Negritise
@@ -20988,8 +21015,8 @@ A: pedagogism / B: paedagogism
 
 # pedagogue <verified> (level 50)
 A B: pedagogue / AV: pedagog
-A B: pedagogue / AV: pedagog
-A B: pedagogue / AV: pedagog
+A B: pedagogues / AV: pedagogs
+A B: pedagogue's / AV: pedagog's
 
 # pedal <verified> (level 35)
 A Cv: pedaled / B C: pedalled
@@ -22622,6 +22649,7 @@ A Z: powellizes / B: powellises
 # practice <verified> (level 10)
 A B C: practice / AV Cv: practise | <N>
 A B C: practices / AV Cv: practises | <N>
+A B C: practice's / AV Cv: practise's | <N>
 A Cv: practice / AV B C: practise | <V>
 A Cv: practiced / AV B C: practised | <V>
 A Cv: practicing / AV B C: practising | <V>
@@ -27951,6 +27979,7 @@ _: swab's / _-: swob's
 
 # sweepstakes <verified> (level 35)
 A Bv C: sweepstakes / AV B Cv: sweepstake / AV: sweep-stake
+A Bv C: sweepstakes's / AV B Cv: sweepstake's / AV: sweep-stake's
 
 # sweetbrier (level 50)
 _: sweetbrier / _v: sweetbriar
@@ -28996,9 +29025,9 @@ A C: tires / B: tyres | whell
 A C: tire's / B: tyre's | wheel
 
 # tiro's (level 50)
-A Bv: tiro's / B: tyro's
 A B: tyro / AV Bv: tiro / A-: tyreo
 A B: tyros / AV Bv: tiros
+A B: tyro's / AV Bv: tiro's / A-: tyreo's
 
 # titer <verified> (level 70)
 A Cv: titer / B C: titre
@@ -32896,7 +32925,6 @@ A C: calisthenics / B Cv: callisthenics
 
 # cancellation <verified> (level 35)
 A B: cancellation / AV: cancelation
-A B: cancellations / AV: cancelations
 
 # chimera <verified> (level 50)
 A B: chimera / Av Bv: chimaera

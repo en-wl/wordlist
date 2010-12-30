@@ -2,18 +2,16 @@
 
 rm -f working/*.$1.pre
 
-comm -12 working/words.$1 r/varcon/american.lst \
+comm -12 working/words.$1 working/american.lst \
   > working/american-all.$1.pre
 
-# note special list, see make-variant.lst
-comm -12 working/words.$1 r/varcon/british+.lst \
+comm -12 working/words.$1 working/british.lst \
   > working/british-all.$1.pre
 
-comm -12 working/words.$1 r/varcon/british_z.lst \
+comm -12 working/words.$1 working/british_z.lst \
   > working/british_z-all.$1.pre
 
-# note special list, see make-variant.lst
-comm -12 working/words.$1 r/varcon/canadian+.lst \
+comm -12 working/words.$1 working/canadian.lst \
   > working/canadian-all.$1.pre
 
 comm -12 working/words.$1 working/variant_0.lst   \

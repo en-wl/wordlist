@@ -3302,17 +3302,17 @@ A: Cananean / B: Cananaean
 A: Cananean's / B: Cananaean's
 
 # cancel <verified> (level 20)
-A: canceled / B: cancelled
-A: canceling / B: cancelling
+A: canceled / Av B: cancelled
+A: canceling / Av B: cancelling
 
 # cancelable (level 70)
-A: cancelable / B: cancellable
+A: cancelable / Av B: cancellable
 
 # cancelate (level 70)
-A: cancelate / B: cancellate
+A: cancelate / Av B: cancellate
 
 # cancelated (level 80)
-A: cancelated / B: cancellated
+A: cancelated / Av B: cancellated
 
 # canceler <verified> (level 60)
 A: canceler / B: canceller
@@ -14861,9 +14861,9 @@ A Bv C: judgments / B Cv: judgements
 A Bv C: judgment's / B Cv: judgement's
 
 # judgmental <verified> (level 40)
-A Bv C: judgmental / B Cv: judgemental
-A Bv C: judgmentaler / B Cv: judgementaler
-A Bv C: judgmentalest / B Cv: judgementalest
+A Bv C: judgmental / Av B Cv: judgemental
+A Bv C: judgmentaler / Av B Cv: judgementaler
+A Bv C: judgmentalest / Av B Cv: judgementalest
 
 # judicialize (level 95)
 A Z: judicialize / B: judicialise
@@ -22714,7 +22714,7 @@ A Z: prebaptize / B: prebaptise
 A Z: prebaptizes / B: prebaptises
 
 # precancelation (level 70)
-A: precancelation / B: precancellation
+A: precancelation / Av B: precancellation
 
 # precava (level 80)
 A: precava / B: praecava
@@ -25387,11 +25387,11 @@ A: Sabean / B: Sabaean
 A: Sabeans / B: Sabaeans
 
 # saber <verified> (level 35)
-A: saber / B: sabre
-A: sabered / B: sabred
-A: sabering / B: sabring
-A: sabers / B: sabres
-A: saber's / B: sabre's
+A: saber / Av B: sabre
+A: sabered / Av B: sabred
+A: sabering / Av B: sabring
+A: sabers / Av B: sabres
+A: saber's / Av B: sabre's
 
 # saberbill (level 95)
 A: saberbill / B: sabrebill
@@ -29792,9 +29792,9 @@ A Z: unbrutizing / B: unbrutising
 A Z: unbrutizes / B: unbrutises
 
 # uncanceled (level 70)
-A: uncanceled / B: uncancelled
-A: uncanceledder / B: uncancelledder
-A: uncanceleddest / B: uncancelleddest
+A: uncanceled / Av B: uncancelled
+A: uncanceledder / Av B: uncancelledder
+A: uncanceleddest / Av B: uncancelleddest
 
 # uncandor (level 95)
 A: uncandor / B: uncandour

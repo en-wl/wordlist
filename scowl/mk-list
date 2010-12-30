@@ -6,9 +6,12 @@ Getopt::Long::Configure ("bundling");
 
 my $with_variants;
 my $file_names_only;
+my $dir;
 
-GetOptions ("with-variants|v=i", => \$with_variants,
+GetOptions ("dir|d=s", \$dir,
+            "with-variants|v=i", => \$with_variants,
             "file-names-only|f", \$file_names_only);
+$dir = "final" unless defined $dir;
 
 sub usage() {
     print STDERR "$0 [-v#] [-f] <spelling categories> <size>\n";
@@ -36,7 +39,7 @@ if (defined $with_variants) {
     $SPS{variant_2} = 1 if $with_variants >= 2;
 }
 
-opendir D, "final/";
+opendir D, $dir or die "Unable to open dir $dir\n";
 
 @files = readdir(D);
 
@@ -50,7 +53,7 @@ foreach (sort @files) {
     if ($file_names_only) {
         print "$_\n";
     } else {
-        open F, "final/$_" or die "Unable to open final/$_ for reading";
+        open F, "$dir/$_" or die "Unable to open $dir/$_ for reading";
         while (<F>) {
             chop;
             push @words, $_;

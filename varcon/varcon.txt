@@ -28,11 +28,11 @@ A BV Cv: abridgment's / B C: abridgement's
 
 # absinthe <verified> (level 50)
 A: absinthe / AV B: absinth | :1
-B: absinth | :2
+A B: absinthe | :2
 A: absinthes / AV B: absinths | :1
-B: absinths | :2
+A B: absinthes | :2
 A: absinthe's / AV B: absinth's | :1
-B: absinth's | :2
+A B: absinthe's | :2
 
 # academize (level 95)
 A Z: academize / B: academise
@@ -217,9 +217,9 @@ A B: adviser / Av Bv: advisor
 A B: advisers / Av Bv: advisors
 A B: adviser's / Av Bv: advisor's
 
-# adze (level 50)
-_: adze / _.: adz
-_: adze's / _.: adz's
+# adze <verified> (level 50)
+A B: adze / Av: adz
+A B: adze's / Av: adz's
 
 # Aedon (level 95)
 A: Aedon / B: Aaedon
@@ -2390,11 +2390,11 @@ A Z: barbarizing / B: barbarising
 A Z: barbarizes / B: barbarises
 
 # barbecue <verified> (level 35)
-A B: barbecue / AV Cv: barbeque
-A B: barbecued / AV Cv: barbequed
-A B: barbecuing / AV Cv: barbequing
-A B: barbecues / AV Cv: barbeques
-A B: barbecue's / AV Cv: barbeque's
+A B C: barbecue / AV Cv: barbeque
+A B C: barbecued / AV Cv: barbequed
+A B C: barbecuing / AV Cv: barbequing
+A B C: barbecues / AV Cv: barbeques
+A B C: barbecue's / AV Cv: barbeque's
 
 # barcarole (level 60)
 _: barcarole / _V: barcarolle
@@ -2963,11 +2963,11 @@ A: boweling / B: bowelling
 # bradypnea (level 95)
 A: bradypnea / B: bradypnoea
 
-# breathalyze (level 55)
-A C: breathalyze / B: breathalyse
-A C: breathalyzed / B: breathalysed
-A C: breathalyzing / B: breathalysing
-A C: breathalyzes / B: breathalyses
+# breathalyze <verified> (level 55)
+A C: breathalyze / B Cv: breathalyse
+A C: breathalyzed / B Cv: breathalysed
+A C: breathalyzing / B Cv: breathalysing
+A C: breathalyzes / B Cv: breathalyses
 
 # brier <verified> (level 50)
 A Bv C: brier / Av B Cv: briar
@@ -3855,10 +3855,10 @@ A Bv C: cenobites / B Cv: coenobites
 A Bv C: cenobite's / B Cv: coenobite's
 
 # cenobitic <verified> (level 60)
-A C: cenobitic / B: coenobitic
+A Bv C: cenobitic / B Cv: coenobitic
 
 # cenobitical <verified> (level 70)
-A C: cenobitical / B: coenobitical
+A Bv C: cenobitical / B Cv: coenobitical
 
 # cenobitism (level 80)
 A: cenobitism / B: coenobitism
@@ -4607,9 +4607,6 @@ A Z: classicizes / B: classicises
 # clausule (level 80)
 A: clausule / B: clausulae
 
-# clave (level 70)
-A: clave / B: clavae
-
 # clericalize (level 95)
 A Z: clericalize / B: clericalise
 A Z: clericalizes / B: clericalises
@@ -4965,14 +4962,14 @@ A: colorific / B: colourific
 A: colorifics / B: colourifics
 A: colorific's / B: colourific's
 
-# colorimeter (level 70)
-A: colorimeter / B: colourimeter
-A: colorimeters / B: colourimeters
-A: colorimeter's / B: colourimeter's
+# colorimeter <verified> (level 70)
+A B: colorimeter / B-: colourimeter
+A B: colorimeters / B-: colourimeters
+A B: colorimeter's / B-: colourimeter's
 
-# colorimetric (level 70)
-A: colorimetric / B: colourimetric
-A: colorimetrics / B: colourimetrics
+# colorimetric <verified> (level 70)
+A B: colorimetric / B-: colourimetric
+A B: colorimetrics / B-: colourimetrics
 
 # colorimetrical (level 95)
 A: colorimetrical / B: colourimetrical
@@ -4986,9 +4983,9 @@ A: colorimetrist / B: colourimetrist
 # colorimetrist's (level 99)
 A: colorimetrist's / B: colourimetrist's
 
-# colorimetry (level 80)
-A: colorimetry / B: colourimetry
-A: colorimetries / B: colourimetries
+# colorimetry <verified> (level 80)
+A B: colorimetry / B-: colourimetry
+A B: colorimetries / B-: colourimetries
 
 # colorin (level 95)
 A: colorin / B: colourin
@@ -5991,10 +5988,6 @@ A Z: Darwinize's / B: Darwinise's
 A Z: dastardize / B: dastardise
 A Z: dastardizes / B: dastardises
 
-# de (level 70)
-A: de / B: dae
-A: des / B: daes
-
 # deaconize (level 95)
 A Z: deaconize / B: deaconise
 A Z: deaconizes / B: deaconises
@@ -6179,8 +6172,6 @@ A: decolorimeter / B: decolourimeter
 A: decolorization / B: decolourisation / Z: decolourization
 A: decolorizations / B: decolourisations / Z: decolourizations
 A: decolorization's / B: decolourisation's / Z: decolourization's
-A Z: decolourizations / B: decolourisations
-A Z: decolourization's / B: decolourisation's
 
 # decolorize (level 70)
 A: decolorize / B: decolourise / Z: decolourize
@@ -6455,12 +6446,6 @@ A B: demagogued / AV: demagoged
 A B: demagoguing / AV: demagoging
 A B: demagogues / AV: demagogs
 A B: demagogue's / AV: demagog's
-
-A B: demagogue / AV: demagog
-A B: demagogue / AV: demagog
-A B: demagogue / AV: demagog
-A B: demagogue / AV: demagog
-A B: demagogue / AV: demagog
 
 # demagogueri (level 99)
 _: demagogueri / _V: demagogri
@@ -7994,9 +7979,9 @@ A: drivelers / B: drivellers
 A: driveler's / B: driveller's
 
 # drought <verified> (level 35)
-A: drought / AV B: drouth
-A: droughts / AV B: drouthes
-A: drought's / AV B: drouth's
+A B: drought / AV BV: drouth
+A B: droughts / AV BV: drouthes
+A B: drought's / AV BV: drouth's
 
 # droughtiness (level 80)
 _: droughtiness / _V: drouthiness
@@ -8905,9 +8890,6 @@ A: envapor's / B: envapour's
 # envenomization (level 80)
 A Z: envenomization / B: envenomisation
 
-# envier (level 70)
-A: envier / B: envire
-
 # eolic (level 95)
 A: eolic / B: aeolic
 
@@ -9652,11 +9634,11 @@ A Z: exhibitionizes / B: exhibitionises
 A Z: existentialize / B: existentialise
 A Z: existentializes / B: existentialises
 
-# exorcise (level 50)
-_: exorcise / _V: exorcize
-_: exorcised / _V: exorcized
-_: exorcising / _V: exorcizing
-_: exorcises / _V: exorcizes
+# exorcise <verified> (level 50)
+A B C: exorcise / AV Cv Z: exorcize
+A B C: exorcised / AV Cv Z: exorcized
+A B C: exorcising / AV Cv Z: exorcizing
+A B C: exorcises / AV Cv Z: exorcizes
 
 # exorcization (level 95)
 A Z: exorcization / B: exorcisation
@@ -9742,11 +9724,6 @@ A B C: extroverted / AV BV: extraverted
 A B C: extroverts / AV BV: extraverts
 A B C: extrovert's / AV BV: extravert's
 ## extravert is marked as a "chiefly Psychology" variant
-
-# eyer (level 70)
-A: eyer / B: eyre
-A: eyers / B: eyres
-A: eyer's / B: eyre's
 
 # eying <verified> (level 35)
 A B: eyeing / Av Bv: eying
@@ -11370,8 +11347,9 @@ A: glucemia / B: glucaemia
 # glucosemia (level 95)
 A: glucosemia / B: glucosaemia
 
-# gluteal (level 70)
-A: gluteal / B: glutaeal
+# gluteal <verified> (level 70)
+A B: gluteal / BV: glutaeal
+## OED has glutaeal listed first, ODE doesn't reconize glutaeal
 
 # gluteus (level 70)
 A: gluteus / B: glutaeus
@@ -11489,7 +11467,7 @@ A B: goodbye's / Av: goodby's
 # goody <verified> (level 20)
 A B: goody / Av Bv: goodie
 A B: goodies
-A: goody's / Av Bv: goodie's
+A B: goody's / Av Bv: goodie's
 
 # gor (level 80)
 A: gor / B: gour
@@ -12769,7 +12747,7 @@ A Z: Hinduizing's / B: Hinduising's
 
 # hippie <verified> (level 35)
 A Bv C: hippie / Av B Cv: hippy | <N>
-A: hippies | <N>
+A B: hippies | <N>
 A Bv C: hippie's / Av B Cv: hippy's | <N>
 A B: hippy | <Adj>
 
@@ -12948,7 +12926,7 @@ A: homeostases / B: homoeostases
 A: homeostasis's / B: homoeostasis's
 
 # homeostatic <verified> (level 60)
-A B C: homeostatic / Bv: homoeostatic
+A B: homeostatic / Bv: homoeostatic
 
 # homeoteleuton (level 80)
 A: homeoteleuton / B: homoeoteleuton
@@ -14678,16 +14656,16 @@ A Z: Jacobinized's / B: Jacobinised's
 A Z: Jacobinizing's / B: Jacobinising's
 
 # jail <verified> (level 20)
-A B: jail / Bv ZV: gaol
-A B: jails / Bv ZV: gaols
-A B: jail's / Bv ZV: gaol's
-A B: jailed / Bv ZV: gaoled
-A B: jailing / Bv ZV: gaoling
+A B Z: jail / Bv ZV: gaol
+A B Z: jails / Bv ZV: gaols
+A B Z: jail's / Bv ZV: gaol's
+A B Z: jailed / Bv ZV: gaoled
+A B Z: jailing / Bv ZV: gaoling
 
 # jailer <verified> (level 35)
-A B: jailer / AV Cv: jailor / Bv ZV: gaoler
-A B: jailers / AV Cv: jailors / Bv ZV: gaolers
-A B: jailer's / AV Cv: jailor's / Bv ZV: gaoler's
+A B C Z: jailer / AV Cv: jailor / Bv ZV: gaoler
+A B C Z: jailers / AV Cv: jailors / Bv ZV: gaolers
+A B C Z: jailer's / AV Cv: jailor's / Bv ZV: gaoler's
 
 # janizary (level 80)
 A Z: janizary / B: janisary
@@ -15006,10 +14984,10 @@ A B C: kilogram / Bv: kilogramme
 A B C: kilograms / Bv: kilogrammes
 A B C: kilogram's / Bv: kilogramme's
 
-# kiloliter (level 60)
-A: kiloliter / B: kilolitre
-A: kiloliters / B: kilolitres
-A: kiloliter's / B: kilolitre's
+# kiloliter <verified> (level 60)
+A Cv: kiloliter / B C: kilolitre
+A Cv: kiloliters / B C: kilolitres
+A Cv: kiloliter's / B C: kilolitre's
 
 # kilometer <verified> (level 35)
 A Cv: kilometer / B C: kilometre
@@ -15362,9 +15340,6 @@ _: lavalier_microphone's / _V: lavaliere_microphone's
 
 # lavolted (level 95)
 A: lavolted / B: lavoltaed
-
-# le (level 95)
-A: le / B: loe
 
 # learned <verified> (level 10)
 A B. Z: learned / B Zv: learnt
@@ -15743,19 +15718,19 @@ A B: liquefier / AV: liquifier
 A B: liquefiers / AV: liquifiers
 
 # liquefy <verified> (level 35)
-A C: liquefy / AV Bv Cv: liquify
-A C: liquefied / AV Bv Cv: liquified
-A C: liquefying / AV Bv Cv: liquifying
-A C: liquefies / AV Bv Cv: liquifies
+A B: liquefy / AV Bv: liquify
+A B: liquefied / AV Bv: liquified
+A B: liquefying / AV Bv: liquifying
+A B: liquefies / AV Bv: liquifies
 
 # liquidization (level 95)
 A Z: liquidization / B: liquidisation
 
-# liquidize (level 50)
-A Z: liquidize / B: liquidise
-A Z: liquidized / B: liquidised
-A Z: liquidizing / B: liquidising
-A Z: liquidizes / B: liquidises
+# liquidize <verified> (level 50)
+A C Z: liquidize / B Cv: liquidise
+A C Z: liquidized / B Cv: liquidised
+A C Z: liquidizing / B Cv: liquidising
+A C Z: liquidizes / B Cv: liquidises
 
 # liquidizer <verified> (level 55)
 A Z: liquidizer / B: liquidiser
@@ -17745,10 +17720,10 @@ _: moniker's / _V: monicker's
 A Z: monochordize / B: monochordise
 A Z: monochordizes / B: monochordises
 
-# monologist (level 60)
-_: monologist / _v: monologuist
-_: monologists / _v: monologuists
-_: monologist's / _v: monologuist's
+# monologist <verified> (level 60)
+A B: monologist / Av Bv: monologuist
+A B: monologists / Av Bv: monologuists
+A B: monologist's / Av Bv: monologuist's
 
 # monologize (level 80)
 A Z: monologize / B: monologise
@@ -19021,11 +18996,11 @@ A B: nosy's / Bv: nosey's
 A Z: notarization / B: notarisation
 A Z: notarizations / B: notarisations
 
-# notarize (level 50)
-A Z: notarize / B: notarise
-A Z: notarized / B: notarised
-A Z: notarizing / B: notarising
-A Z: notarizes / B: notarises
+# notarize <verified> (level 50)
+A C Z: notarize / B Cv: notarise
+A C Z: notarized / B Cv: notarised
+A C Z: notarizing / B Cv: notarising
+A C Z: notarizes / B Cv: notarises
 
 # noter (level 80)
 A: noter / B: notre
@@ -19144,9 +19119,9 @@ A: ocher's / B: ochre's
 A: ocherish / B: ochreish
 
 # ocherous <verified> (level 70)
-A: ocherous / B: ochreous
-A: ocherouser / B: ochreouser
-A: ocherousest / B: ochreousest
+A: ocherous / Av B: ochreous
+A: ocherouser / Av B: ochreouser
+A: ocherousest / Av B: ochreousest
 
 # ochery (level 70)
 A: ochery / B: ochrey
@@ -19351,9 +19326,9 @@ A Z: oralization's / B: oralisation's
 A Z: oralize / B: oralise
 A Z: oralizes / B: oralises
 
-# orang (level 70)
-A: orang / B: ourang
-A: orangs / B: ourangs
+# orang <verified> (level 70)
+A B: orang / B-: ourang
+A B: orangs / B-: ourangs
 
 # orangize (level 95)
 A Z: orangize / B: orangise
@@ -19587,11 +19562,11 @@ A: outlabor's / B: outlabour's
 # outluster (level 95)
 A: outluster / B: outlustre
 
-# outmaneuver (level 40)
-A: outmaneuver / B: outmanoeuvre
-A: outmaneuvered / B: outmanoeuvred
-A: outmaneuvering / B: outmanoeuvring
-A: outmaneuvers / B: outmanoeuvres
+# outmaneuver <verified> (level 40)
+A Cv: outmaneuver / B C: outmanoeuvre
+A Cv: outmaneuvered / B C: outmanoeuvred
+A Cv: outmaneuvering / B C: outmanoeuvring
+A Cv: outmaneuvers / B C: outmanoeuvres
 
 # outrival (level 80)
 A: outrivaled / B: outrivalled
@@ -21309,9 +21284,6 @@ A: perchlorethylene / B: perchloroethylene
 # perchloric (level 80)
 A: perchloric / B: prechloric
 
-# perchlorination (level 95)
-A: perchlorination / B: prechlorination
-
 # perclose (level 95)
 A: perclose / B: preclose
 
@@ -21821,9 +21793,10 @@ A Z: phonetizes / B: phonetises
 A BV C: phony / AV B Cv: phoney | <N>
 A Bv C: phonies / AV B Cv: phoneys | <N>
 A BV C: phony's / AV B Cv: phoney's | <N>
-_: phony | <V>
-_: phonied / _V: phoneyed | <V>
-_: phonying / _V: phoneying | <V>
+A B: phonier | <Adj>
+A B: phoniest | <Adj>
+A B: phonied / AV: phoneyed | <V> (-)
+A B: phonying / AV: phoneying | <V> (-)
 
 # phorrhea (level 95)
 A: phorrhea / B: phorrhoea
@@ -23187,8 +23160,8 @@ _: prier / _V: pryer
 _: priers / _V: pryers
 _: prier's / _V: pryer's
 
-# primevally (level 70)
-A: primevally / B: primaevally
+# primevally <verified> (level 70)
+A B: primevally / Bv: primaevally
 
 # prioritization <verified> (level 55)
 A Z: prioritization / B: prioritisation
@@ -25716,10 +25689,6 @@ A Z: scandalizer's / B: scandaliser's
 
 # scaped (level 80)
 A: scaped / B: scapaed
-
-# scarer (level 80)
-A: scarer / B: scarre
-A: scarers / B: scarres
 
 # scary (level 35)
 _: scary / _-: scarey
@@ -28779,9 +28748,6 @@ A Z: tetanizes / B: tetanises
 A: tetrachlorethylene / B: tetrachloroethylene
 A: tetrachlorethylenes / B: tetrachloroethylenes
 
-# tetrafluoride (level 80)
-A: tetrafluoride / B: tetrafluouride
-
 # Teutonization (level 80)
 A Z: Teutonization / B: Teutonisation
 A Z: Teutonization's / B: Teutonisation's
@@ -28958,7 +28924,7 @@ A Z: thronize / B: thronise
 A Z: thronizes / B: thronises
 
 # through <verified> (level 10)
-A: through / Av B: thru
+A B: through / Av: thru
 
 # thruway <verified> (level 50)
 A Bv: thruway / Av B C: throughway
@@ -29227,17 +29193,17 @@ A Z: tranquilizations / B: tranquilisations
 A Z: tranquilization's / B: tranquilisation's
 
 # tranquilize <verified> (level 35)
-A: tranquilize / AV Cv Z: tranquillize / B CV: tranquillise
-A: tranquilized / AV Cv Z: tranquillized / B CV: tranquillised
-A: tranquilizing / AV Cv Z: tranquillizing / B CV: tranquillising
-A: tranquilizes / AV Cv Z: tranquillizes / B CV: tranquillises
-A: tranquilizings / AV Cv Z: tranquillizings / B CV: tranquillisings | (-) normally an adj.
-A: tranquilizing's / AV Cv Z: tranquillizing's / B CV: tranquillising's | (-) normally an adj.
+A C: tranquilize / AV Cv Z: tranquillize / B CV: tranquillise
+A C: tranquilized / AV Cv Z: tranquillized / B CV: tranquillised
+A C: tranquilizing / AV Cv Z: tranquillizing / B CV: tranquillising
+A C: tranquilizes / AV Cv Z: tranquillizes / B CV: tranquillises
+A C: tranquilizings / AV Cv Z: tranquillizings / B CV: tranquillisings | (-) normally an adj.
+A C: tranquilizing's / AV Cv Z: tranquillizing's / B CV: tranquillising's | (-) normally an adj.
 
 # tranquilizer <verified> (level 35)
-A C Z: tranquilizer / B Cv: tranquiliser / Cv: tranquillizer
-A C Z: tranquilizers / B Cv: tranquilisers / Cv: tranquillizers
-A C Z: tranquilizer's / B Cv: tranquiliser's / Cv: tranquillizer's
+A C: tranquilizer / AV Cv Z: tranquillizer / B CV: tranquilliser
+A C: tranquilizers / AV Cv Z: tranquillizers / B CV: tranquillisers
+A C: tranquilizer's / AV Cv Z: tranquillizer's / B CV: tranquilliser's
 
 # tranquilizingly (level 80)
 A Z: tranquilizingly / B: tranquilisingly
@@ -29246,17 +29212,6 @@ A Z: tranquilizingly / B: tranquilisingly
 A Z: tranquillization / B: tranquillisation
 A Z: tranquillizations / B: tranquillisations
 A Z: tranquillization's / B: tranquillisation's
-
-# tranquillize (level 50)
-A Z: tranquillize / B: tranquillise
-A Z: tranquillized / B: tranquillised
-A Z: tranquillizing / B: tranquillising
-A Z: tranquillizes / B: tranquillises
-
-# tranquillizer (level 50)
-A Z: tranquillizer / B: tranquilliser
-A Z: tranquillizers / B: tranquillisers
-A Z: tranquillizer's / B: tranquilliser's
 
 # tranquillizingly (level 80)
 A Z: tranquillizingly / B: tranquillisingly
@@ -29408,7 +29363,7 @@ A B C: trolley / AV Cv: trolly
 A B C: trolleyed / AV Cv: trollied
 A B C: trolleying / AV Cv: trollying
 A B C: trolleys / AV Cv: trollies
-A C: trolley's / AV Cv: trolly's
+A B C: trolley's / AV Cv: trolly's
 
 # tropeolin (level 70)
 A: tropeolin / B: tropaeolin
@@ -29576,9 +29531,6 @@ A Z: tutorize / B: tutorise
 A Z: tutorized / B: tutorised
 A Z: tutorizing / B: tutorising
 A Z: tutorizes / B: tutorises
-
-# tweer (level 80)
-A: tweer / B: twere
 
 # twier (level 80)
 A: twier / B: twire
@@ -31915,7 +31867,7 @@ A Z: vaporizes / B: vaporises
 ## it was used.  Nevertheless since "vapourize/-ise" doesn't seam to
 ## be a valid word, this spelling was not included.
 
-# vaporizer (level 50)
+# vaporizer <verified> (level 50)
 A Z: vaporizer / B: vaporiser
 A Z: vaporizers / B: vaporisers
 A Z: vaporizer's / B: vaporiser's
@@ -32629,9 +32581,9 @@ A Bv C: whirs / AV B Cv: whirrs
 A Bv C: whir's / AV B Cv: whirr's
 
 # whiskey <verified> (level 20)
-A Cv: whiskeys / Av B: whiskies | drink
-A Cv: whiskey / Av B: whisky | drink
-A Cv: whiskey's / Av B: whisky's | drink
+A Cv: whiskeys / Av B C: whiskies | drink
+A Cv: whiskey / Av B C: whisky | drink
+A Cv: whiskey's / Av B C: whisky's | drink
 A B: whiskey | (-) code word
 A B: whiskies | (-) code word
 A B: whiskey's | (-) code word
@@ -32649,6 +32601,7 @@ A BV C: whiz / Av B Cv: whizz / AV Bv Cv: wiz | :2
 A BV C: whiz's / Av B Cv: whizz's / AV Bv Cv: wiz's | :2
 A B: whizzes / AV Bv: wizzes | :2
 A B: wiz | wizard
+A B: wizz | as in "gee whiz", Ox: informal, chiefly N. Amer.
 
 # whodunit (level 40)
 _: whodunit / _V: whodunnit
@@ -33042,9 +32995,12 @@ A: grayness / B: greyness
 A: grayness's / B: greyness's
 
 # groin <verified> (level 35)
-A: groin / B: groyne
-A: groin's / B: groyne's
-A: groins / B: groynes
+A: groin / B: groyne | wall
+A: groin's / B: groyne's | wall
+A: groins / B: groynes | wall
+A B: groin | body part
+A B: groin's | body part
+A B: groins | body part
 
 # hemophilia <verified> (level 35)
 A C: hemophilia / B: haemophilia

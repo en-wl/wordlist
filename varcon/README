@@ -1,4 +1,4 @@
-Variant Conversion Info (VARCON)
+Variant Conversion Info (VarCon)
 
 Revision 5.0 (SVN Revision 124)
 
@@ -242,8 +242,8 @@ As well as several online dicionaries:
   American Heritage: http://www.bartleby.com/61/
   Cambridge (ESL): http://dictionary.cambridge.org/
 
-Since version 5.0 massive effort to correct the numerous errors in
-Varcon.  The primary sources used for verification where:
+In version 5.0 a massive effort to correct the numerous errors in
+VarCon was done.  The primary sources used for verification where:
 
   Marriam-Webster: http://www.m-w.com/
   Free version of Oxford Dictionaries Online: 
@@ -258,9 +258,10 @@ Varcon.  The primary sources used for verification where:
 
 I also used Tysto UK vs US spelling list available at:
   http://www.tysto.com/articles05/q1/20050324uk-us.shtml
-to make sure I didn't leave out any information in Varcon, however any additions 
-from his lists where verified using the dictionaries mentioned above as his lists
-contained numerous errors (such as including archaic spellings of words)
+to make sure I didn't leave out any information in VarCon, however any
+additions from his lists where verified using the dictionaries
+mentioned above as his lists contained numerous errors (such as
+including archaic spellings of words)
 
 I also made indirect use of Luke's Canadian, British and American
 Spelling page available at:

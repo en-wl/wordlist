@@ -414,6 +414,7 @@ sub read() {
   my $dict = new Dictionary;
   open F, "r/varcon/varcon.txt";
   while (<F>) {
+    next if varcon::filter(\$_);
     my ($data, $notes) = /^(.+?)(?: \| (.+))?$/ or die;
     my %line = varcon::flatten(varcon::readline($data));
     my $spellings = new Spellings \%line;
@@ -698,10 +699,10 @@ sub combine_forms(\@@) {
 }
 
 
-my $entries = $varcon->entries();
-foreach my $entry (@$entries) {
-  @to_try = $tof12id->lookup_anywhere(...);
-  next unless @to_try;
-  
-}
+#my $entries = $varcon->entries();
+#foreach my $entry (@$entries) {
+#  @to_try = $tof12id->lookup_anywhere(...);
+#  next unless @to_try;
+#  
+#}
 

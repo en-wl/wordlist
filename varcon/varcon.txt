@@ -3708,19 +3708,11 @@ A: celioscopy / B: coelioscopy
 # celiotomy (level 70)
 A: celiotomy / B: coeliotomy
 
-# celom (level 70)
-# XXX Merged
-A Cv: celom / B C: coelom
-A: celoma / B: coeloma
-A: celomata / B: coelomata
-A Cv: celoms / B C: coeloms / Bv: coelomata
-A Cv: celom's / B C: coelom's
-#
 # celom <verified> (level 70)
 A Cv: celom / B C: coelom
 A Cv: celoms / B C: coeloms / Bv: coelomata
 A Cv: celom's / B C: coelom's
-#
+
 # celoma (level 80)
 A: celoma / B: coeloma
 A: celomata / B: coelomata
@@ -7097,8 +7089,11 @@ _: dickey / _v: dicky / _V: dickie
 _: dickeys / _v: dickies
 _: dickey's / _v: dicky's / _V: dickie's
 
+# diecious <verified> (level 70)
+A B: dioecious / AV: diecious
+
 # dieciously (level 80)
-A: dieciously / B: dioeciously
+A B: dioeciously / AV: dieciously
 
 # diene (level 80)
 A: diene / B: diaene
@@ -8079,9 +8074,9 @@ A: edicule / B: aedicule
 A: edicule's / B: aedicule's
 
 # edile <verified> (level 70)
-A: edile / B: aedile
-A: ediles / B: aediles
-A: edile's / B: aedile's
+A B: aedile / AV: edile
+A B: aediles / AV: ediles
+A B: aedile's / AV: edile's
 
 # edility (level 95)
 A: edility / B: aedility
@@ -13732,7 +13727,7 @@ A Z: imperializes / B: imperialises
 A: imperiled / B: imperilled
 A: imperiling / B: imperilling
 
-# imperscriptible <verified> (level 70)
+# imperscriptible (level 70)
 A: imperscriptible / B: imprescriptible
 
 # impersonalization (level 80)
@@ -16508,8 +16503,13 @@ A Z: memorizer / B: memoriser
 A Z: memorizers / B: memorisers
 A Z: memorizer's / B: memoriser's
 
-# menadic (level 70)
-A: menadic / B: maenadic
+# menad <verified> (level 70)
+A B: maenad / AV: menad
+A B: maenads / AV: menads
+A B: maenad's / AV: menad's
+
+# menadic <verified> (level 70)
+A B: maenadic / AV: menadic
 
 # Mendelize (level 95)
 A Z: Mendelize / B: Mendelise
@@ -19622,7 +19622,7 @@ A Z: palatizes / B: palatises
 # paleanthropic (level 80)
 A: paleanthropic / B: palaeanthropic
 
-# Palearctic <verified> (level 70)
+# Palearctic (level 70)
 A C: Palearctic / B: Palaearctic
 
 # paleencephalon (level 95)
@@ -22541,6 +22541,11 @@ A: prenarial / B: praenarial
 # preneural (level 95)
 A: preneural / B: praeneural
 
+# prenomen <verified> (level 70)
+A B: praenomen / AV: prenomen
+A B: praenomens / AV: prenomens
+A B: praenomen's / AV: prenomen's
+
 # prenomina (level 80)
 A: prenomina / B: praenomina
 
@@ -23033,8 +23038,8 @@ A: proseuche / B: proseuchae
 A: prosocele / B: prosocoele
 
 # prosopopeia <verified> (level 70)
-A B C: prosopopoeia / AV Cv: prosopopeia
-A B C: prosopopoeias / AV Cv: prosopopeias
+A Cv: prosopopeia / B C: prosopopoeia
+A Cv: prosopopeias / B C: prosopopoeias
 
 # prosopopeial (level 80)
 A: prosopopeial / B: prosopopoeial
@@ -26983,7 +26988,7 @@ A: stomodeum's / B: stomodaeum's
 # stony (level 35)
 _: stony / _V: stoney
 
-# stor <verified> (level 70)
+# stor (level 70)
 A: stor / B: stour / Bv: stoor
 
 # storier (level 95)

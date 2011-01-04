@@ -1,0 +1,311 @@
+#!/usr/bin/perl
+
+use varcon;
+
+my $BASE = "/home/kevina/wordlist-svn/trunk/scowl";
+
+use strict;
+#use warnings;
+#no warnings 'uninitialized';
+
+# Usage: add-affixes [<inc_level>] [<flags>]
+
+#print STDERR "Include Level: $inc_level\n";
+
+open F, "$BASE/r/alt12dicts/2of12id.txt" or die;
+
+my %lookup;
+my %remove;
+my %possessive;
+
+while (<F>) {
+  s/\r?\n$// or die;
+  # (flags, base word, part of speach, infl forms)
+  my ($d,$w,$p,$a) = /^([-@]?)(\w+) (.).*: ?(.*)$/ or die;
+  $possessive{$w} = "$w\'s";# if $p eq 'N' && ($d eq '' || $use_all);
+}
+
+# Maybe using AGID isn't a good idea here, many of the entries in AGID
+# are unchecked, for example "associationism" may be an uncountable
+# noun, but since the base entry is not in 2of12id it is not flagged
+# that way, thus the plural "associationisms" gets included.  However,
+# AGID still needs to be used for uppercase words since they are not
+# in 2of12id.  For now I won't worry about it since it primary effects
+# level 70 of SCOWL.
+
+open F, "$BASE/r/infl/infl_plus.txt" or die;
+
+my %entry_order;
+
+while (<F>) {
+  # (base word, part of speach, guess flag, infl forms)
+  #print STDERR "DITSY: $_" if /ditsy/;
+  my ($w,$p,$q,$a) = /(\S+) (.)(.*): (.+)/ or die;
+  # Add possive form if
+  #  AGID things it is a noun and "use-some" or Uppercase 
+  #    (since 2of12id doesn't include uppercase)
+  #  AGIG is guessing it is a noun and "use-all"
+  $possessive{$w} = "$w\'s"; #if $p eq 'N' && (($q eq '' && ($use_all || $w =~ /^[A-Z]/)) 
+                             #                  || $use_all >= 2);
+  my @a = split /, | \| /, $a;
+  @a = grep {my ($word,$tags,$level) 
+		 = /^([A-Za-zñüö\'_-]+)([~<!?]*)(| [\d.]+)(| {\S+})$/ or die $_;
+	     $_ = $word;
+	     $tags !~ /~|\?|!</} @a;
+  next unless @a;
+  push @{$lookup{$w}}, @a;
+  unshift @a, $w;
+  push @a, "$w\'s";
+  foreach (@a) {
+      push @{$entry_order{$_}}, \@a;
+  }
+}
+
+my %clusters;
+
+sub flatten(@) {
+    my @res;
+    foreach (@_) {
+        if (ref $_ eq 'ARRAY') {push @res, @$_;} 
+        else                   {push @res, $_; }}
+    return @res;
+}
+
+sub set_add (\%@) {
+    my ($set) = shift;
+    foreach (@_) {$set->{$_} = 1 if defined $_}
+}
+
+my @root_words;
+
+sub add_varcon_line ($$$) {
+    my ($line,$comment,$orig_cluster_lines) = @_;
+    my $orig_key;
+    ($orig_key) = $orig_cluster_lines->[0] =~ /^# (\S+)/ if defined $orig_cluster_lines;
+    my $hack = $line =~ /^\*/;
+    my %words;
+    varcon::get_words_set(%words, {varcon::readline($line)});
+    foreach my $w (keys %words) {
+        push @root_words, map {$_->[0]} @{$entry_order{$w}};
+        set_add %words, @{$lookup{$w}};
+        set_add %words, $possessive{$w};
+        set_add %words, $orig_key if defined $orig_key;
+        set_add %words, $1 if $w =~ /^(.+)'s$/;
+    }
+    #print ">>$_";
+    #print join (' ', sort keys %words), "\n\n";
+    # now create disjoint sets
+    my %old_clusters;
+    foreach (keys %words) {
+        my $cluster = $clusters{$_};
+        next unless defined $cluster;
+        $old_clusters{$cluster} = $cluster->[1];
+        set_add %words, @{$cluster->[0]};
+    }
+    set_add %words, map {lc} (keys %words);
+    return if $hack && (values %old_clusters) <= 1;
+    my $new_cluster = [[keys %words],
+                       [flatten({line => $line, comment => $comment, orig => $orig_cluster_lines},
+                                values %old_clusters)]];
+    foreach (keys %words) {
+        $clusters{$_} = $new_cluster;
+    }
+}
+
+#
+# Basic cluster
+#
+#while (<STDIN>) {
+#    next if varcon::filter $_;
+#    add_varcon_line($_);
+#}
+
+#open F, "varcon.txt";
+{
+    local $/ = "\n\n";
+    while (<STDIN>) {
+        die unless s/^(\#.+)\n//;
+        my $header = $1;
+        my @cluster_lines = ($header);
+        my @lines = split /\n/;
+        foreach my $l (@lines) {
+            push @cluster_lines, $l;
+            my $comment;
+            next if varcon::filter $l, \$comment;
+            add_varcon_line($l,$comment,\@cluster_lines);
+        }
+    }
+}
+#my %already_done;
+#foreach my $word (@root_words) {
+#    next if exists $clusters{$word} || $already_done{$word};
+#    #print STDERR ">>*: $word\n";
+#    add_varcon_line "*: $word";
+#    $already_done{$word} = 1;
+#}
+
+my %scowl;
+foreach my $f (</home/kevina/wordlist-svn/trunk/scowl/final/*.??>) {
+    my ($level) = $f =~ /.+\.(\d\d)$/ or die;
+    open F, $f or die;
+    while (<F>) {
+        chop;
+        $scowl{$_} = $level unless exists $scowl{$_} && $scowl{$_} <= $level;
+        #print STDERR ">>$_ $level $scowl{$_}\n";
+    }
+}
+
+sub min ($$) {$_[0] < $_[1] ? $_[0] : $_[1];}
+
+sub find_pos ($@) {
+    my $to_find = shift;
+    my $i = 0;
+    foreach (@_) {
+        return $i if $_ eq $to_find;
+        $i++;
+    }
+    return undef;
+}
+
+sub word_cmp {
+    my ($a, $b) = @_;
+    my $res;
+    foreach (@{$entry_order{$a}}) {
+        my $b_pos = find_pos $b, @$_;
+        next unless defined $b_pos;
+        my $a_pos = find_pos $a, @$_;
+        my $r = $a_pos <=> $b_pos;
+        if (defined $res && $r != $res) {
+            print STDERR "WARNING: $a word_cmp $b inconsistent\n";
+            $res = 99;
+        } else {
+            $res = $r;
+        }
+    }
+    #print STDERR "$a word_cmp $b = $res\n" if ($a eq 'ditsier' || $b eq 'ditsier');
+    #print STDERR "$a word_cmp $b = $res\n" if ($a eq 'ditsy' || $b eq 'ditsy');
+    return $res if defined $res && $res != 99;
+    return $a cmp $b;
+}
+
+sub list_cmp {
+    my ($a, $b) = @_;
+    #print STDERR "@$a <=> @$b\n";
+    my $i = 0;
+    while ($i != @$a && $i != @$b) {
+        #print STDERR "  $i: $a->[$i] <=> $b->[$i]\n";
+        my $r = word_cmp $a->[$i], $b->[$i];
+        return $r if $r != 0;
+        $i++;
+    }
+    return 0 if $i == @$a && $b == @$a;
+    return -1 if $i == @$a;
+    return 1 if $i == @$b;
+}
+
+sub cmp_rule (&$$) {
+    my ($test, $a, $b) = @_;
+    local $_;
+    $_ = $a;
+    my $res_a = &$test;
+    $_ = $b;
+    my $res_b = &$test;
+    return 0     if $res_a && $res_b;
+    return undef if !$res_a && !$res_b;
+    return -1 if $res_a;
+    return 1  if $res_b;
+}
+
+sub note_cmp {
+    my ($a, $b) = @_;
+    my $r;
+    $r = cmp_rule {!exists $_->{_}} $a, $b;
+    return $r if defined $r;
+    return 0 if $a->{_} eq $b->{_};
+    $r = cmp_rule {!exists $_->{uncommon}} $a, $b;
+    return $r if $r;
+    return $a->{_} cmp $b->{_};
+}
+
+sub line_cmp {
+    my ($a, $b) = @_;
+    my $r;
+    $r = note_cmp $a->{notes}, $b->{notes};
+    return $r if $r;
+    return list_cmp $a->{words}, $b->{words};
+}
+
+my %seen;
+my %clusters_byword;
+my %clusters_byword_plus;
+foreach my $cluster (values %clusters) {
+    next if $seen{$cluster};
+    $seen{$cluster} = 1;
+    my @lines;
+    my @words;
+    my %orig_clusters;
+    foreach my $d (@{$cluster->[1]}) {
+        my $line = $d->{line};
+        my %notes;
+        my %d = varcon::readline($line, \%notes);
+        my @w = varcon::get_words(\%d);
+        push @words, @w unless $line =~ /^\*/;
+        push @lines, {words => \@w, notes => \%notes, line => $line, 
+                      comment => $d->{comment}, orig => $d->{orig}};
+        $orig_clusters{$d->{orig}} = $d->{orig};
+    }
+    @lines = sort {line_cmp $a, $b} @lines;
+    my $level = 99;
+    foreach my $word (@words) {
+        $level = min($level, $scowl{$word}) if exists $scowl{$word};
+    }
+    my $headword = $lines[0]{words}[0];
+    my $lines_final = '';
+    my @orig_clusters = values %orig_clusters;
+    my $verified = grep {$_->[0] =~ /<verified>/} @orig_clusters;
+    if (@orig_clusters > 1 && ($level < 70 || $verified)) {
+        $lines_final .= "# $lines[0]{words}[0] (level $level)\n";
+        $lines_final .= "# XXX Merged\n";
+        foreach my $line (@lines) {
+            next if $line->{line} =~ /^\*/;
+            $lines_final .= $line->{line};
+            $lines_final .= ' '.$line->{comment} if $line->{comment};
+            $lines_final .= "\n";
+        }
+        foreach (@orig_clusters) {
+            $lines_final .= "#\n";
+            $lines_final .= join("\n", @$_);
+            $lines_final .= "\n";
+        }
+    } elsif (@orig_clusters == 1) {
+        local $_ = $orig_clusters[0][0];
+        my ($orig_word) = /^# (\S+)/ or die "Bad cluster header: $_\n";
+        print STDERR "Cluster key change: $orig_word => $headword\n"
+            unless $orig_word eq $headword;
+        $lines_final = join("\n", @{$orig_clusters[0]});
+        $lines_final .= "\n";
+        $headword = $orig_word;
+    } else {
+        $lines_final .= "# $headword (level $level)\n";
+        foreach my $line (@lines) {
+            next if $line->{line} =~ /^\*/;
+            $lines_final .= $line->{line};
+            $lines_final .= ' '.$line->{comment} if $line->{comment};
+            $lines_final .= "\n";
+        }
+    }
+    $clusters_byword{$headword} = $lines_final;
+    #$clusters_byword_plus{$line_keys[0]} = $lines_final unless $keeper;
+}
+
+$ENV{LC_ALL} = 'en_US';
+use locale;
+foreach my $key (sort keys %clusters_byword) {
+    print "$clusters_byword{$key}\n";
+}
+
+#open F, ">varcon-plus.txt" or die;
+#foreach my $key (sort keys %clusters_byword_plus) {
+#    print F "$clusters_byword_plus{$key}\n";
+#}
+

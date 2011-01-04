@@ -23038,8 +23038,8 @@ A: proseuche / B: proseuchae
 A: prosocele / B: prosocoele
 
 # prosopopeia <verified> (level 70)
-A Cv: prosopopeia / B C: prosopopoeia
-A Cv: prosopopeias / B C: prosopopoeias
+A B C: prosopopoeia / AV Cv: prosopopeia
+A B C: prosopopoeias / AV Cv: prosopopeias
 
 # prosopopeial (level 80)
 A: prosopopeial / B: prosopopoeial

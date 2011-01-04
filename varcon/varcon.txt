@@ -420,9 +420,9 @@ A Z: aguizes / B: aguises
 A: aiger / B: aigre
 
 # airfoil <verified> (level 50)
-A: airfoil / B: aerofoil
-A: airfoils / B: aerofoils
-A: airfoil's / B: aerofoil's
+A C: airfoil / B: aerofoil
+A C: airfoils / B: aerofoils
+A C: airfoil's / B: aerofoil's
 
 # airgel (level 80)
 A: airgel / B: aerogel
@@ -434,9 +434,9 @@ _: air_gun / _v: airgun
 _: air_letter / _v: airletter
 
 # airplane <verified> (level 35)
-A: airplane / B: aeroplane
-A: airplanes / B: aeroplanes
-A: airplane's / B: aeroplane's
+A C: airplane / B: aeroplane
+A C: airplanes / B: aeroplanes
+A C: airplane's / B: aeroplane's
 
 # airstrike (level 55)
 _: airstrike / _v: air_strike
@@ -1605,9 +1605,6 @@ A B C: archaeological / Av Cv: archeological
 # archeometry (level 80)
 A: archeometry / B: archaeometry
 A: archeometries / B: archaeometries
-
-# archeopteryx <verified> (level 70)
-A: archeopteryx / B: archaeopteryx
 
 # Archeozic (level 99)
 A: Archeozic / B: Archaeozic
@@ -7100,9 +7097,6 @@ _: dickey / _v: dicky / _V: dickie
 _: dickeys / _v: dickies
 _: dickey's / _v: dicky's / _V: dickie's
 
-# diecious <verified> (level 70)
-A: diecious / B: dioecious
-
 # dieciously (level 80)
 A: dieciously / B: dioeciously
 
@@ -9114,7 +9108,7 @@ A Cv: estheticians / B C: aestheticians
 A Cv: esthetician's / B C: aesthetician's
 
 # estival <verified> (level 70)
-A Cv: estival / B C: aestival
+A Cv: estival / AV B C: aestival
 
 # estivate <verified> (level 70)
 A Cv: estivate / B C: aestivate
@@ -13032,7 +13026,7 @@ A B: hurrahed / AV Bv: hoorayed / AV Bv: hurrayed | :1
 A B: hurrahing / AV Bv: hooraying / AV Bv: hurraying | :1
 A B: hurrahs / Av Bv: hoorays / AV: hoorahs / AV Bv: hurrays / A-: hurrahes | :1
 A B: hurrah's / Av Bv: hooray's / AV: hoorah's / AV Bv: hurray's | :1
-A: hooray / Av: hurrah / Av: hurray | <Inj>
+A B: hooray / Av: hurrah / Av: hurray | :2 <Inj>
 
 # hurricanize (level 95)
 A Z: hurricanize / B: hurricanise
@@ -16043,6 +16037,8 @@ _: manikin's / _V: mannikin's
 # manila <verified> (level 55)
 A C: manila / AV B Cv: manilla
 A C: manila's / AV B Cv: manilla's
+A Bv C: Manila / AV B Cv: Manilla
+A Bv C: Manila's / AV B Cv: Manilla's
 
 # mannerize (level 95)
 A Z: mannerize / B: mannerise
@@ -16511,11 +16507,6 @@ A Z: memorizes / B: memorises
 A Z: memorizer / B: memoriser
 A Z: memorizers / B: memorisers
 A Z: memorizer's / B: memoriser's
-
-# menad <verified> (level 70)
-A: menad / B: maenad
-A: menads / B: maenads
-A: menad's / B: maenad's
 
 # menadic (level 70)
 A: menadic / B: maenadic
@@ -17376,7 +17367,7 @@ A Z: monasticizes / B: monasticises
 A: monecian / B: monoecian
 
 # monecious <verified> (level 70)
-A: monecious / B: monoecious
+A B: monoecious / AV: monecious
 
 # monestrous (level 80)
 A: monestrous / B: monoestrous
@@ -18880,9 +18871,6 @@ _: oleomargarine's / _-: oleomargarin's
 
 # oligemia (level 80)
 A: oligemia / B: oligaemia
-
-# oligochete <verified> (level 70)
-A: oligochete / B: oligochaete
 
 # oligocythemia (level 95)
 A: oligocythemia / B: oligocythaemia
@@ -20939,9 +20927,6 @@ A: peracute / B: preacute
 # perambulatory (level 70)
 A: perambulatory / B: preambulatory
 
-# perbend <verified> (level 70)
-A: perbend / B: prebend
-
 # perces (level 95)
 A: perces / B: preces
 
@@ -21098,9 +21083,6 @@ A Z: peroxidizement's / B: peroxidisement's
 A: perpend / B: prepend
 A: perpended / B: prepended
 A: perpending / B: prepending
-
-# perpense <verified> (level 70)
-A: perpense / B: prepense
 
 # perperfect (level 95)
 A: perperfect / B: preperfect
@@ -22027,10 +22009,6 @@ A Z: polonized / B: polonised
 A Z: polonizing / B: polonising
 A Z: polonizes / B: polonises
 
-# polychete <verified> (level 70)
-A: polychete / B: polychaete
-A: polychetes / B: polychaetes
-
 # polychetous (level 80)
 A: polychetous / B: polychaetous
 
@@ -22529,9 +22507,6 @@ A: preludium / B: praeludium
 A Z: preludize / B: preludise
 A Z: preludizes / B: preludises
 
-# prem <verified> (level 70)
-A: prem / B: proem
-
 # premaxilla (level 70)
 A: premaxilla / B: praemaxilla
 
@@ -22565,11 +22540,6 @@ A: prenarial / B: praenarial
 
 # preneural (level 95)
 A: preneural / B: praeneural
-
-# prenomen <verified> (level 70)
-A: prenomen / B: praenomen
-A: prenomens / B: praenomens
-A: prenomen's / B: praenomen's
 
 # prenomina (level 80)
 A: prenomina / B: praenomina
@@ -23063,8 +23033,8 @@ A: proseuche / B: proseuchae
 A: prosocele / B: prosocoele
 
 # prosopopeia <verified> (level 70)
-A Cv: prosopopeia / B C: prosopopoeia
-A Cv: prosopopeias / B C: prosopopoeias
+A B C: prosopopoeia / AV Cv: prosopopeia
+A B C: prosopopoeias / AV Cv: prosopopeias
 
 # prosopopeial (level 80)
 A: prosopopeial / B: prosopopoeial
@@ -23487,9 +23457,9 @@ A: questionary / B: quaestionary
 A: questionaries / B: quaestionaries
 
 # questor <verified> (level 70)
-A: questor / B: quaestor
-A: questors / B: quaestors
-A: questor's / B: quaestor's
+A B: quaestor / AV: questor
+A B: quaestors / AV: questors
+A B: quaestor's / AV: questor's
 
 # questorial (level 80)
 A: questorial / B: quaestorial
@@ -27913,9 +27883,6 @@ A Z: Talmudize's / B: Talmudise's
 
 # tamable (level 50)
 _: tamable / _v: tameable
-
-# tambor <verified> (level 70)
-A: tambor / B: tambour
 
 # tambura <verified> (level 70)
 A Bv: tambura / B: tamboura

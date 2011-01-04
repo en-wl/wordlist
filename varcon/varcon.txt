@@ -84,7 +84,6 @@ A: accouters / Av B: accoutres
 # accouterment <verified> (level 50)
 A: accouterment / Av B: accoutrement
 A: accouterments / Av B: accoutrements
-A: accouterments / Av B: accoutrements's
 A: accouterment's / Av B: accoutrement's
 
 # accursed <verified> (level 50)
@@ -285,16 +284,10 @@ A: aerology's / B: areology's
 # aerometer (level 70)
 A: aerometer / B: areometer
 A: aerometers / B: areometers
-A: areometer / B: araeometer
-A: areometers / B: araeometers
 
 # aerometric (level 80)
 A: aerometric / B: areometric
 A: areometric / B: araeometric
-
-# aerometry (level 70)
-A: aerometry / B: areometry
-A: areometry / B: araeometry
 
 # Aerope (level 95)
 A: Aerope / B: Aaerope
@@ -1857,12 +1850,12 @@ A Z: aspheterizing / B: aspheterising
 A Z: aspheterizes / B: aspheterises
 
 # ass <verified> (level 20)
-A B: ass
-A: ass / B: arse
-A B: asses
-A: asses / B: arses
-A B: ass's
-A: ass's / B: arse's
+A B: ass :1
+A: ass / B: arse | :2
+A B: asses | :1
+A: asses / B: arses | :2
+A B: ass's | :1
+A: ass's / B: arse's :2
 
 # assafetida (level 80)
 A: assafetida / B: assafoetida
@@ -2568,14 +2561,6 @@ A: berme / B: breme
 # bern (level 80)
 A: bern / B: bren
 
-# Beroe (level 70)
-A: Beroe / B: Beroae
-A: Beroe's / B: Beroae's
-A: ber / B: boer
-A: bere / B: beroe
-A: bere / B: bree
-A: beres / B: brees
-
 # Bessemerize (level 95)
 A Z: Bessemerize / B: Bessemerise
 A Z: Bessemerizes / B: Bessemerises
@@ -2915,7 +2900,7 @@ _: brimful / _V: brimfull
 
 # brinkmanship (level 50)
 _: brinkmanship / _V: brinksmanship
-_: brinkmanship / _V: brinksmanship's
+_: brinkmanship's / _V: brinksmanship's
 
 # briquette (level 50)
 _: briquette / _v: briquet
@@ -2944,7 +2929,7 @@ A Z: bromizing / B: bromising
 
 # bronco (level 35)
 _: bronco / _V: broncho
-_: bronco / _V: broncho's
+_: bronco's / _V: broncho's
 _: broncos / _V: bronchos
 
 # brusque (level 35)
@@ -2979,10 +2964,8 @@ A: Budenny's / B: Budaenny's
 _: bunco / _v: bunko
 _: buncos / _v: bunkos
 _: bunco's / _v: bunko's
-_: bunko / _v: bunco
-_: bunkoed / _v: buncoed
-_: bunkoing / _v: buncoing
-_: bunko's / _v: bunco's
+_: buncoed / _v: bunkoed
+_: buncoing / _v: bunkoing
 
 # bunkum (level 50)
 _: bunkum / _v: buncombe
@@ -3728,11 +3711,19 @@ A: celioscopy / B: coelioscopy
 # celiotomy (level 70)
 A: celiotomy / B: coeliotomy
 
+# celom (level 70)
+# XXX Merged
+A Cv: celom / B C: coelom
+A: celoma / B: coeloma
+A: celomata / B: coelomata
+A Cv: celoms / B C: coeloms / Bv: coelomata
+A Cv: celom's / B C: coelom's
+#
 # celom <verified> (level 70)
 A Cv: celom / B C: coelom
 A Cv: celoms / B C: coeloms / Bv: coelomata
 A Cv: celom's / B C: coelom's
-
+#
 # celoma (level 80)
 A: celoma / B: coeloma
 A: celomata / B: coelomata
@@ -3788,12 +3779,6 @@ A: cenobium / B: coenobium
 
 # cenoby (level 95)
 A: cenoby / B: coenoby
-
-# cenogenesis (level 70)
-A: cenogenesis / B: caenogenesis
-A: cenogenesis / B: coenogenesis
-A: cenogeneses / B: caenogeneses
-A: cenogenesis's / B: caenogenesis's
 
 # cenogenetic (level 95)
 A: cenogenetic / B: caenogenetic
@@ -4006,10 +3991,6 @@ A Z: Chamizal / B: Chamisal
 A Z: Chamizal's / B: Chamisal's
 
 # chamois (level 50)
-_: chamois / _V: chammies / _V: shammies
-_: chamois / _V: chamoix
-_: chamois / _V: shammy / _V: chammy
-_: chamois's / _V: chammy's / _V: shammy's
 _: chamois | :1
 _: chamois / _V: shammy / _V: chammy | :2
 _: chamois's / _V: chammy's / _V: shammy's | :2
@@ -4231,7 +4212,7 @@ A Z: chloroformizes / B: chloroformises
 
 # chlorophyll (level 35)
 _: chlorophyll / _-: chlorophyl
-_: chlorophylls / _-: chlorophyl
+_: chlorophylls / _-: chlorophyls
 _: chlorophyll's / _-: chlorophyl's
 
 # chocoholic (level 55)
@@ -4313,13 +4294,13 @@ _: chutzpah / _V: hutzpa / _V: hutzpah / _V: chutzpa
 _: chutzpah's / _V: hutzpa's / _V: chutzpa's / _V: hutzpah's
 _: chutzpahes / _V: hutzpas / _V: chutzpas / _V: hutzpahes
 
-# cicatrice (level 50)
-_: cicatrice / _-: cicatrixes
-_: cicatrix / _V: cicatrice
-_: cicatrix's / _V: cicatrice's
-
 # cicatricule (level 95)
 A: cicatricule / B: cicatriculae
+
+# cicatrix <verified> (level 50)
+A B Cv: cicatrix / AV Bv C: cicatrice
+A B: cicatrices / A-: cicatrixes
+A B Cv: cicatrix's / AV Bv C: cicatrice's
 
 # cicatrizant (level 95)
 A Z: cicatrizant / B: cicatrisant
@@ -6133,13 +6114,6 @@ A Z: deenergizes / B: deenergises
 
 # deenergizer (level 99)
 A Z: deenergizer / B: deenergiser
-
-# deers <verified> (level 35)
-A: deers / B: deres
-A: der / B: daer
-A: dere / B: dree
-A: dered / B: dreed
-A: deres / B: drees
 
 # defedation (level 95)
 A: defedation / B: defoedation
@@ -8382,14 +8356,6 @@ A Z: emotionalizes / B: emotionalises
 A Z: emotionize / B: emotionise
 A Z: emotionizes / B: emotionises
 
-# empaneled (level 50)
-A: empaneled / B: empanelled
-A: empaneling / B: empanelling
-_: impanel / _v: empanel
-A: impaneled / Av: empaneled / B: impanelled
-A: impaneling / Av: empaneling / B: impanelling
-_: impanels / _v: empanels
-
 # empathize <verified> (level 40)
 A Z: empathize / B: empathise
 A Z: empathized / B: empathised
@@ -9095,10 +9061,7 @@ A: esophagismus / B: oesophagismus
 A: esophagitis / B: oesophagitis
 
 # esophagus <verified> (level 35)
-A C: esophagus / B: oesophagus
-A C: esophagi / B: oesophaguses
 A C: esophagi / Av Cv: esophaguses / B: oesophagi / Bv: oesophaguses
-A: esophagus's / B: oesophagus's
 
 # Essenize (level 95)
 A Z: Essenize / B: Essenise
@@ -10914,13 +10877,6 @@ _: gaiety's / _V: gayety's
 # gayly (level 60)
 _: gaily / _V: gayly
 
-# Geer (level 50)
-A: Geer / B: Gere
-A: Geer's / B: Gere's
-A: geer / B: gere
-A: gere / B: gree
-A: geres / B: grees
-
 # gelatin <verified> (level 35)
 A B: gelatin / AV Bv: gelatine
 A B: gelatins / AV Bv: gelatines
@@ -11675,13 +11631,6 @@ A: gyne / B: gynae
 # gynecic (level 70)
 A: gynecic / B: gynaecic
 
-# gynecium (level 70)
-A: gynecium / B: gynaecium
-A: gynecium / B: gynoecium
-A: gynecia / B: gynaecia
-A: gynecia / B: gynoecia
-A: gynecium's / B: gynoecium's
-
 # gynecocracy (level 70)
 A: gynecocracy / B: gynaecocracy
 A: gynecocracies / B: gynaecocracies
@@ -11792,11 +11741,9 @@ _: hajjs / _V: hadjs
 
 # halloo (level 55)
 _: halloo / _V: hallo / _V: hollo
-A: hallooed / AV: halloed / AV: holloed / B: holloaed
 _: hallooing / _V: halloing / _V: holloing
 _: halloos / _V: hollos / _V: hallos
 _: halloo's / _V: hallo's / _V: hollo's
-A: holloed / B: hollooed
 
 # hamletization (level 95)
 A Z: hamletization / B: hamletisation
@@ -12375,9 +12322,7 @@ A: hemolysin / B: haemolysin
 A: hemolysin's / B: haemolysin's
 
 # hemolysis (level 70)
-A: hemolysis / B: haemolysis
-A: hemolyses / B: haemolyses
-A Z: hemolyzes / B: hemolyses
+A C: hemolysis / B: haemolysis
 
 # hemolytic (level 80)
 A: hemolytic / B: haemolytic
@@ -13035,8 +12980,8 @@ A Z: humanizers / B: humanisers
 A Z: humanizer's / B: humaniser's
 
 # hummus (level 50)
-_: hummus / _V: hoummos / _-: houmus / _-: humus
-_: humus
+_: hummus / _V: hoummos / _-: houmus / _-: humus | :1
+_: humus | :2
 
 # humongous (level 50)
 _: humongous / _V: humungous
@@ -13376,8 +13321,7 @@ A Z: hypervitalizes / B: hypervitalises
 
 # hypesthesia (level 70)
 A: hypesthesia / B: hypaesthesia
-A: hypesthesia / B: hypoesthesia
-A: hypesthesias / B: hypoesthesias
+A: hypesthesias / B: hypaesthesias
 A: hypesthesia's / B: hypaesthesia's
 
 # hypesthesic (level 80)
@@ -13767,6 +13711,15 @@ A Z: immunizer's / B: immuniser's
 A Z: impactionize / B: impactionise
 A Z: impactionizes / B: impactionises
 
+# impanel <verified> (level 50)
+A B Cv: impanel / Av Bv C: empanel
+A: impaneled / Av: empaneled / B Cv: impanelled / Bv C: empanelled
+A: impaneling / Av: empaneling / B Cv: impanelling / Bv C: empanelling
+A B Cv: impanels / Av Bv C: empanels
+
+# impanelment <verified> (level 70)
+A B Cv: impanelment / Av Bv C: empanelment
+
 # impasted (level 80)
 A: impasted / B: impastoed
 
@@ -14013,7 +13966,7 @@ A B. C: inquiry's / B Cv: enquiry's
 
 # insignia (level 35)
 _: insignia / _V: insigne
-_: insignia / _v: insignias
+_: insignia / _v: insignias / _V: insignes | plural
 _: insignia's / _V: insigne's
 
 # insolubilization (level 80)
@@ -14591,7 +14544,7 @@ _: jihad's / _V: jehad's
 
 # jinni (level 50)
 _: jinni / _v: jinn / _V: djinni / _V: djinn
-_: jinn / _v: jinns / _V: djinns / _V: djinn
+_: jinn / _v: jinns / _V: djinns / _V: djinn | plural
 _: jinni's / _v: jinn's / _V: djinni's / _V: djinn's
 
 # jinrikisha (level 50)
@@ -14671,7 +14624,6 @@ A Z: judicializes / B: judicialises
 _: jujitsu / _V: jujutsu / _V: jiujitsu
 _: jujitsus / _V: jujutsus / _V: jiujitsus
 _: jujitsu's / _V: jiujitsu's / _V: jujutsu's
-_: ujitsu / _V: jujutsu / _V: jiujitsu
 
 # Julide (level 95)
 A: Julide / B: Julidae
@@ -15028,13 +14980,6 @@ A Z: laconizes / B: laconises
 # lactonized (level 95)
 A Z: lactonized / B: lactonised
 
-# laer <verified> (level 70)
-A: laer / B: lare
-A: laers / B: lares
-A: ler / B: laer
-A: lered / B: laered
-A: lering / B: laering
-
 # lagniappe (level 50)
 _: lagniappe / _-: lagnappe
 _: lagniappes / _-: lagnappes
@@ -15357,14 +15302,6 @@ A Cv: libelousest / B C: libellousest
 A: libelously / B: libellously
 A: libelouslier / B: libellouslier
 A: libelousliest / B: libellousliest
-
-# Liber (level 70)
-A: Liber / B: Libre
-A: Liber's / B: Libre's
-A: Libre / B: Librae
-A: Libre's / B: Librae's
-A: liber / B: libre
-A: libre / B: librae
 
 # liberalization <verified> (level 35)
 A Z: liberalization / B: liberalisation
@@ -15698,8 +15635,7 @@ _: lollipop's / _v: lollypop's
 # lollygag (level 50)
 _: lollygag / _v: lallygag
 _: lollygagged / _v: lallygagged
-_: lollygagging / _v: lallygagged
-_: lollygags
+_: lollygagging / _v: lallygagging
 _: lollygags / _v: lallygags
 
 # Londonization (level 95)
@@ -15725,8 +15661,7 @@ A: longevous / B: longaevous
 # loony (level 35)
 _: loony / _V: looney
 _: loonier / _V: looneyier
-_: loonies / _V: looneyies
-_: loonies / _V: looneys
+_: loonies / _V: looneyies / _V: looneys
 _: loony's / _V: looney's
 
 # lordy (level 80)
@@ -16155,7 +16090,6 @@ _: marijuana's / _V: marihuana's
 _: marlinespike / _V: marlinspike
 _: marlinespikes / _V: marlinspikes
 _: marlinespike's / _V: marlinspike's
-_: marlinspike
 
 # marmarize (level 80)
 A Z: marmarize / B: marmarise
@@ -16449,8 +16383,7 @@ A: medievalisms / B: mediaevalisms
 A: medievalism's / B: mediaevalism's
 
 # medievally (level 70)
-A: medievally / B: mediaevally
-_: medievally / _V: mediaevally
+A: medievally / AV B: mediaevally
 
 # Mediterraneanization (level 95)
 A Z: Mediterraneanization / B: Mediterraneanisation
@@ -18298,8 +18231,8 @@ A Z: niggardizes / B: niggardises
 
 # night <verified> (level 10)
 A B: night / Av: nite
-A B: night / Av: nites
-A B: night / Av: nite's
+A B: nights / Av: nites
+A B: night's / Av: nite's
 ## Ox lables nite as an informal spelling
 
 # nightie (level 40)
@@ -19729,10 +19662,7 @@ A: paleethnologist / B: paleoethnologist
 A: paleoethnologist / B: palaeoethnologist
 
 # paleethnology (level 70)
-A: paleethnology / B: palaeethnology
-A: paleethnology / B: paleoethnology
-A: paleethnology's / B: palaeethnology's
-A: paleoethnology / B: palaeoethnology
+A: paleethnology / B: palaeoethnology / Bv: paleoethnology
 
 # paleichthyologist (level 95)
 A: paleichthyologist / B: palaeichthyologist
@@ -21061,10 +20991,6 @@ A: pereopods / B: peraeopods
 # perfectivize (level 95)
 A Z: perfectivize / B: perfectivise
 A Z: perfectivizes / B: perfectivises
-
-# perfervid (level 70)
-A: perfervid / B: prefervid
-A: prefervid / B: praefervid
 
 # perfervor (level 80)
 A: perfervor / B: perfervour
@@ -26997,10 +26923,6 @@ A: stenopeic / B: stenopaeic
 A: stentor / B: stentour
 A: stentors / B: stentours
 
-# ster (level 70)
-A: ster / B: stre
-A: stre / B: strae
-
 # stercoremia (level 95)
 A: stercoremia / B: stercoraemia
 
@@ -27991,7 +27913,6 @@ A Z: Talmudize's / B: Talmudise's
 
 # tamable (level 50)
 _: tamable / _v: tameable
-_: tameable
 
 # tambor <verified> (level 70)
 A: tambor / B: tambour
@@ -28513,9 +28434,8 @@ A Z: thermalizes / B: thermalises
 A: therme / B: thermae
 
 # thermesthesia (level 70)
-A: thermesthesia / B: thermaesthesia
-A: thermesthesia / B: thermoesthesia
-A: thermesthesia's / B: thermaesthesia's
+A: thermesthesia / Av B: thermaesthesia
+A: thermesthesia's / Av B: thermaesthesia's
 
 # thermoanesthesia (level 95)
 A: thermoanesthesia / B: thermoanaesthesia
@@ -28611,11 +28531,6 @@ A B: tire's | exhausted
 A C: tire / B: tyre | wheel
 A C: tires / B: tyres | whell
 A C: tire's / B: tyre's | wheel
-
-# tyro (level 50)
-A B: tyro / AV Bv: tiro / A-: tyreo
-A B: tyros / AV Bv: tiros
-A B: tyro's / AV Bv: tiro's / A-: tyreo's
 
 # titer <verified> (level 70)
 A Cv: titer / B C: titre
@@ -29187,6 +29102,11 @@ A Z: tyrannizer's / B: tyranniser's
 A Z: tyrannizingly / B: tyrannisingly
 A Z: tyrannizinglier / B: tyrannisinglier
 A Z: tyrannizingliest / B: tyrannisingliest
+
+# tyro (level 50)
+A B: tyro / AV Bv: tiro / A-: tyreo
+A B: tyros / AV Bv: tiros
+A B: tyro's / AV Bv: tiro's / A-: tyreo's
 
 # ukulele (level 50)
 _: ukulele / _V: ukelele
@@ -31600,9 +31520,6 @@ A B: veld / AV Bv: veldt
 A B: velds / AV Bv: veldts
 A B: veld's / AV Bv: veldt's
 
-# velours's (level 50)
-_: velours's
-
 # venalization (level 95)
 A Z: venalization / B: venalisation
 A Z: venalizations / B: venalisations
@@ -31669,7 +31586,7 @@ A: vermeiles / B: vermeilles
 
 # vermilion (level 50)
 _: vermilion / _V: vermillion
-_: vermilion / _V: vermillion's
+_: vermilion's / _V: vermillion's
 
 # vermilionize (level 95)
 A Z: vermilionize / B: vermilionise
@@ -32210,8 +32127,8 @@ A B: wizz | as in "gee whiz", Ox: informal, chiefly N. Amer.
 
 # whodunit (level 40)
 _: whodunit / _V: whodunnit
-_: whodunit / _V: whodunnits's
-_: whodunit's / _V: whodunnit's
+_: whodunits / _V: whodunnits
+_: whodunit's / _V: whodunnits's
 
 # wigeon (level 50)
 _: wigeon / _v: widgeon

@@ -1,0 +1,71 @@
+#!/usr/bin/perl
+
+# Check for dups and possessive forms with no correspoding non possessive form
+
+use varcon;
+
+my %touse;
+foreach my $f (</home/kevina/wordlist-svn/trunk/scowl/final/*.??>) {
+    my ($num) = $f =~ /\.\d\d$/ or die;
+    next unless $num <= 70;
+    open F, $f;
+    while (<F>) {
+        chop;
+        $touse{$_} = 1;
+    }
+}
+
+local $/ = "\n\n";
+open F, "varcon.txt";
+while (<F>) {
+    die unless /^\#/;
+    ($word) = /^# ([[:alpha:]_'-]+)/ or die;
+    ($level) = /^\# .+ \(level (\d\d)\)/m or die;
+    next unless $level <= 70;
+    my $cluster = $_;
+    my %varcon;
+    foreach my $line (split /\n/, $cluster) {
+        next if varcon::filter($line);
+        my @w = varcon::get_words($line);
+        #my $touse = 0;
+        #foreach (@w) {
+        #    $touse = 1 if $touse{$_};
+        #}
+        #next unless $touse;
+        foreach (@w) {
+            push @{$varcon{$_}}, "$line\n";
+        }
+    }
+    my $errs = '';
+    #
+    # Dump dups
+    #
+    foreach (sort keys %varcon) {
+        my @d = @{$varcon{$_}};
+        next unless @d > 1;
+        my $i = 0;
+        foreach (@d) {
+            next if / \| /;
+            $i++;
+        }
+        next if $i <= 1;
+        $errs .= "#! $_:\n";
+        foreach (@d) {
+            $errs .= "#!  $_";
+        }
+    }
+    
+    foreach (sort keys %varcon) {
+        next unless /^(.+)\'s$/;
+        next if exists $varcon{$1};
+        $errs .= "#!$_:\n";
+    }
+
+    next unless $errs;
+    chop $cluster;
+    print $cluster;
+    print $errs;
+    print "\n";
+}
+
+

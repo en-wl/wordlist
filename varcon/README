@@ -115,6 +115,12 @@ of a word, for example:
   A B: bark | :1
   A: bark / Av B: barque | (-) ship
 
+A "--" indicates a note rather than definition.  This is generally
+used to indicate that the spelling of the plural form not depend on
+the spelling of the root word, for example:
+  _: cabby / _.: cabbie
+  _: cabbies | -- plural
+
 Misc. notes on a particular form of a word are given after a "#" on
 the same line.  Misc. notes for the cluster are given at the end of
 the cluster and are prefixed with "##", for example:
@@ -124,8 +130,9 @@ the cluster and are prefixed with "##", for example:
   A B C: coloration's / B. Cv: colouration's
   ## OED has coloration as the prefered spelling and discolouration as a
   ## variant for British Engl or some reason
-In the notes OED stands for Oxford Dictionary of English, "Ox" is used
-for any Oxford dictionary, and "M-W" for Merriam-Webster.
+In the notes ODE (not to be confused with OED) stands for Oxford
+Dictionary of English, "Ox" is used for any Oxford dictionary, and
+"M-W" for Merriam-Webster.
 
 Earlier versions of varcon contained numerous errors.  With version
 5.0 massive effort has been made to correct many of these errors.
@@ -133,7 +140,7 @@ Clusters that have undergone some form of verification (and likely
 correction) are marked with "<verified>".  As of version 5.0, most
 clusters with headwords word in common usage (SCOWL level 35 and
 below) should now be checked, as well as many others.  No effort was
-made to check clusters with headwords in SCOWL level 80 and above,
+made to check clusters with headwords in SCOWL level 80 and above;
 many of those entries are unlikely to be in the dictionary anyway.
 
 The file variant-also.tab contains additional mappings between various

@@ -264,20 +264,25 @@ foreach my $cluster (values %clusters) {
     my @orig_clusters = values %orig_clusters;
     my $verified = grep {$_->[0] =~ /<verified>/} @orig_clusters;
     if (@orig_clusters > 1 && ($level < 70 || $verified)) {
-        $lines_final .= "# $lines[0]{words}[0] (level $level)\n";
-        $lines_final .= "# XXX Merged\n";
-        foreach my $line (@lines) {
-            next if $line->{line} =~ /^\*/;
-            $lines_final .= $line->{line};
-            $lines_final .= ' '.$line->{comment} if $line->{comment};
-            $lines_final .= "\n";
+        my $ignore = 1 if $headword eq 'celom';
+        if ($ignore) {
+            $lines_final = join("\n", (map {join("\n", @$_)."\n"} @orig_clusters));
+        } else {
+            $lines_final .= "# $lines[0]{words}[0] (level $level)\n";
+            $lines_final .= "# XXX Merged\n";
+            foreach my $line (@lines) {
+                next if $line->{line} =~ /^\*/;
+                $lines_final .= $line->{line};
+                $lines_final .= ' '.$line->{comment} if $line->{comment};
+                $lines_final .= "\n";
+            }
+            foreach (@orig_clusters) {
+                $lines_final .= "#\n";
+                $lines_final .= join("\n", @$_);
+                $lines_final .= "\n";
+            }
         }
-        foreach (@orig_clusters) {
-            $lines_final .= "#\n";
-            $lines_final .= join("\n", @$_);
-            $lines_final .= "\n";
-        }
-    } elsif (@orig_clusters == 1) {
+    } elsif (@orig_clusters == 1 && $orig_clusters[0][0] =~ /level/) {
         local $_ = $orig_clusters[0][0];
         my ($orig_word) = /^# (\S+)/ or die "Bad cluster header: $_\n";
         print STDERR "Cluster key change: $orig_word => $headword\n"

@@ -1206,8 +1206,9 @@ A Z: antagonizes / B: antagonises
 A Z: antagonizer / B: antagoniser
 A Z: antagonizers / B: antagonisers
 
-# antennae (level 35)
-_: antennae / _v: antennas
+# antenna (level 35)
+_: antennae / _-: antennas | insect
+_: antennas / _-: antennae | TV
 
 # anthecological (level 95)
 A: anthecological / B: anthoecological
@@ -1459,8 +1460,12 @@ A C: appalls / B Cv: appals
 A: appareled / B: apparelled
 A: appareling / B: apparelling
 
-# appendixes <verified> (level 35)
-A Bv C: appendixes / Av B Cv: appendices
+# appendix (level 35)
+_: appendices / _v: appendixes | book
+_: appendixes / _v: appendices | organ
+## A few sources say the usage depends on context. M-w says appendixes
+## is the preferred form and does distinguish based on context, Ox (all versions)
+## say appendices is the preferred form.
 
 # appetize <verified> (level 35)
 A Z: appetize / B: appetise
@@ -1852,7 +1857,7 @@ A: ass / B: arse | :2
 A B: asses | :1
 A: asses / B: arses | :2
 A B: ass's | :1
-A: ass's / B: arse's :2
+A: ass's / B: arse's | :2
 
 # assafetida (level 80)
 A: assafetida / B: assafoetida
@@ -2390,6 +2395,7 @@ _: bathyscaphe's / _.: bathyscaph's
 # battleaxe <verified> (level 55)
 A B: battleaxe / Av: battleax
 A B: battleaxe's / Av: battleax's
+A B: battleaxes | -- plural
 
 # battologize (level 70)
 A Z: battologize / B: battologise
@@ -3032,6 +3038,7 @@ A Z: Byzantinize's / B: Byzantinise's
 # cabby (level 40)
 _: cabby / _.: cabbie
 _: cabby's / _.: cabbie's
+_: cabbies | -- plural
 
 # cacesthesia (level 95)
 A: cacesthesia / B: cacaesthesia
@@ -3983,7 +3990,7 @@ A Z: Chamizal's / B: Chamisal's
 _: chamois | :1
 _: chamois / _V: shammy / _V: chammy | :2
 _: chamois's / _V: chammy's / _V: shammy's | :2
-_: chamois / _V: chamoix | plural
+_: chamois / _V: chamoix | -- plural
 
 # chamomile (level 50)
 _: chamomile / _v: camomile
@@ -7037,6 +7044,7 @@ A C: dialyze / B: dialyse
 A C: dialyzed / B: dialysed
 A C: dialyzing / B: dialysing
 A C: dialyzes / B: dialyses
+A B: dialyses | plural of dialysis
 
 # dialyzer (level 70)
 A C: dialyzer / B: dialyser
@@ -10772,8 +10780,8 @@ A Z: gallizing / B: gallising
 A Z: gallizes / B: gallises
 
 # galosh (level 40)
-_: galosh / _v: galoshes / _-: galoshe
-_: galosh's / _v: galoshes' / _-: galoshe's
+_: galosh / _-: galoshe
+_: galosh's / _-: galoshe's
 
 # galvanization <verified> (level 60)
 A Z: galvanization / B: galvanisation
@@ -12591,6 +12599,7 @@ _: hmm / _v: hm
 # hoagie (level 50)
 _: hoagie / _V: hoagy
 _: hoagie's / _V: hoagy's
+_: hoagies | -- plural
 
 # Hollywoodize (level 80)
 A Z: Hollywoodize / B: Hollywoodise
@@ -13138,8 +13147,8 @@ A Z: hydroxylizes / B: hydroxylises
 
 # hyena (level 35)
 _: hyena / _V: hyaena
-_: hyaenas / _V: hyaena | plural
-_: hyenas / _V: hyena | plural
+_: hyaenas / _V: hyaena | -- plural
+_: hyenas / _V: hyena | -- plural
 _: hyena's / _V: hyaena's
 
 # hyenic (level 80)
@@ -13955,7 +13964,7 @@ A B. C: inquiry's / B Cv: enquiry's
 
 # insignia (level 35)
 _: insignia / _V: insigne
-_: insignia / _v: insignias / _V: insignes | plural
+_: insignia / _v: insignias / _V: insignes | -- plural
 _: insignia's / _V: insigne's
 
 # insolubilization (level 80)
@@ -14533,7 +14542,7 @@ _: jihad's / _V: jehad's
 
 # jinni (level 50)
 _: jinni / _v: jinn / _V: djinni / _V: djinn
-_: jinn / _v: jinns / _V: djinns / _V: djinn | plural
+_: jinn / _v: jinns / _V: djinns / _V: djinn | -- plural
 _: jinni's / _v: jinn's / _V: djinni's / _V: djinn's
 
 # jinrikisha (level 50)
@@ -17682,6 +17691,10 @@ A Z: musicalized / B: musicalised
 A Z: musicalizing / B: musicalising
 A Z: musicalizes / B: musicalises
 
+# Muslim (level 35)
+_: Muslim / _v: Moslem
+_: Muslim's / _v: Moslem's
+
 # mustache <verified> (level 35)
 A Cv: mustache / B C: moustache
 A Cv: mustaches / B C: moustaches
@@ -20258,6 +20271,7 @@ A C: paralyze / B Cv: paralyse
 A C: paralyzed / B Cv: paralysed
 A C: paralyzing / B Cv: paralysing
 A C: paralyzes / B Cv: paralyses
+A B: paralyses | plural of paralysis
 
 # paralyzedly (level 95)
 A: paralyzedly / B: paralysedly
@@ -23393,7 +23407,7 @@ A Z: pythonizes / B: pythonises
 
 # quadraphonic (level 50)
 _: quadraphonic / _V: quadriphonic / _-: quadrophonic
-_: quadraphonics / _v: quadriphonics | o: noun plural but singular in construction
+_: quadraphonics / _v: quadriphonics | -- noun plural but singular in construction
 
 # quahog (level 50)
 _: quahog / _V: quahaug
@@ -23494,7 +23508,7 @@ _: quintet's / _-: quintette's
 # raccoon <verified> (level 35)
 A B: raccoon / AV Bv: racoon
 A B: raccoon's / AV Bv: racoon's
-A B: raccoon / Av Bv: raccoons / AV Bv: racoons / AV Bv: racoon | plural
+A B: raccoon / Av Bv: raccoons / AV Bv: racoons / AV Bv: racoon | -- plural
 ## Ox does not say anything about the proper plural forum.  I am going
 ## to assume it the same as the singular
 
@@ -23748,6 +23762,7 @@ A C: reanalyze / B: reanalyse
 A C: reanalyzed / B: reanalysed
 A C: reanalyzing / B: reanalysing
 A C: reanalyzes / B: reanalyses
+A B: reanalyses | plural of reanalysis
 
 # reanalyzer (level 99)
 A C: reanalyzer / B: reanalyser
@@ -25396,9 +25411,6 @@ A Z: sclerotized / B: sclerotised
 A Z: sclerotizing / B: sclerotising
 A Z: sclerotizes / B: sclerotises
 
-# scorings (level 70)
-A: scorings / B: scourings
-
 # scorse (level 80)
 A: scorse / B: scourse
 A: scorsed / B: scoursed
@@ -26494,9 +26506,6 @@ A: sord / B: sourd
 # sordine (level 70)
 A: sordine / B: sourdine
 A: sordines / B: sourdines
-
-# sorings (level 80)
-A: sorings / B: sourings
 
 # sororize (level 80)
 A Z: sororize / B: sororise
@@ -28076,12 +28085,12 @@ A Z: tellurizes / B: tellurises
 # tels (level 70)
 A: tels / B: taels
 
-# tempi <verified> (level 35)
-A B: tempi / Av: tempos
-
 # templize (level 95)
 A Z: templize / B: templise
 A Z: templizes / B: templises
+
+# tempo <verified> (level 35)
+A B: tempos / Av Bv: tempi
 
 # temporalize (level 80)
 A Z: temporalize / B: temporalise
@@ -32148,8 +32157,9 @@ _: wisteria's / _V: wistaria's
 # wizen (level 70)
 A Z: wizen / B: wisen
 
-# wolves <verified> (level 35)
-A B: wolves / A-: wolfs
+# wolf <verified> (level 35)
+A B: wolves / A-: wolfs | <N>
+A B: wolfs | <V>
 
 # womanization (level 95)
 A Z: womanization / B: womanisation

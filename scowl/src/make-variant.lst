@@ -92,12 +92,14 @@ expand() {
 
 cat r/alt12dicts/variant-maybe.lst \
   | expand 0.9                     \
-  | rem r/varcon/w_variant-amer.lst \
+  | rem r/varcon/w_variant-amer.lst  \
+  | rem r/varcon/nonvariant-amer.lst \
   > working/variant-maybe.lst
 
 cat r/alt12dicts/variant-yes.lst \
   | expand 1.9                   \
-  | rem r/varcon/w_variant-amer.lst \
+  | rem r/varcon/w_variant-amer.lst  \
+  | rem r/varcon/nonvariant-amer.lst \
   > working/variant-yes.lst
 
 cat r/alt12dicts/nonamer-maybe.lst    \

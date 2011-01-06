@@ -30,7 +30,7 @@ sub readline_no_expand($;$) {
         my ($s, $w) = /^(.+?): (.+)$/ or croak "Bad entry: $_";
         my @s = split / /, $s;
         foreach (@s) {
-            my ($s, $v) = /^([ABZC_*])([.01234vVx-]?)$/ or croak "Bad category: $_";
+            my ($s, $v) = /^([ABZC_*Q])([.01234vVx-]?)$/ or croak "Bad category: $_";
             push @{$r{$s}[$vmap{$v}+1]}, $w;
         }
     }

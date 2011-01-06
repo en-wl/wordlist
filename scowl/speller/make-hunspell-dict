@@ -46,6 +46,8 @@ doit() {
   cp en.aff en_$1.aff
   
   cat README_en.txt.in ../Copyright > README_en_$1.txt
+  echo >> README_en_$1.txt
+  echo "Build Date: `date`" >> README_en_$1.txt
 
   zip -9 en_$1.zip README_en_$1.txt en_$1.dic en_$1.aff
 

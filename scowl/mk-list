@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+use warnings;
+use strict;
+
 use Getopt::Long;
 
 Getopt::Long::Configure ("bundling");
@@ -7,47 +10,79 @@ Getopt::Long::Configure ("bundling");
 my $with_variants;
 my $file_names_only;
 my $dir;
-
-GetOptions ("dir|d=s", \$dir,
-            "with-variants|v=i", => \$with_variants,
-            "file-names-only|f", \$file_names_only);
-$dir = "final" unless defined $dir;
+my $no_implied;
+my $variants_str;
 
 sub usage() {
-    print STDERR "$0 [-v#] [-f] <spelling categories> <size>\n";
+    print STDERR "$0 [-v#] [<options>] <spelling categories> <size>\n";
     exit 1;
 }
 
+GetOptions ("dir|d=s", \$dir,
+            "with-variants|v=i", => \$with_variants,
+            "variants=s", \$variants_str,
+            "file-names-only|f", \$file_names_only,
+            "no-implied", \$no_implied) or usage();
+$dir = "final" unless defined $dir;
+
+my %spelling_map = qw(en-us american en-gb british? en-gb-ise british
+                      en-gb-ize british_z en-gb-oed british_z en-ca canadian);
+$spelling_map{$_} = $_
+    foreach (qw(english special american british canadian
+                variant_0 variant_1 variant_2 
+                british_variant_0 british_variant_1
+                canadian_variant_0 canadian_variant_1));
+
+die "Cannot specify both --with-variants and --variants" if $with_variants && $variants_str;
+$variants_str = "non" unless defined $variants_str || defined $with_variants;
+$variants_str = join(',', 'non', 0..$with_variants) if defined $with_variants;
+my %use_variant_level;
+foreach (split ',', $variants_str) {
+    die "Invalid variant num: $_" unless /^(non|[012])$/;
+    $use_variant_level{$_} = 1;
+}
+
+$no_implied = 1 unless $use_variant_level{non};
 
 usage unless @ARGV >= 2;
-    
+
 my $SIZE = pop @ARGV;
 die "Invalid size: $SIZE\n" unless $SIZE =~ /^\d\d$/;
+
+my @SPS = map {my $sp = $_;
+               $sp =~ tr/_/-/;
+               $sp = $spelling_map{lc $sp};
+               die "Must specify en_GB-ise or en_GB-ize\n" 
+                   if $sp eq 'british?' && $use_variant_level{non};
+               $sp = 'british' if $sp eq 'british?';
+               die "Unknown spelling category: $_\n" unless defined $sp;
+               $sp;} @ARGV;
 my %SPS;
-$SPS{$_} = 1 foreach (@ARGV);
+$SPS{$_} = 1 foreach (@SPS);
 
-$SPS{english} = 1;
-$SPS{special} = 1;
+$SPS{english} = 1 unless $no_implied;
+$SPS{special} = 1 unless $no_implied;
 
-if (defined $with_variants) {
-    $SPS{variant_0} = 1 if $SPS{american} && $with_variants >= 0;
-    $SPS{variant_1} = 1 if $SPS{american} && $with_variants >= 1;
-    $SPS{british_variant_0} = 1 if ($SPS{british} || $SPS{british_z}) && $with_variants >= 0;
-    $SPS{british_variant_1} = 1 if ($SPS{british} || $SPS{british_z}) && $with_variants >= 1;
-    $SPS{canadian_variant_0} = 1 if $SPS{canadian} && $with_variants >= 0;
-    $SPS{canadian_variant_1} = 1 if $SPS{canadian} && $with_variants >= 1;
-    $SPS{variant_2} = 1 if $with_variants >= 2;
+$SPS{variant_0} = 1 if $SPS{american} && $use_variant_level{0}; 
+$SPS{variant_1} = 1 if $SPS{american} && $use_variant_level{1};
+$SPS{british_variant_0} = 1 if ($SPS{british} || $SPS{british_z}) && $use_variant_level{0};
+$SPS{british_variant_1} = 1 if ($SPS{british} || $SPS{british_z}) && $use_variant_level{1};
+$SPS{canadian_variant_0} = 1 if $SPS{canadian} && $use_variant_level{0};
+$SPS{canadian_variant_1} = 1 if $SPS{canadian} && $use_variant_level{1};
+$SPS{variant_2} = 1 if $use_variant_level{2};
+
+unless ($use_variant_level{non}) {
+    delete $SPS{$_} foreach (@SPS);
 }
 
 opendir D, $dir or die "Unable to open dir $dir\n";
 
-@files = readdir(D);
+my @files = readdir(D);
 
 my @words;
 
 foreach (sort @files) {
-    my ($sp, $type, $size) = /^(\w+)-(\w+)\.(\d\d)/ or next;
-    $SPD{$sp}++;
+    my ($sp, $type, $size) = /^(\w+)-([^.]+)\.(\d\d)/ or next;
     next unless $SPS{$sp};
     next unless $size <= $SIZE;
     if ($file_names_only) {

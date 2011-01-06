@@ -1,10 +1,10 @@
 Variant Conversion Info (VarCon)
 
-Revision 5.0 (SVN Revision 124)
+Revision 5.1 (SVN Revision 161)
 
-December 27, 2010
+January 6, 2011
 
-Copyright 2000-2010 by Kevin Atkinson (kevina@gnu.org)
+Copyright 2000-2011 by Kevin Atkinson (kevina@gnu.org)
 
 This package contains information to convert between American,
 British, and Canadian spellings and vocabulary as well and other
@@ -279,6 +279,14 @@ more accurate than Tysto's)
 
 CHANGELOG:
 
+From Revision 5.0 to Revision 5.1 (January 6, 2010)
+
+   - Corrected numerous errors after running various forms
+     of verification on varcon.txt.
+
+   - Reordered the clusters in varcon.txt so that they are
+     mostly in alphabetic order based on the headword.
+  
 From Revision 4.1 to Revision 5.0 (December 27, 2010)
 
   - Completely new format for the main table which, in addition to
@@ -299,7 +307,7 @@ From Revision 4.1 to Revision 5.0 (December 27, 2010)
 
 From Revision 4 to Revision 4.1 (August 10, 2004)
 
-  - Fixed various errors ib abbc.tab
+  - Fixed various errors in abbc.tab
 
   - Removed clause 4 from the Ispell copyright with permission of Geoff
     Kuenning.

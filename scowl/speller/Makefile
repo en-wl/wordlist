@@ -3,6 +3,7 @@ all:
 	@echo "Please use hunspell or aspell as target"
 
 .aspell: make-aspell-dict
+	make -C src deaccent
 	./make-aspell-dict
 	touch .aspell
 aspell: .aspell

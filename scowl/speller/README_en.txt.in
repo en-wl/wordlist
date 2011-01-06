@@ -1,10 +1,10 @@
-Version 7.0-0
-2010-12-27
+Version 7.1-0
+2010-01-06
 
 README file for en_US and en_CA Hunspell dictionaries
 
 These dictionaries are created using the speller/make-hunspell-dict
-script in SCOWL, version 7.0 released on December 27, 2010.
+script in SCOWL, version 7.1 released on December 27, 2010.
 
 The NOSUGGEST flag was added to certain taboo words.  While I made an
 honest attempt to flag the strongest taboo words with the NOSUGGEST

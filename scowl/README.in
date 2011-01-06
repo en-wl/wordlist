@@ -1,6 +1,6 @@
 Spell Checking Oriented Word Lists (SCOWL)
-Revision 7.0 (SVN Revision 127)
-December 27, 2010
+Revision 7.1 (SVN Revision 161)
+January 6, 2011
 by Kevin Atkinson (kevina@gnu.org)
 
 The SCOWL is a collection of word lists split up in various sizes, and
@@ -12,6 +12,10 @@ The latest version can be found at http://wordlist.sourceforge.net/.
 The directory final/ contains the actual word lists broken up into
 various sizes and categories.  The r/ directory contains Readmes from
 the various sources used to create this package.
+
+The misc/ contains a small list of taboo words, see the README file
+for more info.  The speller/ directory contains scripts for creating
+spelling dictionaries for Aspell and Hunspell.
 
 The other directories contain the necessary information to recreate the
 word lists from the raw data.  Unless you are interested in improving the
@@ -61,7 +65,7 @@ includes most variants which are considered almost equal.  The
 "variant_0" spelling category corresponds mostly to American variants,
 while the "british_variant_0" and "canadian_variant_0" are for British
 and Canadian variants, respectively.  The "variant_1" spelling
-categoies include variants which are also generally considered
+categories include variants which are also generally considered
 acceptable, and "variant_2" contains variants which are seldom used
 and may now even be considered correct.  There is no
 "british_variant_2" or "canadian_variant_2" spelling category since
@@ -106,6 +110,21 @@ Accents are present on certain words such as café in iso8859-1 format.
 
 CHANGES:
 
+From Revision 7 to 7.1 (January 6, 2011)
+
+  Updated to revision 5.1 of Varcon which corrected several errors.
+
+  Fixed various problems with the variant processing which corrected a
+  few more errors.
+
+  Added several now common proper names and some other words now
+  in common use.
+
+  Include misc/ and speller/ directory which where in SVN but left
+  out of the release tarball.
+
+  Other minor fixes, including some fixes to the taboo word lists.
+
 From Revision 6 to 7 (December 27, 2010)
 
   Updated to revision 5.0 of Varcon which corrected many errors,
@@ -149,7 +168,7 @@ From Revision 4a to 5 (January 3, 2002)
   Fixed a bug which caused variants of words to incorrectly appear in
   the non-variant lists.
 
-  Moved rarly used inflections of a word into higher number lists.
+  Moved rarely used inflections of a word into higher number lists.
 
   Added other inflections of a words based on the following criteria
     If the word is in the base form: only include that word.
@@ -161,7 +180,7 @@ From Revision 4a to 5 (January 3, 2002)
   Updated to the latest version of many of the source dictionaries.
 
   Removed the DEC Word List due to the questionable licence and
-  because removing it will not seriously decrese the quality of SCOWL
+  because removing it will not seriously decrease the quality of SCOWL
   (there are a few less proper names).  
 
 From Revision 4 to 4a (April 4, 2001)
@@ -176,13 +195,13 @@ From Revision 3 to 4 (January 28, 2001)
   Added words in the Ispell word list at the 65 level.
 
   Other changes due to using more recent versions of various sources
-  included a more accurete version of AGID thanks to the word of
+  included a more accurate version of AGID thanks to the word of
   Alan Beale
 
 From Revision 2 to 3 (August 18, 2000)
 
   Renamed special-unix-terms to special-hacker and added a large
-  number of communly used words within the hacker (not cracker)
+  number of commonly used words within the hacker (not cracker)
   community.
 
   Added a couple more signature words including "newbie".
@@ -237,18 +256,17 @@ word appearing at different levels due to the part-of-speech
 information.
 
 There is frequency information for some other corpus such as COCA
-(Corpus of Contemporary American English) and ANS (Corpus of
-Contemporary American English) which I might also be able to use.  The
-formal will require permission, and the latter is of questionable
-quality.
+(Corpus of Contemporary American English) and ANS (American National
+Corpus) which I might also be able to use.  The formal will require
+permission, and the latter is of questionable quality.
 
 RECREATING THE WORD LISTS:
 
 In order to recreate the word lists you need a modern version of Perl,
 bash, the traditional set of shell utilities, a system that supports
 symbolic links, and quite possibly GNU Make.  The easiest way to
-recreate the word lists is to checkout SVN revision 127 (or tag
-scowl-7.0) and simply type "make" (see http://wordlist.sourceforge.net).
+recreate the word lists is to checkout SVN revision 161 (or tag
+scowl-7.1) and simply type "make" (see http://wordlist.sourceforge.net).
 You can try to download all the pieces manually, but you may not get
 the same result since the latest version of some parts used to create
 SCOWL may not have been released yet.

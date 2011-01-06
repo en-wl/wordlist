@@ -1,0 +1,6 @@
+This directory contains the scripts to create speller dictionaries for
+Hunspell and Aspell.  It is only supported if ran from a released
+version of SCOWL unpacked from a tar file or from checked out from
+SVN.  Do not attempt to run these scripts if you unpacked SCOWL from
+the a zip file: the required symbolic links will be missing and the
+files will have DOS EOL characters.

@@ -1,5 +1,5 @@
 Spell Checking Oriented Word Lists (SCOWL)
-Revision 7.1 (SVN Revision 161)
+Revision 7.1 (SVN Revision 162)
 January 6, 2011
 by Kevin Atkinson (kevina@gnu.org)
 
@@ -265,7 +265,7 @@ RECREATING THE WORD LISTS:
 In order to recreate the word lists you need a modern version of Perl,
 bash, the traditional set of shell utilities, a system that supports
 symbolic links, and quite possibly GNU Make.  The easiest way to
-recreate the word lists is to checkout SVN revision 161 (or tag
+recreate the word lists is to checkout SVN revision 162 (or tag
 scowl-7.1) and simply type "make" (see http://wordlist.sourceforge.net).
 You can try to download all the pieces manually, but you may not get
 the same result since the latest version of some parts used to create

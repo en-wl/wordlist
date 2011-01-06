@@ -46,5 +46,6 @@ gzip -9 scowl-$1.tar
 
 echo zip
 cd scowl-$1
+rm speller/final speller/misc speller/src
 zip -q9lr ../scowl-$1.zip *
 

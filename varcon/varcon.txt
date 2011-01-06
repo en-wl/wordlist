@@ -23533,9 +23533,9 @@ A Z: racialize / B: racialise
 A Z: racializes / B: racialises
 
 # racket <verified> (level 20)
-A B: racket / Av Bv: racquet | :1
-A B: rackets / Av Bv: racquets | :1
-A B: racket's / Av Bv: racquet's | :1
+A B Cv: racket / Av Bv C: racquet | :1
+A B Cv: rackets / Av Bv C: racquets | :1
+A B Cv: racket's / Av Bv C: racquet's | :1
 A B: racket | :2
 A B: rackets | :2
 A B: racket's | :2

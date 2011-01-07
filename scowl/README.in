@@ -120,7 +120,7 @@ From Revision 7 to 7.1 (January 6, 2011)
   Added several now common proper names and some other words now
   in common use.
 
-  Include misc/ and speller/ directory which where in SVN but left
+  Include misc/ and speller/ directory which were in SVN but left
   out of the release tarball.
 
   Other minor fixes, including some fixes to the taboo word lists.

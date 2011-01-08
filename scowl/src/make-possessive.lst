@@ -5,4 +5,6 @@ cat working/proper-names.lst                 \
   | grep -v "'"                              \
   | src/remove-plurals                       \
   | cat - r/special/add-possessive           \
+  | cat - `for d in l/add-possessive/*; do echo $d/*; done` \
   | sort | uniq > working/possessive-also.lst
+

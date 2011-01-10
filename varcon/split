@@ -6,6 +6,8 @@ use IO::Handle;
 
 use varcon qw(%map);
 
+$varcon::MAX_VARIANT_LEVEL = 3;
+
 my %F;
 
 my %lists_pre;

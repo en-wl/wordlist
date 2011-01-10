@@ -28030,10 +28030,10 @@ A Z: technicizing / B: technicising
 A Z: technicizes / B: technicises
 
 # Technicolor <verified> (level 50)
-A B: Technicolor | trademark
-A B: Technicolors | trademark
-A B: Technicolor's | trademark
-A B: technicolor | trademark
+A B: Technicolor / Bx: Technicolour | trademark
+A B: Technicolors / Bx: Technicolours | trademark
+A B: Technicolor's / Bx: Technicolour's | trademark
+A B: technicolor / BV: technicolour
 
 # technicolored <verified> (level 80)
 A B: technicolored / BV: technicoloured

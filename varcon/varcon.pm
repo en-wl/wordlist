@@ -17,7 +17,7 @@ my %vmap = ('' =>  -1, '.' => 0, 'v' => 1, 'V' => 2, '-' => 3, 'x' => 8,
 my %rmap = ('' => '', 
             -1 => '', 0 => '.', 1 => 'v', 2 => 'V', 3 => '-', 8 => 'x');
 
-our $MAX_VARIANT_LEVEL = 3; # can be up to 9
+our $MAX_VARIANT_LEVEL = 9; # can be up to 9
 
 sub readline_no_expand($;$) {
     local $_ = shift;

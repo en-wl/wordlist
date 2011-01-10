@@ -1464,8 +1464,8 @@ A: appareling / B: apparelling
 _: appendices / _v: appendixes | book
 _: appendixes / _v: appendices | organ
 ## A few sources say the usage depends on context. M-w says appendixes
-## is the preferred form and does distinguish based on context, Ox (all versions)
-## say appendices is the preferred form.
+## is the preferred form and does not distinguish based on context, Ox
+## (all versions) say appendices is the preferred form.
 
 # appetize <verified> (level 35)
 A Z: appetize / B: appetise
@@ -4757,7 +4757,7 @@ A B C: coloration / B. Cv: colouration
 A B C: colorations / B. Cv: colourations
 A B C: coloration's / B. Cv: colouration's
 ## OED has coloration as the prefered spelling and discolouration as a
-## variant for British Engl or some reason
+## variant for British English or some reason
 
 # colorational (level 95)
 A B: colorational / Bv: colourational
@@ -18870,15 +18870,16 @@ A Z: officialize / B: officialise
 A Z: officializes / B: officialises
 
 # OK <verified> (level 35)
-A B: OK / A. B.: okay | : 1
-A B: OK's / A. B.: okay's | :1
-A B: OKed / A. B.: okayed | :1
-A B: OKing / A. B.: okaying | :1
-A B: OKs / A. B.: okays | :1
+A B C.: OK / A. B. C: okay | : 1
+A B C.: OK's / A. B. C: okay's | :1
+A B C.: OKed / A. B. C: okayed | :1
+A B C.: OKing / A. B. C: okaying | :1
+A B C.: OKs / A. B. C: okays | :1
 A B: OK | Oklahoma
-## OK is the preferred form, but it is very difficult to misspell one
-## for the other and in some contexts okay is preferred, so I am
-## marking these as equal variants.
+## OK is generally the preferred form, but it is very difficult to
+## misspell one for the other and in some contexts okay is preferred,
+## so I am marking these as equal variants.  Note that the Canadian
+## Ox. has okay as the primary form.
 
 # oleomargarine (level 50)
 _: oleomargarine / _-: oleomargarin

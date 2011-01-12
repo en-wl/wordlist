@@ -8487,35 +8487,47 @@ _: encumbering / _-: incumbering
 _: encumbers / _-: incumbers
 
 # encyclopedia <verified> (level 35)
-A B: encyclopedia / Bv: encyclopaedia
-A B: encyclopedias / Bv: encyclopaedias
-A B: encyclopedia's / Bv: encyclopaedia's
+A B C: encyclopedia / AV B. Cv: encyclopaedia
+A B C: encyclopedias / AV B. Cv: encyclopaedias
+A B C: encyclopedia's / AV B. Cv: encyclopaedia's
+## ODE has encyclopEdia first, OED has encyclopAEdia first.  Many
+## British will prefer the AE spelling.  In the BNC the AE form is
+## slightly more common (around 6:5 ratio).  Thus I'm not sure how to
+## encode this.
 
 # encyclopediac (level 95)
-A: encyclopediac / B: encyclopaediac
+A B C: encyclopediac / AV B. Cv: encyclopaediac
+## See note for encyclopedia
 
 # encyclopedial (level 95)
-A: encyclopedial / B: encyclopaedial
+A B C: encyclopedial / AV B. Cv: encyclopaedial
+## See note for encyclopedia
 
 # encyclopedian (level 80)
-A: encyclopedian / B: encyclopaedian
+A B C: encyclopedian / AV B. Cv: encyclopaedian
+## See note for encyclopedia
 
-# encyclopedic (level 50)
-_: encyclopedic / _-: encyclopaedic
+# encyclopedic <verified> (level 50)
+A B C: encyclopedic / AV B. Cv: encyclopaedic
+## See note for encyclopedia
 
 # encyclopedical (level 80)
-A: encyclopedical / B: encyclopaedical
+A B C: encyclopedical / AV B. Cv: encyclopaedical
+## See note for encyclopedia
 
 # encyclopedically (level 70)
-A: encyclopedically / B: encyclopaedically
+A B C: encyclopedically / AV B. Cv: encyclopaedically
+## See note for encyclopedia
 
-# encyclopedism (level 80)
-A: encyclopedism / B: encyclopaedism
-A: encyclopedisms / B: encyclopaedisms
+# encyclopedism <verified> (level 80)
+A B C: encyclopedism / AV B. Cv: encyclopaedism
+A B C: encyclopedisms / AV B. Cv: encyclopaedisms
+## See note for encyclopedia
 
-# encyclopedist (level 70)
-A: encyclopedist / B: encyclopaedist
-A: encyclopedists / B: encyclopaedists
+# encyclopedist <verified> (level 70)
+A B C: encyclopedist / AV B. Cv: encyclopaedist
+A B C: encyclopedists / AV B. Cv: encyclopaedists
+## See note for encyclopedia
 
 # endameba (level 70)
 A: endameba / B: endamoeba
@@ -13979,7 +13991,7 @@ A Z: insolubilizes / B: insolubilises
 
 # install <verified> (level 10)
 A B: install / Bv: instal
-A B: installs / B-: instals
+A B: installs / Bv: instals
 
 # installment <verified> (level 35)
 A Cv: installment / B C: instalment
@@ -13988,7 +14000,7 @@ A Cv: installment's / B C: instalment's
 
 # instill <verified> (level 35)
 A Bv C: instill / B Cv: instil
-A B- C: instills / B C-: instils
+A Bv C: instills / B Cv: instils
 
 # instituter (level 60)
 _: instituter / _v: institutor
@@ -18424,7 +18436,8 @@ A: nonecumenic / B: nonoecumenic
 A: nonecumenical / B: nonoecumenical
 
 # nonencyclopedic (level 95)
-A: nonencyclopedic / B: nonencyclopaedic
+A B C: nonencyclopedic / AV B. CV: nonencyclopaedic
+## See note for encyclopedia
 
 # nonesthetic (level 80)
 A: nonesthetic / B: nonaesthetic

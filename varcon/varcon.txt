@@ -4757,7 +4757,7 @@ A B C: coloration / B. Cv: colouration
 A B C: colorations / B. Cv: colourations
 A B C: coloration's / B. Cv: colouration's
 ## OED has coloration as the prefered spelling and discolouration as a
-## variant for British English or some reason
+## variant for British English for some reason
 
 # colorational (level 95)
 A B: colorational / Bv: colourational

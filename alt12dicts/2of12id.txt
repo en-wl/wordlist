@@ -5111,7 +5111,7 @@ bullock N: bullocks
 bullpen N: bullpens
 bullring N: bullrings
 bullshit N: ~bullshits
-bullshit V: bullshitted | bullshit (-bullshat)  bullshitting  bullshits
+bullshit V: bullshitted / bullshit (-bullshat)  bullshitting  bullshits
 bullshitter N: bullshitters
 bully A: -bullier  -bulliest
 bully N: bullies
@@ -24622,7 +24622,7 @@ mastodon N: mastodons
 mastoid A:
 mastoid N: mastoids
 masturbate V: masturbated  masturbating  masturbates
-masturbation N: ~masturbations
+masturbation N: ~masturbationsq
 masturbatory A:
 mat A:
 mat N: mats
@@ -28246,7 +28246,6 @@ oral A:
 oral N: orals
 orally A:
 orange A: oranger  orangest
-orange A:
 orange N: oranges
 orangeade N: orangeades
 orangery N: orangeries
@@ -28435,7 +28434,7 @@ outboard A:
 outboard N: outboards
 outboast V: outboasted  outboasting  outboasts
 outbox N: outboxes
-outbox V: outboxed  outboxes  outboxing
+outbox V: outboxed  outboxing  outboxes
 outbound A:
 outbreak N: outbreaks
 outbuilding N: outbuildings
@@ -34420,7 +34419,7 @@ resort V: resorted  resorting  resorts
 resound V: resounded  resounding  resounds
 resoundingly A:
 resource N: resources
-resource V: resourced  resources  resourcing
+resource V: resourced  resourcing  resources
 resourceful A:
 resourcefully A:
 resourcefulness N: ~resourcefulnesses

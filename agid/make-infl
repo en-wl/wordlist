@@ -159,6 +159,7 @@ sub compound_find ($$$)
     foreach my $i (3 .. length($word) - 2) 
     {
 	my $suf = substr($word,-$i);
+	next if $suf eq 'ling'; # causes problems with 'ing' ending that double the l
 	next unless &$have($suf);
 	my $pre = substr($word, 0, length($word)-$i);
 	next unless (exists $word{$pre} || exists $prefix{$pre});

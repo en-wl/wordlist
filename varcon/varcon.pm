@@ -12,9 +12,9 @@ our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(readline flatten get_words filter %map MAX_VARIANT_LEVEL);
 
 our %map = qw(A american B british Z british_z C canadian _ other);
-my %vmap = ('' =>  -1, '.' => 0, 'v' => 1, 'V' => 2, '-' => 3, 'x' => 8,
+our %vmap = ('' =>  -1, '.' => 0, 'v' => 1, 'V' => 2, '-' => 3, 'x' => 8,
                        '0' => 0, '1' => 1, '2' => 2, '3' => 3, '8' => 8);
-my %rmap = ('' => '', 
+our %rmap = ('' => '', 
             -1 => '', 0 => '.', 1 => 'v', 2 => 'V', 3 => '-', 8 => 'x');
 
 our $MAX_VARIANT_LEVEL = 9; # can be up to 9
@@ -26,11 +26,13 @@ sub readline_no_expand($;$) {
     my ($d,@n) = split / *\| */;
     my (@d) = split / *\/ */, $d;
     my %r;
+    my $fragile = 0;
     foreach (@d) {
         my ($s, $w) = /^(.+?): (.+)$/ or croak "Bad entry: $_";
         my @s = split / /, $s;
         foreach (@s) {
-            my ($s, $v) = /^([ABZC_*Q])([.01234vVx-]?)$/ or croak "Bad category: $_";
+            my ($s, $v, $num) = /^([ABZC_*Q])([.01234vVx-]?)(\d)?$/ or croak "Bad category: $_";
+            $fragile = 1 if defined $num;
             push @{$r{$s}[$vmap{$v}+1]}, $w;
         }
     }
@@ -40,6 +42,10 @@ sub readline_no_expand($;$) {
         }
     }
     die if @n > 1;
+    if (defined $n) {
+        $n->{fragile} = 1 if $fragile;
+        $n->{orig_data} = $d if $fragile;
+    }
     if (@n == 1 && defined $n) {
         local $_ = $n[0];
         $n->{_} = $_;

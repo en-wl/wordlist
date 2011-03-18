@@ -22,7 +22,8 @@ while (<>) {
         print STDERR "BAD LINE (m: @missing): $_\n" if @missing;
         print STDERR "BAD LINE (?: @sps): $_\n" unless $sps eq '_' || $sps eq 'A B C Z';
         %d = varcon::flatten(%d);
-        print varcon::format(\%d);
+        print varcon::format(\%d) unless $n{fragile};
+        print $n{orig_data} if $n{fragile};
         print " | $n{_}" if defined $n{_};
         print " $comment" if defined $comment;
         print "\n";

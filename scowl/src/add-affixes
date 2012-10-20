@@ -30,6 +30,9 @@ open F, "r/alt12dicts/2of12id.txt" or die;
 my %lookup;
 my %remove;
 my %possessive;
+# possessive_cross = additional forms that should be looked up in the
+#   possessive hash
+my %possessive_cross;
 
 while (<F>) {
   s/\r?\n$// or die;
@@ -62,18 +65,28 @@ while (<F>) {
   #  AGID things it is a noun and "use-some" or Uppercase 
   #    (since 2of12id doesn't include uppercase)
   #  AGIG is guessing it is a noun and "use-all"
-  $possessive{$w} = "$w\'s\n" if $p eq 'N' && (($q eq '' && ($use_all || $w =~ /^[A-Z]/)) 
-                                               || $use_all >= 2);
+  my $add_possessive = $p eq 'N' && (($q eq '' && ($use_all || $w =~ /^[A-Z]/)) 
+                                     || $use_all >= 2);
+  $possessive{$w} = "$w\'s\n" if $add_possessive;
   next if $remove{"$w:$p"};
   next unless $q eq '' || $use_all >= 2;
   my @a = split /, | \| /, $a;
-  @a = grep {my ($word,$tags,$level) 
+  @a = grep {my ($word,$tags,$level)
 		 = /^([A-Za-z\']+)([~<!?]*)(| [\d.]+)(| {\S+})$/ or die $_;
 	     $_ = $word;
 	     $tags !~ /~|\?|!</ && $level <= $inc_level} @a;
   @a = grep {not $remove{"$w:$p:$_"}} @a;
   next unless @a;
   $lookup{$w} .= join("\n",@a)."\n";
+
+  # For irregular nouns that have plurals that do not end in s
+  # then add the possessive form of the plural as well
+  next unless $add_possessive;
+  foreach (@a) {
+    next if /s$/;
+    $possessive{$_} .= "$_\'s\n";
+    push @{$possessive_cross{$w}}, $_
+  }
 }
 
 unless ($no_possessive) {
@@ -96,6 +109,12 @@ unless ($no_possessive) {
 while (<STDIN>) {
   print;
   chop;
-  print $lookup{$_} unless $just_possessive;
-  print $possessive{$_} unless $no_possessive;
+  my $w = $_;
+  print $lookup{$w} unless $just_possessive;
+  print $possessive{$w} unless $no_possessive;
+  unless ($just_possessive || $no_possessive) {
+    foreach (@{$possessive_cross{$w}}) {
+      print $possessive{$_}
+    }
+  }
 }

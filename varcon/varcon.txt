@@ -10689,6 +10689,11 @@ A: funneling / B: funnelling
 # funneler (level 99)
 A: funneler / B: funneller
 
+#  furor <verified> (level 35)
+A C: furor / B: furore
+A C: furors / B: furores
+A C: furor's / B: furore's
+
 # furcule (level 80)
 A: furcule / B: furculae
 

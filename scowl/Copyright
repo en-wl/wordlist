@@ -112,7 +112,7 @@ The 40 level includes words from Alan's 3esl list found in version 4.0
 of his 12dicts package.  Like his other stuff the 3esl list is also in the
 public domain.
 
-The 50 level includes Brian's frequency class 1, words words appearing
+The 50 level includes Brian's frequency class 1, words appearing
 in at least 5 of 12 of the dictionaries as indicated in the 12Dicts
 package, and uppercase words in at least 4 of the previous 12
 dictionaries.  A decent number of proper names is also included: The
@@ -141,11 +141,11 @@ The 70 level includes Brian's frequency class 0 and the 74,550 common
 dictionary words from the MWords package.  The common dictionary words,
 like those from the 12Dicts package, have had all likely inflections
 added.  The 70 level also included the 5desk list from version 4.0 of
-the 12Dics package which is the public domain.
+the 12Dics package which is in the public domain.
 
 The 80 level includes the ENABLE word list, all the lists in the
 ENABLE supplement package (except for ABLE), the "UK Advanced Cryptics
-Dictionary" (UKACD), the list of signature words in from YAWL package,
+Dictionary" (UKACD), the list of signature words from the YAWL package,
 and the 10,196 places list from the MWords package.
 
 The ENABLE package, mainted by M\Cooper <thegrendel@theriver.com>,
@@ -192,7 +192,7 @@ Accent information was taken from UKACD.
 My VARCON package was used to create the American, British, and
 Canadian word list. 
 
-Since the original word lists used used in the VARCON package came
+Since the original word lists used in the VARCON package came
 from the Ispell distribution they are under the Ispell copyright:
 
   Copyright 1993, Geoff Kuenning, Granada Hills, CA

@@ -10,6 +10,10 @@ export LC_ALL=C
 export LC_CTYPE=C
 export LC_COLLATE=C
 
+SIZE=60
+
+mk-list() { ../mk-list -d final "$@"; }
+
 prep() {
   echo prep 
 
@@ -28,7 +32,7 @@ EOF
 doit() {
   echo creating en_$1.dic
 
-  cat en-common.wl en_$1-wo_accents-only.wl | sort -u > en_$1.0
+  mk-list en_$1 $SIZE | src/deaccent | sort -u > en_$1.0
 
   comm en_$1.0 nosug -12 > en_$1-nosug.1
 
@@ -56,6 +60,9 @@ doit() {
   cat en_$1-nosug.1 en_$1.1 | sort -u > en_$1.tocheck
 
   #hunspell -l -d ./en_$1 < en_$1.dic.tocheck > misspelled
+
+  mv en_$1.tocheck hunspell/en_$1.txt
+  gzip -9f hunspell/en_$1.txt
 }
 
 

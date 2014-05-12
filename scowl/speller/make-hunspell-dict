@@ -45,9 +45,7 @@ doit() {
 
   cp en.aff en_$1.aff
   
-  cat README_en.txt.in ../Copyright > README_en_$1.txt
-  echo >> README_en_$1.txt
-  echo "Build Date: `date`" >> README_en_$1.txt
+  sh README_en.txt.sh > README_en_$1.txt
 
   zip -9 en_$1.zip README_en_$1.txt en_$1.dic en_$1.aff
 
@@ -65,5 +63,7 @@ prep
 
 doit US
 doit CA
+doit GB-ize
+doit GB-ise
 
-rm eng*.dat nosug en_US*.? en_CA*.?
+#rm eng*.dat nosug en_US*.? en_CA*.?

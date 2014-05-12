@@ -10,6 +10,9 @@ export LC_ALL=C
 export LC_CTYPE=C
 export LC_COLLATE=C
 
+SIZE=60
+
+
 mk-list() { ../mk-list -d final "$@"; }
 
 # may be slightly faster
@@ -17,22 +20,22 @@ mk-list() { ../mk-list -d final "$@"; }
 
 echo base
 
-mk-list english 60 > en.wl0
-mk-list en_US     60 > en_US-w_accents.twl
-mk-list en_GB-ise 60 > en_GB-ise-w_accents.twl
-mk-list en_GB-ize 60 > en_GB-ize-w_accents.twl
-mk-list en_CA     60 > en_CA-w_accents.twl
+mk-list english $SIZE > en.wl0
+mk-list en_US     $SIZE > en_US-w_accents.twl
+mk-list en_GB-ise $SIZE > en_GB-ise-w_accents.twl
+mk-list en_GB-ize $SIZE > en_GB-ize-w_accents.twl
+mk-list en_CA     $SIZE > en_CA-w_accents.twl
 cat en_??-w_accents.twl | sort -u > en-w_accents.twl
 
-mk-list en_US 60 --variants 0 > en-variant_0.wl0
-mk-list en_US 60 --variants 0,1 > en-variant_1.wl0
-mk-list en_US 60 --variants 0,1,2 > en-variant_2.wl0
+mk-list en_US $SIZE --variants 0 > en-variant_0.wl0
+mk-list en_US $SIZE --variants 0,1 > en-variant_1.wl0
+mk-list en_US $SIZE --variants 0,1,2 > en-variant_2.wl0
 
-mk-list en_GB 60 --variants 0 > en_GB-variant_0.wl0
-mk-list en_GB 60 --variants 0,1 > en_GB-variant_1.wl0
+mk-list en_GB $SIZE --variants 0 > en_GB-variant_0.wl0
+mk-list en_GB $SIZE --variants 0,1 > en_GB-variant_1.wl0
 
-mk-list en_CA 60 --variants 0 > en_CA-variant_0.wl0
-mk-list en_CA 60 --variants 0,1 > en_CA-variant_1.wl0
+mk-list en_CA $SIZE --variants 0 > en_CA-variant_0.wl0
+mk-list en_CA $SIZE --variants 0,1 > en_CA-variant_1.wl0
 
 echo deaccent
 

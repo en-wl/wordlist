@@ -30,47 +30,62 @@ EOF
 }
 
 doit() {
-  echo creating en_$1.dic
+  echo creating $1.dic
 
-  mk-list en_$1 $SIZE | src/deaccent | sort -u > en_$1.0
+  eval $2 | sort -u > $1.0
 
-  comm en_$1.0 nosug -12 > en_$1-nosug.1
+  comm $1.0 nosug -12 > $1-nosug.1
 
-  comm en_$1.0 nosug -23 > en_$1.1
+  comm $1.0 nosug -23 > $1.1
 
-  $ASPELL -l ./eng munch-list < en_$1-nosug.1 | grep -v '^\(XXX\|>>>\)' | ./add-no-suggest > en_$1.2
+  $ASPELL -l ./eng munch-list < $1-nosug.1 | grep -v '^\(XXX\|>>>\)' | ./add-no-suggest > $1.2
 
-  $ASPELL -l ./eng munch-list < en_$1.1 | grep -v '^\(XXX\|>>>\)' >> en_$1.2
+  $ASPELL -l ./eng munch-list < $1.1 | grep -v '^\(XXX\|>>>\)' >> $1.2
 
-  cat en.dic.supp >> en_$1.2
+  cat en.dic.supp >> $1.2
 
-  wc -l en_$1.2 | cut -d' ' -f1 > en_$1.dic
-  cat en_$1.2 | sort >> en_$1.dic
+  wc -l $1.2 | cut -d' ' -f1 > $1.dic
+  cat $1.2 | sort >> $1.dic
 
-  cp en.aff en_$1.aff
+  cp en.aff $1.aff
   
-  sh README_en.txt.sh > README_en_$1.txt
+  WHAT="$1 Hunspell Dictionary" sh README_en.txt.sh > README_$1.txt
+  echo "Wordlist Command: $2" >> README_$1.txt
 
-  zip -9 en_$1.zip README_en_$1.txt en_$1.dic en_$1.aff
+  rm -f $1.zip
+  zip -9 $1.zip README_$1.txt $1.dic $1.aff
 
-  cp -p en_$1.zip hunspell/
+  cp -p $1.zip hunspell/
 
   #echo check
 
-  cat en_$1-nosug.1 en_$1.1 | sort -u > en_$1.tocheck
+  cat $1-nosug.1 $1.1 | sort -u > $1.tocheck
 
-  #hunspell -l -d ./en_$1 < en_$1.dic.tocheck > misspelled
+  #hunspell -l -d ./$1 < $1.dic.tocheck > misspelled
 
-  mv en_$1.tocheck hunspell/en_$1.txt
-  gzip -9f hunspell/en_$1.txt
+  mv $1.tocheck hunspell/$1.txt
+  gzip -9f hunspell/$1.txt
 }
 
 
 prep
 
-doit US
-doit CA
-doit GB-ize
-doit GB-ise
+doit en_US "mk-list en_US $SIZE | src/deaccent"
+doit en_CA "mk-list en_US $SIZE | src/deaccent"
+doit en_GB-ize "mk-list en_US $SIZE | src/deaccent"
+doit en_GB-ise "mk-list en_US $SIZE | src/deaccent"
+
+with-and-without-accents() { 
+  tmp1=`mktemp tmp-XXX`
+  tmp2=`mktemp tmp-XXX`
+  cat - > $tmp1
+  src/deaccent < $tmp1 > $tmp2
+  cat $tmp1 $tmp2
+  rm $tmp1 $tmp2
+}
+
+doit en_US-large "mk-list -v0 en_US 70 | with-and-without-accents "
+doit en_CA-large "mk-list -v0 en_CA 70 | with-and-without-accents "
+doit en_GB-large "mk-list -v0 en_GB-ize en_GB-ise 70 | with-and-without-accents"
 
 #rm eng*.dat nosug en_US*.? en_CA*.?

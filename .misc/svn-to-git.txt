@@ -1,0 +1,22 @@
+Command I used to convert the repo from SVN to git:
+
+echo 'kevina = Kevin Atkinson <kevina@gnu.org>' > wordlist.authorsfile
+export TZ=America/Denver
+git svn clone --stdlayout -A wordlist.authorsfile --localtime https://svn.code.sf.net/p/wordlist/code/
+cd code
+unset TZ # time should now be CEST
+git svn fetch --localtime
+git rebase -i 332e0817fa83bb85ea3d055f889f4b01f29fad2d^ # fix up that commit log
+git filter-branch -f --msg-filter `pwd`/../fixup-commit.pl
+
+-- added added a .gitignore file and added a target to the Makefile
+   create empty directories and pushed commits down as early as
+   possible (i.e. rebased)
+
+-- Manually fix up tags after all filtering/rebasing of commits is done
+
+-- Then check in this file and the script used above
+
+Special thanks to Anton Backer (staticshock) for his instructions at
+https://github.com/staticshock/wordlist/wiki.
+

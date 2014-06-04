@@ -1,0 +1,13 @@
+# Site settings
+title: "SCOWL (And Friends)"
+email: "kevina@gnu.org"
+description: ""
+baseurl: ""
+url: "http://wordlist.aspell.net"
+
+# Build settings
+#markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+permalink: pretty

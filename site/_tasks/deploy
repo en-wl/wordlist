@@ -1,0 +1,4 @@
+#!/bin/sh
+
+jekyll build
+rsync -v -a --delete --rsh=ssh _site/ kevina@web.sf.net:/home/users/k/ke/kevina/wordlist/htdocs/

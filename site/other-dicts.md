@@ -7,7 +7,8 @@ This page is an attempt to keep track of them all.
 
 Please help keep this page up to date.  This site is included in the
 Git repository for SCOWL, so the easiest way to contribute is to fork,
-edit this file, and then submit a pull request.  You can also just
+[edit this file](https://github.com/kevina/wordlist/edit/master/site/other-dicts.md), 
+and then submit a pull request.  You can also just
 email me any corrections or additions.
 
 # American (en_US) #

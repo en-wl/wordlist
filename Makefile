@@ -9,7 +9,11 @@ scowl:
 clean:
 	$(MAKE) -C scowl clean
 
-prep: .enable .enable-sup .ukacd .yawl .mwords .census .uk-freq-class
+prep: .dirs .enable .enable-sup .ukacd .yawl .mwords .census .uk-freq-class
+
+.dirs:
+	mkdir -p scowl/working scowl/final
+	touch .dirs
 
 .enable: other/enable2k.zip
 	unzip -LL other/enable2k.zip -d enable

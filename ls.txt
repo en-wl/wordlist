@@ -1,0 +1,26 @@
+total 252
+drwxrwsr-x   3 kevina kevina  4096 Jun  4 21:19 .
+drwxr-xr-x 135 kevina kevina 20480 Jun  4 21:03 ..
+-rw-rw-r--   1 kevina kevina 37331 Jun 17  2007 12dicts-readme.html
+-rw-rw-r--   1 kevina kevina 22564 Jun 17  2007 12dicts-readme-r5.html
+-rw-rw-r--   1 kevina kevina 14942 Jan  3  2003 agid-readme
+-rw-rw-r--   1 kevina kevina  7540 Aug 10  2004 alt12dicts-infl-readme
+-rw-rw-r--   1 kevina kevina  7814 Aug 10  2004 alt12dicts-readme
+drwxrwsr-x   7 kevina kevina  4096 Jun  4 21:18 .git
+-rw-rw-r--   1 kevina kevina     0 Dec 20  2008 googlec698dba0835c5552.html
+-rw-rw-r--   1 kevina kevina   150 May 31 00:40 .htaccess
+-rw-rw-r--   1 kevina kevina 12052 Jan  6  2011 hunspell-readme
+-rw-rw-r--   1 kevina kevina 12710 Dec  2  2011 index.html
+-rw-rw-r--   1 kevina kevina 11745 May 27  2009 index.html~
+-rw-rw-r--   1 kevina kevina  2332 Jan 29  2001 ispell-enwl-readme
+-rw-rw-r--   1 kevina kevina  1375 Aug 21  2000 jargon-wl-readme
+-rw-rw-r--   1 kevina kevina     0 Jun  4 21:19 ls.txt
+-rw-rw-r--   1 kevina kevina  2425 Dec 28  2010 old-news.html
+-rw-rw-r--   1 kevina kevina  4045 Aug 21  2000 pos-readme
+-rw-rw-r--   1 kevina kevina   993 Dec 28  2010 scowl-7.0-readme
+-rw-rw-r--   1 kevina kevina  1441 Jan  7  2011 scowl-7.1-readme
+-rw-rw-r--   1 kevina kevina 25903 Jan  6  2011 scowl-readme
+-rwxrwxr-x   1 kevina kevina   114 Dec  5  2008 update
+-rw-rw-r--   1 kevina kevina  1059 Dec 28  2010 varcon-5.0-readme
+-rw-rw-r--   1 kevina kevina  1317 Jan  6  2011 varcon-5.1-readme
+-rw-rw-r--   1 kevina kevina 17235 Jan  6  2011 varcon-readme

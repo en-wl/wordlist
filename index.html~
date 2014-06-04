@@ -1,0 +1,288 @@
+<html>
+<head>
+<title>Kevin's Word List Page</title>
+</head>
+<body>
+<h1>Kevin's Word List Page</h1>
+
+This page contains links to various Word Lists and related information.
+<p>
+<hr>
+<h2>News</h2>
+
+<i>December 5, 2008</i><br>
+
+An initial version of the official Hunspell en_US and en_CA
+dictionaries, created from SCOWL, is now available.
+
+<p>
+
+<i>June 17, 2007</i><br>
+
+A new version of the offical 12Dicts package is now available which
+contains several new lists.
+
+<p>
+
+<i>August 10, 2004</i><br>
+
+A new version of SCOWL, VarCon and, Alt12Dicts is now available.
+
+<p>
+
+<i><a href="old-news.html">Older News</a></i>
+
+<hr>
+<h2>Packaged by Me</h2> 
+
+"tar.gz" files has Unix EOL charters and "zip" files has DOS/Windows
+EOL characters.  Older releases can be found <a href="http://sourceforge.net/project/showfiles.php?group_id=10079">here</a>.
+
+<h3>SCOWL</h3> 
+
+SCOWL (Spell Checker Oriented Word Lists) is a collection of word
+lists split up in various sizes, and other categories, intended to be
+suitable for use in spell checkers.  However, I am sure it will have
+numerous other uses as well.
+<p>
+<a href="scowl-readme">readme</a>, 
+<a href="http://downloads.sourceforge.net/wordlist/scowl-6.tar.gz">tar.gz</a>, 
+<a href="http://downloads.sourceforge.net/wordlist/scowl-6.zip">zip</a>
+(<i>rev 6</i>, 2.2 MB) (<a href="http://sourceforge.net/project/shownotes.php?release_id=259423">release notes & changelog</a>)
+
+<h3>AGID</h3>
+<p>
+AGID is an <b>A</b>utomatically <b>G</b>enerated <b>I</b>nflection
+<b>D</b>atabase from an insanely large word list.  My goal is for the
+non-questionable entries to be 100% accurate.
+<p>
+<a href="agid-readme">readme</a>, 
+<a href="http://downloads.sourceforge.net/wordlist/agid-4.tar.gz">tar.gz</a>, 
+<a href="http://downloads.sourceforge.net/wordlist/agid-4.zip">zip</a>
+(<i>rev 4</i>, 0.9 MB) (<a href="http://sourceforge.net/project/shownotes.php?release_id=131312">release notes & changelog</a>)
+<p>
+<h3>VarCon</h3>
+VarCon (Variant Conversion Info) contains tables to convert between
+American, British (both "ise" and "ize" spellings), and Canadian
+spellings and vocabulary as well as well as a table listing the
+equivalent forms of other variants.
+<p>
+<a href="varcon-readme">readme</a>,
+<a href="http://downloads.sourceforge.net/wordlist/varcon-4.1.tar.gz">tar.gz</a>,
+<a href="http://downloads.sourceforge.net/wordlist/varcon-4.1.zip">zip</a>
+(<i>rev 4.1</i>, 0.1 MB) (<a href="http://sourceforge.net/project/shownotes.php?release_id=259425">release notes & changelog</a>)
+
+<h3>Part Of Speech Database</h3>
+
+The Part Of Speech Database is a combination of "Moby (tm)
+Part-of-Speech II" and the WordNet database.
+<p>
+<a href="pos-readme">readme</a>,
+<a href="http://downloads.sourceforge.net/wordlist/pos-1.tar.gz">tar.gz</a>,
+<a href="http://downloads.sourceforge.net/wordlist/pos-1.zip">zip</a>
+(1.2 MB)
+
+<h3>Unofficial Jargon File Word Lists</h3>
+
+The Unofficial Jargon File Word Lists is a collection of useful Word
+Lists created from the Jargon file.
+<p>
+<a href="jargon-wl-readme">readme</a>,
+<a href="http://downloads.sourceforge.net/wordlist/jargon-wl-4.2.0-1.tar.gz">tar.gz</a>
+
+<h3>Ispell English Word Lists</h2>
+
+This package contains the contents of the Ispell (ver 3.1.20) word list after
+being expand from there affix compressed form used by Ispell.
+<p>
+<a href="ispell-enwl-readme">readme</a>,
+<a href="http://downloads.sourceforge.net/wordlist/ispell-enwl-3.1.20.tar.gz">tar.gz</a>,
+<a href="http://downloads.sourceforge.net/wordlist/ispell-enwl-3.1.20.zip">zip</a>
+(0.4 MB)
+
+<h3>Unofficial Alternate 12 Dicts Package</h3> 
+
+The Unofficial Alternate 12 Dicts Package contains almost all the
+information in the official 12Dicts package but in a different format
+as well as a good deal of additional information.  However it is not
+meant as a replacement for the official 12Dicts package.  It simply
+offers the information in a different way.
+
+<p>
+<a href="alt12dicts-readme">readme</a>,
+<a href="alt12dicts-infl-readme">readme-infl</a>,
+<a href="http://downloads.sourceforge.net/wordlist/alt12dicts-4.tar.gz">tar.gz</a>,
+<a href="http://downloads.sourceforge.net/wordlist/alt12dicts-4.zip">zip</a>
+(<i>rev 4</i>, 1.0 MB) (<a href="http://sourceforge.net/project/shownotes.php?release_id=258724">release notes & changelog</a>)
+<p>
+<hr>
+<p>
+<h2>Official 12Dicts Package</h2> 
+
+12dicts is a collection of English word lists.  It differs in several
+important ways from most of the other free word lists you can
+download.
+<ul> 
+<li> The 12dicts lists are oriented towards common words.  If you're
+     looking for myriads of archaic, scientific or computer jargon
+     words, you should look elsewhere.
+<li> The 12dicts lists have been rigorously checked for errors.  (This
+     is not to say that they are error-free, merely that enough care
+     has been taken that errors are rather infrequent.)
+<li> 12dicts contains a variety of lists, of different sizes and
+     characteristics.  One size does not fit all.  Because each list
+     has different characteristics, I do not recommend combining
+     them, except as noted below.  
+</ul>
+<p>
+Originally, 12dicts was composed of lists derived from a specific set
+of 12 source dictionaries.  In addition to these "classic" lists,
+12dicts now includes lists derived from other sources.  It would
+perhaps be appropriate to rename 12dicts to someth ing more generic,
+such as BAWL (Beale's Assorted Word Lists), but I have not done so in
+order to preserve continuity.
+<p>
+<a href="12dicts-readme-r5.html">readme</a>, 
+<a href="http://downloads.sourceforge.net/wordlist/12dicts-5.0.zip">12dicts-5.0.zip</a> (ver 5.0, 1419 KB)
+<p>
+<hr>
+<h2>Spell Checking Dictionaries</h2>
+
+These wordslists are the basis for the offical English dictionary in
+Aspell and the en_US and en_CA dictionary in Hunspell.
+
+<p>
+
+<ul>
+<li>Hunspell Dictionaries: 
+  <a href="http://downloads.sourceforge.net/wordlist/hunspell-en_US-20081205.zip">en_US</a>,
+  <a href="http://downloads.sourceforge.net/wordlist/hunspell-en_CA-20081205.zip">en_CA</a>,
+  <a href="hunspell-readme">README</a>
+  (2008-12-05)
+<li><a href="http://ftp.gnu.org/gnu/aspell/dict/en/">Aspell Dictionaries</a>
+</ul>
+
+<hr>
+<h2>Additional Information</h2>
+
+<p>
+
+Please submit all bug reports regarding these words lists or the
+speller dictionaries to the <a
+href="http://sourceforge.net/tracker/?group_id=10079&atid=1014602">Issue
+Tracker</a>.
+<p>
+
+The latest version of SCOWL and friends can be found in <a
+href="http://sourceforge.net/svn/?group_id=10079">svn</a>.
+In order to build SCOWL you will need to check out the trunk directory:
+<pre>
+   svn co https://wordlist.svn.sourceforge.net/svnroot/wordlist/trunk wordlist
+</pre>
+Than to build SCOWL:
+<pre>
+  cd wordlist
+  make
+</pre>
+To build the aspell and hunspell dictionaries (you will need Aspell
+0.60 installed):
+<pre>
+  cd scowl/speller
+  make aspell
+  make hunspell
+</pre>
+<p>
+General discussion should be directed to the <a
+href="http://lists.sourceforge.net/mailman/listinfo/wordlist-devel">wordlist-devel</a> mailing list.
+<p>
+<a href="http://sourceforge.net/projects/wordlist/">Sourceforge Project Page</a>
+<hr>
+<h2>Links to other General Word Lists</h2>
+<ul>
+<li><a href="http://personal.riverusers.com/~thegrendel/software.html"
+>ENABLE, YAWL</a>
+<li><a href="http://www.bryson.demon.co.uk/wordlist.html"
+>The UK Advanced Cryptics Dictionary (UKACD), plus others</a>
+<li><a href="http://www.bckelk.uklinux.net/menu.html">UK English wordlist with frequency classification</a>, plus linkes to many other lists with frequency info.
+<li><a href="http://www.itri.brighton.ac.uk/~Adam.Kilgarriff/bnc-readme.html">BNC Corpus Frequency Info</a>
+<li><a href="http://www.dcs.shef.ac.uk/research/ilash/Moby/">Moby</a>, <a href="ftp://sable.ox.ac.uk/pub/wordlists/Moby/">Alternate Site</a>
+<li><a href="ftp://nic.funet.fi/pub/unix/security/dictionaries/DEC-collection/">english.words DEC-SRC-92-04-05</a>, <a href="ftp://ftp.uu.net/.vol/2/dictionaries/DEC-collection/">Alternate Site</a>
+<li><a href="http://www.outpost9.com/files/WordLists.html">Large Collection of Word Lists</a>
+<li><a href="http://www.puzzlers.org/secure/wordlists/dictinfo.html">National Puzzlers' League -- Word Lists</a>
+</ul>
+<h2>Links to Online Dictionaries</h2>
+<ul>
+<li><a href="http://www.m-w.com/">Merriam-Webster</a>
+<li><a href="http://www.bartleby.com/61/">American Heritage</a>
+<li><a href="http://www.funkandwagnalls.com/dictionary/">Random House</a>
+<li><a href="http://www.mgr.com/websters/search/search.html">Webster's New World</a> <font size=-1><i>(Search Currently Broken)</i></font>
+<li><a href="http://dictionary.msn.com/">Encarta</a>
+<li><a href="http://www.wordsmyth.net/">Wordsmyth</a>
+<li><a href="http://www.cogsci.princeton.edu/~wn/">WordNet</a>
+<li><a href="http://dictionary.cambridge.org/">Cambridge</a> (ESL)
+<li><a href="http://www.longman-elt.com/webdictionary.html">Longman</a> (ESL)
+<li><a href="http://www.dict.mq.edu.au/">Macquarie</a> (Australian)
+<li>1913 Webster's: 
+  <a href="http://humanities.uchicago.edu/forms_unrest/webster.form.html">ARTFL</a>,
+  <a href="http://www.bibliomania.com/Reference/Webster/index.html">Bibliomania</a>,
+  <a href="http://www.dict.org/bin/Dict">dict.org</a>,
+  <a href="http://www.mso.anu.edu.au/~ralph/OPTED/">Ralph</a>
+<li><a href="http://www.onelook.com/">OneLook</a> (Meta)
+<li>More: <a href="http://www.yourdictionary.com/">YourDictionary</a>, 
+  <a href="http://pages.prodigy.net/rb234/dictr.html">Randy's Links</a>
+</ul>
+<h2>Links to Slang Word Lists and Dictionaries</h2>
+<ul>
+<li>American
+  <ul>
+  <li><a href="http://www.aitech.ac.jp/~itesls/slang/">Common American Slang</a>
+  <li><a href="http://psy.otago.ac.nz:800/r_oshea/slang.html">American-Australian Slang Dictionary</a>
+  <li><a href="http://eslcafe.com/slang/">ESL Slang Page</a>
+  <li><a href="http://www21.geocities.com/Athens/Agora/5949/Help/canus1.html">Canadian/US Slang</a>
+  </ul>
+<li>British
+  <ul>
+  <li><a href="http://www.peevish.co.uk/slang/">A dictionary of slang</a>
+  <li><a href="http://www21.geocities.com/Athens/Agora/5949/Help/british1.html">British Isles Slang</a>
+  <li><a href="http://www.eeb.princeton.edu/~ben/vocab/vocab.html">British Slang Glossary</a>
+  </ul>
+<li>Australian
+  <ul>
+  <li><a href="http://www21.geocities.com/Athens/Agora/5949/Help/aussie1.html">Australian Slang</a>
+  </ul>
+<li>Cajun
+  <ul>
+  <li><a href="http://www21.geocities.com/Athens/Agora/5949/Help/cajun1.html">Cajun Slang</a>
+  </ul>
+<li>Computer/Internet
+  <ul>
+  <li><a href="http://www21.geocities.com/Athens/Agora/5949/Help/computer1.html">Computer/Internet Slang</a>
+  </ul>
+<li>Miscellaneous
+  <ul>
+  <li><a href="http://www21.geocities.com/Athens/Agora/5949/Help/misc1.html">Miscellaneous Slang</a>
+  </ul>
+<li><a href="http://www.notam.uio.no/~hcholm/altlang/ht/English.html">The Alternative English Dictionary</a>
+</ul>
+
+<h2>Links to Specialty Word Lists and Dictionaries</h2>
+
+<ul>
+<li><a href="http://www.catb.org/jargon/">Jargon File</a> (Also known as <i>The New Hacker's Dictionary</i>)
+<li><a href="http://foldoc.doc.ic.ac.uk/foldoc/index.html">The Free On-Line Dictionary of Computing</a>
+<li><a href="http://www.census.gov/genealogy/names/">U.S. Census Bureau Names Files</a> with frequency info.
+</ul>
+<h2>Other Links</h2>
+<ul>
+<li><a href="http://aspell.sourceforge.net/">Aspell</a>
+<li><a href="http://www.peak.org/~jeremy/dictionary/dict.html">The American-British British-American Dictionary</a>
+</ul>
+<hr>
+<p>
+This site is maintained by <a
+href="http://kevin.atkinson.dhs.org">Kevin Atkinson</a>
+(kevina at gnu org).
+<p>
+<a href="http://sourceforge.net"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=10079&amp;type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+</body>
+</html>

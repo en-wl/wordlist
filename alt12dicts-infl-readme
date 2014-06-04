@@ -1,0 +1,149 @@
+
+The 2of12id.txt file is a revision of a portion of version 2 of the
+AGID database.  It is intended to accurately reflect the level of
+English vocabulary of the 2of12 list from my 12dicts package.  I
+anticipate that it can be recombined with AGID, thereby improving the
+quality and accuracy of future versions.  In the interests of this, I
+transfer any intellectual property rights I may hold in 2of12id.txt to
+Kevin Atkinson, subject to being allowed to continue to use it to
+improve and maintain my 12dicts package.  [2of12id.txt is under
+the same copyright of AGID, see README-agid for more information.
+-- Kevin Atkinson]
+
+The list includes entries for all lower-case words of more than one
+character, excluding hyphenated words and contractions, from the
+"full 2of12 list" in Kevin's 12dicts supplement.  Generally, a word
+from that list which is an inflection of another word has been omitted,
+unless it has inflections itself, or has a meaning which differs
+significantly from its meaning as an inflection.  Because the latter
+case never adds any further inflections, I was not particularly
+assiduous about adding entries of this sort.
+
+The syntax of the list is identical to that of AGID, with the following
+exceptions:
+
+I have added additional abbreviations for the less common parts of
+speech, as follows:
+
+	C: conjunction/preposition
+	I: interjection
+	P: pronoun
+	S: spoken contraction
+
+Lines which begin with a hyphen represent usages which I was able to
+confirm, but which are not shown in my 12 source dictionaries.  Most
+of these are specialized usages well outside the vocabulary of the
+typical educated reader.  Similarly, any inflection beginning with a
+hyphen represents an inflection which is not found in any of the 12,
+and which I believe to be very unusual.  (Note that most of my source
+dictionaries are not especially interested in irregular plurals, and
+so upon occasion I have accepted plurals not explicitly shown there,
+when I believe them to be reasonably common.  See below for information
+on my handling of adjectival inflections.)
+
+Most of the hyphenated lines in 2of12id were present in the original
+AGID list.  I inserted a few more such lines for unusual forms of
+12dicts words I encountered during my research.  This was a haphazard
+process; there was no consistent effort to find or add such entries.
+
+An inflection which is shown as a single hyphen indicates that the
+inflection does not exist or is inapplicable.  Examples are the
+present participle of the verb "shall" or the plural of the word
+"ravioli" (which is usually regarded as already being plural).  This
+notation is used only when some inflections are meaningful; if a word
+(like the verb "begone") has no inflections whatever, no hyphens are
+shown, and nothing follows the part of speech in the entry.
+
+A word which begins with an @ represents an archaic or obsolete
+inflection of a word which is not itself archaic.  A word may be
+marked with both a hyphen and an @, in which case the hyphen
+appears first.
+
+A plural may begin with a ~ to indicate that it is a plural of a noun
+considered "uncountable".  Examples of uncountable nouns are "mud",
+"rayon", "oregano", "chess", "fairness", "integrity", "aluminum",
+"materialism" and "chickenpox".  These nouns are not ordinarily
+considered to have plurals, even though it is generally possible to
+contrive situations where pluralization is reasonable.  Five of my
+source dictionaries provide information about the countability of
+nouns; for words not found in this subset, I have used my best
+judgment.  I have occasionally overridden my sources, when I believed
+they were clearly wrong.  For instance, the sources agree that "hatred"
+is uncountable, but anyone who follows the news from Bosnia has seen
+the word "hatreds" far too many times to consider it rare.  I did not
+mark the countability of plurals excluded via the hyphen notation.
+
+My notations for the precedence of multiple inflections for the same
+word are similar to the AGID notations but, because I do not feel I
+can in general accurately rank alternative forms by frequency of
+occurence, I use the notations somewhat differently.
+
+When inflections are separated by a "/", it indicates that there is
+no clear agreement on which form appears first in the list of
+alternatives.  At Kevin's request, the first form in such a list
+reflects my best guess for the most common form or, if I have none,
+my preference.
+
+When inflections are separated by a "|", different inflections are used
+for different meanings or usages of the word.  I have used Kevin's
+brace notation to mark each (or occasionally all but one) inflection
+with an associated meaning or context, except in one case.  Many
+animals and fish (e.g., "salmon") fall into a common pattern, where
+the standard English plural "salmons" represents several individuals,
+especially of different kinds, while the uninflected "salmon" is used
+when speaking of a collection.  When I use a "|" without providing any
+context, this specific pattern is thereby indicated.  The order of
+inflections in a "|" list has no significance.
+
+I use Kevin's "form1 (form2)" notation whenever my sources mostly agree
+on the order in which they cite the various forms.  This is not
+necessarily a statement about frequency of usage, since dictionaries
+sometimes omit common forms, or rank forms by criteria other than
+frequency.  There is no indication, like the AGID double-parenthesis
+notation, to distinguish especially uncommon usages (other than the
+hyphen, described above).  Cases where both forms are extremely common,
+such as "proved (proven)" are not distinguished from ones where the
+second form is seldom encountered, like "bandits (banditti)".
+
+This list was prepared by validating the original subset of the AGID
+list against a subset of the 12dicts source dictionaries, and against
+several other larger dictionaries.  Any forms which were not found in
+the larger set were simply removed from the list, while those which
+were confirmed as valid but not found in the 12dicts sources were
+marked with hyphens as described above.  (The fact that an entry or
+word was removed does not necessarily mean it was invalid, merely
+that I did not locate it in the additional references I chose to use.)
+As noted above, because most of the 12dicts sources were not very
+interested in inflections, I sometimes was forced to include
+inflections cited only by the auxiliary sources, especially for
+plurals of uncountable nouns like diseases.
+
+The inflections of adjectives and adverbs had to be handled specially.
+Most dictionaries, including all but 2 of the 12dicts sources, simply
+do not provide consistent and reliable information about these
+inflections.  I used a small set of additional sources for this
+information.  Ironically, my most reliable sources for adjective
+inflections are not so good in other ways, and were in fact disjoint
+from the set I used for everything else.  Because several of my
+adjectival sources were Scrabble-related, where the tendency is to
+include any remotely plausible inflections, I had to exercise a lot
+of judgment about which forms were actually reasonable to include.
+For these reasons, I feel that the reliability of the information
+about adjectival inflections is much lower than for other aspects
+of this list.
+
+-- 
+           Alan Beale               biljir@pobox.com
+   "So toss away stuff you don't need in the end
+    But keep what's important, and know who's your friend."
+                                                    - Phish
+
+
+
+
+
+
+
+
+
+

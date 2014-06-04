@@ -1,0 +1,28 @@
+Variant Conversion Info (VARCON)
+Revision 5.0 (SVN Revision 124)
+December 27, 2010
+by Kevin Atkinson (kevina@gnu.org)
+
+This package contains information to convert between American,
+British, and Canadian spellings and vocabulary as well and other
+variant information.
+
+CHANGES:
+
+From Revision 4.1 to Revision 5.0 (December 27, 2010)
+
+  - Completely new format for the main table which, in addition to
+    providing the preferred spelling of a word for various forms of
+    English, also records variant and other information.  To reflect
+    this change, the name of the file was renamed from abbc.tab to
+    varcon.txt.
+
+  - Massive effort to verify the variant information against
+    authoritative sources (mainly Oxford dictionaries).  Most entries
+    for common words (SCOWL level 35 and below) have been checked
+    against at least a British and Canadian dictionary.
+
+  - Added variant information for numerous other words, even when
+    there is no difference between the various forms on English.
+
+  - Other changes corresponding to the new format.

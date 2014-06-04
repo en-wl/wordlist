@@ -1,3 +1,8 @@
+---
+layout: page
+title: Unofficial Alternate 12Dicts package
+---
+```
 Unofficial Alternate 12Dicts package (Alt12Dicts)
 Files by Alan Beale
 Packaged by Kevin Atkinson
@@ -181,3 +186,4 @@ See README-infl
 
 These files are identical to the orignal files in the 12Dicts package.
 See README-orig for more info.
+```

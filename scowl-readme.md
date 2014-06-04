@@ -1,3 +1,8 @@
+---
+layout: page
+title: SCOWL Readme
+---
+```
 Spell Checking Oriented Word Lists (SCOWL)
 Revision 7.1 (SVN Revision 161)
 January 6, 2011
@@ -163,7 +168,7 @@ more commonly used words.  For example the word "ort" can hide a
 common typo of "or".  No one should need to use a size larger than 80,
 the 95 size is labeled insane for a reason.
 
-Accents are present on certain words such as café in iso8859-1 format.
+Accents are present on certain words such as cafÃ© in iso8859-1 format.
 
 CHANGES:
 
@@ -569,3 +574,4 @@ The l/ directory contains symbolic links used by the actual scripts.
 
 Finally, the working/ directory is where all the intermittent files go
 that are not specific to one source.
+```

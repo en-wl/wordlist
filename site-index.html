@@ -1,0 +1,9 @@
+---
+layout: page
+title: Site Index
+---
+<ul>
+{% for page in site.pages %}
+  <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</a></li>
+{% endfor %}
+</ul>

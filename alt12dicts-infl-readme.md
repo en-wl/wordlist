@@ -1,4 +1,8 @@
-
+---
+layout: page
+title: "Unofficial Alternate 12Dicts package: 2of12id"
+---
+```
 The 2of12id.txt file is a revision of a portion of version 2 of the
 AGID database.  It is intended to accurately reflect the level of
 English vocabulary of the 2of12 list from my 12dicts package.  I
@@ -137,13 +141,4 @@ of this list.
    "So toss away stuff you don't need in the end
     But keep what's important, and know who's your friend."
                                                     - Phish
-
-
-
-
-
-
-
-
-
-
+```

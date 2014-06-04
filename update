@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rsync -v -a --delete --rsh=ssh . kevina,wordlist@web.sf.net:/home/users/k/ke/kevina/wordlist/htdocs/
+
+

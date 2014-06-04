@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} !^wordlist.aspell.net$ [NC]
+RewriteRule ^(.*)$ http://wordlist.aspell.net/$1 [L,R=permanent]
+

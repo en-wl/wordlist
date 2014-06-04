@@ -61,6 +61,13 @@ The latest release on the web page is R 1.18 even though R 1.20 is suppose to be
 
 An Oxford spelling (en_GB-oed) version is also provided which follows the spelling preferred by the (Concise) Oxford English Dictionary.
 
+## Fork ##
+
+* <http://marcoagpinto.cidadevirtual.pt/proofingtoolgui.html>
+* Marco A.G.Pinto
+* License: ???
+* Last Update: 2014
+
 ## Alternative ##
 
 * <http://wordlist.sourceforge.net>

@@ -65,7 +65,7 @@ An Oxford spelling (en_GB-oed) version is also provided which follows the spelli
 
 * <http://marcoagpinto.cidadevirtual.pt/proofingtoolgui.html>
 * Marco A.G.Pinto
-* License: ???
+* License: LGPL
 * Last Update: 2014
 
 ## Alternative ##

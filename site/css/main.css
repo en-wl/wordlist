@@ -229,6 +229,14 @@ a:visited { color: #205caa; }
   font-size: 15px;
 }
 
+.text-file pre,
+.text-file code {
+  background-color: transparent;
+  border: none;
+  padding: 0 0;
+  font-size: 15px;
+}
+
 .spaced li { margin: 20px 0px; }
 
 .post code { padding: 1px 5px; } 

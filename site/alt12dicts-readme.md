@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: text-file
 title: Unofficial Alternate 12Dicts package
 ---
 ```

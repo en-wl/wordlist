@@ -4,8 +4,6 @@ title: SCOWL Readme
 ---
 ```
 Spell Checking Oriented Word Lists (SCOWL)
-Revision 7.1 (SVN Revision 161)
-January 6, 2011
 by Kevin Atkinson (kevina@gnu.org)
 
 The SCOWL is a collection of word lists split up in various sizes, and
@@ -47,12 +45,12 @@ Where description is one of:
   roman-numerals, hacker
 
 The perl script "mk-list" can be used to create a word list of the
-desired size, it usage is:
+desired size, its usage is:
   ./mk-list [-f] [-v#] <spelling categories> <size>
 where <spelling categories> is one of the above spelling categories
 (the english and special categories are automatically included as well
-as all sub-categories) and <size> is the desired desired size.  The
-"-v" option can be used to used to also include the appropriate
+as all sub-categories) and <size> is the desired size.  The
+"-v" option can be used to also include the appropriate
 variants file up to level '#'.  The normal output will be a sorted
 word list.  If you rather see what files will be included, use the
 "-f" option.
@@ -60,7 +58,7 @@ word list.  If you rather see what files will be included, use the
 When manually combining the words lists the "english" spelling
 category should be used as well as one of "american", "british",
 "british_z" (british with ize spelling), or "canadian".  Great care
-has been taken so that that only one spelling for any particular word
+has been taken so that only one spelling for any particular word
 is included in the main list (with some minor exceptions).  When two
 variants were considered equal I randomly picked one for inclusion in
 the main word list.  Unfortunately this means that my choice in how to
@@ -72,7 +70,7 @@ while the "british_variant_0" and "canadian_variant_0" are for British
 and Canadian variants, respectively.  The "variant_1" spelling
 categories include variants which are also generally considered
 acceptable, and "variant_2" contains variants which are seldom used
-and may now even be considered correct.  There is no
+and may not even be considered correct.  There is no
 "british_variant_2" or "canadian_variant_2" spelling category since
 the distinction would be almost meaningless.
 
@@ -80,75 +78,77 @@ The "abbreviation" category includes abbreviations and acronyms which
 are not also normal words. The "contractions" category should be self
 explanatory. The "upper" category includes upper case words and proper
 names which are common enough to appear in a typical dictionary. The
-"proper-names" category included all the additional uppercase words.
-Final the "words" category contains all the normal English words.
+"proper-names" category includes all the additional uppercase words.
+Finally the "words" category contains all the normal English words.
 
 To give you an idea of what the words in the various sizes look like
 here is a sample of 25 random words found only in that size:
 
-10: advertised agreeing artificial bucket changes closest currently finding
-    implications learning liable obvious partial peace planet preparing
-    produced regulations shortly tries under unnecessary vacations vast wind 
+10: backed body conditions damages derives drive engineered entrance history
+    index normal pattern petrol phenomenon press recent seeking shuts
+    supervisor tax traffic vacation wash wheel worthy 
 
-20: accomplishes addict baffles blink chapel corrections depresses dripping
-    erased infant interfere launch nicking novels paranoid passport pursued
-    recruitment rectifying relaxed sixteen sundry tab undergone withdraws 
+20: assessment awfully chaotic chunk contend cramping crunched dilemma
+    lifestyle mercy miserable motives newer noises offensive orients
+    persistent priest purchased rushes sillier singular wanders waters
+    wretched 
 
-35: adores affixes brisks caking conciliates decimates discretionary
-    dispatches forensics glorify gridiron healed hurling kelp massacring
-    necks pits placarding pyramids ratting recreates renovated sandals shirks
-    subtract 
+35: adjustable arthritis artillery bawls bleached bolsters boycotted bungler
+    concreted constriction conveyances deposing disengaging fervent gassing
+    howl inwardly lugs moonbeam mousy scowls stewardess thrives vernacular
+    voyaged 
 
-40: demoed dichotomy dilapidation disheveled ebullience estimable finagling
-    hemorrhoid lazily medalists mintiest motherboards ostracism pornographers
-    predilections remarries southbound steamrolled sympathizers tads tampons
-    tattletale upchucked vainly viscous 
+40: blankness broadcaster bummers camellias carjackers cohabits cookout crick
+    disorganize dispiriting frankness geezers hertz impulsiveness leprous
+    litigated manhunts playboys prissiest redevelops regrouping stubbornly
+    tapeworm upsurge videocassettes 
 
-50: bootless brawler bulkhead canoeist declassifying farthings hake hectors
-    helpmate hermitage humanoid kitsch mercerize pawnshops pleasingly
-    retrorockets scurrilously solemnizes superficiality symbiosis tangelo
-    timetabling unenviable unmoral unreconstructed 
+50: actuators adjuration bagginess centurion cryogenics curlews hemstitch
+    insetting interferon kilotons landlubbers loamiest mayfly multifaceted
+    nutmeat oilcloths piton plowman recidivism tipples uncoiled vindictively
+    vulgarly waistcoats whitener 
 
-55: beachfront bicarbonate caff campanologists execrably fab fightback
-    firebricks insipidity laboriousness megawatts mirthlessly misnames
-    nymphos photocell potholed psychoactive psychoanalytically schoolmarmish
-    simulacra subeditors supremo sweated turbocharges yogic 
+55: backstreets blackcurrants chivy ciao colorways crepuscular criminality
+    crispbreads globalize kirsches knickerbockers laird launderette peeress
+    pinkness predigested shakeouts sinology solemnness spinney strategical
+    submissively swingeing unscripted zappers 
 
-60: assayer banteringly besmeared brazer chromatin cremes deciliters
-    doubtfulness enshrinement ephemerally fibular globalist gypper
-    legitimatized mensch mopers oversea pantyliner paratyphoid redivide
-    rehabilitative salesladies sensualists superposition univalves 
+60: acrimoniousness bearlike bicarbs bickerers bluet conceitedness
+    concretions conventicles daftly defenselessness diddler endoscopes firer
+    footlings grandaunt hairsplitters harpsichordist hexagrams homologous
+    inalienability nus placeholders psalteries rehang satyric 
 
-70: adactylous anticapitalist bezant bister boraginaceous civically cossacks
-    cousinly curricle dekaliter grippingly grugrus gurging hermaphroditism
-    levanted magnetizer nonapplicable panegyrists parametrize radomes
-    refilter ruinations teths truistic uts 
+70: atomist bandylegged blackfish chollas chronoscopes crystallographies
+    epicritic fantoccini fieldpiece gapingly highbrowed monocultural
+    orphanhood rasorial rishi salvager semipermeability spoofery
+    sulfapyrazine tarnishable unheedfully urolith vimineous waistcloths
+    willable 
 
-80: bodikin buhrs covetiveness diarch disaccharidases drumbeater empusas
-    flyings hyperexcitability hyperpolarizations janizaries overwash
-    physiocrats postform postsecondary preambulate puzzlehead remixer
-    snoutier tetrathlons toothdrawing triff unaffectionate wearish yawy 
+80: antisleep cammed downslope emic enrace ferromolybdenum fogash ganderism
+    haybote intertextually isobutane majolicaware mirabelle outyear palmhouse
+    perkish pressingness ramfeezles reliefless republicanizes ribonucleotides
+    swinestone tolter toploftier unperfectness 
 
-95: actinophone aerobious anadenia biochemics chromatopathia ciclatouns
-    gaspiest guapinol hagigah interdorsal melanotekite minnicking
-    nonretrenchment overloftily oystriges peltandra retromaxillary
-    subterraqueous transphysically unconfidential unvalidating upspew
-    verminlike vetiveria yerth 
+95: acetomorphine bothridia coelophysis desilicate downlier gaels hackdriver
+    homacanth intuitionless malvaceae midlittorals noncommunicableness
+    nonsubmissively obliquus obtusifolious osteoglossoid pank sacrococcygean
+    septicopyemic spatalamancy subtrousers underwash unfoliated unsnugly
+    vegetality 
 
-And here is a count on the number of in each spelling category
+And here is a count on the number of words in each spelling category
 (american + english spelling category):
 
   Size   Words       Names    Running Total  %
-   10    4,427          15        4,442     0.7
-   20    8,122           0       12,564     1.9
-   35   37,251         224       50,039     7.7
-   40    6,802         503       57,344     8.8
-   50   24,505      15,455       97,304    14.9
-   55    6,555           0      103,859    15.9
-   60   13,633         775      118,267    18.1
-   70   35,507       7,747      161,521    24.8
-   80  143,791      33,293      338,605    51.9
-   95  227,056      86,814      652,475   100.0
+   10    4,425          15        4,440     0.7
+   20    8,122           0       12,562     1.9
+   35   37,256         225       50,043     7.6
+   40    6,802         508       57,353     8.8
+   50   24,496      16,137       97,986    15.0
+   55    6,561           0      104,547    16.0
+   60   13,634         778      118,959    18.2
+   70   35,507       7,753      162,219    24.8
+   80  144,438      33,292      339,949    51.9
+   95  227,785      86,769      654,503   100.0
 
 (The "Words" column does not include the name count.)
 
@@ -156,7 +156,7 @@ Size 35 is the recommended small size, 50 the medium and 70 the large.
 For spell checking I recommend using 60.  Sizes 70 and below contain
 words found in most dictionaries while the 80 size contains all the
 strange and unusual words people like to use in word games such as
-Scrabble (TM).  While a lot of the the words in the 80 size are not
+Scrabble (TM).  While a lot of the words in the 80 size are not
 used very often, they are all generally considered valid words in the
 English language.  The 95 contains just about every English word in
 existence and then some.  Many of the words at the 95 level will
@@ -182,7 +182,7 @@ From Revision 7 to 7.1 (January 6, 2011)
   Added several now common proper names and some other words now
   in common use.
 
-  Include misc/ and speller/ directory which where in SVN but left
+  Include misc/ and speller/ directory which were in SVN but left
   out of the release tarball.
 
   Other minor fixes, including some fixes to the taboo word lists.
@@ -219,7 +219,7 @@ From Revision 5 to 6 (August 10, 2004)
 
   Updated to version 4.1 of VarCon.
 
-  Added the "british_z" spelling category which it British using the
+  Added the "british_z" spelling category which is British using the
   "ize" spelling.
 
 From Revision 4a to 5 (January 3, 2002)
@@ -257,7 +257,7 @@ From Revision 3 to 4 (January 28, 2001)
   Added words in the Ispell word list at the 65 level.
 
   Other changes due to using more recent versions of various sources
-  included a more accurate version of AGID thanks to the word of
+  included a more accurate version of AGID thanks to the work of
   Alan Beale
 
 From Revision 2 to 3 (August 18, 2000)
@@ -402,7 +402,7 @@ The 40 level includes words from Alan's 3esl list found in version 4.0
 of his 12dicts package.  Like his other stuff the 3esl list is also in the
 public domain.
 
-The 50 level includes Brian's frequency class 1, words words appearing
+The 50 level includes Brian's frequency class 1, words appearing
 in at least 5 of 12 of the dictionaries as indicated in the 12Dicts
 package, and uppercase words in at least 4 of the previous 12
 dictionaries.  A decent number of proper names is also included: The
@@ -431,11 +431,11 @@ The 70 level includes Brian's frequency class 0 and the 74,550 common
 dictionary words from the MWords package.  The common dictionary words,
 like those from the 12Dicts package, have had all likely inflections
 added.  The 70 level also included the 5desk list from version 4.0 of
-the 12Dics package which is the public domain.
+the 12Dics package which is in the public domain.
 
 The 80 level includes the ENABLE word list, all the lists in the
 ENABLE supplement package (except for ABLE), the "UK Advanced Cryptics
-Dictionary" (UKACD), the list of signature words in from YAWL package,
+Dictionary" (UKACD), the list of signature words from the YAWL package,
 and the 10,196 places list from the MWords package.
 
 The ENABLE package, mainted by M\Cooper <thegrendel@theriver.com>,
@@ -482,7 +482,7 @@ Accent information was taken from UKACD.
 My VARCON package was used to create the American, British, and
 Canadian word list. 
 
-Since the original word lists used used in the VARCON package came
+Since the original word lists used in the VARCON package came
 from the Ispell distribution they are under the Ispell copyright:
 
   Copyright 1993, Geoff Kuenning, Granada Hills, CA
@@ -548,7 +548,7 @@ information.
 
 There is frequency information for some other corpus such as COCA
 (Corpus of Contemporary American English) and ANS (American National
-Corpus) which I might also be able to use.  The formal will require
+Corpus) which I might also be able to use.  The former will require
 permission, and the latter is of questionable quality.
 
 RECREATING THE WORD LISTS:
@@ -556,7 +556,7 @@ RECREATING THE WORD LISTS:
 In order to recreate the word lists you need a modern version of Perl,
 bash, the traditional set of shell utilities, a system that supports
 symbolic links, and quite possibly GNU Make.  The easiest way to
-recreate the word lists is to checkout SVN revision 161 (or tag
+recreate the word lists is to checkout SVN revision 162 (or tag
 scowl-7.1) and simply type "make" (see http://wordlist.sourceforge.net).
 You can try to download all the pieces manually, but you may not get
 the same result since the latest version of some parts used to create

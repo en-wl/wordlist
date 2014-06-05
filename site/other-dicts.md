@@ -15,11 +15,11 @@ email me any corrections or additions.
 
 ## Official ##
 
-* <http://wordlist.sourceforge.net>
+* <http://wordlist.aspell.net/dicts>
 * Kevin Atkinson
 * Based on SCOWL
 * License: BSD/MIT-Like
-* Last Updated: 2011
+* Last Updated: 2012
 
 ## Alternative ##
 
@@ -70,13 +70,11 @@ An Oxford spelling (en_GB-oed) version is also provided which follows the spelli
 
 ## Alternative ##
 
-* <http://wordlist.sourceforge.net>
+* <http://wordlist.aspell.net/dicts>
 * Kevin Atkinson
 * Based on SCOWL
 * License: BSD/MIT-Like
-* Last Updated: 2011
-
-To avoid confusion with the official version, the British Hunspell dictionary is not included on the web page above but can be generated from SCOWL.
+* Last Updated: 2012
 
 Since SCOWL was forked in David Bartlett version, it has undergone numerous corrections and should now be fairly accurate.  David Bartlett's en_GB dictionary includes both -ize and -ise forms, while with SCOWL it is possible to get one with just the -ise forms, it is also possible to have the option of including common variants or leaving them out to promote consistent spelling.  Furthermore, SCOWL 
 is also a bit more up-to-date and includes words such as "blog" and "Google" (which where not in R 1.18).  However, the SCOWL version still likely includes some American only words and misses some British only words, and it includes some words such as "alright" which David Bartlett made a point to leave out.  Also David Bartlett version includes hyphenated words while SCOWL does not yet.
@@ -91,11 +89,11 @@ A version of David Bartlett list (based on R 1.20) with some minor changes by LÃ
 
 ## Offical ##
 
-* <http://wordlist.sourceforge.net>
+* <http://wordlist.aspell.net/dicts>
 * Kevin Atkinson
 * Based on SCOWL
 * License: BSD/MIT-Like
-* Last Updated: 2011
+* Last Updated: 2012
 
 ## Others ##
 

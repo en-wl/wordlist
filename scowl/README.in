@@ -1,6 +1,5 @@
 Spell Checking Oriented Word Lists (SCOWL)
-Revision 7.1 (SVN Revision 162)
-January 6, 2011
+@`git log --pretty=format:'%cd [%h]' -n 1 -- .`
 by Kevin Atkinson (kevina@gnu.org)
 
 The SCOWL is a collection of word lists split up in various sizes, and
@@ -106,7 +105,7 @@ more commonly used words.  For example the word "ort" can hide a
 common typo of "or".  No one should need to use a size larger than 80,
 the 95 size is labeled insane for a reason.
 
-Accents are present on certain words such as café in iso8859-1 format.
+Accents are present on certain words such as cafÃ© in iso8859-1 format.
 
 CHANGES:
 

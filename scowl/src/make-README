@@ -2,7 +2,7 @@
 
 sub bc {
     local $_ = `$_[0]`;
-    chop;
+    chomp;
     return $_;
 }
 

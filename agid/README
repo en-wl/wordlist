@@ -1,14 +1,11 @@
 Automatically Generated Inflection Database (AGID)
 
-January 3, 2003
-Revision 4
-
-Copyright 2000-2003 by Kevin Atkinson <kevina@gnu.org>
+Copyright 2000-2011 by Kevin Atkinson <kevina@gnu.org>
 
 The file "infl.txt" is an automatically created database of the
 inflected forms of words from a rather large word list.
 
-The latest version can be found at http://aspell.sourceforge.net/wl/.
+The latest version can be found at http://wordlist.sourceforge.net
 
 Entries are in the following form.
 
@@ -142,7 +139,7 @@ is like variant.tab except that it also included the root form of the
 word.
 
 Words are in mixed case but all accents have been striped thus words
-like café are instead cafe.
+like cafÃ© are instead cafe.
 
 The file "variant" contains a list of alternate inflections.
 

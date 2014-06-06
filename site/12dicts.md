@@ -43,8 +43,8 @@ information in a different way.
 Originally, 12dicts was composed of lists derived from a specific set
 of 12 source dictionaries. In addition to these "classic" lists,
 Version 5 of 12dicts now includes lists derived from other sources. It
-would perhaps be appropriate to rename 12dicts to someth ing more
-generic, such as BAWL (Beale's Assorted Word Lists), but I have not
+would perhaps be appropriate to rename 12dicts to something more
+generic, such as BAWL (Beale's Assorted Word Lists), but this has not been
 done so in order to preserve continuity.
 
 <a href="/12dicts-readme-r5">readme</a>, 

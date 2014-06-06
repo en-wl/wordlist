@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  <article class="post-content">
+{% capture body %}{% include {{page.file}} %}{% endcapture %}
+<div class="text-file"><pre>
+{{ body | xml_escape }}
+</pre></div>
+  </article>
+
+</div>

@@ -9,8 +9,8 @@ and -ize) and Canadian).  However, I am sure it will have numerous
 other uses as well.
 
 [View readme](/scowl-readme).
-[Download as tar.gz](http://downloads.sourceforge.net/wordlist/scowl-7.1.tar.gz) (rev 7.1, Unix EOL).
-[Download as zip](http://downloads.sourceforge.net/wordlist/scowl-7.1.zip) (DOS/Windows EOL).
+Download rev 7.1 as: [tar.gz](http://downloads.sourceforge.net/wordlist/scowl-7.1.tar.gz) (Unix EOL),
+[zip](http://downloads.sourceforge.net/wordlist/scowl-7.1.zip) (DOS/Windows EOL).
 [Get source](http://github.com/kevina/wordlist).
 
 The main product of SCOWL are [spell checker dictionaries](dicts) for
@@ -26,8 +26,3 @@ package.
 One of the main artifacts created was the [VarCon](varcon) (Variant
 Conversion) database, that can be used to convert between American,
 British and Canadian dictionaries.
-
-
-
-
-

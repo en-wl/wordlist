@@ -12,7 +12,7 @@ AGID is an Automatically Generated Inflection Database from an
 insanely large word list. My goal is for the non-questionable entries
 to be 100% accurate.
 
-<a href="/agid-readme">readme</a>, 
+<a href="/agid-readme">readme</a>.
 <a href="http://downloads.sourceforge.net/wordlist/agid-4.tar.gz">tar.gz</a>, 
 <a href="http://downloads.sourceforge.net/wordlist/agid-4.zip">zip</a>
 (<i>rev 4</i>) 
@@ -45,8 +45,7 @@ Ispell.
 
 <a href="/ispell-enwl-readme">readme</a>,
 <a href="http://downloads.sourceforge.net/wordlist/ispell-enwl-3.1.20.tar.gz">tar.gz</a>,
-<a href="http://downloads.sourceforge.net/wordlist/ispell-enwl-3.1.20.zip">zip</a>,
-[source](http://github.com/kevina/wordlist)        
+<a href="http://downloads.sourceforge.net/wordlist/ispell-enwl-3.1.20.zip">zip</a>
 
 ## Other Sources
 

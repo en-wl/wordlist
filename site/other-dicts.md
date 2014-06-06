@@ -61,7 +61,7 @@ The latest release on the web page is R 1.18 even though R 1.20 is suppose to be
 
 An Oxford spelling (en_GB-oed) version is also provided which follows the spelling preferred by the (Concise) Oxford English Dictionary.
 
-## Fork ##
+## Fork of Official ##
 
 * <http://marcoagpinto.cidadevirtual.pt/proofingtoolgui.html>
 * Marco A.G.Pinto
@@ -97,7 +97,7 @@ A version of David Bartlett list (based on R 1.20) with some minor changes by L�
 
 ## Others ##
 
-A (Firefox extension)[http://addons.mozilla.org/en-US/firefox/addon/3653/] is available by Paul Schmiedge 
+A [Firefox extension](http://addons.mozilla.org/en-US/firefox/addon/3653/) is available by Paul Schmiedge 
 based on the official SCOWL version but with some additional corrections.
 
 A version with some minor changes by László Németh (Hunspell author) is included in Open Office.

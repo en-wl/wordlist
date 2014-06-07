@@ -1,4 +1,4 @@
-Command I used to convert the repo from SVN to git:
+What I did to convert the repo from SVN to git:
 
 echo 'kevina = Kevin Atkinson <kevina@gnu.org>' > wordlist.authorsfile
 export TZ=America/Denver
@@ -9,9 +9,10 @@ git svn fetch --localtime
 git rebase -i 332e0817fa83bb85ea3d055f889f4b01f29fad2d^ # fix up that commit log
 git filter-branch -f --msg-filter `pwd`/../fixup-commit.pl
 
--- added added a .gitignore file and added a target to the Makefile
-   create empty directories and pushed commits down as early as
-   possible (i.e. rebased)
+-- Add a .gitignore file and added a target to the Makefile to create
+   empty directories.  Push commits down as early as possible by
+   rebasing so that they are just after svn rev 127 (the location
+   of the scowl-7.0 tag).
 
 -- Manually fix up tags after all filtering/rebasing of commits is done
 
@@ -19,4 +20,34 @@ git filter-branch -f --msg-filter `pwd`/../fixup-commit.pl
 
 Special thanks to Anton Backer (staticshock) for his instructions at
 https://github.com/staticshock/wordlist/wiki.
+
+ADDITIONAL CLEAN UPS DONE A BIT LATER:
+
+-- Fix up committer date changed by rebasing.
+
+   ## scowl-7.0 points to f1efdadcfa8e61846688bba2792c234aef978deb
+   ## 82d04155a3c7dbf2d6f5cafb60091a37eb56cf49 is the last commit that
+   ##   corresponds to a SVN revision
+
+   git filter-branch -f --env-filter 'if git rev-list scowl-7.0..82d04155a3c7dbf2d6f5cafb60091a37eb56cf49 | grep $GIT_COMMIT; then GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE; fi' -- scowl-7.0..HEAD
+
+-- Add empty commit so that the scowl-7.0 tag has the correct date, but
+   don't use rebase as that will change GIT_COMMITTER_DATE to the
+   current date of all commits, instead use git-filter-branch to graft it in.
+   (This is safe because the commit is empty.)
+
+   1) git checkout scowl-7.0 
+
+   2) GIT_COMMITTER_DATE="2010-12-28 12:59:41 -0700" GIT_AUTHOR_DATE="2010-12-28 12:59:41 -0700" git commit  --allow-empty with message:
+
+        SCOWL 7.0 release.
+    
+        [empty commit, date correspond to svn rev 128]
+
+   3) git filter-branch --parent-filter "sh ../../parent-filter.sh" -f bd6727c8493c5bf4b4ac81ba64e6176227f651c2..HEAD
+
+-- Manually fix up tags after all filtering/rebasing of commits is done
+
+-- Then update this file and check in parent-filter.sh in a new commit
+
 

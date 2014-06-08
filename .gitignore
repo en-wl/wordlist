@@ -14,6 +14,7 @@ mwords/*
 pos/*
 scowl/.symbolic-deps
 scowl/README
+scowl/scowl.db
 scowl/final/
 scowl/l/levels-list
 scowl/src/deaccent

@@ -38,7 +38,7 @@ information in a different way.
 (<i>rev 4</i>) 
 [source](http://github.com/kevina/wordlist)        
 
-# Offical
+# Official
 
 Originally, 12dicts was composed of lists derived from a specific set
 of 12 source dictionaries. In addition to these "classic" lists,

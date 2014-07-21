@@ -55,6 +55,7 @@ doit() {
   rm -f $1.zip
   zip -9 $1.zip README_$1.txt $1.dic $1.aff
 
+  mkdir -p hunspell
   cp -p $1.zip hunspell/
 
   #echo check
@@ -71,9 +72,9 @@ doit() {
 prep
 
 doit en_US "mk-list en_US $SIZE | src/deaccent"
-doit en_CA "mk-list en_US $SIZE | src/deaccent"
-doit en_GB-ize "mk-list en_US $SIZE | src/deaccent"
-doit en_GB-ise "mk-list en_US $SIZE | src/deaccent"
+doit en_CA "mk-list en_CA $SIZE | src/deaccent"
+doit en_GB-ize "mk-list en_GB-ize $SIZE | src/deaccent"
+doit en_GB-ise "mk-list en_GB-ise $SIZE | src/deaccent"
 
 with-and-without-accents() { 
   tmp1=`mktemp tmp-XXX`
@@ -87,5 +88,7 @@ with-and-without-accents() {
 doit en_US-large "mk-list -v0 en_US 70 | with-and-without-accents "
 doit en_CA-large "mk-list -v0 en_CA 70 | with-and-without-accents "
 doit en_GB-large "mk-list -v0 en_GB-ize en_GB-ise 70 | with-and-without-accents"
+
+sh README_en.txt.sh > hunspell/README
 
 #rm eng*.dat nosug en_US*.? en_CA*.?

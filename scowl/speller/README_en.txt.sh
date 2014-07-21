@@ -1,15 +1,15 @@
-if [ -e .svn ];
+echo $WHAT
+
+if git status 2>&1 > /dev/null
 then
-  : ${VERSION:="SVN Verson `svnversion`"}
+  git log --pretty=format:'%cd [%h]' -n 1 -- ..
+  echo
 else
-  : ${VERSION:="Version 7.1 (ish)"}
+  echo "Version 7.1 (ish)"
+  date +'%F'
 fi
-: ${DATE:=`date +'%F'`}
 
 cat <<EOF
-$WHAT
-$VERSION
-$DATE
 http://wordlist.sourceforge.net
 
 README file for English Hunspell dictionaries derived from SCOWL.

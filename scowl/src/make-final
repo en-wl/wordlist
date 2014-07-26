@@ -3,12 +3,26 @@
 n=$1
 nn=`src/get-level prev $1`
 
+cap() {
+  dsr=$1
+  shift
+  if [ -d debug ]; then
+    cat | sort -u > debug/$n.$dsr.in
+    cat debug/$n.$dsr.in | "$@" | sort -u > debug/$n.$dsr.out
+    comm -23 debug/$n.$dsr.out debug/$n.$dsr.in > debug/$n.+.$dsr
+    cat debug/$n.$dsr.out
+    rm debug/$n.$dsr.out debug/$n.$dsr.in
+  else
+    "$@"
+  fi
+}
+
 for b in `src/list-combin`
 do
   i=0
   rm -f final/$b$n
   comm -13 working/$b$nn.pre working/$b$n.pre \
-    | src/add-accents \
+    | cap accents src/add-accents \
     | sort | uniq \
     > final/$b$n
   if [ ! -s final/$b$n ]
@@ -16,6 +30,3 @@ do
     rm final/$b$n
   fi
 done
-
-
-

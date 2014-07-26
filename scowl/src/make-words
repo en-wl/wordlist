@@ -1,62 +1,93 @@
 #!/bin/bash
 
-rm -f words.$1*
+level=$1
+export SCOWL_LEVEL=$1
+
+rm -f words.$level*
 
 shopt -s nullglob
 
 max_level=`src/get-level max`
 
-if [ $1 -ne $max_level ]
+get-list() {
+  res=`src/get-all-below $level $1`
+  if [ -n "$res" -a -d debug ]; then
+    cat $res | src/filter | sort -u > debug/$level.l.$1
+  fi
+  echo $res
+}
+
+cap() {
+  dsr=$1
+  shift
+  if [ -d debug ]; then
+    cat | sort -u > debug/$level.$dsr.in
+    cat debug/$level.$dsr.in | "$@" | sort -u > debug/$level.$dsr.out
+    comm -23 debug/$level.$dsr.out debug/$level.$dsr.in > debug/$level.+.$dsr
+    cat debug/$level.$dsr.out
+    rm debug/$level.$dsr.out debug/$level.$dsr.in
+  else
+    "$@"
+  fi
+}
+
+if [ $level -ne $max_level ]
 then
 
-  supplement=`src/get-all-below $1 supplement`  
-  add_affixes="`src/get-all-below $1 add-affixes`"
-  add_possessive="`src/get-all-below $1 add-possessive`"
+  supplement=`get-list supplement`  
+  add_affixes="`get-list add-affixes`"
+  add_possessive="`get-list add-possessive`"
 
-  cat $supplement $add_affixes $add_possessive l/include/$1/* \
-    | src/filter                                              \
-    > working/words.$1.tmp
-  cp working/words.$1.tmp working/words.$1.tmp.0
-
-  if [ -n "$add_affixes" ] && [ $1 -le `cat l/add-affixes/max-level` ]
-  then
-    echo "Adding affixes"
-    cat $add_affixes | src/filter | src/add-affixes >> working/words.$1.tmp
-    cp working/words.$1.tmp working/words.$1.tmp.1
+  if [ -d debug -a -d l/include/$level ]; then
+    cat l/include/$level/* | sort -u | comm -12  - working/words.`src/get-level next $level` > debug/$level.l.include
   fi
 
-  if [ $1 -lt 80 ]
+  cat $supplement $add_affixes $add_possessive l/include/$level/* \
+    | src/filter                                              \
+    > working/words.$level.tmp
+  cp working/words.$level.tmp working/words.$level.tmp.0
+
+  if [ -n "$add_affixes" ] && [ $level -le `cat l/add-affixes/max-level` ]
+  then
+    #echo "Adding affixes"
+    cat $add_affixes | src/filter | cap affixes src/add-affixes >> working/words.$level.tmp
+  fi
+
+  if [ $level -lt 80 ]
   then
     if [ -n "$add_possessive" ]
     then
-      echo "Adding possessive"
-      cat $add_possessive | src/filter | src/add-affixes just-possessive >> working/words.$1.tmp
-      cp working/words.$1.tmp working/words.$1.tmp.2
+      #echo "Adding possessive"
+      cat $add_possessive | src/filter | cap possessive src/add-affixes just-possessive >> working/words.$level.tmp
     fi
   else
-    echo "Adding possessive"
-    cat working/words.$1.tmp                       \
-      | src/add-affixes use-some just-possessive   \
-      > working/words.$1.tmp2
-    mv working/words.$1.tmp2 working/words.$1.tmp
+    #echo "Adding possessive"
+    cat working/words.$level.tmp                       \
+      | cap possessive src/add-affixes use-some just-possessive   \
+      > working/words.$level.tmp2
+    mv working/words.$level.tmp2 working/words.$level.tmp
   fi
 
-  cat working/words.$1.tmp    \
-    | src/add-other-spellings \
-    | src/add-other-forms     \
-    | src/add-other-spellings \
+  cat working/words.$level.tmp    \
+    | cap other-spellings-1 src/add-other-spellings \
+    | cap other-forms       src/add-other-forms     \
+    | cap other-spellings-2 src/add-other-spellings \
     | sort -u                 \
-    | comm -12  - working/words.`src/get-level next $1` \
-    > working/words.$1
+    | comm -12  - working/words.`src/get-level next $level` \
+    > working/words.$level
 
-  #rm working/words.$1.tmp
+  #rm working/words.$level.tmp
 
 else
 
+  if [ -d debug/ ]; then
+    cp working/all.lst debug/$level.everything
+  fi
+
   cat working/all.lst           \
-    | src/add-affixes use-all just-possessive \
-    | src/add-other-spellings   \
+    | cap possessive src/add-affixes use-all just-possessive \
+    | cap other-spellings src/add-other-spellings   \
     | sort -u                   \
-    > working/words.$1
+    > working/words.$level
 
 fi

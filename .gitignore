@@ -16,6 +16,7 @@ scowl/.symbolic-deps
 scowl/README
 scowl/scowl.db
 scowl/final/
+scowl/debug/
 scowl/l/levels-list
 scowl/src/deaccent
 scowl/src/find-accented

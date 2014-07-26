@@ -23,7 +23,7 @@ all: $(foreach l, $(levels), final/english-words.$(l)) \
 
 .PHONY: clean
 clean:
-	rm -f working/* $(programs) r/varcon/*.lst r/varcon/variant.tab r/mwords/*.lst r/alt12dicts/*.lst r/ispell/all.* r/pos/word.lst r/uk-freq-class/uk.?? r/census/*.lst
+	rm -f working/* $(programs) r/varcon/*.lst r/varcon/variant.tab r/mwords/*.lst r/alt12dicts/*.lst r/ispell/all.* r/pos/word.lst r/uk-freq-class/uk.?? r/census/*.lst debug/*
 
 #
 # README

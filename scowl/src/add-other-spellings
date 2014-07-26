@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+my $table = $ARGV[0] eq 'table' ? '1' : '0';
+
 while(<STDIN>) {
     chop;
     $words{$_} = '';
@@ -23,15 +25,17 @@ foreach my $f (qw(working/variant_0.lst working/variant_1.lst
     }
 }
 
-open F, "r/varcon/voc.tab" or die;
- 
-while (<F>) {
-    s/\(.+\)\n/\n/;
-    my ($word) = grep {valid_entry $_} (split /[,\t\n]/);
-    next unless defined $word;
-    y/,\t -/\n/;
-    s/(^|\n)\n/\n/g;
-    $words{$word} .= $_;
+if (not $table) {
+    open F, "r/varcon/voc.tab" or die;
+    
+    while (<F>) {
+        s/\(.+\)\n/\n/;
+        my ($word) = grep {valid_entry $_} (split /[,\t\n]/);
+        next unless defined $word;
+        y/,\t -/\n/;
+        s/(^|\n)\n/\n/g;
+        $words{$word} .= $_;
+    }
 }
 
 open F, "r/varcon/variant.tab" or die;
@@ -53,6 +57,20 @@ while (<F>) {
     $words{$w[0]} .= "$_\n" foreach @w;
 }
 
-while (($key, $value) = each %words) {
-    print "$key\n$value";
+if ($table) {
+
+    while (($key, $value) = each %words) {
+        next if $value eq '';
+        my $row = "$key\n$value";
+        chomp $row;
+        $row =~ tr/\n/\t/;
+        print "$row\n";
+    }
+
+} else {
+
+    while (($key, $value) = each %words) {
+        print "$key\n$value";
+    }
+
 }

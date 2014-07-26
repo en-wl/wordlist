@@ -1,6 +1,14 @@
-This is the git repository for SCOWL and friends.
+This is the git repository for SCOWL (and friends).
 
-<http://wordlist.aspell.net>
+SCOWL (Spell Checker Oriented Word Lists) is a database of English
+words that can be used to create word lists suitable for use in spell
+checkers of various sizes and dialects (America, British (both -ise
+and -ize) and Canadian). However, I am sure it will have numerous
+other uses as well.
+
+SCOWL is derived from many sources under a BSD compatible license.
+The combined work is freely available under a [MIT-like]
+(https://raw.githubusercontent.com/kevina/wordlist/master/scowl/Copyright) license.
 
 To build simply type:
 
@@ -12,3 +20,5 @@ To build the aspell and hunspell dictionaries (you will need Aspell
     cd scowl/speller
     make aspell
     make hunspell
+
+For more information please see our homepage at <http://wordlist.aspell.net>.

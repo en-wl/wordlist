@@ -15,7 +15,7 @@ cat working/all.lst                                \
   | grep -E "^[A-Z]{2,}'?s?$"                      \
   > working/acronyms.lst.tmp
 
-cat l/not-abbreviations/* working/known-upper.lst  \
+cat l/not-abbreviations/*                          \
   | src/filter                                     \
   | src/add-affixes no-possessive                  \
   | sort | uniq                                    \

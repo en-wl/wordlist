@@ -19,9 +19,9 @@ open OMAYBE, ">variant-maybe.lst";
 open BYES  , ">nonamer-yes.lst";
 open BMAYBE, ">nonamer-maybe.lst";
 while (<IN>) {
-    s/\r?\n$// or die;
-    ($w, $f, $s) = /^(.+):?\t(.)([!?]?)$/ or die "Bad Line: $_";
-    next unless $w =~ /^[A-Za-z\']+$/;
+   s/\r?\n$// or die;
+   ($w, $f, $s) = /^(.+):?\t(.)([!?]?)$/ or die "Bad Line: $_";
+   next unless $w =~ /^[A-Za-z\'.]+$/;
    #print "$w -- $f -- $s\n";
    $already_variant{$w} = 1;
     if ($s eq '!' || $s eq '') {
@@ -53,11 +53,12 @@ while (<IN>)
     s/\r?\n$// or die;
     ($total, $not_variant, $variant, $non_american, $word, $abrv_mark) 
 	= /^(..): (..) (..)\# (..)\&   (.+?)([:.]?)$/ or die "Bad Line:$_";
+    $word .= '.' if $abrv_mark eq '.';
     $_ = $word;
     $not_variant  = 0 if $not_variant  eq ' -';
     $variant      = 0 if $variant      eq ' -';
     $non_american = 0 if $non_american eq ' -';
-    next unless /^[A-Za-z\']+$/;
+    next unless /^[A-Za-z\'.]+$/;
     $_ .= "\n";
     my $not_abrv   = ($abrv_mark eq '' && $total >= 5);
     my $is_variant = ($variant >= $non_american 

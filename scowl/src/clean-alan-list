@@ -3,8 +3,8 @@
 while (<>) 
 {
   s/\r?\n$// or die;
-  s/[.:]$//;
-  next if /[ .\/-]/;
+  s/:$//;
+  next if /[ \/-]/;
   print "$_\n";
-  die unless /^[A-Za-z']+$/;
+  die unless /^[A-Za-z'.]+$/;
 }

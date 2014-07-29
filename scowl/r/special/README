@@ -66,9 +66,7 @@ variant:
 A list of words which the 12dicts package does not consider variants
 but I do.
 
+not-upper:
 
-
-
-
-
-
+Normal words that just happen to start with an uppercase words and 
+have no relation to a proper name, for example OK AWOL

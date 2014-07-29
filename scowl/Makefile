@@ -81,7 +81,7 @@ working/variant_0.lst working/variant_1.lst working/variant_2.lst: \
 	$(MAKE) working/possessive-also.lst
 	$<
 
-working/contractions.lst: src/make-contractions.lst working/words.80
+working/contractions.lst: src/make-contractions.lst working/words.95 working/proper-names.lst working/abbreviations.lst
 	$<
 
 working/known-upper.lst: src/make-known-upper.lst l/upper/* \

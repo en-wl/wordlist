@@ -9,6 +9,7 @@ cat working/all.lst | grep "^[A-Z]"           \
   | src/filter                                \
   | sort | uniq                               \
   | comm -23 - working/known-upper.lst        \
+  | comm -23 - r/special/not-upper            \
   | sed "s/^\(.*\)/\1 \1's/"                  \
   | tr ' ' '\n'                               \
   | sort | uniq                               \

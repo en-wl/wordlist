@@ -25,6 +25,7 @@ cat working/abbreviations.lst.tmp            \
   | sort | uniq                              \
   | comm -23 - working/not-abbreviations.tmp \
   | cat - working/acronyms.lst.tmp           \
+  | cat - r/special/abbreviations{,-also}    \
   | sort | uniq                              \
   | comm -23 - r/special/never-abbreviations \
   > working/abbreviations.lst.pre

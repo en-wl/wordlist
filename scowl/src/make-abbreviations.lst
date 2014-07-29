@@ -1,6 +1,8 @@
 #!/bin/sh
 
-comm -23 working/abbreviations.lst.pre \
-         working/proper-names.lst      \
+comm -23 working/abbreviations.lst.pre      \
+         working/proper-names.lst           \
+  | sed "s/^\(.*\)/\1 \1's/"  | tr ' ' '\n' \
+  | sort -u                                 \
   > working/abbreviations.lst
 

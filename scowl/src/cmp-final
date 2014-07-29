@@ -1,0 +1,59 @@
+#!/usr/bin/perl
+
+# Utility to compare two final/ directories for changes.
+
+use Cwd;
+use strict;
+use warnings;
+
+my $max_size = 99;
+if (@ARGV == 3) {
+    $max_size = shift @ARGV;
+} elsif (@ARGV != 2) {
+    print "Usage: cmp-final [<max size>] <orig final dir> <new dir>\n";
+    exit 1;
+}
+
+my $orig = $ARGV[0];
+my $new  = $ARGV[1];
+
+my $wd = cwd();
+
+my %track;
+sub slurp ($$) {
+    my ($dir,$idx) = @_;
+    chdir $wd  or die;
+    chdir $dir or die;
+    foreach my $l (sort <*>) {
+        $l =~ /^.+\.(\d\d)$/ or die;
+        next if $1 > $max_size;
+        open F, $l or die;
+        foreach my $word (<F>) {
+            chomp $word;
+            $track{$word}{$l} = exists $track{$word}{$l} ? $track{$word}{$l}.$idx : $idx;
+        }
+    }
+}
+
+slurp($orig, 0);
+slurp($new,  1);
+
+foreach my $w (sort keys %track) {
+    my $diff = 0;
+    my $line = "$w: ";
+    foreach my $l (sort keys %{$track{$w}}) {
+        my $which = $track{$w}{$l};
+        if ($which eq '0') {
+            $diff = 1;
+            $line .= "-$l- ";
+        } elsif ($which eq '1') {
+            $diff = 1;
+            $line .= "+$l+ ";
+        } elsif ($which eq '01') {
+            $line .= "$l ";
+        } else {
+            die;
+        }
+    }
+    print "$line\n" if $diff;
+}

@@ -2,6 +2,9 @@
 
 cat working/words.`src/get-level max`                 \
   | grep "'" | grep -v "'s$" | grep -v "^[A-Z]'[A-Z]" \
+  | comm -23 - r/special/not-upper                    \
+  | comm -23 - working/proper-names.lst               \
+  | comm -23 - working/abbreviations.lst              \
   > working/contractions.lst
 
 

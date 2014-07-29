@@ -1,4 +1,4 @@
 #!/bin/sh
 
-tr -d '\r' | grep -E "^[A-Za-z][A-Za-z'.]*$"
+tr -d '\r' | grep -E "^[A-Za-z][A-Za-z'./]*$"
 

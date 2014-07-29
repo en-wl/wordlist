@@ -70,3 +70,9 @@ not-upper:
 
 Normal words that just happen to start with an uppercase words and 
 have no relation to a proper name, for example OK AWOL
+
+2800-ptr:
+
+Words from "2800 Personality Trait Descriptors" (1967), see
+https://sourceforge.net/p/wordlist/issues/60/
+

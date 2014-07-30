@@ -3,8 +3,8 @@ layout: page
 title: Help / Contributing
 ---
 Please submit all bug reports regarding these words lists or the
-speller dictionaries to the [Issue Tracker](https://sourceforge.net/p/wordlist/issues/) on
-SourceForge.
+speller dictionaries to the [Issue Tracker](https://github.com/kevina/wordlist/issues) on
+GitHub.
 
 You can also fork the repository on GitHub and submit a pull request.
 

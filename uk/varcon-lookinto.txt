@@ -1,0 +1,1138 @@
+# abettor <verified> (level 50)
+A Bv C: abettor / Av B: abetter
+A Bv C: abettors / Av B: abetters
+A Bv C: abettor's / Av B: abetter's
+## NOTE, in SCOWL: abetter abetter's abetters
+## NOTE, in D./M.: abettor abettor's abettors
+
+# absinthe <verified> (level 50)
+A: absinthe / AV B: absinth | :1
+A B: absinthe | :2
+A: absinthes / AV B: absinths | :1
+A B: absinthes | :2
+A: absinthe's / AV B: absinth's | :1
+A B: absinthe's | :2
+## NOTE, in SCOWL: absinth absinth's
+## NOTE, in D./M.: absinthes
+## NOTE, in Both : absinthe absinthe's
+
+# adapter <verified> (level 20)
+A Bv C: adapter / AV B Cv: adaptor
+A Bv C: adapters / AV B Cv: adaptors
+A Bv C: adapter's / AV B Cv: adaptor's
+## NOTE, in SCOWL: adaptor's
+## NOTE, in D./M.: adapter adapter's adapters
+## NOTE, in Both : adaptor adaptors
+
+# aerogram (level 55)
+_: aerogram / _v: aerogramme
+_: aerograms / _v: aerogrammes
+## NOTE, in SCOWL: aerogram aerograms
+## NOTE, in D./M.: aerogramme
+
+# ambiance <verified> (level 35)
+A Bv: ambiance / A. B: ambience
+A Bv: ambiances / A. B: ambiences
+A Bv: ambiance's / A. B: ambience's
+## NOTE, in SCOWL: ambiences
+## NOTE, in D./M.: ambiance ambiance's ambiances
+## NOTE, in Both : ambience ambience's
+
+# ampule (level 50)
+_: ampule / _v: ampoule / _V: ampul
+_: ampules / _v: ampoules / _V: ampuls
+_: ampule's / _v: ampoule's / _V: ampul's
+## NOTE, in SCOWL: ampule ampule's ampules
+## NOTE, in D./M.: ampoule ampoule's ampoules
+
+# ass <verified> (level 20)
+A B: ass | :1
+A B: asses | :1
+A B: ass's | :1
+A: ass / B: arse | <N> :2
+A: asses / B: arses | <N> :2
+A: ass's / B: arse's | <N> :2
+## NOTE, in SCOWL: arse's arses
+## NOTE, in Both : arse ass ass's asses
+
+# backpedal (level 50)
+A: backpedaled / B: backpedalled
+A: backpedaling / B: backpedalling
+## NOTE, in SCOWL: backpedalled backpedalling
+
+# bevel <verified> (level 40)
+A Cv: beveled / B C: bevelled
+A Cv: beveler / B C: beveller
+A Cv: bevelers / B C: bevellers
+A Cv: beveler's / B C: beveller's
+A Cv: beveling / B C: bevelling
+A Cv: bevelings / B C: bevellings
+## NOTE, in SCOWL: bevellings
+## NOTE, in D./M.: beveller beveller's bevellers
+## NOTE, in Both : bevelled bevelling
+
+# blowzy <verified> (level 50)
+A Bv: blowzy / Av B: blowsy
+A Bv: blowzier / Av B: blowsier
+A Bv: blowziest / Av B: blowsiest
+## NOTE, in SCOWL: blowsier blowsiest blowsy
+## NOTE, in D./M.: blowzier blowziest blowzy
+
+# bogie (level 50)
+_: bogie / _V: bogey | :1
+_: bogies / _V: bogeys | :1
+_: bogie's / _V: bogey's | :1
+_: bogey / _V: bogy / _V: bogie | :2
+_: bogeys / _V: bogies | :2
+_: bogey's / _V: bogy's / _V: bogie's | :2
+## NOTE, in SCOWL: bogie bogie's bogies
+## NOTE, in Both : bogey bogey's bogeys
+
+# brier <verified> (level 50)
+A Bv C: brier / Av B Cv: briar
+A Bv C: briers / Av B Cv: briars
+A Bv C: brier's / Av B Cv: briar's
+## NOTE, in SCOWL: briars
+## NOTE, in D./M.: brier brier's briers
+## NOTE, in Both : briar briar's
+
+# bus <verified> (level 20)
+A AV B Bv C: bus | -- to avoid confusion with buss
+A Bv C: buses / AV B: busses
+A Bv C: busing / AV B: bussing
+A Bv C: busings / AV B: bussings
+A Bv C: busing's / AV B: bussing's
+A Bv C: bused / AV B: bussed
+## NOTE, in SCOWL: bussed busses bussing bussing's
+## NOTE, in D./M.: buses
+## NOTE, in Both : bus
+
+# bylaw (level 40)
+_: bylaw / _V: byelaw
+_: bylaws / _V: byelaws
+_: bylaw's / _V: byelaw's
+## NOTE, in SCOWL: bylaw bylaw's bylaws
+
+# caftan <verified> (level 50)
+A Bv C: caftan / AV B Cv: kaftan
+A Bv C: caftans / AV B Cv: kaftans
+A Bv C: caftan's / AV B Cv: kaftan's
+## NOTE, in SCOWL: kaftan's kaftans
+## NOTE, in D./M.: caftan caftan's caftans
+## NOTE, in Both : kaftan
+
+# caiman (level 55)
+_: caiman / _V: cayman
+_: caimans / _V: caymans
+_: caiman's / _V: cayman's
+## NOTE, in SCOWL: caiman caimans
+## NOTE, in D./M.: cayman caymans
+## NOTE, in Both : caiman's
+
+# caliper <verified> (level 50)
+A B: caliper / Bv: calliper
+A B: calipered / Bv: callipered
+A B: calipering / Bv: callipering
+A B: calipers / Bv: callipers
+A B: caliper's / Bv: calliper's
+A B: calipers's / Bv: callipers's | (-)
+## NOTE, in SCOWL: caliper caliper's calipered calipering calipers
+## NOTE, in D./M.: calliper calliper's callipers
+
+# camelhair (level 60)
+_: camelhair | camel hair (camel's hair)
+## NOTE, in SCOWL: camelhair
+
+# caviar <verified> (level 35)
+A B C: caviar / AV Bv: caviare
+A B C: caviars / AV Bv: caviares
+A B C: caviar's / AV Bv: caviare's
+## NOTE, in SCOWL: caviar's
+## NOTE, in D./M.: caviare caviare's caviares
+## NOTE, in Both : caviar
+
+# cenobite <verified> (level 60)
+A Bv C: cenobite / B Cv: coenobite
+A Bv C: cenobites / B Cv: coenobites
+A Bv C: cenobite's / B Cv: coenobite's
+## NOTE, in SCOWL: coenobite coenobite's coenobites
+## NOTE, in D./M.: cenobite cenobite's cenobites
+
+# cenobitic <verified> (level 60)
+A Bv C: cenobitic / B Cv: coenobitic
+## NOTE, in SCOWL: coenobitic
+## NOTE, in D./M.: cenobitic
+
+# cesarean (level 40)
+_: cesarean / _v: caesarean / _V: caesarian / _V: cesarian
+_: cesareans / _v: caesareans / _V: caesarians / _V: cesarians
+_: cesarean's / _v: caesarean's / _V: caesarian's / _V: cesarian's
+## NOTE, in SCOWL: cesarean cesarean's cesareans
+## NOTE, in D./M.: caesarean caesareans caesarian
+
+# check <verified> (level 10)
+A CV: check / B C: cheque | bank
+A CV: checked / B C: chequed | bank
+A CV: checking / B C: chequing | bank
+A CV: checks / B C: cheques | bank
+A CV: check's / B C: cheque's | bank
+A C: checker / B CV: chequer | pattern
+A C: checkers / B CV: chequers | pattern
+A C: checker's / B CV: chequer's | pattern
+A C: checkers's / B CV: chequers's | pattern
+A C: checkered / B CV: chequered | pattern
+A C: checkering / B CV: chequering | pattern
+A B: check | verify
+A B: checked | verify
+A B: checker | verify
+A B: check's | verify
+A B: checkers | verify
+A B: checker's | verify
+A B: checkers's | verify
+A B: checking | verify
+A B: checks | verify
+## NOTE, in SCOWL: check's checker's checkers's chequed chequers's chequing
+## NOTE, in Both : check checked checker checkers checking checks cheque cheque's chequer chequer's chequered chequering chequers cheques
+
+# chivy (level 55)
+_: chivy / _v: chivvy
+_: chivied / _v: chivvied
+_: chivying / _v: chivvying
+_: chivies / _v: chivvies
+## NOTE, in SCOWL: chivied chivies chivy chivying
+## NOTE, in D./M.: chivvied chivvies chivvy chivvying
+
+# coloration <verified> (level 50)
+A B C: coloration / B. Cv: colouration
+A B C: colorations / B. Cv: colourations
+A B C: coloration's / B. Cv: colouration's
+## OED has coloration as the prefered spelling and discolouration as a
+## variant for British English for some reason
+## NOTE, in SCOWL: coloration coloration's
+## NOTE, in D./M.: colourations
+## NOTE, in Both : colouration colouration's
+
+# colorblind (level 40)
+A: colorblind / B: colourblind
+## NOTE, in SCOWL: colourblind
+
+# colorblindness (level 60)
+A: colorblindness / B: colourblindness
+A: colorblindnesses / B: colourblindnesses
+A: colorblindness's / B: colourblindness's
+## NOTE, in SCOWL: colourblindness colourblindness's
+
+# colorfast (level 50)
+A: colorfast / B: colourfast
+## NOTE, in SCOWL: colourfast
+
+# colorfastness (level 60)
+A: colorfastness / B: colourfastness
+A: colorfastnesses / B: colourfastnesses
+A: colorfastness's / B: colourfastness's
+## NOTE, in SCOWL: colourfastness colourfastness's
+
+# coneys (level 55)
+_: coneys / _v: conies
+_: cony / _v: coney
+_: cony's / _v: coney's
+## NOTE, in SCOWL: coneys
+## NOTE, in D./M.: coney's conies
+## NOTE, in Both : cony cony's
+
+# connectable <verified> (level 60)
+A B: connectable / AV: connectible
+## NOTE, in SCOWL: connectable
+## NOTE, in D./M.: connectible
+
+# cottar (level 50)
+_: cottar / _v: cotter | :1
+_: cottars / _v: cotters | :1
+_: cottar's / _v: cotter's | :1
+_: cotter | :2
+_: cotters | :2
+_: cotter's | :2
+## NOTE, in SCOWL: cottar cottars
+## NOTE, in Both : cottar's cotter cotter's cotters
+
+# crenelate <verified> (level 55)
+A Bv: crenelate / B: crenellate
+A Bv: crenelated / B: crenellated
+A Bv: crenelater / B: crenellater
+A Bv: crenelates / B: crenellates
+A Bv: crenelatest / B: crenellatest
+A Bv: crenelating / B: crenellating
+## NOTE, in SCOWL: crenellate crenellates crenellating
+## NOTE, in D./M.: crenelate crenelated crenelates crenelating
+## NOTE, in Both : crenellated
+
+# crenelation (level 60)
+A Bv: crenelation / B: crenellation
+A Bv: crenelations / B: crenellations
+A Bv: crenelation's / B: crenellation's
+## NOTE, in SCOWL: crenellation's
+## NOTE, in D./M.: crenelation crenelation's crenelations
+## NOTE, in Both : crenellation crenellations
+
+# curb (level 35)
+A B: curb | restrain
+A B: curbed | restrain
+A B: curbing | restrain
+A B: curbs | restrain
+A B: curb's | restrain
+A C: curb / B: kerb | street edge
+A C: curbed / B: kerbed | street edge
+A C: curbing / B: kerbing | street edge
+A C: curbs / B: kerbs | street edge
+A C: curb's / B: kerb's | street edge
+## NOTE, in SCOWL: kerbed kerbing
+## NOTE, in Both : curb curb's curbed curbing curbs kerb kerb's kerbs
+
+# cyclopedia <verified> (level 60)
+A B: cyclopedia / Av Bv: cyclopaedia
+A B: cyclopedias / Av Bv: cyclopaedias
+A B: cyclopedia's / Av Bv: cyclopaedia's
+## NOTE, in SCOWL: cyclopedia cyclopedia's cyclopedias
+## NOTE, in D./M.: cyclopaedia cyclopaedia's cyclopaedias
+
+# czar <verified> (level 35)
+A Bv C: czar / AV1 Bv: tzar / AV2 B Cv: tsar
+A Bv C: czars / AV1 Bv: tzars / AV2 B Cv: tsars
+A Bv C: czar's / AV1 Bv: tzar's / AV2 B Cv: tsar's
+## NOTE, in SCOWL: tsar's
+## NOTE, in D./M.: czar czar's czars tzar tzar's tzars
+## NOTE, in Both : tsar tsars
+
+# dialogue <verified> (level 20)
+A B: dialogue / AV: dialog
+A B: dialogued / AV: dialogged
+A B: dialoguing / AV: dialogging
+A B: dialogues / AV: dialogs
+A B: dialogue's / AV: dialog's
+A B: dialog / Bv: dialogue | <N> dialog box
+## NOTE, in SCOWL: dialog dialogue's
+## NOTE, in Both : dialogue dialogues
+
+# discoloration <verified> (level 35)
+A B C: discoloration / B. Cv: discolouration
+A B C: discolorations / B. Cv: discolourations
+A B C: discoloration's / B. Cv: discolouration's
+## See note for coloration
+## NOTE, in SCOWL: discoloration discoloration's discolorations
+## NOTE, in Both : discolouration discolouration's discolourations
+
+# djellaba (level 60)
+_: djellaba / _V: djellabah
+_: djellabas / _V: djellabahes
+_: djellaba's / _V: djellabah's
+## NOTE, in SCOWL: djellaba's
+## NOTE, in D./M.: djellabah's
+## NOTE, in Both : djellaba djellabas
+
+# dogie (level 50)
+_: dogie / _-: dogy
+_ _-: dogies | <pl>
+_: dogie's / _-: dogy's
+## NOTE, in SCOWL: dogie dogie's dogies
+## NOTE, in D./M.: dogy's
+
+# doughnut <verified> (level 35)
+A B: doughnut / AV: donut
+A B: doughnuts / AV: donuts
+A B: doughnut's / AV: donut's
+## NOTE, in SCOWL: donuts
+## NOTE, in Both : doughnut doughnut's doughnuts
+
+# draft <verified> (level 20)
+A C: draft / B: draught | current
+A C: drafts / B: draughts | current
+A C: draft's / B: draught's | current
+A B: draft | writing
+A B: drafts | writing
+A B: draft's | writing
+A B C: draft / BV: draught | <V> writing
+A B C: drafted / BV: draughted | <V> writing
+A B C: drafting / BV: draughting | <V> writing
+A B C: drafts / BV: draughts | <V> writing
+A B: draught | (-) british: game of checkers
+A B: draughts | (-) british: game of checkers
+A B: draught's | (-) british: game of checkers
+## NOTE, in SCOWL: draught's
+## NOTE, in Both : draft draft's drafted drafting drafts draught draughts
+
+# druggy (level 55)
+_: druggy / _V: druggie | <Adj>
+_: druggie / _V: druggy | <N>
+_ _V: druggies | <N>
+_: druggie's / _V: druggy's | <N>
+## NOTE, in SCOWL: druggie's druggy
+## NOTE, in Both : druggie druggies
+
+# encyclopedia <verified> (level 35)
+A B C: encyclopedia / AV B. Cv: encyclopaedia
+A B C: encyclopedias / AV B. Cv: encyclopaedias
+A B C: encyclopedia's / AV B. Cv: encyclopaedia's
+## ODE has encyclopEdia first, OED has encyclopAEdia first.  Many
+## British will prefer the AE spelling.  In the BNC the AE form is
+## slightly more common (around 6:5 ratio).  Thus I'm not sure how to
+## encode this.
+## NOTE, in SCOWL: encyclopedia's
+## NOTE, in Both : encyclopaedia encyclopaedia's encyclopaedias encyclopedia encyclopedias
+
+# evil <verified> (level 35)
+A: eviler / B: eviller
+A: evilest / B: evillest
+## NOTE, in SCOWL: eviler evilest
+## NOTE, in Both : eviller evillest
+
+# extendable (level 50)
+_: extendable / _v: extendible
+## NOTE, in SCOWL: extendable
+## NOTE, in D./M.: extendible
+
+# fetid <verified> (level 35)
+A B C: fetid / Bv: foetid
+A B C: fetider / Bv: foetider | (-)
+A B C: fetidest / Bv: foetidest | (-)
+## NOTE, in SCOWL: fetid
+## NOTE, in D./M.: foetid
+
+# fetus <verified> (level 35)
+A B C Z: fetus / Bv ZV: foetus
+A B C Z: fetuses / Bv ZV: foetuses
+A B C Z: fetus's / Bv ZV: foetus's
+## foetus marked as British-only variant for "non-technical use" by Ox 
+## NOTE, in SCOWL: fetus's
+## NOTE, in D./M.: foetus foetus's foetuses
+## NOTE, in Both : fetus fetuses
+
+# filet (level 35)
+_: filet | :1
+_: fillet / _V: filet | <N>
+_: fillets / _V: filets | <N>
+_: fillet's / _V: filet's | <N>
+_: fillet / _-: filet | <V>
+_: filleted / _-: fileted | <V>
+_: filleting / _-: fileting | <V>
+_: fillets / _-: filets | <V>
+## NOTE, in SCOWL: filet
+## NOTE, in D./M.: filet's
+## NOTE, in Both : fillet fillet's filleted filleting fillets
+
+# flavor <verified> (level 10)
+A Cv: flavor / B C: flavour
+A Cv: flavored / B C: flavoured
+A Cv: flavoring / B C: flavouring
+A Cv: flavor's / B C: flavour's
+A Cv: flavorings / B C: flavourings
+A Cv: flavoring's / B C: flavouring's
+A Cv: flavors / B C: flavours
+## NOTE, in SCOWL: flavor flavors
+## NOTE, in Both : flavour flavour's flavoured flavouring flavouring's flavourings flavours
+
+# flavorful <verified> (level 50)
+A: flavorful / B: flavourful
+A: flavorfuler / B: flavourfuler
+A: flavorfulest / B: flavourfulest
+## NOTE, in SCOWL: flavorful
+## NOTE, in Both : flavourful
+
+# flextime (level 40)
+_: flextime / _V: flexitime
+_: flextimes / _V: flexitimes
+_: flextime's / _V: flexitime's
+## NOTE, in SCOWL: flextime flextime's
+## NOTE, in D./M.: flexitime flexitime's
+
+# fogy <verified> (level 35)
+A Bv: fogy / B: fogey
+A Bv: fogies / B: fogeys
+A Bv: fogy's / B: fogey's
+## NOTE, in SCOWL: fogey's fogeys
+## NOTE, in D./M.: fogies fogy fogy's
+## NOTE, in Both : fogey
+
+# forgather <verified> (level 50)
+A Bv: forgather / Av B: foregather
+A Bv: forgathered / Av B: foregathered
+A Bv: forgathering / Av B: foregathering
+A Bv: forgathers / Av B: foregathers
+## NOTE, in SCOWL: foregathering foregathers
+## NOTE, in D./M.: forgather forgathered forgathering forgathers
+## NOTE, in Both : foregather foregathered
+
+# fraternizer (level 60)
+A Z: fraternizer / B: fraterniser
+A Z: fraternizers / B: fraternisers
+A Z: fraternizer's / B: fraterniser's
+## NOTE, in SCOWL: fraternizers
+## NOTE, in Both : fraterniser fraterniser's fraternisers fraternizer fraternizer's
+
+# gabardine (level 50)
+_: gabardine | :1
+_: gabardines | :1
+_: gabardine's | :1
+_: gaberdine / _V: gabardine | :2
+_: gaberdines / _V: gabardines | :2
+_: gaberdine's / _V: gabardine's | :2
+## NOTE, in SCOWL: gaberdines
+## NOTE, in Both : gabardine gabardine's gabardines gaberdine gaberdine's
+
+# garrote (level 50)
+_: garrote / _v: garotte / _v: garrotte / _V: garote
+_: garroted / _v: garotted / _v: garrotted / _V: garoted
+_: garroting / _v: garrotting / _v: garotting / _V: garoting
+_: garrotes / _v: garottes / _v: garrottes / _V: garotes
+_: garrote's / _v: garotte's / _v: garrotte's / _V: garote's
+## NOTE, in SCOWL: garrote garrote's garroted garrotes garroting
+## NOTE, in D./M.: garotte garotte's garotted garottes garotting garrotte garrotte's garrotted garrottes garrotting
+
+# gauge <verified> (level 35)
+A B: gauge / AV B-: gage | :1
+A B: gauge's / AV B-: gage's | :1
+A B: gauged / AV B-: gaged | :1
+A B: gauging / AV B-: gaging | :1
+A B: gauges / AV B-: gages | :1
+A B: gage | (-) archaic; nautical, historical
+A B: gage's | (-) archaic; nautical, historical
+A B: gaged | (-) archaic; nautical, historical
+A B: gaging | (-) archaic; nautical, historical
+A B: gages | (-) archaic; nautical, historical
+## NOTE, in SCOWL: gauge's
+## NOTE, in D./M.: gage gage's gages
+## NOTE, in Both : gauge gauged gauges gauging
+
+# girly (level 55)
+_: girly / _v: girlie
+## NOTE, in SCOWL: girly
+## NOTE, in D./M.: girlie
+
+# goddamn (level 40)
+_: goddamn / _v: goddam
+_: goddamned / _v: goddamed
+_: goddamning / _v: goddaming
+_: goddamns / _v: goddams
+_: goddamn's / _v: goddam's
+## NOTE, in SCOWL: goddamn goddamned
+
+# griffon (level 50)
+_: griffon
+_: griffons
+_: griffon's
+_: griffin / _v: griffon / _V: gryphon | animal
+_: griffins / _v: griffons / _V: gryphons | animal
+_: griffin's / _v: griffon's / _V: gryphon's | animal
+## NOTE, in SCOWL: griffons
+## NOTE, in D./M.: gryphon's
+## NOTE, in Both : griffin griffin's griffins griffon griffon's
+
+# groin <verified> (level 35)
+A: groin / B: groyne | wall
+A: groin's / B: groyne's | wall
+A: groins / B: groynes | wall
+A B: groin | body part
+A B: groin's | body part
+A B: groins | body part
+## NOTE, in SCOWL: groyne groyne's groynes
+## NOTE, in Both : groin groin's groins
+
+# grovel <verified> (level 35)
+A Cv: groveled / B C: grovelled
+A Cv: groveling / B C: grovelling
+## NOTE, in SCOWL: groveled groveling
+## NOTE, in Both : grovelled grovelling
+
+# gunnel (level 50)
+_: gunnel | :1
+_: gunnels | :1
+_: gunnel's | :1
+_: gunwale / _V: gunnel | :2
+_: gunwales / _V: gunnels | :2
+_: gunwale's / _V: gunnel's | :2
+## NOTE, in SCOWL: gunnel gunnels
+## NOTE, in Both : gunnel's gunwale gunwale's gunwales
+
+# hairdryer (level 55)
+_: hairdryer / _v: hairdrier
+_: hairdryers / _v: hairdriers
+_: hairdryer's / _v: hairdrier's
+## NOTE, in SCOWL: hairdryer hairdryer's hairdryers
+
+# halloo (level 55)
+_: halloo / _V: hallo / _V: hollo
+_: hallooing / _V: halloing / _V: holloing
+_: halloos / _V: hollos / _V: hallos
+_: halloo's / _V: hallo's / _V: hollo's
+## NOTE, in SCOWL: halloo hallooing halloos
+## NOTE, in D./M.: hallo halloing hallos
+## NOTE, in Both : halloo's
+
+# homeopath <verified> (level 55)
+A B C: homeopath / Bv: homoeopath
+A B C: homeopaths / Bv: homoeopaths
+A B C: homeopath's / Bv: homoeopath's
+## NOTE, in SCOWL: homeopath homeopath's homeopaths
+## NOTE, in D./M.: homoeopath homoeopaths
+
+# homeopathy <verified> (level 40)
+A B C: homeopathy / Bv: homoeopathy
+A B C: homeopathies / Bv: homoeopathies
+A B C: homeopathy's / Bv: homoeopathy's
+## NOTE, in SCOWL: homeopathy's
+## NOTE, in D./M.: homoeopathies homoeopathy homoeopathy's
+## NOTE, in Both : homeopathy
+
+# homeostatic <verified> (level 60)
+A B: homeostatic / Bv: homoeostatic
+## NOTE, in SCOWL: homeostatic
+## NOTE, in D./M.: homoeostatic
+
+# hooch (level 50)
+_: hooch / _v: hootch | :2
+_: hooches / _v: hootches | hut
+_: hooch's / _v: hootch's | hut
+## NOTE, in SCOWL: hooch hooch's
+## NOTE, in D./M.: hootch's
+
+# hurrah <verified> (level 35)
+A B: hurrah / Av AV1 Bv: hooray / AV2: hoorah / AV3 A- Bv: hurray | :1
+A B: hurrahed / AV1 AV2 Bv: hoorayed / AV3 Bv: hurrayed | :1
+A B: hurrahing / AV1 AV2 Bv: hooraying / AV3 Bv: hurraying | :1
+A B: hurrahs / Av AV1 Bv: hoorays / AV2: hoorahs / AV3 Bv: hurrays / A-: hurrahes | :1
+A B: hurrah's / Av AV1 Bv: hooray's / AV2: hoorah's / AV3 Bv: hurray's | :1
+A B: hooray / Av: hurrah / Av: hurray | <Inj> :2
+## NOTE, in SCOWL: hurrah's hurrahs
+## NOTE, in D./M.: hoorays hurray hurrays
+## NOTE, in Both : hooray hurrah hurrahed hurrahing
+
+# inquiry <verified> (level 20)
+A B. C: inquiry / B Cv: enquiry
+A B. C: inquiries / B Cv: enquiries
+A B. C: inquiry's / B Cv: enquiry's
+## See note for inquire 
+## NOTE, in SCOWL: enquiry's
+## NOTE, in Both : enquiries enquiry inquiries inquiry inquiry's
+
+# jibe <verified> (level 35)
+A B: jibe | agree
+A B: jibed | agree
+A B: jibing | agree
+A B: jibes | agree
+A Bv: gibe / Av B: jibe | insult
+A Bv: gibed / Av B: jibed | insult
+A Bv: gibing / Av B: jibing | insult
+A Bv: gibes / Av B: jibes | insult
+A Bv: gibe's / Av B: jibe's | insult
+A Cv: jibe / AV B C: gybe | sailing
+A Cv: jibed / AV B C: gybed | sailing
+A Cv: jibing / AV B C: gybing | sailing
+A Cv: jibes / AV B C: gybes | sailing
+A Cv: jibe's / AV B C: gybe's | sailing
+## NOTE, in SCOWL: gybe's gybed gybing jibe's jibed jibing
+## NOTE, in D./M.: gibe gibed gibes gibing
+## NOTE, in Both : gybe gybes jibe jibes
+
+# jinni (level 50)
+_: jinni / _v: jinn / _V: djinni / _V: djinn
+_: jinn / _v: jinns / _V: djinns / _V: djinn | <pl>
+_: jinni's / _v: jinn's / _V: djinni's / _V: djinn's
+## NOTE, in SCOWL: jinni
+## NOTE, in D./M.: jinn's jinns
+## NOTE, in Both : jinn jinni's
+
+# kiddie (level 40)
+_: kiddie / _V: kiddy
+_: kiddie's / _V: kiddy's
+## NOTE, in SCOWL: kiddie's
+## NOTE, in D./M.: kiddy's
+## NOTE, in Both : kiddie
+
+# knickknack (level 40)
+_: knickknack / _V: nicknack
+_: knickknacks / _V: nicknacks
+_: knickknack's / _V: nicknack's
+## NOTE, in SCOWL: knickknack knickknack's knickknacks
+## NOTE, in D./M.: nicknack's
+
+# laborsaving (level 60)
+A: laborsaving / B: laboursaving
+## NOTE, in SCOWL: laboursaving
+
+# lasagna (level 50)
+_: lasagna / _v: lasagne | :1
+_: lasagnas / _v: lasagnes | :1
+_: lasagna's / _v: lasagne's | :1
+_: lasagna | :2
+_: lasagnas | :2
+_: lasagna's | :2
+## NOTE, in SCOWL: lasagna lasagna's lasagnas
+## NOTE, in D./M.: lasagne lasagne's
+
+# linguine (level 60)
+_: linguine / _v: linguini
+_: linguines / _v: linguinis
+_: linguine's / _v: linguini's
+## NOTE, in SCOWL: linguine's
+## NOTE, in D./M.: linguini's
+## NOTE, in Both : linguine
+
+# litchi (level 50)
+_: litchi / _v: lychee / _V: lichee
+_: litchis / _v: lychees / _V: lichees
+_: litchi's / _v: lychee's / _V: lichee's
+## NOTE, in SCOWL: litchi litchi's litchis
+## NOTE, in D./M.: lichee lichee's lychee lychee's lychees
+
+# lupine <verified> (level 35)
+A C: lupine / AV B Cv: lupin | <N> plant
+A C: lupines / AV B Cv: lupins | <N> plant
+A C: lupine's / AV B Cv: lupin's | <N> plant
+A B: lupine | <Adj> wolfish
+## NOTE, in SCOWL: lupin's
+## NOTE, in D./M.: lupine's lupines
+## NOTE, in Both : lupin lupine lupins
+
+# macadamize (level 60)
+A Z: macadamize / B: macadamise
+A Z: macadamized / B: macadamised
+A Z: macadamizing / B: macadamising
+A Z: macadamizes / B: macadamises
+## NOTE, in SCOWL: macadamize macadamized macadamizes macadamizing
+## NOTE, in Both : macadamise macadamised macadamises macadamising
+
+# mamma (level 35)
+_ _-: mamma | gland
+_: mammae / _-: mammas | gland
+_ _-: mamma's | gland
+_: mama / _V: momma / _V: mamma | mother
+_: mamas / _V: mommas / _V: mammas | mother
+_: mama's / _V: momma's / _V: mamma's | mother
+## NOTE, in SCOWL: mamma
+## NOTE, in D./M.: momma mommas
+## NOTE, in Both : mama mama's mamas mamma's
+
+# manila <verified> (level 55)
+A C: manila / AV B Cv: manilla | :lower
+A C: manila's / AV B Cv: manilla's | :lower
+A Bv C: Manila / AV B Cv: Manilla | :upper
+A Bv C: Manila's / AV B Cv: Manilla's | :upper
+## NOTE, in SCOWL: Manilla Manilla's manilla's
+## NOTE, in D./M.: Manila Manila's
+## NOTE, in Both : manilla
+
+# marabou (level 50)
+_: marabou / _V: marabout | :1
+_: marabous / _V: marabouts | :1
+_: marabou's / _V: marabout's | :1
+_: marabout | :2
+_: marabouts | :2
+_: marabout's | :2
+## NOTE, in SCOWL: marabout marabouts
+## NOTE, in Both : marabou marabou's marabous marabout's
+
+# mat <verified> (level 35)
+A Bv C: matte / Av: mat / AV B: matt | without lustre; cardboard ... picture
+A: mat / A. Bv C: matte / AV B: matt | make matte # Ox Amer thinks its matte, M-W: mat
+A: mats / A. Bv C: mattes / AV B: matts | make matte
+A B: mat | otherwise, most uses
+A B: mats | otherwise, most uses
+A B: mat's | otherwise, most uses
+A B: matte | otherwise, some uses
+A B: mattes | otherwise, some uses
+A B: matte's | otherwise, some uses
+A B: matted | -- regardless of how mat is spelled
+A B: matting | -- regardless of how mat is spelled
+A B: Matt | <abbr> Matthew
+## NOTE, in SCOWL: Matt matts
+## NOTE, in Both : mat mat's mats matt matte matte's matted mattes matting
+
+# meanie (level 55)
+_: meanie / _V: meany | :1
+_: meanie's / _V: meany's | :1
+_: meany | :2
+_: meany's | :2
+## NOTE, in SCOWL: meany meany's
+## NOTE, in Both : meanie meanie's
+
+# meow <verified> (level 35)
+A Bv C: meow / AV B: miaow
+A Bv C: meowed / AV B: miaowed
+A Bv C: meowing / AV B: miaowing
+A Bv C: meows / AV B: miaows
+A Bv C: meow's / AV B: miaow's
+## NOTE, in SCOWL: miaow miaow's miaowed miaowing miaows
+## NOTE, in D./M.: meow meowed meowing meows
+
+# mesmerizer (level 60)
+A Z: mesmerizer / B: mesmeriser
+A Z: mesmerizers / B: mesmerisers
+A Z: mesmerizer's / B: mesmeriser's
+## NOTE, in SCOWL: mesmerizers
+## NOTE, in Both : mesmeriser mesmeriser's mesmerisers mesmerizer mesmerizer's
+
+# meter <verified> (level 20)
+A B: meter | measure
+A B: meters | measure
+A B: meter's | measure
+A Cv: meter / B C: metre | metric meter, rhythmic pattern
+A Cv: meters / B C: metres | metric meter, rhythmic pattern
+A Cv: meter's / B C: metre's | metric meter, rhythmic pattern
+## NOTE, in SCOWL: metre's
+## NOTE, in Both : meter meter's meters metre metres
+
+# micrometer <verified> (level 35)
+A B: micrometer | gauge
+A B: micrometers | gauge
+A B: micrometer's | gauge
+A: micrometer / B: micrometre | metric meter
+A: micrometers / B: micrometres | metric meter
+A: micrometer's / B: micrometre's | metric meter
+## NOTE, in SCOWL: micrometre's
+## NOTE, in Both : micrometer micrometer's micrometers micrometre micrometres
+
+# mustachio (level 60)
+_: mustachio / _V: moustachio
+_: mustachio's / _V: moustachio's
+## NOTE, in SCOWL: mustachio mustachio's
+## NOTE, in D./M.: moustachio moustachio's
+
+# mustachioed (level 55)
+_: mustachioed / _V: moustachioed
+## NOTE, in SCOWL: mustachioed
+## NOTE, in D./M.: moustachioed
+
+# myna <verified> (level 50)
+A Bv C: myna / Av B Cv: mynah
+A Bv C: mynas / Av B Cv: mynahes
+A Bv C: myna's / Av B Cv: mynah's
+## NOTE, in SCOWL: mynahes
+## NOTE, in D./M.: myna myna's mynas
+## NOTE, in Both : mynah mynah's
+
+# naan (level 55)
+_: naan / _V: nan
+_: naans / _V: nans
+_: naan's / _V: nan's
+## NOTE, in SCOWL: naan naans
+## NOTE, in D./M.: nan nan's
+
+# narc (level 40)
+_: narc / _V: nark | :1
+_: narcs / _V: narks | :1
+_: narc's / _V: nark's | :1
+_: nark | :2
+## NOTE, in SCOWL: narc narc's narcs
+## NOTE, in D./M.: nark's narks
+## NOTE, in Both : nark
+
+# naught <verified> (level 35)
+A: naught / Av B: nought | <N> digit zero
+A: naughts / Av B: noughts | <N> digit zero
+A: naught's / Av B: nought's | <N> digit zero
+A C: naught / Av B: nought | <Adj> worthless
+A B: naught | (-) <N> nothing
+A B: naughts | (-) <N> nothing
+A B: naught's | (-) <N> nothing
+## NOTE, in SCOWL: nought's
+## NOTE, in D./M.: naught naught's
+## NOTE, in Both : nought noughts
+
+# nitroglycerin <verified> (level 50)
+A Cv: nitroglycerin / Av B C: nitroglycerine
+A Cv: nitroglycerins / Av B C: nitroglycerines
+A Cv: nitroglycerin's / Av B C: nitroglycerine's
+## NOTE, in SCOWL: nitroglycerine's
+## NOTE, in D./M.: nitroglycerin nitroglycerin's
+## NOTE, in Both : nitroglycerine
+
+# nonsympathizer (level 60)
+A Z: nonsympathizer / B: nonsympathiser
+A Z: nonsympathizers / B: nonsympathisers
+A Z: nonsympathizer's / B: nonsympathiser's
+## NOTE, in SCOWL: nonsympathiser nonsympathiser's nonsympathizer nonsympathizer's
+
+# numskull <verified> (level 50)
+A Bv: numskull / Av B: numbskull
+A Bv: numskulls / Av B: numbskulls
+A Bv: numskull's / Av B: numbskull's
+## NOTE, in SCOWL: numbskulls
+## NOTE, in D./M.: numskull numskull's numskulls
+## NOTE, in Both : numbskull numbskull's
+
+# OK <verified> (level 35)
+A B C.: OK / A. B. C: okay | :1
+A B C.: OK's / A. B. C: okay's | :1
+A B C.: OKed / A. B. C: okayed | :1
+A B C.: OKing / A. B. C: okaying | :1
+A B C.: OKs / A. B. C: okays | :1
+A B: OK | <abbr> Oklahoma
+## OK is generally the preferred form, but it is very difficult to
+## misspell one for the other and in some contexts okay is preferred,
+## so I am marking these as equal variants.  Note that the Canadian
+## Ox. has okay as the primary form.
+## NOTE, in SCOWL: okays
+## NOTE, in Both : OK OK's OKed OKing OKs okay okay's okayed okaying
+
+# orangutan (level 35)
+_: orangutan / _V: orangutang
+_: orangutans / _V: orangutangs
+_: orangutan's / _V: orangutang's
+## NOTE, in SCOWL: orangutan orangutan's orangutans
+
+# pawpaw (level 50)
+_: pawpaw / _.: papaw
+_: pawpaws / _.: papaws
+_: pawpaw's / _.: papaw's
+## NOTE, in SCOWL: pawpaw pawpaws
+## NOTE, in D./M.: papaw papaw's papaws
+## NOTE, in Both : pawpaw's
+
+# phony <verified> (level 35)
+A BV C: phony / AV B Bv Cv: phoney | <N>
+A Bv BV C: phonies / AV B Cv: phoneys | <N>
+A BV C: phony's / AV B Bv Cv: phoney's | <N>
+A B: phonier | <Adj>
+A B: phoniest | <Adj>
+A B: phonied / AV: phoneyed | (-) <V>
+A B: phonying / AV: phoneying | (-) <V>
+## NOTE, in SCOWL: phoney's phoneys
+## NOTE, in D./M.: phonies phony
+## NOTE, in Both : phoney phonier phoniest
+
+# piney (level 55)
+_: piney / _.: piny
+## NOTE, in SCOWL: piney
+## NOTE, in D./M.: piny
+
+# pizzazz (level 40)
+_: pizzazz / _. _v: pizazz
+_ _.: pizzazzes / _v: pizazzes
+_: pizzazz's / _. _v: pizazz's
+## NOTE, in SCOWL: pizzazz pizzazz's
+## NOTE, in D./M.: pizazz pizazzes
+
+# pokey (level 35)
+_: pokey | :1
+_: pokeys | :1
+_: pokey's | :1
+_: poky / _v: pokey | :2
+_ _v: pokier | :2
+_ _v: pokiest | :2
+## NOTE, in SCOWL: pokey pokey's pokeys
+## NOTE, in Both : pokier pokiest poky
+
+# pouf <verified> (level 55)
+A B: pouffe / Av Bv: pouf | :1
+A B: pouffe's / Av Bv: pouf's | :1
+A B: pouf | :2
+A B: pouf's | :2
+## NOTE, in SCOWL: pouf
+## NOTE, in Both : pouffe
+
+# ravel <verified> (level 35)
+A: raveled / B: ravelled | <V>
+A: raveling / B: ravelling | <V>
+A Cv: raveling / B C: ravelling | <N>
+A Cv: ravelings / B C: ravellings | <N>
+A Cv: raveling's / B C: ravelling's | <N>
+## NOTE, in SCOWL: ravellings
+## NOTE, in Both : ravelled ravelling
+
+# reemphasize (level 50)
+A Z: reemphasize / B: reemphasise
+A Z: reemphasized / B: reemphasised
+A Z: reemphasizing / B: reemphasising
+A Z: reemphasizes / B: reemphasises
+## NOTE, in SCOWL: reemphasise reemphasised reemphasises reemphasising reemphasize reemphasized reemphasizes reemphasizing
+
+# Romania (level 50)
+A: Romania / B: Roumania
+A: Romanias / B: Roumanias
+A: Romania's / B: Roumania's
+## NOTE, in SCOWL: Roumania Roumania's
+## NOTE, in D./M.: Romania Romania's
+
+# ropy (level 55)
+_: ropy / _V: ropey
+_ _V: ropier
+_ _V: ropiest
+## NOTE, in SCOWL: ropier ropiest ropy
+## NOTE, in D./M.: ropey
+
+# sake <verified> (level 10)
+A B: sake | :1
+A B: sakes | :1
+A B: sake's | :1
+A C: sake / Av B Cv: saki | :2
+A C: sakes / Av B Cv: sakis | :2
+A C: sake's / Av B Cv: saki's | :2
+## NOTE, in SCOWL: sake's saki
+## NOTE, in D./M.: sakes
+## NOTE, in Both : sake saki's
+
+# Savannah (level 50)
+_: Savannah | :1
+_: savanna / _V: savannah | :2
+_: savannas / _V: savannahes | :2
+_: savanna's / _V: savannah's | :2
+## NOTE, in SCOWL: Savannah savanna savanna's savannas
+## NOTE, in D./M.: savannah savannah's
+
+# scalawag (level 50)
+_: scalawag / _v: scallywag
+_: scalawags / _v: scallywags
+_: scalawag's / _v: scallywag's
+## NOTE, in SCOWL: scalawag scalawag's scalawags
+## NOTE, in D./M.: scallywag scallywag's scallywags
+
+# sol (level 10)
+_: so | :1
+_: sol / _V: so | :2
+_: sols / _V: sos | :2
+_: sol's / _V: so's | :2
+_: sol | :3
+_: sols | :3
+_: sol's | :3
+## NOTE, in SCOWL: sol's sols
+## NOTE, in D./M.: so's
+## NOTE, in Both : so sol
+
+# stockinette (level 60)
+_: stockinette / _v: stockinet
+_: stockinettes / _v: stockinets
+_: stockinette's / _v: stockinet's
+## NOTE, in SCOWL: stockinette's
+## NOTE, in D./M.: stockinet's
+## NOTE, in Both : stockinette
+
+# story <verified> (level 10)
+A B: story | book
+A B: stories | book
+A B: story's | book
+A Cv: story / AV B Bv C: storey | level of building
+A Bv: stories / AV B C Cv: storeys | level of building
+A Cv: story's / AV B Bv C: storey's | level of building
+## NOTE, in SCOWL: storey's
+## NOTE, in Both : storey storeys stories story story's
+
+# tamable (level 50)
+_: tamable / _v: tameable
+## NOTE, in SCOWL: tamable
+## NOTE, in D./M.: tameable
+
+# tire <verified> (level 20)
+A B: tire | exhausted
+A B: tires | exhausted
+A B: tire's | exhausted
+A C: tire / B: tyre | wheel
+A C: tires / B: tyres | whell
+A C: tire's / B: tyre's | wheel
+## NOTE, in SCOWL: tire's
+## NOTE, in Both : tire tires tyre tyre's tyres
+
+# towel <verified> (level 35)
+A: toweled / B: towelled
+A: toweling / B: towelling
+A: towelings / B: towellings
+A: toweling's / B: towelling's
+## NOTE, in SCOWL: towelling's towellings
+## NOTE, in Both : towelled towelling
+
+# tumbrel <verified> (level 50)
+A Bv C: tumbrel / Av B Cv: tumbril
+A Bv C: tumbrels / Av B Cv: tumbrils
+A Bv C: tumbrel's / Av B Cv: tumbril's
+## NOTE, in SCOWL: tumbril tumbril's
+## NOTE, in D./M.: tumbrel tumbrel's tumbrels
+## NOTE, in Both : tumbrils
+
+# unlearned <verified> (level 50)
+A B. Z: unlearned / B Zv: unlearnt | <V>
+## NOTE, in SCOWL: unlearnt
+## NOTE, in Both : unlearned
+
+# wagoner <verified> (level 50)
+A B C: wagoner / Bv: waggoner
+A B C: wagoners / Bv: waggoners
+A B C: wagoner's / Bv: waggoner's
+## NOTE, in SCOWL: wagoner wagoner's wagoners
+## NOTE, in D./M.: waggoner's
+
+# westernize (level 40)
+A Z: westernize / B: westernise
+A Z: westernized / B: westernised
+A Z: westernizing / B: westernising
+A Z: westernizes / B: westernises
+## NOTE, in SCOWL: westernize westernized westernizes westernizing
+## NOTE, in Both : westernise westernised westernises westernising
+
+# whir <verified> (level 35)
+A Bv C: whir / AV B Cv: whirr
+A Bv C: whirs / AV B Cv: whirrs
+A Bv C: whir's / AV B Cv: whirr's
+## NOTE, in SCOWL: whirr's whirrs
+## NOTE, in D./M.: whir whirs
+## NOTE, in Both : whirr
+
+# whiskey <verified> (level 20)
+A Cv: whiskeys / Av B C: whiskies | drink
+A Cv: whiskey / Av B C: whisky | drink
+A Cv: whiskey's / Av B C: whisky's | drink
+A B: whiskey | (-) code word
+A B: whiskies | (-) code word
+A B: whiskey's | (-) code word
+## NOTE, in SCOWL: whisky's
+## NOTE, in D./M.: whiskey whiskey's whiskeys
+## NOTE, in Both : whiskies whisky
+
+# whiz <verified> (level 35)
+A BV C: whiz / Av B Cv: whizz | :1
+A Av B BV C Cv: whizzes | :1
+A BV C: whiz's / Av B Cv: whizz's | :1
+A BV C: whiz / Av B Cv1: whizz / AV Bv Cv2: wiz | :2
+A BV C: whiz's / Av B Cv1: whizz's / AV Bv Cv2: wiz's | :2
+A Av B BV C Cv1: whizzes / AV Bv Cv2: wizzes | :2
+A B: wiz | wizard
+A B: wizz | as in "gee whiz", Ox: informal, chiefly N. Amer.
+## NOTE, in SCOWL: whizz whizz's wiz
+## NOTE, in D./M.: whiz
+## NOTE, in Both : whizzes
+
+# wigeon (level 50)
+_: wigeon / _v: widgeon
+_: wigeon's / _v: widgeon's
+_: wigeon / _v: widgeons / _v: wigeons / _v: widgeon | <pl>
+## NOTE, in SCOWL: wigeon wigeon's
+## NOTE, in D./M.: widgeon widgeon's
+
+# yak (level 35)
+_ _V: yak | :1
+_: yaks / _V: yak | <pl> :1
+_ _V: yak's | :1
+_: yak / _V: yack | :2
+_: yakked / _V: yacked | :2
+_: yakking / _V: yacking | :2
+_: yaks / _V: yacks | :2
+_: yak / _V: yack | :3
+_: yaks / _V: yacks | :3
+_: yak's / _V: yack's | :3
+_: yuck / _V: yuk | :4
+_: yuk / _v: yuck / _V: yak / _V: yock | :5
+_: yuks / _v: yucks / _V: yocks / _V: yaks | :5
+_: yuk's / _v: yuck's / _V: yock's / _V: yak's | :5
+_: yuk / _v: yuck | :6
+_: yukked / _v: yucked | :6
+_: yukking / _v: yucking | :6
+_: yuks / _v: yucks | :6
+## NOTE, in SCOWL: yakked yakking yaks yuck yuk yuk's yukked yukking yuks
+## NOTE, in D./M.: yack yacked yacking yacks
+## NOTE, in Both : yak yak's
+
+# yogurt <verified> (level 35)
+A B Cv: yogurt / Bv Cv: yoghurt / Bv: yoghourt / C: yogourt
+A B Cv: yogurt's / Bv Cv: yoghurt's / Bv: yoghourt's / C: yogourt's
+A B Cv: yogurts / Bv Cv: yoghurts / Bv: yoghourts / C: yogourts
+## NOTE, in SCOWL: yogurt's
+## NOTE, in D./M.: yoghurt yoghurt's
+## NOTE, in Both : yogurt yogurts
+

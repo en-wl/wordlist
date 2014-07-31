@@ -1,0 +1,800 @@
+ablative N: ??ablatives
+aboriginal N: ?aboriginals
+absent V: absented  absenting  ?absents
+absorbent N: ??absorbents
+ace V: ??aced  ??acing  aces
+acrid A: ??acrider  ??acridest
+acute N: ??acutes
+adrenal N: ??adrenals
+adsorbent N: ??adsorbents
+adverbial N: ?adverbials
+advert V: ??adverted  ??adverting  adverts
+affirmative N: ?affirmatives
+airmail V: airmailed  airmailing  ??airmails
+alp N: ??alps
+amnesic N: ??amnesics
+anodyne N: ??anodynes
+anorectic N: ??anorectics
+ante N: ?antes
+ante V: ??anted (anteed)  ??anteing  ?antes
+are N: ?ares
+ascendant N: ??ascendants
+assured N: ??assureds
+ataxic N: ??ataxics
+attributive N: ??attributives
+audible N: ??audibles
+audio N: ??audios
+aught N: ??aughts
+auto N: ?autos
+aver V: averred  averring  ?avers
+babel N: ??babels
+backstabber N: ?backstabbers
+bad A {slang}: ??badder  ??baddest
+bald V: balded  balding  ??balds
+baldric N: ??baldrics
+ban N: bans {prohibition} | ??bani {money}
+bandanna N: ?bandannas
+bane N: ??banes
+barnyard N: ?barnyards
+barren A: ??barrener  ??barrenest
+barren N: ?barrens
+bent N: ?bents
+bier N: ?biers
+bimetallic N: ??bimetallics
+birch V: ?birched  ?birching  birches
+blunderbuss N: ?blunderbusses
+boogie V: boogied  ?boogieing (-boogying)  boogies
+bouffant N: ?bouffants
+bouillabaisse N: ??bouillabaisses
+bovine N: ??bovines
+bracer N: ?bracers
+brazen V: brazened  brazening  ?brazens
+bridal N: ??bridals
+brisk V: ??brisked  brisking  ??brisks
+buffalo V: ??buffaloed  ??buffaloing  buffaloes (buffalos)
+bulimic N: ?bulimics
+bulldog V: ??bulldogged  ??bulldogging  bulldogs
+bulletproof V: bulletproofed  bulletproofing  ??bulletproofs
+cabochon N: ??cabochons
+caparison V: ??caparisoned  ??caparisoning  caparisons
+carcinogenic N: ?carcinogenics
+caribou N: caribou | ?caribous
+carny N: ??carnies
+carom V: ??caromed  ??caroming  caroms
+carotid N: ??carotids
+caseload N: ?caseloads
+casual N: ?casuals
+cathartic N: ??cathartics
+caucus V: ??caucused (caucussed)  ??caucusing (caucussing)  caucuses
+centennial N: ?centennials
+central N: ??centrals
+certificate V: certificated  ??certificating  certificates
+cervix N: ?cervices (cervixes)
+chagrin V: chagrined (chagrinned)  ??chagrining (chagrinning)  chagrins
+changeling N: ?changelings
+chi N: ??chis
+chief A: ??chiefer  ??chiefest
+childproof V: childproofed  childproofing  ??childproofs
+choral N: ??chorals
+chrome V: chromed  chroming  ??chromes
+cleaning N: ??cleanings
+clientele N: ?clienteles
+colleen N: ?colleens
+colon N {money}: ?colones
+commonplace N: ?commonplaces
+concomitant N: ?concomitants
+conk V: conked  ?conking  conks
+constrain V: constrained  ?constraining  constrains
+cookery N: ??cookeries
+coping N: ?copings
+cosy N: ?cosies
+counterclaim N: ??counterclaims
+counterclaim V: counterclaimed  ??counterclaiming  ??counterclaims
+covert N: ?coverts
+cowling N: ?cowlings
+craven N: ??cravens
+crematory N: ?crematories
+crowfoot N: ?crowfoots (crowfeet)
+crux N: ??cruxes (cruces)
+cuber N: ??cubers
+cum V: came (-cummed)  ?cumming  cums
+dabber N: ??dabbers
+dace N: dace | ??daces
+dactylic N: ??dactylics
+deadpan N: ??deadpans
+deadpan V: ??deadpanned  ??deadpanning  ??deadpans
+deathtrap N: ??deathtraps
+debut N: ?debuts
+debut V: debuted  debuting  ?debuts
+debutante N: ?debutantes
+decadent N: ??decadents
+degas V: degassed  degassing  ??degases
+deli N: ?delis
+deliberate V: deliberated  deliberating  ?deliberates
+demo N: ?demos
+demure A: ??demurer  ??demurest
+descant V: ??descanted  ??descanting  descants
+destine V: destined  ?destining  ?destines
+diaper V: ??diapered  ??diapering  diapers
+diesel V: ??dieseled  ??dieseling  diesels
+dill N: ??dills
+dilly N: ??dillies
+ding N: ??dings
+ding V: dinged  dinging  ??dings
+dinner V: ??dinnered  ??dinnering  dinners
+discombobulate V: discombobulated  ??discombobulating  ??discombobulates
+disinter V: disinterred  disinterring  ?disinters
+disrobe V: ?disrobed  disrobing  disrobes
+disuse V: disused  ??disusing  disuses
+downhill N: ??downhills
+downtrend N: ?downtrends
+drab N: ??drabs
+dude V: ??duded  ??duding  dudes
+earnest N: ??earnests
+earth V: earthed  earthing  ?earths
+emcee V: ?emceed  emceeing  emcees
+en N: ??ens
+engram N: ?engrams
+escallop V: ??escalloped  ??escalloping  escallops
+escargot N: ?escargots
+everlasting N: ??everlastings
+ex N: ?exes
+extinct V: ??extincted  ??extincting  ??extincts
+fain A: ??fainer  ??fainest
+faithful N: ?faithfuls
+fate V: fated  ??fating  fates
+fay A: fayer  ??fayest
+fed N: ?feds
+federal N: ??federals
+feeding N: ??feedings
+fez N: ?fezzes (fezes)
+filigree V: ?filigreed  filigreeing  filigrees
+fillip V: ??filliped  ??filliping  fillips
+finesse V: ?finessed  ?finessing  finesses
+fireproof V: fireproofed  fireproofing  ??fireproofs
+fireside N: ?firesides
+fiscal N: ??fiscals
+fishbowl N: ?fishbowls
+flameproof V: ??flameproofed  ??flameproofing  ??flameproofs
+flamethrower N: ??flamethrowers
+flash A: flasher  ?flashest
+flatbed N: ?flatbeds
+fly V {baseball}: ?flied  flying  flies
+flypaper N: ?flypapers
+footling N: ?footlings
+fore N: ??fores
+formal N: ?formals
+freewheel V: freewheeled  freewheeling  ?freewheels
+full V: ??fulled  fulling  ??fulls
+fun A: ??funner  ??funnest
+fungible N: ?fungibles
+furlough V: ?furloughed  ?furloughing  furloughs
+gal N: ?gals
+garnishee V: ??garnisheed  garnisheeing  garnishees
+genesis N: ?geneses
+gentle V: gentled  gentling  ??gentles
+gimlet V: ??gimleted  ??gimleting  gimlets
+girt N: ??girts
+girt V: ??girted  ??girting  ??girts
+given N: ?givens
+glad N: ??glads
+golden A: ??goldener  ??goldenest
+goose V: ?goosed  ?goosing  ?gooses
+gosling N: ?goslings
+grey A: greyer  ??greyest
+grime V: ??grimed  ??griming  ??grimes
+groundbreaking N: ??groundbreakings
+guaranty V: ??guarantied  ??guarantying  guaranties
+gusset V: gusseted  ??gusseting  gussets
+hackney V: hackneyed  ?hackneying  hackneys
+halibut N: halibut | ?halibuts
+handcraft N: ?handcrafts
+handcraft V: handcrafted  ??handcrafting  ?handcrafts
+hardwood N: ?hardwoods
+haste V: hasted  ??hasting  hastes
+hazing N: ?hazings
+he N: ?hes
+hep A: ??hepper  ??heppest
+hiccough N: ?hiccoughs
+hiccough V: ?hiccoughed  ?hiccoughing  ?hiccoughs
+hide V {thrash}: ?hided  hiding  hides
+hie V: ?hied  hieing / hying  hies
+him N: ??hims
+hind N: ?hinds | hind
+hobnail V: hobnailed  ??hobnailing  hobnails
+hock V: ?hocked  ?hocking  hocks
+hokey A: ??hokier  ??hokiest
+holler N: ?hollers
+holler V: ?hollered  ?hollering  ?hollers
+homepage N: ??homepages
+homer V: ??homered  ??homering  homers
+homey N: ??homeys
+honey V: honeyed (honied)  ??honeying  honeys
+honorific N: ??honorifics
+hopscotch V: ??hopscotched  ??hopscotching  ??hopscotches
+horde V: ??horded  ??hording  hordes
+hostile N: ??hostiles
+housemother N: ??housemothers
+hubbub N: ??hubbubs
+humane A: humaner  ??humanest
+humbler N: ??humblers
+humph V: ??humphed  ??humphing  humphs
+ilk N: ??ilks
+impala N: ??impalas | impala
+imperfect N: ??imperfects
+inboard N: ??inboards
+incubus N: ?incubuses (incubi)
+inessential N: ?inessentials
+infomercial N: ?infomercials
+inhalator N: ??inhalators
+insane A: ??insaner  ??insanest
+insured N: ??insureds
+intended N: ??intendeds
+intuit V: intuited  ?intuiting  intuits
+invitational N: ?invitationals
+jade V: jaded  ??jading  jades
+jagged A: ??jaggeder  ??jaggedest
+jaunt V: ?jaunted  jaunting  jaunts
+jawbone V: jawboned  ??jawboning  jawbones
+jigsaw V: ??jigsawed  ??jigsawed (jigsawn)  ??jigsawing  jigsaws
+kappa N: ??kappas
+karaoke N: ?karaokes
+kayak V: ?kayaked  ?kayaking  kayaks
+keen N: ?keens
+keen V: keened  keening  ?keens
+kiln V: ??kilned  ??kilning  kilns
+kite V: ??kited  ??kiting  kites
+knockout N: ?knockouts
+knurl V: knurled  ??knurling  knurls
+kosher V: ??koshered  ??koshering  ?koshers
+lade V: laded  laden (laded)  lading  ?lades
+lading N: ?ladings
+lame V: lamed  ??laming  ??lames
+landowning N: ?landownings
+landslide V: ??landslid  ??landslid (landslidden)  ??landsliding  landslides
+large N: ??larges
+lateral V: ??lateraled (lateralled)  ??lateraling (lateralling)  laterals
+lazy V: lazied  lazying  ??lazies
+leaper N: ??leapers
+leech V: ??leeched  leeching  leeches
+legitimate V: legitimated  legitimating  ?legitimates
+licorice N: ??licorices
+lief A: ??liefer  ??liefest
+ling N: ling | ?lings
+liquor V: ??liquored  ??liquoring  liquors
+losing N: ??losings
+loyal A: ??loyaler (loyaller)  ??loyalest (loyallest)
+lush N: ?lushes
+mad N: ?mads
+madras N: ?madrases
+mainstream V: mainstreamed  ??mainstreaming  mainstreams
+major V: ?majored  ?majoring  majors
+makeshift N: ??makeshifts
+malcontent N: ?malcontents
+malted N: ??malteds
+man V: manned  manning  ?mans
+manifold V: ??manifolded  ??manifolding  manifolds
+mar V: marred  marring  ?mars
+markup N: ?markups
+masculine N: ??masculines
+media N: - (??medias)
+melange N: ?melanges
+metier N: ?metiers
+midland N: ??midlands
+midway N: ?midways
+midwife V: ??midwifed (midwived)  ??midwifing (midwiving)  midwifes
+miler N: ??milers
+milling N: ?millings
+milt V: ??milted  ??milting  milts
+minor V: ?minored  ?minoring  minors
+misfit V: ??misfitted  ??misfitting  misfits
+modal N: ?modals
+modern N: ??moderns
+monger V: ??mongered  ??mongering  mongers
+motley N: ??motleys
+motorcycle V: ??motorcycled  motorcycling  motorcycles
+mousse V: ??moussed  ??moussing  mousses
+mush V: ??mushed  ??mushing  mushes
+nappy A: ?nappier  ?nappiest
+neap N: ??neaps
+nestling N: ?nestlings
+nigh A: ??nigher  ??nighest
+nix V: ?nixed  ?nixing  ?nixes
+nonesuch N: ??nonesuches
+noodle V: ?noodled  ?noodling  noodles
+nu N: ??nus
+numerate V: ??numerated  ??numerating  numerates
+nursling N: ?nurslings
+oar V: oared  ??oaring  oars
+off V: ?offed  offing  ?offs
+olfactory N: ?olfactories
+opaque V: ??opaqued  ??opaquing  opaques
+open A: opener  ??openest
+outback N: ??outbacks
+outlay V: ??outlaid  ??outlaying  outlays
+outsize N: ??outsizes
+overage N: ??overages
+overarm V: ??overarmed  ??overarming  overarms
+overcast V: overcast  overcasting  ??overcasts
+overtax V: overtaxed  overtaxing  ?overtaxes
+oxymoron N: ?oxymora (oxymorons)
+paisley N: ?paisleys
+paling N: ?palings
+pap N: ??paps
+paranoid N: ?paranoids
+parenthesize V: parenthesized  ?parenthesizing  ?parenthesizes
+paterfamilias N: ??patresfamilias {Roman} | paterfamiliases {contemporary}
+pay V: paid {purchase} | ?payed {slacken}  paying  pays
+payday N: ??paydays
+peace N: ??peaces
+pee V: ?peed  peeing  pees
+pejorative N: ??pejoratives
+pendent N: ??pendents
+percent N: percent / ?percents
+permanent N: ?permanents
+personal N: ?personals
+phoney V: ?phoneyed  ?phoneying  phoneys
+phony V: ??phonied  ??phonying  phonies
+photo V: ??photoed  ??photoing  photos
+pi N: ?pis {Greek} | pies {printing}
+pi V: pied  pieing / ?piing  pies
+pill V: ?pilled  ?pilling  pills
+ping N: ?pings
+ping V: pinged  pinging  ?pings
+plat N: ??plats
+plat V: ??platted  ??platting  ??plats
+platform V: ??platformed  ??platforming  platforms
+plum A: ??plummer  ?plummest
+plume V: plumed  ??pluming  plumes
+plump N: ?plumps
+plump V: ?plumped  ?plumping  ?plumps
+pole V: poled  ??poling  poles
+porterhouse N: ?porterhouses
+precancel V: ??precanceled (precancelled)  ??precanceling (precancelling)  precancels
+predate V: predated  ?predating  ?predates
+prep V: ?prepped  ?prepping  preps
+preterite N: ?preterites
+prior N: ?priors
+privy A: ??privier  ??priviest
+privy N: ?privies
+probate V: ?probated  ?probating  probates
+procession V: ??processioned  ??processioning  processions
+proficient N: ??proficients
+proper A: ??properer  ??properest
+pseudoscience N: ?pseudosciences
+psi N: ??psis
+pumper N: ??pumpers
+pussy A: ??pussier  ??pussiest
+pyramid V: ??pyramided  ??pyramiding  pyramids
+quarterback V: ?quarterbacked  ?quarterbacking  quarterbacks
+quirk V: ??quirked  ??quirking  quirks
+racketeer V: ??racketeered  racketeering  racketeers
+rad N: ??rads
+ragged A: ??raggeder  ??raggedest
+raggedy A: ??raggedier  ??raggediest
+raillery N: ??railleries
+ramrod V: ??ramrodded  ??ramrodding  ramrods
+rapid A: ??rapider  ??rapidest
+rare V: ??rared  raring  ??rares
+rational N: ??rationals
+reactivate V: reactivated  reactivating  ?reactivates
+real N {Brazilian money}: ?reals (-reis -reales -reais)
+real N {Spanish money}: ?reals (reales)
+reanalysis N: ??reanalyses
+recent A: ??recenter  ??recentest
+reckoning N: ?reckonings
+reconciliation N: ?reconciliations
+ref N: ?refs
+ref V: ??reffed  ??reffing  ?refs
+refractory N: ??refractories
+rehab N: ??rehabs
+rehab V: ??rehabbed  ??rehabbing  ??rehabs
+rehang V: ??rehanged {execute} | rehung {suspend}  rehanging  rehangs
+rehearing N: ??rehearings
+rem N: ??rems
+remonstrance N: ?remonstrances
+remonstrant N: ??remonstrants
+remote N: ?remotes
+repute V: reputed  ??reputing  reputes
+requite V: requited  ?requiting  requites
+reroute V: rerouted  ?rerouting  reroutes
+resale N: ??resales
+resew V: resewed  ?resewn  resewing  resews
+restful A: ??restfuller  ??restfullest
+restructuring N: ?restructurings
+retro N: ?retros
+retrofire V: ??retrofired  ??retrofiring  retrofires
+retrospect V: ??retrospected  ??retrospecting  ??retrospects
+returnable N: ??returnables
+rhesus N: ??rhesuses
+rho N: ??rhos
+rice V: ??riced  ??ricing  rices
+rick V: ?ricked  ?ricking  ricks
+riff V: ??riffed  ??riffing  riffs
+right A: righter  ??rightest
+rigmarole N: ??rigmaroles
+rime V: ??rimed  ??riming  rimes
+ripe A: riper  ?ripest
+roadblock V: ??roadblocked  ??roadblocking  roadblocks
+robe V: robed  ?robing  robes
+roger V: ?rogered  ?rogering  ?rogers
+rollback N: ?rollbacks
+rook V: ?rooked  ?rooking  rooks
+room V: ?roomed  ?rooming  rooms
+roughneck V: ??roughnecked  ??roughnecking  roughnecks
+rout N: ?routs
+rout V: routed  routing  ?routs
+ruby A: ??rubier  ??rubiest
+rugged A: ??ruggeder  ??ruggedest
+rum A: rummer  ??rummest
+rundown N: ?rundowns
+rustproof V: rustproofed  rustproofing  ??rustproofs
+sabot N: ??sabots
+safari V: ??safaried  ??safariing  safaris
+saffron N: ??saffrons
+sage A: ??sager  ??sagest
+sailboarder N: ?sailboarders
+salaam N: ?salaams
+salaam V: ?salaamed  ?salaaming  ?salaams
+salesclerk N: ?salesclerks
+salient N: ??salients
+saline N: ??salines
+salt A: salter  ??saltest
+salve V: ?salved  salving  salves
+sauce V: ??sauced  saucing  sauces
+sauna V: ??saunaed  ??saunaing  saunas
+savage A: ??savager  ??savagest
+savoury A: ?savourier  ?savouriest
+scamp N: ?scamps
+scant A: ??scanter  ??scantest
+scant V: ??scanted  ??scanting  ??scants
+scapegoat V: ?scapegoated  ?scapegoating  scapegoats
+scarf V: scarfed  ?scarfing  scarfs
+schismatic N: ??schismatics
+schmooze V: ?schmoozed  ?schmoozing  ?schmoozes
+schoolmarm N: ?schoolmarms
+schuss N: ??schusses
+schuss V: ??schussed  ??schussing  ??schusses
+scintilla N: ??scintillas (-scintillae)
+scissor V: ??scissored  scissoring  scissors
+sconce N: ?sconces
+scrip N: ??scrips
+scrubby A: scrubbier  ??scrubbiest
+scuba V: ??scubaed  ??scubaing  scubas
+scum V: scummed  scumming  ??scums
+scupper V: scuppered  ?scuppering  scuppers
+scurvy A: ??scurvier  ??scurviest
+seabed N: ??seabeds
+seaboard N: ?seaboards
+sealer N: ?sealers
+seamy A: seamier  ?seamiest
+seaside N: ??seasides
+seasoning N: ?seasonings
+seaworthy A: ??seaworthier  ??seaworthiest
+sec N: ?secs
+secondary N: ??secondaries
+secure A: securer  ??securest
+sedate A: ??sedater  ??sedatest
+segue V: segued  ??segueing  segues
+seine N: ??seines
+seine V: ??seined  seining  ??seines
+sensitive N: ??sensitives
+sepulchre V: ?sepulchred  ?sepulchring  sepulchres
+sere A: ??serer  ??serest
+seventeen N: ?seventeens
+shadowy A: ??shadowier  ??shadowiest
+shakedown N: ?shakedowns
+sharp V: ??sharped  ??sharping  sharps
+sharper N: ??sharpers
+she N: ?shes
+sheathe V: sheathed  sheathing  ?sheathes
+sheepfold N: ??sheepfolds
+shellacking N: ??shellackings
+shellfish N: shellfish | ??shellfishes
+shipboard N: ??shipboards
+shirring N: ??shirrings
+shoal V: ??shoaled  ??shoaling  shoals
+shotgun V: ??shotgunned  ??shotgunning  shotguns
+shrimp V: ??shrimped  ?shrimping  shrimps
+shutdown N: ?shutdowns
+shuttlecock V: ??shuttlecocked  ??shuttlecocking  shuttlecocks
+sic V: sicked (sicced)  sicking (siccing)  ?sics
+sick V: sicked  sicking  ?sicks
+sideline V: sidelined  ?sidelining  sidelines
+sigma N: ??sigmas
+signora N: ??signoras / signore
+silent A: ??silenter  ??silentest
+silent N: ??silents
+silkscreen N: ??silkscreens
+silkscreen V: silkscreened  silkscreening  ??silkscreens
+simulcast V: simulcast / simulcasted  ?simulcasting  simulcasts
+sis N: ??sises
+sissy A: ??sissier  ??sissiest
+site V: sited  ?siting  sites
+situate V: situated  situating  ?situates
+sixteen N: ?sixteens
+skunk V: ??skunked  ??skunking  skunks
+slalom V: ??slalomed  ??slaloming  slaloms
+slaying N: ?slayings
+sled N: ?sleds
+sled V: ?sledded  sledding  ?sleds
+sledgehammer V: ??sledgehammered  ??sledgehammering  sledgehammers
+sleek V: sleeked  sleeking  ?sleeks
+slicker N: ?slickers
+sloth N: ?sloths
+smarty N: ?smarties
+smeary A: ??smearier  ??smeariest
+smiley N: ?smileys
+snipe V: ?sniped  sniping  snipes
+snowmobile V: ??snowmobiled  ??snowmobiling  snowmobiles
+snowshoe V: ??snowshoed  ??snowshoeing  snowshoes
+snuffly A: ??snufflier  ??snuffliest
+snug N: ?snugs
+snug V: ??snugged  ??snugging  ?snugs
+sociable N: ?sociables
+soiree N: ?soirees
+sol N: ??sols
+soluble N: ??solubles
+sonar N: ??sonars
+soup V: ?souped  ?souping  soups
+southern N: ??southerns
+spacewalk N: ?spacewalks
+spacewalk V: ??spacewalked  ??spacewalking  ?spacewalks
+spare A: ??sparer  sparest
+spermicide N: ?spermicides
+sphagnum N: ??sphagnums
+spidery A: ??spiderier  ??spideriest
+spit V: spit (spat) {saliva} | ?spitted {pierce}  spitting  spits
+spite V: ?spited  spiting  spites
+spiteful A: ??spitefuller  ??spitefullest
+splendid A: ??splendider  ??splendidest
+splitting N: ??splittings
+spoor V: ??spoored  ??spooring  spoors
+spore V: ??spored  ??sporing  spores
+spruce A: sprucer  ??sprucest
+spume V: ??spumed  ??spuming  spumes
+squalid A: ??squalider  ??squalidest
+squeegee V: ??squeegeed  squeegeeing  squeegees
+squint A: squinter  ??squintest
+staging N: ?stagings
+staid A: ??staider  ??staidest
+stale V: staled  staling  ??stales
+stalking N: ??stalkings
+starveling N: ?starvelings
+stead N: ??steads
+sticky N: ?stickies
+stiff V: ??stiffed  ??stiffing  stiffs
+stockade V: ??stockaded  ??stockading  stockades
+stolid A: ??stolider  ??stolidest
+stopper V: stoppered  ??stoppering  stoppers
+strapless N: ??straplesses
+stripling N: ?striplings
+striptease V: ??stripteased  ??stripteasing  stripteases
+stripy A: ??stripier  ??stripiest
+stupid N: ??stupids
+suave A: ??suaver  ??suavest
+subhuman N: ??subhumans
+suburban N: ??suburbans
+succinct A: ??succincter  ??succinctest
+sugary A: ??sugarier  ??sugariest
+sulky N: ??sulkies
+sullen A: sullener  ??sullenest
+summery A: ??summerier  ??summeriest
+sunbathe V: sunbathed  sunbathing  ?sunbathes
+sunburn V: sunburned (sunburnt)  ??sunburning  sunburns
+sundown N: ??sundowns
+super N: ?supers
+superabundance N: ?superabundances
+superb A: ??superber  ??superbest
+surcease V: ??surceased  ??surceasing  surceases
+surfboard V: ??surfboarded  surfboarding  surfboards
+surplus V: ??surplussed (surplused)  ??surplussing (surplusing)  surpluses
+surtax V: ??surtaxed  ??surtaxing  surtaxes
+svelte A: ??svelter  ??sveltest
+swell A: ??sweller  ??swellest
+swine N: swine | ?swines {villain}
+swish A: ?swisher  ?swishest
+systemic N: ??systemics
+tailgate N: ?tailgates
+tailgate V: ?tailgated  tailgating  ?tailgates
+tailgater N: ?tailgaters
+talky A: ??talkier  ??talkiest
+tan A: tanner  ??tannest
+tare V: ??tared  ??taring  tares
+tarsal N: ??tarsals
+tatter V: tattered  ?tattering  tatters
+tau N: ??taus
+tear V {cry}: ?teared  tearing  tears
+teethe V: teethed  teething  ?teethes
+telecommute V: ?telecommuted  telecommuting  telecommutes
+teletext N: ??teletexts
+tenon V: ?tenoned  ?tenoning  tenons
+tenure V: tenured  ??tenuring  tenures
+terrazzo N: ??terrazzos
+territorial N: ?territorials
+testatrix N: ??testatrices (-testatrixes)
+thickening N: ?thickenings
+thickness N: ?thicknesses
+thirteen N: ?thirteens
+thole N: ??tholes
+thorough A: ??thorougher  ??thoroughest
+thou N: ?thous | thou {counting}
+thrall V: ??thralled  ??thralling  thralls
+threescore N: ??threescores
+tic N: ?tics
+tideway N: ??tideways
+tiff V: ??tiffed  ??tiffing  tiffs
+timeout N: ??timeouts
+timid A: ??timider  ??timidest
+ting N: ?tings
+ting V: tinged  tinging  ?tings
+tingling N: ?tinglings
+tiptop N: ??tiptops
+tired A: ??tireder  ??tiredest
+tomb V: ??tombed  ??tombing  tombs
+tong V: ??tonged  ??tonging  tongs
+tor N: ?tors
+torrid A: ??torrider  ??torridest
+tote V: ?toted  toting  totes
+trading N: ?tradings
+trainload N: ?trainloads
+tram V: ??trammed  ??tramming  trams
+tranquil A: ??tranquiler (tranquiller)  ??tranquilest (tranquillest)
+transect V: ??transected  transecting  transects
+transgender N: ?transgenders
+transitive N: ?transitives
+transnational N: ??transnationals
+tree V: ??treed  treeing  trees
+trendy N: ?trendies
+tricentennial N: ??tricentennials
+triglyceride N: ??triglycerides
+trike N: ?trikes
+triplicate V: ??triplicated  ??triplicating  triplicates
+trite A: ??triter  ??tritest
+troposphere N: ??tropospheres
+troubleshoot V: ?troubleshot / ?troubleshooted  troubleshooting  troubleshoots
+troupe V: ??trouped  ??trouping  troupes
+trout N: trout | ?trouts
+trowel V: troweled (?trowelled)  troweling (?trowelling)  trowels
+true V: trued  truing (trueing)  ??trues
+trustworthy A: ??trustworthier  ??trustworthiest
+tsetse N: ??tsetses
+tucker V: ?tuckered  ??tuckering  tuckers
+turmoil N: ?turmoils
+turnkey N: ??turnkeys
+tush N: ?tushes
+twaddle V: ??twaddled  ??twaddling  ??twaddles
+twelve N: ?twelves
+twinkling N: ?twinklings
+twirly A: ??twirlier  ??twirliest
+twisty A: ?twistier  ?twistiest
+typecast V: typecast  typecasting  ?typecasts
+unabridged N: ??unabridgeds
+uncanny A: ?uncannier  ?uncanniest
+unchaste A: ??unchaster  ??unchastest
+unclean A: ??uncleaner  ??uncleanest
+unclear A: ??unclearer  ??unclearest
+unclothe V: unclothed  unclothing  ?unclothes
+uncommon A: ??uncommoner  ??uncommonest
+unction N: ??unctions
+undercoat V: ??undercoated  undercoating  undercoats
+undercoating N: ??undercoatings
+underlip N: ??underlips
+undoing N: ??undoings
+uneasy A: ?uneasier  ?uneasiest
+uneven A: ??unevener  ??unevenest
+unfair A: ??unfairer  ??unfairest
+unfit V: unfitted  unfitting  ??unfits
+unfix V: unfixed  unfixing  ??unfixes
+ungainly A: ??ungainlier  ??ungainliest
+ungodly A: ungodlier  ??ungodliest
+unhandy A: ??unhandier  ??unhandiest
+unhorse V: ??unhorsed  ??unhorsing  ??unhorses
+uniform V: uniformed  ??uniforming  uniforms
+unique A: ??uniquer  ??uniquest
+unkind A: ?unkinder  unkindest
+unkindly A: ??unkindlier  ??unkindliest
+unlovely A: ??unlovelier  ??unloveliest
+unmanly A: ??unmanlier  ??unmanliest
+unquote V: unquoted  ??unquoting  ??unquotes
+unripe A: ??unriper  ??unripest
+unsafe A: ??unsafer  ??unsafest
+unseemly A: ??unseemlier  ??unseemliest
+unsheathe V: unsheathed  unsheathing  ??unsheathes
+unsightly A: ??unsightlier  ??unsightliest
+unsound A: ??unsounder  ??unsoundest
+unstable A: ??unstabler  ??unstablest
+untimely A: ??untimelier  ??untimeliest
+untrue A: ??untruer  ??untruest
+unwary A: ??unwarier  ??unwariest
+unwieldy A: ??unwieldier  ??unwieldiest
+unwise A: ??unwiser  ??unwisest
+unworthy A: ??unworthier  ??unworthiest
+uphill N: ??uphills
+uppercut V: uppercut  ??uppercutting  uppercuts
+upshot N: ??upshots
+upstart V: ??upstarted  ??upstarting  upstarts
+upsurge V: ??upsurged  ??upsurging  upsurges
+urbane A: ??urbaner  ??urbanest
+utilitarian N: ??utilitarians
+utopia N: ?utopias
+vacation V: ?vacationed  ?vacationing  vacations
+vacuum V: ?vacuumed  ?vacuuming  vacuums
+valve V: valved  ??valving  valves
+van V: ??vanned  ??vanning  vans
+varietal N: ??varietals
+vast N: ??vasts
+veg V: vegged  vegging  vegges / ?veges / vegs
+velvety A: ??velvetier  ??velvetiest
+verbal N: ??verbals
+verse V: versed  ??versing  verses
+very A: ??verier  ??veriest
+vice V: ??viced  ??vicing  vices
+videocassette N: ??videocassettes
+vinyl N: ?vinyls
+visa V: ??visaed  ??visaing  visas
+vision V: ??visioned  visioning  visions
+vivid A: ??vivider  ??vividest
+vocable N: ??vocables
+voodoo V: ??voodooed  ??voodooing  voodoos
+vulgar A: ??vulgarer  ??vulgarest
+wad V: ?wadded  wadding  wads
+wailer N: ??wailers
+wainscoting N: ??wainscotings
+wale V: ??waled  waling  ??wales
+walloping N: ??wallopings
+wan A: ??wanner  ??wannest
+wanton N: ??wantons
+wanton V: ??wantoned  ??wantoning  ??wantons
+warranty V: ??warrantied  ??warrantying  warranties
+washy A: ??washier  ??washiest
+waterfowl N: waterfowl | ?waterfowls
+wattle V: ?wattled  ??wattling  wattles
+wayfaring N: ??wayfarings
+weal N: ?weals
+wee A: ??weer  ??weest
+wee V: weed  ?weeing  ?wees
+weekend V: ?weekended  ?weekending  weekends
+weensy A: ?weensier  ?weensiest
+weeny A: ??weenier  ??weeniest
+weepy N: ?weepies
+welsh V: ?welshed  ?welshing  ?welshes
+wetter N: ??wetters
+whale V: ??whaled  whaling  whales
+what N: ??whats
+when N: ??whens
+where N: ??wheres
+whipper N: ??whippers
+whit N: ??whits
+whitening N: ??whitenings
+whiting N {fish}: whiting | ?whitings
+wholesale V: wholesaled  wholesaling  ??wholesales
+wildcat V: ?wildcatted  ?wildcatting  wildcats
+windmill V: ??windmilled  ??windmilling  windmills
+winsome A: ??winsomer  ??winsomest
+winy A: ??winier  ??winiest
+wither V: withered  ?withering  ?withers
+woeful A: ??woefuller  ??woefullest
+wood V: wooded  ??wooding  woods
+wooden A: woodener  ??woodenest
+woody N: ?woodies
+worst V: worsted  ?worsting  ?worsts
+wretched A: ??wretcheder  ??wretchedest
+wrinkly A: ??wrinklier  ??wrinkliest
+wrinkly N: ?wrinklies
+wrong A: ??wronger  ??wrongest
+yeah N: ??yeahs
+yearly N: ??yearlies
+yellow A: ?yellower  ?yellowest
+yep N: ??yeps
+yes N: ?yeses (-yesses)
+yes V: ??yessed (-yesed)  ??yessing (-yesing)  ?yeses (-yesses)
+you N: ??yous
+yup N: ??yups
+zany N: ??zanies
+zest N: ??zests
+zinc V: zincked (zinced)  ??zincking (zincing)  ??zincs (-zincks)
+zing N: ?zings
+zing V: zinged  zinging  ?zings
+zircon N: ??zircons
+zloty N: ?zlotys

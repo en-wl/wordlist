@@ -1,0 +1,5 @@
+name en2
+charset iso8859-1
+special ' -*-
+affix en2
+#repl-table en_affix.dat

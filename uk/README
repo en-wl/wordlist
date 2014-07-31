@@ -1,0 +1,67 @@
+2014-07-31
+Kevin Atkinson
+
+The text files in this directory indicate possible problems with SCOWL
+in regards to British English.  They are originally created by looking
+for words that are in the Hunspell British dictionary created by SCOWL
+that are not in the Hunspell dictionary originally created by David
+Bartlett (http://en-gb.pyxidium.co.uk/dictionary/) and now maintained
+by Marco A.G.Pinto
+(http://marcoagpinto.cidadevirtual.pt/proofingtoolgui.html).
+
+The scripts and source data to create these files can be found under
+the src/ directory.  They were created from Git version 012ea06.
+
+These files are meant to be modified by hand.  Once a potential issue
+pointed out by the file is addressed the entry can just be deleted.
+Additional notes may also be added in the forms of comments until the
+issue is resolved.
+
+The files are:
+
+varcon-lookinto.txt:
+
+Entries in VarCon that could possible be corrected.
+
+varcon-notin.txt:
+
+Other variants not in VarCon that could possible to added.
+
+varcon-compound.txt:
+
+Compound words that are in David/Marco's list but with a dash.
+
+abbreviation.txt:
+
+Abbreviations either not in David/Marco's list, or in that list but
+marked with a trailing '.'.
+
+2of12id-lookinto.txt:
+
+Entries in 2of12id that need a closer look.
+
+possessive.txt:
+
+Possessive forms not in David/Marco's dictionary.  
+
+Words marked with a '-' were likely removed by David Bartlett for one
+reason or another; words starting with a '+' are new words that were
+likely added since David Bartlett fork. [1]
+
+40.txt 50.txt 60.txt:
+
+Other words not in David/Marco's that can not be classified by any of
+the above lists.  Some of words are clearly mistakes (at least
+according to this American) on David's parts, other of them were
+likely removed because there were considered an Americanism.
+
+The number correspond to SCOWL sizes.
+
+Like in possessive.txt, words marked with a '-' were likely removed
+by David Bartlett for one reason or another; words starting with a '+'
+are new words that were likely added since David Bartlett fork. [1]
+
+
+[1] The exact Hunspell dictionary version David Bartlett orignally
+used is unknown so a best-guess was made.
+

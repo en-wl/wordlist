@@ -1,0 +1,15 @@
+## See https://github.com/kevina/wordlist/issues/73 for context
+
+# example of American word with no direct single word british equivalent
+A: tuxedo
+
+# Example of british word where the American equivalent is also used
+# in the U.K., but the British word is not generally used in the U.S.
+A B: truck / B: lorry
+
+# Example of a british word that is also used in the the U.S., but 
+# not to mean the same thing.  In this case the american word
+# is also sometimes used in the U.K.
+A B: apartment / B: flat | :1
+A B: flat | :2 
+

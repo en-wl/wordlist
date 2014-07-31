@@ -15,30 +15,31 @@ the src/ directory.  They were created from Git version 012ea06.
 These files are meant to be modified by hand.  Once a potential issue
 pointed out by the file is addressed the entry can just be deleted.
 Additional notes may also be added in the forms of comments until the
-issue is resolved.
+issue is resolved.  Each file is associated GitHub issue where
+discussion on how tro address the issues pointed out by these files.
 
 The files are:
 
 varcon-lookinto.txt:
 
-Entries in VarCon that could possible be corrected.
+Entries in VarCon that could possible be corrected. [Issue #64]
 
 varcon-notin.txt:
 
-Other variants not in VarCon that could possible to added.
+Other variants not in VarCon that could possible to added. [Issue #65]
 
 varcon-compound.txt:
 
-Compound words that are in David/Marco's list but with a dash.
+Compound words that are in David/Marco's list but with a dash. [Issue #67]
 
 abbreviation.txt:
 
 Abbreviations either not in David/Marco's list, or in that list but
-marked with a trailing '.'.
+marked with a trailing '.'. [Issue #70]
 
 2of12id-lookinto.txt:
 
-Entries in 2of12id that need a closer look.
+Entries in 2of12id that need a closer look. [Issue #71]
 
 possessive.txt:
 
@@ -47,6 +48,8 @@ Possessive forms not in David/Marco's dictionary.
 Words marked with a '-' were likely removed by David Bartlett for one
 reason or another; words starting with a '+' are new words that were
 likely added since David Bartlett fork. [1]
+
+[Issue #68]
 
 40.txt 50.txt 60.txt:
 
@@ -60,6 +63,8 @@ The number correspond to SCOWL sizes.
 Like in possessive.txt, words marked with a '-' were likely removed
 by David Bartlett for one reason or another; words starting with a '+'
 are new words that were likely added since David Bartlett fork. [1]
+
+[Issue #72]
 
 
 [1] The exact Hunspell dictionary version David Bartlett orignally

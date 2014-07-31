@@ -556,7 +556,7 @@ A Z: alkalization / B: alkalisation
 A Z: alkalizations / B: alkalisations
 A Z: alkalization's / B: alkalisation's
 
-# alkalize (level 60)
+# alkalize <verified> (level 60)
 A Z: alkalize / B: alkalise
 A Z: alkalized / B: alkalised
 A Z: alkalizing / B: alkalising
@@ -15133,7 +15133,7 @@ A B: legging / Av: leggin | <N>
 A B: leggings / Av: leggins | <N>
 A B: legging's / Av: leggin's | <N>
 
-# legitimatize (level 60)
+# legitimatize <verified> (level 60)
 A Z: legitimatize / B: legitimatise
 A Z: legitimatized / B: legitimatised
 A Z: legitimatizing / B: legitimatising

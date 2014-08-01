@@ -1,0 +1,17 @@
+.aspell
+.hunspell
+hunspell/
+*.wl
+en_*.dic
+en_*.aff
+*.zip
+*.tocheck
+README_en_*.txt
+*.0
+*.1
+*.2
+eng.dat
+eng_affix.dat
+nosug
+aspell/Copyright
+aspell/doc/SCOWL-README

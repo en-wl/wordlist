@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use utf8;
+use open ':std' => ':locale';
+
+use DBI;
+use Data::Dumper;
+
+use lib 'sql/';
+use speller_lookup 'lookup', 'to_text';
+
+my $dict = $ARGV[0] or die "Usage: speller-lookup.pl <dict>";
+
+my @words;
+while (<STDIN>) {
+    chomp;
+    push @words, $_;
+}
+
+my $d = lookup("scowl.db",$dict,@words);
+to_text($d)

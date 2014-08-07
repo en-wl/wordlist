@@ -1,3 +1,5 @@
+: ${SCOWL:=..}
+
 echo $WHAT
 
 if git status 2>&1 > /dev/null
@@ -81,6 +83,6 @@ Ispell copyright is included with the SCOWL copyright.
 
 EOF
 
-cat ../Copyright
+cat $SCOWL/Copyright
 echo
 echo "Build Date: `date`"

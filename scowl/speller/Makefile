@@ -9,7 +9,7 @@ all:
 aspell: .aspell
 
 .hunspell: make-hunspell-dict add-no-suggest en.aff en.dic.supp README_en.txt.sh
-	./make-hunspell-dict
+	./make-hunspell-dict -all
 	touch .hunspell
 hunspell: .hunspell
 

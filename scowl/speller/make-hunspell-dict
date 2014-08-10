@@ -85,9 +85,9 @@ with-and-without-accents() {
   rm $tmp1 $tmp2
 }
 
-doit en_US-large "mk-list -v0 en_US 70 | with-and-without-accents "
-doit en_CA-large "mk-list -v0 en_CA 70 | with-and-without-accents "
-doit en_GB-large "mk-list -v0 en_GB-ize en_GB-ise 70 | with-and-without-accents"
+doit en_US-large "mk-list -v1 en_US 70 | with-and-without-accents "
+doit en_CA-large "mk-list -v1 en_CA 70 | with-and-without-accents "
+doit en_GB-large "mk-list -v1 en_GB-ize en_GB-ise 70 | with-and-without-accents"
 
 sh README_en.txt.sh > hunspell/README
 

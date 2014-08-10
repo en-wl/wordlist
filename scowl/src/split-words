@@ -14,26 +14,26 @@ comm -12 working/words.$1 working/british_z.lst \
 comm -12 working/words.$1 working/canadian.lst \
   > working/canadian-all.$1.pre
 
-comm -12 working/words.$1 working/variant_0.lst   \
-  > working/variant_0-all.$1.pre
-
 comm -12 working/words.$1 working/variant_1.lst   \
   > working/variant_1-all.$1.pre
 
 comm -12 working/words.$1 working/variant_2.lst   \
   > working/variant_2-all.$1.pre
 
-comm -12 working/words.$1 working/british_variant_0.lst   \
-  > working/british_variant_0-all.$1.pre
+comm -12 working/words.$1 working/variant_3.lst   \
+  > working/variant_3-all.$1.pre
 
 comm -12 working/words.$1 working/british_variant_1.lst   \
   > working/british_variant_1-all.$1.pre
 
-comm -12 working/words.$1 working/canadian_variant_0.lst   \
-  > working/canadian_variant_0-all.$1.pre
+comm -12 working/words.$1 working/british_variant_2.lst   \
+  > working/british_variant_2-all.$1.pre
 
 comm -12 working/words.$1 working/canadian_variant_1.lst   \
   > working/canadian_variant_1-all.$1.pre
+
+comm -12 working/words.$1 working/canadian_variant_2.lst   \
+  > working/canadian_variant_2-all.$1.pre
 
 cat working/*-all.$1.pre         \
   | sort | uniq                  \

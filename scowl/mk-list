@@ -29,16 +29,16 @@ my %spelling_map = qw(en-us american en-gb british? en-gb-ise british
                       en-gb-ize british_z en-gb-oed british_z en-ca canadian);
 $spelling_map{$_} = $_
     foreach (qw(english special american british canadian
-                variant_0 variant_1 variant_2 
-                british_variant_0 british_variant_1
-                canadian_variant_0 canadian_variant_1));
+                variant_1 variant_2 variant_3 
+                british_variant_1 british_variant_2
+                canadian_variant_1 canadian_variant_2));
 
 die "Cannot specify both --with-variants and --variants" if $with_variants && $variants_str;
 $variants_str = "non" unless defined $variants_str || defined $with_variants;
-$variants_str = join(',', 'non', 0..$with_variants) if defined $with_variants;
+$variants_str = join(',', 'non', 1..$with_variants) if defined $with_variants;
 my %use_variant_level;
 foreach (split ',', $variants_str) {
-    die "Invalid variant num: $_" unless /^(non|[012])$/;
+    die "Invalid variant num: $_" unless /^(non|[123])$/;
     $use_variant_level{$_} = 1;
 }
 
@@ -63,13 +63,13 @@ $SPS{$_} = 1 foreach (@SPS);
 $SPS{english} = 1 unless $no_implied;
 $SPS{special} = 1 unless $no_implied;
 
-$SPS{variant_0} = 1 if $SPS{american} && $use_variant_level{0}; 
-$SPS{variant_1} = 1 if $SPS{american} && $use_variant_level{1};
-$SPS{british_variant_0} = 1 if ($SPS{british} || $SPS{british_z}) && $use_variant_level{0};
+$SPS{variant_1} = 1 if $SPS{american} && $use_variant_level{1}; 
+$SPS{variant_2} = 1 if $SPS{american} && $use_variant_level{2};
 $SPS{british_variant_1} = 1 if ($SPS{british} || $SPS{british_z}) && $use_variant_level{1};
-$SPS{canadian_variant_0} = 1 if $SPS{canadian} && $use_variant_level{0};
+$SPS{british_variant_2} = 1 if ($SPS{british} || $SPS{british_z}) && $use_variant_level{2};
 $SPS{canadian_variant_1} = 1 if $SPS{canadian} && $use_variant_level{1};
-$SPS{variant_2} = 1 if $use_variant_level{2};
+$SPS{canadian_variant_2} = 1 if $SPS{canadian} && $use_variant_level{2};
+$SPS{variant_3} = 1 if $use_variant_level{3};
 
 unless ($use_variant_level{non}) {
     delete $SPS{$_} foreach (@SPS);

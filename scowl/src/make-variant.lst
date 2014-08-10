@@ -134,9 +134,9 @@ start \
   | add r/varcon/other-v1.lst        \
   | add r/varcon/variant-nonamer-v0-filtered.lst \
   | add r/varcon/variant-nonamer-v1-filtered.lst \
-  | add r/special/variant_0          \
+  | add r/special/variant_1          \
   | rem r/special/never-variant      \
-  > working/variant_0-pre.lst
+  > working/variant_1-pre.lst
 
 start \
   | add working/variant-yes.lst      \
@@ -144,31 +144,31 @@ start \
   | add r/varcon/american-v2.lst     \
   | add r/varcon/other-v2.lst        \
   | add r/varcon/variant-nonamer-v2-filtered.lst \
-  | add r/special/variant_1          \
-  | rem working/variant_0-pre.lst    \
+  | add r/special/variant_2          \
+  | rem working/variant_1-pre.lst    \
   | rem r/special/never-variant      \
-  > working/variant_1-pre.lst
+  > working/variant_2-pre.lst
 
 start \
   | add working/variant-nonamer-yes.lst \
   | add r/varcon/american-v3.lst     \
   | add r/varcon/other-v3.lst        \
-  | add r/special/variant_2          \
+  | add r/special/variant_3          \
   | add r/varcon/variant-nonamer-v0.lst \
   | add r/varcon/variant-nonamer-v1.lst \
   | add r/varcon/variant-nonamer-v2.lst \
   | add r/varcon/variant-nonamer-v3.lst \
+  | rem working/variant_2-pre.lst    \
   | rem working/variant_1-pre.lst    \
-  | rem working/variant_0-pre.lst    \
   | rem r/special/never-variant      \
-  > working/variant_2-pre.lst
+  > working/variant_3-pre.lst
 
 #
 # Generate special never-variant list
 #
 
 start \
-  | add working/variant_0-pre.lst \
+  | add working/variant_1-pre.lst \
   | egrep "wards?$"               \
   | add r/special/never-variant   \
   > working/never-variant.lst
@@ -180,74 +180,74 @@ start \
 
 start \
   | add r/infl/variant_0.lst         \
-  | rem working/variant_2-pre.lst | rem working/variant_1-pre.lst    \
-  | add working/variant_0-pre.lst    \
-  | rem working/never-variant.lst \
-  > working/variant_0.lst
-
-start \
-  | add r/infl/variant_1.lst         \
-  | rem working/variant_2-pre.lst    \
+  | rem working/variant_3-pre.lst | rem working/variant_2-pre.lst    \
   | add working/variant_1-pre.lst    \
-  | add r/infl/variant_0.lst         \
-  | rem working/variant_0.lst        \
   | rem working/never-variant.lst \
   > working/variant_1.lst
 
 start \
-  | add r/infl/variant_2.lst         \
+  | add r/infl/variant_1.lst         \
+  | rem working/variant_3-pre.lst    \
   | add working/variant_2-pre.lst    \
-  | add r/infl/variant_1.lst  | add r/infl/variant_0.lst         \
-  | rem working/variant_1.lst | rem working/variant_0.lst        \
+  | add r/infl/variant_0.lst         \
+  | rem working/variant_1.lst        \
   | rem working/never-variant.lst \
   > working/variant_2.lst
+
+start \
+  | add r/infl/variant_2.lst         \
+  | add working/variant_3-pre.lst    \
+  | add r/infl/variant_1.lst  | add r/infl/variant_0.lst         \
+  | rem working/variant_2.lst | rem working/variant_1.lst        \
+  | rem working/never-variant.lst \
+  > working/variant_3.lst
 
 #
 # Make brit. and can. variant lists
 # 
 
 start \
-  | add working/variant_0.lst\
+  | add working/variant_1.lst\
   | rem r/varcon/all-amer.lst\
   | add r/varcon/british-v0.lst\
   | add r/varcon/british-v1.lst\
   | add r/varcon/british_z-v0.lst\
   | add r/varcon/british_z-v1.lst\
   | rem r/varcon/british-common.lst\
-  > working/british_variant_0.lst
-
-start \
-  | add working/variant_1.lst\
-  | rem r/varcon/all-amer.lst\
-  | add r/varcon/british-v2.lst\
-  | add r/varcon/british_z-v2.lst\
-  | rem working/british_variant_0.lst\
-  | rem r/varcon/british-common.lst\
   > working/british_variant_1.lst
 
 start \
-  | add working/variant_0.lst\
+  | add working/variant_2.lst\
+  | rem r/varcon/all-amer.lst\
+  | add r/varcon/british-v2.lst\
+  | add r/varcon/british_z-v2.lst\
+  | rem working/british_variant_1.lst\
+  | rem r/varcon/british-common.lst\
+  > working/british_variant_2.lst
+
+start \
+  | add working/variant_1.lst\
   | rem r/varcon/all-amer.lst\
   | add r/varcon/canadian-v0.lst\
   | add r/varcon/canadian-v1.lst\
   | rem r/varcon/canadian.lst\
-  > working/canadian_variant_0.lst
+  > working/canadian_variant_1.lst
 
 start \
-  | add working/variant_1.lst\
+  | add working/variant_2.lst\
   | rem r/varcon/all-amer.lst\
   | add r/varcon/canadian-v2.lst\
-  | rem working/canadian_variant_0.lst\
+  | rem working/canadian_variant_1.lst\
   | rem r/varcon/canadian.lst\
-  > working/canadian_variant_1.lst
+  > working/canadian_variant_2.lst
 
 #
 # Now fix up american/british/canadian lists to make sure we don't
 # leave anything out
 # 
 
-cat working/variant_{0,1,2}.lst \
-    working/{british,canadian}_variant_{0,1}.lst \
+cat working/variant_{1,2,3}.lst \
+    working/{british,canadian}_variant_{1,2}.lst \
     r/varcon/{american,british+,british_z,canadian+}.lst \
   | sort -u > working/variant-somewhere.lst
 

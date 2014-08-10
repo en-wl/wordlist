@@ -80,7 +80,7 @@ sub lookup($$@) {
         }
         if ($res) {
             if ($res->[0]{variant} > $di->{max_variant}) {
-                my $v = $res->[0]{variant} + 1;
+                my $v = $res->[0]{variant};
                 push @notes, "level $v variant [3]";
                 $active_notes{3} = 1;
             }

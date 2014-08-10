@@ -27,9 +27,9 @@ naming convention:
   <spelling category>-<sub-category>.<size>
 Where the spelling category is one of
   english, american, british, british_z, canadian, 
-  variant_0, varaint_1, variant_2,
-  british_variant_0, british_variant_1,
-  canadian_variant_0, canadian_variant_1,
+  variant_1, variant_2, variant_3,
+  british_variant_1, british_variant_2,
+  canadian_variant_1, canadian_variant_2,
 Sub-category is one of
   abbreviations, contractions, proper-names, upper, words
 And size is one of
@@ -59,15 +59,15 @@ is included in the main list (with some minor exceptions).  When two
 variants were considered equal I randomly picked one for inclusion in
 the main word list.  Unfortunately this means that my choice in how to
 spell a word may not match your choice.  If this is the case you can
-try including one of the "variant_0" spelling categories which
+try including one of the "variant_1" spelling categories which
 includes most variants which are considered almost equal.  The
-"variant_0" spelling category corresponds mostly to American variants,
-while the "british_variant_0" and "canadian_variant_0" are for British
-and Canadian variants, respectively.  The "variant_1" spelling
+"variant_1" spelling category corresponds mostly to American variants,
+while the "british_variant_1" and "canadian_variant_1" are for British
+and Canadian variants, respectively.  The "variant_2" spelling
 categories include variants which are also generally considered
-acceptable, and "variant_2" contains variants which are seldom used
+acceptable, and "variant_3" contains variants which are seldom used
 and may not even be considered correct.  There is no
-"british_variant_2" or "canadian_variant_2" spelling category since
+"british_variant_3" or "canadian_variant_3" spelling category since
 the distinction would be almost meaningless.
 
 The "abbreviation" category includes abbreviations and acronyms which
@@ -168,6 +168,11 @@ From Revision 4a to 5 (January 3, 2002)
   the non-variant lists.
 
   Moved rarely used inflections of a word into higher number lists.
+
+From 7.1
+
+  Shifted the variant levels so that level 0 is now 1, level 1 now 2,
+  and level 2 now 3.
 
   Added other inflections of a words based on the following criteria
     If the word is in the base form: only include that word.

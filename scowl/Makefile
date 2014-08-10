@@ -67,13 +67,13 @@ working/all.lst working/all.lst-unfiltered: \
   src/make-all.lst $(shell find l/supplement/ l/add-affixes/ l/add-possessive -type l)
 	$<
 
-working/variant_0.lst working/variant_1.lst working/variant_2.lst: \
+working/variant_1.lst working/variant_2.lst working/variant_3.lst: \
   src/make-variant.lst         r/alt12dicts/variant-also.lst \
   r/alt12dicts/variant-yes.lst r/alt12dicts/variant-maybe.lst \
   r/infl/variant_0.lst  r/infl/variant_1.lst  r/infl/variant_2.lst \
   r/varcon/british.lst r/varcon/british_z.lst r/varcon/canadian.lst \
   r/varcon/w_variant-amer.lst r/varcon/w_variant-nonamer.lst  \
-  r/special/variant_0  r/special/variant_1  r/special/variant_2 \
+  r/special/variant_1  r/special/variant_2  r/special/variant_3 \
   r/special/never-variant
 	touch working/possessive-also.lst
 	$<

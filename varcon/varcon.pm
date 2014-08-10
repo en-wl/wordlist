@@ -13,7 +13,7 @@ our @EXPORT_OK = qw(readline flatten get_words filter %map MAX_VARIANT_LEVEL);
 
 our %map = qw(A american B british Z british_z C canadian _ other);
 our %vmap = ('' =>  -1, '.' => 0, 'v' => 1, 'V' => 2, '-' => 3, 'x' => 8,
-                       '0' => 0, '1' => 1, '2' => 2, '3' => 3, '8' => 8);
+                        '0' => 0, '1' => 1, '2' => 2, '3' => 3, '8' => 8);
 our %rmap = ('' => '', 
             -1 => '', 0 => '.', 1 => 'v', 2 => 'V', 3 => '-', 8 => 'x');
 

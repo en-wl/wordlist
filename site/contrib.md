@@ -6,9 +6,12 @@ title: Help / Contributing
 Suggestions for new words is always welcome but please note that I am
 fairly selective about letting new words in that are not in one of my
 source lists.  New words entering the lexicon and names of popular
-well known products are more likely to be accepted.  Please submit
-these requests as [issues on
-github](https://github.com/kevina/wordlist/issues).
+well known products are more likely to be accepted.
+Please submit these requests as [issues on
+github](https://github.com/kevina/wordlist/issues), but before
+submitting please first use the [this 
+tool](http://app.aspell.net/lookup) to check if a word is in the
+latest dictionary.
 
 If you are looking for ways to contribute then browsing through the
 issues labeled ["Help

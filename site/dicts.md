@@ -15,4 +15,11 @@ English are also available for Hunspell.
   including ones for British English. [More Info](/hunspell-readme).
 * <a href="http://ftp.gnu.org/gnu/aspell/dict/en/">Aspell Dictionaries</a>
 
+You can use this [simple web app](http://app.aspell.net/lookup) to
+check if a word is in the latest dictionary.
+
+If none of the these dictionaries are suitable to your needs you can
+create your own from the information in SCOWL using this [simple
+tool](http://app.aspell.net/create).
+
 [Other English Dictionaries](/other-dicts)

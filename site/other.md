@@ -18,16 +18,6 @@ to be 100% accurate.
 (<i>rev 4</i>) 
 [source](http://github.com/kevina/wordlist)        
 
-## Part Of Speech Database
-
-The Part Of Speech Database is a combination of "Moby (tm)
-Part-of-Speech II" and the WordNet database.
-
-<a href="/pos-readme">readme</a>,
-<a href="http://downloads.sourceforge.net/wordlist/pos-1.tar.gz">tar.gz</a>,
-<a href="http://downloads.sourceforge.net/wordlist/pos-1.zip">zip</a>,
-[source](http://github.com/kevina/wordlist)        
-
 ## Unofficial Jargon File Word Lists
 
 The Unofficial Jargon File Word Lists is a collection of useful Word Lists created 
@@ -36,6 +26,20 @@ from the [Jargon file](http://en.wikipedia.org/wiki/Jargon_File).
 <a href="/jargon-wl-readme">readme</a>,
 <a href="http://downloads.sourceforge.net/wordlist/jargon-wl-4.2.0-1.tar.gz">tar.gz</a>,
 [source](http://github.com/kevina/wordlist)        
+
+## Part Of Speech Database
+
+The Part Of Speech Database is a combination of "Moby (tm)
+Part-of-Speech II" and the WordNet database.
+
+<a href="/pos-readme">readme</a>,
+<a href="http://downloads.sourceforge.net/wordlist/pos-1.tar.gz">tar.gz</a>,
+<a href="http://downloads.sourceforge.net/wordlist/pos-1.zip">zip</a>,
+[source](http://github.com/kevina/wordlist)
+
+_Please note that this is not a very high quality source.  For common
+words the [2of12id.txt](/alt12dicts-infl-readme) file from the
+[Alternate 12 Dicts Package](/12dicts) is better._
 
 ## Ispell English Word Lists
 
@@ -46,6 +50,9 @@ Ispell.
 <a href="/ispell-enwl-readme">readme</a>,
 <a href="http://downloads.sourceforge.net/wordlist/ispell-enwl-3.1.20.tar.gz">tar.gz</a>,
 <a href="http://downloads.sourceforge.net/wordlist/ispell-enwl-3.1.20.zip">zip</a>
+
+_This package is provided for historical purposes.  The Ispell lists
+are no longer directly used by SCOWL._
 
 ## Other Sources
 

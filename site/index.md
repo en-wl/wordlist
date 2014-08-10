@@ -2,27 +2,44 @@
 layout: page
 ---
 
-SCOWL (Spell Checker Oriented Word Lists) is a database of English
-words that can be used to create word lists suitable for use in spell
-checkers of various sizes and dialects (America, British (both -ise
-and -ize) and Canadian).  However, I am sure it will have numerous
-other uses as well.
+SCOWL (Spell Checker Oriented Word Lists) and Friends is a database of
+information on English words useful for creating high-quality word
+lists suitable for use in spell checkers of most dialects of English.
+The database primary contains information on how common a word is,
+differences in spelling between the dialects if English, spelling
+variant information, and (basic) part-of-speech and inflection
+information.
+
+SCOWL itself is a compilation of the information in the database into
+a set of simple word lists that can be combined to create speller
+dictionaries of various sizes and dialects (American, British (both
+-ise and -ize) and Canadian).
 
 [View readme](/scowl-readme).
 Download rev 7.1 as: [tar.gz](http://downloads.sourceforge.net/wordlist/scowl-7.1.tar.gz) (Unix EOL),
 [zip](http://downloads.sourceforge.net/wordlist/scowl-7.1.zip) (DOS/Windows EOL).
 [Get source](http://github.com/kevina/wordlist).
 
-The main product of SCOWL are [spell checker dictionaries](dicts) for
-Hunspell and Aspell.
+[Premade dictionaries](dicts) are available for Hunspell, Aspell, and
+as plain wordlists.  If none of those dictionaries are suitable for
+your needs a simple [web app](http://app.aspell.net/create) is
+available to create a customized wordlist.
 
-SCOWL was created by carefully combing many other high quality
-wordlists.  The creation of SCOWL also lead to many other useful
-artifacts.
+[VarCon](varcon) (Variant Conversion) is the primary source of
+spelling differences and variant information.  It can also be used to
+convert between American, British and Canadian spellings.
 
-One of the main sources used by SCOWL is Alan Beale [12Dicts](12dicts)
-package.
+Alan Beale [12Dicts](12dicts) is another main source of information in
+SCOWL.  It contains a variety of lists, of different sizes and
+characteristics that are used by SCOWL.
 
-One of the main artifacts created was the [VarCon](varcon) (Variant
-Conversion) database, that can be used to convert between American,
-British and Canadian dictionaries.
+The [2of12id.txt](alt12dicts-infl-readme) file, in the alternative
+version of 12Dicts, is the primary source of part-of-speech and
+inflection information, however it is limited to common words.
+[AGID](agid-readme) contains more words but also likely to contain
+more errors.
+
+The SCOWL collection contains many [others pieces of
+information](other).  Most of these are in the forms of other word
+lists.
+

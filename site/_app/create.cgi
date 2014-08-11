@@ -66,8 +66,8 @@ my %sizes = (10 => "10",
              55 => "55",
              60 => "60 (default)",
              70 => "70 (large)",
-             80 => "80",
-             95 => "95");
+             80 => "80 (huge)",
+             95 => "95 (insane)");
 set_param_from_form('max_size', [keys %sizes]);
 my $sizes_html = make_option_list("max_size",$param{max_size},[sort keys %sizes],\%sizes);
 

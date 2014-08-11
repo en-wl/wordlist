@@ -50,6 +50,12 @@ doit() {
 
   cp $SCOWL/speller/en.aff $1.aff
   
+  if [ "$SCOWL_VERSION" ]; then
+    fn="$1-$SCOWL_VERSION"
+  else
+    fn="$1"
+  fi
+
   WHAT="$1 Hunspell Dictionary" sh $SCOWL/speller/README_en.txt.sh > README_$1.txt
   if [ -z "$3" ]; then
     echo "Wordlist Command: $2" >> README_$1.txt
@@ -57,12 +63,12 @@ doit() {
     cat $3 >> README_$1.txt
   fi
 
-  rm -f $1.zip
-  zip -9 $1.zip README_$1.txt $1.dic $1.aff
+  rm -f hunspell-$fn.zip
+  zip -9 hunspell-$fn.zip README_$1.txt $1.dic $1.aff
 
   if [ -z "$3" ]; then
     mkdir -p hunspell
-    cp $1.zip hunspell/
+    cp hunspell-$fn.zip hunspell/
 
     #echo check
 
@@ -70,8 +76,12 @@ doit() {
 
     #hunspell -l -d ./$1 < $1.dic.tocheck > misspelled
 
-    mv $1.tocheck hunspell/$1.txt
-    gzip -9f hunspell/$1.txt
+    cat $1.tocheck | iconv -f iso-8859-1 -t utf-8 | unix2dos > $1.txt
+    cat <<EOF > README.txt
+This zip file contains the words found in the corresponding Hunspell
+dictionary.  See the file README_$1.txt.
+EOF
+    zip -9 hunspell/wordlist-$fn.zip README.txt README_$1.txt $1.txt
   fi
 }
 

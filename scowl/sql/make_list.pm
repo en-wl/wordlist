@@ -138,7 +138,7 @@ sub make_hunspell_dict ( $$$ ) {
     }
     close F;
     chdir $cwd;
-    return "$dir/$name.zip";
+    return "$dir/hunspell-$name.zip";
 }
 
 sub copyright() {

@@ -2,8 +2,7 @@ Unofficial Alternate 12Dicts package (Alt12Dicts)
 Files by Alan Beale
 Packaged by Kevin Atkinson
 
-Revision 4
-August 6, 2004
+Version 2014.08.11
 
 The files contained in this archive are the result of a rather
 extensive conversation between me (Kevin Atkinson) and Alan Beale, the
@@ -18,7 +17,7 @@ different way.
 This package corresponds to Version 4.0 of the official 12Dicts package.
 
 The latest version of this package and the official 12Dicts package can
-be found at http://aspell.sourceforge.net/wl/.
+be found at http://wordlist.aspell.net/
 
 The file README-orig contains the original Readme file distributed
 with the official 12Dicts package.  README-infl contains the Readme

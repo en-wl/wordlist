@@ -1,11 +1,13 @@
 Automatically Generated Inflection Database (AGID)
 
-Copyright 2000-2011 by Kevin Atkinson <kevina@gnu.org>
+Version 2014.08.11
+
+Copyright 2000-2014 by Kevin Atkinson <kevina@gnu.org>
 
 The file "infl.txt" is an automatically created database of the
 inflected forms of words from a rather large word list.
 
-The latest version can be found at http://wordlist.sourceforge.net
+The latest version can be found at http://wordlist.aspell.net
 
 Entries are in the following form.
 
@@ -171,6 +173,10 @@ The file "make-all" was used to create the word list used by the script.
 
 CHANGES:
 
+From Rev 4 to Ver 2014.08.11
+
+  Misc. changes to sync up with what is being used by SCOWL.
+
 From Revision 3a to 4 (January 2, 2003)
 
   Added variant-wroot.tab
@@ -209,7 +215,7 @@ COPYRIGHT AND SOURCE:
 The final product is under the following copyright, as well as any
 copyrights mentioned below.
 
-  Copyright 2000-2003 by Kevin Atkinson
+  Copyright 2000-2014 by Kevin Atkinson
 
   Permission to use, copy, modify, distribute and sell this database,
   the associated scripts, the output created form the scripts and its

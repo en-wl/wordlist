@@ -12,10 +12,10 @@ AGID is an Automatically Generated Inflection Database from an
 insanely large word list. My goal is for the non-questionable entries
 to be 100% accurate.
 
-<a href="/agid-readme">readme</a>.
-<a href="http://downloads.sourceforge.net/wordlist/agid-4.tar.gz">tar.gz</a>, 
-<a href="http://downloads.sourceforge.net/wordlist/agid-4.zip">zip</a>
-(<i>rev 4</i>) 
+<a href="/agid-readme">readme</a>,
+<a href="http://downloads.sourceforge.net/wordlist/agid-2014.08.11.tar.gz">tar.gz</a>, 
+<a href="http://downloads.sourceforge.net/wordlist/agid-2014.08.11.zip">zip</a>
+(2014-08-11) 
 [source](http://github.com/kevina/wordlist)        
 
 ## Unofficial Jargon File Word Lists

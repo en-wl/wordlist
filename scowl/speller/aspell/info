@@ -7,11 +7,11 @@ author:
   email kevina at gnu org
 copyright Copyrighted
 mode aspell6
-version 7.1-0
-source-version 7.1
+version 2014.08.11-0
+source-version 2014.08.11
 complete true
 accurate true
-url http://wordlist.sourceforge.net/
+url http://wordlist.aspell.net/
 #doc-encoding iso-8859-1
 alt-encoding iso-8859-1 iso
 readme-extra extra.txt iso-8859-1

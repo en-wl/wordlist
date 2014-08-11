@@ -1,16 +1,14 @@
 Variant Conversion Info (VarCon)
 
-Revision 5.1 (SVN Revision 161)
+Version 2014.08.11
 
-January 6, 2011
-
-Copyright 2000-2011 by Kevin Atkinson (kevina@gnu.org)
+Copyright 2000-2014 by Kevin Atkinson (kevina@gnu.org)
 
 This package contains information to convert between American,
 British, and Canadian spellings and vocabulary as well and other
 variant information.
 
-The latest version can be found at http://wordlist.sourceforge.net/.
+The latest version can be found at http://wordlist.aspell.net/.
 
 The main data file is varcon.txt.  It contains information on the
 preferred American, British, and Canadian spelling of a word as well
@@ -199,8 +197,8 @@ The file varcon.pm contains some library routines for parsing
 varcon.txt and is used by many of the scripts above.
 
 If you discover any errors in these mappings or have suggestions for
-additions please file a bug report, which you can find instructions
-for at http://wordlist.sourceforge.net/, or alternativly email me
+additions please file a bug report at
+https://github.com/kevina/wordlist/issues, or alternativly email me
 directly at kevina@gnu.org, but I will likely tell you to file a bug
 report so that I don't forget about it.
 
@@ -278,6 +276,18 @@ his data using the dictionaries above.  (However, his data is, by far,
 more accurate than Tysto's)
 
 CHANGELOG:
+
+From Revision 5.1 to Version 2014.08.11 (August 8, 2014)
+
+   - Various corrections.  Most of them minor.  Two notable exceptions:
+
+       - Added an entry for furor as the correct British spelling is furore
+
+       - Fixed racket entries as Canadians still use racquet even
+         though it is a British English (at least according to the
+         Oxford dictionaries)
+
+   - Other minor changes.
 
 From Revision 5.0 to Revision 5.1 (January 6, 2010)
 

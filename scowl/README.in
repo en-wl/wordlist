@@ -1,12 +1,13 @@
 Spell Checking Oriented Word Lists (SCOWL)
-@`git log --pretty=format:'%cd [%h]' -n 1 -- .`
+@`if [ "$SCOWL_VERSION" ]; then echo -n "Version $SCOWL_VERSION"; fi`
+@`git log --pretty=format:'%cd [%h]' -n 1 --`
 by Kevin Atkinson (kevina@gnu.org)
 
 The SCOWL is a collection of word lists split up in various sizes, and
 other categories, intended to be suitable for use in spell checkers.
 However, I am sure it will have numerous other uses as well.
 
-The latest version can be found at http://wordlist.sourceforge.net/.
+The latest version can be found at http://wordlist.aspell.net/.
 
 The directory final/ contains the actual word lists broken up into
 various sizes and categories.  The r/ directory contains Readmes from
@@ -80,7 +81,7 @@ Finally the "words" category contains all the normal English words.
 To give you an idea of what the words in the various sizes look like
 here is a sample of 25 random words found only in that size:
 
-@`src/rand-samples`
+@`src/rand-samples | iconv -f iso-8859-1 -t utf-8`
 
 And here is a count on the number of words in each spelling category
 (american + english spelling category):
@@ -108,6 +109,28 @@ the 95 size is labeled insane for a reason.
 Accents are present on certain words such as café in iso8859-1 format.
 
 CHANGES:
+
+From Revision 7.1 to Version 2014.08.11 (August 11, 2014)
+
+  Added some missing possessive forms.
+
+  Added some new words and proper names.
+
+  Clean up the categories (words, upper, proper-names etc) so that they
+  are more accurate.
+
+  Convert documentation to UTF-8.  For now, the wordlist are still in
+  ISO-8859-1 to prevent compatibility problems.
+
+  Add schema and scripts for creating a SQLite database from SCOWL.
+  Add some utility and library functions using them.  This database is
+  used by the new web app's (http://app.aspel.net/lookup & create).
+
+  Enhance speller/make-hunspell-dict.  The biggest improvement is that
+  it that it now generates several more dictionaries in addition to
+  the official ones.  These additional dictionaries are ones for
+  British English and larger dictionaries that include up to SCOWL
+  size 70.
 
 From Revision 7 to 7.1 (January 6, 2011)
 
@@ -269,11 +292,11 @@ RECREATING THE WORD LISTS:
 In order to recreate the word lists you need a modern version of Perl,
 bash, the traditional set of shell utilities, a system that supports
 symbolic links, and quite possibly GNU Make.  The easiest way to
-recreate the word lists is to checkout SVN revision 162 (or tag
-scowl-7.1) and simply type "make" (see http://wordlist.sourceforge.net).
-You can try to download all the pieces manually, but you may not get
-the same result since the latest version of some parts used to create
-SCOWL may not have been released yet.
+recreate the word lists is to checkout the corresponding git version
+(see the version string at the start of the file) and simply type
+"make" (see http://wordlist.aspell.net).  You can try to download all
+the pieces manually, but this method is not no longer tested nor
+supported.
 
 The src/ directory contains the numerous scripts used in the creation
 of the final product. 

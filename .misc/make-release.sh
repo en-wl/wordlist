@@ -3,7 +3,7 @@ set -x
 
 #Update all the README and checkin the results.
 
-#Define SCOWL_README
+#Define SCOWL_VERSION
 
 test -e git/.git
 test -e git/scowl/README.in

@@ -34,7 +34,7 @@ cp git-fr/scowl/speller/hunspell/*  release/speller/$SCOWL_VERSION
 
 set +x
 cat <<EOF
-Please check ever is in order and then
+Please check everthing is in order and then
   1) ( cd release; rsync -v -n -a --delete . frs.sourceforge.net:/home/frs/project/wordlist/ )
   2) ( cd git-fr; git push -n git@github.com:kevina/wordlist.git rel-$SCOWL_VERSION )
   3) ( cd git-fr/site; _tasks/deploy )

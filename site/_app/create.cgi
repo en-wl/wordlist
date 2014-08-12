@@ -37,7 +37,7 @@ sub make_check_list ($$$$) {
     my $res = '';
     foreach my $k (@$keys) {
         my $checked = (grep {$k eq $_} @$default) ? "checked" : "";
-        $res .= qq ` <input type="checkbox" name="$name" value="$k" $checked>$values->{$k}`
+        $res .= qq ` <label for="$name-$k"><input type="checkbox" id="$name-$k" name="$name" value="$k" $checked>$values->{$k}</label>`
     }
     return $res;
 }
@@ -201,7 +201,7 @@ SCOWL Size: $sizes_html
 <p>
 Spelling(s): $spellings_html
 <p>
-Include Variants up to Level: $variant_html
+Include Spelling Variants up to Level: $variant_html
 <p>
 Diacritic Handling (for example café): $accents_html
 <p>
@@ -213,7 +213,7 @@ Special Lists to Include: $special_html
 </select>
 Format: <select name="format">
   <option value="inline">Inline
-  <option value="tar.gz">tar.gz (Unix-EOL)
+  <option value="tar.gz">tar.gz (Unix EOL)
   <option value="zip">zip (Windows EOL)
 </select>
 <br>

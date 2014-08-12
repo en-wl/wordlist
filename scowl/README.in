@@ -292,7 +292,7 @@ RECREATING THE WORD LISTS:
 In order to recreate the word lists you need a modern version of Perl,
 bash, the traditional set of shell utilities, a system that supports
 symbolic links, and quite possibly GNU Make.  The easiest way to
-recreate the word lists is to checkout the corresponding git version
+recreate the word lists is to checkout the corresponding Git version
 (see the version string at the start of the file) and simply type
 "make" (see http://wordlist.aspell.net).  You can try to download all
 the pieces manually, but this method is not no longer tested nor
@@ -302,7 +302,7 @@ The src/ directory contains the numerous scripts used in the creation
 of the final product. 
 
 The r/ directory contains the raw data used to create the final
-product.  If you checkout from SVN this directory should be populated
+product.  If you checkout from Git this directory should be populated
 automatically for you.  If you insist on doing it the hard way see the
 README file in the r/ directory for more information.
 

@@ -189,7 +189,7 @@ print <<"---";
 <body>
 <p>
 Use this tool to create and download custimized Word Lists or Hunspell
-dictionaries using <a href="http://wordlist.aspell.net/">SCOWL</a>.
+dictionaries from <a href="http://wordlist.aspell.net/">SCOWL</a>.
 </p>
 <p>
 Using defaults for <b>$defaults</b> dictionary.
@@ -218,12 +218,11 @@ Format: <select name="format">
 </select>
 <br>
 <button type="submit" name="download" value="hunspell">Download as Hunspell Dictionary</button><br>
-<button type="reset">Reset to Defaults</button><br>
+<button type="reset">Reset to Defaults</button>
+<p>
+<i>
+For additional help on the meaning of any of these options please see the <a href="http://wordlist.aspell.net/scowl-readme/">SCOWL Readme</a>.
+</i>
 </form>
 </body>
 ---
-
-
-
-
-

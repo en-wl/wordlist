@@ -110,6 +110,17 @@ Accents are present on certain words such as café in iso8859-1 format.
 
 CHANGES:
 
+From Version 2014.08.11 to 2014.08.11.1 (August 13, 2014)
+
+  Forgot to mention this important change from 7.1 to 2014.08.11:
+
+    Shifted the variant levels up by one: variant_0 is now variant_1,
+    variant_1 is now variant_2, and variant_2 is now variant_3.
+
+  Other minor fixes in this README.
+
+  No changes to the contents of the lists.
+
 From Revision 7.1 to Version 2014.08.11 (August 11, 2014)
 
   Added some missing possessive forms.

@@ -158,9 +158,15 @@ sub get_words($) {
 }
 
 sub filter(\$;$) {
+	my $level;
     ${$_[0]} =~ s/^([^#\n]*)(.*)/$1/;
     ${$_[1]} = $2 if defined $_[1] && $2 ne '';
+    my $comment = $2;
+    if ( $comment =~ /\(level (\d+)\)/ ) {
+        $level = $1;
+    }
     ${$_[0]} =~ s/\s+$//;
-    return 1 if ${$_[0]} eq '';
+    
+    return \$level if ${$_[0]} eq '';
     return 0;
 }

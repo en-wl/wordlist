@@ -26,7 +26,7 @@ The following dictionaries are available:
 
   en_US (American)
   en_CA (Canadian)
-  en_GB-ise (British with "ize" spelling)
+  en_GB-ise (British with "ise" spelling)
   en_GB-ize (British with "ize" spelling)
 
   en_US-large

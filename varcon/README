@@ -15,12 +15,12 @@ preferred American, British, and Canadian spelling of a word as well
 as other variant information.
 
 Each line contains a mapping between the various spellings of a word.
-Words are tageed to indicate where the spelling is used, and each
+Words are tagged to indicate where the spelling is used, and each
 word/tag pair is separated with a " / ".  For example in the line:
   A Cv: acknowledgment / Av B C: acknowledgement
 "acknowledgment" and "acknowledgement" are two spellings of the same
-word and "A", "Cv", "B", etc are the tags.  Tags are seperated by
-spaces and the group of tags is seperated from the word with a ": ".
+word and "A", "Cv", "B", etc are the tags.  Tags are separated by
+spaces and the group of tags is separated from the word with a ": ".
 Here, "acknowledgment" is the preferred American spelling (as
 indicated by the "A") of the word, and "acknowledgement" is the
 preferred Canadian and British spelling ("B" and "C").  However the
@@ -33,7 +33,7 @@ More generally each tag consists of a spelling category (for example
 categories are as follows:
   A: American
   B: British "ise" spelling
-  Z: British "ize" spelling or OED prefered Spelling
+  Z: British "ize" spelling or OED preferred Spelling
   C: Canadian
   _: Other (Variant info based on American dictionaries, never used
             with any of the above).
@@ -62,7 +62,7 @@ If there are no tags with the 'Z' spelling category on the line than
 
 For ease of reading and maintaining the data file, each line is
 grouped in a cluster of closely related words.  Each cluster is
-uniquely identifed by a headword, which is generally the American
+uniquely identified by a headword, which is generally the American
 spelling of word on the first line of the cluster.  Each cluster is
 started with a '#' and is followed by the headword with some
 additional information after it.  For example the cluster for
@@ -72,8 +72,8 @@ acknowledgment is:
   A Cv: acknowledgments / Av B C: acknowledgements
   A Cv: acknowledgment's / Av B C: acknowledgement's
 The "<verified>" tag will be explained latter, and "(level 35)"
-indictated what level in SCOWL (see http://wordlist.sourceforge.net) 
-the headword is found in.  The levels generaly mean the following:
+indicate what level in SCOWL (see http://wordlist.sourceforge.net) 
+the headword is found in.  The levels generally mean the following:
   <= 35: Very common word
   <= 70: Can be found in the dictionary
      80: Likely a valid word, can likely be found in an
@@ -82,7 +82,7 @@ the headword is found in.  The levels generaly mean the following:
 
 Sometimes the spelling of a word depends on the usage.  If so the word
 is listed more than once within a cluster, with any usage information
-being indicated after a " | ".  For example here is part of the cluser
+being indicated after a " | ".  For example here is part of the cluster
 for prize:
   A B: prize | reward
   A B: prizes | reward
@@ -96,7 +96,7 @@ consists of a number, for example:
   A B: sake | :1
   A C: sake / Av B Cv: saki | :2
 
-Sometimes part-of-speach (POS) info is given to help distinguish which
+Sometimes part-of-speech (POS) info is given to help distinguish which
 form is used.  For example:
   A B C: practice / AV Cv: practise | <N>
   A Cv: practice / AV B C: practise | <V>
@@ -108,7 +108,7 @@ follows:
   <Adj>: Adjective
   <Adv>: Adverb
 
-A "(-)" before the definition indicated a rarly used or archaic form
+A "(-)" before the definition indicated a rarely used or archaic form
 of a word, for example:
   A B: bark | :1
   A: bark / Av B: barque | (-) ship
@@ -151,7 +151,7 @@ included the root form of the word.
 
 The file voc.tab is similar to varcon.txt but converts between
 vocabulary instead of spelling.  Unlike varcon.tab it is a simple tab
-seperated file with the fields correspoding to the American, British,
+separated file with the fields corresponding to the American, British,
 and Canadian words.  If more than one word if often used to describe
 the same thing the words are separated with commas.  The last column
 contains additional notes on when the word is used.  Unlike varcon.txt
@@ -169,7 +169,7 @@ where <spelling> is one of: american, british, british_z, canadian,
 common, or other.  "common" is used for words which appear in
 varcon.txt, yet are used in all versions of english, such as "prize",
 and "other" is used for the "_" spelling category.  The mapping from
-the variant indicators in varcon.txt to the numberic variant level is
+the variant indicators in varcon.txt to the numeric variant level is
 as follows:
   v => 0
   V => 1
@@ -198,7 +198,7 @@ varcon.txt and is used by many of the scripts above.
 
 If you discover any errors in these mappings or have suggestions for
 additions please file a bug report at
-https://github.com/kevina/wordlist/issues, or alternativly email me
+https://github.com/kevina/wordlist/issues, or alternatively email me
 directly at kevina@gnu.org, but I will likely tell you to file a bug
 report so that I don't forget about it.
 
@@ -223,7 +223,7 @@ created by Garst R. Reese <reese@isn.net>:
 Many other words have been added to abc.tab which were not in the
 original Ispell word lists.
 
-Many different web sources were consuled when crating the tables.  They
+Many different web sources were consulted when crating the tables.  They
 include:
 
   The American-British British-American Dictionary
@@ -241,7 +241,7 @@ include:
   Inter-Play Translation: British/Canadian/American Vocabulary
     http://www.inter-play.com/translation/voc-ukus.htm
 
-As well as several online dicionaries:
+As well as several online dictionaries:
 
   Marriam-Webster: http://www.m-w.com/
   American Heritage: http://www.bartleby.com/61/

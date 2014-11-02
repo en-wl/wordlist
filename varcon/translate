@@ -30,7 +30,7 @@ while ($#ARGV != -1) {
             "  -i,--include  include words where the translation is questionable\n",
             "<translation array> is the file name of the translation array,\n",
             "                    defaults to \"abbc.tab\".\n",
-            "<from> and <to> are one of: american, british, or canadian\n";
+            "<from> and <to> are one of: american, british, british_z, or canadian\n";
         exit (0);
     } elsif ($p eq '-') {
         &usage if $#what != 1;

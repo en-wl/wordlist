@@ -9,7 +9,7 @@ use Carp;
 
 use Exporter ();
 our @ISA = qw(Exporter);
-our @EXPORT_OK = qw(readline flatten get_words filter %map MAX_VARIANT_LEVEL);
+our @EXPORT_OK = qw(readline flatten get_words filter get_cluster %map MAX_VARIANT_LEVEL);
 
 our %map = qw(A american B british Z british_z C canadian _ other);
 our %vmap = ('' =>  -1, '.' => 0, 'v' => 1, 'V' => 2, '-' => 3, 'x' => 8,
@@ -163,4 +163,14 @@ sub filter(\$;$) {
     ${$_[0]} =~ s/\s+$//;
     return 1 if ${$_[0]} eq '';
     return 0;
+}
+
+sub get_cluster(\*) {
+    local $/ = "\n\n";
+    local $_ = CORE::readline $_[0];
+    return undef unless defined $_;
+    die "Expected cluster to start with comment" unless /^\#/;
+    my ($headword) = /^# +([[:alpha:]_'-]+)/ or die "Could not extract word from cluster.";
+    my ($level) = /^\# .+ \(level (\d\d)\)/m or die "Could not extract level from cluster.";
+    return {headword => $headword, level => $level, data => $_};
 }

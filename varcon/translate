@@ -13,6 +13,7 @@ $from = -1;
 @what = (\$from, \$to);
 $file = "varcon.txt";
 $ques = 0;
+$thresh = 80;
 
 while ($#ARGV != -1) {
     $p = shift @ARGV;
@@ -20,6 +21,9 @@ while ($#ARGV != -1) {
         $ques = 2;
     } elsif ($p eq "--include" || $p eq "-i") {
         $ques = 1;
+    } elsif ($p eq "--thresh" || $p eq "-t") {
+        $thresh = shift;
+        &usage if ($thresh < 0 || $thresh > 100);
     } elsif ($p eq '-h' || $p eq '--help' || $p eq '-?') {
         print 
             "translate 1.1 by Kevin Atkinson\n",
@@ -28,6 +32,7 @@ while ($#ARGV != -1) {
             "  -?,-h,--help this screen\n",
             "  -m,--mark     mark words where the translation is questionable\n",
             "  -i,--include  include words where the translation is questionable\n",
+            "  -t,--thresh <num> only use entres with SCOWL level <= <num>\n",
             "<translation array> is the file name of the translation array,\n",
             "                    defaults to \"abbc.tab\".\n",
             "<from> and <to> are one of: american, british, british_z, or canadian\n";
@@ -73,13 +78,17 @@ sub add(\@$) {
     push @{$_[0]}, $_[1];
 }
 
-while (<IN>) {
-    next if varcon::filter $_;
-    my %r = varcon::readline($_);
-    foreach my $f ($from eq '-' ? (grep {$_ ne $to} keys %varcon::map) : $from) {
-        foreach my $v (0..3) {
-            foreach (@{$r{$f}[$v]}) {
-                add @{$trans{$_}}, $r{$to}[0][0];
+while (my $d = varcon::get_cluster IN) {
+    my @lines = split "\n", $d->{data};
+    next unless $d->{level} <= $thresh;
+    foreach (@lines) {
+        next if varcon::filter $_;
+        my %r = varcon::readline($_);
+        foreach my $f ($from eq '-' ? (grep {$_ ne $to} keys %varcon::map) : $from) {
+            foreach my $v (0..3) {
+                foreach (@{$r{$f}[$v]}) {
+                    add @{$trans{$_}}, $r{$to}[0][0];
+                }
             }
         }
     }

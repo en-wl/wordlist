@@ -26,7 +26,7 @@ while ($#ARGV != -1) {
         &usage if ($thresh < 0 || $thresh > 100);
     } elsif ($p eq '-h' || $p eq '--help' || $p eq '-?') {
         print 
-            "translate 1.1 by Kevin Atkinson\n",
+            "translate 1.2 by Kevin Atkinson\n",
             "Usage: $0 <options> [<translation array>] <from> <to>\n",
             "<options> is any of\n",
             "  -?,-h,--help this screen\n",

@@ -10334,10 +10334,6 @@ A Z: foolhardized / B: foolhardised
 A Z: foolhardizing / B: foolhardising
 A Z: foolhardizes / B: foolhardises
 
-# For (level 95)
-A: For / B: Four
-A: For's / B: Four's
-
 # forb (level 70)
 A: forb / B: fourb
 
@@ -11978,10 +11974,6 @@ A: hectometer's / B: hectometre's
 
 # hed (level 80)
 A: hed / B: haed
-
-# Heer (level 70)
-A: Heer / B: Here
-A: Heer's / B: Here's
 
 # Hegelianize (level 95)
 A Z: Hegelianize / B: Hegelianise
@@ -28587,10 +28579,6 @@ _: topi / _v: topis | <pl> [topi] antelope
 
 # topesthesia (level 95)
 A: topesthesia / B: topaesthesia
-
-# Tor (level 95)
-A: Tor / B: Tour
-A: Tor's / B: Tour's
 
 # toret (level 95)
 A: toret / B: touret

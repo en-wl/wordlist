@@ -22,8 +22,8 @@ Download Version 2014.08.11 as: [tar.gz](http://downloads.sourceforge.net/wordli
 
 [Premade dictionaries](dicts) are available for Hunspell, Aspell, and
 as plain wordlists.  If none of those dictionaries are suitable for
-your needs a simple [web app](http://app.aspell.net/create) is
-available to create a customized wordlist.
+your needs a simple web app is available to 
+[create a customized wordlist](http://app.aspell.net/create).
 
 [VarCon](varcon) (Variant Conversion) is the primary source of
 spelling differences and variant information.  It can also be used to

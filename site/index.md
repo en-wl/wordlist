@@ -25,6 +25,9 @@ as plain wordlists.  If none of those dictionaries are suitable for
 your needs a simple web app is available to 
 [create a customized wordlist](http://app.aspell.net/create).
 
+A simple web app is also available to 
+[check if a word is in SCOWL](http://app.aspell.net/lookup).
+
 [VarCon](varcon) (Variant Conversion) is the primary source of
 spelling differences and variant information.  It can also be used to
 convert between American, British and Canadian spellings.

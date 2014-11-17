@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ssh j.kevina.org "cd /opt/app && cp wordlist/.misc/update-web-app-server-side.sh update.sh && sh update.sh"

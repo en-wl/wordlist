@@ -16,8 +16,8 @@ dictionaries of various sizes and dialects (American, British (both
 -ise and -ize) and Canadian).
 
 [View readme](/scowl-readme).
-Download Version 2014.08.11 as: [tar.gz](http://downloads.sourceforge.net/wordlist/scowl-2014.08.11.1.tar.gz) (Unix EOL),
-[zip](http://downloads.sourceforge.net/wordlist/scowl-2014.08.11.1.zip) (DOS/Windows EOL).
+Download Version 2014.11.17 as: [tar.gz](http://downloads.sourceforge.net/wordlist/scowl-2014.11.17.tar.gz) (Unix EOL),
+[zip](http://downloads.sourceforge.net/wordlist/scowl-2014.11.17.zip) (DOS/Windows EOL).
 [Get source](http://github.com/kevina/wordlist).
 
 [Premade dictionaries](dicts) are available for Hunspell, Aspell, and

@@ -279,7 +279,7 @@ CHANGELOG:
 
 From 2014.08.11 to 2014.11.17 (November 17, 2014)
 
-   - Update typos in README
+   - Fix typos in README
 
    - Enhancement to VarCon translate script.  It will now, by default,
      filter clusters with a SCOWL level > 80.  This behavior can be

@@ -31,7 +31,7 @@ The following dictionaries are available:
 
   en_US-large
   en_CA-large
-  en_GB-large (with both "ize" and "ise" spelling)
+  en_GB-large (with both "ise" and "ize" spelling)
 
 The normal (non-large) dictionaries correspond to SCOWL size 60 and,
 to encourage consistent spelling, generally only include one spelling

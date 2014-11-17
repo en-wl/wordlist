@@ -53,6 +53,7 @@ Please check everthing is in order and then
   1) ( cd release; rsync -v -n -a --delete . frs.sourceforge.net:/home/frs/project/wordlist/ )
   2) ( cd git-fr; git push -n git@github.com:kevina/wordlist.git master rel-$SCOWL_VERSION )
   3) ( cd git-fr/site; _tasks/deploy )
+  4) ( cd git-fr; .misc/update-web-app )
   4) Go to https://sourceforge.net/projects/wordlist/files/SCOWL/$SCOWL_VERSION/
      and update default version.
 EOF

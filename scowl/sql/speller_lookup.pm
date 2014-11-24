@@ -25,6 +25,8 @@ sub lookup($$@) {
                              "(not d.US or l.US) and (not d.GBs or l.GBs) and (not d.GBz or l.GBz) and (not d.CA or l.CA)");
     my $try3 = $dbh->prepare("select * from lookup where word = ?");
 
+    my $other_case = $dbh->prepare("select distinct word from lookup where word = :0 collate nocase and word <> :0");
+
     my $dis = $dbh->prepare("select * from dict_info where dict = ?");
     $dis->execute($dict);
     my $di = $dis->fetchrow_hashref;
@@ -43,7 +45,7 @@ sub lookup($$@) {
     };
     
     my $lookup = sub {
-        my ($dict,$word) = @_;
+        my ($word) = @_;
         my $res;
         
         $try1->execute($dict,$word);
@@ -60,10 +62,8 @@ sub lookup($$@) {
 	return $res3;
     };
 
-    foreach (@words) {
-	my ($word) = /^[ \r\n]*(.*?)[ \r\n]*$/;
-	next if $word eq '';
-        my $res = $lookup->($dict,$word);
+    my $to_table_row = sub {
+        my ($word,$res) = @_;
         my $found = 0;
         my $found_in = "";
         my @notes;
@@ -98,9 +98,37 @@ sub lookup($$@) {
                 $active_notes{6} = 1;
             }
         }
-        push @table, [$word, $found, $found_in, join("; ", @notes)];
-    }
+        return [$word, $found, $found_in, join("; ", @notes)];
+    };
 
+    foreach (@words) {
+	my ($word) = /^[ \r\n]*(.*?)[ \r\n]*$/;
+	next if $word eq '';
+        my $res = $lookup->($word);
+        my $row = $to_table_row->($word,$res);
+        push @table, $row;
+        next if $row->[1];
+        $other_case->execute($word);
+        my $res2 = $other_case->fetchall_arrayref;
+        my @other_cases = map {$_->[0]} @$res2;
+        # If all uppercase except all otherwise lowercase the first
+        # character and see if that is in the list
+        my @others;
+        if ($word =~ /^[[:upper:]]/) {
+            @others = @other_cases;
+        } else {
+            my $lower = lcfirst($word);
+            @others = grep {$_ eq $lower} @other_cases;
+        }
+        foreach my $w (@others) {
+            my $res = $lookup->($w);
+            my $row = $to_table_row->($w,$res);
+            $row->[3] .= '; ' if $row->[3] ne '';
+            $row->[3] .= "case changed from original word \"$word\" [7]";
+            push @table, $row;
+            $active_notes{7} = 1
+        }
+    }
     return {dict => $dict, table => \@table, active_notes => \%active_notes}
 }
 
@@ -128,6 +156,11 @@ my $notes_text = <<'---';
 
 [6] This word was created by removing diacritic marks (for example,
     café becomes cafe)
+
+[7] This case of the word was changed in a similar manor as if the
+    word was looked up in a spellchecker (for example, Swim -> swim,
+    IPAD -> iPad, IPad -> iPad).
+
 ---
 our %notes;
 foreach (split /\n\n/, $notes_text) {

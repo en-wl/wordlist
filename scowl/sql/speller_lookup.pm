@@ -25,7 +25,7 @@ sub lookup($$@) {
                              "(not d.US or l.US) and (not d.GBs or l.GBs) and (not d.GBz or l.GBz) and (not d.CA or l.CA)");
     my $try3 = $dbh->prepare("select * from lookup where word = ?");
 
-    my $other_case = $dbh->prepare("select distinct word from lookup where word = :0 collate nocase and word <> :0");
+    my $other_case = $dbh->prepare("select distinct word from lookup where word_lower = ? and word <> ?");
 
     my $dis = $dbh->prepare("select * from dict_info where dict = ?");
     $dis->execute($dict);
@@ -108,7 +108,7 @@ sub lookup($$@) {
         my $row = $to_table_row->($word,$res);
         push @table, $row;
         next if $row->[1];
-        $other_case->execute($word);
+        $other_case->execute(lc($word),$word);
         my $res2 = $other_case->fetchall_arrayref;
         my @other_cases = map {$_->[0]} @$res2;
         # If all uppercase except all otherwise lowercase the first

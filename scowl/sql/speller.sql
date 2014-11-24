@@ -8,6 +8,7 @@
 
 create table speller_words (
   word text,
+  word_lower text,
   pid integer -- source list if any
 );
 
@@ -43,7 +44,7 @@ insert into dict_info (dict,onum,US,GBs,GBz,CA,max_variant,max_size) values ('en
 
 --drop view if exists lookup;
 create view lookup as 
-  select word, iid, spid, coalesce(d.US and i.US,i.US) US, coalesce(d.GBs and i.GBs,i.GBs) GBs, coalesce(d.GBz and i.GBz, i.GBz) GBz, coalesce(d.CA and i.CA,i.CA) CA, SP, variant, category, size, speller_words.pid, added, accented, coalesce(onum,9) onum, dict
+  select word, word_lower, iid, spid, coalesce(d.US and i.US,i.US) US, coalesce(d.GBs and i.GBs,i.GBs) GBs, coalesce(d.GBz and i.GBz, i.GBz) GBz, coalesce(d.CA and i.CA,i.CA) CA, SP, variant, category, size, speller_words.pid, added, accented, coalesce(onum,9) onum, dict
     from speller_words join (info join post using (iid)) as i using (pid) left join (speller join dict_info using (did)) as d using (pid)
 order by word,onum,added,SP,size,variant;
 

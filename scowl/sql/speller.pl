@@ -29,7 +29,14 @@ while (my ($word,$iid) = $sth->fetchrow_array) {
 $dbh->do("delete from post");
 $dbh->do("insert into post (iid,added,accented) select distinct iid,added,accented from words_pre");
 $dbh->do("delete from speller_words");
-$dbh->do("insert into speller_words (word,pid) select word,pid from words_pre join post using(iid,added,accented)");
+
+$sth = $dbh->prepare("select word,pid from words_pre join post using(iid,added,accented)");
+$sth->execute;
+$ins = $dbh->prepare("insert into speller_words (word,word_lower,pid) values (?,?,?)");
+
+while (my ($word,$pid) = $sth->fetchrow_array) {
+    $ins->execute($word,lc($word),$pid)
+}
 
 $dbh->commit;
 $dbh->disconnect;

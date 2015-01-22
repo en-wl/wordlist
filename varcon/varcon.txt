@@ -28059,9 +28059,6 @@ A B: technicolored / BV: technicoloured
 # technologize (level 80)
 A Z: technologize / B: technologise
 
-# ted (level 55)
-A: ted / B: taed
-
 # teer (level 80)
 A: teer / B: teaer
 A: teers / B: teres

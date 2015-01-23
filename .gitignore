@@ -15,7 +15,8 @@ pos/*
 scowl/.symbolic-deps
 scowl/README
 scowl/scowl.db
-scowl/final/
+scowl/*.tab
+scowl/final*/
 scowl/debug/
 scowl/l/levels-list
 scowl/src/deaccent
@@ -25,3 +26,4 @@ uk-freq-class/*
 ukacd/*
 varcon/*
 yawl/*
+site/serve/*

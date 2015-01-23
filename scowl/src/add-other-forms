@@ -15,7 +15,7 @@ while (<F>) {
     s/ \| / /g; s/ \/ / /g;
     push @a, (split / /, $_);
   }
-  @a = grep {!/^[@~-]/} @a;  # remove questionable entries
+  @a = grep {!/^[@~!-]/} @a;  # remove questionable entries
   # @a now conatins a list of valid inflected forms
   @a0 = grep {$_ ne "'"} @a;
   # @a0 is now the same as @a except for the placeholder entries

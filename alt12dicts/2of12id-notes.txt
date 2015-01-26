@@ -86,3 +86,35 @@ Common sense.  This seems to be a minority opinion, but I claim a
 usage like "Our pancake house offers twenty-eight different syrups" is
 not in any way unusual.  The Macmillan Dictionary for Advanced
 Learners backs me up on this.
+
+Date: Thu, 22 Jan 2015 20:42:18 -0500
+From: Alan Beale
+
+Thursday, January 22, 2015, 8:25:13 PM, Kevin Atkinson wrote:
+
+> In the 2of12id file 
+> (https://raw.githubusercontent.com/kevina/wordlist/master/alt12dicts/2of12id.txt)
+> you gave a while back you marked optimization as uncountable. However, the
+> plural form "optimizations" is in common usage, see: 
+>
+https://books.google.com/ngrams/graph?content=optimization%2Coptimizations&year_start=1800&year_end=2000&corpus
+=15&smoothing=3&share=&direct_url=t1%3B%2Coptimization%3B%2Cc0%3B.t1%3B%2Coptimizations%3B%2Cc0
+
+> Do you still think think optimization in uncountable?
+
+Let me put it this way. The sources from which 12dicts was compiled
+indicate that it is uncountable. Now, I am compiler-savvy, and know
+that in that area, optimization is certainly countable. One of my
+sources gives an example where it talks about optimization of business
+practices, and I don't know if the use of the term by non-computer
+guys has become countable or not. It wouldn't surprise me either way.
+
+I'll think about changing the 2of12inf file - I have already gone
+against the dictionaries on that issue for a few words, so it wouldn't
+be that big a deal. At any rate, whatever I decide, it seems
+reasonable for you to mark it countable in any places where you
+ordinarily accept the 12dicts rulings, which I presume would make your
+user base happy. (I don't know when a new release of 12dicts will
+occur, by the way, but I have started adding new neologisms to the
+neologism file, which is mainly what a new release consists of these
+days.)

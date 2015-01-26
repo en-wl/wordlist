@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use utf8;
+
+use open ':std' => ':encoding(iso-8859-1)';
+
+use lib 'sql/';
+use make_list qw(%standard get_wordlist);
+
+my $dict = $ARGV[0] or die "Usage: make_list <dict>";
+
+my $parms = $standard{$dict} or die "Unknown dict: $dict\n";
+
+my $words = get_wordlist("scowl.db", $parms);
+
+foreach (@$words) {
+    print "$_\n";
+}

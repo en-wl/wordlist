@@ -1,0 +1,34 @@
+#!/bin/sh
+
+export LC_ALL=C
+export LANG=C
+
+to_sort() {
+cat <<EOF
+abbreviations
+abbreviations-also
+add-possessive
+letters
+name-endings
+names-part
+never-abbreviations
+never-variant
+not-possessive
+not-upper
+proper-names
+roman-numerals
+signature.35
+signature.50
+signature.60
+signature.70
+unix-terms
+variant_1
+variant_2
+variant_3
+EOF
+}
+
+for f in `to_sort`
+do
+    sort -u $f -o $f
+done

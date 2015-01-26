@@ -8,7 +8,7 @@ if [ -e scowl.db ]; then
 fi
 
 perl sql/to-sql.pl 
-sqlite3 scowl.db < sql/schema.sql
+sqlite3 scowl.db < sql/create.sql
 
 sqlite3 scowl.db < sql/speller.sql
 perl sql/speller.pl

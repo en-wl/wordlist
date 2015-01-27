@@ -68,11 +68,20 @@ then
     mv working/words.$level.tmp2 working/words.$level.tmp
   fi
 
+  truncate -s0 working/exclude.$level
+  for l in `cat l/levels-list`; do
+    if [ $l -ge $level -a -e r/special/exclude.$l ]; then
+        cat r/special/exclude.$l >> working/exclude.$level
+    fi
+  done
+  sort -u working/exclude.$level -o working/exclude.$level
+
   cat working/words.$level.tmp    \
     | cap other-spellings-1 src/add-other-spellings \
     | cap other-forms       src/add-other-forms     \
     | cap other-spellings-2 src/add-other-spellings \
     | sort -u                 \
+    | comm -23  - working/exclude.$level \
     | comm -12  - working/words.`src/get-level next $level` \
     > working/words.$level
 

@@ -6,6 +6,12 @@ set -x
 #Define SCOWL_VERSION
 #Define PREV_VERSION
 
+if [ -z "$SCOWL_VERSION" -o -z "$PREV_VERSION" ]
+then
+  echo 'define $PREV_VERSION and $SCOWL_VERSION'
+  exit 1
+fi
+
 test -e git/.git
 test -e git/scowl/README.in
 

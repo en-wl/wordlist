@@ -2,6 +2,12 @@
 set -e
 set -x
 
+if [ -z "$SCOWL_VERSION" -o -z "$PREV_VERSION" ]
+then
+  echo 'define $PREV_VERSION and $SCOWL_VERSION'
+  exit 1
+fi
+
 ( cd git-fr
   git tag -f rel-$SCOWL_VERSION )
 

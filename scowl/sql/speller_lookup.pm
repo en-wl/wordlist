@@ -169,21 +169,29 @@ foreach (split /\n\n/, $notes_text) {
     $notes{$1} = $2;
 }
 
-sub to_html( $ ) {
-    my $d = $_[0];
+sub to_html( $ ; &) {
+    my ($d,$header_mod) = (@_);
     print "<table border=1 cellpadding=2>\n";
-    print "<tr><th>Word<th>In $d->{dict}<th>Found In<th>Notes</tr>\n";
+    {
+	local $_ = "<tr><th>Word<th>In $d->{dict}<th>Found In<th>Notes</tr>\n";
+	$header_mod->() if defined $header_mod;
+	print;
+    }
     foreach my $row (@{$d->{table}}) {
         print "<tr>";
-        my ($w,$f,$fin,$n) = @$row;
+        my ($w,$f,$fin,$n,@extra) = @$row;
         print "<td>$w</td>";
         if ($f) {print "<td>YES</td>"}
         else    {print "<td><font color=\"ff0000\">NO</font></td>"}
         print "<td>$fin</td>";
         print "<td>$n</td>";
+	foreach my $cell (@extra) {
+	    if (ref $cell) {print "<td $cell->[0]>$cell->[1]</td>"}
+	    else           {print "<td>$cell</td>"}
+	}
         print "</tr>\n";
     }
-    print "<table>\n";
+    print "</table>\n";
     print "<p>\n";
     foreach my $n (sort {$a <=> $b} keys %{$d->{active_notes}}) {
         print "[$n] $notes{$n}<br>\n";

@@ -878,7 +878,8 @@ A Z: analogizing / B: analogising
 A Z: analogizes / B: analogises
 
 # analytic (level 35)
-_: analytic / _v: analytical
+_: analytic | linguistics
+_: analytical / _.: analytic
 
 # analytically (level 50)
 _: analytically / _v: analyticalally

@@ -1,8 +1,8 @@
 Variant Conversion Info (VarCon)
 
-Version 2014.11.17
+Version 2015.01.28
 
-Copyright 2000-2014 by Kevin Atkinson (kevina@gnu.org)
+Copyright 2000-2015 by Kevin Atkinson (kevina@gnu.org)
 
 This package contains information to convert between American,
 British, and Canadian spellings and vocabulary as well and other
@@ -276,6 +276,14 @@ his data using the dictionaries above.  (However, his data is, by far,
 more accurate than Tysto's)
 
 CHANGELOG:
+
+From 2014.11.17 to 2015.01.28 (January 28, 2005)
+
+   - Minor adjustments to a few entries (analytic, amid)
+
+   - Added entry for shareable
+
+   - Remove a junk entry (ted/taed).
 
 From 2014.08.11 to 2014.11.17 (November 17, 2014)
 

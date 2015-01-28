@@ -1,4 +1,12 @@
-Changes from Revision 5.0 to Version 2014.08.11 (August 11, 2004)
+Changes from Version 2014.08.11 to 2015.01.28 (January 28, 2015)
+
+- marked inflected forms of some adjectives with a ! when they were
+  so uncommon that not there where not found in the Google Book's
+  corpus(1980-2008).
+
+- added note to why optimization is marked as uncountable
+
+Changes from Revision 5.0 to Version 2014.08.11 (August 11, 2014)
 
 - minor fixes to some of the files to correct errors
 

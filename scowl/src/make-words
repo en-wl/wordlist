@@ -68,7 +68,7 @@ then
     mv working/words.$level.tmp2 working/words.$level.tmp
   fi
 
-  truncate -s0 working/exclude.$level
+  echo -n '' > working/exclude.$level
   for l in `cat l/levels-list`; do
     if [ $l -ge $level -a -e r/special/exclude.$l ]; then
         cat r/special/exclude.$l >> working/exclude.$level

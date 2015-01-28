@@ -25921,6 +25921,9 @@ _: shard / _v: sherd | pottery fragments
 _: shards / _v: sherds | pottery fragments
 _: shard's / _v: sherd's | pottery fragments
 
+# shareable (level 60)
+_: shareable / _v: sharable
+
 # sharpie (level 60)
 _: sharpie / _v: sharpy
 _: sharpie's / _v: sharpy's

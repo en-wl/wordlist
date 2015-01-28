@@ -749,7 +749,9 @@ A Z: Americanizers / B: Americanisers
 A Z: Americanizer's / B: Americaniser's
 
 # amid <verified> (level 35)
-A B: amid / Av Bv: amidst # amidst literary variant according to oxford dictionaries
+A B: amid / Av Bv: amidst
+B: amidst | literary variant
+## amidst literary variant according to oxford dictionaries
 
 # ammocete (level 80)
 A: ammocete / B: ammocoete

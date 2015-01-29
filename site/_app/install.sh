@@ -14,3 +14,4 @@ install() {
 
 install lookup.cgi
 install create.cgi
+install lookup-freq.cgi

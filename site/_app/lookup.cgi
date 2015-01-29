@@ -1,9 +1,11 @@
 #!/usr/bin/perl -T
 
-use CGI;
+use CGI qw(escapeHTML);
 use strict;
 use warnings;
 use utf8;
+use IPC::Open2;
+use IO::Handle;
 
 use lib '/opt/app/wordlist/scowl/sql';
 use speller_lookup qw(lookup to_html);
@@ -18,7 +20,24 @@ utf8::upgrade($words);
 
 my $res;
 if ($words ne '') {
-    $res = lookup("/opt/app/wordlist/scowl/scowl.db",$dict,split /\n/,$words);
+  $res = lookup("/opt/app/wordlist/scowl/scowl.db",$dict,split /\n/,$words);
+  eval {
+    chdir '/opt/ngrams-lookup';
+    my $pid = open2(\*RDR,\*WTR,'./lookup', 'brief');
+    foreach my $row (@{$res->{table}}) {
+	print WTR "$row->[0]\n";
+	my $line = <RDR>;
+	die "readline failed: $!" unless defined $line;
+	my ($lower,$freq,$newness,$normal,$large) = split / *\| */, $line;
+	push @$row, "&nbsp;".($dict =~ /-large$/ ? $large : $normal);
+	push @$row, ['align="right"',"$freq&nbsp;"];
+	push @$row, ['align="right"',"$newness&nbsp;"];
+    }
+    close(WTR);
+    close(RDR);
+    waitpid $pid, 0
+  };
+  warn $@ if $@;
 }
 
 print $q->header();
@@ -32,6 +51,9 @@ foreach my $d (qw(en_US en_GB-ise en_GB-ize en_CA en_US-large en_GB-large en_CA-
 chdir '/opt/app/wordlist';
 my $git_ver = `git log --pretty=format:'%cd [%h]' -n 1`;
 
+my $words_url = CGI::escape($words);
+my $words_html = escapeHTML($words);
+
 print <<"---";
 <html>
 <head>
@@ -42,25 +64,50 @@ print <<"---";
 Use this utility to look up words in <a href="http://wordlist.aspell.net/">SCOWL</a>.
 </p>
 ---
-to_html($res) if defined $res;
+if (defined $res) {
+    to_html($res,sub {
+	s~<th>~<th rowspan=2>~g;
+	s~(</tr>)~<th colspan=3>Google Books Stats [*]</tr>~;
+	$_ .= qq'<tr><th>Should<br>Include<th>Frequency<br>(per million)<th>Newness</th>\n';});
+    print <<"---";
+
+[*] The "Google Book Stats" are stats based on the counts from the
+1-grams in <a
+href="http://storage.googleapis.com/books/ngrams/books/datasetsv2.html">Google's
+Books Ngram dataset</a> for books between 1980 and 2008.  The
+frequency count is without regard to case or dialect marks and does
+not include words with non-alphabetic characters.  The newness figure
+is a rough approximation of how new a word is, the larger the number
+the newer the word.  The "Should Include" score indicates if a word
+should or should not be considered for inclusion in the dictionary
+based on the frequency of the word in the corpus (1980-2008).  A word
+with 5 stars (*****), that is not already in the dictionary, should
+most likely be included unless there is a good reason not to.  A word
+with 3 stars (***) is still worth considering and a word with 1 star
+(*) should most likely not be considered.  A report sorted by
+frequency is <a href="lookup-freq?words=$words_url&similar=yes">also
+available</a>.
+
+---
+}
 print <<"---";
-<form>
+<form action="$ENV{SCRIPT_NAME}">
 <select name="dict">
 $dicts
 </select>
 <br>
 Enter one word per line, entries are case sensitive:
 <br>
-<textarea rows="10" cols="20" name="words">$words
-</textarea>
+<textarea rows="10" cols="20" name="words">$words_html</textarea>
 <br>
 <button type="submit">Submit</button>
 <button type="reset">Reset</button>
 </form>
+---
+print qq'<a href="$ENV{SCRIPT_NAME}">Start Over</a>' if defined $res;
+print <<"---";
 <pre>
 $git_ver
 </pre>
 </body>
 ---
-
-

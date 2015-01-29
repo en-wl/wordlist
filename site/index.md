@@ -16,8 +16,8 @@ dictionaries of various sizes and dialects (American, British (both
 -ise and -ize) and Canadian).
 
 [View readme](/scowl-readme).
-Download Version 2014.11.17 as: [tar.gz](http://downloads.sourceforge.net/wordlist/scowl-2014.11.17.tar.gz) (Unix EOL),
-[zip](http://downloads.sourceforge.net/wordlist/scowl-2014.11.17.zip) (DOS/Windows EOL).
+Download Version 2015.01.28 as: [tar.gz](http://downloads.sourceforge.net/wordlist/scowl-2015.01.28.tar.gz) (Unix EOL),
+[zip](http://downloads.sourceforge.net/wordlist/scowl-2015.01.28.zip) (DOS/Windows EOL).
 [Get source](http://github.com/kevina/wordlist).
 
 [Premade dictionaries](dicts) are available for Hunspell, Aspell, and
@@ -25,8 +25,14 @@ as plain wordlists.  If none of those dictionaries are suitable for
 your needs a simple web app is available to 
 [create a customized wordlist](http://app.aspell.net/create).
 
-A simple web app is also available to 
-[check if a word is in SCOWL](http://app.aspell.net/lookup).
+A simple web app is also available to [check if a word is in
+SCOWL](http://app.aspell.net/lookup).  This app also assigns a score
+that indicates if a word should or should not be considered for
+inclusion based on its frequency in Google Book's corpus (1980-2008).
+In addition, a [report sorted by
+frequency](http://app.aspell.net/lookup-freq) is available that also
+looks for similar more common words to help determine if adding the
+less common word might cause a problem.
 
 [VarCon](varcon) (Variant Conversion) is the primary source of
 spelling differences and variant information.  It can also be used to

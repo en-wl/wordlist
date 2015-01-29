@@ -33,9 +33,9 @@ information in a different way.
 
 <a href="/alt12dicts-readme">readme</a>,
 <a href="/alt12dicts-infl-readme">readme-infl</a>,
-<a href="http://downloads.sourceforge.net/wordlist/alt12dicts-2014.08.11.tar.gz">tar.gz</a>,
-<a href="http://downloads.sourceforge.net/wordlist/alt12dicts-2014.08.11.zip">zip</a>
-(2014-08-11) 
+<a href="http://downloads.sourceforge.net/wordlist/alt12dicts-2015.01.28.tar.gz">tar.gz</a>,
+<a href="http://downloads.sourceforge.net/wordlist/alt12dicts-2015.01.28.zip">zip</a>
+(2015-01-28) 
 [source](http://github.com/kevina/wordlist)        
 
 # Official

@@ -22,6 +22,7 @@ scowl/l/levels-list
 scowl/src/deaccent
 scowl/src/find-accented
 scowl/working/
+scowl/r/special/*.lst
 uk-freq-class/*
 ukacd/*
 varcon/*

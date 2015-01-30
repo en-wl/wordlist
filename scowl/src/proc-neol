@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+chdir "r/special";
+
+open IN, "neol2015.txt";
+
+my @words50;
+my @words80;
+
+$_ = <IN>;
+chomp;
+while (1) {
+    die unless defined $_;
+    last if $_ eq '';
+    my $word = $_;
+    $word =~ s/ *-> +\[.+\]//;
+    die "??>$word<" unless $word =~ /^[a-z]+$/;
+    push @words50, $word;
+    $_ = <IN>;
+    chomp;
+    my @words;
+    if (/\ +(.+)/) {
+        $_ = $1;
+        @words = split /, */;
+        foreach (@words) {s/ *-> +\[.+\]//}
+        $_ = <IN>;
+        chomp;
+    }
+    foreach (@words) {
+        if (s/\%$//) {push @words80, $_}
+        elsif (/^[a-z]+$/) {push @words50, $_}
+        else {die "???>$_<\n"}
+    }
+}
+
+while (<IN>) {
+    chomp;
+    next unless /^[A-Za-z\']+$/;
+    push @words50, $_;
+}
+
+open OUT, ">neol-50.lst";
+foreach (sort @words50) {print OUT "$_\n"}
+
+open OUT, ">neol-80.lst";
+foreach (sort @words80) {print OUT "$_\n"}

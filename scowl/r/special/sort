@@ -8,6 +8,7 @@ cat <<EOF
 abbreviations
 abbreviations-also
 add-possessive
+hacker-exclude
 letters
 name-endings
 names-part

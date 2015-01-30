@@ -81,3 +81,10 @@ neol2015.txt:
 Draft version of Alan Beale's latest neologism list.  See
 http://wordlist.aspell.net/12dicts-readme-r5/ for more details on the
 format of the list.
+
+hacker-exclude:
+
+List of words found in the hacker category that are not found anywhere
+in Google Book's corpus (1980-2008) and thus should in all likelihood
+not be included considering "words" such as FTPing, grepped, etc. are
+in the corpus.

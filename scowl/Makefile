@@ -123,8 +123,8 @@ working/with-accents.lst working/without-accents.lst: \
 final/special-roman-numerals.35: r/special/roman-numerals
 	cp $< $@
 
-final/special-hacker.50: l/hacker/*
-	cat $^ | sort -u > $@
+final/special-hacker.50: l/hacker/* r/special/hacker-exclude
+	cat l/hacker/* | sort -u | comm -23 - r/special/hacker-exclude > $@
 
 #
 # Modified form of Raw Lists

@@ -11,7 +11,7 @@ abbreviations-also:
 Some additional abbreviations which I did not want to include at the
 lower word list sizes.
 
-frequent.lst:
+frequent:
 
 A combination of the two top 1000 lists found in the mwords package.
 I carefully went though and weeded out words which where an artifact

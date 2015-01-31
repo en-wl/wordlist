@@ -52,9 +52,13 @@ roman-numerals:
 A list of roman numerous originally extracted from the ispell word
 lists.
 
-signature:
+signature.35:
 
 A small list of words that I thought really out to be at the 35 level.
+
+signature.??:
+
+Additional words to add at the respective level.
 
 unix-terms:
 
@@ -81,6 +85,13 @@ neol2015.txt:
 Draft version of Alan Beale's latest neologism list.  See
 http://wordlist.aspell.net/12dicts-readme-r5/ for more details on the
 format of the list.
+
+exclude.??:
+
+Words to exclude up to the specified level (and hence bump them to the
+next level.)  Used mostly for obscure words that are very similar to a
+far more common word and hence could mask the misspelling of the more
+common word.
 
 hacker-exclude:
 

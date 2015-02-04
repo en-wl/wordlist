@@ -14662,6 +14662,9 @@ _: junketeer's / _v: junketer's
 A Z: juvenilize / B: juvenilise
 A Z: juvenilizes / B: juvenilises
 
+# kabbalah (level ??)
+_: kabbalah / _v: cabala / _v: kabbala / _V: kabala / _V: cabbala / _V: cabbalah
+
 # kane (level 80)
 A: kane / B: kanae
 

@@ -12,6 +12,7 @@ exclude.60
 hacker-exclude
 letters
 name-endings
+name-endings.60
 names-part
 never-abbreviations
 never-variant
@@ -30,6 +31,8 @@ variant_3
 marco-alan.60
 marco-alan.70
 marco.80
+high-freq.60
+high-freq.70
 EOF
 }
 

@@ -12965,6 +12965,9 @@ A: hoveling / B: hovelling
 A: hoveler / B: hoveller
 A: hovelers / B: hovellers
 
+#: hovercraft (level 50)
+_: hovercraft / _v: hovercrafts | -- plural
+
 # hucksterize (level 95)
 A Z: hucksterize / B: hucksterise
 A Z: hucksterizes / B: hucksterises

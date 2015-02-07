@@ -26,6 +26,8 @@ burka
 buzzkill
     buzzkills
 carbs
+cardio
+    cardios%
 cashback
     cashbacks%
 ciabatta
@@ -58,6 +60,8 @@ electronica
 emo
     emos
 emoji
+exoplanet
+    exoplanets
 fanboy
     fanboys
 fashionista
@@ -66,6 +70,8 @@ flipflop
     flipflopped, flipflopping, flipflops
 frack
     fracked, fracking, fracks
+fracking
+    frackings%
 geocache
     geocached, geocaches, geocaching
 geoengineering
@@ -314,6 +320,7 @@ zapper
 
 acid reflux
 al-Qaeda
+Anthropocene
 Asiago
 assisted living
 asymmetric warfare
@@ -366,6 +373,7 @@ f-bomb
 feng shui
 flash mob
 flight recorder
+gluten-free
 GPS
 greenhouse gas
 ground zero

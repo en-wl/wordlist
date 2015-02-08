@@ -27525,6 +27525,11 @@ A Z: surprizal / B: surprisal
 # sursize (level 95)
 A Z: sursize / B: sursise
 
+# surveil (level 70)
+_: surveil / _V: surveille
+## ODE lists surveille as a variant, m-w doesn't only acknowledges
+## "surveil"
+
 # swab (level 35)
 _: swab / _-: swob
 _: swabbed / _-: swobbed

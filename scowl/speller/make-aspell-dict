@@ -12,6 +12,14 @@ export LC_COLLATE=C
 
 SIZE=60
 
+if [ "$SCOWL_VERSION" ]; then
+  true
+elif git status 2>&1 > /dev/null; then
+  SCOWL_VERSION="`git log --pretty=format:'%cd-%h' --date=short -n 1 -- ..`"
+else
+  SCOWL_VERSION=unknown
+fi
+export SCOWL_VERSION
 
 mk-list() { ../mk-list -d final "$@"; }
 
@@ -27,15 +35,15 @@ mk-list en_GB-ize $SIZE > en_GB-ize-w_accents.twl
 mk-list en_CA     $SIZE > en_CA-w_accents.twl
 cat en_??-w_accents.twl | sort -u > en-w_accents.twl
 
-mk-list en_US $SIZE --variants 1 > en-variant_1.wl0
-mk-list en_US $SIZE --variants 1,2 > en-variant_2.wl0
-mk-list en_US $SIZE --variants 1,2,3 > en-variant_3.wl0
+mk-list en_US $SIZE --variants 1 > en-variant_0.wl0
+mk-list en_US $SIZE --variants 1,2 > en-variant_1.wl0
+mk-list en_US $SIZE --variants 1,2,3 > en-variant_2.wl0
 
-mk-list en_GB $SIZE --variants 1 > en_GB-variant_1.wl0
-mk-list en_GB $SIZE --variants 1,2 > en_GB-variant_2.wl0
+mk-list en_GB $SIZE --variants 1 > en_GB-variant_0.wl0
+mk-list en_GB $SIZE --variants 1,2 > en_GB-variant_1.wl0
 
-mk-list en_CA $SIZE --variants 1 > en_CA-variant_1.wl0
-mk-list en_CA $SIZE --variants 1,2 > en_CA-variant_2.wl0
+mk-list en_CA $SIZE --variants 1 > en_CA-variant_0.wl0
+mk-list en_CA $SIZE --variants 1,2 > en_CA-variant_1.wl0
 
 echo deaccent
 
@@ -76,6 +84,8 @@ done
 rm -f *.wl.* *.twl *.wl{0,1} *.vwl
 cp -p *.wl aspell/
 cp -p ../README aspell/doc/SCOWL-README
-cat aspell/Copyright.in ../Copyright > aspell/Copyright
+sh aspell/info.sh > aspell/info
+sh aspell/Copyright.sh > aspell/Copyright
+cat ../Copyright >> aspell/Copyright
 
 

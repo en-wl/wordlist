@@ -1,7 +1,3 @@
-2014.08.11
-
-  Updated to SCOWL 2014.08.11.
-
 7.1: January 6, 2011
 
   Updated to SCOWL 7.1 which corrected several errors and also added
@@ -21,7 +17,7 @@
   Updated to SCOWL 6 which avoided using the original Ispell
   dictionaries as they were a source of too many errors, among other
   changes.
-  
+
   Added en_GB-ize dictionary (British with "ize" spelling).
 
   Added en-variant_* auxiliary dictionaries.

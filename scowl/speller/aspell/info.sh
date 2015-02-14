@@ -1,3 +1,4 @@
+cat <<EOF
 name_english English
 lang en
 data-file en_phonet.dat
@@ -7,8 +8,8 @@ author:
   email kevina at gnu org
 copyright Copyrighted
 mode aspell6
-version 2014.08.11-0
-source-version 2014.08.11
+version $SCOWL_VERSION-0
+source-version $SCOWL_VERSION
 complete true
 accurate true
 url http://wordlist.aspell.net/
@@ -98,6 +99,4 @@ dict:
 dict:
   name en_CA-variant_1
   add  en_CA-variant_1
-
-
-
+EOF

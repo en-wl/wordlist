@@ -105,6 +105,10 @@ Draft version of Alan Beale's latest neologism list.  See
 http://wordlist.aspell.net/12dicts-readme-r5/ for more details on the
 format of the list.
 
+neol2015.poss:
+
+Possessive forms for words in neol2015.txt.
+
 exclude.??:
 
 Words to exclude up to the specified level (and hence bump them to the

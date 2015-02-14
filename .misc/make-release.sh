@@ -2,6 +2,7 @@ set -e
 set -x
 
 #Update all the README and checkin the results.
+#  that should include speller/aspell/doc/ChangeLog
 
 #Define SCOWL_VERSION
 #Define PREV_VERSION
@@ -79,6 +80,8 @@ fi
 #Speller:
   cd scowl/speller
   make aspell hunspell
-
-
-
+  cd aspell
+  ln -s ../../../../aspell-lang/proc
+  ./proc
+  ./configure
+  make dist

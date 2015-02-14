@@ -52,6 +52,7 @@ cp git-fr/stage/scowl-$SCOWL_VERSION/README release/SCOWL/$SCOWL_VERSION
 
 mkdir release/speller/$SCOWL_VERSION
 cp git-fr/scowl/speller/hunspell/*  release/speller/$SCOWL_VERSION
+cp git-fr/scowl/speller/aspell/*.tar.bz2 release/speller/$SCOWL_VERSION
 
 set +x
 cat <<EOF
@@ -62,4 +63,6 @@ Please check everthing is in order and then
   4) ( cd git-fr; .misc/update-web-app )
   4) Go to https://sourceforge.net/projects/wordlist/files/SCOWL/$SCOWL_VERSION/
      and update default version.
+  5) Go to https://misc.aspell.net/dict-submit/upload.php and upload Aspell 
+     dictionary at release/speller/$SCOWL_VERSION/aspell6-en-$SCOWL_VERSION-0.tar.bz2
 EOF

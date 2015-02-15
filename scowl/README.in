@@ -110,6 +110,17 @@ Accents are present on certain words such as café in iso8859-1 format.
 
 CHANGES:
 
+From Version 2015.01.28 to 2015.02.15 (February 15, 2015)
+
+  Added a large number of neologisms (newly invented words)
+  such as "selfie" and "smartwatch" thanks to Alan Beale.
+
+  Various other new words.
+
+  Clean up the special-hacker category by removing some words that
+  didn't exist is the Google Book's Corpus (1980 - 2008) and
+  originated from the "Unofficial Jargon File Word Lists".
+
 From Version 2014.11.17 to 2015.01.28 (January 28, 2015)
 
   Various new words, many from analyzing the Google Book's Corpus

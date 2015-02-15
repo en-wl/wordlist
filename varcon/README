@@ -1,6 +1,6 @@
 Variant Conversion Info (VarCon)
 
-Version 2015.01.28
+Version 2015.02.15
 
 Copyright 2000-2015 by Kevin Atkinson (kevina@gnu.org)
 
@@ -276,6 +276,10 @@ his data using the dictionaries above.  (However, his data is, by far,
 more accurate than Tysto's)
 
 CHANGELOG:
+
+From 2015.01.28 to 2014.02.15 (February 15, 2005)
+
+   - Various new entries
 
 From 2014.11.17 to 2015.01.28 (January 28, 2005)
 

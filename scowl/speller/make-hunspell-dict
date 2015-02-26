@@ -20,7 +20,12 @@ prep() {
 
   cat $SCOWL/misc/{offensive.1,offensive.2,profane.1} | sort -u > nosug
 
-  cp $SCOWL/speller/en.aff eng_affix.dat
+  # Aspell expects the dictionary to be in iso8859-1 so fake it for
+  # now.  The fact that the ICONV entry is in utf-8 is not a problem
+  # as Aspell ignores it.  The words them self are already in
+  # iso8859-1.
+  echo 'SET ISO8859-1' > eng_affix.dat
+  tail -n +2 $SCOWL/speller/en.aff >> eng_affix.dat
 
   cat << EOF > eng.dat
 name eng
@@ -46,7 +51,7 @@ doit() {
   cat $SCOWL/speller/en.dic.supp >> $1.2
 
   wc -l $1.2 | cut -d' ' -f1 > $1.dic
-  cat $1.2 | sort >> $1.dic
+  cat $1.2 | sort | iconv -f iso-8859-1 -t utf-8 >> $1.dic
 
   cp $SCOWL/speller/en.aff $1.aff
   

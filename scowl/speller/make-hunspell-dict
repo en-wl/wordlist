@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if [ -x /usr/bin/todos ]; then
+ UNIX2DOS=/usr/bin/todos
+elif [-x /usr/bin/unix2dos ]; then
+ UNIX2DOS=/usr/bin/unix2dos
+else
+ UNIX2DOS=/usr/bin/cat
+fi
+
 ASPELL=aspell
 HUNSPELL=hunspell
 : ${SCOWL:=..}
@@ -81,7 +89,7 @@ doit() {
 
     #hunspell -l -d ./$1 < $1.dic.tocheck > misspelled
 
-    cat $1.tocheck | iconv -f iso-8859-1 -t utf-8 | unix2dos > $1.txt
+    cat $1.tocheck | iconv -f iso-8859-1 -t utf-8 | $UNIX2DOS > $1.txt
     cat <<EOF > README.txt
 This zip file contains the words found in the corresponding Hunspell
 dictionary.  See the file README_$1.txt.
@@ -105,8 +113,8 @@ then
   doit en_GB-ise "mk-list en_GB-ise $SIZE | deaccent"
 
   with-and-without-accents() { 
-    tmp1=`mktemp tmp-XXX`
-    tmp2=`mktemp tmp-XXX`
+    tmp1=`mktemp`
+    tmp2=`mktemp`
     cat - > $tmp1
     deaccent < $tmp1 > $tmp2
     cat $tmp1 $tmp2

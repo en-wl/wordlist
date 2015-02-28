@@ -9,6 +9,7 @@ all:
 aspell: .aspell
 
 .hunspell: make-hunspell-dict add-no-suggest en.aff en.dic.supp README_en.txt.sh
+	make -C src deaccent
 	./make-hunspell-dict -all
 	touch .hunspell
 hunspell: .hunspell
@@ -17,4 +18,4 @@ clean:
 	rm -f .aspell .hunspell
 	rm -f *.wl en_*.dic en_*.aff *.zip *.tocheck README*.txt
 	rm -f en_*txt en_*[0-2] nosug eng*.dat
-	rm -rf hunspell
+	rm -rf hunspell aspell/*wl

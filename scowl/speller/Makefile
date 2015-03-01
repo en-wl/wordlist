@@ -14,8 +14,20 @@ aspell: .aspell
 	touch .hunspell
 hunspell: .hunspell
 
+size = 60
+cc = US
+accents = with-and-without-accents
+variant =
+
+.single:
+	./make-hunspell-dict -one en_$(cc)-$(size) \
+	"mk-list $(variant) en_$(cc) $(size) | $(accents)"
+	touch .single
+
+single: .single
+
 clean:
-	rm -f .aspell .hunspell
+	rm -f .aspell .hunspell .single
 	rm -f *.wl* en_*.dic en_*.aff *.zip *.tocheck README*.txt
 	rm -f en_*txt en_*[0-2] nosug eng*.dat
 	rm -rf hunspell aspell/*wl aspell/info aspell/Copyright

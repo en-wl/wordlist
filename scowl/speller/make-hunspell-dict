@@ -47,6 +47,15 @@ deaccent() {
   $SCOWL/src/deaccent
 }
 
+with-and-without-accents() {
+  tmp1=`mktemp`
+  tmp2=`mktemp`
+  cat - > $tmp1
+  deaccent < $tmp1 > $tmp2
+  cat $tmp1 $tmp2
+  rm $tmp1 $tmp2
+}
+
 doit() {
   echo creating $1.dic
   eval $2 | sort -u > $1.0
@@ -111,15 +120,6 @@ then
   doit en_GB-ize "mk-list en_GB-ize $SIZE | deaccent"
   doit en_GB-ise "mk-list en_GB-ise $SIZE | deaccent"
 
-  with-and-without-accents() { 
-    tmp1=`mktemp`
-    tmp2=`mktemp`
-    cat - > $tmp1
-    deaccent < $tmp1 > $tmp2
-    cat $tmp1 $tmp2
-    rm $tmp1 $tmp2
-  }
-
   doit en_US-large "mk-list -v1 en_US 70 | with-and-without-accents "
   doit en_CA-large "mk-list -v1 en_CA 70 | with-and-without-accents "
   doit en_GB-large "mk-list -v1 en_GB-ize en_GB-ise 70 | with-and-without-accents"
@@ -129,7 +129,7 @@ then
 elif [ "$1" = "-one" -a -n "$2" -a -n "$3" ]
 then
 
-  doit $2 "$(cat $3)"
+  doit $2 "$3"
 
 else 
 

@@ -18,4 +18,4 @@ clean:
 	rm -f .aspell .hunspell
 	rm -f *.wl* en_*.dic en_*.aff *.zip *.tocheck README*.txt
 	rm -f en_*txt en_*[0-2] nosug eng*.dat
-	rm -rf hunspell aspell/*wl
+	rm -rf hunspell aspell/*wl aspell/info aspell/Copyright

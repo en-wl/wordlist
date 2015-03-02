@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ -x /usr/bin/todos ]; then
- UNIX2DOS=/usr/bin/todos
-elif [-x /usr/bin/unix2dos ]; then
- UNIX2DOS=/usr/bin/unix2dos
+if command -v todos; then
+ UNIX2DOS=todos
+elif command -v unix2dos; then
+ UNIX2DOS=unix2dos
 else
- UNIX2DOS=/usr/bin/cat
+ UNIX2DOS=cat
 fi
 
 ASPELL=aspell

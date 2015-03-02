@@ -4,13 +4,13 @@ all:
 
 .aspell: make-aspell-dict
 	make -C src deaccent
-	./make-aspell-dict
+	./make-aspell-dict $(size)
 	touch .aspell
 aspell: .aspell
 
 .hunspell: make-hunspell-dict add-no-suggest en.aff en.dic.supp README_en.txt.sh
 	make -C src deaccent
-	./make-hunspell-dict -all
+	./make-hunspell-dict -all $(size)
 	touch .hunspell
 hunspell: .hunspell
 
@@ -18,12 +18,13 @@ size = 60
 cc = US
 accents = with-and-without-accents
 variant =
+dictname = $(cc)$(variant)-$(accents)-$(size)
 
 .single:
-	./make-hunspell-dict -one en_$(cc)-$(size) \
+	./make-hunspell-dict -one en_$(dictname) \
 	"mk-list $(variant) en_$(cc) $(size) | $(accents)"
+	cp en_$(dictname).0 aspell/en_$(dictname).wl
 	touch .single
-
 single: .single
 
 clean:

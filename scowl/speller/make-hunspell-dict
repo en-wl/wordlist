@@ -83,7 +83,7 @@ doit() {
   fi
 
   WHAT="${1}${FNSIZE} Hunspell Dictionary" \
-   sh $SCOWL/speller/README_en.txt.sh > README_$1.txt
+   sh $SCOWL/speller/README_en.txt.sh > README_$1${FNSIZE}.txt
 
   if [ -z "$3" ]; then
     echo "Wordlist Command: $2" >> README_${1}${FNSIZE}.txt

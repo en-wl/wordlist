@@ -46,4 +46,9 @@ To build a single hunspell dictionary AND a single aspell word-list:
 Note: to build multiple sizes together, remove the .aspell, .hunspell, or
 .single file (respectively) between builds instead of using 'make clean'.
 
+UTF file encoding follows LANG environment var:
+    LANG=en_US.UTF-8 make hunspell size=70
+    LANG=en_US make hunspell size=70
+  If utf appears anywhere in LANG then hunspell files are UTF encoded.
+
 For more information please see our homepage at <http://wordlist.aspell.net>.

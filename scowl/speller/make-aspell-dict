@@ -20,6 +20,7 @@ else
   SCOWL_VERSION=unknown
 fi
 export SCOWL_VERSION
+export SIZE
 
 mk-list() { ../mk-list -d final "$@"; }
 

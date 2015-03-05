@@ -1,12 +1,14 @@
 : ${SCOWL:=..}
 
-echo $WHAT
+echo -e $WHAT
 
 if [ "$SCOWL_VERSION" ]; then
   echo "Version $SCOWL_VERSION"
+  echo "GIT Source"
   git log --pretty=format:'%cd [%h]' -n 1 -- ..
   echo
 elif git status 2>&1 > /dev/null; then
+  echo "GIT Source"
   git log --pretty=format:'%cd [%h]' -n 1 -- ..
   echo
 else

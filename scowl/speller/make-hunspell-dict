@@ -8,6 +8,12 @@ else
  UNIX2DOS=cat
 fi
 
+if echo $LANG | grep -i utf > /dev/null; then
+ICONV_UTF="iconv -f iso-8859-1 -t utf-8"
+else
+ICONV_UTF=cat
+fi
+
 ASPELL=aspell
 HUNSPELL=hunspell
 : ${SCOWL:=..}
@@ -29,12 +35,9 @@ prep() {
 
   cat $SCOWL/misc/{offensive.1,offensive.2,profane.1} | sort -u > nosug
 
-  # Aspell expects the dictionary to be in iso8859-1 so fake it for
-  # now.  The fact that the ICONV entry is in utf-8 is not a problem
-  # as Aspell ignores it.  The words them self are already in
-  # iso8859-1.
-  echo 'SET ISO8859-1' > eng_affix.dat
-  tail -n +2 $SCOWL/speller/en.aff >> eng_affix.dat
+  # Aspell expects the dictionary to be in iso8859-1 so fake it for now.
+  # The words them self are already in iso8859-1.
+  sed "/ICONV/d; s/SET UTF8/SET ISO8859-1/" en.aff > eng_affix.dat
 
   cat << EOF > eng.dat
 name eng
@@ -72,24 +75,24 @@ doit() {
   cat $SCOWL/speller/en.dic.supp >> $1.2
 
   wc -l $1.2 | cut -d' ' -f1 > ${1}${FNSIZE}.dic
-  cat $1.2 | sort | iconv -f iso-8859-1 -t utf-8 >> ${1}${FNSIZE}.dic
+  cat $1.2 | sort | $ICONV_UTF >> ${1}${FNSIZE}.dic
 
-  cp $SCOWL/speller/en.aff ${1}${FNSIZE}.aff
-  
+  if [ x$ICONV_UTF = xcat ]; then
+   cp $SCOWL/speller/eng_affix.dat ${1}${FNSIZE}.aff
+  else
+   cp $SCOWL/speller/en.aff ${1}${FNSIZE}.aff
+  fi
+
   if [ "$SCOWL_VERSION" ]; then
     fn="$1-$SCOWL_VERSION${FNSIZE}"
   else
     fn="${1}${FNSIZE}"
   fi
 
-  WHAT="${1}${FNSIZE} Hunspell Dictionary" \
+  WHAT="Hunspell Dictionary: ${1}${FNSIZE}\n
+        Command: $2\n
+        Build Date: `date`\n" \
    sh $SCOWL/speller/README_en.txt.sh > README_$1${FNSIZE}.txt
-
-  if [ -z "$3" ]; then
-    echo "Wordlist Command: $2" >> README_${1}${FNSIZE}.txt
-  else
-    cat $3 >> README_${1}${FNSIZE}.txt
-  fi
 
   rm -f hunspell-$fn.zip
   zip -9 hunspell-$fn.zip README_${1}${FNSIZE}.txt \
@@ -105,7 +108,7 @@ doit() {
 
     #hunspell -l -d ./$1 < $1.dic.tocheck > misspelled
 
-    cat ${1}${FNSIZE}.tocheck | iconv -f iso-8859-1 -t utf-8 | \
+    cat ${1}${FNSIZE}.tocheck | $ICONV_UTF | \
         $UNIX2DOS > ${1}${FNSIZE}.txt
 
     cat <<EOF > README.txt
@@ -137,7 +140,7 @@ elif [ "$1" = "-one" -a -n "$2" -a -n "$3" ]
 then
 
   FNSIZE=""
-  doit $2 "$3"
+  doit $2 "$3" one
 
 else 
 

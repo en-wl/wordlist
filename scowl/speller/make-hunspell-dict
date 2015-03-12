@@ -5,7 +5,8 @@ if command -v todos; then
 elif command -v unix2dos; then
  UNIX2DOS=unix2dos
 else
- UNIX2DOS=cat
+echo "Error: unix2dos or todos command not found."
+exit 1
 fi
 
 if echo $LANG | grep -i utf > /dev/null; then
@@ -52,8 +53,8 @@ deaccent() {
 }
 
 with-and-without-accents() {
-  tmp1=`mktemp`
-  tmp2=`mktemp`
+  tmp1=`mktemp tmp-XXXXXX`
+  tmp2=`mktemp tmp-XXXXXX`
   cat - > $tmp1
   deaccent < $tmp1 > $tmp2
   cat $tmp1 $tmp2

@@ -1,5 +1,20 @@
 #!/bin/bash
 
+if command -v todos; then
+ UNIX2DOS=todos
+elif command -v unix2dos; then
+ UNIX2DOS=unix2dos
+else
+echo "Error: unix2dos or todos command not found."
+exit 1
+fi
+
+if echo $LANG | grep -i utf > /dev/null; then
+ICONV_UTF="iconv -f iso-8859-1 -t utf-8"
+else
+ICONV_UTF=cat
+fi
+
 ASPELL=aspell
 HUNSPELL=hunspell
 : ${SCOWL:=..}
@@ -11,7 +26,8 @@ export LC_ALL=C
 export LC_CTYPE=C
 export LC_COLLATE=C
 
-SIZE=60
+SIZE=${2:-'60'}
+FNSIZE="-$SIZE"
 
 mk-list() { $SCOWL/mk-list -d $SCOWL/final "$@"; }
 
@@ -20,12 +36,9 @@ prep() {
 
   cat $SCOWL/misc/{offensive.1,offensive.2,profane.1} | sort -u > nosug
 
-  # Aspell expects the dictionary to be in iso8859-1 so fake it for
-  # now.  The fact that the ICONV entry is in utf-8 is not a problem
-  # as Aspell ignores it.  The words them self are already in
-  # iso8859-1.
-  echo 'SET ISO8859-1' > eng_affix.dat
-  tail -n +2 $SCOWL/speller/en.aff >> eng_affix.dat
+  # Aspell expects the dictionary to be in iso8859-1 so fake it for now.
+  # The words them self are already in iso8859-1.
+  sed "/ICONV/d; s/SET UTF8/SET ISO8859-1/" en.aff > eng_affix.dat
 
   cat << EOF > eng.dat
 name eng
@@ -35,9 +48,21 @@ affix eng
 EOF
 }
 
-doit() {
-  echo creating $1.dic
+deaccent() {
+  $SCOWL/src/deaccent
+}
 
+with-and-without-accents() {
+  tmp1=`mktemp tmp-XXXXXX`
+  tmp2=`mktemp tmp-XXXXXX`
+  cat - > $tmp1
+  deaccent < $tmp1 > $tmp2
+  cat $tmp1 $tmp2
+  rm $tmp1 $tmp2
+}
+
+doit() {
+  echo creating ${1}${FNSIZE}.dic
   eval $2 | sort -u > $1.0
 
   comm $1.0 nosug -12 > $1-nosug.1
@@ -50,26 +75,29 @@ doit() {
 
   cat $SCOWL/speller/en.dic.supp >> $1.2
 
-  wc -l $1.2 | cut -d' ' -f1 > $1.dic
-  cat $1.2 | sort | iconv -f iso-8859-1 -t utf-8 >> $1.dic
+  wc -l $1.2 | cut -d' ' -f1 > ${1}${FNSIZE}.dic
+  cat $1.2 | sort | $ICONV_UTF >> ${1}${FNSIZE}.dic
 
-  cp $SCOWL/speller/en.aff $1.aff
-  
+  if [ x$ICONV_UTF = xcat ]; then
+   cp $SCOWL/speller/eng_affix.dat ${1}${FNSIZE}.aff
+  else
+   cp $SCOWL/speller/en.aff ${1}${FNSIZE}.aff
+  fi
+
   if [ "$SCOWL_VERSION" ]; then
-    fn="$1-$SCOWL_VERSION"
+    fn="$1-$SCOWL_VERSION${FNSIZE}"
   else
-    fn="$1"
+    fn="${1}${FNSIZE}"
   fi
 
-  WHAT="$1 Hunspell Dictionary" sh $SCOWL/speller/README_en.txt.sh > README_$1.txt
-  if [ -z "$3" ]; then
-    echo "Wordlist Command: $2" >> README_$1.txt
-  else
-    cat $3 >> README_$1.txt
-  fi
+  WHAT="Hunspell Dictionary: ${1}${FNSIZE}\n
+        Command: $2\n
+        Build Date: `date`\n" \
+   sh $SCOWL/speller/README_en.txt.sh > README_$1${FNSIZE}.txt
 
   rm -f hunspell-$fn.zip
-  zip -9 hunspell-$fn.zip README_$1.txt $1.dic $1.aff
+  zip -9 hunspell-$fn.zip README_${1}${FNSIZE}.txt \
+         ${1}${FNSIZE}.dic ${1}${FNSIZE}.aff
 
   if [ -z "$3" ]; then
     mkdir -p hunspell
@@ -77,16 +105,19 @@ doit() {
 
     #echo check
 
-    cat $1-nosug.1 $1.1 | sort -u > $1.tocheck
+    cat $1-nosug.1 $1.1 | sort -u > ${1}${FNSIZE}.tocheck
 
     #hunspell -l -d ./$1 < $1.dic.tocheck > misspelled
 
-    cat $1.tocheck | iconv -f iso-8859-1 -t utf-8 | unix2dos > $1.txt
+    cat ${1}${FNSIZE}.tocheck | $ICONV_UTF | \
+        $UNIX2DOS > ${1}${FNSIZE}.txt
+
     cat <<EOF > README.txt
 This zip file contains the words found in the corresponding Hunspell
-dictionary.  See the file README_$1.txt.
+dictionary.  See the file README_${1}${FNSIZE}.txt.
 EOF
-    zip -9 hunspell/wordlist-$fn.zip README.txt README_$1.txt $1.txt
+    zip -9 hunspell/wordlist-$fn.zip README.txt \
+           README_${1}${FNSIZE}.txt ${1}${FNSIZE}.txt
   fi
 }
 
@@ -95,24 +126,11 @@ prep
 if [ "$1" = "-all" ]
 then 
 
-  deaccent() {
-    $SCOWL/src/deaccent
-  }
-
   doit en_US "mk-list en_US $SIZE | deaccent"
   doit en_CA "mk-list en_CA $SIZE | deaccent"
   doit en_GB-ize "mk-list en_GB-ize $SIZE | deaccent"
   doit en_GB-ise "mk-list en_GB-ise $SIZE | deaccent"
-
-  with-and-without-accents() { 
-    tmp1=`mktemp tmp-XXX`
-    tmp2=`mktemp tmp-XXX`
-    cat - > $tmp1
-    deaccent < $tmp1 > $tmp2
-    cat $tmp1 $tmp2
-    rm $tmp1 $tmp2
-  }
-
+  FNSIZE=""
   doit en_US-large "mk-list -v1 en_US 70 | with-and-without-accents "
   doit en_CA-large "mk-list -v1 en_CA 70 | with-and-without-accents "
   doit en_GB-large "mk-list -v1 en_GB-ize en_GB-ise 70 | with-and-without-accents"
@@ -122,7 +140,8 @@ then
 elif [ "$1" = "-one" -a -n "$2" -a -n "$3" ]
 then
 
-  doit $2 "cat" $3
+  FNSIZE=""
+  doit $2 "$3" one
 
 else 
 

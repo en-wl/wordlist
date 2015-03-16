@@ -10,7 +10,7 @@ export LC_ALL=C
 export LC_CTYPE=C
 export LC_COLLATE=C
 
-SIZE=60
+SIZE=${1:-'60'}
 
 if [ "$SCOWL_VERSION" ]; then
   true
@@ -20,6 +20,7 @@ else
   SCOWL_VERSION=unknown
 fi
 export SCOWL_VERSION
+export SIZE
 
 mk-list() { ../mk-list -d final "$@"; }
 
@@ -58,7 +59,7 @@ for f in en*-variant_*.wl0
 do
   b=`basename $f .wl0`
   src/deaccent < $f > $b.wl1
-  cat $f $b.wl1 | sort -u > $b.wl
+  cat $f $b.wl1 | sort -u > $b-${SIZE}.wl
 done
 
 echo common
@@ -71,14 +72,14 @@ do
   comm -12 en-common.wl.0 $f > en-common.wl
   mv en-common.wl en-common.wl.0
 done
-mv en-common.wl.0 en-common.wl
+mv en-common.wl.0 en-common-${SIZE}.wl
 
 echo finish
 
 for f in *.twl
 do
   b=`basename $f .twl`
-  comm -13 en-common.wl $f > $b-only.wl
+  comm -13 en-common-${SIZE}.wl $f > $b-only-${SIZE}.wl
 done
  
 rm -f *.wl.* *.twl *.wl{0,1} *.vwl

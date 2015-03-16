@@ -8,6 +8,11 @@ scowl:
 .PHONY: clean
 clean:
 	$(MAKE) -C scowl clean
+	rm -rf scowl/working scowl/final
+	rm -f enable/* enable-sup/* ukacd/*
+	rm -f yawl/* mwords/* census/* uk-freq-class/*.[^t]*
+	rm -f .dirs .enable .enable-sup .ukacd
+	rm -f .yawl .mwords .census .uk-freq-class
 
 prep: .dirs .enable .enable-sup .ukacd .yawl .mwords .census .uk-freq-class
 

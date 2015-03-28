@@ -1,3 +1,5 @@
+# This file is used to generate the clean target
+# Do not put list any files that are not automatically generated
 .aspell
 .hunspell
 hunspell/
@@ -13,6 +15,7 @@ README_en_*.txt
 eng.dat
 eng_affix.dat
 nosug
+aspell/info
 aspell/Copyright
 aspell/doc/SCOWL-README
 *.txt

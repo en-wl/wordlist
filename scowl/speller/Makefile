@@ -14,5 +14,8 @@ aspell: .aspell
 hunspell: .hunspell
 
 clean:
-	rm -f .aspell .hunspell
-	rm -f *.wl en_*.dic en_*.aff *.zip *.tocheck README_en_??.txt
+	rm -rf hunspell/ *.zip
+	cat to-clean | xargs rm -f
+
+to-clean: .gitignore
+	echo `cat .gitignore | grep -v '^#'` | tr ' ' '\n' | grep -v hunspell/ | grep -v \.zip > to-clean

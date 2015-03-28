@@ -95,27 +95,14 @@ prep
 if [ "$1" = "-all" ]
 then 
 
-  deaccent() {
-    $SCOWL/src/deaccent
-  }
+  doit en_US "mk-list --accents=strip en_US $SIZE"
+  doit en_CA "mk-list --accents=strip en_CA $SIZE"
+  doit en_GB-ize "mk-list --accents=strip en_GB-ize $SIZE"
+  doit en_GB-ise "mk-list --accents=strip en_GB-ise $SIZE"
 
-  doit en_US "mk-list en_US $SIZE | deaccent"
-  doit en_CA "mk-list en_CA $SIZE | deaccent"
-  doit en_GB-ize "mk-list en_GB-ize $SIZE | deaccent"
-  doit en_GB-ise "mk-list en_GB-ise $SIZE | deaccent"
-
-  with-and-without-accents() { 
-    tmp1=`mktemp tmp-XXX`
-    tmp2=`mktemp tmp-XXX`
-    cat - > $tmp1
-    deaccent < $tmp1 > $tmp2
-    cat $tmp1 $tmp2
-    rm $tmp1 $tmp2
-  }
-
-  doit en_US-large "mk-list -v1 en_US 70 | with-and-without-accents "
-  doit en_CA-large "mk-list -v1 en_CA 70 | with-and-without-accents "
-  doit en_GB-large "mk-list -v1 en_GB-ize en_GB-ise 70 | with-and-without-accents"
+  doit en_US-large "mk-list -v1 --accents=both en_US 70"
+  doit en_CA-large "mk-list -v1 --accents=both en_CA 70"
+  doit en_GB-large "mk-list -v1 --accents=both en_GB-ize en_GB-ise 70"
 
   sh $SCOWL/speller/README_en.txt.sh > hunspell/README
 

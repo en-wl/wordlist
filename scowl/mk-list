@@ -12,6 +12,7 @@ my $file_names_only;
 my $dir;
 my $no_implied;
 my $variants_str;
+my $accents;
 
 sub usage() {
     print STDERR "$0 [-v#] [<options>] <spelling categories> <size>\n";
@@ -22,8 +23,11 @@ GetOptions ("dir|d=s", \$dir,
             "with-variants|v=i", => \$with_variants,
             "variants=s", \$variants_str,
             "file-names-only|f", \$file_names_only,
-            "no-implied", \$no_implied) or usage();
+            "no-implied", \$no_implied,
+            "accents=s", \$accents) or usage();
 $dir = "final" unless defined $dir;
+
+die "Cannot specify both --file-names-only and --accents" if $file_names_only && $accents;
 
 my %spelling_map = qw(en-us american en-gb british? en-gb-ise british
                       en-gb-ize british_z en-gb-oed british_z en-ca canadian);
@@ -77,9 +81,29 @@ unless ($use_variant_level{non}) {
 
 opendir D, $dir or die "Unable to open dir $dir\n";
 
-my @files = readdir(D);
-
 my @words;
+
+sub deaccent($) {
+    local $_ = $_[0];
+    # from deaccent-toperl.cc
+    # the line is encoded in iso-8859-1 to match the input encoding:
+    tr/ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜİàáâãäåçèéêëìíîïñòóôõöøùúûüıÿ/AAAAAACEEEEIIIINOOOOOOUUUUYaaaaaaceeeeiiiinoooooouuuuyy/;
+    return $_;
+}
+my $add_word;
+if (!defined($accents) || $accents eq 'keep') {
+    $add_word = sub {push @words, $_[0]};
+} elsif ($accents eq 'strip') {
+    $add_word = sub {push @words, deaccent($_[0])};
+} elsif ($accents eq 'both') {
+    $add_word = sub {push @words, $_[0];
+                     my $new_word = deaccent($_[0]);
+                     push @words, $new_word if $new_word ne $_[0];} 
+} else {
+    die "--accents must be one of: keep, strip, both\n";
+}
+
+my @files = readdir(D);
 
 foreach (sort @files) {
     my ($sp, $type, $size) = /^(\w+)-([^.]+)\.(\d\d)/ or next;
@@ -91,7 +115,7 @@ foreach (sort @files) {
         open F, "$dir/$_" or die "Unable to open $dir/$_ for reading";
         while (<F>) {
             chop;
-            push @words, $_;
+            $add_word->($_);
         }
     }
 }
@@ -103,8 +127,3 @@ foreach (sort @words) {
     $prev = $_;
 }
 
-
-                
-
-
-            

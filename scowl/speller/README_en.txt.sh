@@ -4,10 +4,10 @@ echo $WHAT
 
 if [ "$SCOWL_VERSION" ]; then
   echo "Version $SCOWL_VERSION"
-  git log --pretty=format:'%cd [%h]' -n 1 -- ..
+  ( cd $SCOWL/speller && git log --pretty=format:'%cd [%h]' -n 1 -- .. )
   echo
 elif git status 2>&1 > /dev/null; then
-  git log --pretty=format:'%cd [%h]' -n 1 -- ..
+  ( cd $SCOWL/speller && git log --pretty=format:'%cd [%h]' -n 1 -- .. )
   echo
 else
   echo "Version 7.1 (ish)"

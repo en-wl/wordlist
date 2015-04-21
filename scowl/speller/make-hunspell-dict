@@ -19,20 +19,6 @@ prep() {
   echo prep 
 
   cat $SCOWL/misc/{offensive.1,offensive.2,profane.1} | sort -u > nosug
-
-  # Aspell expects the dictionary to be in iso8859-1 so fake it for
-  # now.  The fact that the ICONV entry is in utf-8 is not a problem
-  # as Aspell ignores it.  The words them self are already in
-  # iso8859-1.
-  echo 'SET ISO8859-1' > eng_affix.dat
-  tail -n +2 $SCOWL/speller/en.aff >> eng_affix.dat
-
-  cat << EOF > eng.dat
-name eng
-charset iso8859-1
-special ' -*-
-affix eng
-EOF
 }
 
 doit() {
@@ -44,9 +30,9 @@ doit() {
 
   comm $1.0 nosug -23 > $1.1
 
-  $ASPELL -l ./eng munch-list < $1-nosug.1 | grep -v '^\(XXX\|>>>\)' | $SCOWL/speller/add-no-suggest > $1.2
+  ./munch-list munch en.aff < $1-nosug.1 | $SCOWL/speller/add-no-suggest > $1.2
 
-  $ASPELL -l ./eng munch-list < $1.1 | grep -v '^\(XXX\|>>>\)' >> $1.2
+  ./munch-list munch en.aff < $1.1 >> $1.2
 
   cat $SCOWL/speller/en.dic.supp >> $1.2
 

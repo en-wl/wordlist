@@ -1,7 +1,12 @@
 #!/bin/sh
 
-# Make the final release from a clean SVN checkout to avoid including
+# Make the final release from a clean git checkout to avoid including
 # unnecessary garbage!
+
+if [ "$#" -ne 1 ]; then
+  echo "Usage: $0 VERSION"
+  exit 1
+fi
 
 echo clean
 
@@ -38,6 +43,7 @@ done
 cd ..
 
 cp -a README README.in Makefile mk-list Copyright l.dir l.tar src final misc speller scowl-$1/
+echo $1 > scowl-$1/VERSION
 
 echo tar
 tar cf scowl-$1.tar scowl-$1/

@@ -2,16 +2,21 @@
 
 echo $WHAT
 
-if [ "$SCOWL_VERSION" ]; then
+if [ "$SCOWL_VERSION" ] && [ -e $SCOWL/../.git ] > /dev/null; then
   echo "Version $SCOWL_VERSION"
   ( cd $SCOWL/speller && git log --pretty=format:'%cd [%h]' -n 1 -- .. )
   echo
-elif git status 2>&1 > /dev/null; then
+elif [ -e $SCOWL/../.git ] > /dev/null; then
   ( cd $SCOWL/speller && git log --pretty=format:'%cd [%h]' -n 1 -- .. )
   echo
+elif [ -e $SCOWL/VERSION ]; then
+  echo "Generated from SCOWL Version `cat $SCOWL/VERSION`"
+  date
+  echo
 else
-  echo "Version 7.1 (ish)"
-  date +'%F'
+  echo "Unknown Version"
+  date
+  echo
 fi
 
 cat <<EOF

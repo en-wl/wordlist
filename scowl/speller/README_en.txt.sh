@@ -75,6 +75,11 @@ kevina@gnu.org or to the wordlist-devel mailing lists
 have specific issues with any of these dictionaries please file a bug
 report at https://github.com/kevina/wordlist/issues.
 
+IMPORTANT CHANGES FROM 2015.02.15:
+
+The dictionaries are now in UTF-8 format instead of ISO-8859-1.  This
+was required to handle smart quotes correctly.
+
 ADDITIONAL NOTES:
 
 The NOSUGGEST flag was added to certain taboo words.  While I made an

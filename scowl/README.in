@@ -110,6 +110,13 @@ Accents are present on certain words such as café in iso8859-1 format.
 
 CHANGES:
 
+From Version 2015.02.15 to 2015.04.24 (April 24, 2015)
+
+  Added some new words.
+
+  Convert hunspell dictionary to UTF-8 in order to handle smart
+  quotes correctly.
+
 From Version 2015.01.28 to 2015.02.15 (February 15, 2015)
 
   Added a large number of neologisms (newly invented words)

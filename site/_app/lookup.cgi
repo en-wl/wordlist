@@ -85,7 +85,7 @@ with 5 stars (*****), that is not already in the dictionary, should
 most likely be included unless there is a good reason not to.  A word
 with 3 stars (***) is still worth considering and a word with 1 star
 (*) should most likely not be considered.  A report sorted by
-frequency is <a href="lookup-freq?words=$words_url&similar=yes">also
+frequency is <a href="lookup-freq?words=$words_url">also
 available</a>.
 
 ---

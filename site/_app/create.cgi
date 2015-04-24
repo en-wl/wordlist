@@ -12,6 +12,7 @@ use make_list qw(@standard %standard get_wordlist make_hunspell_dict dict_name d
 
 delete @ENV{qw(IFS CDPATH ENV BASH_ENV)};
 $ENV{PATH} = "/usr/local/bin:/bin:/usr/bin";
+$ENV{PERL5LIB}="/opt/app/perl-lib/lib/perl5/5.8.8/:/opt/app/perl-lib/lib/perl5/site_perl/5.8.8/";
 
 my $q = CGI->new;
 

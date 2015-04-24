@@ -14,15 +14,15 @@ my $q = CGI->new;
 
 my $parm  = defined $q->param('parm') && $q->param('parm') eq 'full' ? 'full' : 'normal';
 my $words = defined $q->param('words') ? $q->param('words') : '';
-my $similar = defined $q->param('similar') ? $q->param('similar') eq 'yes' : 0;
-if ($similar) {$parm .= '-similar';}
-utf8::upgrade($words);
-my $similar_checked = $similar || $words eq '' ? 'checked' : '';
+my $also = defined $q->param('also') && $q->param('also') =~ /^(similar|original|neither)$/ ? $1 : 'similar';
+my $similar_checked = $also eq 'similar' ? 'checked' : '';
+my $original_checked = $also eq 'original' ? 'checked' : '';
+my $neither_checked = $also eq 'neither' ? 'checked' : '';
 
 my $pid;
 if ($words ne '') {
     chdir '/opt/ngrams-lookup';
-    $pid = open2(\*RDR,\*WTR,'./lookup', $parm);
+    $pid = open2(\*RDR,\*WTR,'./lookup', $parm, $also);
     binmode(RDR, ":utf8");
     binmode(WTR, ":utf8");
     foreach (split /\n/,$words) {
@@ -127,7 +127,10 @@ Enter one word per line
 <br>
 <textarea rows="10" cols="20" name="words">$words</textarea>
 <br>
-<label for="similar"><input id="similar" type="checkbox" name="similar" value="yes" $similar_checked>Show Similar Words</label><br>
+Also Report: 
+<label for="similar"><input id="similar" type="radio" name="also" value="similar" $similar_checked>Similar Words</label>
+<label for="original"><input id="original" type="radio" name="also" value="original" $original_checked>Original Words</label>
+<label for="neither"><input id="neither" type="radio" name="also" value="neither" $neither_checked>Neither</label><br>
 <button type="submit" name="parm" value="normal">Normal Report</button>
 <button type="submit" name="parm" value="full">Detailed Report</button><br>
 <button type="reset">Reset</button>

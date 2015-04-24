@@ -3,6 +3,7 @@
 ASPELL=aspell
 HUNSPELL=hunspell
 : ${SCOWL:=..}
+SPELLER="$SCOWL/speller"
 
 set -e
 
@@ -30,16 +31,16 @@ doit() {
 
   comm $1.0 nosug -23 > $1.1
 
-  ./munch-list munch en.aff < $1-nosug.1 | $SCOWL/speller/add-no-suggest > $1.2
+  $SPELLER/munch-list munch $SPELLER/en.aff < $1-nosug.1 | $SPELLER/add-no-suggest > $1.2
 
-  ./munch-list munch en.aff < $1.1 >> $1.2
+  $SPELLER/munch-list munch $SPELLER/en.aff < $1.1 >> $1.2
 
-  cat $SCOWL/speller/en.dic.supp >> $1.2
+  cat $SPELLER/en.dic.supp >> $1.2
 
   wc -l $1.2 | cut -d' ' -f1 > $1.dic
   cat $1.2 | sort | iconv -f iso-8859-1 -t utf-8 >> $1.dic
 
-  cp $SCOWL/speller/en.aff $1.aff
+  cp $SPELLER/en.aff $1.aff
   
   if [ "$SCOWL_VERSION" ]; then
     fn="$1-$SCOWL_VERSION"
@@ -47,7 +48,7 @@ doit() {
     fn="$1"
   fi
 
-  WHAT="$1 Hunspell Dictionary" sh $SCOWL/speller/README_en.txt.sh > README_$1.txt
+  WHAT="$1 Hunspell Dictionary" sh $SPELLER/README_en.txt.sh > README_$1.txt
   if [ -z "$3" ]; then
     echo "Wordlist Command: $2" >> README_$1.txt
   else
@@ -90,7 +91,7 @@ then
   doit en_CA-large "mk-list -v1 --accents=both en_CA 70"
   doit en_GB-large "mk-list -v1 --accents=both en_GB-ize en_GB-ise 70"
 
-  sh $SCOWL/speller/README_en.txt.sh > hunspell/README
+  sh $SPELLER/README_en.txt.sh > hunspell/README
 
 elif [ "$1" = "-one" -a -n "$2" -a -n "$3" ]
 then

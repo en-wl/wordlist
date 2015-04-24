@@ -11,9 +11,9 @@ fi
 ( cd git-fr
   git tag -f rel-$SCOWL_VERSION )
 
-test -e release-bk
-rm -rf release
-cp -al release-bk release
+test ! -e release-bk
+test -e release
+cp -al release release-bk
 
 if [ -e git-fr/stage/agid-$SCOWL_VERSION.zip ]
 then

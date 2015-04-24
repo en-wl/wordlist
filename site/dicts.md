@@ -9,10 +9,10 @@ English are also available for Hunspell.
 
 * Official Hunspell Dictionaries: 
   [readme](/hunspell-readme),
-  <a href="http://downloads.sourceforge.net/wordlist/hunspell-en_US-2015.02.15.zip">en_US</a>,
-  <a href="http://downloads.sourceforge.net/wordlist/hunspell-en_US-2015.02.15.zip">en_CA</a>
-  (2015-02-15) 
-* [Additional Hunspell Dictionaries](https://sourceforge.net/projects/wordlist/files/speller/2015.02.15)
+  <a href="http://downloads.sourceforge.net/wordlist/hunspell-en_US-2015.04.24.zip">en_US</a>,
+  <a href="http://downloads.sourceforge.net/wordlist/hunspell-en_US-2015.04.24.zip">en_CA</a>
+  (2015-04-24) 
+* [Additional Hunspell Dictionaries](https://sourceforge.net/projects/wordlist/files/speller/2015.04.24)
   including ones for British English. 
 * <a href="http://ftp.gnu.org/gnu/aspell/dict/en/">Aspell Dictionaries</a>
 

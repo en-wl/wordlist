@@ -110,6 +110,14 @@ Accents are present on certain words such as café in iso8859-1 format.
 
 CHANGES:
 
+From Version 2015.04.24 to 2015.05.18 (May 18, 2015)
+
+  Added some new words found to have a high frequency in the COCA
+  corpus.  (http://corpus.byu.edu/coca/).
+
+  Fix en spelling suggestions for 'alot' and 'exersize' in hunspell
+  dictionary (upstreamed from the changes made in Firefox).
+
 From Version 2015.02.15 to 2015.04.24 (April 24, 2015)
 
   Added some new words.

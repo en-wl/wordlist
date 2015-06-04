@@ -12965,7 +12965,7 @@ A: hoveling / B: hovelling
 A: hoveler / B: hoveller
 A: hovelers / B: hovellers
 
-#: hovercraft (level 50)
+# hovercraft (level 50)
 _: hovercraft / _v: hovercrafts | -- plural
 
 # hucksterize (level 95)
@@ -14665,7 +14665,7 @@ _: junketeer's / _v: junketer's
 A Z: juvenilize / B: juvenilise
 A Z: juvenilizes / B: juvenilises
 
-# kabbalah (level ??)
+# kabbalah (level 60)
 _: kabbalah / _v: cabala / _v: kabbala / _V: kabala / _V: cabbala / _V: cabbalah
 
 # kane (level 80)

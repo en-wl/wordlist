@@ -169,8 +169,8 @@ sub get_cluster(\*) {
     local $/ = "\n\n";
     local $_ = CORE::readline $_[0];
     return undef unless defined $_;
-    die "Expected cluster to start with comment" unless /^\#/;
-    my ($headword) = /^# +([[:alpha:]_'-]+)/ or die "Could not extract word from cluster.";
-    my ($level) = /^\# .+ \(level (\d\d)\)/m or die "Could not extract level from cluster.";
+    die "Expected cluster to start with comment:\n$_" unless /^\#/;
+    my ($headword) = /^# +([[:alpha:]_'-]+)/ or die "Could not extract headword from cluster:\n$_";
+    my ($level) = /^\# .+ \(level (\d\d)\)/m or die "Could not extract level from cluster:\n$_";
     return {headword => $headword, level => $level, data => $_};
 }

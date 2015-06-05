@@ -214,9 +214,14 @@ A B: advertisement's / A-: advertizement's
 A Z: advertizable / B: advertisable
 
 # adviser <verified> (level 20)
-A B: adviser / Av Bv: advisor
-A B: advisers / Av Bv: advisors
-A B: adviser's / Av Bv: advisor's
+A B C: adviser / A. Bv C.: advisor
+A B C: advisers / A. Bv C.: advisors
+A B C: adviser's / A. Bv C.: advisor's
+## The oxford dictionary has this to say:
+##     The spellings adviser and advisor are both correct. Adviser is more
+##     common, but advisor is also widely used , especially in North
+##     America. Adviser may be seen as less formal, while advisor often
+##     suggests an official position.
 
 # adze <verified> (level 50)
 A B: adze / Av: adz

@@ -67,6 +67,11 @@ should be added.  Words with 3 stars or more (see
 app.aspell.net:/lookup-freq) are added at the 60 and others at the 70
 level.
 
+extra.60:
+
+Non-signature words suggested for inclusion by others that are
+recognized by most dictionaries but not all that common.
+
 macro-alan-manual.70:
 
 Words Marco A.G.Pinto and Alan Beale though should be added that I

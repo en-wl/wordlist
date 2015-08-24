@@ -133,7 +133,7 @@ From Version 2015.01.28 to 2015.02.15 (February 15, 2015)
   Various other new words.
 
   Clean up the special-hacker category by removing some words that
-  didn't exist is the Google Book's Corpus (1980 - 2008) and
+  didn't exist in the Google Book's Corpus (1980 - 2008) and
   originated from the "Unofficial Jargon File Word Lists".
 
 From Version 2014.11.17 to 2015.01.28 (January 28, 2015)
@@ -330,7 +330,7 @@ giant perl script.  With the amount of memory available these days (at
 least 2 GB, often 4 GB or more) this should not really be a problem.
 
 In addition, there is a very nice frequency analyze of the BNC corpus
-done by Adam Kilgarriff.  Unlike Brain's word lists the BNC lists
+done by Adam Kilgarriff.  Unlike Brian's word lists the BNC lists
 include part of speech information.  I plan on somehow using these
 lists as Adam Kilgarriff has given me the OK to use it in SCOWL.
 These lists will greatly reduce the problem of inflected forms of a

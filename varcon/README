@@ -1,6 +1,6 @@
 Variant Conversion Info (VarCon)
 
-Version 2015.02.15
+Version 2015.08.24
 
 Copyright 2000-2015 by Kevin Atkinson (kevina@gnu.org)
 
@@ -277,11 +277,19 @@ more accurate than Tysto's)
 
 CHANGELOG:
 
-From 2015.01.28 to 2014.02.15 (February 15, 2005)
+From 2014.02.15 to 2015.08.24 (Aug 24, 2015)
+
+   - Added entry for Koran/Koranic.
+
+   - Tweaked "adviser" cluster.
+
+   - Fix formatting problems.
+
+From 2015.01.28 to 2014.02.15 (February 15, 2015)
 
    - Various new entries
 
-From 2014.11.17 to 2015.01.28 (January 28, 2005)
+From 2014.11.17 to 2015.01.28 (January 28, 2015)
 
    - Minor adjustments to a few entries (analytic, amid)
 

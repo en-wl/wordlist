@@ -9,9 +9,9 @@ spellings and vocabulary as well as well as a table listing the
 equivalent forms of other variants.
 
 <a href="/varcon-readme">readme</a>,
-<a href="http://downloads.sourceforge.net/wordlist/varcon-2015.02.15.tar.gz">tar.gz</a>,
-<a href="http://downloads.sourceforge.net/wordlist/varcon-2015.02.15.zip">zip</a>
-(2015-02-15)
+<a href="http://downloads.sourceforge.net/wordlist/varcon-2015.08.24.tar.gz">tar.gz</a>,
+<a href="http://downloads.sourceforge.net/wordlist/varcon-2015.08.24.zip">zip</a>
+(2015.08.24)
 [source](http://github.com/kevina/wordlist)        
 
 

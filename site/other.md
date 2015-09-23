@@ -57,7 +57,7 @@ are no longer directly used by SCOWL._
 ## Other Sources
 
 * [MWords](http://icon.shef.ac.uk/Moby/)
-* UK English Wordlist With Frequency Classification 
+* [UK English Wordlist With Frequency Classification](http://www.bckelk.ukfsn.org/menu.html)
 * ENABLE, YAWL
 * UK Advanced Cryptics Dictionary (UKACD)
 * 1990 Census report names file

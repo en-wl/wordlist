@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -C 0
 
 use varcon;
 

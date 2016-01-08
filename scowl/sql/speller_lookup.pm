@@ -22,7 +22,7 @@ sub lookup($$@) {
     foreach my $word (@words) {
         $add_word->execute($word, lc($word));
     }
-    $dbh->do("insert into to_lookup select distinct l.word, l.word_lower from lookup l, to_lookup t where l.word_lower = t.word_lower and l.word <> t.word");
+    $dbh->do("insert into to_lookup select distinct l.word, l.word_lower from speller_words l join to_lookup t using (word_lower) where l.word <> t.word");
 
     $dbh->do("create temporary table res as select * from lookup where dict = ? and word in (select word from to_lookup)", undef, $dict);
     $dbh->do("delete from to_lookup where word in (select word from res)");

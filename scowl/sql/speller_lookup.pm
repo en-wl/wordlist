@@ -17,16 +17,32 @@ sub lookup($$@) {
     my $dbh = DBI->connect("dbi:SQLite:dbname=$db","","");
     $dbh->{unicode} = 1;
 
+    $dbh->do("create temporary table to_lookup (word, word_lower)");
+    my $add_word = $dbh->prepare("insert into to_lookup values (?,?)");
+    foreach my $word (@words) {
+        $add_word->execute($word, lc($word));
+    }
+    $dbh->do("insert into to_lookup select distinct l.word, l.word_lower from lookup l, to_lookup t where l.word_lower = t.word_lower and l.word <> t.word");
+
+    $dbh->do("create temporary table res as select * from lookup where dict = ? and word in (select word from to_lookup)", undef, $dict);
+    $dbh->do("delete from to_lookup where word in (select word from res)");
+    $dbh->do("insert into res ".
+             "select l.* from lookup l, dict_info d where d.dict = ? and word in (select word from to_lookup) and".
+             "(not d.US or l.US) and (not d.GBs or l.GBs) and (not d.GBz or l.GBz) and (not d.CA or l.CA) and size < 95", undef, $dict);
+    $dbh->do("delete from to_lookup where word in (select word from res)");
+    $dbh->do("insert into res ".
+             "select * from lookup where word in (select word from to_lookup) and size < 95");
+    $dbh->do("delete from to_lookup where word in (select word from res)");
+
+    $dbh->do("create index res_idx1 on res (word)");
+    $dbh->do("create index res_idx2 on res (word_lower)");
+
     my %active_notes;
     my @table;
 
-    my $try1 = $dbh->prepare("select * from lookup where dict = ? and word = ?");
-    my $try2 = $dbh->prepare("select l.* from lookup l, dict_info d where d.dict = ? and word = ? and".
-                             "(not d.US or l.US) and (not d.GBs or l.GBs) and (not d.GBz or l.GBz) and (not d.CA or l.CA)");
-    my $try3 = $dbh->prepare("select * from lookup where word = ?");
+    my $get_res = $dbh->prepare("select * from res where word = ?");
 
-    my $other_case = $dbh->prepare("select distinct word from lookup where word_lower = ? and word <> ?");
-
+    my $other_case = $dbh->prepare("select distinct word from res where word_lower = ? and word <> ?");
     my $dis = $dbh->prepare("select * from dict_info where dict = ?");
     $dis->execute($dict);
     my $di = $dis->fetchrow_hashref;
@@ -47,19 +63,9 @@ sub lookup($$@) {
     my $lookup = sub {
         my ($word) = @_;
         my $res;
-        
-        $try1->execute($dict,$word);
-        $res = $fetch->($try1);
-        return $res if $res;
-        
-        $try3->execute($word); # do this query first, as try2 is expensive
-        my $res3 = $fetch->($try3);
-	return $res3 unless $res3; 
 
-        $try2->execute($dict,$word);
-        $res = $fetch->($try2);
-        return $res if $res;
-	return $res3;
+        $get_res->execute($word);
+        return $fetch->($get_res);
     };
 
     my $to_table_row = sub {
@@ -102,9 +108,11 @@ sub lookup($$@) {
     };
 
     foreach (@words) {
+        
 	my ($word) = /^[ \r\n]*(.*?)[ \r\n]*$/;
 	next if $word eq '';
-        my $res = $lookup->($word);
+        $get_res->execute($word);
+        my $res = $fetch->($get_res);
         my $row = $to_table_row->($word,$res);
         push @table, $row;
         next if $row->[1];
@@ -120,14 +128,20 @@ sub lookup($$@) {
             my $lower = lcfirst($word);
             @others = grep {$_ eq $lower} @other_cases;
         }
-        foreach my $w (@others) {
-            my $res = $lookup->($w);
-            my $row = $to_table_row->($w,$res);
-            $row->[3] .= '; ' if $row->[3] ne '';
-            $row->[3] .= "case changed from original word \"$word\" [7]";
-            push @table, $row;
-            $active_notes{7} = 1
-        }
+        my $lookup_others = sub {
+            my ($others, $notenum) = @_;
+            foreach my $w (@$others) {
+                $get_res->execute($w);
+                my $res = $fetch->($get_res);
+                my $row = $to_table_row->($w.($notenum eq '8' ? ' [8]' : ''),$res);
+                $row->[3] .= '; ' unless $row->[3] eq '';
+                $row->[3] .= "case changed from original word \"$word\"".($notenum eq '7' ? ' [7]' : '');
+                push @table, $row;
+                $active_notes{$notenum} = 1;
+            }
+        };
+        $lookup_others->(\@others, '7');
+        $lookup_others->([grep {my $w = $_; not grep {$w eq $_} @others} @other_cases], '8');
     }
     return {dict => $dict, table => \@table, active_notes => \%active_notes}
 }
@@ -157,9 +171,12 @@ my $notes_text = <<'---';
 [6] This word was created by removing diacritic marks (for example,
     café becomes cafe)
 
-[7] This case of the word was changed in a similar manor as if the
+[7] The case of the word was changed in a similar manor as if the
     word was looked up in a spellchecker (for example, Swim -> swim,
     IPAD -> iPad, IPad -> iPad).
+
+[8] The case of the word was changed.  The original word was not found
+    in the dictionary. 
 
 ---
 our %notes;

@@ -59,6 +59,7 @@ chdir '/opt/app/wordlist';
 my $git_ver = `git log --pretty=format:'%cd [%h]' -n 1`;
 
 my $words_url = CGI::escape($words);
+my $freq_link = length $words_url < 8000 ? "lookup-freq?words=$words_url" : "lookup-freq";
 my $words_html = escapeHTML($words);
 
 my $header = $res ? '' : 'Use this utility to look up words in <a href="http://wordlist.aspell.net/">SCOWL</a>.';
@@ -95,7 +96,7 @@ with 5 stars (*****), that is not already in the dictionary, should
 most likely be included unless there is a good reason not to.  A word
 with 3 stars (***) is still worth considering and a word with 1 star
 (*) should most likely not be considered.  A report sorted by
-frequency is <a href="lookup-freq?words=$words_url">also
+frequency is <a href="$freq_link">also
 available</a>.
 $link
 <hr>

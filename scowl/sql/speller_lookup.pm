@@ -28,14 +28,14 @@ sub lookup($$@) {
 
     $dbh->do("insert into to_lookup select distinct l.word, l.word_lower from speller_words l join to_lookup t using (word_lower) where l.word <> t.word");
 
-    $dbh->do("create temporary table res as select * from lookup where dict = ? and word in (select word from to_lookup)", undef, $dict);
+    $dbh->do("create temporary table res as select *,'f' as note from lookup where dict = ? and word in (select word from to_lookup)", undef, $dict);
     $dbh->do("delete from to_lookup where word in (select word from res)");
     $dbh->do("insert into res ".
-             "select l.* from lookup l, dict_info d where d.dict = ? and word in (select word from to_lookup) and".
+             "select l.*,'l' from lookup l, dict_info d where d.dict = ? and word in (select word from to_lookup) and".
              "(not d.US or l.US) and (not d.GBs or l.GBs) and (not d.GBz or l.GBz) and (not d.CA or l.CA) and size < 95", undef, $dict);
     $dbh->do("delete from to_lookup where word in (select word from res)");
     $dbh->do("insert into res ".
-             "select * from lookup where word in (select word from to_lookup) and size < 95");
+             "select *,'o' from lookup where word in (select word from to_lookup) and size < 95");
     $dbh->do("delete from to_lookup where word in (select word from res)");
 
     $dbh->do("create index res_idx1 on res (word)");
@@ -93,7 +93,10 @@ sub lookup($$@) {
                 my $v = $res->[0]{variant};
                 push @notes, "level $v variant [v]";
                 $active_notes{v} = 1;
-            }
+            } elsif ($res->[0]{note} eq 'o' && $res->[0]{onum} == $di->{onum}) {
+		push @notes, "alternative spelling [va]";
+                $active_notes{va} = 1;
+	    }
             if ($res->[0]{SP}) {
                 push @notes, "found in \"$res->[0]{category}\" list [sl]";
                 $active_notes{sl} = 1;
@@ -164,6 +167,10 @@ my $notes_text = <<'---';
     spelling, only one spelling of a word is generally included in a
     the smaller dictionary.  The larger dictionary lets in common
     variants (level 1).
+
+[va] The word is considered an alternative spelling.  For example
+    if the dictionary was "en_US" the word "colour" is an alternative
+    spelling for "color".
 
 [sl] This word was found in a special list and may not be considered a
     normal word.

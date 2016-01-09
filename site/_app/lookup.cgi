@@ -7,7 +7,7 @@ use utf8;
 use IPC::Open2;
 use IO::Handle;
 
-use lib '/opt/app/wordlist/scowl/sql';
+use lib '/opt/app/wordlist-working/scowl/sql';
 use speller_lookup qw(lookup to_html);
 
 delete @ENV{qw(IFS CDPATH ENV BASH_ENV)};
@@ -19,12 +19,19 @@ my $words= defined $q->param('words') ? $q->param('words') : '';
 utf8::upgrade($words);
 
 my $res;
+my $url = $q->url(-query=>1);
 if ($words ne '') {
-  $res = lookup("/opt/app/wordlist/scowl/scowl.db",$dict,split /\n/,$words);
-  eval {
+   my @words = split /[\r\n]+/,$words;
+   if (@words <= 12 && length $url < 2000 && $q->request_method() eq 'POST') {
+       print $q->redirect($url);
+       exit 0;
+   }
+   $res = lookup("/opt/app/wordlist/scowl/scowl.db",$dict,split /[\r\n]+/,$words);
+   eval {
     chdir '/opt/ngrams-lookup';
     my $pid = open2(\*RDR,\*WTR,'./lookup', 'brief');
     foreach my $row (@{$res->{table}}) {
+	next if $row->[3] =~ /case changed/;
 	print WTR "$row->[0]\n";
 	my $line = <RDR>;
 	die "readline failed: $!" unless defined $line;
@@ -54,6 +61,8 @@ my $git_ver = `git log --pretty=format:'%cd [%h]' -n 1`;
 my $words_url = CGI::escape($words);
 my $words_html = escapeHTML($words);
 
+my $header = $res ? '' : 'Use this utility to look up words in <a href="http://wordlist.aspell.net/">SCOWL</a>.';
+
 print <<"---";
 <html>
 <head>
@@ -61,10 +70,11 @@ print <<"---";
 </head>
 <body>
 <p>
-Use this utility to look up words in <a href="http://wordlist.aspell.net/">SCOWL</a>.
+$header
 </p>
 ---
 if (defined $res) {
+    my $link = $words ne '' && length $url < 2000 && $q->request_method() eq 'POST' ? qq'<p><small><i><a href="$url">Shareable Link</a></i></small></p>' : '';
     to_html($res,sub {
 	s~<th>~<th rowspan=2>~g;
 	s~(</tr>)~<th colspan=3>Google Books Stats [*]</tr>~;
@@ -87,11 +97,12 @@ with 3 stars (***) is still worth considering and a word with 1 star
 (*) should most likely not be considered.  A report sorted by
 frequency is <a href="lookup-freq?words=$words_url">also
 available</a>.
-
+$link
+<hr>
 ---
 }
 print <<"---";
-<form action="$ENV{SCRIPT_NAME}">
+<form action="$ENV{SCRIPT_NAME}" method="post">
 <select name="dict">
 $dicts
 </select>
@@ -100,7 +111,7 @@ Enter one word per line, entries are case sensitive:
 <br>
 <textarea rows="10" cols="20" name="words">$words_html</textarea>
 <br>
-<button type="submit">Submit</button>
+<button type="submit">Lookup</button>
 <button type="reset">Reset</button>
 </form>
 ---

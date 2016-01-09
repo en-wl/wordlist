@@ -19,9 +19,13 @@ sub lookup($$@) {
 
     $dbh->do("create temporary table to_lookup (word, word_lower)");
     my $add_word = $dbh->prepare("insert into to_lookup values (?,?)");
-    foreach my $word (@words) {
+    foreach (@words) {
+	my ($word) = /^[ \r\n]*(.*?)[ \r\n]*$/;
         $add_word->execute($word, lc($word));
     }
+    $dbh->do("create index to_lookup_idx1 on to_lookup (word)");
+    $dbh->do("create index to_lookup_idx2 on to_lookup (word_lower)");
+
     $dbh->do("insert into to_lookup select distinct l.word, l.word_lower from speller_words l join to_lookup t using (word_lower) where l.word <> t.word");
 
     $dbh->do("create temporary table res as select * from lookup where dict = ? and word in (select word from to_lookup)", undef, $dict);

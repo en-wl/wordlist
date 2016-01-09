@@ -32364,3 +32364,6 @@ _: Koran / _.: Quran / _v: Qur'an
 # Koranic (level 60)
 _: Koranic / _.: Quranic / _v: Qur'anic
 ## See note for Quran
+
+# virtualization (level 60)
+A: virtualization / B: virtualisation

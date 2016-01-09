@@ -91,21 +91,21 @@ sub lookup($$@) {
         if ($res) {
             if ($res->[0]{variant} > $di->{max_variant}) {
                 my $v = $res->[0]{variant};
-                push @notes, "level $v variant [3]";
-                $active_notes{3} = 1;
+                push @notes, "level $v variant [v]";
+                $active_notes{v} = 1;
             }
             if ($res->[0]{SP}) {
-                push @notes, "found in \"$res->[0]{category}\" list [4]";
-                $active_notes{4} = 1;
+                push @notes, "found in \"$res->[0]{category}\" list [sl]";
+                $active_notes{sl} = 1;
             }
             if ($res->[0]{accented}) {
 		unless ($found) {
-		    push @notes, "word with diacritic marks [5]";
-		    $active_notes{5} = 1;
+		    push @notes, "word with diacritic marks [d]";
+		    $active_notes{d} = 1;
 		}
             } elsif ($res->[0]{added}) {
-                push @notes, "word added by removing diacritic marks [6]";
-                $active_notes{6} = 1;
+                push @notes, "word added by removing diacritic marks [dr]";
+                $active_notes{dr} = 1;
             }
         }
         return [$word, $found, $found_in, join("; ", @notes)];
@@ -137,15 +137,15 @@ sub lookup($$@) {
             foreach my $w (@$others) {
                 $get_res->execute($w);
                 my $res = $fetch->($get_res);
-                my $row = $to_table_row->($w.($notenum eq '8' ? ' [8]' : ''),$res);
+                my $row = $to_table_row->($w.($notenum eq '!' ? ' [!]' : ''),$res);
                 $row->[3] .= '; ' unless $row->[3] eq '';
-                $row->[3] .= "case changed from original word \"$word\"".($notenum eq '7' ? ' [7]' : '');
+                $row->[3] .= "case changed from original word \"$word\"".($notenum eq 'c' ? ' [c]' : '');
                 push @table, $row;
                 $active_notes{$notenum} = 1;
             }
         };
-        $lookup_others->(\@others, '7');
-        $lookup_others->([grep {my $w = $_; not grep {$w eq $_} @others} @other_cases], '8');
+        $lookup_others->(\@others, 'c');
+        $lookup_others->([grep {my $w = $_; not grep {$w eq $_} @others} @other_cases], '!');
     }
     return {dict => $dict, table => \@table, active_notes => \%active_notes}
 }
@@ -160,33 +160,33 @@ my $notes_text = <<'---';
 [2] This word not in any of the speller dictionaries but was found in
     SCOWL.  See the notes column for hints on why it was excluded.
 
-[3] The word is considered a spelling variant.  To promote consistent
+[v] The word is considered a spelling variant.  To promote consistent
     spelling, only one spelling of a word is generally included in a
     the smaller dictionary.  The larger dictionary lets in common
     variants (level 1).
 
-[4] This word was found in a special list and may not be considered a
+[sl] This word was found in a special list and may not be considered a
     normal word.
 
-[5] This word has diacritic marks (for example, café).  In the smaller
+[d] This word has diacritic marks (for example, café).  In the smaller
     dictionary diacritic marks are removed.  In the larger dictionary
     both forms, with and without diacritic marks, are included.
 
-[6] This word was created by removing diacritic marks (for example,
+[dr] This word was created by removing diacritic marks (for example,
     café becomes cafe)
 
-[7] The case of the word was changed in a similar manor as if the
+[c] The case of the word was changed in a similar manor as if the
     word was looked up in a spellchecker (for example, Swim -> swim,
     IPAD -> iPad, IPad -> iPad).
 
-[8] The case of the word was changed.  The original word was not found
+[!] The case of the word was changed.  The original word was not found
     in the dictionary. 
 
 ---
 our %notes;
 foreach (split /\n\n/, $notes_text) {
     next unless /[^\n ]/;
-    /\[(\d+)\] (.+)/s or die;
+    /\[([a-z0-9\!]+)\] (.+)/s or die;
     $notes{$1} = $2;
 }
 
@@ -214,7 +214,7 @@ sub to_html( $ ; &) {
     }
     print "</table>\n";
     print "<p>\n";
-    foreach my $n (sort {$a <=> $b} keys %{$d->{active_notes}}) {
+    foreach my $n (sort keys %{$d->{active_notes}}) {
         print "[$n] $notes{$n}<br>\n";
     }
 }
@@ -230,7 +230,7 @@ sub to_text( $ ) {
         print "$fin\t$n\n";
     }   
     print "---\n";
-    foreach my $n (sort {$a <=> $b} keys %{$d->{active_notes}}) {
+    foreach my $n (sort keys %{$d->{active_notes}}) {
         print "[$n] $notes{$n}\n";
     }
 }

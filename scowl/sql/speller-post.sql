@@ -1,5 +1,6 @@
 
 create index speller_words_word on speller_words (word);
+create index speller_words_word_lower on speller_words (word_lower);
 
 insert into speller_cross select (select did from dict_info where dict='en_US'),
                            pid from info join post using (iid) where size <= 60 and (US or SP) and variant <= 0 and not accented;

@@ -67,6 +67,10 @@ should be added.  Words with 3 stars or more (see
 app.aspell.net:/lookup-freq) are added at the 60 and others at the 70
 level.
 
+mozilla-alan.60:
+
+Words found in the Mozilla dictionary than Alan also approved of.
+
 extra.60:
 
 Non-signature words suggested for inclusion by others that are

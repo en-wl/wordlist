@@ -42,7 +42,7 @@ my $affix_file;
 # (such as the ICONV entry) should not be a problem as Aspell ignores
 # it.  The words them self are already in iso8859-1.
  
-$affix_file =~ s/^SET UTF8$/SET ISO8859-1/m;
+$affix_file =~ s/^SET UTF-8$/SET ISO8859-1/m;
 
 my $datadir = File::Temp->newdir();
 

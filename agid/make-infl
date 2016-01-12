@@ -38,10 +38,14 @@ use vars qw($pos_file $filter_file
 
 #$WITH_POS_ONLY = 1;
 
-# normal mode
-$pos_file       = "pos.txt";
-$filter_file    = "all.lst";
-$out_file       = "infl.txt";
+# default mode
+$pos_file       = "/dev/null";
+# others defined via command line
+
+# legacy mode
+#$pos_file       = "pos.txt";
+#$filter_file    = "all.lst";
+#$out_file       = "infl.txt";
 
 # test mode
 #$pos_file        = "pos.tmp";
@@ -54,6 +58,14 @@ $out_file       = "infl.txt";
 # jargon file
 #$pos_file       = "/home/kevina/jargon-4.2.0/html/entry/pos.txt";
 #$out_file       = "/home/kevina/jargon-4.2.0/html/entry/infl.txt";
+
+$filter_file = $ARGV[0] if defined $ARGV[0];
+$out_file    = $ARGV[1] if defined $ARGV[1];
+$pos_file    = $ARGV[2] if defined $ARGV[2];
+
+die "Missing filter_file (first arg).\n" unless defined $filter_file;
+die "Missing out_file (second arg).\n"   unless defined $out_file;
+die "Missing pos_file (third arg).\n"    unless defined $pos_file;
 
 $variant_file     = "variant";
 $irregular_file   = "irregular";
@@ -662,7 +674,7 @@ sub proc_infl_str ($$)
     return @l;
 }
 
-open F, $filter_file or die;
+open F, $filter_file or die "Unable to open $filter_file";
 while (<F>) { chop; $word{$_} = ''; }
 
 open F, $pos_file;

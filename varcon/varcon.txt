@@ -14517,9 +14517,9 @@ A Z: jeopardizing / B: jeopardising
 A Z: jeopardizes / B: jeopardises
 
 # jerrycan (level 55)
-A B: jerrycan / Av Bv: jerrican / Av: jerry can
-A B: jerrycans / Av Bv: jerricans / Av: jerry cans
-A B: jerrycan's / Av Bv: jerrican's / Av: jerry can's
+A B: jerrycan / Av Bv: jerrican / Av: jerry_can
+A B: jerrycans / Av Bv: jerricans / Av: jerry_cans
+A B: jerrycan's / Av Bv: jerrican's / Av: jerry_can's
 
 # Jes (level 80)
 A: Jes / B: Joes

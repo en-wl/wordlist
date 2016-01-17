@@ -277,6 +277,12 @@ more accurate than Tysto's)
 
 CHANGELOG:
 
+From 2015.08.24 to 2016.01.??
+
+   - Undo the effects of PERL_UNICODE in the translate script.
+
+   - Other minor fixes and new entries.
+
 From 2014.02.15 to 2015.08.24 (Aug 24, 2015)
 
    - Added entry for Koran/Koranic.

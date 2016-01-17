@@ -110,6 +110,14 @@ Accents are present on certain words such as café in iso8859-1 format.
 
 CHANGES:
 
+From Version 2015.08.24 to 2016.01.??
+
+  Various new words.
+
+  Remove some very uncommon possessive forms.
+
+  Change "SET UTF8" to "SET UTF-8" in hunspell affix file.
+
 From Version 2015.05.18 to 2015.08.24 (Aug 24, 2015)
 
   Various new words.

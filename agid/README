@@ -1,8 +1,8 @@
 Automatically Generated Inflection Database (AGID)
 
-Version 2014.08.11
+Version 2016.01.19
 
-Copyright 2000-2014 by Kevin Atkinson <kevina@gnu.org>
+Copyright 2000-2016 by Kevin Atkinson <kevina@gnu.org>
 
 The file "infl.txt" is an automatically created database of the
 inflected forms of words from a rather large word list.
@@ -172,6 +172,12 @@ lists and cross reference file.
 The file "make-all" was used to create the word list used by the script.
 
 CHANGES:
+
+From Ver 2014.08.11 to 2016.01.19
+
+  Avoid hard coding the input files in the make-infl script.
+
+  No changes to the data files.
 
 From Rev 4 to Ver 2014.08.11
 

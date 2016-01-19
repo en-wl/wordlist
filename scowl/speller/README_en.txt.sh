@@ -78,10 +78,15 @@ kevina@gnu.org or to the wordlist-devel mailing lists
 have specific issues with any of these dictionaries please file a bug
 report at https://github.com/kevina/wordlist/issues.
 
-IMPORTANT CHANGES FROM 2015.02.15:
+IMPORTANT CHANGES INTRODUCED IN 2015.04.24:
 
 The dictionaries are now in UTF-8 format instead of ISO-8859-1.  This
 was required to handle smart quotes correctly.
+
+IMPORTANT CHANGES INTRODUCED IN 2016.01.19:
+
+"SET UTF8" was changes to "SET UTF-8" in the affix file as some
+versions of Hunspell do not recognize "UTF8".
 
 ADDITIONAL NOTES:
 

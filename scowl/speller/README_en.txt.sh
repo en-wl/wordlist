@@ -42,9 +42,12 @@ The normal (non-large) dictionaries correspond to SCOWL size 60 and,
 to encourage consistent spelling, generally only include one spelling
 variant for a word.  The large dictionaries correspond to SCOWL size
 70 and may include multiple spelling for a word when both variants are
-considered almost equal.  Also, the general quality of the larger
-dictionaries may also be less as they are not as carefully checked for
-errors as the normal dictionaries.
+considered almost equal.  The larger dictionaries however 1) has not
+been as carefully checked for errors as the normal dictionaries and
+thus may contain misspelled or invalid words; and 2) contains
+uncommon, yet valid, words that might cause problems as they are
+likely to a misspelling of a more common words (for example, "ort" and
+"calender") .
 
 To get an idea of the difference in size, here are 25 random words
 only found in the large dictionary for American English:
@@ -60,7 +63,7 @@ basis.  If you find them useful please send me a quick email at
 kevina@gnu.org.
 
 If none of these dictionaries suite you (for example, maybe you want
-the larger dictionary but only use spelling of a word) additional
+the normal dictionary that also includes common variants) additional
 dictionaries can be generated at http://app.aspell.net/create or by
 modifying speller/make-hunspell-dict in SCOWL.  Please do let me know
 if you end up publishing a customized dictionary.

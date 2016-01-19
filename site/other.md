@@ -13,9 +13,9 @@ insanely large word list. My goal is for the non-questionable entries
 to be 100% accurate.
 
 <a href="/agid-readme">readme</a>,
-<a href="http://downloads.sourceforge.net/wordlist/agid-2014.08.11.tar.gz">tar.gz</a>, 
-<a href="http://downloads.sourceforge.net/wordlist/agid-2014.08.11.zip">zip</a>
-(2014-08-11) 
+<a href="http://downloads.sourceforge.net/wordlist/agid-2016.01.19.tar.gz">tar.gz</a>, 
+<a href="http://downloads.sourceforge.net/wordlist/agid-2016.01.19.zip">zip</a>
+(2016.01.19) 
 [source](http://github.com/kevina/wordlist)        
 
 ## Unofficial Jargon File Word Lists

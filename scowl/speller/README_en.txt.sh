@@ -42,12 +42,12 @@ The normal (non-large) dictionaries correspond to SCOWL size 60 and,
 to encourage consistent spelling, generally only include one spelling
 variant for a word.  The large dictionaries correspond to SCOWL size
 70 and may include multiple spelling for a word when both variants are
-considered almost equal.  The larger dictionaries however 1) has not
+considered almost equal.  The larger dictionaries however (1) have not
 been as carefully checked for errors as the normal dictionaries and
-thus may contain misspelled or invalid words; and 2) contains
+thus may contain misspelled or invalid words; and (2) contain
 uncommon, yet valid, words that might cause problems as they are
-likely to a misspelling of a more common words (for example, "ort" and
-"calender") .
+likely to be misspellings of more common words (for example, "ort" and
+"calender").
 
 To get an idea of the difference in size, here are 25 random words
 only found in the large dictionary for American English:

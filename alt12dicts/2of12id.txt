@@ -25844,7 +25844,7 @@ monetarism N: ~monetarisms
 monetarist A:
 monetarist N: monetarists
 monetary A:
-monetize V: monetized  monetizing  monitizes
+monetize V: monetized  monetizing  monetizes
 money N: ~moneys (~monies)
 moneybag N: moneybags
 moneyed A:

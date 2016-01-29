@@ -265,11 +265,6 @@ From Revision 4a to 5 (January 3, 2002)
 
   Moved rarely used inflections of a word into higher number lists.
 
-From 7.1
-
-  Shifted the variant levels so that level 0 is now 1, level 1 now 2,
-  and level 2 now 3.
-
   Added other inflections of a words based on the following criteria
     If the word is in the base form: only include that word.
     If the word is in a plural form: include the base word and the plural

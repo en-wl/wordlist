@@ -58,10 +58,9 @@ are no longer directly used by SCOWL._
 
 * [MWords](http://icon.shef.ac.uk/Moby/)
 * [UK English Wordlist With Frequency Classification](http://www.bckelk.ukfsn.org/menu.html)
-* ENABLE, YAWL
-* UK Advanced Cryptics Dictionary (UKACD)
-* 1990 Census report names file
+* [ENABLE, YAWL](http://web.archive.org/web/20090122025747/http://personal.riverusers.com/~thegrendel/software.html)
+* [UK Advanced Cryptics Dictionary (UKACD)](http://ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/simtelnet/win3/homeent/ukacd17.zip)
+* [1990 Census report names file](http://www.census.gov/topics/population/genealogy/data/1990_census/1990_census_namefiles.html)
 
-Unfortunately, the web site for many of these great lists is no longer
-available.  However, you can find the source of these lists in the
-[Git repository](http://github.com/kevina/wordlist).
+You can also find the source of these lists in the
+[git repository](https://github.com/kevina/wordlist/tree/master/other).

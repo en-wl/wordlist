@@ -20,16 +20,24 @@ lists you can download.
   different characteristics, I do not recommend combining them, except
   as noted below.
 
-<a href="/12dicts-readme">Additional Info</a>
+Originally, 12dicts was composed of lists derived from a specific set
+of 12 source dictionaries. In addition to these "classic" lists,
+Version 5 of 12dicts now includes lists derived from other sources. It
+would perhaps be appropriate to rename 12dicts to something more
+generic, such as BAWL (Beale's Assorted Word Lists), but this has not been
+done so in order to preserve continuity.
 
-# Unofficial
+<a href="/12dicts-readme">readme</a>, 
+<a href="http://downloads.sourceforge.net/wordlist/12dicts-6.0.zip">12dicts-6.0.zip</a> (ver 6.0)
+
+# Unofficial Version
 
 The Unofficial Alternate 12 Dicts Package is the one used by SCOWL. It
 is based on Version 4 of the 12Dicts package.  It contains almost all
-the information in offical version but in a different format as well
-as a good deal of additional information. However it is not meant as a
-replacement for the official 12Dicts package. It simply offers the
-information in a different way.
+of the information in offical version but in a different format as
+well as a good deal of additional information. However it is not meant
+as a replacement for the official 12Dicts package. It simply offers
+the information in a different way.
 
 <a href="/alt12dicts-readme">readme</a>,
 <a href="/alt12dicts-infl-readme">readme-infl</a>,
@@ -38,15 +46,6 @@ information in a different way.
 (2015-01-28) 
 [source](http://github.com/kevina/wordlist)        
 
-# Official
 
-Originally, 12dicts was composed of lists derived from a specific set
-of 12 source dictionaries. In addition to these "classic" lists,
-Version 5 of 12dicts now includes lists derived from other sources. It
-would perhaps be appropriate to rename 12dicts to something more
-generic, such as BAWL (Beale's Assorted Word Lists), but this has not been
-done so in order to preserve continuity.
 
-<a href="/12dicts-readme-r5">readme</a>, 
-<a href="http://downloads.sourceforge.net/wordlist/12dicts-5.0.zip">12dicts-5.0.zip</a> (ver 5.0)
 

@@ -28,7 +28,7 @@ generic, such as BAWL (Beale's Assorted Word Lists), but this has not been
 done so in order to preserve continuity.
 
 <a href="/12dicts-readme">readme</a>, 
-<a href="http://downloads.sourceforge.net/wordlist/12dicts-6.0.zip">12dicts-6.0.zip</a> (ver 6.0)
+<a href="http://downloads.sourceforge.net/wordlist/12dicts-6.0.1.zip">12dicts-6.0.1.zip</a> (ver 6.0.1)
 
 # Unofficial Version
 

@@ -51,8 +51,8 @@ open NV, ">not-variant.lst";
 while (<IN>)
 {
     s/\r?\n$// or die;
-    ($total, $not_variant, $variant, $non_american, $word, $abrv_mark) 
-	= /^(..): (..) (..)\# (..)\&   (.+?)([:.]?)$/ or die "Bad Line:$_";
+    ($total, $not_variant, $variant, $non_american, $second_class, $word, $abrv_mark) 
+	= /^(..): (..) (..)\# (..)\& (..)\=   (.+?)([:.]?)$/ or die "Bad Line:$_";
     $_ = $word;
     $not_variant  = 0 if $not_variant  eq ' -';
     $variant      = 0 if $variant      eq ' -';
@@ -87,10 +87,3 @@ close O11;
 close O05;
 close O02;
 close IN;
-
-
-
-
-
-
-

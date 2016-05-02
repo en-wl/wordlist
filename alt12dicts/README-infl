@@ -10,9 +10,19 @@ improve and maintain my 12dicts package.  [2of12id.txt is under
 the same copyright of AGID, see README-agid for more information.
 -- Kevin Atkinson]
 
-The list includes entries for all lower-case words of more than one
+The sources used for 2of12id.txt, as for 2of12inf.txt, differ in one
+respect from those for the 2of12 and 6of12 files. In an early version
+of 12dicts, one of the 12 was a British-leaning ESL dictionary, which
+was replaced by version 4 with an American dictionary from the same
+publisher. But it was not practical to remove the words from the old
+British dictionary and their inflections from 2of12id.txt. For this
+reason, the vocabulary in 2of12id.txt is slightly richer than that of
+2of12.txt and 6of12.txt.
+
+The 2of12id includes entries for all lower-case words of more than one
 character, excluding hyphenated words and contractions, from the
-"full 2of12 list" in Kevin's 12dicts supplement.  Generally, a word
+"full 2of12 list" in Kevin's 12dicts supplement plus neologisms from
+the neol2016 list.  Generally, a word
 from that list which is an inflection of another word has been omitted,
 unless it has inflections itself, or has a meaning which differs
 significantly from its meaning as an inflection.  Because the latter
@@ -40,6 +50,11 @@ dictionaries are not especially interested in irregular plurals, and
 so upon occasion I have accepted plurals not explicitly shown there,
 when I believe them to be reasonably common.  See below for information
 on my handling of adjectival inflections.)
+
+This version of 2of12id has had neologisms added. The neologisms are
+not to be found in any of the (now fairly old) source dictionaries,
+but not because they are obscure (though a few of them are). The entries
+for these words are marked in the list with a leading + sign.
 
 Most of the hyphenated lines in 2of12id were present in the original
 AGID list.  I inserted a few more such lines for unusual forms of

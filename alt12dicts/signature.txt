@@ -26,21 +26,19 @@ Great Dane
 Hall of Fame
 Kitty Litter
 Last Judgment
-Miss
 Mother Goose
 Mother Nature
 NIMBY
+Oscar
 PBX
 PDQ
 RBI
 Roman candle
-S.O.B.
 SUV
 Spanish moss
 T-bone steak
 TBA
 Ten Commandments
-Thanksgiving
 X-rated
 a la king
 academia
@@ -83,6 +81,7 @@ automatic transmission
 autopilot
 baby talk
 bachelor party
+back and forth
 back door
 back order
 back-seat driver
@@ -453,11 +452,11 @@ hands down
 hard of hearing
 hard-on
 hash browns
+have to
 head cold
 head count
 henpecked
 here's
-high five
 high heels
 ho-hum
 hog-wild
@@ -612,6 +611,7 @@ oops
 open season
 oral sex
 organized crime
+out of
 out-of-bounds
 over-the-top
 overbite
@@ -627,6 +627,7 @@ overprotective
 overreaction
 overstuffed
 overzealous
+owing to
 oxygen mask
 packaging
 paper towel
@@ -639,7 +640,6 @@ pee
 peekaboo
 pep rally
 perplexed
-perplexing
 phloem
 phone book
 phone booth
@@ -670,12 +670,14 @@ prejudiced
 premeditated
 present tense
 price tag
+prior to
 proactive
 psychobabble
 public television
 punching bag
 puppy love
 quality control
+quality time
 questioningly
 rag doll
 rapper
@@ -706,7 +708,6 @@ rib cage
 right field
 ring finger
 road map
-roadkill
 role-playing
 room service
 room temperature
@@ -747,7 +748,6 @@ serial killer
 service charge
 sexual harassment
 shat
-shatterproof
 shaving cream
 shell shock
 shit
@@ -804,7 +804,6 @@ split pea
 split second
 spoiled
 sponge bath
-spread-eagle
 square meal
 squishy
 stag party
@@ -869,7 +868,6 @@ time frame
 time limit
 time-consuming
 to-and-fro
-tolerantly
 toll road
 tongue-in-cheek
 toolbox
@@ -977,6 +975,7 @@ untroubled
 unvarying
 unverified
 unwed
+up to
 uplifting
 values
 vapor trail
@@ -995,6 +994,7 @@ weather forecast
 website
 wedding ring
 weeknight
+well-behaved
 wet dream
 what's
 whatchamacallit

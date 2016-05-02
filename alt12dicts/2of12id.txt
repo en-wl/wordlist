@@ -25,6 +25,7 @@ abdomen N: abdomens
 abdominal A:
 -abdominal N: abdominals
 abduct V: abducted  abducting  abducts
++abductee N: abductee  abductees
 abduction N: abductions
 abductor N: abductors
 abeam A:
@@ -658,7 +659,7 @@ aeronautics N:
 aeroplane N: aeroplanes
 aerosol N: aerosols
 aerospace N: ~aerospaces
-aery A: !aerier  !aeriest
+aery A:
 aery N: aeries
 aesthete N: aesthetes
 aesthetic A:
@@ -791,7 +792,7 @@ aggressiveness N: ~aggressivenesses
 aggressor N: aggressors
 aggrieve V: aggrieved  aggrieving  aggrieves
 aghast A:
-agile A: !agiler  !agilest
+agile A:
 agilely A:
 agility N: ~agilities
 aging N: agings
@@ -1215,6 +1216,7 @@ amicable A:
 amicably A:
 amid C:
 amide N: amides
+amidship A:
 amidships A:
 amidst C:
 amigo N: amigos
@@ -1437,6 +1439,7 @@ animate V: animated  animating  animates
 animatedly A:
 animation N: animations
 animator N: animators
++anime N: ~animes
 animism N: ~animisms
 animist A:
 animist N: animists
@@ -1756,6 +1759,7 @@ apostrophe N: apostrophes
 apothecary N: apothecaries
 apothegm N: apothegms
 apotheosis N: apotheoses
++app N: apps
 appal V: appalled  appalling  appals
 appall V: appalled  appalling  appalls
 appallingly A:
@@ -2601,6 +2605,7 @@ aviatrix N: aviatrixes / aviatrices
 avid A: -avider  -avidest
 avidity N: ~avidities
 avidly A:
+avionic A:
 avionics N:
 avitaminosis N: ~avitaminoses
 avocado A:
@@ -2994,6 +2999,7 @@ bar N: bars
 bar V: barred  barring  bars
 barb N: barbs
 barb V: barbed  barbing  barbs
++barbacoa N: ~barbacoas
 barbarian A:
 barbarian N: barbarians
 barbarianism N: barbarianisms
@@ -3045,6 +3051,7 @@ barge N: barges
 barge V: barged  barging  barges
 bargeman N: bargemen
 barhop V: barhopped  barhopping  barhops
++barista N: baristas
 baritone A:
 baritone N: baritones
 barium N: ~bariums
@@ -3735,7 +3742,7 @@ billionth A:
 billionth N: billionths
 billow N: billows
 billow V: billowed  billowing  billows
-billowy A: !billowier  !billowiest
+billowy A:
 billy N: billies
 bimbo N: bimbos (bimboes)
 bimetallic A:
@@ -3831,6 +3838,7 @@ biretta N: birettas
 birth N: births
 birth V: birthed  birthing  births
 birthday N: birthdays
++birther N: birthers
 birthmark N: birthmarks
 birthplace N: birthplaces
 birthrate N: birthrates
@@ -3859,6 +3867,7 @@ bitch V: bitched  bitching  bitches
 bitchily A:
 bitchiness N: ~bitchinesses
 bitchy A: bitchier  bitchiest
++bitcoin N: bitcoins
 bite N: bites
 bite V: bit  bitten  biting  bites
 biter N: biters
@@ -3937,7 +3946,7 @@ blameless A:
 blamelessly A:
 blamelessness N: ~blamelessnesses
 blameworthiness N: ~blameworthinesses
-blameworthy A: blameworthier  blameworthiest
+blameworthy A:
 blanch V: blanched  blanching  blanches
 blancmange N: blancmanges
 bland A: blander  blandest
@@ -4027,6 +4036,7 @@ blindingly A:
 blindly A:
 blindness N: ~blindnesses
 blindside V: blindsided  blindsiding  blindsides
++bling N: ~blings
 blini N: blini (blinis)
 blink N: blinks
 blink V: blinked  blinking  blinks
@@ -4038,6 +4048,7 @@ blintze N: blintzes
 blip N: blips
 -blip V: blipped  blipping  blips
 bliss N: ~blisses
+bliss V: blissed  blissing  blisses
 blissful A:
 blissfully A:
 blissfulness N: ~blissfulnesses
@@ -4071,6 +4082,9 @@ blockbusting N: ~blockbustings
 blocker N: blockers
 blockhead N: blockheads
 blockhouse N: blockhouses
++blog N: blogs
++blog V: blogged  blogging  blogs
++blogger N: bloggers
 bloke N: blokes
 blond A: blonder  blondest
 blond N: blonds
@@ -4197,7 +4211,7 @@ bluster N: ~blusters
 bluster V: blustered  blustering  blusters
 blusterer N: blusterers
 blusterous A:
-blustery A: blusterier  blusteriest
+blustery A:
 boa N: boas
 boar N: boars
 board N: boards
@@ -5018,6 +5032,7 @@ bucktooth N: buckteeth
 bucktoothed A:
 buckwheat A:
 buckwheat N: ~buckwheats
++buckyball N: buckyballs
 bucolic A:
 bucolic N: bucolics
 bucolically A:
@@ -5230,6 +5245,8 @@ burnous N: burnouses
 burnout N: burnouts
 burp N: burps
 burp V: burped  burping  burps
++burka N: burkas
++burqa N: burqas
 burr N: burrs
 burr V: burred  burring  burrs
 burrito N: burritos
@@ -5331,6 +5348,7 @@ buzz N: buzzes
 buzz V: buzzed  buzzing  buzzes
 buzzard N: buzzards
 buzzer N: buzzers
++buzzkill N: buzzkills
 buzzword N: buzzwords
 by A:
 by C:
@@ -5791,6 +5809,7 @@ carboniferous A:
 carbonize V: carbonized  carbonizing  carbonizes
 carborundum N: ~carborundums
 carboy N: carboys
++carbs N:
 carbuncle N: carbuncles
 carbuncular A:
 carburetor N: carburetors
@@ -5815,6 +5834,7 @@ cardigan N: cardigans
 cardinal A:
 cardinal N: cardinals
 cardinally A:
++cardio N: ~cardios
 cardiogram N: cardiograms
 cardiograph N: cardiographs
 cardiologist N: cardiologists
@@ -5969,6 +5989,7 @@ caseworker N: caseworkers
 cash A:
 cash N: ~cashes
 cash V: cashed  cashing  cashes
++cashback N: ~cashbacks
 cashbook N: cashbooks
 cashew N: cashews
 cashier N: cashiers
@@ -6604,6 +6625,7 @@ chemotherapy N: ~chemotherapies
 chemurgy N: ~chemurgies
 chenille N: ~chenilles
 cheque N: cheques
+chequer N: chequers
 cherish V: cherished  cherishing  cherishes
 cheroot N: cheroots
 cherry A: -cherrier  -cherriest
@@ -6899,6 +6921,7 @@ chutney N: ~chutneys
 chutzpa N: ~chutzpas
 chutzpah N: ~chutzpahs
 chyme N: ~chymes
++ciabatta N: ciabattas
 ciao I:
 cicada N: cicadas (cicadae)
 cicatrice N: cicatrices
@@ -6998,6 +7021,7 @@ city A:
 city N: cities
 civet N: civets
 civic A:
+civically A:
 civics N:
 civies N:
 civil A:
@@ -7223,6 +7247,7 @@ cliquey A: !cliquier  !cliquiest
 cliquish A:
 cliquishly A:
 cliquishness N: ~cliquishnesses
++clit N: clits
 clitoral A:
 clitoris N: clitorises (clitorides)
 cloaca N: cloacae (cloacas)
@@ -7625,6 +7650,7 @@ colonize V: colonized  colonizing  colonizes
 colonizer N: colonizers
 colonnade N: colonnades
 colonnaded A:
++colonoscopy N: colonoscopies
 colony N: colonies
 colophon N: colophons
 color A:
@@ -8928,6 +8954,7 @@ cosmopolitan A:
 cosmopolitan N: cosmopolitans
 cosmopolitanism N: ~cosmopolitanisms
 cosmos N: cosmoses / cosmos
++cosplay N: ~cosplays
 cosponsor N: cosponsors
 cosponsor V: cosponsored  cosponsoring  cosponsors
 -cosset N: cossets
@@ -9167,7 +9194,7 @@ crackhead N: crackheads
 crackle N: crackles
 crackle V: crackled  crackling  crackles
 crackling N: cracklings
-crackly A: !cracklier  !crackliest
+crackly A:
 crackpot A:
 crackpot N: crackpots
 crackup N: crackups
@@ -9327,7 +9354,7 @@ creosote V: creosoted  creosoting  creosotes
 crepe N: crepes
 -crepe V: creped  creping  crepes
 crescendo A:
-crescendo N: crescendos (crescendi)
+crescendo N: crescendos (crescendi crescendoes)
 -crescendo V: crescendoed  crescendoing  crescendos
 crescent A:
 crescent N: crescents
@@ -9487,6 +9514,8 @@ crowbar N: crowbars
 -crowbar V: crowbarred  crowbarring  crowbars
 crowd N: crowds
 crowd V: crowded  crowding  crowds
++crowdfund V: crowdfunded  crowdfunding  crowdfunds
++crowdfunding N: ~crowdfundings
 crowfoot N: crowfoots (crowfeet)
 crown N: crowns
 crown V: crowned  crowning  crowns
@@ -9802,9 +9831,11 @@ cyan A:
 cyan N: ~cyans
 cyanide N: ~cyanides
 -cyanide V: cyanided  cyaniding  cyanides
++cyberbully N: cyberbullies
 cybernetic A:
 cybernetics N:
 cyberpunk N: cyberpunks
++cybersex N: ~cybersexes
 cyberspace N: ~cyberspaces
 cyborg N: cyborgs
 cyclamen N: cyclamens
@@ -10289,6 +10320,7 @@ deductively A:
 deed N: deeds
 deed V: deeded  deeding  deeds
 deejay N: deejays
+-deejay V: deejayed  deejaying  deejays
 deem V: deemed  deeming  deems
 deep A: deeper  deepest
 deep N: deeps
@@ -10450,6 +10482,7 @@ delegation N: delegations
 delete V: deleted  deleting  deletes
 deleterious A:
 deletion N: deletions
++deleverage V: deleveraged  deleveraging  deleverages
 delft N: ~delfts
 delftware N: ~delftwares
 deli N: delis
@@ -11062,6 +11095,7 @@ diarist N: diarists
 diarrhea N: ~diarrheas
 diarrhoea N: ~diarrhoeas
 diary N: diaries
+diaspora N: diasporas
 diastase N: ~diastases
 diastole N: ~diastoles
 diastolic A:
@@ -11816,7 +11850,7 @@ diuretic N: diuretics
 diurnal A:
 -diurnal N: diurnals
 diurnally A:
-diva N: divas
+diva N: divas (dive)
 divalent A:
 divan N: divans
 dive N: dives
@@ -12067,6 +12101,7 @@ dot N: dots
 dot V: dotted  dotting  dots
 dotage N: ~dotages
 dotard N: dotards
++dotcom N: dotcoms
 dote V: doted  doting  dotes
 doter N: doters
 dotingly A:
@@ -12598,6 +12633,7 @@ eaglet N: eaglets
 ear N: ears
 -ear V: eared  earing  ears
 earache N: earaches
++earbud N: earbuds
 eardrum N: eardrums
 eared A:
 earful N: earfuls
@@ -12719,6 +12755,7 @@ economizer N: economizers
 economy A:
 economy N: economies
 ecosystem N: ecosystems
++ecotourism N: ~ecotourisms
 ecru A:
 ecru N: ~ecrus
 ecstasy N: ecstasies
@@ -12731,6 +12768,7 @@ ecumenicism N: ~ecumenicisms
 ecumenism N: ~ecumenisms
 eczema N: ~eczemas
 ed N: ~ed / ~eds
++edamame N: ~edamame (~edamames)
 eddy N: eddies
 eddy V: eddied  eddying  eddies
 edelweiss N: ~edelweisses
@@ -12805,7 +12843,7 @@ effeteness N: ~effetenesses
 efficacious A:
 efficaciously A:
 efficacy N: ~efficacies
-efficiency N: ~efficiencies
+efficiency N: efficiencies
 efficient A:
 efficiently A:
 effigy N: effigies
@@ -12915,6 +12953,7 @@ elbowroom N: ~elbowrooms
 elder A:
 elder N: elders
 elderberry N: elderberries
++eldercare N: ~eldercares
 elderly A:
 -elderly N: elderlies
 elect A:
@@ -12958,6 +12997,7 @@ electromagnetism N: ~electromagnetisms
 electromotive A:
 electron N: electrons
 electronic A:
++electronica N: ~electronicas
 electronically A:
 electronics N:
 -electroplate N: electroplates
@@ -13142,6 +13182,9 @@ emissary N: emissaries
 emission N: emissions
 emit V: emitted  emitting  emits
 emitter N: emitters
++emo A:
++emo N: - (emos)
++emoji N: emoji / emojis
 emollient A:
 emollient N: emollients
 emolument N: emoluments
@@ -13286,7 +13329,7 @@ endocrinologist N: endocrinologists
 endocrinology N: ~endocrinologies
 endogenous A:
 endogenously A:
-endorphin N: ~endorphins
+endorphin N: endorphins
 endorse V: endorsed  endorsing  endorses
 endorsement N: endorsements
 endorser N: endorsers
@@ -14098,6 +14141,7 @@ exodus N: exoduses
 exogenous A:
 exonerate V: exonerated  exonerating  exonerates
 exoneration N: ~exonerations
++exoplanet N: exoplanets
 exorbitance N: ~exorbitances
 exorbitant A:
 exorbitantly A:
@@ -14560,6 +14604,7 @@ fanatic N: fanatics
 fanatical A:
 fanatically A:
 fanaticism N: ~fanaticisms
++fanboy N: fanboys
 fancier N: fanciers
 fanciful A:
 fancifully A:
@@ -14640,6 +14685,7 @@ fashionable A:
 -fashionable N: fashionables
 fashionably A:
 fashioner N: fashioners
++fashionista N: fashionistas
 fast A: faster  fastest
 fast N: fasts
 fast V: fasted  fasting  fasts
@@ -14743,6 +14789,7 @@ feasible A:
 feasibly A:
 feast N: feasts
 feast V: feasted  feasting  feasts
+feaster N: feasters
 -feat A: feater  featest
 feat N: feats
 feather N: feathers
@@ -15978,6 +16025,8 @@ foxtrot V: foxtrotted  foxtrotting  foxtrots
 foxy A: foxier  foxiest
 foyer N: foyers
 fracas N: fracases (fracas)
++frack V: fracked  fracking  fracks
++fracking N: ~frackings
 fractal A:
 fractal N: fractals
 fraction N: fractions
@@ -16144,7 +16193,7 @@ frictional A:
 fridge N: fridges
 friedcake N: friedcakes
 friend N: friends
--friend V: friended  friending  friends
++friend V: friended  friending  friends
 friendless A:
 friendliness N: ~friendlinesses
 friendly A: friendlier  friendliest
@@ -16228,7 +16277,7 @@ frostbite V: frostbit  frostbitten  frostbiting  frostbites
 -frosted N: frosteds
 frostily A:
 frostiness N: ~frostinesses
-frosting N: ~frostings
+frosting N: frostings
 frosty A: frostier  frostiest
 froth N: ~froths
 froth V: frothed  frothing  froths
@@ -16834,6 +16883,7 @@ genuine A:
 genuinely A:
 genuineness N: ~genuinenesses
 genus N: genera (genuses)
++geocache V: geocached  geocaching  geocaches
 geocentric A:
 geocentrically A:
 geochemistry N: ~geochemistries
@@ -16842,6 +16892,7 @@ geodesic A:
 geodesic N: geodesics
 geodesy N: ~geodesies
 geodetic A:
++geoengineering N: ~geoengineerings
 geographer N: geographers
 geographic A:
 geographical A:
@@ -17308,6 +17359,7 @@ goof V: goofed  goofing  goofs
 goofball N: goofballs
 goofiness N: ~goofinesses
 goofy A: goofier  goofiest
++google V: googled  googling  googles
 gook N: gooks
 goon N: goons
 goop N: ~goops
@@ -17979,6 +18031,7 @@ hackle N: hackles
 hackney N: hackneys
 hackney V: hackneyed  hackneying  hackneys
 hacksaw N: hacksaws
++hacktivist N: hacktivists
 hackwork N: ~hackworks
 haddock N: haddocks | haddock
 hadj N: hadjes
@@ -18135,6 +18188,7 @@ handcuff V: handcuffed  handcuffing  handcuffs
 handed A:
 handful N: handfuls (handsful)
 handgun N: handguns
++handheld N: handhelds
 handhold N: handholds
 handicap N: handicaps
 handicap V: handicapped  handicapping  handicaps
@@ -18318,6 +18372,7 @@ hash N: hashes
 hash V: hashed  hashing  hashes
 hasheesh N: ~hasheeshes
 hashish N: ~hashishes
++hashtag N: hashtags
 hasp N: hasps
 -hasp V: hasped  hasping  hasps
 hassle N: hassles
@@ -18408,6 +18463,7 @@ hazer N: hazers
 hazily A:
 haziness N: ~hazinesses
 hazing N: hazings
++hazmat N: ~hazmats
 hazy A: hazier  haziest
 he A:
 he N: hes
@@ -18633,6 +18689,7 @@ helping N: helpings
 helpless A:
 helplessly A:
 helplessness N: ~helplessnesses
++helpline N: helplines
 helpmate N: helpmates
 helpmeet N: helpmeets
 helve N: helves
@@ -19159,6 +19216,7 @@ honourable A:
 hooch N: ~hooches
 hood N: hoods
 hood V: hooded  hooding  hoods
++hoodie N: hoodies
 hoodlum N: hoodlums
 hoodoo N: hoodoos
 hoodoo V: hoodooed  hoodooing  hoodoos
@@ -19321,6 +19379,7 @@ hotheadedly A:
 hotheadedness N: ~hotheadednesses
 hothouse A:
 hothouse N: hothouses
+-hothouse V: hothoused  hothousing  hothouses
 hotline N: hotlines
 hotly A:
 hotness N: ~hotnesses
@@ -19329,6 +19388,8 @@ hots N:
 hotshot A:
 hotshot N: hotshots
 hotspot N: hotspots
++houmous N: ~houmouses
++houmus N: ~houmuses
 hound N: hounds
 hound V: hounded  hounding  hounds
 hour N: hours
@@ -19657,6 +19718,7 @@ hypercritical A:
 hypercritically A:
 hyperglycemia N: ~hyperglycemias
 hyperlink N: hyperlinks
++hyperlink V: hyperlinked  hyperlinking  hyperlinks
 hypermedia N: ~hypermedias
 hypersensitive A:
 hypersensitiveness N: ~hypersensitivenesses
@@ -20314,6 +20376,7 @@ inboard N: inboards
 inborn A:
 inbound A:
 inbound V: inbounded  inbounding  inbounds
++inbox N: inboxes
 inbred A:
 inbreed V: inbred  inbreeding  inbreeds
 inbreeding N: ~inbreedings
@@ -20417,6 +20480,7 @@ incompetent A:
 incompetent N: incompetents
 incompetently A:
 incomplete A:
+-incomplete N: incompletes
 incompletely A:
 incompleteness N: ~incompletenesses
 incomprehensibility N: ~incomprehensibilities
@@ -21503,6 +21567,7 @@ intractable A:
 intractably A:
 intramural A:
 intramuscular A:
++intranet N: intranets
 intransigence N: ~intransigences
 intransigent A:
 intransigent N: intransigents
@@ -21871,6 +21936,7 @@ jail N: jails
 jail V: jailed  jailing  jails
 jailbird N: jailbirds
 jailbreak N: jailbreaks
++jailbreak V: jailbroke  jailbroken  jailbreaking  jailbreaks
 jailer N: jailers
 jailor N: jailors
 jalapeno N: jalapenos
@@ -21979,6 +22045,7 @@ jettison V: jettisoned  jettisoning  jettisons
 -jetty A: jettier  jettiest
 jetty N: jetties
 -jetty V: jettied  jettying  jetties
+jew V: jewed  jewing  jews
 jewel N: jewels
 jewel V: jeweled (jewelled)  jeweling (jewelling)  jewels
 jeweler N: jewelers
@@ -22001,6 +22068,7 @@ jiggly A: !jigglier  !jiggliest
 jigsaw N: jigsaws
 jigsaw V: jigsawed  jigsawed (jigsawn)  jigsawing  jigsaws
 jihad N: jihads
++jihadist N: jihadists
 jilt N: jilts
 jilt V: jilted  jilting  jilts
 jimmy N: jimmies
@@ -22566,6 +22634,7 @@ kudzu N: kudzus
 kumquat N: kumquats
 kvetch N: kvetches
 kvetch V: kvetched  kvetching  kvetches
+kvetcher N: kvetchers
 la N: ~las
 lab N: labs
 label N: labels
@@ -22681,6 +22750,7 @@ lame A: lamer  lamest
 lame N: ~lames
 lame V: lamed  laming  lames
 lamebrain N: lamebrains
+lamebrained A:
 lamely A:
 lameness N: ~lamenesses
 lament N: laments
@@ -22721,6 +22791,7 @@ landing N: landings
 landlady N: landladies
 landless A:
 landless N:
++landline N: landlines
 landlocked A:
 landlord N: landlords
 landlubber N: landlubbers
@@ -23641,6 +23712,7 @@ locally A:
 locate V: located  locating  locates
 location N: locations
 locator N: locators
++locavore N: locavores
 loch N: lochs
 lock N: locks
 lock V: locked  locking  locks
@@ -23691,6 +23763,7 @@ logical A:
 logicality N: ~logicalities
 logically A:
 logician N: logicians
++login N: logins
 logistic A:
 -logistic N: logistics
 logistical A:
@@ -23698,7 +23771,10 @@ logistically A:
 logistics N:
 logjam N: logjams
 logo N: logos
++logoff N: logoffs
++logon N: logons
 logotype N: logotypes
++logout N: logouts
 logrolling N: ~logrollings
 logy A: logier  logiest
 loin N: loins
@@ -23706,6 +23782,7 @@ loincloth N: loincloths
 loiter V: loitered  loitering  loiters
 loiterer N: loiterers
 loitering N: ~loiterings
++lolcat N: lolcats
 -loll N: lolls
 loll V: lolled  lolling  lolls
 lollipop N: lollipops
@@ -23752,6 +23829,7 @@ loom V: loomed  looming  looms
 loon N: loons
 looney A: loonier  looniest
 looney N: looneys (loonies)
++loonie N: loonies
 loony A: loonier  looniest
 loony N: loonies
 loop N: loops
@@ -24094,6 +24172,9 @@ madly A:
 madman N: madmen
 madness N: ~madnesses
 madras N: madrases
++madrasa N: madrasas
++madrasah N: madrasahs
++madrassa N: madrassas
 madrigal N: madrigals
 madwoman N: madwomen
 maelstrom N: maelstroms
@@ -24285,6 +24366,7 @@ maltose N: ~maltoses
 maltreat V: maltreated  maltreating  maltreats
 maltreatment N: ~maltreatments
 malty A: maltier  maltiest
++malware N: ~malwares
 mama N: mamas
 mamba N: mambas
 mambo N: mambos
@@ -24338,6 +24420,7 @@ maneuverability N: ~maneuverabilities
 maneuverable A:
 manful A:
 manfully A:
++manga N: ~mangas
 manganese N: ~manganeses
 mange N: ~manges
 manger N: mangers
@@ -24569,6 +24652,7 @@ maser N: masers
 mash N: ~mashes
 mash V: mashed  mashing  mashes
 masher N: mashers
++mashup N: mashups
 mask N: masks
 mask V: masked  masking  masks
 masker N: maskers
@@ -24872,6 +24956,7 @@ mega A:
 megabit N: megabits
 megabucks N:
 megabyte N: megabytes
++megachurch N: megachurches
 megacycle N: megacycles
 megadeath N: megadeaths
 megahertz N: megahertz (megahertzes)
@@ -24885,6 +24970,7 @@ megaphone N: megaphones
 megaphone V: megaphoned  megaphoning  megaphones
 megaton N: megatons
 megawatt N: megawatts
++meh I:
 meiosis N: ~meioses
 meiotic A:
 melamine N: ~melamines
@@ -24926,6 +25012,7 @@ member N: members
 membership N: memberships
 membrane N: membranes
 membranous A:
++meme N: memes
 memento N: mementos (mementoes)
 memo N: memos
 memoir N: memoirs
@@ -25173,6 +25260,7 @@ mica N: ~micas
 mickey N: mickeys
 micro A:
 micro N: micros
++microaggression N: microaggressions
 microbe N: microbes
 microbial A:
 microbiological A:
@@ -25195,6 +25283,7 @@ microfilm V: microfilmed  microfilming  microfilms
 microgroove N: microgrooves
 microlight A:
 microlight N: microlights
++microloan N: microloans
 micromanage V: micromanaged  micromanaging  micromanages
 micromanagement N: ~micromanagements
 micrometeorite N: micrometeorites
@@ -25305,6 +25394,7 @@ mileage N: mileages
 milepost N: mileposts
 miler N: milers
 milestone N: milestones
++milf N: milfs
 milieu N: milieus (milieux)
 militancy N: ~militancies
 militant A:
@@ -25335,6 +25425,7 @@ mill N: mills
 mill V: milled  milling  mills
 millage N: ~millages
 millennial A:
++millennial N: millennials
 millennium N: millenniums (millennia)
 millepede N: millepedes
 miller N: millers
@@ -25422,6 +25513,7 @@ minimalism N: ~minimalisms
 minimalist A:
 minimalist N: minimalists
 minimally A:
+minimization N: ~minimizations
 minimize V: minimized  minimizing  minimizes
 minimum A:
 minimum N: minimums (minima)
@@ -25685,6 +25777,7 @@ mixture N: mixtures
 mizzen A:
 mizzen N: mizzens
 mizzenmast N: mizzenmasts
++mkay I:
 mnemonic A:
 mnemonic N: mnemonics
 mnemonically A:
@@ -25704,7 +25797,7 @@ mobilizer N: mobilizers
 mobster N: mobsters
 moccasin N: moccasins
 mocha A:
-mocha N: ~mochas
+mocha N: mochas
 mock A:
 -mock N: mocks
 mock V: mocked  mocking  mocks
@@ -26263,6 +26356,7 @@ mugger N: muggers
 -mugger V: muggered  muggering  muggers
 mugginess N: ~mugginesses
 mugging N: muggings
++muggle N: muggles
 muggy A: muggier  muggiest
 mugshot N: mugshots
 mugwump N: mugwumps
@@ -26312,6 +26406,7 @@ multimedia N:
 multimillionaire N: multimillionaires
 multinational A:
 multinational N: multinationals
++multiplayer A:
 multiple A:
 multiple N: multiples
 multiplex A:
@@ -26334,6 +26429,7 @@ multitasking A:
 multitasking N: ~multitaskings
 multitude N: multitudes
 multitudinous A:
++multiverse N: -multiverses
 multivitamin A:
 multivitamin N: multivitamins
 mum A:
@@ -26483,6 +26579,7 @@ mutterer N: mutterers
 muttering N: mutterings
 mutton N: ~muttons
 muttonchops N:
+muttony A:
 mutual A:
 -mutual N: mutuals
 mutuality N: ~mutualities
@@ -26562,6 +26659,7 @@ nameplate N: nameplates
 namesake N: namesakes
 nanny N: nannies
 nanosecond N: nanoseconds
++nanotechnology N: ~nanotechnologies
 nap N: naps
 nap V: napped  napping  naps
 napalm N: ~napalms
@@ -26795,6 +26893,8 @@ neoclassicism N: ~neoclassicisms
 neocolonialism N: ~neocolonialisms
 neocolonialist A:
 neocolonialist N: neocolonialists
++neocon A:
++neocon N: neocons
 neoconservative A:
 neoconservative N: neoconservatives
 neodymium N: ~neodymiums
@@ -26836,6 +26936,7 @@ nestling N: nestlings
 net A:
 net N: nets
 net V: netted  netting  nets
++netbook N: netbooks
 nether A:
 nethermost A:
 netherworld N: ~netherworlds
@@ -26923,7 +27024,7 @@ newsstand N: newsstands
 newsweekly N: newsweeklies
 newswoman N: newswomen
 newsworthiness N: ~newsworthinesses
-newsworthy A: !newsworthier  !newsworthiest
+newsworthy A:
 newsy A: newsier  newsiest
 -newsy N: newsies
 newt N: newts
@@ -26958,6 +27059,7 @@ nicotine N: ~nicotines
 niece N: nieces
 nifty A: niftier  niftiest
 -nifty N: nifties
++nigga N: niggas | niggaz
 niggard A:
 niggard N: niggards
 niggardliness N: ~niggardlinesses
@@ -27997,6 +28099,7 @@ offset N: offsets
 offset V: offset  offsetting  offsets
 offshoot N: offshoots
 offshore A:
++offshoring N: ~offshorings
 offside A:
 offspring N: offspring (offsprings)
 offstage A:
@@ -28266,6 +28369,7 @@ orbit V: orbited  orbiting  orbits
 orbital A:
 orbital N: orbitals
 orbiter N: orbiters
++orc N: orcs
 orchard N: orchards
 orchestra N: orchestras
 orchestral A:
@@ -28760,6 +28864,7 @@ oversensitive A:
 oversensitiveness N: ~oversensitivenesses
 oversexed A:
 overshadow V: overshadowed  overshadowing  overshadows
++overshare V: overshared  oversharing  overshares
 overshoe N: overshoes
 -overshoot N: overshoots
 overshoot V: overshot  overshooting  overshoots
@@ -28796,6 +28901,7 @@ oversuspicious A:
 overt A:
 overtake V: overtook  overtaken  overtaking  overtakes
 overtax V: overtaxed  overtaxing  overtaxes
++overthink V: overthought  overthinking  overthinks
 overthrow N: ~overthrows
 overthrow V: overthrew  overthrown  overthrowing  overthrows
 overtime A:
@@ -29066,7 +29172,7 @@ panhandler N: panhandlers
 panic A:
 panic N: panics
 panic V: panicked  panicking  panics
-panicky A: !panickier  !panickiest
+panicky A:
 panier N: paniers
 pannier N: panniers
 panoply N: panoplies
@@ -29115,7 +29221,7 @@ paperhanger N: paperhangers
 paperhanging N: ~paperhangings
 paperweight N: paperweights
 paperwork N: ~paperworks
-papery A: paperier  paperiest
+papery A:
 papilla N: papillae
 papillary A:
 papist A:
@@ -29147,6 +29253,7 @@ paradoxical A:
 paradoxically A:
 paraffin N: ~paraffins
 -paraffin V: paraffined  paraffining  paraffins
++paragliding N: ~paraglidings
 paragon N: paragons
 -paragon V: paragoned  paragoning  paragons
 paragraph N: paragraphs
@@ -29196,6 +29303,7 @@ paraprofessional N: paraprofessionals
 parapsychologist N: parapsychologists
 parapsychology N: ~parapsychologies
 paraquat N: ~paraquats
++parasailing N: ~parasailings
 parasite N: parasites
 parasitic A:
 parasitically A:
@@ -29249,6 +29357,7 @@ park N: parks
 park V: parked  parking  parks
 parka N: parkas
 parking N: ~parkings
++parkour N: ~parkours
 parkway N: parkways
 parlance N: ~parlances
 parlay N: parlays
@@ -29467,7 +29576,7 @@ patriotic A:
 patriotically A:
 patriotism N: ~patriotisms
 patrol N: patrols
-patrol V: patrolled  patrolling  patrols
+patrol V: patrolled (patroled)  patrolling (patroling)  patrols
 patrolman N: patrolmen
 patrolwoman N: patrolwomen
 patron N: patrons
@@ -29528,6 +29637,7 @@ payola N: ~payolas
 payout N: payouts
 payroll N: payrolls
 payslip N: payslips
++paywall N: paywalls
 pea A:
 pea N: peas (pease)
 peace N: peaces
@@ -29576,6 +29686,7 @@ peccadillo N: peccadilloes (peccadillos)
 peccary N: peccaries
 peck N: pecks
 peck V: pecked  pecking  pecks
++pecs N:
 pectic A:
 pectin N: ~pectins
 pectoral A:
@@ -30162,6 +30273,7 @@ philter N: philters
 -philter V: philtered  philtering  philters
 philtre N: philtres
 -philtre V: philtred  philtring  philtres
++phishing N: ~phishings
 phlebitis N: ~phlebitides
 phlegm N: ~phlegms
 phlegmatic A:
@@ -30252,7 +30364,7 @@ phrenologist N: phrenologists
 phrenology N: ~phrenologies
 phylactery N: phylacteries
 phylogeny N: ~phylogenies
-phylum N: phyla
+phylum N: phyla (phylums)
 physic N: ~physics
 physic V: physicked  physicking  physics
 physical A:
@@ -30286,6 +30398,7 @@ pibroch N: pibrochs
 pic N: pics
 pica N: ~picas
 picador N: picadors
++picante A:
 picaresque A:
 picayune A:
 -picayune N: picayunes
@@ -30655,6 +30768,7 @@ plastic A:
 plastic N: plastics
 plasticity N: ~plasticities
 plasticize V: plasticized  plasticizing  plasticizes
++plastique N: ~plastiques
 plat N: plats
 plat V: platted  platting  plats
 plate N: plates
@@ -30701,6 +30815,7 @@ playgirl N: playgirls
 playgoer N: playgoers
 playground N: playgrounds
 playhouse N: playhouses
++playlist N: playlists
 playmate N: playmates
 playoff N: playoffs
 playpen N: playpens
@@ -30785,7 +30900,7 @@ pluckiness N: ~pluckinesses
 plucky A: pluckier  pluckiest
 plug N: plugs
 plug V: plugged  plugging  plugs
-plum A: plummer  plummest
+plum A:
 plum N: plums
 plumage N: ~plumages
 plumb A:
@@ -30861,6 +30976,8 @@ pockmark V: pockmarked  pockmarking  pockmarks
 pockmarked A:
 pod N: pods
 pod V: podded  podding  pods
++podcast N: podcasts
++podcast V: podcast  podcasting  podcasts
 podiatrist N: podiatrists
 podiatry N: ~podiatries
 podium N: podiums (podia)
@@ -30975,6 +31092,7 @@ polonium N: ~poloniums
 poltergeist N: poltergeists
 -poltroon A:
 poltroon N: poltroons
++polyamory N: ~polyamories
 polyandrous A:
 polyandry N: ~polyandries
 polyclinic N: polyclinics
@@ -31559,6 +31677,7 @@ premonition N: premonitions
 premonitory A:
 prenatal A:
 prenatally A:
++prenup N: prenups
 prenuptial A:
 preoccupation N: preoccupations
 preoccupy V: preoccupied  preoccupying  preoccupies
@@ -32618,6 +32737,7 @@ puzzle N: puzzles
 puzzle V: puzzled  puzzling  puzzles
 puzzlement N: ~puzzlements
 puzzler N: puzzlers
++pwn V: pwned  pwning  pwns
 pygmy A:
 pygmy N: pygmies
 pyjamas N:
@@ -32767,6 +32887,7 @@ querulously A:
 querulousness N: ~querulousnesses
 query N: queries
 query V: queried  querying  queries
++quesadilla N: quesadillas
 quest N: quests
 quest V: quested  questing  quests
 question N: questions
@@ -34084,6 +34205,7 @@ remorsefully A:
 remorseless A:
 remorselessly A:
 remorselessness N: ~remorselessnesses
++remortgage V: remortgaged  remortgaging  remortgages
 remote A: remoter  remotest
 remote N: remotes
 remotely A:
@@ -34103,7 +34225,7 @@ renal A:
 rename V: renamed  renaming  renames
 renascence N: renascences
 renascent A:
-rend V: rent  rending  rends
+rend V: rent (rended)  rending  rends
 render N: renders
 render V: rendered  rendering  renders
 rendering N: renderings
@@ -34147,6 +34269,8 @@ reoccur V: reoccurred  reoccurring  reoccurs
 reopen V: reopened  reopening  reopens
 reorder N: reorders
 reorder V: reordered  reordering  reorders
++reorg N: reorgs
++reorg V: reorged  reorging  reorgs
 reorganization N: reorganizations
 reorganize V: reorganized  reorganizing  reorganizes
 -reorient A:
@@ -34616,6 +34740,7 @@ returnable A:
 returnable N: returnables
 returnee N: returnees
 returner N: returners
++retweet V: retweeted  retweeting  retweets
 retype V: retyped  retyping  retypes
 reunification N: ~reunifications
 reunify V: reunified  reunifying  reunifies
@@ -34887,6 +35012,7 @@ ringlike A:
 ringmaster N: ringmasters
 ringside A:
 ringside N: ~ringsides
++ringtone N: ringtones
 ringworm N: ~ringworms
 rink N: rinks
 rinse N: rinses
@@ -34914,7 +35040,7 @@ riposte V: riposted  riposting  ripostes
 ripper N: rippers
 ripple N: ripples
 ripple V: rippled  rippling  ripples
-ripply A: !ripplier  !rippliest
+ripply A:
 ripsaw N: ripsaws
 -ripsaw V: ripsawed  ripsawed (ripsawn)  ripsawing  ripsaws
 riptide N: riptides
@@ -34972,7 +35098,7 @@ roadside N: roadsides
 roadster N: roadsters
 roadway N: roadways
 roadwork N: ~roadworks
-roadworthy A: roadworthier  roadworthiest
+roadworthy A:
 -roam N: roams
 roam V: roamed  roaming  roams
 roamer N: roamers
@@ -34994,6 +35120,8 @@ robbery N: robberies
 robe N: robes
 robe V: robed  robing  robes
 robin N: robins
++robocall N: robocalls
++robocall N: robocalled  robocalling  robocalls
 robot N: robots
 robotic A:
 robotics N:
@@ -35065,7 +35193,7 @@ romp V: romped  romping  romps
 romper N: rompers
 rondo N: rondos
 rood N: roods
-roof N: roofs
+roof N: roofs (rooves)
 roof V: roofed  roofing  roofs
 roofer N: roofers
 roofing N: ~roofings
@@ -35112,6 +35240,7 @@ rosin N: ~rosins
 rosin V: rosined  rosining  rosins
 rosiness N: ~rosinesses
 roster N: rosters
+-roster V: rostered  rostering  rosters
 rostrum N: rostrums (rostra)
 rosy A: rosier  rosiest
 rot N: ~rots
@@ -35241,7 +35370,7 @@ rudeness N: ~rudenesses
 rudiment N: rudiments
 rudimentary A:
 rue N: ~rues
-rue V: rued  ruing  rues
+rue V: rued  ruing (rueing)  rues
 rueful A:
 ruefully A:
 ruefulness N: ~ruefulnesses
@@ -35257,6 +35386,7 @@ rugby N: ~rugbies
 rugged A: ruggeder  ruggedest
 ruggedly A:
 ruggedness N: ~ruggednesses
++rugrat N: rugrats
 ruin N: ruins
 ruin V: ruined  ruining  ruins
 ruination N: ~ruinations
@@ -35323,7 +35453,7 @@ rush A:
 rush N: rushes
 rush V: rushed  rushing  rushes
 rusher N: rushers
-rushy A: !rushier  !rushiest
+rushy A:
 rusk N: rusks
 russet A:
 russet N: russets
@@ -35353,6 +35483,7 @@ ruthlessly A:
 ruthlessness N: ~ruthlessnesses
 rutty A: ruttier  ruttiest
 rye N: ~ryes
+sabbath N: sabbaths
 sabbatical A:
 sabbatical N: sabbaticals
 saber N: sabers
@@ -35376,6 +35507,7 @@ sachet N: sachets
 sack N: sacks
 sack V: sacked  sacking  sacks
 sackcloth N: ~sackcloths
+sacker N: sackers
 sackful N: sackfuls (-sacksful)
 sacking N: ~sackings
 sacrament N: sacraments
@@ -35549,6 +35681,7 @@ sample A:
 sample N: samples
 sample V: sampled  sampling  samples
 sampler N: samplers
++sampling N: samplings
 samurai A:
 samurai N: samurai (-samurais)
 sanatorium N: sanatoriums (sanatoria)
@@ -35656,6 +35789,7 @@ satanically A:
 satanism N: ~satanisms
 satanist A:
 satanist N: satanists
++satay N: satays
 satchel N: satchels
 sate V: sated  sating  sates
 sateen N: ~sateens
@@ -36057,7 +36191,7 @@ scratchiness N: ~scratchinesses
 scratchy A: scratchier  scratchiest
 scrawl N: scrawls
 scrawl V: scrawled  scrawling  scrawls
-scrawly A: !scrawlier  !scrawliest
+scrawly A:
 scrawniness N: ~scrawninesses
 scrawny A: scrawnier  scrawniest
 scream N: screams
@@ -36314,7 +36448,7 @@ sedative A:
 sedative N: sedatives
 sedentary A:
 sedge N: ~sedges
-sedgy A: !sedgier  !sedgiest
+sedgy A:
 sediment N: sediments
 -sediment V: sedimented  sedimenting  sediments
 sedimentary A:
@@ -36404,6 +36538,7 @@ self A:
 self N: selves
 self P:
 -self V: selfed  selfing  selfs
++selfie N: selfies
 selfish A:
 selfishly A:
 selfishness N: ~selfishnesses
@@ -36414,6 +36549,7 @@ selfsame A:
 sell N: sells
 sell V: sold  selling  sells
 seller N: sellers
++selloff N: selloffs
 sellout N: sellouts
 seltzer N: ~seltzers
 selvage N: selvages
@@ -36441,6 +36577,7 @@ semiconductor N: semiconductors
 semiconscious A:
 semidarkness N: ~semidarknesses
 semidetached A:
+-semidetached N: semidetacheds
 semifinal A:
 semifinal N: semifinals
 semifinalist N: semifinalists
@@ -36717,6 +36854,7 @@ sexpot N: sexpots
 sextant N: sextants
 sextet N: sextets
 sextette N: sextettes
++sexting N: ~sextings
 sexton N: sextons
 sextuplet N: sextuplets
 sexual A:
@@ -36815,6 +36953,7 @@ shareholder N: shareholders
 sharer N: sharers
 shareware N: ~sharewares
 sharia N: ~sharias
++shariah N: ~shariahs
 shark N: sharks (shark)
 sharkskin N: ~sharkskins
 sharp A: sharper  sharpest
@@ -36920,6 +37059,7 @@ shiftless A:
 shiftlessly A:
 shiftlessness N: ~shiftlessnesses
 shifty A: shiftier  shiftiest
++shiitake N: shiitake / shiitakes
 shill N: shills
 shill V: shilled  shilling  shills
 shillalah N: shillalahs
@@ -37032,6 +37172,7 @@ shooting N: shootings
 shootout N: shootouts
 shop N: shops
 shop V: shopped  shopping  shops
++shopaholic N: shopaholics
 shopkeeper N: shopkeepers
 shoplift V: shoplifted  shoplifting  shoplifts
 shoplifter N: shoplifters
@@ -37340,6 +37481,7 @@ silverfish N: silverfish | silverfishes
 silversmith N: silversmiths
 silverware N: ~silverwares
 silvery A: -silverier  -silveriest
++sim N: sims
 simian A:
 simian N: simians
 similar A:
@@ -37721,6 +37863,7 @@ slickness N: ~slicknesses
 slide N: slides
 slide V: slid  sliding  slides
 slider N: sliders
++slideshow N: slideshows
 slight A: slighter  slightest
 slight N: slights
 slight V: slighted  slighting  slights
@@ -37823,6 +37966,7 @@ slumber N: slumbers
 slumber V: slumbered  slumbering  slumbers
 slumberous A:
 slumbrous A:
++slumdog N: slumdogs
 slumlord N: slumlords
 slummy A: slummier  slummiest
 slump N: slumps
@@ -37860,6 +38004,7 @@ smarten V: smartened  smartening  smartens
 smartly A:
 smartness N: ~smartnesses
 smarts N:
++smartwatch N: smartwatches
 smarty N: smarties
 smartypants N: smartypants
 smash A:
@@ -37884,7 +38029,7 @@ smidgin N: smidgins
 smilax N: ~smilaxes
 smile N: smiles
 smile V: smiled  smiling  smiles
-smiley N: smileys
+smiley N: smileys (smilies)
 smilingly A:
 smirch N: smirches
 smirch V: smirched  smirching  smirches
@@ -37969,6 +38114,7 @@ snapshot N: snapshots
 -snapshot V: snapshotted / snapshot  snapshotting  snapshots
 snare N: snares
 snare V: snared  snaring  snares
++snarky A: snarkier  snarkiest
 snarl N: snarls
 snarl V: snarled  snarling  snarls
 snarlingly A:
@@ -38059,6 +38205,7 @@ snowball N: snowballs
 snowball V: snowballed  snowballing  snowballs
 snowbank N: snowbanks
 snowbird N: snowbirds
++snowblower N: snowblowers
 snowboard N: snowboards
 snowboard V: snowboarded  snowboarding  snowboards
 snowboarder N: snowboarders
@@ -38089,7 +38236,7 @@ snuffbox N: snuffboxes
 snuffer N: snuffers
 snuffle N: snuffles
 snuffle V: snuffled  snuffling  snuffles
-snuffly A: !snufflier  !snuffliest
+snuffly A:
 snug A: snugger  snuggest
 snug N: snugs
 snug V: snugged  snugging  snugs
@@ -38387,6 +38534,7 @@ soulfully A:
 soulfulness N: ~soulfulnesses
 soulless A:
 soullessly A:
++soulmate N: soulmates
 sound A: sounder  soundest
 sound N: sounds
 sound V: sounded  sounding  sounds
@@ -38489,6 +38637,9 @@ spadeful N: spadefuls
 spadework N: ~spadeworks
 spadix N: spadices (spadixes)
 spaghetti N: ~spaghettis
++spam N: spams
++spam V: spammed  spammming  spams
++spammer N: spammers
 span N: spans
 span V: spanned  spanning  spans
 spandex N: ~spandexes
@@ -38620,6 +38771,9 @@ spell V: spelled (spelt)  spelling  spells
 spellbind V: spellbound  spellbinding  spellbinds
 spellbinder N: spellbinders
 spellbound A:
++spellcheck N: spellchecks
++spellcheck V: spellchecked  spellchecking  spellchecks
++spellchecker N: spellcheckers
 spelldown N: spelldowns
 speller N: spellers
 spelling N: spellings
@@ -38657,7 +38811,7 @@ spicy A: spicier  spiciest
 spider N: spiders
 spiderweb N: spiderwebs
 -spiderweb V: spiderwebbed  spiderwebbing  spiderwebs
-spidery A: !spiderier  !spideriest
+spidery A:
 spiel N: spiels
 spiel V: spieled  spieling  spiels
 spiffy A: spiffier  spiffiest
@@ -38923,6 +39077,7 @@ sputum N: ~sputa
 spy N: spies
 spy V: spied  spying  spies
 spyglass N: spyglasses
++spyware N: ~spywares
 -squab A: squabber  squabbest
 squab N: squab | squabs
 squabble N: squabbles
@@ -39001,6 +39156,7 @@ squirt V: squirted  squirting  squirts
 squish N: squishes
 squish V: squished  squishing  squishes
 squishy A: squishier  squishiest
++sriracha N: ~srirachas
 ssh I:
 stab N: stabs
 stab V: stabbed  stabbing  stabs
@@ -39157,6 +39313,7 @@ start V: started  starting  starts
 starter N: starters
 -startle N: startles
 startle V: startled  startling  startles
++startup N: startups
 starvation N: ~starvations
 starve V: starved  starving  starves
 starveling N: starvelings
@@ -39286,6 +39443,7 @@ steno N: stenos
 stenographer N: stenographers
 stenographic A:
 stenography N: ~stenographies
++stent N: stents
 stentorian A:
 step N: steps
 step V: stepped  stepping  steps
@@ -39464,6 +39622,7 @@ stone N: stones {rock} | stone {weight}
 stone V: stoned  stoning  stones
 stoned A:
 stonemason N: stonemasons
++stoner N: stoners
 stonewall V: stonewalled  stonewalling  stonewalls
 stoneware N: ~stonewares
 stonewashed A:
@@ -39510,6 +39669,7 @@ stormy A: stormier  stormiest
 story N: stories
 -story V: storied  storying  stories
 storyboard N: storyboards
+-storyboard V: storyboarded  storyboarding  storyboards
 storybook A:
 storybook N: storybooks
 storyteller N: storytellers
@@ -39730,7 +39890,7 @@ stuff N: ~stuffs
 stuff V: stuffed  stuffing  stuffs
 stuffily A:
 stuffiness N: ~stuffinesses
-stuffing N: ~stuffings
+stuffing N: stuffings
 stuffy A: stuffier  stuffiest
 stultification N: ~stultifications
 stultify V: stultified  stultifying  stultifies
@@ -39877,6 +40037,7 @@ subpena V: subpenaed  subpenaing  subpenas
 subplot N: subplots
 subpoena N: subpoenas
 subpoena V: subpoenaed  subpoenaing  subpoenas
++subprime A:
 subprofessional N: subprofessionals
 subroutine N: subroutines
 subscribe V: subscribed  subscribing  subscribes
@@ -40100,7 +40261,7 @@ summer N: summers
 summer V: summered  summering  summers
 summerhouse N: summerhouses
 summertime N: ~summertimes
-summery A: !summerier  !summeriest
+summery A:
 summit N: summits
 -summit V: summited  summiting  summits
 summitry N: ~summitries
@@ -40120,6 +40281,7 @@ sunbathe V: sunbathed  sunbathing  sunbathes
 sunbather N: sunbathers
 sunbathing N: ~sunbathings
 sunbeam N: sunbeams
+sunbelt N: sunbelts
 sunblock N: sunblocks
 sunbonnet N: sunbonnets
 sunburn N: sunburns
@@ -40209,6 +40371,7 @@ superlative N: superlatives
 superlatively A:
 superman N: supermen
 supermarket N: supermarkets
++supermodel N: supermodels
 supermom N: supermoms
 supernal A:
 supernatural A:
@@ -40226,6 +40389,8 @@ superscript A:
 superscript N: superscripts
 superscription N: ~superscriptions
 supersede V: superseded  superseding  supersedes
++supersize A:
++supersize V: supersized  supersizing  supersizes
 supersonic A:
 superstar N: superstars
 superstition N: superstitions
@@ -40883,7 +41048,7 @@ tardy A: tardier  tardiest
 tare N: tares
 tare V: tared  taring  tares
 target N: targets
-target V: targeted  targeting  targets
+target V: targeted (targetted)  targeting (targetting)  targets
 tariff N: tariffs
 -tariff V: tariffed  tariffing  tariffs
 tarmac N: ~tarmacs
@@ -40910,6 +41075,8 @@ tartar N: tartars
 tartaric A:
 tartly A:
 tartness N: ~tartnesses
++taser N: tasers
++taser V: tasered  tasering  tasers
 task N: tasks
 task V: tasked  tasking  tasks
 taskmaster N: taskmasters
@@ -40999,6 +41166,7 @@ teak N: teaks
 teakettle N: teakettles
 teal A:
 teal N: teal | teals
++tealight N: tealights
 team A:
 team N: teams
 team V: teamed  teaming  teams
@@ -41033,6 +41201,7 @@ technicality N: technicalities
 technically A:
 technician N: technicians
 technique N: techniques
++techno N: ~technos
 technocracy N: ~technocracies
 technocrat N: technocrats
 technocratic A:
@@ -41194,7 +41363,6 @@ tender N: tenders
 tender V: tendered  tendering  tenders
 tenderfoot N: tenderfoots (tenderfeet)
 tenderhearted A:
-tenderheartedly A:
 tenderheartedness N: ~tenderheartednesses
 tenderize V: tenderized  tenderizing  tenderizes
 tenderizer N: tenderizers
@@ -41337,6 +41505,7 @@ tetrahedral A:
 tetrahedron N: tetrahedrons (tetrahedra)
 tetrameter N: tetrameters
 text N: texts
++text V: texted  texting  texts
 textbook A:
 textbook N: textbooks
 textile A:
@@ -42096,7 +42265,7 @@ torque V: torqued  torquing  torques
 -torrent A:
 torrent N: torrents
 torrential A:
-torrid A: !torrider  !torridest
+torrid A:
 torridity N: ~torridities
 torridly A:
 torridness N: ~torridnesses
@@ -42474,7 +42643,7 @@ treachery N: treacheries
 treacle N: ~treacles
 treacly A: -treaclier  -treacliest
 tread N: treads
-tread V: trod  trodden (trod)  treading  treads
+tread V: trod (treaded)  trodden (trod)  treading  treads
 treadle N: treadles
 treadle V: treadled  treadling  treadles
 treadmill N: treadmills
@@ -42589,6 +42758,7 @@ triennial A:
 triennial N: triennials
 triennially A:
 trier N: triers
++trifecta N: trifectas
 trifle N: trifles
 trifle V: trifled  trifling  trifles
 trifler N: triflers
@@ -42787,9 +42957,11 @@ trustworthy A: trustworthier  trustworthiest
 trusty A: trustier  trustiest
 trusty N: trusties
 truth N: truths
++truther N: truthers
 truthful A:
 truthfully A:
 truthfulness N: ~truthfulnesses
++truthiness N: ~truthinesses
 try N: tries
 try V: tried  trying  tries
 tryingly A:
@@ -42891,6 +43063,7 @@ turbulence N: ~turbulences
 turbulent A:
 turbulently A:
 turd N: turds
++turducken N: turduckens
 tureen N: tureens
 turf N: turfs (turves)
 turf V: turfed  turfing  turfs
@@ -42983,6 +43156,7 @@ twentieth A:
 twentieth N: twentieths
 twenty A:
 twenty N: twenties
++twerk V: twerked  twerking  twerks
 twerp N: twerps
 twice A:
 twiddle N: twiddles
@@ -43098,7 +43272,7 @@ ukelele N: ukeleles
 ukulele N: ukuleles
 ulcer N: ulcers
 ulcerate V: ulcerated  ulcerating  ulcerates
-ulceration N: ~ulcerations
+ulceration N: ulcerations
 ulcerous A:
 ulna N: ulnae (ulnas)
 ulnar A:
@@ -43670,7 +43844,7 @@ unessential A:
 -unessential N: unessentials
 unethical A:
 unethically A:
-uneven A: !unevener  !unevenest
+uneven A:
 unevenly A:
 unevenness N: ~unevennesses
 uneventful A:
@@ -43759,6 +43933,7 @@ unfounded A:
 unframed A:
 unfreeze V: unfroze  unfrozen  unfreezing  unfreezes
 unfrequented A:
++unfriend V: unfriended  unfriending  unfriends
 unfriendliness N: ~unfriendlinesses
 unfriendly A: unfriendlier  unfriendliest
 unfrock V: unfrocked  unfrocking  unfrocks
@@ -43872,6 +44047,7 @@ uninitiated A:
 uninjured A:
 uninspired A:
 uninspiring A:
++uninstall V: uninstalled  uninstalling  uninstalls
 uninstructed A:
 uninsured A:
 unintelligent A:
@@ -44126,7 +44302,7 @@ unrated A:
 unravel V: unraveled (unravelled)  unraveling (unravelling)  unravels
 unread A:
 unreadable A:
-unready A: !unreadier  !unreadiest
+unready A:
 unreal A:
 unrealistic A:
 unrealistically A:
@@ -44303,6 +44479,7 @@ unstructured A:
 unstrung A:
 unstuck A:
 unstudied A:
++unsubscribe V: unsubscribed  unsubscribing  unsubscribes
 unsubstantial A:
 unsubstantiated A:
 unsuccessful A:
@@ -44482,6 +44659,7 @@ uplift N: ~uplifts
 uplift V: uplifted  uplifting  uplifts
 upload V: uploaded  uploading  uploads
 upmarket A:
+upmost A:
 upon C:
 upper A:
 upper N: uppers
@@ -44598,6 +44776,7 @@ useless A:
 uselessly A:
 uselessness N: ~uselessnesses
 user N: users
++username N: usernames
 usher N: ushers
 usher V: ushered  ushering  ushers
 usherette N: usherettes
@@ -44738,6 +44917,7 @@ vanity N: vanities
 vanquish V: vanquished  vanquishing  vanquishes
 vanquisher N: vanquishers
 vantage N: vantages
++vape V: vaped  vaping  vapes
 vapid A: -vapider  -vapidest
 vapidity N: ~vapidities
 vapidly A:
@@ -44845,7 +45025,7 @@ velum N: vela
 velvet A:
 velvet N: ~velvets
 velveteen N: ~velveteens
-velvety A: !velvetier  !velvetiest
+velvety A:
 venal A:
 venality N: ~venalities
 venally A:
@@ -45282,6 +45462,7 @@ voice V: voiced  voicing  voices
 voiceless A:
 voicelessly A:
 voicelessness N: ~voicelessnesses
++voicemail N: voicemails
 void A:
 void N: voids
 void V: voided  voiding  voids
@@ -45376,9 +45557,12 @@ vulpine A:
 vulture N: vultures
 vulturous A:
 vulva N: vulvae (vulvas)
++vuvuzela N: vuvuzelas
++wack A: wacker  wackest
++wack N: wacks
 wackiness N: ~wackinesses
 wacko A:
-wacko N: wackos
+wacko N: wackos (wackoes)
 wacky A: wackier  wackiest
 wad N: wads
 wad V: wadded  wadding  wads
@@ -45575,7 +45759,7 @@ washbowl N: washbowls
 washcloth N: washcloths
 washer N: washers
 washerwoman N: washerwomen
-washing N: ~washings
+washing N: washings
 washout N: washouts
 washrag N: washrags
 washroom N: washrooms
@@ -45618,6 +45802,9 @@ water N: ~waters
 water V: watered  watering  waters
 waterbed N: waterbeds
 waterbird N: waterbirds
++waterboard N: waterboards
++waterboard V: waterborded  waterboarding  waterboards
++waterboarding N: waterboardings
 waterborne A:
 watercolor A:
 watercolor N: watercolors
@@ -45741,7 +45928,13 @@ weaving N: ~weavings
 web N: webs
 web V: webbed  webbing  webs
 webbing N: ~webbings
++webcam N: webcams
++webcast N: webcasts
++webcast V: webcast  webcasting  webcasts
 webfoot N: webfeet
++webinar N: webinars
++webisode N: webisodes
++webmaster N: webmasters
 website N: websites
 wed V: wedded (wed)  wedding  weds
 wedding N: weddings
@@ -45793,6 +45986,7 @@ weighty A: weightier  weightiest
 weir N: weirs
 weird A: weirder  weirdest
 -weird N: weirds
++weird V: weirded  weirding  weirds
 weirdie N: weirdies
 weirdly A:
 weirdness N: ~weirdnesses
@@ -46104,6 +46298,8 @@ widemouthed A:
 widen V: widened  widening  widens
 widener N: wideners
 wideness N: ~widenesses
++widescreen A:
++widescreen N: widescreens
 widespread A:
 widgeon N: widgeons | widgeon
 widow N: widows
@@ -46119,7 +46315,7 @@ wienie N: wienies
 wife N: wives
 -wife V: wifed  wifing  wifes
 wifeless A:
-wifely A: !wifelier  !wifeliest
+wifely A:
 wig N: wigs
 wig V: wigged  wigging  wigs
 wigeon N: wigeons | wigeon
@@ -46132,6 +46328,7 @@ wiglet N: wiglets
 wigwag N: wigwags
 wigwag V: wigwagged  wigwagging  wigwags
 wigwam N: wigwams
++wiki N: wikis
 wild A: wilder  wildest
 wild N: wilds
 wildcat A:
@@ -46238,6 +46435,7 @@ wing V: winged  winging  wings
 wingding N: wingdings
 wingless A:
 winglike A:
++wingnut N: wingnuts
 wingspan N: wingspans
 wingspread N: wingspreads
 wingtip N: wingtips
@@ -46520,6 +46718,7 @@ worriment N: ~worriments
 worrisome A:
 worry N: worries
 worry V: worried  worrying  worries
+worryingly A:
 worrywart N: worrywarts
 worse N: ~worses
 worsen V: worsened  worsening  worsens

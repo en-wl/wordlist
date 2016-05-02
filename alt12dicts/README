@@ -14,7 +14,8 @@ information.  However it is not meant as a replacement for the
 official 12Dicts package.  It simply offers the information in a
 different way.
 
-This package corresponds to Version 4.0 of the official 12Dicts package.
+This package includes files from Version 6.0 of the official 12Dicts
+package.
 
 The latest version of this package and the official 12Dicts package can
 be found at http://wordlist.aspell.net/
@@ -31,32 +32,41 @@ Alan Beale.
 2of12full.txt description:
 
 The file 2of12full.txt contains the all words appearing in more than
-than one of Alan Beale's source dictionaries.  Each line contains four
+than one of Alan Beale's source dictionaries.  Each line contains five
 numbers, being the total number of dictionaries, the non-variant
-entries, the variant entries, and the non-American entries.  Counts of
-zero are replaced by hyphens.  For instance, the entry
+entries, the variant entries, the non-American entries and the
+"second-class" entries (appearances without a separate definition).
+Counts of zero are replaced by hyphens.  For instance, the entry
 
- 7:  -  2#  5&   aeroplane
+7:  -  2#  5& -=   aeroplane
 
-indicates that the word "aeroplane" is listed in 7 of the dictionaries.
-None list it as a primary American word, 2 list it as a variant form,
-and 5 list it as a non-American word.  Note that words may be marked
-with a "&" for either of 2 reasons.  They may represent a non-American
-spelling of an American word, such as "aeroplane" or "gaol", or they
-may represent a word not normally used in American English, such as
-"bloke" or "lorry".
+indicates that the word "aeroplane" is listed in 7 of the
+dictionaries.  None list it as a primary American word, 2 list it as a
+variant form, and 5 list it as a non-American word, and none list it
+as a second-class word.  Note that words may be marked with a "&" for
+either of 2 reasons.  They may represent a non-American spelling of an
+American word, such as "aeroplane" or "gaol", or they may represent a
+word not normally used in American English, such as "bloke" or
+"lorry". Also note that there are two main kinds of second-class words
+- ones listed in the entry for another word without definition
+(usually associated with the suffixes -ly, -ness or -er/or), and ones
+appearing in a list of undefined words with a common prefix. Finally,
+observe that the numbers of non-variant, variant and non-American
+entries will sum to the total dictionary count, while the scond-class
+entry count is independent of them, except that of course it is never
+greater than the total count.
 
-Words marked with a colon (":") after it are abbrivations which are
+Words marked with a colon (":") after it are abbrevations which are
 entirely lower-case and alphabetic.
 
 This file contains almost all the information found in the normal
-12Dicts package except for the marking of "second class", the
-inclusion of "signature words" which did not appear in at least two
-dictionaries.  A second class word is a word that that an inflection
-which was defined in the same entry as the base word, is a derived
-word (-ly, -ness or -er/or) which was not defined in a separate entry,
-or appeared in a list of undefined words with a common prefix, such as
-un- or re-.
+12Dicts with two exceptions:
+
+1) "Signature words" which did not appear in at least two dictionaries
+are not included in 2of12full
+
+2) The sources used differ in one respect from those for the 2of12 and
+6of12 files. See README-infl for a full description.
 
 
 signature.txt description:
@@ -70,8 +80,7 @@ included are:
 1.  Words of the same category as other included words.  An example is
     the astrological sign "Cancer", which alone of all the astro-
     logical signs fails to appear in 6 or more of the dictionaries.
-    Similarly added were the omitted holidays "Thanksgiving" and
-    "Valentine's Day".
+    Similarly, the omitted holiday "Christmas Eve" was added.
 2.  Vulgarities, sexual terms and insults.  Some such words were
     already included, but most of the source dictionaries were quite
     squeamish about them.  These words are very widely known indeed;
@@ -116,7 +125,7 @@ annotations are to be interpreted as follows:
 &! - A < B, NV = 0
 #  - A >= B, V > NV
 &  - A < B, V > NV
-#? - A >= B, 0.65*NV < V <= NV 
+#? - A >= B, 0.65*NV < V <= NV
 &? - A < B, 0.65*NV < V <= NV
 
 Simplifying, the choice between # and & indicates which variety of
@@ -142,6 +151,10 @@ Additional notes on the list from Alan:
   is a variant, "towards" is not), but recognize that any other
   observer (who could bring himself to care) would be likely to
   occasionally disagree.
+
+Variants.txt has not been updated for release 6, as critical
+information about how the list was contructed has unfortunately been
+lost.
 
 
 abbr.txt description:
@@ -180,3 +193,32 @@ See README-infl
 
 These files are identical to the orignal files in the 12Dicts package.
 See README-orig for more info.
+
+
+signature3a.txt description:
+
+The signature phrases from 3of6all.txt.
+
+
+signature3g.txt description:
+
+The signature words from 3of6game.txt.
+
+
+signature4lem.txt description:
+
+Extra head words added to 2+2+3lem to add British/American versions of
+words when only one form was present, plus a few other words added for
+various reasons.
+
+
+signature4cmn.txt description:
+
+Some very common abbreviations, capitalized words and contractions not
+present in the BYU data, added to 2+2+3cmn.txt.
+
+
+5d+2a.names2016.txt description:
+
+A short list of names of renowned individuals since 1999 (plus one
+government program and one social media site), added to 5d+2a.txt.

@@ -3016,7 +3016,8 @@ _: burnoose's / _v: burnous's
 
 # bus <verified> (level 20)
 A AV B Bv C: bus | -- to avoid confusion with buss
-A Bv C: buses / AV B: busses
+A B C: buses / AV CV B-: busses | <N>
+A Bv C: buses / AV B: busses | <V>
 A Bv C: busing / AV B: bussing
 A Bv C: busings / AV B: bussings
 A Bv C: busing's / AV B: bussing's

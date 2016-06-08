@@ -33,7 +33,7 @@ my $affix_file;
 
 {
     local $/ = undef;
-    open F, $affix_fn or die "Unable to open: $affix_file\n";
+    open F, $affix_fn or die "Unable to open: $affix_fn\n";
     $affix_file = <F>;
 }
 

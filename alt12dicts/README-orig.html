@@ -1,0 +1,8436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>The 12dicts Word Lists</title>
+  <meta content="Alan Beale" name="author">
+</head>
+
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(236, 236, 193);" alink="#000088" link="#0000ff" vlink="#ff0000">
+
+
+
+
+
+
+
+<h1>Introduction</h1>
+
+
+
+
+
+
+
+<p><big>Welcome to version 6.0.1 of 12dicts, a
+collection of English word lists. It differs in several important
+ways from most of the other free word lists you can download.
+</big></p>
+
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+
+  <li><big> The 12dicts lists are
+oriented towards common words. If you're looking for
+myriads of archaic, scientific or computer jargon words, you should
+look elsewhere. </big></li>
+
+
+
+
+
+
+
+  <li><big> The 12dicts lists have been rigorously checked
+for errors. (This is not to
+say that they are error-free, merely that enough care has been taken
+that errors
+are rather infrequent.) </big></li>
+
+
+
+
+
+
+
+  <li><big> 12dicts contains a variety of lists, of
+different sizes and characteristics.
+One size does not fit all. Because each list has different
+characteristics, I do
+not recommend combining them, except as noted below. </big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<p><big>
+Originally, 12dicts was composed of lists derived from a specific set
+of 12 source
+dictionaries. In addition to these "classic" lists, 12dicts now
+includes lists derived
+from other sources. It would perhaps be appropriate to rename 12dicts
+to something
+more generic, such as BAWL (Beale's Assorted Word Lists), but I have
+not done so in
+order to preserve continuity.
+</big></p>
+
+
+
+
+
+
+<p><big>The remainder of this document is organized as
+follows:
+</big></p>
+
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+
+  <li><big> <a href="#release">This release</a></big></li>
+
+
+
+
+
+
+
+  <li><big><a href="#general">Some general
+observations</a></big></li>
+
+
+
+
+
+
+
+  <li><a href="#organization"><big>The
+organization of 12dicts</big></a></li>
+
+
+
+
+
+
+
+  <li><big><a href="#whichlist">Picking a list
+to use</a><br>
+
+
+
+
+
+
+
+    </big></li>
+
+
+
+
+
+
+
+  <li><big><a href="#classic">The classic
+(American) 12dicts lists</a> </big>
+
+    
+    
+    
+    
+    
+    <ul>
+
+
+
+
+
+
+
+      <li><big> <a href="#nof12">The 6of12
+and 2of12 lists</a> </big></li>
+
+
+
+
+
+
+
+      <li><big><a href="#2of12inf">The
+2of12inf list</a> </big></li>
+
+
+
+
+
+
+
+      <li><big><a href="#3esl">The 3esl list</a>
+        </big></li>
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    </ul>
+
+
+
+
+
+
+
+  </li>
+
+
+
+
+
+
+
+  <li><big><a href="#internat">The
+international 12dicts lists</a> </big>
+
+    
+    
+    
+    
+    
+    <ul>
+
+
+
+
+
+
+
+      <li><big><a href="#2of4brif">The
+2of4brif
+list</a></big></li>
+
+
+
+
+
+
+
+      <li><big><a href="#3of6">The 3of6 lists</a><br>
+
+
+
+
+
+
+
+        </big></li>
+
+
+
+
+
+
+
+      <li><big><a href="#5desk">The 5d+2a list</a>
+        </big></li>
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    </ul>
+
+
+
+
+
+
+
+  </li>
+
+
+
+
+
+
+
+  <li><big><a href="#Lemmatized">The
+lemmatized 12dicts lists</a> </big></li>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <ul>
+
+
+
+
+
+
+
+    <li><big><a href="#223lem">The
+2+2+3lem
+list</a></big></li>
+
+
+
+
+
+
+
+    <li><big><a href="#223frq">The 2+2+3frq
+list</a></big></li>
+
+
+
+
+
+
+
+    <li><big><a href="#223cmn">The 2+2+3cmn
+list</a><br>
+
+
+
+
+
+
+
+      </big></li>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </ul>
+
+
+
+
+
+
+
+  <li><big><a href="#special">Specialized
+12dicts lists</a> </big></li>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <ul>
+
+
+
+
+
+
+
+    <li><big><a href="#neol2016">The
+neol2016
+list</a></big></li>
+
+
+
+
+
+
+
+    <li><big><a href="#2of5core">The 2of5core
+list</a></big></li>
+
+
+
+
+
+
+
+    <li><big><a href="#6phrase">The 6phrase
+list</a><br>
+
+
+
+
+
+
+
+      </big></li>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </ul>
+
+
+
+
+
+
+
+  <li><big><a href="#history">How 12dicts came
+to be</a></big></li>
+
+
+
+
+
+
+
+  <li><big><a href="#wyrdplay">My other
+projects</a><br>
+
+
+
+
+
+
+
+    </big></li>
+
+
+
+
+
+
+
+  <li><big><a href="#conclude">Conclusions</a>
+    </big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<h1><a name="release">This release</a></h1>
+
+
+
+
+
+
+
+<p><big>
+This is release 6.0.1 of 12dicts, released April 2016.
+This is a major release. The following is a brief rundown of the
+changes and additions:</big></p>
+
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+
+  <li><big>A number of new lists, based on 6 "advanced
+learner's" ESL
+dictionaries, have been added. The sources are reasonably balanced
+between American and British English. In addition to 3of6game.txt and
+3of6all.txt, which are more or less traditional word lists,
+6phrase.txt, a list of multi-word phrases, was added.</big></li>
+
+
+
+
+
+
+
+  <li><big>The 5desk.txt list has been augmented with words
+from two of
+the advanced learner's dictionaries, and renamed 5d+2a.txt to
+reflect this change.</big></li>
+
+
+
+
+
+
+
+  <li><big>The lemmatized lists have been augmented by
+adding words
+from the new advanced learner list 3of6game.txt along with some
+commonly-used hyphenated words from both 2of12.txt and 3of6all.txt.
+These lists have been renamed from 2+2lemma.txt and 2+2gfreq.txt to
+2+2+3lem.txt and 2+2+3frq.txt to reflect this change.</big></li>
+
+
+
+
+
+
+
+  <li><big>Word frequency information for the lemmatized
+frequency list
+is now obtained from a BYU corpus-derived frequency list rather than
+from Google web data. A small number of abbreviations and proper names
+have been added to the list.</big></li>
+
+
+
+
+
+
+
+  <li><big>Two new small lists of especially common or
+important words have been added: 2of5core.txt and 2+2+3cmn.txt.</big></li>
+
+
+
+
+
+
+
+  <li><big>The annotations of the 6of12.txt list have been
+reworked.</big></li>
+
+
+
+
+
+
+
+  <li><big>Minor corrections have been made to the
+"classic" lists.</big></li>
+
+
+
+
+
+
+
+  <li><big>The neologism file, containing words too recent
+or
+controversial to be listed in many of the source dictionaries, has been
+updated.</big></li>
+
+
+
+
+
+
+
+  <li><big>Slight changes were made to the list of
+6of12.txt signature
+words after it was determined that a few of them should have been
+present as regular (non-signature) words in the
+main body of the list but were omitted due to compilation errors.</big></li>
+
+
+
+
+
+
+
+  <li><big>The files were organized into directories to
+make them more manageable given their increased number.<br>
+
+
+
+
+
+
+
+    </big></li>
+
+
+
+
+
+
+
+  <li><big>The 2of4brif.txt list is being "deprecated". I
+will continue
+to distribute it, but will not be changing or maintaining it. I
+consider the 3of6game.txt list to be a complete replacement.</big></li>
+  <li><big>Version 6.0 of 12dicts had been out for less than a week
+before I discovered a number of embarrassing typos in 5d+2a.txt. These
+have been corrected (along with a minor ommission in the 2+2+3 lists)
+in version 6.0.1.<br>
+    </big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<h1><a name="general"></a>Some general
+observations</h1>
+
+
+
+
+
+
+
+<big>With the exception of the neol2016 list, all the 12dicts
+lists were assembled in a similar fashion. Words were extracted from a
+set of source dictionaries and, in most cases, a list was assembled by
+selecting all words and phrases present in some number of the sources
+meeting certain criteria. For instance, the 2of12 list comprises
+lower-case and hyphenated words present in at least two of twelve
+source dictionaries. For some lists, rules are added establishing
+exceptions for certain words or classes of words&nbsp;- for instance,
+the 2of12 list contains the upper-case words <span style="font-weight: bold;">I</span> and <span style="font-weight: bold;">O</span> as exceptions to
+its general exclusion of upper-case words and names.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+Some lists contain annotations, which are special characters
+appended to certain words. For instance, the ":" character is used in
+some lists to identify abbreviations which are ordinarily used without
+a terminating period. This annotation allows these abbreviations to be
+distinguished from possibly similar regular words. Another annotation,
+used in the 3of6game and 3of6all lists, is the "$" character,
+indicating a word that was placed in the list even though fewer than
+three of the sources mention it. The "+" and "!'" annotations are used
+to identify signature words and neologisms, as described below. Note
+that is it possible for a word to have more than one annotation, though
+this is uncommon. For instance, in the 6of12 list, the word <span style="font-weight: bold;">boldfaced~=</span> has both
+a "~" and a "=" annotation, signifying that the word was an arbitrary
+choice between two equally attested forms (<span style="font-weight: bold;">boldfaced</span>
+and <span style="font-weight: bold;">bold-faced</span>),
+and that it was not given a separate definition in a majority of the
+sources listing it.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+A number of the lists contain signature words. These are words (or
+phrases) which do not meet the formal criteria for inclusion in a
+list, but which I have chosen to add anyway, as words which "ought to
+be" present. Whether a list contains signature words depends on the
+specific list. Usually, but not always, a signature word is present in
+some of
+the sources used for a list, but not enough of them to qualify for
+inclusion on that basis. Some lists may "inherit" signature words from
+other lists from which they were assembled. For instance, the 6phrase
+list includes the signature words from the 3of6all list. In most
+cases, signature words are marked with the "+" annotation.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<a name="neologisms"></a>The neol2016 list contains
+neologisms, words which are not listed in
+some or all of the source dictionaries for 12dicts, generally for one
+of two reasons. First, many of the words are recent coinages which were
+not yet fully recognized by mainstream lexicographers when the 12dicts
+sources were published. Examples of such words are <span style="font-weight: bold;">selfie</span>, <span style="font-weight: bold;">Obamacare</span>, <span style="font-weight: bold;">emoji</span>
+and <span style="font-weight: bold;">snarky</span>.
+Other so-called neologisms are well-established, often well-known,
+words which are
+considered scandalous, such as sexual slang and ethnic slurs, and which are
+often deliberately omitted from dictionaries. (I will not give any
+examples of this sort
+of word here, but you will find some in the neol2016 list.) Note that
+the neologism list has been accumulating for about fifteen years now,
+and
+some of its words have become almost old-fashioned, such as <span style="font-weight: bold;">spam</span> and <span style="font-weight: bold;">dotcom</span>. The
+neologism list is provided so that some or all of its words can be
+added to the other lists where the intended usage makes that
+appropriate. However, I have added the single-word neologisms to the
+2of12inf and 3of6game, as these lists are the most likely to be used in
+coding word games, where it is desirable to recognize the very
+latest hot vocabulary. In these lists, neologisms are
+annotated with the "!" character.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+One other observation worth making is about diacritics. Some
+dictionaries will tell you that there are English words correctly
+spelled <span style="font-weight: bold;">café</span>, <span style="font-weight: bold;">naïve</span>, <span style="font-weight: bold;">façade</span> and <span style="font-weight: bold;">piñata</span>,
+and I do not wish to disagree with these authorities. But as a
+practical matter, Americans do not like to use diacritics. Furthermore
+they use keyboards which do not contain accented letters, and are often
+unfamiliar with the often clumsy techniques that their software
+provides to use such characters. For this reason, 12dicts drops all the
+accents from its English vocabulary. This is particularly valuable for
+coding word games, where expecting players to accent the e in <span style="font-weight: bold;">cafe</span> is not going to
+make them happy. (I cannot help pointing out that Scrabble® contains
+no É tiles.) I apologize to those who consider it a matter of some
+emotional importance that <span style="font-weight: bold;">resume</span>
+and <span style="font-weight: bold;">résumé</span>
+should be differently spelled.<br>
+
+
+
+
+
+
+
+</big>
+<h1><a name="organization"></a>The
+organization of 12dicts</h1>
+
+
+
+
+
+
+
+<big>The 12dicts lists are organized into four directories,
+grouping
+lists with similar characteristics together. The remainder of this
+document follows this organization as well. For each directory, a
+section of the documentation describes in detail the lists it contains.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+Most users of 12dicts end up using only a single list. If it is clear
+which directory will contain the list you need, you can go directly to
+the appropriate documentation.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The four directories are:<br>
+
+
+
+
+
+
+
+</big>
+<ul>
+
+
+
+
+
+
+
+  <li><big><a href="#classic">American</a>.
+The lists in this directory contain primarily American English
+words. </big></li>
+
+
+
+
+
+
+
+  <li><big><a href="#internat">International</a>.
+The lists in this directory contain words from both American
+English and British English.</big></li>
+
+
+
+
+
+
+
+  <li><big><a href="#Lemmatized">Lemmatized</a>.
+The lists in this directory combine other lists, and are formatted in a way that clarifies word
+relationships.</big></li>
+
+
+
+
+
+
+
+  <li><big><a href="#special">Special</a>.
+The lists in this directory are special-purpose lists that do not fit
+into the other directories.<br>
+
+
+
+
+
+
+
+    </big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<h1><a name="whichlist"></a>Picking a list to
+use</h1>
+
+
+
+
+
+
+
+<big>If you are not certain which directory might contain the
+kind of
+list you are looking for, here is a breakdown of the 12dicts lists by
+size and purpose which may be helpful. If it does not help you find what you are looking
+for, you might want to check out <a href="alllists.html"><span style="text-decoration: underline;">this table</span></a>,
+which summarizes the characteristics of all the 12dicts files, put
+together by Kevin Atkinson. Also, I suggest reading the introduction to
+each directory presented in the previous paragraph, each
+of which contains a table summarizing exactly what you can expect from
+each list in that directory.<br>
+
+
+
+
+
+
+
+</big>
+<ul>
+
+
+
+
+
+
+
+  <li><big>Lists for use in word games: <a href="#2of12inf">2of12inf</a> (American), <a href="#3of6game">3of6game</a> (International).</big></li>
+
+
+
+
+
+
+
+  <li><big>A list ordered by word frequency: <a href="#223frq">2+2+3frq</a> (Lemmatized).</big></li>
+
+
+
+
+
+
+
+  <li><big>Small lists of common words: <a href="#2of5core">2of5core</a> (Special, very small), <a href="#3esl">3esl</a> (American), <a href="#223cmn">2+2+3cmn</a>
+(Lemmatized).</big></li>
+
+
+
+
+
+
+
+  <li><big>Medium-sized lists: <a href="#nof12">6of12</a>
+(American, smaller, includes phrases), <a href="#nof12">2of12</a>
+(American, larger, no phrases).</big></li>
+
+
+
+
+
+
+
+  <li><big>Large lists: <a href="#3of6all">3of6all</a>
+(International, includes phrases), <a href="#5desk">5d+2a</a>
+(International, no phrases, many obscure words), <a href="#223lem">2+2+3lem</a>
+(Lemmatized, very large).</big></li>
+
+
+
+
+
+
+
+  <li><big>A list of phrases: <a href="#6phrase">6phrase</a>
+(Special).<br>
+
+
+
+
+
+
+
+    </big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<h1><a name="classic">The classic (American) 12dicts
+lists</a></h1>
+
+
+
+
+
+
+
+<p><big>
+The 12dicts project began as the n-dicts projects, n being a variable
+whose
+value finally stabilized as 12. The purpose of the project was to
+create a
+list of words approximating the common core of the vocabulary of
+American
+English.
+</big></p>
+
+
+
+
+
+
+
+<p><big>The methodology of the project was to record and
+correlate the words
+listed in a number of small dictionaries. The number of dictionaries
+so recorded ended up as 12, comprising 8 ESL (English as a Second
+Language)
+dictionaries and 4 "desk dictionaries". The dictionaries chosen
+varied widely by publisher, by style, by completeness and by depth. All
+of them were dictionaries of American
+English (three from British publishers). The smallest of them contained
+about 20,000 entries, and the largest 46,000. (All totaled, there are
+about 75,000 entries, many of which appeared in only a single
+dictionary.)
+All but two of the sources were published between 1992 and 1999, when
+12dicts
+was first released.</big></p>
+
+
+
+
+
+
+
+<p><big>The following table summarizes the contents of each
+of the classic lists, located in the American directory, ordered by
+size in words:
+</big></p>
+
+
+
+
+
+
+
+<p>
+<table border="1">
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <th></th>
+
+
+
+
+
+
+
+      <th><big>3esl</big></th>
+
+
+
+
+
+
+
+      <th><big>6of12</big></th>
+
+
+
+
+
+
+
+      <th><big>2of12</big></th>
+
+
+
+
+
+
+
+      <th><big>2of12inf</big></th>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Size (Words)</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>22,000</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>32,000</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>41,000</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>82,000</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Number of Sources</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>3</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>12</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>12</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>12</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>American English</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>British English</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Ordinary words</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Inflections</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Hyphenations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;">Y</td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Phrases</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Names</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Abbreviations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Acronyms</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Prefixes/Suffixes</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Signature words</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>*</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Neologisms</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Annotations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p><big>A * in the "Signature Words" row means that
+signature
+words associated with some other list may be present, but there are no
+signature words associated specifically with that list.</big></p>
+
+
+
+
+
+
+
+<h2><a name="nof12">The 6of12 and 2of12
+lists</a></h2>
+
+
+
+
+
+
+
+<p><big>
+I initially tried two different ways of winnowing the 12dicts data to
+produce lists of common words. Both produced interesting results.
+One list, the 6of12 list, contained all words and phrases
+listed in 6 of the 12 dictionaries. One way of describing this list
+is that it contains those words and phrases which a (seeming) majority
+of lexicographers believe are relevant to people learning English,
+and/or to everyday usage. This list contained about 32,000 words and
+phrases. The other list, the 2of12 list, was more inclusive in that it
+included words listed in as few as two of the source dictionaries, but
+less inclusive in that it excluded items of various sorts, including
+multi-word phrases, proper names and abbreviations. This list contained
+about 41,000 words. It was likely more suitable for use in areas
+like spell checking or word games than the 6of12 list. (Honesty
+compels me to admit that neither of these lists is, by itself, a good
+choice for spell checking, due to the absence of inflections, proper
+names, Roman numerals, etc.)
+</big></p>
+
+
+
+
+
+
+
+<p><big>A third list, 2of12inf.txt, developed later, was of
+a rather different
+character, and is discussed in a later section.
+</big></p>
+
+
+
+
+
+
+
+<p><big>A more precise description of the criteria by which
+the above lists
+were composed is as follows:
+</big></p>
+
+
+
+
+
+
+
+<h3>6of12 list word selection</h3>
+
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+
+  <li><big>The 6of12 list contains all non-excluded words
+and phrases which
+appear in 6 or more of the source dictionaries. </big></li>
+
+
+
+
+
+
+
+  <li><big>Prefixes and suffixes are excluded.
+Abbreviations are included;
+however, if they are entirely lower-case and alphabetic, they are
+terminated with a colon (":") so they can be easily distinguished
+from regular words. </big></li>
+
+
+
+
+
+
+
+  <li><big>Inflections of included words are not themselves
+included unless
+they are separately defined or irregular. </big></li>
+
+
+
+
+
+
+
+  <li><big>It sometimes occurs that a word is listed in
+several forms (e.g.,
+with and without hyphenation) in 6 or more dictionaries, even though
+no single form is so listed. In this case, if one spelling is clearly
+more accepted, this spelling and this spelling only is listed. If all
+spellings seem equally accepted, one spelling has been selected
+arbitrarily for inclusion. </big></li>
+
+
+
+
+
+
+
+  <li><big>The 6of12 list contains a significant number of
+signature words, as discussed below. All of these words are
+listed in at least one of the source dictionaries. </big></li>
+
+
+
+
+
+
+
+  <li><big>In addition to the ":" suffix discussed above,
+other annotations are used to mark words with certain characteristics,
+as discussed below. </big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<h3>2of12 list word selection</h3>
+
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+
+  <li><big>The 2of12 list contains all non-excluded words
+which appear in at
+least 2 of the source dictionaries. </big></li>
+
+
+
+
+
+
+
+  <li><big>This list excludes capitalized words, multi-word
+phrases, and
+abbreviations, as well as prefixes and suffixes. It does not
+exclude hyphenated words or contractions. If a word occurs in
+both a hyphenated and an unhyphenated form, the unhyphenated
+form is listed, even if the hyphenated form is generally
+preferred. </big></li>
+
+
+
+
+
+
+
+  <li><big>The list excludes spellings which are considered
+(by a majority
+of the dictionaries listing it) to be non-American usage. It
+also excludes secondary spellings which are mentioned by fewer
+than four of the source dictionaries. </big></li>
+
+
+
+
+
+
+
+  <li><big>Inflections of included words are not themselves
+included unless
+they are separately defined, or irregular. </big></li>
+
+
+
+
+
+
+
+  <li><big>Several of the source dictionaries include
+listings for obscure
+currencies, such as <b>ringgit, khoum</b> and <b>ngwee.</b>
+I was unable to regard such words as part of the English "core
+vocabulary",
+and so I required citation in over a third of the dictionaries for
+inclusion of such monetary units. A side-effect was the elimination
+of the word <b>lepton</b>, which, in addition to its use
+in particle
+physics, is also .01 Greek drachmas. </big></li>
+
+
+
+
+
+
+
+  <li><big>This list also includes a small number of
+signature words, as
+discussed below. </big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<h3>Signature words</h3>
+
+
+
+
+
+
+
+<big>As indicated, both lists have been augmented with words
+(and, in the
+case of the 6of12 list, phrases) which fail to meet the formal
+requirements for inclusion. In the case of the 6of12 list, 1024
+words were added (about 3 % of the total). These are all words which,
+in the judgment of the compiler, are as familiar as many of the words
+which did meet the criteria for inclusion. Examples of some of the
+sorts
+of words which were added are:
+</big>
+<ul>
+
+
+
+
+
+
+
+  <li><big>Words of the same category as other included
+words. An example is
+the astrological sign <b>Cancer</b>, which alone of all
+the
+astrological signs fails to appear in 6 or more of the dictionaries.
+Similarly added was the omitted holiday <b>Christmas Eve.</b>
+    </big></li>
+
+
+
+
+
+
+
+  <li><big>Vulgarities, sexual terms and insults. Some such
+words were
+already included, but most of the source dictionaries were quite
+squeamish about them. These words are very widely known indeed;
+I hold that any list of "common" words which does not include the
+infamous f-word is simply discredited thereby. Some may feel that
+it would have been better to leave some or all of these terms
+unmentioned. Nevertheless, the expression of blasphemy,
+unwarranted contempt and perverse lust, whether in words or in
+deeds, is a very human trait. Suppressing the evidence of these
+aspects of the human condition in our language makes no more sense
+than excluding <b>leprosy, gangrene</b> and <b>dementia</b>,
+no matter how unpleasant they may be to contemplate. </big></li>
+
+
+
+
+
+
+
+  <li><big>Conventional conversational phrases so common as
+to be practically
+invisible to native speakers. Examples are <b>thank you, good
+night, uh-huh, of course</b> and <b>gesundheit.</b> </big></li>
+
+
+
+
+
+
+
+  <li><big>Sports terminology, especially for football and
+baseball. (If I,
+who am practically sports-blind, noticed this deficiency, it must
+be of major proportions indeed.) </big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<big>Note that the signature words in the 6of12 list can be
+identified via
+the annotation "+", and eliminated if desired.
+</big>
+<p><big>A much smaller set of words (49) was added to the
+2of12 list. These
+were of two sorts:
+</big></p>
+
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+
+  <li><big>Signature words from the 6of12 list which were
+not already present
+in the 2of12 list, and which are not excluded due to being
+abbreviations, phrases, etc. </big></li>
+
+
+
+
+
+
+
+  <li><big>Inflections of irregular verbs not explicitly
+mentioned in 2
+source dictionaries, such as <b>outfought</b> and <b>reheard.</b></big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<big>These words are not marked with suffix characters.</big>
+<h3><big>Annotations</big></h3>
+
+
+
+
+
+
+
+<big>Some of the 6of12 list entries are annotated with a suffix
+character,
+giving additional information about the associated word. The
+annotations can be easily removed with an editor or a script if
+they are unwanted.
+</big>
+<p><big>These annotations are:
+</big>
+<table>
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>:</big></td>
+
+
+
+
+
+
+
+      <td><big>The word is an otherwise unmarked
+abbreviation. This suffix always occurs before any other suffix.</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>&amp;</big></td>
+
+
+
+
+
+
+
+      <td><big>The word is primarily a non-American usage.</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>#</big></td>
+
+
+
+
+
+
+
+      <td><big>The word is generally held to be a variant
+or less preferred
+form of another word.</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>=</big></td>
+
+
+
+
+
+
+
+      <td><big>Roughly, this indicates a "second class"
+word, as described
+below.</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>&lt;</big></td>
+
+
+
+
+
+
+
+      <td><big>This form of a word is held to be the
+primary form by fewer
+dictionaries than some other form of the word.</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>^</big></td>
+
+
+
+
+
+
+
+      <td><big>This form of the word was selected
+as the most commonly listed of a set of variant spellings.</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>~</big></td>
+
+
+
+
+
+
+
+      <td><big>This form of a word is one of a set of
+variant spellings, none of which was clearly preferred.</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>+</big></td>
+
+
+
+
+
+
+
+      <td><big>The word is a signature word.</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p><big>The reasons a word might be marked with the =
+annotation
+are:
+</big></p>
+
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+
+  <li><big>The word is an inflection which was defined in
+the same
+entry as the base word. </big></li>
+
+
+
+
+
+
+
+  <li><big>The word is a derived word (usually ending with <b>-ly</b>,
+    <b>-ness</b> or <b>-er/or</b>) which was
+not defined in a separate
+entry. </big></li>
+
+
+
+
+
+
+
+  <li><big>The word appeared in a list of undefined words
+with a
+common prefix, such as <b>un-</b> or <b>re-</b>.</big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<big>Note that, in the determination of the "&lt;", "^", and
+"^" suffixes, only certain very close spelling variations are
+considered, namely single word vs. hyphenated word vs. multi-word,
+differences in capitalization, and presence or absence of a terminating
+period for abbreviations. The words <span style="font-weight: bold;">tenderhearted</span>
+and <span style="font-weight: bold;">tender-hearted</span>
+are close variants by this definition, but <span style="font-weight: bold;">judgment</span> and <span style="font-weight: bold;">judgement</span> are not.</big>
+<p><big>The words in the 2of12 list are not annotated.
+</big></p>
+
+
+
+
+
+
+
+<h2><a name="2of12inf">The 2of12inf list</a></h2>
+
+
+
+
+
+
+
+<p><big>
+The 2of12inf list is of a rather different character from the two
+original "classic" lists. Conceptually,
+it is simple. It consists of all the unhyphenated words in the 2of12
+list, plus
+their inflections, amounting to about 82,000 words. This list may
+be more useful than the other lists for applications like word games.
+It was created to help Kevin Atkinson in his Aspell and SCOWL projects
+(for which, follow <a href="http://aspell.sourceforge.net">these</a>
+<a href="http://wordlist.aspell.net/">links</a>).
+Unlike the 6of12 and
+2of12 lists, this list was not based exclusively on the contents of my
+12 source dictionaries, and for this reason it has, I feel, less
+authority than the other classic 12dicts lists. It also probably has a
+significantly higher error rate than the other lists, for reasons
+explained below.
+</big></p>
+
+
+
+
+
+
+
+<p><big>The criteria defining the 2of12inf list are as
+follows:
+</big></p>
+
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+
+  <li><big>The 2of12inf list contains all non-excluded
+words which appear in
+at least 2 of the source dictionaries. </big></li>
+
+
+
+
+
+
+
+  <li><big>This list excludes capitalized words, multi-word
+phrases,
+abbreviations, contractions, hyphenated words and single-letter
+words, as well as prefixes and suffixes. </big></li>
+
+
+
+
+
+
+
+  <li><big>The list does not exclude secondary spellings,
+non-American usages
+or monetary units. </big></li>
+
+
+
+
+
+
+
+  <li><big>The list includes inflections of all included
+words. Any
+inflection mentioned or clearly implied by any of the source
+dictionaries is included (i.e., two citations are not required).
+Additionally, some inflections have been added from other sources. </big></li>
+
+
+
+
+
+
+
+  <li><big>Plurals of "uncountable" nouns were included,
+annotated with the
+"%" suffix character. See below for an extended discussion of
+the inclusion of these words. </big></li>
+
+
+
+
+
+
+
+  <li><big>Qualifying signature words from the other lists,
+plus their
+inflections, were
+added. No other signature words were added.</big></li>
+
+
+
+
+
+
+
+  <li><big>Qualifying neologisms from the neol2016 list,
+including their inflections, were added. The neologisms are indicated
+by a '!' prefix.<br>
+
+
+
+
+
+
+
+    </big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<p><big>
+Though the 2of12inf list still consists mostly of very common words,
+criteria 3 through 5 above cause the 2of12inf list to contain a greater
+proportion of unfamiliar and unusual words than the other classic
+12dicts lists.
+</big></p>
+
+
+
+
+
+
+
+<p><big>The 2of12inf list was not derived directly from the
+12 source
+dictionaries. The starting point was a subset of Kevin Atkinson's
+AGID list, a list of words, parts of speech and inflections derived
+from public-domain sources, notably Moby Words and WordNet. (See the
+file agid.txt in the 12dicts archive, which is a copy of the AGID
+"readme",
+for more information on the antecedents of AGID.) 2of12inf was created
+by a process of editing the AGID subset to remove spurious entries and
+those which reflected a more esoteric English vocabulary than the other
+12dicts lists, and to add inflections which AGID failed to identify.
+This process required significantly less effort than would have been
+needed to derive the list directly from the source dictionaries.
+Unfortunately, a side effect of the process was that the result is
+probably somewhat less reliable than the other 12dicts lists.
+In particular, Moby Words is notoriously unreliable, and I find it
+unlikely that I have successfully identified all the spurious
+inflections its use has introduced. It would be nice to
+release another edition of 2of12inf which is not derived from AGID,
+and therefore not "infected" by Moby Words, but I haven't done so in 15
+years, and so it probably won't happen.
+</big></p>
+
+
+
+
+
+
+
+<p><big>After the first version of the 2of12inf list was
+released, I replaced
+one of the source dictionaries, officially an international dictionary
+but in actuality rather British in its orientation, with a more
+American dictionary by the same publisher. It was not practical
+(nor necessarily desirable) for me to go through the list removing
+inflections endorsed only by the superseded dictionary. For this
+reason, the 2of12inf list has a slightly more international character
+than the other 12dicts lists. It is not altogether clear that this
+is a bad thing.
+</big></p>
+
+
+
+
+
+
+
+<h3><big>Selection of inflections</big></h3>
+
+
+
+
+
+
+
+<p><big>
+Ideally, the 2of12inf list would contain only inflections listed in
+one of the 12dicts source dictionaries. This proved not to be
+practical. The reason for this has to do with the nature of these
+sources, which are mostly ESL dictionaries. An ESL dictionary might
+well list the word <b>esophagus,</b> but, because an
+English learner is
+unlikely to need to talk about this organ in the plural, it will
+probably not bother to list the plural form <b>esophagi.</b>
+For words of
+this sort, I therefore needed to obtain their inflections from other
+sources. Obviously, the decisions on when to include additional
+inflections were judgment calls, as were the choices of which
+inflections to add.
+</big></p>
+
+
+
+
+
+
+
+<p><big>Adjectival inflections (comparatives and
+superlatives) proved to be
+an especially annoying problem. Only 2 of my 12 source dictionaries
+provided remotely reliable information of this sort. In fact, such
+information is sparse and inconsistent in most dictionaries of any
+size. I relied on a small set of additional dictionaries for this
+information, which was mostly disjoint from the sources for plurals
+and verb forms. Several of these sources were Scrabble®-related,
+and therefore inclined to include forms of little plausibility such
+as <b>iller/illest</b> or <b>fertiler/fertilest.</b>
+Accordingly, I ended up rejecting some of the documented inflections on
+grounds of implausibility. I have no doubt that, in the process, I made
+a number of errors of both inclusion and exclusion and, in any case,
+many
+of the forms listed have no connection with any of the 12dicts source
+dictionaries.
+</big></p>
+
+
+
+
+
+
+
+<p><big>One additional problem in the creation of the
+2of12inf list was that
+of "uncountable" nouns and their plurals. Some English dictionaries,
+especially ESL dictionaries, as well as other linguistic sources
+attest to the existence of nouns which cannot be counted or used in
+the plural. Examples of such nouns include <b>mud, rayon,
+oregano,
+chess, fairness, wisdom, aluminum, training, materialism</b>
+and <b>chickenpox.</b> This is an entirely commonsense
+notion, but a
+difficulty is the fact that the boundary between the countable and the
+uncountable is extremely vague and ill-defined. For example, the word
+<b>coffee</b> is ordinarily uncountable, but not when
+ordering in a
+restaurant, as is the word <b>symmetry,</b> except in
+physics or math.
+In general, it is possible to contrive a context where use of the
+plural of any noun whatsoever is reasonable.
+</big></p>
+
+
+
+
+
+
+
+<p><big>An alternate position, therefore, is that in fact
+no nouns are
+uncountable, and that any noun which is not already plural possesses
+a plural. This position is especially useful in the context of word
+games, where words such as <b>zeals</b> and <b>anthraxes</b>
+may produce large scores. For this reason, the official Scrabble
+dictionaries list words such as <b>thens, onces</b> and
+<b>mankinds</b>, which most people find
+rather implausible. The fact that the 2of12inf list might well be
+useful in gaming contexts, together with the fact that the boundary
+between countable and uncountable nouns is so ill-defined, served as
+a powerful argument for inclusion of all plural forms, whether
+commonly used or not, while its derivation from ESL sources argued
+for including only the plurals of countable nouns, however
+distinguished.
+</big></p>
+
+
+
+
+
+
+
+<p><big>As I prepared the list for release, I was unable to
+resolve this dilemma,
+and adopted a
+compromise. The 2of12inf list includes all plurals, but with the
+plurals of uncountable nouns marked, making it easy to remove them
+if they are not wanted. That left the issue of how to establish
+countability. Six of my source dictionaries included information
+on countability, which was adequate to decide the status of most of
+the included nouns. As for the rest, as usual, I used my best
+judgment. I will confess to occasionally overriding the source
+dictionaries when I believed they were clearly incorrect. (For
+instance, I chose not to mark the word <b>hatreds</b> as
+an
+uncountable plural, in defiance of the opinion of all my sources,
+on the grounds that it has been used in too many news stories from
+Bosnia to be considered unusual.) It is interesting to note that
+most of the plurals I added from auxiliary sources were of words
+considered uncountable. I also note that at some point after the
+release of the 2of12inf list, I decided that it would have been better
+to have left the Scrabble plurals out, and, while I was not
+comfortable with removing them, no list I've created
+since then which lists inflections includes them.
+</big></p>
+
+
+
+
+
+
+
+<p><big>The difficulties listed above, and the fact that I
+was forced to
+exercise personal judgment frequently in creating it, emphasizes a
+fundamental difference between this list and the other classic 12dicts
+lists. I have tried to make the 6of12 and 2of12 lists reflect only the
+source dictionaries, and to keep my own judgments and opinions out of
+the picture (except for my addition of signature words). This has
+proved impossible to achieve for the 2of12inf list, which accordingly
+represents a less authoritative and more arbitrary collection.
+Additionally, the 2of12inf list has undergone less proofreading and
+validation than the other lists, and I suspect the error rate is
+somewhat higher than the idealistic goal of 0.02% I adopted for this
+project. Nevertheless, I hope it may prove to be
+of some use and interest.
+</big></p>
+
+
+
+
+
+
+
+<p><big>I wish to offer my special thanks to Kevin
+Atkinson, for supplying me
+with the AGID list, and for encouraging me to add the inflections. Of
+course, any errors that remain in the 2of12inf list are my own
+responsibility, and should not be blamed on Kevin, AGID, or even on
+Moby.
+</big></p>
+
+
+
+
+
+
+
+<h2><a name="3esl">The 3esl list</a></h2>
+
+
+
+
+
+
+
+<p><big>
+The 3esl list represents another attempt to produce an English "core
+vocabulary" list. It is about 2/3 of the size of the 6of12 list,
+which it resembles in terms of the sorts of words included.
+</big></p>
+
+
+
+
+
+
+
+<p><big>The 3esl list is a far more subjective list than
+any of the classic
+12dicts lists. It was compiled from 3 small ESL dictionaries, using
+the same criteria for eligibility as the 6of12 list. I started with
+a list composed of all words from the smallest of the 3 sources, plus
+all words contained in both of the others. This list was then edited
+in the following ways:
+</big></p>
+
+
+
+
+
+
+
+<ol>
+
+
+
+
+
+
+
+  <li><big>I removed alternate spellings for included
+words, such as <b>grey</b>
+and <b>off-stage</b>. I also removed very similar synonyms
+for the
+same concept, for instance, removing <b>cable television</b>
+as a
+duplicate of <b>cable TV.</b> </big></li>
+
+
+
+
+
+
+
+  <li><big>I added one form of each word which would have
+been included if
+the sources had agreed on spelling, such as <b>shortchange</b>
+and <b>back seat</b>. </big></li>
+
+
+
+
+
+
+
+  <li><big>I removed some words which were present in the
+smallest of the
+sources but seemed too esoteric, such as the symbols of chemical
+elements. I did this only for words which were not present in the
+other sources. </big></li>
+
+
+
+
+
+
+
+  <li><big>I added some words which were present in only
+one of the two
+larger sources, but which seemed appropriate to add. These words
+were frequently of the sort added to the 6of12 list as signature
+words, as well as some inflections that often function as words
+with meanings of their own, such as <b>comforting</b> and <b>notes.</b>
+    </big></li>
+
+
+
+
+
+
+
+</ol>
+
+
+
+
+
+
+
+<p><big>
+All of these changes were quite subjective in nature, and quite
+numerous. Probably more than 10 % of the candidate words were added
+or removed in this way. For this reason, it is pointless to speak
+of signature words for this list; the composition of the list is too
+arbitrary for the term to make any sense. (I will note that the list
+is still not entirely arbitrary, as I added only words found in
+some form in one of the sources, and removed no words present in two
+of the sources other than duplicates. Thus, words like <b>front
+page</b> were not added, no matter how familiar, and words such
+as <b>lugubrious</b> were not removed, despite clearly not
+being
+part of anyone's "core vocabulary".)
+</big></p>
+
+
+
+
+
+
+
+<p><big>Like the 6of12 list, the 3esl list marks lower-case
+abbreviations
+with a ":" suffix, to prevent them from being mistaken for regular
+English words.
+</big></p>
+
+
+
+
+
+
+
+<p><big>One final note on this list. The 3esl list contains
+about 1500 words
+not present in the 6of12 list. Because these two lists have the same
+rules for the kinds of words included, one could easily combine
+the two to produce a slightly larger list including a number of words
+whose omission from 6of12 is rather surprising. Be warned that in a
+few cases, the spelling chosen for words with multiple spellings is
+different in the two lists, and I would recommend that the duplicates
+be removed. (I'll be happy to provide a list of the duplicates if
+anyone wants one.)</big></p>
+
+
+
+
+
+
+
+<h1><big><small><a name="internat"></a>The
+international 12dicts lists</small></big></h1>
+
+
+
+
+
+
+
+<big>Four 12dicts lists contain a more cosmopolitan vocabulary
+than the classic lists. Two of these lists, 2of4brif and 5d+2a
+(previously called 5desk), were released over ten years ago. The
+2of4brif list was derived from four British dictionaries, and has now
+been deprecated, as I believe the 3of6game list to be a superior
+implementation of the same concept, compiled from more recent sources.
+The 5d+2a list was originally compiled from a variety of sources, but
+was extensively revised for this release by addition of several fairly
+recently published sources.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+For release 6, two new international lists were added to 12dicts:
+3of6game and 3of6all. These were based on 6 "advanced learner's" ESL
+dictionaries, released by both American and British publishers,
+most of which covered both strains of English. The
+3of6game list
+is intended primarily for use in word games, and can be compared to
+2of12inf in its general approach. The 3of6all list includes more forms
+of
+words (hyphenated, capitalized, multi-word phrases, etc.), and can be
+compared to 6of12 in its general approach.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+Two other more unusual lists were derived from these sources: 6phrase
+and 2of5core. 6phrase is a collection of all the multi-word phrases from
+any of the six dictionaries. Five of the six international sources flag
+some words as being the most important words for an English beginner to
+master. The 2of5core list collects those words that are flagged in at least two
+of these dictionaries. Both of these lists are discussed in a little
+more detail in the <a href="#special">"Specialized Lists"</a>
+section of this document.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+</big><big>The following table summarizes the contents of
+each
+of the lists in the International directory, ordered
+by size in words:</big>
+<p>
+<table border="1">
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <th></th>
+
+
+
+
+
+
+
+      <th><big>2of4brif</big></th>
+
+
+
+
+
+
+
+      <td style="text-align: center;"><big><span style="font-weight: bold;">3of6game</span></big></td>
+
+
+
+
+
+
+
+      <th><big>5d+2a</big></th>
+
+
+
+
+
+
+
+      <td style="text-align: center;"><big><span style="font-weight: bold;">3of6all</span></big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Size (Words)</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>60,000</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>65,000</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>68,000</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>83,000</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Number of Sources</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>4</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>6</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>7 (+5 minor)</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>6</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>American English</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>British English</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Ordinary words</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Inflections</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Hyphenations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Phrases</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Names</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Abbreviations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Acronyms</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Prefixes/Suffixes</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Signature words</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Neologisms</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Annotations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+
+<h1><small><a name="2of4brif">The 2of4brif list</a></small></h1>
+
+
+
+
+
+
+
+<p><big>
+All of the classic 12dicts lists are unabashedly oriented towards
+American English. After receiving a few expressions of interest in a
+British English list, I put together the 2of4brif list. This list
+was compiled from 4 large "international" ESL dictionaries, published
+by British publishers. To this American, they are more British than
+they are international; quite possibly, they seem more American than
+international to British readers. It is interesting to note that,
+although there were only a third as many sources for this list as for
+the 12dicts lists, these dictionaries resembled each other far more
+closely than their American counterparts, which could mean that the
+2of4brif list is as good an approximation of a "core" British English
+vocabulary as the 6of12 list is for American English. (Or, alternately,
+it may simply mean that my choice of sources was too narrow.)
+</big></p>
+
+
+
+
+
+
+
+<p><big>This criteria for inclusion in this list were
+basically those of the
+2of12inf list. In particular, inflections are included for all words,
+but hyphenated words, contractions, phrases, proper names and
+abbreviations are all excluded. One important difference between
+the two is the way in which inflections were determined for inclusion.
+The 2of12inf list includes some inflections found in one (or even none)
+of its sources. Further, as discussed in detail above,
+it includes plurals for words which are not normally
+considered to have plurals. The 2of4brif list differs in both of
+these regards. It includes only inflections endorsed by two or more
+of the sources, specifically excluding any plural forms for nouns
+listed as uncountable.
+</big></p>
+
+
+
+
+
+
+
+<p><big>The 2of4brif list includes no signature words as
+such. I made a small
+number of adjustments for consistency, such as making sure that
+<b>-ise</b> and <b>-ize</b> spellings were
+equally
+represented, and adding plurals for ordinal numbers. (Why
+<b>fourteenth</b> would be defined as a fraction, but not
+<b>seventeenth</b>, I must simply regard as a mystery.)
+These
+edits were so few, and so clearly harmless, that I have not marked
+them.
+</big></p>
+
+
+
+
+
+
+
+<p><big>Prospective users of the 2of4brif list should
+realize that it was
+compiled by an American. If my sources contained any glaring errors
+(and most dictionaries have a few), I might well not have noticed,
+and perpetuated them in the list. The fact that two citations were
+required is some protection against such an event, but no guarantee.
+</big></p>
+
+
+
+
+
+
+
+<p><big>As the 2of4brif list is very similar in makeup to
+the 2of12inf list,
+a user who wants a larger, more international list than either could
+reasonably merge the two. If you do this, you should remove the
+unusual plurals (marked with a "%") from the 2of12inf list in the
+process, for consistency.</big></p>
+
+
+
+
+
+
+
+<p><big>Note that I have deprecated the 2of4brif list. I
+believe that any applications of this list would be better off using
+the 3of6game list in its place.</big></p>
+
+
+
+
+
+
+
+<h1><a name="3of6"></a><small>The 3of6
+lists</small></h1>
+
+
+
+
+
+
+
+<big>The lists 3of6game and 3of6all are new with version 6 of
+12dicts. Both were derived from a set of six advanced learner's ESL
+dictionaries. The dictionaries can be broken down as follows:<br>
+
+
+
+
+
+
+
+</big>
+<ul>
+
+
+
+
+
+
+
+  <li><big>One strongly American-oriented dictionary.</big></li>
+
+
+
+
+
+
+
+  <li><big>Two somewhat British-oriented dictionaries.</big></li>
+
+
+
+
+
+
+
+  <li><big>Three international dictionaries, one from an
+American publisher, two from a British publisher.</big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<big>This provided a good balance between British and American
+usage. My goal was to produce lists that contained <span style="font-weight: bold;">blancmange</span> and <span style="font-weight: bold;">swede </span>as well as<span style="font-weight: bold;"> applesauce </span>and<span style="font-weight: bold;"> boysenberry</span>. Note
+that
+some of the British dictionaries include words from Australian, Indian,
+African and Caribbean English, and a fraction of this vocabulary made
+it into the 3of6 lists.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+In previous versions of 12dicts, I asked users to tell me what they
+were doing with the lists. The most common answer was that they were
+used to supply the vocabulary for a word game. The 3of6game list was
+designed to fulfill this purpose. It contains only the sort of words
+likely to be used in a word game (no hyphenated words, proper names,
+abbreviations, contractions or phrases), but does contain inflections.
+In general, words must appear in three of the sources to be
+included. The rules, however, do provide for a number of (annotated)
+exceptions, including uncommon inflections and words whose most common
+form is either hyphenated or phrasal. Details are below.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The 3of6all list is a larger list, basically containing any kind of
+word you can imagine, if found in three of the sources. As with
+3+3game, some additional words were added as exceptions, but
+there are not as many of them, as the goal of this list is to be as
+faithful as reasonable to the sources.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+Both the 3of6game and 3of6all lists contain signature words/phrases.
+The 3of6game list also contains neologisms, as game players are likely
+to want to play recently coined or popularized words.</big>
+<h2><small><a name="3of6game"></a>The
+3of6game list</small></h2>
+
+
+
+
+
+
+
+<big>The 3of6game list contains words which are listed in 3 of
+the 6 advanced learners dictionaries described above. Only words
+suitable for play in most word games are included, excluding hyphenated
+words, multi-word phrases, capitalized words, abbreviations and
+contractions. There are no restrictions on length - in particular, it
+contains four one-letter words: <span style="font-weight: bold;">a</span>,
+<span style="font-weight: bold;">x</span> (a verb
+meaning to cross out), <span style="font-weight: bold;">I</span>
+and <span style="font-weight: bold;">O</span>, the
+last two of which are included despite their capitalization (which is
+an English spelling phenomenon entirely disconnected from
+logic). In certain cases, words are present in this list despite being
+listed in fewer than three sources. This serves the purpose of
+offering game players more words in situations where lexicographers
+differ about what word forms are correct. Some exceptional situations
+are:<br>
+
+
+
+
+
+
+
+</big>
+<ul>
+
+
+
+
+
+
+
+  <li><big>A word is one of a set of close variants, none
+of which is present in three of the sources. These words are marked
+with a "^" suffix. An example is the word <span style="font-weight: bold;">aqualung</span>, which is
+sometimes capitalized or hyphenated.</big></li>
+
+
+
+
+
+
+
+  <li><big>The word is a British spelling of an American
+word listed in three sources, or an American spelling of a British word
+from three sources. These words are marked with a "&amp;" suffix.
+Examples include&nbsp;<span style="font-weight: bold;">prolog</span>,
+an American form of the British&nbsp;<span style="font-weight: bold;">prologue</span>,
+and <span style="font-weight: bold;">hyaena</span>,
+a British spelling of the American <span style="font-weight: bold;">hyena</span>.</big></li>
+
+
+
+
+
+
+
+  <li><big>A word is a plural of a word which only
+two of the sources describe as countable, such as <span style="font-weight: bold;">boyhoods</span>. Similarly,
+adjectival inflections are added if as few as two of the sources attest
+to it, as with <span style="font-weight: bold;">frillier</span>
+and <span style="font-weight: bold;">frilliest</span>.<br>
+
+
+
+
+
+
+
+    </big></li>
+
+
+
+
+
+
+
+  <li><big>A word is an unusual inflection of a word where
+at least three sources agree that some inflection is called for,
+such as the less common plural <span style="font-weight: bold;">planetaria</span>
+of <span style="font-weight: bold;">planetarium</span>.</big></li>
+
+
+
+
+
+
+
+  <li><big>A word is an inflection for a word used as an
+unusual part of speech, whose meaning is closely related to a more
+common meaning. Examples are the verb forms <span style="font-weight: bold;">autopsied</span> and <span style="font-weight: bold;">autopsying</span>, whose
+meanings are closely related to the common meaning of the noun <span style="font-weight: bold;">autopsy</span>.</big></li>
+
+
+
+
+
+
+
+  <li><big>A word is a unhyphenated form of a word normally
+hyphenated or written phrasally such as<span style="font-weight: bold;"> ballgame</span>, which is
+more commonly written <span style="font-weight: bold;">ball
+game</span>.</big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<big>Words not present in three of the source dictionaries are
+marked with the "$" suffix character if the "^" and "&amp;"
+annotations do not apply.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The 3of6game list includes both signature words and neologisms, marked
+with a "+" or "!" respectively.</big><big> There are 520
+signature words for this list, representing words
+that I feel "ought to be" included. Each signature word is present in
+at least one of the source dictionaries. Virtually all of these words
+are American English, as I am not qualified to tell whether a
+interesting Britishism like <span style="font-weight: bold;">tosspot</span>
+is used often enough to justify its addition as a signature word. Note
+that the presence of annotations allows a user to remove these
+extra words if she finds their addition unjustified.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The 3of6game list could be combined with the 2of12inf list (minus the
+uncountable plurals) and/or 2of4brif if a larger list is required. Note
+that because 2of2inf is very strongly American, such a combination will
+be less balanced between American and British English than 3of6game
+itself.<br>
+
+
+
+
+
+
+
+</big>
+<h2><small><a name="3of6all"></a>The
+3of6all list</small></h2>
+
+
+
+
+
+
+
+<big>The 3of6all list contains words which are listed in three of
+the six advanced learner's dictionaries. In contrast to the 3of6game
+list, no words are excluded, not even abbreviations, prefixes or
+suffixes. Most words have their inflections included. An exception is
+made for phrasal verbs and other verb phrases, whose inflections are
+completely predictable from the initial word of the phrase.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The 3of6all list contains many phrasal verbs, such as <span style="font-weight: bold;">let down</span>, <span style="font-weight: bold;">take after</span>, <span style="font-weight: bold;">sound off </span>and<span style="font-weight: bold;"> make out</span>, whose
+meanings are often quite hard for inexperienced
+students of English to guess. Phrasal verbs are marked by the ";"
+suffix
+character. Only four of the six source dictionaries provide phrasal
+verb information in an easy-to-collect way. For this
+reason, I put a phrasal verb into the 3of6all list even if I found it
+in only two of the sources.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The 3of6all list contains some other words present in fewer than three
+of the
+dictionaries, though not as many as 3of6game. All such words are
+marked. The cases where this occurs are as follows:<br>
+
+
+
+
+
+
+
+</big>
+<ul>
+
+
+
+
+
+
+
+  <li><big>As described for the 3of6game list, a word is
+one of a set of close variants, none of which is present
+in three of the sources. These words are marked with a "^" suffix. For
+this list, in addition to differences in hyphenation or
+single/multi-word format, variants only in capitalization or (for
+abbreviations) the presence or absence of a period are considered close.</big></li>
+
+
+
+
+
+
+
+  <li><big>As described for the 3of6game list, a </big><big>word
+is a British spelling of an American word listed in three
+sources, or an American spelling of a British word from three sources.
+These words are marked with a "&amp;" suffix.</big></li>
+
+
+
+
+
+
+
+  <li><big>A few other words present in fewer than three of
+the
+dictionaries are added. Usually, this occurs when a word is found by
+three sources to have the same part of speech, but the sources fail to
+agree on the spelling of the inflection(s). An example is the word <span style="font-weight: bold;">Grammy</span>, whose plural
+is claimed by two sources to be <span style="font-weight: bold;">Grammies</span>,
+and by two others to be <span style="font-weight: bold;">Grammys</span>.
+These words are annotated with the "$" suffix.</big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<big>There is one other situation where an annotation suffix is
+used. This occurs when a word is shown by a majority of the sources as
+being used only in a few
+specific phrases, even though other dictionaries may give it a regular
+definition. An example is the word <span style="font-weight: bold;">bated</span>,
+which is shown by most of the sources as used only in the phrase <span style="font-weight: bold;">with bated breath</span>.
+In this case, the word is flagged with a "&gt;" suffix. A search on
+a word so flagged will reveal the key phrase(s) elsewhere in the list. <br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+Recall that, sometimes, a word may have more than one suffix. An
+abbreviation shown with the ":" suffix (indicating the absence of a
+final period) may be followed by another suffix, and the combination
+"&gt;^" appears upon occasion.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The 3of6all list contains signature phrases, but no neologisms. The
+signature phrases are marked with the "+" suffix. The 629 3of6all
+signatures are all basic conversational idioms and common connective
+phrases, like <span style="font-weight: bold;">I told you
+so</span>, <span style="font-weight: bold;">in
+front of</span> and <span style="font-weight: bold;">on
+the other hand</span>. Though these phrases often show up in the
+sources in lists of idioms, they generally do not appear as separate
+headwords, which kept me from easily recording their presence. I
+believe, however, that all of these phrases are extremely common, and
+deserve to be included in this list. The signature phrases are all
+marked with the "+" suffix.</big><big><br>
+
+
+
+
+
+
+
+</big>
+<h1><small><a name="5desk">The 5d+2a list</a></small></h1>
+
+
+
+
+
+
+
+<p><big>
+I created the 5d+2a list (originally called 5desk) in an attempt to do
+a better /usr/dict/words
+(the failings of which were a large part of my motivation for doing
+12dicts in the first place).
+The sorts of words admitted are the same sorts that /usr/dict/words
+traditionally contains. Though somewhat larger in size than many
+versions of
+/usr/dict/words, this is still a short word list, striving for
+inclusion
+of words one is likely to encounter rather than the complete jargon of
+every possible scientific, artistic or occult endeavor.
+</big></p>
+
+
+
+
+
+
+
+<p><big>The original 5desk list was assembled primarily
+from five "desk
+dictionaries". It
+was augmented by words from five minor sources, including a "vocabulary
+builder" and a collection of proper names. It excluded
+prefixes, suffixes, phrases, hyphenated words, contractions and most
+abbreviations and acronyms. There was no requirement for multiple
+listings; all qualifying words from each of the sources were included.
+Inflections of included words were not included themselves except when
+irregular, or separately defined. Variant and non-American spellings
+were not excluded, and no signature words were added.</big></p>
+
+
+
+
+
+
+
+<p><big>Words commonly considered to be
+abbreviations/acronyms were included
+if they contained at least one upper case character, and were defined
+with an explicit part of speech. This excluded items like <b>Mr</b>
+and
+<b>Feb,</b> which are abbreviations in the classic sense,
+but allowed words
+like <b>DNA</b> and <b>ATM,</b> which are
+used far more frequently than that
+which they abbreviate. While there is a trend in modern dictionaries
+to list such words as nouns (or occasionally verbs, adverbs, etc.),
+it is a trend in progress, and rather inconsistently applied. For
+this reason, the set of such words in the 5desk list is somewhat
+incoherent, including <b>SPCA</b> but not <b>PETA</b>,
+<b>AIDS</b> but not <span style="font-weight: bold;">SAD</span>,
+<b>KGB</b>
+but
+not <b>CIA</b>, and <b>PDQ</b> but not <b>ASAP</b>.</big></p>
+
+
+
+
+
+
+
+<p><big>When version 6 of 12dicts was released, the 5desk
+list was
+augmented by adding qualifying words from two advanced learner's ESL
+dictionaries, and as a result renamed to 5d+2a.txt. Both of the
+additional dictionaries had a strongly international vocabulary,
+causing the new list to have a less American and more cosmopolitan
+character. This increased the size of the list by about 20% to about
+68,000 words.</big></p>
+
+
+
+
+
+
+
+<p><big>One class of commonly-used words is regrettably
+absent from the 5desk
+list, because I was unable to find a satisfactory source for them.
+This is the class of commercial names such as <b>Exxon, Tylenol,
+Pepsi</b> and <b>Chevy</b>. This is probably
+forgivable,
+as this class of names is as ephemeral and transitory as teenage slang.
+The one-time household words <b>Kool, Ovaltine, Philco</b>
+and
+<b>Ipana</b> serve now only as answers to trivia questions,
+with modern wonders like <b>Starbucks, Google, Ritalin</b>
+and <b>TiVo</b> taking their place on the tongues of the
+trendy.</big></p>
+
+
+
+
+
+
+
+<p><big>The 5d+2a list contains no signature words. I did
+take the liberty of adding the personal names of around thirty
+well-known individuals, mostly statesmen and politicians. Though the
+original 5desk list contained many such names from all periods of human
+history, I have not found a useful source to bring the list into the
+twenty-first century. At the same time, I felt that distributing a list
+full of
+names that did not include <span style="font-weight: bold;">Cheney</span> and <span style="font-weight: bold;">Obama</span> was not
+reasonable. So I compromised by adding a few names whose historical
+significance was clear to me, until such time as a better source than
+my own memories of the last 15 years can be found.
+</big></p>
+
+
+
+
+
+
+
+<p><big>The 5d+2a list has clearly moved beyond any "core
+vocabulary" concept.
+It includes quite esoteric words (<b>ogee, pleonastic</b>),
+very
+uncommon spellings (<b>thiamine, yuppy</b>), and obscure
+geographical
+and historical names (<b>Paricutin, Nevelson</b>). Like
+the traditional /usr/dict/words, it is frequently inconsistent and
+arbitrary, but I
+hope at the least I have avoided including spelling errors, and
+overlooking the stuff of everyday conversation. Perhaps it will be
+useful as a compromise between basic lists such as 3esl, and truly
+massive lists like Mendel Cooper's ENABLE.</big></p>
+
+
+
+
+
+
+
+<h1><big><small><a name="Lemmatized"></a>The
+lemmatized 12dicts lists</small></big></h1>
+
+
+
+
+
+
+
+<big>Version 6 of 12dicts provides three lemmatized lists
+combining words from the 2of12inf, 3of6game and 2of4brif lists. </big><big>The
+word "lemmatized" is a rare
+word, which you will find in none of these lists, but what it means is
+that these lists are formatted as a collection of word sets, called
+lemmas (or lemmata, if you're into irregular plurals), each set
+composed of a headword and some number (possibly zero) of closely
+related
+words. Two of these lists were introduced in version 5 of 12dicts, but
+they have undergone major revisions since then. <br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The three lists are 2+2+3lem (originally 2+2lemma), 2+2+3frq
+(originally 2+2gfreq) and 2+2+3cmn. 2+2+3lem simply arranges
+the words of the three source lists into lemmas and lists them
+alphabetically by headword. 2+2+3frq arranges the same lemmas by
+approximate order of their frequency of usage, computed with the help
+of a frequency list obtained from Brigham Young University (BYU),
+omitting those words and lemmas whose usage is so small that they fail
+to show up in the BYU material. 2+2+3cmn extracts a subset of the
+lemmas of 2+2+3lem, namely those lemmas with a certain minimum level of
+usage (approximately the level of the word <span style="font-weight: bold;">butterscotch</span>), and
+lists them alphabetically by headword. This is yet another attempt in
+12dicts to generate a core English vocabulary.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The advantage of a lemmatized presentation of words is that it puts
+related words together, even when spellings differ greatly, as for <span style="font-weight: bold;"></span></big><big><span style="font-weight: bold;">be</span>, </big><big><span style="font-weight: bold;">are</span>, <span style="font-weight: bold;"></span><span style="font-weight: bold;">is</span> and <span style="font-weight: bold;">were</span>. A moderate
+disadvantage is that the same word can appear in more than one lemma,
+such as <span style="font-weight: bold;">putting</span>,
+which is present in the lemmas headed by both <span style="font-weight: bold;">put</span> and <span style="font-weight: bold;">putt</span>. Overall, I
+find the lemmatized format to be clearer and more useful than a simple
+alphabetized list, and I rather wish I had released the other lists
+which include inflections in that format.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+</big><big>The following table summarizes the contents of
+each
+of the lists in the Lemmatized directory, ordered
+by size in words:</big><br>
+
+
+
+
+
+
+
+<p>
+<table border="1">
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <th></th>
+
+
+
+
+
+
+
+      <td style="text-align: center;"><big><span style="font-weight: bold;">2+2+3cmn</span></big></td>
+
+
+
+
+
+
+
+      <td style="text-align: center;"><big><span style="font-weight: bold;">2+2+3frq</span></big></td>
+
+
+
+
+
+
+
+      <td style="text-align: center;"><big><span style="font-weight: bold;">2+2+3lem</span></big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Size (Words)</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>25,000</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>34,000</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>84,000</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Number of Sources</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>21</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>21</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>21</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>American English</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>British English</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Ordinary words</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Inflections</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Hyphenations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Phrases</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Names</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Abbreviations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Acronyms</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Some</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Prefixes/Suffixes</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Signature words</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>*</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>*</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Neologisms</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>A few</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>A few</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Annotations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p><big>A * in the "Signature Words" row means that
+signature
+words associated with some other list may be present, but there are no
+signature words associated specifically with that list.</big></p>
+
+
+
+
+
+
+
+<h2><a name="223lem"></a>The 2+2+3lem list</h2>
+
+
+
+
+
+
+
+<p><big>The list 2+2+3lem.txt contains the words in the
+2of12inf, 2of4brif and 3of3game lists.
+Also, the new words from the neol2016.txt list have
+been added, marked with a "!" if they would not have otherwise been
+included. (Marking the new words permits them to be removed if it is
+preferred for this list to be in synch with the other 12dicts lists.)
+Furthermore, some high-frequency hyphenated words from 2of12.txt and
+3of6all have been added. These words were originally added to the
+lemmatized frequency list (see <a href="#hyphens">below</a>),
+and I liked the results so much that I added them to this list as well.
+Finally, British forms of words in
+the 2of12inf list not already in the other lists have been added.
+Words
+marked with a % in the 2of12inf list ("Scrabble plurals") have
+however been omitted.</big></p>
+
+
+
+
+
+
+
+<p><big>In the previous version of 12dicts, the 2+2+3lem list was
+called 2+2lemma. The only significant changes were the addition of new
+words, and switching from "+" to "!" to mark neologisms in the list.</big></p>
+
+
+
+
+
+
+
+<p><big>The 2+2+3lem list is not formatted as a simple list
+of words.
+It is composed of entries of 1 or 2 lines each. The
+first
+line contains a headword, and the second line, which is indented if
+present, contains an alphabetized list of related words. A
+simple example:</big></p>
+
+
+
+
+
+
+
+<p><big><span style="font-family: monospace;">funny</span><br style="font-family: monospace;">
+
+
+
+
+
+
+
+<span style="font-family: monospace;">&nbsp; &nbsp; funnier, funnies, funniest, funnily, funniness</span></big></p>
+
+
+
+
+
+
+
+<p><big>The list of related words contains three sorts of
+entries.</big></p>
+
+
+
+
+
+
+
+<ol>
+
+
+
+
+
+
+
+  <li>
+
+    
+    
+    
+    
+    
+    <p><big>Inflections.</big></p>
+
+
+
+
+
+
+
+  </li>
+
+
+
+
+
+
+
+  <li>
+
+    
+    
+    
+    
+    
+    <p><big>Variant spellings.</big></p>
+
+
+
+
+
+
+
+  </li>
+
+
+
+
+
+
+
+  <li>
+
+    
+    
+    
+    
+    
+    <p><big>Words formed with certain suffixes.</big></p>
+
+
+
+
+
+
+
+  </li>
+
+
+
+
+
+
+
+</ol>
+
+
+
+
+
+
+
+<p><big>In addition to true variant spellings such
+as <span style="font-weight: bold;">grey</span>
+for <span style="font-weight: bold;">gray</span>
+and <span style="font-weight: bold;">thru</span>
+for <span style="font-weight: bold;">through</span>,
+item 2 also includes words
+which, though pronounced differently, are clearly variants
+of the headword. Thus, <span style="font-weight: bold;">hooray</span> is considered
+a variant of <span style="font-weight: bold;">hurrah</span>
+(but mere synonyms like <span style="font-weight: bold;">furze</span>
+and <span style="font-weight: bold;">gorse</span>
+remain
+independent).</big></p>
+
+
+
+
+
+
+
+<p><big>Item 3 is based on a small list of suffixes,
+producing closely
+and consistently related words. These suffixes are <span style="font-weight: bold;">-ful</span>, <span style="font-weight: bold;">-ish</span>,
+<span style="font-weight: bold;">-less</span>, <span style="font-weight: bold;">-like</span>, <span style="font-weight: bold;">-ly</span>, <span style="font-weight: bold;">-most</span> and <span style="font-weight: bold;">-ness</span>. <span style="font-weight: bold;">-ally</span> is also
+allowed, if
+there is no <span style="font-weight: bold;">-al</span>
+word to apply the <span style="font-weight: bold;">-ly</span>
+suffix to. (For instance, <span style="font-weight: bold;">basically</span> is
+considered to be derived from <span style="font-weight: bold;">basic</span>, because there
+is
+no word <span style="font-weight: bold;">basical</span>.) When
+one of these suffixes is used in an
+unusual way, the resulting word is considered independent.
+For
+instance, <span style="font-weight: bold;">likely</span>
+is not considered to be derived from <span style="font-weight: bold;">like</span>, nor <span style="font-weight: bold;">bashful</span>
+from <span style="font-weight: bold;">bash</span>.
+There are some rather difficult questions
+here, such as how closely <span style="font-weight: bold;">slavish</span>
+is related to <span style="font-weight: bold;">slave</span>,
+or <span style="font-weight: bold;">sluggish</span>
+to <span style="font-weight: bold;">slug</span>.
+In general, I have chosen the course of
+least surprise by treating such pairs as independent.</big></p>
+
+
+
+
+
+
+
+<p><big>Here are some other notes on the determination of
+what words are related.</big></p>
+
+
+
+
+
+
+
+<p><big>Certain uses of the suffixes <span style="font-weight: bold;">-ed</span> and <span style="font-weight: bold;">-s</span> are treated as
+inflections, even though technically they are not.
+Thus, <span style="font-weight: bold;">talented</span>
+is treated as derived from <span style="font-weight: bold;">talent</span>,
+and <span style="font-weight: bold;">optics</span>
+from <span style="font-weight: bold;">optic</span>.</big></p>
+
+
+
+
+
+
+
+<p><big>Words ending with the suffix <span style="font-weight: bold;">-ability/ibility</span> are
+treated as relatives of the corresponding <span style="font-weight: bold;">-able/ible</span> word.</big></p>
+
+
+
+
+
+
+
+<p><big>Sometimes, the choice of which variant to treat as
+the headword
+is somewhat arbitrary. I have consistently chosen an American
+spelling over a British spelling here. This has some effect on
+the number of headwords. I treat <span style="font-weight: bold;">cheque</span> as a variant
+of <span style="font-weight: bold;">check</span>,
+whereas, to an observer with a British bias, they would no doubt be
+separate headwords.</big></p>
+
+
+
+
+
+
+
+<p><big>No distinction is made of different meanings of the
+same word,
+even when they are so different that dictionaries list them
+separately. <span style="font-weight: bold;">wind</span>
+the noun and <span style="font-weight: bold;">wind</span>
+the verb are considered as a
+single word, as are <span style="font-weight: bold;">second</span>
+the adjective, <span style="font-weight: bold;">second</span>
+the noun and <span style="font-weight: bold;">second</span>
+the verb.</big></p>
+
+
+
+
+
+
+
+<p><big>It may sometimes happen that two different words
+have the same inflection (<span style="font-weight: bold;">putting</span>
+derives both from <span style="font-weight: bold;">putt</span>
+and <span style="font-weight: bold;">put</span>; <span style="font-weight: bold;">holier</span> relates
+to <span style="font-weight: bold;">holey</span>
+as well as <span style="font-weight: bold;">holy</span>),
+or that an inflection
+is a headword in its own right (as with <span style="font-weight: bold;">wound</span>, the past
+tense of <span style="font-weight: bold;">wind</span>,
+or <span style="font-weight: bold;">crooked</span>,
+the past tense of <span style="font-weight: bold;">crook</span>).
+These
+situations are noted in the 2+2+3lem list as cross-references to the
+alternate headword. There are two specific situations</big><big>
+which might not be obvious</big><big> where
+inflections are treated as different words.
+These occur when a present tense form or a <span style="font-weight: bold;">-ness</span> word has a
+plural inflection, as with <span style="font-weight: bold;">meaning</span>
+and <span style="font-weight: bold;">weakness</span>.
+Such words
+are always made headwords, even when the relationship to the original
+root is very close. Here is an example showing how
+cross-references are indicated:</big></p>
+
+
+
+
+
+
+
+<p><big style="font-family: monospace;">base<br>
+
+
+
+
+&nbsp; &nbsp; based, baseless, basely, baseness,
+baser, bases -&gt; [basis], basest, basing</big></p>
+
+
+
+
+
+
+
+<p><big>Almost always, a given word has only one
+cross-reference - the
+biggest exception is the incredible tangle shown in the example below:</big></p>
+
+
+
+
+
+
+
+<p><big style="font-family: monospace;">slue
+-&gt; [slough]<br>
+
+
+
+
+
+
+
+    &nbsp; &nbsp; slew -&gt; [slay, slew, slough],
+slewed, slewing,
+slews -&gt; [slew, slough], slued, slues -&gt; [slough], sluing
+</big></p>
+
+
+
+
+
+
+
+<p><big>where 4 uncommon words mostly pronounced <span style="font-style: italic;">sloo</span> have become
+thoroughly confused.</big></p>
+
+
+
+
+
+
+
+<h2><a name="223frq"></a>The 2+2+3frq list</h2>
+
+
+
+
+
+
+
+<big>In the previous version of 12dicts, there was
+a file called
+2+2gfreq.txt. This file has been completely replaced by a new
+implementation of the same idea. Like the older list, the 2+2+3frq list
+presents the lemmas of 2+2+3lem in bands of lemmas
+with about
+the same frequency of use. However, there are the following major
+differences from what was done before:<br>
+
+
+
+
+
+
+
+</big>
+<ul>
+
+
+
+
+
+
+
+  <li><big>In the previous version, word frequency
+information was
+obtained from data collected from the World Wide Web supplied by
+Google. This data was very voluminous, but was quite distorted by the
+Web's emphasis on computerese, pornography and marketing. I am now
+using a commercial word frequency database, supplied by Brigham Young
+University, based on its Corpus of Contemporary American English (COCA).
+This data is less voluminous than the Google data, but is far more
+balanced and seemingly trustworthy. It has some other advantages,
+discussed below.</big></li>
+
+
+
+
+
+
+
+  <li><big>High-frequency hyphenated words from 2of12inf
+and 3of6all
+have been added. I liked the effect of this so much that I added the
+same words to the 2+2+3lem list.</big></li>
+
+
+
+
+
+
+
+  <li><big>A certain number of high frequency
+abbreviations,
+contractions and capitalized words were added. Some of these words were
+not to be found in any other 12dicts list, for which reason I did not
+also add them to 2+2+3lem.</big></li>
+
+
+
+
+
+
+
+  <li><big>The list was shortened by omitting all lemmas
+which did not appear at all in the BYU data.</big></li>
+
+
+
+
+
+
+
+  <li><big>Individual lemmas were shortened by omitting
+very infrequent
+words and all regular inflections, except when they were used
+frequently as a part of speech different from the headword, such as <span style="font-weight: bold;">disappointed</span> as an
+adjective rather than a verb form.</big></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+<big>The lemmas of 2+2+3frq are grouped into bands by the
+combined
+number of occurrences in the BYU data of the words in the lemmas. Band
+21 contains lemmas whose words together appear between 16 and 31 times
+in the BYU data. Each other band contains lemmas of twice the frequency
+of the following band, that is, each lemma in band 20 appears in the
+BYU data between 32 and 63 times, and so on. The first band contains
+the three lemmas most frequently used in the English language
+(according to BYU), namely <span style="font-weight: bold;">the</span>,
+<span style="font-weight: bold;">be</span> (plus its
+inflections) and <span style="font-weight: bold;">to</span>.
+As already noted, some words are found in multiple lemmas. One helpful
+aspect of the BYU data is that it separates frequency data for a word
+by parts of speech, and notes the base word for inflected words. This
+often allows the frequency counts for a word like <span style="font-weight: bold;">building </span>to be
+accumulated under the correct lemma (either <span style="font-weight: bold;">build </span>or<span style="font-weight: bold;"> building</span>).
+In the event that the BYU data is unable to completely resolve the
+appropriate lemma for a word, its frequency count is divided equally
+among the various candidates.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+2+2+3frq is divided into bands by lines like this:<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<span style="font-family: monospace;">----- 5 -----<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+</span>The lemmas in each band are presented in alphabetical
+order, not by the frequency of the individual lemma.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+Note that because the BYU data was extracted from a corpus of American
+English, the 2+2+3frq file tilts in an American direction, though some
+British words like <span style="font-weight: bold;">bloke</span>,
+<span style="font-weight: bold;">colour</span> and <span style="font-weight: bold;">lorry</span> have made it
+through.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<a name="hyphens"></a>A useful attribute of the BYU
+data is that it,
+unlike the Google data, includes hyphenated words, as well as some
+abbreviations, contractions and capitalized words. The two cases are
+rather different. The inclusion of hyphenated words is explicitly
+intended. However, the BYU documentation states that proper names have
+been excluded where possible, while admitting that, in many cases, the
+software processing the data was unable to be sure whether a word was a
+proper name or not, in which case the word was included. The effect is
+that there are many words generally considered to be proper names
+present, notably the names of months of the year and days of the week,
+plus those of religions, nationalities and ideologies. You will not
+find names like <span style="font-weight: bold;">linda</span>,
+<span style="font-weight: bold;">picasso</span>, <span style="font-weight: bold;">vladivostok</span>, <span style="font-weight: bold;">microsoft</span> or<span style="font-weight: bold;"> rumpelstiltskin</span> in
+the data, but you will find <span style="font-weight: bold;">november</span>,
+<span style="font-weight: bold;">buddhist</span>, <span style="font-weight: bold;">peruvian</span> and <span style="font-weight: bold;">marxist</span>,
+to the extent that I wonder if BYU might have used a different
+definition of "proper name" than the one I was taught in school. As for
+abbreviations, the BYU documentation makes no mention of them, but
+there are some very familiar abbreviations in the data. There are not a
+lot of them, which makes me wonder whether their presence was
+intentional or a processing error. Either way, I have no reason to
+doubt their frequency counts.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+I decided that I wanted to add high-frequency hyphenated words, proper
+names and abbreviations to the frequency list, as I consider this data
+to be very interesting. When I did so, I discovered in band 17 the
+words <span style="font-weight: bold;">atlantean</span>
+and <span style="font-weight: bold;">klingon</span>.
+I really don't think that these words have anywhere close to the same
+frequency as <span style="font-weight: bold;">armband</span>
+and <span style="font-weight: bold;">carpool</span>,
+which are also present in band 17. This makes me suspect that, for
+words of this frequency or less, the BYU data is starting to become
+less reliable. For this reason, I decided to stop adding hyphenated
+words, capitalized words, contractions and abbreviations after band 17.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+In the case of hyphenated words, I added them to the 2+2+3frq list only
+if they were present in either 2of12.txt or 3of6all.txt. I also added
+these words to the 2+2+3lem list. In the case of abbreviations and
+capitalized words, there were not all that many of them, and some of
+them were not present in any other 12dicts list, such as <span style="font-weight: bold;">Americanist</span>,<span style="font-weight: bold;"> Thatcherism</span> and, of
+course, <span style="font-weight: bold;">Klingon</span>.
+For this reason, when I added capitalized words, contractions and
+abbreviations to 2+2+3frq, I parenthesized them to indicate that their
+presence had nothing to do with any source but the BYU data. The same
+consideration led me to omit these words from the 2+2+3lem list.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The 2+2+3frq list is considerably smaller than the previous 2+2gfreq
+list due to my decision to drop lemmas which were absent from the BYU
+data, especially since the BYU data was considerably less voluminous
+and so left out many more words than the Google data. In addition, I
+observed that many high-frequency lemmas contained unusual spellings
+and archaic forms that were not present in the BYU data, such as <span style="font-weight: bold;">cocoanut</span>, <span style="font-weight: bold;">iodin</span> and <span style="font-weight: bold;">didst</span>,
+and decided to drop non-headwords from the lemmas unless their
+frequency was at or above the level of band 17. A similar decision was
+made to drop regular inflections from the lemmas in the 2+2+3frq list
+unless they had high frequency with a different part of speech, for
+example, <span style="font-weight: bold;">loving</span>
+as an adjective or <span style="font-weight: bold;">fighting</span>
+as a noun. Finally, I chose to drop the word/lemma cross-references
+from the 2+2+3frq list, replacing them with a * indicating that a word
+was to be found under another headword (though it might have been
+suppressed if it was a regular inflection).<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+As an example of how this works out in practice, here is the lemma for <span style="font-weight: bold;">time</span> from 2+2+3lem:<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<span style="font-family: monospace;">time</span><br style="font-family: monospace;">
+
+
+
+
+
+
+
+<span style="font-family: monospace;">&nbsp; &nbsp; timed, timeless, timelessly, timelessness, times, timing -&gt;
+[timing]</span><br style="font-family: monospace;">
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+and here is the condensed version from 2+2+3frq.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<span style="font-family: monospace;">time</span><br style="font-family: monospace;">
+
+
+
+
+
+
+
+<span style="font-family: monospace;">&nbsp; &nbsp; timed, timeless<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+</span>The words <span style="font-weight: bold;">timelessly</span>
+and <span style="font-weight: bold;">timelessness</span>
+are not used often enough (according to BYU) to mention in the
+frequency list, while the word <span style="font-weight: bold;">times</span>
+was not frequently used except as a form of <span style="font-weight: bold;">time</span>, and, while the
+word <span style="font-weight: bold;">timing</span>
+was frequently used as a noun, its counts were collected under the
+lemma <span style="font-weight: bold;">timing</span>
+rather than <span style="font-weight: bold;">time</span>.<br>
+
+
+
+
+
+
+
+</big>
+<h2><a name="223cmn"></a>The 2+2+3cmn list</h2>
+
+
+
+
+
+
+
+<big>The 2+2+3cmn list is a relatively simple transformation of
+the
+2+2+3frq list, in yet another attempt to produce a "core English" word
+list. It is composed of the lemmas of the 2+2+3frq list from bands 1
+through 17, sorted in alphabetical order by headword. Minor formatting
+differences are that the "!" is removed from neologisms, and
+the
+parentheses are removed from capitalized words, abbreviations and
+contractions.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+I have added 67 signature words to 2+2+3cmn, which are
+abbreviations, contractions and capitalized words (mostly
+contractions) which I know to be extremely high frequency, but which
+were not present in the BYU data, words such as <span style="font-weight: bold;">can't</span>, <span style="font-weight: bold;">Mr.</span> and <span style="font-weight: bold;">DVD</span>. These words are
+marked with a + to indicate their absence from the 2+2+3frq source data.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+Like 2+2+3frq, 2+2+3cmn tilts strongly in the direction of American
+English.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+Because all the words of 2+2+3cmn are of moderately high frequency
+(assuming the BYU data is to be trusted), it probably is a better
+claimant than either 2of5core or 3esl to truly representing a core
+English vocabulary, at least of the American variety.</big><big><span style="font-family: monospace;"></span><span style="font-family: monospace;"></span></big>
+<h1><big><small><a name="special"></a>Specialized
+12 dicts lists</small></big></h1>
+
+
+
+
+
+
+
+<big>The following table summarizes the contents of
+each
+of the lists in the Special directory, ordered
+by size in words:</big>
+<p>
+<table border="1">
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <th></th>
+
+
+
+
+
+
+
+      <td style="font-weight: bold; text-align: center;">neol2016</td>
+
+
+
+
+
+
+
+      <td style="text-align: center;"><span style="font-weight: bold;">2of5core</span></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: center;"><big><span style="font-weight: bold;">6phrase</span></big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Size (Words)</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>600</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>4,700</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>22,000</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Number of Sources</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>0</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>5</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>6</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>American English</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>British English</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>A little</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Ordinary words</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Inflections</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Hyphenations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>A few</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Phrases</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>A few</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Names</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>A few</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>A few</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Abbreviations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>A few</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>A few</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Acronyms</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>A few</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Prefixes/Suffixes</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Signature words</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>*</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Neologisms</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>&#8211;</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+      <td><big>Annotations</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>N</big></td>
+
+
+
+
+
+
+
+
+      <td style="text-align: right;"><big>Y</big></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p><big>A * in the "Signature Words" row means that
+signature
+words associated with some other list may be present, but there are no
+signature words associated specifically with that list.</big></p>
+
+
+
+
+
+
+
+<h2><a name="neol2016"></a>The neol2016 list</h2>
+
+
+
+
+
+
+
+<big>The neol2016 list is a very simple list of new or newly
+recognized words, as described <a href="#neologisms">above</a>.
+It is comprised of three parts, separated by blank lines. <br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The first part lists regular (non-hyphenated, non-capitalized) words
+together with their inflections and
+variants, laid out similarly to the 2+2+3lem list. It includes plurals
+for uncountable nouns, marked with a "%" suffix. These words (except
+for the uncountable plurals) have been pre-added to the 2of12inf and
+3of6game lists, suffixed with "!", allowing them to be easily
+removed if desired. <br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The second part of the file is a small set of words for which
+additional inflections have been added. This portion of the file is in
+the same format as the first list. These inflections have also been
+added to the 2of12inf and 3of6game lists.<br>
+
+
+
+
+
+
+
+<br>
+
+The third part of the file contains new words and phrases which are not
+regular words: hyphenated words, multi-word phrases, proper
+names, abbreviations and acronyms. These words have not been pre-added
+to any other list.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+In all cases, users are encouraged to add some or all of these words to
+any of the other lists, as they feel appropriate.<br>
+
+
+
+
+
+
+
+</big>
+<h2><a name="2of5core"></a>The 2of5core list</h2>
+
+
+
+
+
+
+
+<big>Five of the six advanced learner's ESL dictionaries from
+which the 3of6 lists were compiled mark a subset of their words as
+being important words which every student of English should master.
+These subsets vary widely from dictionary to dictionary. As one of the
+original goals of the 12dicts project was to compile a list
+representing the
+English core vocabulary, I thought it would be interesting to combine
+these lists. My original thought was to provide a list that was simply
+the union of the marked subsets for each source. However, one
+particular dictionary had at least twice as many words in its subset as
+any of the others, and in many cases the words seemed to me to be
+poorly chosen. (Do <span style="font-weight: bold;">moor</span>
+and <span style="font-weight: bold;">cash flow</span>
+seem like key English language concepts to you?) So I chose when
+assembling my list to require that all words be marked as important
+words by at least two of the sources. The result was the 2of5core list,
+which contains about 4,700 words.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+While most words selected in this way were the same in American and
+British English, some belonged to one variant or the other. In some
+cases, a word appeared in two forms, such as <span style="font-weight: bold;">center</span> and <span style="font-weight: bold;">centre</span>. When I
+observed that a word was present in two forms, I combined them into a
+single line, for example <span style="font-weight: bold;">center/centre</span>.
+No other changes were made to the list.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+Due to the way in which the list was constructed, it seems somewhat
+haphazard. You may want to check out the Oxford 3000&#8482;, a list of 3000
+words available from Oxford University, which is a core vocabulary
+created by lexicographers, to my eye superior to the 2of5core list.<br>
+
+
+
+
+
+
+
+</big>
+<h2><a name="6phrase"></a>The 6phrase list</h2>
+
+
+
+
+
+
+
+<big>When I was compiling the 3of6all list, I noticed something
+interesting. There were an extraordinary number of phrases listed by
+only one of the sources. Many of these were extremely common phrases,
+which I would expect most experienced English speakers to understand.
+So, naturally, I decided to compile them all into a list.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The 6phrase list contains all multi-word phrases from any of the six
+advanced learner's dictionaries which were used as sources for 3of6all,
+all 22,000 of them. The list does not include inflections, except in a
+few cases where a plural cannot easily be guessed from the words in a
+phrase. Usually, this happens for phrases of non-English origin, such
+as <span style="font-weight: bold;">eau de cologne</span>,
+whose plural is <span style="font-weight: bold;">eaux de
+cologne</span>. The list includes phrasal verbs, which are
+suffixed by the ";" character, as in the 3of6all list. The list is
+sorted in a different order than the lexicographical ordering used by
+the other lists, in order to group all phrases starting with the same
+word together.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+You will observe that the same phrase will often be repeated several
+times in the list, with slightly different spelling, capitalization
+and/or hyphenation. No attempt was made to edit the list to remove or
+reduce such "clutter".<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+The 6phrase list includes the 3of6all signature phrases. These are not
+marked with a suffix.<br>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+In contrast to most of the other lists, I am unable to think of any
+applications of the 6phrase list. But I find it rather interesting,
+which is why I'm bothering to include it. At the very least, it may
+serve as an illustration of the incredible richness of the English
+language, without even venturing into vocabulary too esoteric to be
+included in a learner's dictionary.<br>
+
+
+
+
+
+
+
+</big>
+<h1><a name="history">How 12dicts came to
+be</a></h1>
+
+
+
+
+
+
+
+<p><big>It may have occurred to some to wonder about how
+something like
+the 12dicts project came to be (though I assume that anyone who bothers
+to download this archive must already have some idea that such a
+project could be of interest).
+</big></p>
+
+
+
+
+
+
+
+<p><big>Many years ago, there was a post to the sci.crypt
+Usenet newsgroup,
+on the subject of creating PGP passphrases using randomly selected
+entries from a supplied list of very short words. (If this sounds
+interesting, follow <a href="http://world.std.com/%7Ereinhold/diceware.html">
+this link</a> for an expanded version of the post.) The word
+list,
+which was extracted from /usr/dict/words on some UNIX system, seemed
+to me ill-suited to its intended purpose. It included arcane acronyms
+(<b>bstj, fmc</b>), misspellings (<b>diety, ouvre</b>)
+and
+words of amazing obscurity (<b>bhoy, kombu</b>).
+I decided
+I
+could do better, and eventually did.
+This caused me to start downloading English word lists, of which there
+were many, from the Internet. I was not impressed by the overall
+quality of these lists, and the few which were high-quality were
+all-inclusive, burying the everyday words under a mountain of archaisms
+and esoterica. </big></p>
+
+
+
+
+
+
+
+<p><big>This was a long time ago, and an Internet search
+for word lists
+now turns up lists of higher quality than back then (thanks in part to
+the influence of 12dicts), so I will limit myself to two brief
+criticisms of the various lists available at that time. First, they contained
+far too many misspellings and typos, and had obviously never been
+proofread. Additionally, their approach to vocabulary was scattershot, omitting
+common words while adding a random selection of highly technical words,
+often associated with UNIX and academic computer science. (My favorite
+is the list which included <span style="font-weight: bold;">bremsstrahlung</span>,
+but omitted <span style="font-weight: bold;">log</span>
+and <span style="font-weight: bold;">beer</span>.)
+Due to my original purpose of finding a list of short, common words, I
+found this sort of thing particularly frustrating.</big></p>
+
+
+
+
+
+
+
+<p><big>
+One result of my frustration with this situation was my working with
+Mendel Cooper on ENABLE, a large Scrabble®-oriented list, which was
+close to unique in having an active
+caretaker who was clearly concerned with quality, and in being oriented towards
+American rather than British English. But ENABLE was an
+all-encompassing
+list and, even if it had been complete at the time I started my search
+for a list of common words, it would not have been what I wanted for
+that reason. (The ENABLE web site is no longer online, but a Google
+search will turn up places where you can still download it.)
+</big></p>
+
+
+
+
+
+
+
+<p><big>I finally decided that only starting from scratch
+with a systematic
+approach was likely to get me what I was looking for, and that
+dictionaries intended for non-native speakers of English were the
+best possible source for words that are in some cases so familiar
+that we never think of them. This has led to the 12dicts lists,
+which I hope have managed to avoid the flaws recited above.</big></p>
+
+
+
+
+
+
+
+<h1><big><small><a name="wyrdplay"></a>My
+other projects</small></big></h1>
+
+
+
+
+
+
+
+<big>During the intervals between releases of 12dicts, I have
+been fooling
+around with English spelling reform. One of the results of
+this
+activity is the development of CAAPR and ABCD, both of which may be
+downloaded from my website, <a href="http://www.wyrdplay.org/">www.wyrdplay.org</a>.
+CAAPR is the Combined Anglo-American Pronunciation Reference, a
+fancy name for a bi-dialectal pronunciation dictionary whose word list
+is derived primarily from the 12dicts 6of12 list. ABCD, Alan's
+Basic Codes with Diacritics, is also a pronunciation dictionary, of a
+somewhat different sort - the notation is designed to clarify when a
+word is spelled in accordance with normal English spelling
+patterns (as with <span style="font-weight: bold;">fault</span>
+or <span style="font-weight: bold;">tunnel</span>),
+and when it is not (as with <span style="font-weight: bold;">fought</span>
+or <span style="font-weight: bold;">colonel</span>).
+Though these files were developed as a
+result of my interest in spelling reform, they may be of interest to
+other
+"word nerds" unconcerned with that particular quixotic pastime.</big>
+<p><big>Click the following links to <a href="http://www.wyrdplay.org/AlanBeale/CAAPR-ref-12.html">CAAPR</a>
+and <a href="http://www.wyrdplay.org/AlanBeale/ABCD-def-12.html">ABCD</a>
+if interested.</big></p>
+
+
+
+
+
+
+
+<h1><a name="conclude">Conclusions</a></h1>
+
+
+
+
+
+
+
+<p><big>When I released the first version of 12dicts in
+1999, I assumed
+I was
+done with it. It hasn't worked out that way. I now think I'm pretty
+much done with it again, though an occasional update to neol20xx.txt might
+be called for. Perhaps in ten more years I'll have reached version 9, and be
+laughing uncontrollably at the thought that I might have finished
+earlier, but for the present I don't see what else might be both useful
+and fun to add.</big></p>
+
+
+
+
+
+
+
+<p><big>Feel free to send comments, suggestions,
+inquiries and/or large sums of money to me at<a href="mailto:biljir@pobox.com"> 12dicts@pobox.com</a>.
+(Actually, the bit about money is a joke. Do not send me even small
+amounts of money; 12dicts is free wordware.) </big><big>
+After making this request in previous versions, I have been
+delighted to see the interest in these lists for projects ranging from
+interactive games to literacy programs. And I have been
+particularly pleased to occasionally hear of first-year Computer
+Science assignments specifying a 12dicts list rather than
+/usr/dict/words for their input. Keep up the good work, and do let
+me know what you're doing. (Oh, and please put "12dicts" in
+the
+subject line when you email me. This will allow me to easily
+notice your mail even if it is misclassified by an overzealous filter
+as spam. Speaking of
+spam, the publication of my email address in this package has led to a
+marked increase in the amount of spam I receive and, ironically, much
+of it contains subject lines which appear to have been
+extracted at random from my own lists. This is a use of 12dicts of
+which I
+do not approve!)</big></p>
+
+
+
+
+
+
+
+<p><big>
+The 12dicts lists were compiled by Alan Beale. I explicitly release
+them to the public domain, but request acknowledgment of their use.
+(Actually, the dependency of the 2of12inf list and the 2+2+3 lists on
+AGID prevents their
+release into the public domain. However, I do not impose any additional
+requirements on their use beyond those imposed by AGID and its sources,
+as described in agid.txt.)</big></p>
+
+
+
+
+
+
+
+<p><big>- Alan Beale -
+</big></p>
+
+
+
+
+
+
+
+</body>
+</html>

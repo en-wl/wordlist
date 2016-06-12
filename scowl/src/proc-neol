@@ -3,9 +3,9 @@
 use strict;
 use warnings;
 
-chdir "r/special";
+chdir "r/alt12dicts";
 
-open IN, "neol2015.txt";
+open IN, "neol2016.txt";
 
 my @words50;
 my @words80;

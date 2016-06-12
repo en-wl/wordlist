@@ -6,7 +6,7 @@
 .uk-freq-class
 .ukacd
 .yawl
-alt12dicts/*
+alt12dicts/*.lst
 census/*
 enable-sup/*
 enable/*

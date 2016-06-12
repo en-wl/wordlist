@@ -189,10 +189,16 @@ not marked as a variant.
 See README-infl
 
 
-2of4brif.txt, 3esl.txt, and 5desk.txt description:
+2of4brif.txt, 3esl.txt, and 5desk.txt neol2016.txt description:
 
 These files are identical to the orignal files in the 12Dicts package.
 See README-orig for more info.
+
+
+neol2016.poss description:
+
+Possessive forms for words in neol2016.txt.  (Created by hand by
+Kevin Atkinson, not provided by Alan).
 
 
 signature3a.txt description:

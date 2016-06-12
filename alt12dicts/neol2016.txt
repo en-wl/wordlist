@@ -6,6 +6,8 @@ app
     apps
 backslash
     backslashes
+barbacoa
+    barbacoas%
 barista
     baristas
 birther
@@ -13,6 +15,7 @@ birther
 bitcoin
     bitcoins
 bling
+   blings%
 blog
     blogged, blogging, blogs
 blogger
@@ -36,8 +39,12 @@ clit
     clits
 colonoscopy
     colonoscopies
+cosplay
+    cosplays%
 crowdfund
     crowdfunded, crowdfunding, crowdfunds
+crowdfunding
+    crowdfundings%
 cyberbully
     cyberbullies
 cybersex
@@ -60,14 +67,13 @@ electronica
 emo
     emos
 emoji
+    emojis
 exoplanet
     exoplanets
 fanboy
     fanboys
 fashionista
     fashionistas
-flipflop
-    flipflopped, flipflopping, flipflops
 frack
     fracked, fracking, fracks
 fracking
@@ -120,8 +126,8 @@ lolcat
     lolcats
 loonie
     loonies -> [loony]
-madrassah
-    madrasa, madrasas, madrassahs
+madrassa
+    madrasa, madrasah, madrasahs, madrasas, madrassas
 malware
     malwares%
 manga
@@ -133,12 +139,13 @@ megachurch
 meh
 meme
     memes
+microaggression
+    microaggressions
 microloan
     microloans
-millennial
-    millennials
 milf
     milfs
+mkay
 monetize
     monetise, monetised, monetises, monetising, monetized, monetizes, monetizing
 muggle
@@ -170,20 +177,20 @@ paragliding
     paraglidings%
 parasailing
     parasailings%
+parkour
+    parkours%
 paywall
     paywalls
 pecs
 phishing
     phishings%
-photobomb
-    photobombed, photobombing, photobombs
 picante
 plastique
     plastiques%
 playlist
     playlists
 podcast
-    podcasts
+    podcasting, podcasts
 polyamory
     polyamories%
 prenup
@@ -196,6 +203,8 @@ remortgage
     remortgaged, remortgages, remortgaging
 reorg
     reorged, reorging, reorgs
+retweet
+    retweeted, retweeting, retweets
 ringtone
     ringtones
 robocall
@@ -205,6 +214,7 @@ rugrat
 sampling -> [sample]
     samplings
 satay
+    satays%
 scrunchie
     scrunchies
 selfie
@@ -254,6 +264,8 @@ sriracha
     srirachas%
 startup
     startups
+stent
+    stents
 stoner
     stoners
 subprime
@@ -267,8 +279,12 @@ tealight
     tealights
 techno
     technos%
+terabyte
+    terabytes
 trifecta
     trifectas
+truther
+    truthers
 truthiness
     truthinesses%
 turducken
@@ -286,7 +302,7 @@ username
 vape
     vaped, vapes, vaping
 voicemail
-    voicemails%
+    voicemails
 vuvuzela
     vuvuzelas
 wack
@@ -305,22 +321,29 @@ webisode
     webisodes
 webmaster
     webmasters
-webpage
-    webpages
 widescreen
     widescreens
 wiki
     wikis
 wingnut
     wingnuts
-wishlist
-    wishlists
 zapper
     zappers
 
+friend
+    friended, friending
+jailbreak
+    jailbreaking, jailbroke, jailbroken
+millennial
+    millennials
+text
+    texted, texting
+
 acid reflux
+air quotes
 al-Qaeda
 Anthropocene
+anti-vaxxer
 Asiago
 assisted living
 asymmetric warfare
@@ -338,6 +361,7 @@ break-dance
 break-dancer
 break-dancing
 bucket list
+butt dial
 caller ID
 call waiting
 carbon footprint
@@ -368,12 +392,15 @@ e-commerce
 end product
 ethnic cleansing
 exit strategy
+Facebook
 FAQ
 f-bomb
 feng shui
 flash mob
 flight recorder
+gender identity
 gluten-free
+GMO
 GPS
 greenhouse gas
 ground zero
@@ -384,12 +411,14 @@ HDTV
 hedge fund
 help desk
 home fries
+home invasion
 Homeland Security
 HTML
 hybrid car
 identity theft
 IED
 insider trading
+Instagram
 instant message
 intelligent design
 Internet cafe
@@ -397,6 +426,7 @@ iPad
 iPhone
 IPO
 iPod
+ISIS
 Islamist
 ISP
 IVF
@@ -414,15 +444,18 @@ MOOC
 MP3
 MP3 player
 net neutrality
+NSFW
 Obamacare
 open-plan
 par-per-view
+peak oil
 perfect storm
 personal trainer
 plug-in
 pop culture
 pop-up
 prenuptial agreement
+privacy policy
 pro bono
 Prozac
 pump and dump
@@ -444,6 +477,7 @@ senior moment
 sex worker
 shock jock
 SIDS
+SJW
 sky marshal
 smart bomb
 snake oil
@@ -457,6 +491,7 @@ speed dial
 spring roll
 squeaky clean
 starter home
+stem cell
 stretch limo
 strip search
 Sudoku
@@ -475,6 +510,7 @@ trans fat
 Twitter
 urban myth
 Viagra
+VoIP
 wardrobe malfunction
 weapon of mass destruction
 Wi-Fi

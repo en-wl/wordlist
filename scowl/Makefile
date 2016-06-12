@@ -23,7 +23,7 @@ all: $(foreach l, $(levels), final/english-words.$(l)) \
 
 .PHONY: clean
 clean:
-	rm -f working/* $(programs) r/varcon/*.lst r/varcon/variant.tab r/mwords/*.lst r/alt12dicts/*.lst r/ispell/all.* r/pos/word.lst r/uk-freq-class/uk.?? r/census/*.lst debug/* r/special/neol-??.lst
+	rm -f working/* $(programs) r/varcon/*.lst r/varcon/variant.tab r/mwords/*.lst r/alt12dicts/*.lst r/ispell/all.* r/pos/word.lst r/uk-freq-class/uk.?? r/census/*.lst debug/*
 	make -C speller clean
 
 #
@@ -156,8 +156,10 @@ r/alt12dicts/5desk.lst: r/alt12dicts/5desk.txt src/clean-alan-list
 r/alt12dicts/signature.lst: r/alt12dicts/signature.txt src/clean-alan-list
 	src/clean-alan-list < $< > $@
 
-r/special/neol-50.lst r/special/neol-80.lst: r/special/neol2015.txt
+r/alt12dicts/neol-50.lst r/alt12dicts/neol-80.lst: r/alt12dicts/neol2016.txt
 	src/proc-neol
+
+l/supplement/80/neol-80.lst: r/alt12dicts/neol-80.lst
 
 #
 #r/ispell/all.0 r/ispell/all.1: r/ispell/all.%: \

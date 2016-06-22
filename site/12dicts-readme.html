@@ -2,7 +2,7 @@
 layout: page
 title: Version 6 of the 12dicts word lists
 ---
-<p>Welcome to version 6 of 12dicts, a
+<p>Welcome to version 6.0.2 of 12dicts, a
 collection of English word lists. It differs in several important
 ways from most of the other free word lists you can download.
 </p>
@@ -134,9 +134,9 @@ projects</a>
 </ul>
 <h1><a name="release">This release</a></h1>
 <p>
-This is release 6.0.1 of 12dicts, released April 2016.
-This is a major release. The following is a brief rundown of the
-changes and additions:</p>
+This is release 6.0.2 of 12dicts, released June 2016.
+This is an update to release 6.0. The following is a brief rundown of the
+changes and additions in release 6.0 and beyond:</p>
 <ul>
   <li>A number of new lists, based on 6 "advanced
 learner's" ESL
@@ -181,6 +181,15 @@ make them more manageable given their increased number.
 will continue
 to distribute it, but will not be changing or maintaining it. I
 consider the 3of6game.txt list to be a complete replacement.</li>
+  <li>Version 6.0 of 12dicts had been out for less than a week
+before I discovered a number of embarrassing typos in 5d+2a.txt. These
+have been corrected (along with a minor omission in the 2+2+3 lists)
+in version 6.0.1.</li>
+  <li>Version 6.0.2 of 12dicts makes numerous changes to the
+lemmatized lists, including improvements to the lemmatization, tweaks
+to improve the frequency data for words which are also proper names,
+and additional signature words for the 2+2+3cmn list.
+    </li>
 </ul>
 <h1><a name="general"></a>Some general
 observations</h1>
@@ -466,7 +475,7 @@ size in words:
 <p>A * in the "Signature Words" row means that
 signature
 words associated with some other list may be present, but there are no
-signature words associated specifically with that list.</p>
+  signature words associated specifically with that list.</p>
 <h2><a name="nof12">The 6of12 and 2of12
 lists</a></h2>
 <p>
@@ -1848,6 +1857,15 @@ For this reason, when I added capitalized words, contractions and
 abbreviations to 2+2+3frq, I parenthesized them to indicate that their
 presence had nothing to do with any source but the BYU data. The same
 consideration led me to omit these words from the 2+2+3lem list.<p>
+I should note that, though the BYU data is superior to the previous
+Google web data, it is not without its flaws. Three issues of
+particular importance are difficulties with part of speech information
+for words like <span style="font-weight: bold;">painting</span> and <span style="font-weight: bold;">filling</span>, an inconsistent approach to words which are also proper names like <span style="font-weight: bold;">rose</span>, <span style="font-weight: bold;">king</span> and <span style="font-weight: bold;">miller</span>, and a tendency to combine data for words and common acronyms, such as <span style="font-weight: bold;">eta/ETA</span> and <span style="font-weight: bold;">sac/SAC</span>.
+I have attempted to tweak the frequencies in such cases, using various
+public word frequency sources, whenever I observed them, which is to
+say whenever the results of taking the BYU data at face value led to
+implausible results.
+<p>
 The 2+2+3frq list is considerably smaller than the previous 2+2gfreq
 list due to my decision to drop lemmas which were absent from the BYU
 data, especially since the BYU data was considerably less voluminous
@@ -1891,7 +1909,7 @@ differences are that the "!" is removed from neologisms, and
 the
 parentheses are removed from capitalized words, abbreviations and
 contractions.<p>
-I have added 67 signature words to 2+2+3cmn, which are
+I have added 77 signature words to 2+2+3cmn, which are
 abbreviations, contractions and capitalized words (mostly
 contractions) which I know to be extremely high frequency, but which
 were not present in the BYU data, words such as <span style="font-weight: bold;">can't</span>, <span style="font-weight: bold;">Mr.</span> and <span style="font-weight: bold;">DVD</span>. These words are

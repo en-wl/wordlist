@@ -159,6 +159,7 @@ r/alt12dicts/signature.lst: r/alt12dicts/signature.txt src/clean-alan-list
 r/alt12dicts/neol-50.lst r/alt12dicts/neol-80.lst: r/alt12dicts/neol2016.txt
 	src/proc-neol
 
+l/supplement/50/neol-50.lst: r/alt12dicts/neol-50.lst
 l/supplement/80/neol-80.lst: r/alt12dicts/neol-80.lst
 
 #

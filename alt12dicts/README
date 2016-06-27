@@ -2,20 +2,20 @@ Unofficial Alternate 12Dicts package (Alt12Dicts)
 Files by Alan Beale
 Packaged by Kevin Atkinson
 
-Version 2016.06.??
+Version 2016.06.26
 
 The files contained in this archive are the result of a rather
 extensive conversation between me (Kevin Atkinson) and Alan Beale, the
 author of the 12Dicts package.  I can be contacted at kevina@gnu.org
 and Alan Beale can be contacted at biljir@pobox.com.  This archive
-contains almost all the information in the official 12Dicts package
-but in a different format as well as a good deal of additional
-information.  However it is not meant as a replacement for the
-official 12Dicts package.  It simply offers the information in a
-different way.
+contains almost all the information originally found in release 4 of
+the official 12Dicts package but in a different format as well as a
+good deal of additional information.
 
-This package includes files from Version 6.0.2 of the official 12Dicts
-package.
+This version has been updated with information from version 6.0.2 of
+the official 12Dicts package, Version 5 and 6 of 12Dicts include a
+number of new files not found in version 4; this package does not
+include those yet.
 
 The latest version of this package and the official 12Dicts package can
 be found at http://wordlist.aspell.net/

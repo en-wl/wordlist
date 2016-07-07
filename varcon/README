@@ -35,6 +35,7 @@ categories are as follows:
   B: British "ise" spelling
   Z: British "ize" spelling or OED preferred Spelling
   C: Canadian
+  D: Australian
   _: Other (Variant info based on American dictionaries, never used
             with any of the above).
 and the variants tags are as follows:
@@ -56,9 +57,9 @@ when it is it marked as as a archaic spelling for the word.  The "x"
 is used when the spelling is almost generally considered a
 misspelling, and is only included for completeness.
 
-If there are no tags with the 'Z' spelling category on the line than
-'B' implies 'Z'.  Similarly if there are no 'C' tags than 'Z' implies
-'C'.
+If there are no tags with the 'Z' spelling category on the line then
+'B' implies 'Z'.  Similarly if there are no 'C' tags then 'Z' implies
+'C'.  If there are no 'D' tags then 'B' implies 'D'.
 
 For ease of reading and maintaining the data file, each line is
 grouped in a cluster of closely related words.  Each cluster is

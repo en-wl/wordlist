@@ -1028,12 +1028,12 @@ A Cv Dv: anesthetics / B C D: anaesthetics
 A Cv Dv: anesthetic's / B C D: anaesthetic's
 
 # anesthetically (level 70)
-A Cv Dv: anesthetically / B D: anaesthetically
+A Cv Dv: anesthetically / B C D: anaesthetically
 
 # anesthetist <verified> (level 40)
-A Cv Dv: anesthetist / B D: anaesthetist
-A Cv Dv: anesthetists / B D: anaesthetists
-A Cv Dv: anesthetist's / B D: anaesthetist's
+A Cv Dv: anesthetist / B C D: anaesthetist
+A Cv Dv: anesthetists / B C D: anaesthetists
+A Cv Dv: anesthetist's / B C D: anaesthetist's
 
 # anesthetization <verified> (level 60)
 A: anesthetization / B D: anaesthetisation / Z: anaesthetization / Dv: anesthetisation

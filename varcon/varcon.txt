@@ -3016,7 +3016,7 @@ _: burnoose's / _v: burnous's
 
 # bus <verified> (level 20)
 A AV B Bv C: bus | -- to avoid confusion with buss
-A B C: buses / AV CV B-: busses | <N>
+A B C: buses / AV B- CV: busses | <N>
 A Bv C: buses / AV B: busses | <V>
 A Bv C: busing / AV B: bussing
 A Bv C: busings / AV B: bussings
@@ -4308,9 +4308,9 @@ _: chutzpahes / _V1: hutzpas / _V2: chutzpas / _V3: hutzpahes
 A: cicatricule / B: cicatriculae
 
 # cicatrix <verified> (level 50)
-A B Cv A-: cicatrix / AV Bv C: cicatrice
-A AV B Bv C Cv: cicatrices / A-: cicatrixes
-A B Cv A-: cicatrix's / AV Bv C: cicatrice's
+A A- B Cv: cicatrix / AV Bv C: cicatrice
+A AV B Bv: cicatrices / A-: cicatrixes
+A A- B Cv: cicatrix's / AV Bv C: cicatrice's
 
 # cicatrizant (level 95)
 A Z: cicatrizant / B: cicatrisant

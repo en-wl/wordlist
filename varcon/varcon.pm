@@ -11,7 +11,7 @@ use Exporter ();
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(readline flatten get_words filter get_cluster %map MAX_VARIANT_LEVEL);
 
-our %map = qw(A american B british Z british_z C canadian _ other);
+our %map = qw(A american B british Z british_z C canadian D australian _ other);
 our %vmap = ('' =>  -1, '.' => 0, 'v' => 1, 'V' => 2, '-' => 3, 'x' => 8,
                         '0' => 0, '1' => 1, '2' => 2, '3' => 3, '8' => 8);
 our %rmap = ('' => '', 
@@ -31,7 +31,7 @@ sub readline_no_expand($;$) {
         my ($s, $w) = /^(.+?): (.+)$/ or croak "Bad entry: $_";
         my @s = split / /, $s;
         foreach (@s) {
-            my ($s, $v, $num) = /^([ABZC_*Q])([.01234vVx-]?)(\d)?$/ or croak "Bad category: $_";
+            my ($s, $v, $num) = /^([ABZCD_*Q])([.01234vVx-]?)(\d)?$/ or croak "Bad category: $_";
             $fragile = 1 if defined $num;
             push @{$r{$s}[$vmap{$v}+1]}, $w;
         }
@@ -61,6 +61,7 @@ sub readline($;$) {
     my %r = &readline_no_expand(@_);
     $r{Z} = $r{B} if exists $r{B} and not exists $r{Z};
     $r{C} = $r{Z} if exists $r{Z} and not exists $r{C};
+    $r{D} = $r{B} if exists $r{B} and not exists $r{D};
     return %r;
 }
 
@@ -106,6 +107,7 @@ sub format($) {
     my %kill;
     $kill{Z} = 1 if defined $grouped{Z} && defined $grouped{B} && $grouped{Z} eq $grouped{B};
     $kill{C} = 1 if defined $grouped{C} && defined $grouped{Z} && $grouped{C} eq $grouped{Z};
+    $kill{D} = 1 if defined $grouped{D} && defined $grouped{B} && $grouped{D} eq $grouped{B};
     foreach my $key (sort keys %$flattened) {
         my $words = $flattened->{$key};
         foreach my $word (@$words) {

@@ -1,3 +1,11 @@
+Changes from 2015.01.28 to 2016.06.26
+
+- updated to version 6.0.2 of the official 12Dicts package
+
+- change format of 2of12full.txt to include "second-class" column
+
+- various new files sent to me by Alan
+
 Changes from Version 2014.08.11 to 2015.01.28 (January 28, 2015)
 
 - marked inflected forms of some adjectives with a ! when they were

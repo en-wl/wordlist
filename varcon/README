@@ -1,6 +1,6 @@
 Variant Conversion Info (VarCon)
 
-Version 2016.01.19
+Version 2016.06.26
 
 Copyright 2000-2016 by Kevin Atkinson (kevina@gnu.org)
 
@@ -277,6 +277,10 @@ his data using the dictionaries above.  (However, his data is, by far,
 more accurate than Tysto's)
 
 CHANGELOG:
+
+From 2016.01.19 to 2016.06.26
+
+   - Fix plural of "bus".
 
 From 2015.08.24 to 2016.01.19
 

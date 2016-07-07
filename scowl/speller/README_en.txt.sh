@@ -33,10 +33,12 @@ The following dictionaries are available:
   en_CA (Canadian)
   en_GB-ise (British with "ise" spelling)
   en_GB-ize (British with "ize" spelling)
+  en_AU (Australian)
 
   en_US-large
   en_CA-large
   en_GB-large (with both "ise" and "ize" spelling)
+  en_AU-large
 
 The normal (non-large) dictionaries correspond to SCOWL size 60 and,
 to encourage consistent spelling, generally only include one spelling

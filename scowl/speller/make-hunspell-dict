@@ -87,10 +87,12 @@ then
   doit en_CA "mk-list --accents=strip en_CA $SIZE"
   doit en_GB-ize "mk-list --accents=strip en_GB-ize $SIZE"
   doit en_GB-ise "mk-list --accents=strip en_GB-ise $SIZE"
+  doit en_AU "mk-list --accents=strip en_AU $SIZE"
 
   doit en_US-large "mk-list -v1 --accents=both en_US 70"
   doit en_CA-large "mk-list -v1 --accents=both en_CA 70"
   doit en_GB-large "mk-list -v1 --accents=both en_GB-ize en_GB-ise 70"
+  doit en_CA-large "mk-list -v1 --accents=both en_AU 70"
 
   sh $SPELLER/README_en.txt.sh > hunspell/README
 

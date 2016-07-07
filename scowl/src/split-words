@@ -14,6 +14,9 @@ comm -12 working/words.$1 working/british_z.lst \
 comm -12 working/words.$1 working/canadian.lst \
   > working/canadian-all.$1.pre
 
+comm -12 working/words.$1 working/australian.lst \
+  > working/australian-all.$1.pre
+
 comm -12 working/words.$1 working/variant_1.lst   \
   > working/variant_1-all.$1.pre
 
@@ -34,6 +37,12 @@ comm -12 working/words.$1 working/canadian_variant_1.lst   \
 
 comm -12 working/words.$1 working/canadian_variant_2.lst   \
   > working/canadian_variant_2-all.$1.pre
+
+comm -12 working/words.$1 working/australian_variant_1.lst   \
+  > working/australian_variant_1-all.$1.pre
+
+comm -12 working/words.$1 working/australian_variant_2.lst   \
+  > working/australian_variant_2-all.$1.pre
 
 cat working/*-all.$1.pre         \
   | sort | uniq                  \

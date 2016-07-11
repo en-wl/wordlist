@@ -376,9 +376,9 @@ A Z: aggrandizers / B: aggrandisers
 A Z: aggrandizer's / B: aggrandiser's
 
 # aging <verified> (level 20)
-A Bv C Dv: aging / Av B Cv D: ageing
-A Bv C Dv: agings / Av B Cv D: ageings
-A Bv C Dv: aging's / Av B Cv D: ageing's
+A Bv C: aging / Av B Cv: ageing
+A Bv C: agings / Av B Cv: ageings
+A Bv C: aging's / Av B Cv: ageing's
 
 # agnize (level 80)
 A Z: agnize / B: agnise
@@ -640,9 +640,9 @@ A Z: aluminizing / B: aluminising
 A Z: aluminizes / B: aluminises
 
 # aluminum <verified> (level 35)
-A C: aluminum / B D: aluminium
-A C: aluminums / B D: aluminiums
-A C: aluminum's / B D: aluminium's
+A C: aluminum / B: aluminium
+A C: aluminums / B: aluminiums
+A C: aluminum's / B: aluminium's
 
 # alumni (level 40)
 _: alumni / _-: alumnuses
@@ -868,9 +868,9 @@ A Z: anagrammatizing / B: anagrammatising
 A Z: anagrammatizes / B: anagrammatises
 
 # analog <verified> (level 10)
-A B D: analogue / A.: analog | analogous
-A B D: analogue's / A.: analog's | analogous
-A B D: analogues / A.: analogs | analogous
+A B: analogue / A.: analog | analogous
+A B: analogue's / A.: analog's | analogous
+A B: analogues / A.: analogs | analogous
 A Bv C D: analog / B Dv: analogue | vs. digital
 A Bv C D: analog's / B Dv: analogue's | vs. digital
 A Bv C D: analogs / B Dv: analogues | vs. digital
@@ -914,11 +914,11 @@ A C: analyzations / B: analysations
 A C: analyzation's / B: analysation's
 
 # analyze <verified> (level 20)
-A C: analyze / B Cv D: analyse
-A C: analyzed / B Cv D: analysed
-A C: analyzing / B Cv D: analysing
-A C: analyzes / B Cv D: analyses
-A B C D: analyses | <pl> [analysis]
+A C: analyze / B Cv: analyse
+A C: analyzed / B Cv: analysed
+A C: analyzing / B Cv: analysing
+A C: analyzes / B Cv: analyses
+A B: analyses | <pl> [analysis]
 
 # analyzer <verified> (level 35)
 A C: analyzer / B: analyser
@@ -1028,12 +1028,12 @@ A Cv Dv: anesthetics / B C D: anaesthetics
 A Cv Dv: anesthetic's / B C D: anaesthetic's
 
 # anesthetically (level 70)
-A Cv Dv: anesthetically / B D: anaesthetically
+A Cv Dv: anesthetically / B C D: anaesthetically
 
 # anesthetist <verified> (level 40)
-A Cv Dv: anesthetist / B D: anaesthetist
-A Cv Dv: anesthetists / B D: anaesthetists
-A Cv Dv: anesthetist's / B D: anaesthetist's
+A Cv Dv: anesthetist / B C D: anaesthetist
+A Cv Dv: anesthetists / B C D: anaesthetists
+A Cv Dv: anesthetist's / B C D: anaesthetist's
 
 # anesthetization <verified> (level 60)
 A: anesthetization / B D: anaesthetisation / Z: anaesthetization / Dv: anesthetisation
@@ -1041,7 +1041,7 @@ A: anesthetizations / B D: anaesthetisations / Z: anaesthetizations / Dv: anesth
 A: anesthetization's / B D: anaesthetisation's / Z: anaesthetization's / Dv: anesthetisation
 
 # anesthetize <verified> (level 40)
-A Cv: anesthetize / B D: anaesthetise / C Z: anaesthetize / Dv: anesthetise 
+A Cv: anesthetize / B D: anaesthetise / C Z: anaesthetize / Dv: anesthetise
 A Cv: anesthetized / B D: anaesthetised / C Z: anaesthetized / Dv: anesthetised
 A Cv: anesthetizing / B D: anaesthetising / C Z: anaesthetizing / Dv: anesthetising
 A Cv: anesthetizes / B D: anaesthetises / C Z: anaesthetizes / Dv: anesthetises
@@ -2894,10 +2894,10 @@ A: boweling / B: bowelling
 A: bradypnea / B: bradypnoea
 
 # breathalyze <verified> (level 55)
-A C: breathalyze / B Cv D: breathalyse
-A C: breathalyzed / B Cv D: breathalysed
-A C: breathalyzing / B Cv D: breathalysing
-A C: breathalyzes / B Cv D: breathalyses
+A C: breathalyze / B Cv: breathalyse
+A C: breathalyzed / B Cv: breathalysed
+A C: breathalyzing / B Cv: breathalysing
+A C: breathalyzes / B Cv: breathalyses
 
 # breathalyzer <verified> (level 55)
 A: breathalyzer / B: breathalyser
@@ -3017,7 +3017,7 @@ _: burnoose's / _v: burnous's
 
 # bus <verified> (level 20)
 A AV B Bv C: bus | -- to avoid confusion with buss
-A B C: buses / AV CV B-: busses | <N>
+A B C: buses / AV B- CV: busses | <N>
 A Bv C: buses / AV B: busses | <V>
 A Bv C: busing / AV B: bussing
 A Bv C: busings / AV B: bussings
@@ -3140,9 +3140,9 @@ A: Calender / B: Calendre
 A: Calender's / B: Calendre's
 
 # caliber <verified> (level 35)
-A: caliber / B D: calibre
-A: calibers / B D: calibres
-A: caliber's / B D: calibre's
+A: caliber / B: calibre
+A: calibers / B: calibres
+A: caliber's / B: calibre's
 
 # caliper <verified> (level 50)
 A B: caliper / Bv: calliper
@@ -3229,11 +3229,11 @@ A: Cananean / B: Cananaean
 A: Cananean's / B: Cananaean's
 
 # cancel <verified> (level 20)
-A: canceled / Av B D: cancelled
-A: canceling / Av B D: cancelling
+A: canceled / Av B: cancelled
+A: canceling / Av B: cancelling
 
 # cancelable (level 70)
-A: cancelable / Av B D: cancellable
+A: cancelable / Av B: cancellable
 
 # cancelate (level 70)
 A: cancelate / Av B: cancellate
@@ -3242,12 +3242,12 @@ A: cancelate / Av B: cancellate
 A: cancelated / Av B: cancellated
 
 # canceler <verified> (level 60)
-A: canceler / B D: canceller
-A: cancelers / B D: cancellers
-A: canceler's / B D: canceller's
+A: canceler / B: canceller
+A: cancelers / B: cancellers
+A: canceler's / B: canceller's
 
 # cancellation <verified> (level 35)
-A B D: cancellation / AV: cancelation
+A B: cancellation / AV: cancelation
 
 # cancelous (level 80)
 A: cancelous / B: cancellous
@@ -3530,11 +3530,11 @@ A Z: casualizes / B: casualises
 A Z: catabolize / B: catabolise
 
 # catalog <verified> (level 10)
-A: catalog / Av B D: catalogue
-A: cataloged / Av B D: catalogued
-A: cataloging / Av B D: cataloguing
-A: catalogs / Av B D: catalogues
-A: catalog's / Av B D: catalogue's
+A: catalog / Av B: catalogue
+A: cataloged / Av B: catalogued
+A: cataloging / Av B: cataloguing
+A: catalogs / Av B: catalogues
+A: catalog's / Av B: catalogue's
 
 # cataloger <verified> (level 50)
 A: cataloger / B: cataloguer
@@ -3548,11 +3548,11 @@ A Z: cataloguizing / B: cataloguising
 A Z: cataloguizes / B: cataloguises
 
 # catalyze <verified> (level 50)
-A C: catalyze / B Cv D: catalyse
-A C: catalyzed / B Cv D: catalysed
-A C: catalyzing / B Cv D: catalysing
-A C: catalyzes / B Cv D: catalyses
-A B C D: catalyses | <pl> [catalysis]
+A C: catalyze / B Cv: catalyse
+A C: catalyzed / B Cv: catalysed
+A C: catalyzing / B Cv: catalysing
+A C: catalyzes / B Cv: catalyses
+A B: catalyses | <pl> [catalysis]
 
 # catalyzer (level 70)
 A: catalyzer / B: catalyser
@@ -3814,13 +3814,13 @@ A: cenospecifically / B: coenospecifically
 A: cenozoic / B: caenozoic
 
 # center <verified> (level 10)
-A Cv: center / B C D: centre
-A Cv: centered / B C D: centred
-A Cv: centering / B C D: centring
-A Cv: center's / B C D: centre's
-A Cv: centerings / B C D: centrings
-A Cv: centering's / B C D: centring's
-A Cv: centers / B C D: centres
+A Cv: center / B C: centre
+A Cv: centered / B C: centred
+A Cv: centering / B C: centring
+A Cv: center's / B C: centre's
+A Cv: centerings / B C: centrings
+A Cv: centering's / B C: centring's
+A Cv: centers / B C: centres
 
 # centerable (level 95)
 A: centerable / B: centreable
@@ -3869,14 +3869,14 @@ A B C: centigrams / Bv: centigrammes
 A B C: centigram's / Bv: centigramme's
 
 # centiliter <verified> (level 50)
-A: centiliter / B D: centilitre
-A: centiliters / B D: centilitres
-A: centiliter's / B D: centilitre's
+A: centiliter / B: centilitre
+A: centiliters / B: centilitres
+A: centiliter's / B: centilitre's
 
 # centimeter <verified> (level 35)
-A: centimeter / B D: centimetre
-A: centimeters / B D: centimetres
-A: centimeter's / B D: centimetre's
+A: centimeter / B: centimetre
+A: centimeters / B: centimetres
+A: centimeter's / B: centimetre's
 
 # centralization <verified> (level 50)
 A Z: centralization / B: centralisation
@@ -4087,17 +4087,17 @@ A Z: chattelize / B: chattelise
 A Z: chattelizes / B: chattelises
 
 # check <verified> (level 10)
-A CV: check / B C D: cheque | bank
-A CV: checked / B C D: chequed | bank
-A CV: checking / B C D: chequing | bank
-A CV: checks / B C D: cheques | bank
-A CV: check's / B C D: cheque's | bank
-A C: checker / B CV D: chequer | pattern
-A C: checkers / B CV D: chequers | pattern
-A C: checker's / B CV D: chequer's | pattern
-A C: checkers's / B CV D: chequers's | pattern
-A C: checkered / B CV D: chequered | pattern
-A C: checkering / B CV D: chequering | pattern
+A CV: check / B C: cheque | bank
+A CV: checked / B C: chequed | bank
+A CV: checking / B C: chequing | bank
+A CV: checks / B C: cheques | bank
+A CV: check's / B C: cheque's | bank
+A C: checker / B CV: chequer | pattern
+A C: checkers / B CV: chequers | pattern
+A C: checker's / B CV: chequer's | pattern
+A C: checkers's / B CV: chequers's | pattern
+A C: checkered / B CV: chequered | pattern
+A C: checkering / B CV: chequering | pattern
 A B: check | verify
 A B: checked | verify
 A B: checker | verify
@@ -4309,9 +4309,9 @@ _: chutzpahes / _V1: hutzpas / _V2: chutzpas / _V3: hutzpahes
 A: cicatricule / B: cicatriculae
 
 # cicatrix <verified> (level 50)
-A B Cv A-: cicatrix / AV Bv C: cicatrice
-A AV B Bv C Cv: cicatrices / A-: cicatrixes
-A B Cv A-: cicatrix's / AV Bv C: cicatrice's
+A A- B Cv: cicatrix / AV Bv C: cicatrice
+A AV B Bv: cicatrices / A-: cicatrixes
+A A- B Cv: cicatrix's / AV Bv C: cicatrice's
 
 # cicatrizant (level 95)
 A Z: cicatrizant / B: cicatrisant
@@ -5443,21 +5443,21 @@ A: councilorships / B: councillorships
 A: councilorship's / B: councillorship's
 
 # counsel <verified> (level 20)
-A: counseled / B D: counselled
-A: counseling / B D: counselling
+A: counseled / B: counselled
+A: counseling / B: counselling
 
 # counselee (level 80)
 A: counselee / B: counsellee
 
 # counselor <verified> (level 35)
-A Cv: counselor / B C D: counsellor
-A Cv: counselors / B C D: counsellors
-A Cv: counselor's / B C D: counsellor's
+A Cv: counselor / B C: counsellor
+A Cv: counselors / B C: counsellors
+A Cv: counselor's / B C: counsellor's
 
 # counselorship (level 70)
-A: counselorship / B D: counsellorship
-A: counselorships / B D: counsellorships
-A: counselorship's / B D: counsellorship's
+A: counselorship / B: counsellorship
+A: counselorships / B: counsellorships
+A: counselorship's / B: counsellorship's
 
 # countercolored (level 95)
 A: countercolored / B: countercoloured
@@ -5588,8 +5588,8 @@ A Bv: crosiers / Av B: croziers
 A Bv: crosier's / Av B: crozier's
 
 # cruel <verified> (level 35)
-A Cv: crueler / B C D: crueller
-A Cv: cruelest / B C D: cruellest
+A Cv: crueler / B C: crueller
+A Cv: cruelest / B C: cruellest
 
 # cruelize (level 95)
 A Z: cruelize / B: cruelise
@@ -6004,9 +6004,9 @@ A C: decigrams / B: decigrammes
 A C: decigram's / B: decigramme's
 
 # deciliter <verified> (level 60)
-A: deciliter / B D: decilitre
-A: deciliters / B D: decilitres
-A: deciliter's / B D: decilitre's
+A: deciliter / B: decilitre
+A: deciliters / B: decilitres
+A: deciliter's / B: decilitre's
 
 # decimalization <verified> (level 55)
 A Z: decimalization / B: decimalisation
@@ -6020,9 +6020,9 @@ A Z: decimalizing / B: decimalising
 A Z: decimalizes / B: decimalises
 
 # decimeter <verified> (level 60)
-A: decimeter / B D: decimetre
-A: decimeters / B D: decimetres
-A: decimeter's / B D: decimetre's
+A: decimeter / B: decimetre
+A: decimeters / B: decimetres
+A: decimeter's / B: decimetre's
 
 # decivilize (level 80)
 A Z: decivilize / B: decivilise
@@ -6140,11 +6140,11 @@ A Z: defeminizing / B: defeminising
 A Z: defeminizes / B: defeminises
 
 # defense <verified> (level 10)
-A Cv: defense / B C D: defence
-A Cv: defensed / B C D: defenced
-A Cv: defensing / B C D: defencing
-A Cv: defenses / B C D: defences
-A Cv: defense's / B C D: defence's
+A Cv: defense / B C: defence
+A Cv: defensed / B C: defenced
+A Cv: defensing / B C: defencing
+A Cv: defenses / B C: defences
+A Cv: defense's / B C: defence's
 
 # defenseless <verified> (level 35)
 A: defenseless / B: defenceless
@@ -7024,11 +7024,11 @@ A Z: dialogizing / B: dialogising
 A Z: dialogizes / B: dialogises
 
 # dialogue <verified> (level 20)
-A B D: dialogue / AV: dialog
-A B D: dialogued / AV: dialogged
-A B D: dialoguing / AV: dialogging
-A B D: dialogues / AV: dialogs
-A B D: dialogue's / AV: dialog's
+A B: dialogue / AV: dialog
+A B: dialogued / AV: dialogged
+A B: dialoguing / AV: dialogging
+A B: dialogues / AV: dialogs
+A B: dialogue's / AV: dialog's
 A B Dv: dialog / Bv D: dialogue | <N> dialog box
 ## Macquarie prefers dialogue (box) even for computing.
 
@@ -7054,11 +7054,11 @@ A C: dialyzation / B: dialysation
 A C: dialyzation's / B: dialysation's
 
 # dialyze <verified> (level 50)
-A C: dialyze / B D: dialyse
-A C: dialyzed / B D: dialysed
-A C: dialyzing / B D: dialysing
-A C: dialyzes / B D: dialyses
-A B C D: dialyses | <pl> [dialysis]
+A C: dialyze / B: dialyse
+A C: dialyzed / B: dialysed
+A C: dialyzing / B: dialysing
+A C: dialyzes / B: dialyses
+A B: dialyses | <pl> [dialysis]
 
 # dialyzer (level 70)
 A C: dialyzer / B: dialyser
@@ -8818,9 +8818,9 @@ A: ephete / B: ephetae
 A: epicele / B: epicoele
 
 # epicenter <verified> (level 40)
-A: epicenter / B D: epicentre
-A: epicenters / B D: epicentres
-A: epicenter's / B D: epicentre's
+A: epicenter / B: epicentre
+A: epicenters / B: epicentres
+A: epicenter's / B: epicentre's
 
 # Epicurize (level 80)
 A Z: Epicurize / B: Epicurise
@@ -9960,7 +9960,7 @@ A Cv DV: fervorless / B C D: fervourless
 A Cv DV: fervorlesses / B C D: fervourlesses
 
 # fetal <verified> (level 35)
-A B C D Z: fetal / Bv ZV Dv: foetal
+A B C Z: fetal / Bv ZV: foetal
 
 # fetalism (level 95)
 A: fetalism / B: foetalism
@@ -10023,9 +10023,9 @@ A: fetoscopies / B: foetoscopies
 A: feture / B: foeture
 
 # fetus <verified> (level 35)
-A B C D Z: fetus / Bv ZV Dv: foetus
-A B C D Z: fetuses / Bv ZV Dv: foetuses
-A B C D Z: fetus's / Bv ZV Dv: foetus's
+A B C Z: fetus / Bv ZV: foetus
+A B C Z: fetuses / Bv ZV: foetuses
+A B C Z: fetus's / Bv ZV: foetus's
 ## foetus marked as British-only variant for "non-technical use" by Ox 
 
 # feudalizable (level 95)
@@ -10048,9 +10048,9 @@ A Z: feudalizes / B: feudalises
 A: feuter / B: feutre
 
 # fiber <verified> (level 20)
-A: fiber / B D: fibre
-A: fibers / B D: fibres
-A: fiber's / B D: fibre's
+A: fiber / B: fibre
+A: fibers / B: fibres
+A: fiber's / B: fibre's
 
 # fiberboard <verified> (level 50)
 A: fiberboard / B: fibreboard
@@ -10215,7 +10215,7 @@ A Cv DV: flavorlessest / B C D: flavourlessest
 A Cv DV: flavorlesses / B C D: flavourlesses
 
 # flavorous (level 70)
-A B C D: flavorous / Bx Cx Dx : flavourous
+A B: flavorous / Bx: flavourous
 
 # flavorsome <verified> (level 55)
 A Cv DV: flavorsome / B C D: flavoursome
@@ -10641,13 +10641,13 @@ _: fuehrers / _v: führers
 _: fuehrer's / _v: führer's
 
 # fuel <verified> (level 35)
-A: fueled / B D: fuelled
-A: fueling / B D: fuelling
+A: fueled / B: fuelled
+A: fueling / B: fuelling
 
 # fueler (level 70)
-A: fueler / B D: fueller
-A: fuelers / B D: fuellers
-A: fueler's / B D: fueller's
+A: fueler / B: fueller
+A: fuelers / B: fuellers
+A: fueler's / B: fueller's
 
 # fuelizer (level 95)
 A Z: fuelizer / B: fueliser
@@ -10659,9 +10659,9 @@ A C Dv: fulfill / B Cv D: fulfil
 A C Dv: fulfills / B Cv D: fulfils
 
 # fulfillment <verified> (level 35)
-A C: fulfillment / B Cv D: fulfilment
-A C: fulfillments / B Cv D: fulfilments
-A C: fulfillment's / B Cv D: fulfilment's
+A C: fulfillment / B Cv: fulfilment
+A C: fulfillments / B Cv: fulfilments
+A C: fulfillment's / B Cv: fulfilment's
 ## According to Macquarie, "to fulfill" is an acceptable variant, but fulfillment is not. (probably similar to install vs instalment in en-GB)
 
 # fulgor (level 70)
@@ -11287,9 +11287,9 @@ A Z: goddize / B: goddise
 A Z: goddizes / B: goddises
 
 # goiter <verified> (level 50)
-A: goiter / B D: goitre
-A: goiters / B D: goitres
-A: goiter's / B D: goitre's
+A: goiter / B: goitre
+A: goiters / B: goitres
+A: goiter's / B: goitre's
 
 # gole (level 95)
 A: gole / B: goloe
@@ -11509,22 +11509,22 @@ A: graveled / B: gravelled
 A: graveling / B: gravelling
 
 # gray <verified> (level 10)
-A Cv: gray / AV B C D: grey
-A Cv: grayed / AV B C D: greyed
-A Cv: grayer / AV B C D: greyer
-A Cv: grayest / AV B C D: greyest
-A Cv: graying / AV B C D: greying
-A Cv: grays / AV B C D: greys
-A Cv: gray's / AV B C D: grey's
+A Cv: gray / AV B C: grey
+A Cv: grayed / AV B C: greyed
+A Cv: grayer / AV B C: greyer
+A Cv: grayest / AV B C: greyest
+A Cv: graying / AV B C: greying
+A Cv: grays / AV B C: greys
+A Cv: gray's / AV B C: grey's
 A B: gray | (-) physical unit
 A B: grays | (-) physical unit
 
 # grayish <verified> (level 40)
-A: grayish / B D: greyish
+A: grayish / B: greyish
 
 # grayness <verified> (level 50)
-A: grayness / B D: greyness
-A: grayness's / B D: greyness's
+A: grayness / B: greyness
+A: grayness's / B: greyness's
 
 # grecian (level 95)
 A: grecian / B: graecian
@@ -12811,9 +12811,9 @@ A Z: homogenizers / B: homogenisers
 A Z: homogenizer's / B: homogeniser's
 
 # homolog (level ??)
-A B D: homologue / Av: homolog
-A B D: homologues / Av: homologs
-A B D: homologue's / Av: homolog's
+A B: homologue / Av: homolog
+A B: homologues / Av: homologs
+A B: homologue's / Av: homolog's
 
 # homologization (level 99)
 A Z: homologization / B: homologisation
@@ -13153,11 +13153,11 @@ A Z: hydrolyzation / B: hydrolysation
 A Z: hydrolyzation's / B: hydrolysation's
 
 # hydrolyze <verified> (level 60)
-A C: hydrolyze / B Cv D: hydrolyse
-A C: hydrolyzed / B Cv D: hydrolysed
-A C: hydrolyzing / B Cv D: hydrolysing
-A C: hydrolyzes / B Cv D: hydrolyses
-A B C D: hydrolyses | <pl> [hydrolysis]
+A C: hydrolyze / B Cv: hydrolyse
+A C: hydrolyzed / B Cv: hydrolysed
+A C: hydrolyzing / B Cv: hydrolysing
+A C: hydrolyzes / B Cv: hydrolyses
+A B: hydrolyses | <pl> [hydrolysis]
 
 # hydrolyzer (level 95)
 A Z: hydrolyzer / B: hydrolyser
@@ -14790,9 +14790,9 @@ A Cv: kiloliters / B C: kilolitres
 A Cv: kiloliter's / B C: kilolitre's
 
 # kilometer <verified> (level 35)
-A Cv: kilometer / B C D: kilometre
-A Cv: kilometers / B C D: kilometres
-A Cv: kilometer's / B C D: kilometre's
+A Cv: kilometer / B C: kilometre
+A Cv: kilometers / B C: kilometres
+A Cv: kilometer's / B C: kilometre's
 
 # kindergartner <verified> (level 40)
 A C: kindergartner / AV B: kindergartener
@@ -14862,16 +14862,16 @@ A Z: kyanizes / B: kyanises
 A B: kyles / Bv: kyloes
 
 # label <verified> (level 10)
-A: labeled / B D: labelled
-A: labeling / B D: labelling
+A: labeled / B: labelled
+A: labeling / B: labelling
 
 # labelable (level 80)
-A: labelable / B D: labellable
+A: labelable / B: labellable
 
 # labeler <verified> (level 70)
-A: labeler / B D: labeller
-A: labelers / B D: labellers
-A: labeler's / B D: labeller's
+A: labeler / B: labeller
+A: labelers / B: labellers
+A: labeler's / B: labeller's
 
 # labialization (level 80)
 A Z: labialization / B: labialisation
@@ -15001,11 +15001,11 @@ A: laborsomely / B: laboursomely
 _: lachrymal / _v: lacrimal
 
 # lackluster <verified> (level 35)
-A: lackluster / B D: lacklustre
-A: lacklusterrer / B D: lacklustrer
-A: lacklusterrest / B D: lacklustrest
-A: lacklusters / B D: lacklustres
-A: lackluster's / B D: lacklustre's
+A: lackluster / B: lacklustre
+A: lacklusterrer / B: lacklustrer
+A: lacklusterrest / B: lacklustrest
+A: lacklusters / B: lacklustres
+A: lackluster's / B: lacklustre's
 
 # laconize (level 95)
 A Z: laconize / B: laconise
@@ -15357,9 +15357,9 @@ A Z: liberalizers / B: liberalisers
 A Z: liberalizer's / B: liberaliser's
 
 # license <verified> (level 20)
-A: license / B D: licence | <N>
-A: licenses / B D: licences | <N>
-A: license's / B D: licence's | <N>
+A: license / B: licence | <N>
+A: licenses / B: licences | <N>
+A: license's / B: licence's | <N>
 A B C D: license / Bv: licence | <V>
 A B C D: licensed / Bv: licenced | <V>
 A B C D: licensing / Bv: licencing | <V>
@@ -15402,7 +15402,7 @@ A Dv: likabilities / Av B D: likeabilities
 A Dv: likability's / Av B D: likeability's
 
 # likable <verified> (level 35)
-A Bv Dv: likable / Av B D: likeable
+A Bv: likable / Av B: likeable
 
 # likableness <verified> (level 50)
 A Dv: likableness / Av B D: likeableness
@@ -15535,9 +15535,9 @@ _: litchis / _v: lychees / _V: lichees
 _: litchi's / _v: lychee's / _V: lichee's
 
 # liter <verified> (level 20)
-A: liter / B D: litre
-A: liters / B D: litres
-A: liter's / B D: litre's
+A: liter / B: litre
+A: liters / B: litres
+A: liter's / B: litre's
 
 # literalization (level 80)
 A Z: literalization / B: literalisation
@@ -15762,12 +15762,12 @@ A C: lupine's / AV B Cv: lupin's | <N> plant
 A B: lupine | <Adj> wolfish
 
 # luster <verified> (level 35)
-A: luster / AV B D: lustre
-A: lustered / AV B D: lustred
-A: lustering / AV B D: lustring
-A: luster's / AV B D: lustre's
-A: lustering's / AV B D: lustring's
-A: lusters / AV B D: lustres
+A: luster / AV B: lustre
+A: lustered / AV B: lustred
+A: lustering / AV B: lustring
+A: luster's / AV B: lustre's
+A: lustering's / AV B: lustring's
+A: lusters / AV B: lustres
 
 # lusterless <verified> (level 60)
 A: lusterless / B: lustreless
@@ -16032,12 +16032,12 @@ _: mandrels / _V: mandrils
 _: mandrel's / _V: mandril's
 
 # maneuver <verified> (level 35)
-A Cv: maneuver / B C D: manoeuvre / Cv: manoeuver
-A Cv: maneuvered / B C D: manoeuvred / Cv: manoeuvered
-A Cv: maneuvering / B C D: manoeuvring / Cv: manoeuvering
-A Cv: maneuverings / B C D: manoeuvrings / Cv: manoeuverings
-A Cv: maneuvers / B C D: manoeuvres / Cv: manoeuvers
-A Cv: maneuver's / B C D: manoeuvre's / Cv: manoeuver's
+A Cv: maneuver / B C: manoeuvre / Cv: manoeuver
+A Cv: maneuvered / B C: manoeuvred / Cv: manoeuvered
+A Cv: maneuvering / B C: manoeuvring / Cv: manoeuvering
+A Cv: maneuverings / B C: manoeuvrings / Cv: manoeuverings
+A Cv: maneuvers / B C: manoeuvres / Cv: manoeuvers
+A Cv: maneuver's / B C: manoeuvre's / Cv: manoeuver's
 
 # maneuverability <verified> (level 50)
 A: maneuverability / B: manoeuvrability
@@ -16195,9 +16195,9 @@ A: marveling / B: marvelling
 A: marveler / B: marveller
 
 # marvelous <verified> (level 20)
-A: marvelous / B D: marvellous
-A: marvelouser / B D: marvellouser
-A: marvelousest / B D: marvellousest
+A: marvelous / B: marvellous
+A: marvelouser / B: marvellouser
+A: marvelousest / B: marvellousest
 
 # marvelously <verified> (level 50)
 A: marvelously / B: marvellously
@@ -16319,9 +16319,9 @@ _: mazurkas / _V: mazourkas
 _: mazurka's / _V: mazourka's
 
 # meager <verified> (level 35)
-A Cv: meager / B C D: meagre
-A Cv: meagerrer / B C D: meagrer
-A Cv: meagerrest / B C D: meagrest
+A Cv: meager / B C: meagre
+A Cv: meagerrer / B C: meagrer
+A Cv: meagerrest / B C: meagrest
 
 # meandrine (level 95)
 A: meandrine / B: maeandrine
@@ -16414,9 +16414,9 @@ A Z: medicalizing / B: medicalising
 A Z: medicalizes / B: medicalises
 
 # medieval <verified> (level 20)
-A B C D: medieval / AV Bv Dv: mediaeval
-A B C D: medievals / AV Bv Dv: mediaevals
-A B C D: medieval's / AV Bv Dv: mediaeval's
+A B C: medieval / AV Bv: mediaeval
+A B C: medievals / AV Bv: mediaevals
+A B C: medieval's / AV Bv: mediaeval's
 
 # medievalism (level 70)
 A: medievalism / B: mediaevalism
@@ -16779,12 +16779,12 @@ A Z: meteorize / B: meteorise
 A Z: meteorizes / B: meteorises
 
 # meter <verified> (level 20)
-A B C D: meter | measuring device
-A B C D: meters | measuring device
-A B C D: meter's | measuring device
-A Cv: meter / B C D: metre | metric meter, rhythmic pattern
-A Cv: meters / B C D: metres | metric meter, rhythmic pattern
-A Cv: meter's / B C D: metre's | metric meter, rhythmic pattern
+A B: meter | measuring device
+A B: meters | measuring device
+A B: meter's | measuring device
+A Cv: meter / B C: metre | metric meter, rhythmic pattern
+A Cv: meters / B C: metres | metric meter, rhythmic pattern
+A Cv: meter's / B C: metre's | metric meter, rhythmic pattern
 
 # metergram (level 95)
 A: metergram / B: metregram
@@ -16868,17 +16868,17 @@ A: microcolorimetrically / B: microcolourimetrically
 A: microcolorimetry / B: microcolourimetry
 
 # microliter (level 80)
-A: microliter / B D: microlitre
-A: microliters / B D: microlitres
-A: microliter's / B D: microlitre's
+A: microliter / B: microlitre
+A: microliters / B: microlitres
+A: microliter's / B: microlitre's
 
 # micrometer <verified> (level 35)
-A B C D: micrometer | gauge
-A B C D: micrometers | gauge
-A B C D: micrometer's | gauge
-A: micrometer / B D: micrometre | metric meter
-A: micrometers / B D: micrometres | metric meter
-A: micrometer's / B D: micrometre's | metric meter
+A B: micrometer | gauge
+A B: micrometers | gauge
+A B: micrometer's | gauge
+A: micrometer / B: micrometre | metric meter
+A: micrometers / B: micrometres | metric meter
+A: micrometer's / B: micrometre's | metric meter
 
 # micromillimeter (level 70)
 A: micromillimeter / B: micromillimetre
@@ -16962,14 +16962,14 @@ A B: milligrams / Bv: milligrammes
 A B: milligram's / Bv: milligramme's
 
 # milliliter <verified> (level 40)
-A: milliliter / B D: millilitre
-A: milliliters / B D: millilitres
-A: milliliter's / B D: millilitre's
+A: milliliter / B: millilitre
+A: milliliters / B: millilitres
+A: milliliter's / B: millilitre's
 
 # millimeter <verified> (level 35)
-A: millimeter / B D: millimetre
-A: millimeters / B D: millimetres
-A: millimeter's / B D: millimetre's
+A: millimeter / B: millimetre
+A: millimeters / B: millimetres
+A: millimeter's / B: millimetre's
 
 # millionaire (level 35)
 _: millionaire / _-: millionnaire
@@ -17276,13 +17276,13 @@ A Z: modalize / B: modalise
 A Z: modalizes / B: modalises
 
 # model <verified> (level 20)
-A: modeled / B D: modelled
-A: modeler / B D: modeller
-A: modelers / B D: modellers
-A: modeler's / B D: modeller's
-A: modeling / B D: modelling
-A: modelings / B D: modellings
-A: modeling's / B D: modelling's
+A: modeled / B: modelled
+A: modeler / B: modeller
+A: modelers / B: modellers
+A: modeler's / B: modeller's
+A: modeling / B: modelling
+A: modelings / B: modellings
+A: modeling's / B: modelling's
 
 # modernizable (level 95)
 A Z: modernizable / B: modernisable
@@ -17906,9 +17906,9 @@ A C: nanogram / B: nanogramme
 A C: nanograms / B: nanogrammes
 
 # nanometer <verified> (level 70)
-A Cv: nanometer / B C D: nanometre
-A Cv: nanometers / B C D: nanometres
-A Cv: nanometer's / B C D: nanometre's
+A Cv: nanometer / B C: nanometre
+A Cv: nanometers / B C: nanometres
+A Cv: nanometer's / B C: nanometre's
 
 # napea (level 95)
 A: napea / B: napaea
@@ -18885,9 +18885,9 @@ A: odorlessest / B: odourlessest
 A: odorlesses / B: odourlesses
 
 # offense <verified> (level 20)
-A Cv: offense / B C D: offence
-A Cv: offenses / B C D: offences
-A Cv: offense's / B C D: offence's
+A Cv: offense / B C: offence
+A Cv: offenses / B C: offences
+A Cv: offense's / B C: offence's
 
 # offenseless (level 70)
 A: offenseless / B: offenceless
@@ -19645,10 +19645,10 @@ A Z: paganizer's / B: paganiser's
 A: pagine / B: paginae
 
 # pajama <verified> (level 35)
-A Cv: pajama / B C D: pyjama
-A Cv: pajamas / B C D: pyjamas
-A Cv: pajama's / B C D: pyjama's
-A Cv: pajamas's / B C D: pyjamas's
+A Cv: pajama / B C: pyjama
+A Cv: pajamas / B C: pyjamas
+A Cv: pajama's / B C: pyjama's
+A Cv: pajamas's / B C: pyjamas's
 
 # pajamaed (level 80)
 A: pajamaed / B: pyjamased
@@ -20311,11 +20311,11 @@ A: paralyzations / B: paralysations
 A: paralyzation's / B: paralysation's
 
 # paralyze <verified> (level 35)
-A C: paralyze / B Cv D: paralyse
-A C: paralyzed / B Cv D: paralysed
-A C: paralyzing / B Cv D: paralysing
-A C: paralyzes / B Cv D: paralyses
-A B C D: paralyses | <pl> [paralysis]
+A C: paralyze / B Cv: paralyse
+A C: paralyzed / B Cv: paralysed
+A C: paralyzing / B Cv: paralysing
+A C: paralyzes / B Cv: paralyses
+A B: paralyses | <pl> [paralysis]
 
 # paralyzedly (level 95)
 A: paralyzedly / B: paralysedly
@@ -21544,10 +21544,10 @@ A: photolabeling / B: photolabelling
 A: photolyzable / B: photolysable
 
 # photolyze (level 80)
-A C: photolyze / B D: photolyse
-A C: photolyzed / B D: photolysed
-A C: photolyzing / B D: photolysing
-A C: photolyzes / B D: photolyses
+A C: photolyze / B: photolyse
+A C: photolyzed / B: photolysed
+A C: photolyzing / B: photolysing
+A C: photolyzes / B: photolyses
 
 # photopolymerization (level 95)
 A Z: photopolymerization / B: photopolymerisation
@@ -21608,9 +21608,9 @@ A C: picograms / B: picogrammes
 A C: picogram's / B: picogramme's
 
 # picometer (level 95)
-A: picometer / B D: picometre
-A: picometers / B D: picometres
-A: picometer's / B D: picometre's
+A: picometer / B: picometre
+A: picometers / B: picometres
+A: picometer's / B: picometre's
 
 # pictorialization (level 80)
 A Z: pictorialization / B: pictorialisation
@@ -22288,10 +22288,10 @@ A Z: powellizes / B: powellises
 A B C: practice / AV Cv: practise | <N>
 A B C: practices / AV Cv: practises | <N>
 A B C: practice's / AV Cv: practise's | <N>
-A Cv: practice / AV B C D: practise | <V>
-A Cv: practiced / AV B C D: practised | <V>
-A Cv: practicing / AV B C D: practising | <V>
-A Cv: practices / AV B C D: practises | <V>
+A Cv: practice / AV B C: practise | <V>
+A Cv: practiced / AV B C: practised | <V>
+A Cv: practicing / AV B C: practising | <V>
+A Cv: practices / AV B C: practises | <V>
 
 # practicer <verified> (level 70)
 A: practicer / B: practiser
@@ -22745,9 +22745,9 @@ A: presystolic / B: praesystolic
 A: pretaxation / B: praetaxation
 
 # pretense <verified> (level 35)
-A C: pretense / B Cv D: pretence
-A C: pretenses / B Cv D: pretences
-A C: pretense's / B Cv D: pretence's
+A C: pretense / B Cv: pretence
+A C: pretenses / B Cv: pretences
+A C: pretense's / B Cv: pretence's
 
 # pretensive (level 95)
 A: pretensive / B: pretencive
@@ -25002,11 +25002,11 @@ A: Sabean / B: Sabaean
 A: Sabeans / B: Sabaeans
 
 # saber <verified> (level 35)
-A: saber / Av B C D: sabre
-A: sabered / Av B C D: sabred
-A: sabering / Av B C D: sabring
-A: sabers / Av B C D: sabres
-A: saber's / Av B C D: sabre's
+A: saber / Av B: sabre
+A: sabered / Av B: sabred
+A: sabering / Av B: sabring
+A: sabers / Av B: sabres
+A: saber's / Av B: sabre's
 
 # saberbill (level 95)
 A: saberbill / B: sabrebill
@@ -25349,11 +25349,11 @@ A Z: scenarizing / B: scenarising
 A Z: scenarizes / B: scenarises
 
 # scepter <verified> (level 35)
-A: scepter / B D: sceptre
-A: sceptered / B D: sceptred
-A: sceptering / B D: sceptring
-A: scepters / B D: sceptres
-A: scepter's / B D: sceptre's
+A: scepter / B: sceptre
+A: sceptered / B: sceptred
+A: sceptering / B: sceptring
+A: scepters / B: sceptres
+A: scepter's / B: sceptre's
 
 # scepterdom (level 95)
 A: scepterdom / B: sceptredom
@@ -26043,11 +26043,11 @@ A Z: siderealize / B: siderealise
 A Z: siderealizes / B: siderealises
 
 # signal <verified> (level 20)
-A: signaled / B D: signalled
-A: signaler / B D: signaller
-A: signalers / B D: signallers
-A: signaler's / B D: signaller's
-A: signaling / B D: signalling
+A: signaled / B: signalled
+A: signaler / B: signaller
+A: signalers / B: signallers
+A: signaler's / B: signaller's
+A: signaling / B: signalling
 
 # signalization (level 60)
 A Z: signalization / B: signalisation
@@ -26685,9 +26685,9 @@ A Z: specimenize / B: specimenise
 A Z: specimenizes / B: specimenises
 
 # specter <verified> (level 35)
-A: specter / B D: spectre
-A: specters / B D: spectres
-A: specter's / B D: spectre's
+A: specter / B: spectre
+A: specters / B: spectres
+A: specter's / B: spectre's
 
 # spectered (level 95)
 A: spectered / B: spectred
@@ -28369,9 +28369,9 @@ A: thalassemias / B: thalassaemias
 A: thalassemic / B: thalassaemic
 
 # theater <verified> (level 20)
-A Cv: theater / B C D: theatre
-A Cv: theaters / B C D: theatres
-A Cv: theater's / B C D: theatre's
+A Cv: theater / B C: theatre
+A Cv: theaters / B C: theatres
+A Cv: theater's / B C: theatre's
 
 # theatergoer <verified> (level 55)
 A: theatergoer / B: theatregoer
@@ -28568,9 +28568,9 @@ A: tinseliest / B: tinselliest
 A B: tire | exhausted
 A B: tires | exhausted
 A B: tire's | exhausted
-A C: tire / B D: tyre | wheel
-A C: tires / B D: tyres | whell
-A C: tire's / B D: tyre's | wheel
+A C: tire / B: tyre | wheel
+A C: tires / B: tyres | whell
+A C: tire's / B: tyre's | wheel
 
 # titer <verified> (level 70)
 A Cv: titer / B C: titre
@@ -28843,13 +28843,13 @@ A Z: traumatizing / B: traumatising
 A Z: traumatizes / B: traumatises
 
 # travel <verified> (level 20)
-A: traveled / B D: travelled
-A: traveler / B D: traveller
-A: travelers / B D: travellers
-A: traveler's / B D: traveller's
-A: traveling / B D: travelling
-A: travelings / B D: travellings
-A: traveling's / B D: travelling's
+A: traveled / B: travelled
+A: traveler / B: traveller
+A: travelers / B: travellers
+A: traveler's / B: traveller's
+A: traveling / B: travelling
+A: travelings / B: travellings
+A: traveling's / B: travelling's
 
 # travelogue <verified> (level 50)
 A B: travelogue / Av: travelog
@@ -32172,18 +32172,18 @@ _: wigeon's / _v: widgeon's
 _: wigeon / _v: widgeons / _v: wigeons / _v: widgeon | <pl>
 
 # willful <verified> (level 35)
-A Cv: willful / Av B C D: wilful
-A Cv: willfuler / Av B C D: wilfuler
-A Cv: willfulest / Av B C D: wilfulest
+A Cv: willful / Av B C: wilful
+A Cv: willfuler / Av B C: wilfuler
+A Cv: willfulest / Av B C: wilfulest
 
 # willfully <verified> (level 35)
-A: willfully / B D: wilfully
-A: willfullier / B D: wilfullier
-A: willfulliest / B D: wilfulliest
+A: willfully / B: wilfully
+A: willfullier / B: wilfullier
+A: willfulliest / B: wilfulliest
 
 # willfulness <verified> (level 50)
-A: willfulness / Av B D: wilfulness
-A: willfulness's / Av B D: wilfulness's
+A: willfulness / Av B: wilfulness
+A: willfulness's / Av B: wilfulness's
 
 # willy (level 55)
 _: willy / _V: willie
@@ -32242,11 +32242,11 @@ A Z: woodcockize / B: woodcockise
 A Z: woodcockizes / B: woodcockises
 
 # woolen <verified> (level 35)
-A Cv: woolen / B C D: woollen
-A Cv: woolenner / B C D: woollenner
-A Cv: woolennest / B C D: woollennest
-A Cv: woolens / B C D: woollens
-A Cv: woolen's / B C D: woollen's
+A Cv: woolen / B C: woollen
+A Cv: woolenner / B C: woollenner
+A Cv: woolennest / B C: woollennest
+A Cv: woolens / B C: woollens
+A Cv: woolen's / B C: woollen's
 
 # woolenization (level 95)
 A: woolenization / B: woollenisation / Z: woollenization

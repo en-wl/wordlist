@@ -2,11 +2,12 @@ Variant Conversion Info (VarCon)
 
 Version 2016.06.26
 
-Copyright 2000-2016 by Kevin Atkinson (kevina@gnu.org)
+Copyright 2000-2016 by Kevin Atkinson (kevina@gnu.org) and Benjamin
+Titze (btitze@protonmail.ch).
 
 This package contains information to convert between American,
-British, and Canadian spellings and vocabulary as well and other
-variant information.
+British, Canadian, and Australian spellings and vocabulary as well as
+other variant information.
 
 The latest version can be found at http://wordlist.aspell.net/.
 
@@ -56,6 +57,10 @@ listed is the dictionary but I could find some evidence of it use, or
 when it is it marked as as a archaic spelling for the word.  The "x"
 is used when the spelling is almost generally considered a
 misspelling, and is only included for completeness.
+
+For Australian English "v" was used for variants that are widely used,
+but not preferred, and "V" for all "-or" (vs. "-our") variants and 
+variants considered "chiefly US".
 
 If there are no tags with the 'Z' spelling category on the line then
 'B' implies 'Z'.  Similarly if there are no 'C' tags then 'Z' implies
@@ -275,6 +280,21 @@ Spelling page available at:
 but only to perform some initial verification, in the end I rechecked
 his data using the dictionaries above.  (However, his data is, by far,
 more accurate than Tysto's)
+    
+In Version ??? Benjamin Titze added support for Australian English.
+The primary sources for this addition were:
+
+  The Macquarie Dictionary: https://www.macquariedictionary.com.au/
+  Style Manual: For Authors, Editors and Printers, 6th Edition. DCITA.
+  University of Technology Sydney Publications Style Guide:
+    http://www.gsu.uts.edu.au/publications/styleguide/spelling.html
+  Style Manual, Department of Treasury and Finance, Tasmania:
+    http://conference.tasa.org.au/wp-content/uploads/2015/03/Style-Manual.pdf
+  Editor Australia - Style Guide: 
+    http://www.editoraustralia.com/styleguide_spelling.html
+  Webster in Australia (history of "our"/"or" spelling variants): 
+    http://blogs.usyd.edu.au/elac/2008/01/webster_in_australia.html
+
 
 CHANGELOG:
 
@@ -390,13 +410,23 @@ From Revision 1 to Revision 2 (January 27, 2001)
 
 COPYRIGHT:
 
-Copyright 2000-2010 by Kevin Atkinson
+Copyright 2000-2016 by Kevin Atkinson
 
 Permission to use, copy, modify, distribute and sell this array, the
 associated software, and its documentation for any purpose is hereby
 granted without fee, provided that the above copyright notice appears
 in all copies and that both that copyright notice and this permission
 notice appear in supporting documentation. Kevin Atkinson makes no
+representations about the suitability of this array for any
+purpose. It is provided "as is" without express or implied warranty.
+
+Copyright 2016 by Benjamin Titze
+
+Permission to use, copy, modify, distribute and sell this array, the
+associated software, and its documentation for any purpose is hereby
+granted without fee, provided that the above copyright notice appears
+in all copies and that both that copyright notice and this permission
+notice appear in supporting documentation. Benjamin Titze makes no
 representations about the suitability of this array for any
 purpose. It is provided "as is" without express or implied warranty.
 

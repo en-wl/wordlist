@@ -3004,7 +3004,7 @@ A Z: burglarized / B: burglarised
 A Z: burglarizing / B: burglarising
 A Z: burglarizes / B: burglarises
 
-# burka (level ??)
+# burka (level 50)
 A B Dv: burka / B. D: burqa / BV: burkha 
 A B Dv: burkas / B. D: burqas / BV: burkhas
 A B Dv: burka's / B. D: burqa's / BV: burkha's
@@ -9319,7 +9319,7 @@ A Z: ethnicizes / B: ethnicises
 A Dv: etiogenic / B D: aetiogenic
 
 # etiologically <verified> (level 70)
-A C: Dv etiologically / B D: aetiologically
+A C Dv: etiologically / B D: aetiologically
 
 # etiologist (level 70)
 A Dv: etiologist / B D: aetiologist
@@ -9447,7 +9447,7 @@ A Z: euphuizes / B: euphuises
 A Dv: eupnea / B D: eupnoea
 A Dv: eupneas / B D: eupnoeas
 A Dv: eupnea's / B D: eupnoea's
- 
+
 # eupneic (level 80)
 A Dv: eupneic / B D: eupnoeic
 
@@ -12249,7 +12249,7 @@ A C Dv: hematuria / B D: haematuria
 A C Dv: hematurias / B D: haematurias
 A C Dv: hematuria's / B D: haematuria's
 
-# heme (level ??)
+# heme (level 60)
 A Dv: heme / B D: haem
 
 # hemerythrin (level 80)
@@ -12679,7 +12679,7 @@ A B: homeomerous / Bv: homoeomerous
 
 # homeomery (level 80)
 A B: homeomery / Bv: homoeomery
-A B homeomeries / Bv: homoeomeries
+A B: homeomeries / Bv: homoeomeries
 
 # homeomorph (level 80)
 A B: homeomorph / Bv: homoeomorph
@@ -12818,7 +12818,7 @@ A Z: homogenizer / B: homogeniser
 A Z: homogenizers / B: homogenisers
 A Z: homogenizer's / B: homogeniser's
 
-# homolog (level ??)
+# homolog (level 70)
 A B: homologue / Av: homolog
 A B: homologues / Av: homologs
 A B: homologue's / Av: homolog's
@@ -12855,8 +12855,6 @@ A Cv DV: honorabilities / B C D: honourabilities
 A Cv DV: honorability's / B C D: honourability's
 
 # honorable <verified> (level 35)
-A Cv DV: Honorable / B C D: Honourable
-A Cv DV: Honorable's / B C D: Honourable's
 A Cv DV: honorable / B C D: honourable
 A Cv DV: honorabler / B C D: honourabler
 A Cv DV: honorables / B C D: honourables
@@ -13268,9 +13266,9 @@ A Dv: hyperesthete / B D: hyperaesthete
 A Dv: hyperesthete's / B D: hyperaesthete's
 
 # hyperesthetic (level 80)
-Av: hyperesthetic / A B: hyperaesthetic
-Av: hyperestheticer / A B: hyperaestheticer
-Av: hyperestheticest / A B: hyperaestheticest
+A Dv: hyperesthetic / B D: hyperaesthetic
+A Dv: hyperestheticer / B D: hyperaestheticer
+A Dv: hyperestheticest / B D: hyperaestheticest
 
 # hyperglycemic (level 70)
 A Dv: hyperglycemic / B D: hyperglycaemic
@@ -15390,7 +15388,7 @@ A Z: lichenized / B: lichenised
 A Z: lichenizing / B: lichenising
 A Z: lichenizes / B: lichenises
 
-# licorice (level ??)
+# licorice (level 35)
 A C D: licorice / B Dv: liquorice
 A C D: licorice's / B Dv: liquorice's
 
@@ -15645,7 +15643,7 @@ _: lodestone / _V: loadstone
 _: lodestones / _V: loadstones
 _: lodestone's / _V: loadstone's
 
-# lodgment (level ??)
+# lodgment (level 70)
 A Bv: lodgment / B Av: lodgement
 A Bv: lodgments / B Av: lodgements
 A Bv: lodgment's / B Av: lodgement's
@@ -19692,7 +19690,7 @@ A Z: palatizes / B: palatises
 # paleanthropic (level 80)
 A Dv: paleanthropic / B D: palaeanthropic
 
-# palearctic (level 70)
+# Palearctic (level 70)
 A C Dv: Palearctic / B D: Palaearctic
 
 # paleencephalon (level 95)
@@ -26244,11 +26242,13 @@ A C DV: skepticism's / B Cv D: scepticism's
 A Z: skepticize / B: skepticise
 A Z: skepticizes / B: skepticises
 
-# skillful (level ??)
+# skillful (level 35)
 A DV: skillful / B D: skilful
+
+# skillfully (level 40)
 A DV: skillfully / B D: skilfully
 
-# skillfulness (level ??)
+# skillfulness (level 60)
 A DV: skillfulness / B D: skilfulness
 A DV: skillfulness's / B D: skilfulness's
 

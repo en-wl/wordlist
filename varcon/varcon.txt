@@ -2337,11 +2337,11 @@ A Z: barbarizing / B: barbarising
 A Z: barbarizes / B: barbarises
 
 # barbecue <verified> (level 35)
-A B C: barbecue / AV Bv Cv: barbeque
-A B C: barbecued / AV Bv Cv: barbequed
-A B C: barbecuing / AV Bv Cv: barbequing
-A B C: barbecues / AV Bv Cv: barbeques
-A B C: barbecue's / AV Bv Cv: barbeque's
+A B: barbecue / AV Bv: barbeque
+A B: barbecued / AV Bv: barbequed
+A B: barbecuing / AV Bv: barbequing
+A B: barbecues / AV Bv: barbeques
+A B: barbecue's / AV Bv: barbeque's
 
 # barcarole (level 60)
 _: barcarole / _V: barcarolle
@@ -3005,7 +3005,7 @@ A Z: burglarizing / B: burglarising
 A Z: burglarizes / B: burglarises
 
 # burka (level 50)
-A B Dv: burka / B. D: burqa / BV: burkha 
+A B Dv: burka / B. D: burqa / BV: burkha
 A B Dv: burkas / B. D: burqas / BV: burkhas
 A B Dv: burka's / B. D: burqa's / BV: burkha's
 
@@ -3776,15 +3776,15 @@ A Dv: Cenis's / B D: Caenis's
 A Dv: cenobe / B D: coenobe
 
 # cenobite <verified> (level 60)
-A Bv C Dv: cenobite / B Cv D: coenobite
-A Bv C Dv: cenobites / B Cv D: coenobites
-A Bv C Dv: cenobite's / B Cv D: coenobite's
+A Bv C: cenobite / B Cv: coenobite
+A Bv C: cenobites / B Cv: coenobites
+A Bv C: cenobite's / B Cv: coenobite's
 
 # cenobitic <verified> (level 60)
-A Bv C Dv: cenobitic / B Cv D: coenobitic
+A Bv C: cenobitic / B Cv: coenobitic
 
 # cenobitical <verified> (level 70)
-A Bv C Dv: cenobitical / B Cv D: coenobitical
+A Bv C: cenobitical / B Cv: coenobitical
 
 # cenobitism (level 80)
 A Dv: cenobitism / B D: coenobitism
@@ -6004,9 +6004,9 @@ A Z: dechristianizing / B: dechristianising
 A Z: dechristianizes / B: dechristianises
 
 # decigram (level 70)
-A C B: decigram / Bv: decigramme
-A C B: decigrams / Bv: decigrammes
-A C B: decigram's / Bv: decigramme's
+A B C: decigram / Bv: decigramme
+A B C: decigrams / Bv: decigrammes
+A B C: decigram's / Bv: decigramme's
 
 # deciliter <verified> (level 60)
 A: deciliter / B: decilitre
@@ -9136,7 +9136,7 @@ A B C D: aesthetics / Av Cv Dv: esthetics
 A: esthetical / B: aesthetical
 
 # esthetically <verified> (level 20)
-A B C D: aesthetically / A-: esthetically
+A B: aesthetically / A-: esthetically
 
 # esthetician <verified> (level 70)
 A Cv: esthetician / B C: aesthetician
@@ -15644,9 +15644,9 @@ _: lodestones / _V: loadstones
 _: lodestone's / _V: loadstone's
 
 # lodgment (level 70)
-A Bv: lodgment / B Av: lodgement
-A Bv: lodgments / B Av: lodgements
-A Bv: lodgment's / B Av: lodgement's
+A Bv: lodgment / Av B: lodgement
+A Bv: lodgments / Av B: lodgements
+A Bv: lodgment's / Av B: lodgement's
 
 # lodicule (level 70)
 A: lodicule / B: lodiculae

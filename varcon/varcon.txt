@@ -10220,7 +10220,7 @@ A Cv DV: flavorlessest / B C D: flavourlessest
 A Cv DV: flavorlesses / B C D: flavourlesses
 
 # flavorous (level 70)
-A B: flavorous / Bx: flavourous
+A B: flavorous / B-: flavourous
 
 # flavorsome <verified> (level 55)
 A Cv DV: flavorsome / B C D: flavoursome

@@ -14,9 +14,10 @@ foreach my $f (qw(working/variant_1.lst working/variant_2.lst
                   working/variant_3.lst
                   working/british_variant_1.lst working/british_variant_2.lst
                   working/canadian_variant_1.lst working/canadian_variant_2.lst
+                  working/australian_variant_1.lst working/australian_variant_2.lst
                   working/american.lst
                   working/british.lst working/british_z.lst
-                  working/canadian.lst))
+                  working/canadian.lst working/australian.lst))
 {
     open F, $f or die "Unable to open $f\n";
     while (<F>) {

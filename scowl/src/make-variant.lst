@@ -44,11 +44,15 @@ cat r/varcon/canadian-v?.lst \
   | src/filter | sort -u \
   > r/varcon/variant-can.lst
 
-cat r/varcon/british-v?.lst r/varcon/british_z-v?.lst r/varcon/canadian-v?.lst \
+cat r/varcon/australian-v?.lst \
+  | src/filter | sort -u \
+  > r/varcon/variant-can.lst
+
+cat r/varcon/british-v?.lst r/varcon/british_z-v?.lst r/varcon/canadian-v?.lst r/varcon/australian-v?.lst \
   | src/filter | sort -u \
   > r/varcon/variant-nonamer.lst
 
-for sp in american british british_z canadian other; do
+for sp in american british british_z canadian australian other; do
   for vl in 0 1 2; do
     touch r/varcon/$sp-v$vl.lst
   done
@@ -64,7 +68,7 @@ comm -12 r/varcon/british.lst r/varcon/british_z.lst \
 
 for l in 0 1 2 3; do
 
-  cat r/varcon/british-v$l.lst r/varcon/british_z-v$l.lst r/varcon/canadian-v$l.lst \
+  cat r/varcon/british-v$l.lst r/varcon/british_z-v$l.lst r/varcon/canadian-v$l.lst r/varcon/australian-v$l.lst \
     | src/filter | sort -u \
     > r/varcon/variant-nonamer-v$l.lst
 
@@ -121,6 +125,9 @@ cat r/varcon/british.lst r/varcon/british-v0.lst\
 
 cat r/varcon/canadian.lst r/varcon/canadian-v0.lst\
   | sort -u > r/varcon/canadian+.lst
+
+cat r/varcon/australian.lst r/varcon/australian-v0.lst\
+  | sort -u > r/varcon/australian+.lst
 
 #
 # Create the initial variant lists
@@ -241,14 +248,30 @@ start \
   | rem r/varcon/canadian.lst\
   > working/canadian_variant_2.lst
 
+start \
+  | add working/variant_1.lst\
+  | rem r/varcon/all-amer.lst\
+  | add r/varcon/australian-v0.lst\
+  | add r/varcon/australian-v1.lst\
+  | rem r/varcon/australian.lst\
+  > working/australian_variant_1.lst
+
+start \
+  | add working/variant_2.lst\
+  | rem r/varcon/all-amer.lst\
+  | add r/varcon/australian-v2.lst\
+  | rem working/australian_variant_1.lst\
+  | rem r/varcon/australian.lst\
+  > working/australian_variant_2.lst
+
 #
 # Now fix up american/british/canadian lists to make sure we don't
 # leave anything out
 # 
 
 cat working/variant_{1,2,3}.lst \
-    working/{british,canadian}_variant_{1,2}.lst \
-    r/varcon/{american,british+,british_z,canadian+}.lst \
+    working/{british,canadian,australian}_variant_{1,2}.lst \
+    r/varcon/{american,british+,british_z,canadian+,australian+}.lst \
   | sort -u > working/variant-somewhere.lst
 
 comm -12 working/never-variant.lst working/variant-somewhere.lst \
@@ -262,3 +285,5 @@ cp r/varcon/british+.lst working/british.lst
 cp r/varcon/british_z.lst working/british_z.lst
 
 cp r/varcon/canadian+.lst working/canadian.lst
+
+cp r/varcon/australian+.lst working/australian.lst

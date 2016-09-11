@@ -20,7 +20,7 @@ while (<>) {
         }
         my $sps = join (' ', @sps);
         print STDERR "BAD LINE (m: @missing): $_\n" if @missing;
-        print STDERR "BAD LINE (?: @sps): $_\n" unless $sps eq '_' || $sps eq 'A B C Z';
+        print STDERR "BAD LINE (?: @sps): $_\n" unless $sps eq '_' || $sps eq 'A B C D Z';
         %d = varcon::flatten(%d);
         print varcon::format(\%d) unless $n{fragile};
         print $n{orig_data} if $n{fragile};

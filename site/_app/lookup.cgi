@@ -50,7 +50,7 @@ if ($words ne '') {
 print $q->header();
 
 my $dicts = '';
-foreach my $d (qw(en_US en_GB-ise en_GB-ize en_CA en_US-large en_GB-large en_CA-large)) {
+foreach my $d (qw(en_US en_GB-ise en_GB-ize en_CA en_AU en_US-large en_GB-large en_CA-large en_AU-large)) {
     my $sel = $d eq $dict ? " selected" : "";
     $dicts .= "<option value=\"$d\" $sel>$d</option>\n";
 }

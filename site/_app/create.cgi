@@ -75,8 +75,9 @@ my $sizes_html = make_option_list("max_size",$param{max_size},[sort keys %sizes]
 my %spellings = ("US" => "American",
                  "GBs" => "British (-ise spelling)",
                  "GBz" => "British (-ize/OED spelling)",
-                 "CA" => "Canadian");
-my @spellings = qw(US GBs GBz CA);
+                 "CA" => "Canadian",
+                 "AU" => "Australian");
+my @spellings = qw(US GBs GBz CA AU);
 set_param_from_form('spelling', \@spellings, 1);
 my $spellings_html = make_check_list("spelling",$param{spelling},\@spellings,\%spellings);
 

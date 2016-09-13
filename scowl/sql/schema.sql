@@ -11,7 +11,7 @@ create table words (
 create table info (
   iid integer primary key,
   spid varchar(5) not null,
-  US boolean not null, GBs boolean not null, GBz boolean not null, CA boolean not null, SP boolean not null,
+  US boolean not null, GBs boolean not null, GBz boolean not null, CA boolean not null, AU boolean not null, SP boolean not null,
   variant int default -1 not null,
   category varchar(14) not null,
   size int not null,

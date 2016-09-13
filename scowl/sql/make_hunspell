@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use utf8;
+
+use lib 'sql/';
+use make_list qw(%standard get_wordlist make_hunspell_dict);
+
+use File::Basename qw(fileparse);
+use File::Copy;
+
+my $dict = $ARGV[0] or die "Usage: make_hunspell <dict> <destdir>";
+my $dest = $ARGV[1] or die "Usage: make_hunspell <dict> <destdir>";
+
+my $parms = $standard{$dict} or die "Unknown dict: $dict\n";
+
+my $words = get_wordlist("scowl.db", $parms);
+
+my $path = make_hunspell_dict($dict, $parms, $words);
+
+my($filename, $dir) = fileparse $path;
+
+copy $path, $dest or die "Copy failed: $!";
+
+print "$filename\n";
+
+
+

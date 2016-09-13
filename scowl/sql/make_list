@@ -5,7 +5,7 @@ use warnings;
 
 use utf8;
 
-use open ':std' => ':encoding(iso-8859-1)';
+use open ':std' => ':encoding(utf-8)';
 
 use lib 'sql/';
 use make_list qw(%standard get_wordlist);

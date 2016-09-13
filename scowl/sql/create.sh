@@ -1,5 +1,6 @@
 #!/bin/sh
 
+set -x
 set -e 
 
 if [ -e scowl.db ]; then

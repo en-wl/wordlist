@@ -1,0 +1,57 @@
+#!/bin/sh
+
+set -e
+set -x
+
+LC_ALL=C.UTF-8
+
+make -C speller hunspell
+
+DIR=$(mktemp -d sqltest.XXXXXX)
+mkdir $DIR/sql
+mkdir $DIR/sh
+
+SPs="en_US en_GB-ise en_GB-ize en_CA en_AU en_US-large en_GB-large en_CA-large en_AU-large"
+
+#
+# Unpack sh/perl script generated wordlist and dicts
+#
+(
+  cd $DIR/sh
+  for sp in $SPs
+  do
+    unzip -a -n ../../speller/hunspell/wordlist-$sp.zip
+    unzip -n ../../speller/hunspell/hunspell-$sp.zip
+  done
+)
+
+#
+# Create wordlists from sqlite database
+# 
+for sp in $SPs
+do
+  sql/make_list $sp > $DIR/sql/$sp.txt
+done
+
+#
+# Create hunspell dicts from sqlite database
+#
+for sp in $SPs
+do
+  sql/make_hunspell $sp $DIR/sql
+  ( cd $DIR/sql && unzip -n hunspell-$sp.zip )
+done
+
+#
+# Now compare the results
+#
+for sp in $SPs
+do
+  cmp $DIR/sh/$sp.txt $DIR/sql/$sp.txt
+  cmp $DIR/sh/$sp.dic $DIR/sql/$sp.dic
+  cmp $DIR/sh/$sp.aff $DIR/sql/$sp.aff
+done
+
+rm -r $DIR
+
+echo "ALL TESTS PASS"

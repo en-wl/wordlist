@@ -26,7 +26,7 @@ create table dict_info (
   did integer primary key,
   dict text not null,
   onum int not null,
-  US boolean not null, GBs boolean not null, GBz boolean not null, CA boolean not null,
+  US boolean not null, GBs boolean not null, GBz boolean not null, CA boolean not null, AU boolean not null,
   max_variant int not null, max_size int not null
 );
 

@@ -11,15 +11,17 @@ use Exporter ();
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(@standard %standard make_query get_wordlist make_hunspell_dict dict_name dump_parms copyright);
 
-our @standard = qw(en_US en_GB-ise en_GB-ize en_CA en_US-large en_GB-large en_CA-large);
+our @standard = qw(en_US en_GB-ise en_GB-ize en_CA en_AU en_US-large en_GB-large en_CA-large en_AU-large);
 our %standard = (
     'en_US' =>        {max_size => 60, spelling => ['US'], max_variant => 0, diacritic => 'strip'},
     'en_GB-ise' =>    {max_size => 60, spelling => ['GBs'], max_variant => 0, diacritic => 'strip'},
     'en_GB-ize' =>    {max_size => 60, spelling => ['GBz'], max_variant => 0, diacritic => 'strip'},
     'en_CA' =>        {max_size => 60, spelling => ['CA'], max_variant => 0, diacritic => 'strip'},
+    'en_AU' =>        {max_size => 60, spelling => ['AU'], max_variant => 0, diacritic => 'strip'},
     'en_US-large' =>  {max_size => 70, spelling => ['US'], max_variant => 1, diacritic => 'both'},
     'en_GB-large' =>  {max_size => 70, spelling => ['GBs','GBz'], max_variant => 1, diacritic => 'both'},
-    'en_CA-large' =>  {max_size => 70, spelling => ['CA'], max_variant => 1, diacritic => 'both'});
+    'en_CA-large' =>  {max_size => 70, spelling => ['CA'], max_variant => 1, diacritic => 'both'},
+    'en_AU-large' =>  {max_size => 70, spelling => ['AU'], max_variant => 1, diacritic => 'both'});
 
 sub dump_parms ( $;$ ) {
     my ($parms,$prefix) = (@_);
@@ -64,7 +66,7 @@ sub make_query( $ ) {
     push @parms, $parms->{max_variant};
     my @spellings;
     foreach (@{$parms->{spelling}}) {
-        die "Unknown Spelling $_" unless $_ eq 'US' or $_ eq 'GBs' or $_ eq 'GBz' or $_ eq 'CA';
+        die "Unknown Spelling $_" unless $_ eq 'US' or $_ eq 'GBs' or $_ eq 'GBz' or $_ eq 'CA' or $_ eq 'AU';
         push @spellings, $_;
     }
     if (defined $parms->{special}) {

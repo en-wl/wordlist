@@ -92,7 +92,7 @@ then
   doit en_US-large "mk-list -v1 --accents=both en_US 70"
   doit en_CA-large "mk-list -v1 --accents=both en_CA 70"
   doit en_GB-large "mk-list -v1 --accents=both en_GB-ize en_GB-ise 70"
-  doit en_CA-large "mk-list -v1 --accents=both en_AU 70"
+  doit en_AU-large "mk-list -v1 --accents=both en_AU 70"
 
   sh $SPELLER/README_en.txt.sh > hunspell/README
 

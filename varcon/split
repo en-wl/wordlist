@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use IO::Handle;
 
-use varcon qw(%map);
+use varcon qw(%map $NUM_SP);
 
 $varcon::MAX_VARIANT_LEVEL = 3;
 
@@ -55,13 +55,13 @@ foreach my $sp (sort keys %lists_pre) {
 sub in_all_sps($$$$) {
     my ($sp,$vl,$cat,$word) = @_;
     return 0 if $sp eq '_' || $vl ne ' ';
-    return defined $sp_tally{$cat}{$word} && $sp_tally{$cat}{$word} == 4;
+    return defined $sp_tally{$cat}{$word} && $sp_tally{$cat}{$word} == $NUM_SP;
 }
 
 foreach my $cat ('normal', 'uncommon') {
     foreach my $word (sort keys %{$sp_tally{$cat}}) {
         next unless (defined $sp_tally{$cat}{$word} 
-                     && $sp_tally{$cat}{$word} == 4);
+                     && $sp_tally{$cat}{$word} == $NUM_SP);
         push @{$lists{"Q- -$cat"}}, $word;
     }
 }

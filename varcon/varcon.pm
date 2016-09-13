@@ -9,9 +9,10 @@ use Carp;
 
 use Exporter ();
 our @ISA = qw(Exporter);
-our @EXPORT_OK = qw(readline flatten get_words filter get_cluster %map MAX_VARIANT_LEVEL);
+our @EXPORT_OK = qw(readline flatten get_words filter get_cluster %map $MAX_VARIANT_LEVEL $NUM_SP);
 
 our %map = qw(A american B british Z british_z C canadian D australian _ other);
+our $NUM_SP = 5; # does not include _ special spelling
 our %vmap = ('' =>  -1, '.' => 0, 'v' => 1, 'V' => 2, '-' => 3, 'x' => 8,
                         '0' => 0, '1' => 1, '2' => 2, '3' => 3, '8' => 8);
 our %rmap = ('' => '', 

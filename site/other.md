@@ -16,7 +16,7 @@ to be 100% accurate.
 <a href="http://downloads.sourceforge.net/wordlist/agid-2016.01.19.tar.gz">tar.gz</a>, 
 <a href="http://downloads.sourceforge.net/wordlist/agid-2016.01.19.zip">zip</a>
 (2016.01.19) 
-[source](http://github.com/kevina/wordlist)        
+[source](http://github.com/en-wl/wordlist)        
 
 ## Unofficial Jargon File Word Lists
 
@@ -25,7 +25,7 @@ from the [Jargon file](http://en.wikipedia.org/wiki/Jargon_File).
 
 <a href="/jargon-wl-readme">readme</a>,
 <a href="http://downloads.sourceforge.net/wordlist/jargon-wl-4.2.0-1.tar.gz">tar.gz</a>,
-[source](http://github.com/kevina/wordlist)        
+[source](http://github.com/en-wl/wordlist)        
 
 ## Part Of Speech Database
 
@@ -35,7 +35,7 @@ Part-of-Speech II" and the WordNet database.
 <a href="/pos-readme">readme</a>,
 <a href="http://downloads.sourceforge.net/wordlist/pos-1.tar.gz">tar.gz</a>,
 <a href="http://downloads.sourceforge.net/wordlist/pos-1.zip">zip</a>,
-[source](http://github.com/kevina/wordlist)
+[source](http://github.com/en-wl/wordlist)
 
 _Please note that this is not a very high quality source.  For common
 words the [2of12id.txt](/alt12dicts-infl-readme) file from the
@@ -63,4 +63,4 @@ are no longer directly used by SCOWL._
 * [1990 Census report names file](http://www.census.gov/topics/population/genealogy/data/1990_census/1990_census_namefiles.html)
 
 You can also find the source of these lists in the
-[git repository](https://github.com/kevina/wordlist/tree/master/other).
+[git repository](https://github.com/en-wl/wordlist/tree/master/other).

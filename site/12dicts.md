@@ -44,7 +44,7 @@ the information in a different way.
 <a href="http://downloads.sourceforge.net/wordlist/alt12dicts-2016.06.26.tar.gz">tar.gz</a>,
 <a href="http://downloads.sourceforge.net/wordlist/alt12dicts-2016.06.26.zip">zip</a>
 (2016.06.26) 
-[source](http://github.com/kevina/wordlist)        
+[source](http://github.com/en-wl/wordlist)        
 
 
 

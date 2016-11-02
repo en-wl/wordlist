@@ -3434,6 +3434,11 @@ A Z: carbonizer / B: carboniser
 A Z: carbonizers / B: carbonisers
 A Z: carbonizer's / B: carboniser's
 
+# carburetor (level XX)
+A: carburetor / B D: carburettor / Bv DV: carburetter
+A: carburetors / B D: carburettors / Bv DV: carburetters
+A: carburetor's / B D: carburettor's / Bv DV: carburetter's
+
 # carburization (level 70)
 A Z: carburization / B: carburisation
 A Z: carburizations / B: carburisations
@@ -9073,25 +9078,26 @@ A Z: Eskimoizeds / B: Eskimoiseds
 A Z: Eskimoized's / B: Eskimoised's
 
 # esop (level 95)
-A: esop / B: aesop
+A Dv: esop / B D: aesop
 
 # esophagal (level 95)
-A: esophagal / B: oesophagal
+A Dv: esophagal / B D: oesophagal
 
 # esophagean (level 95)
-A: esophagean / B: oesophagean
+A Dv: esophagean / B D: oesophagean
 
 # esophagism (level 95)
-A: esophagism / B: oesophagism
+A Dv: esophagism / B D: oesophagism
 
 # esophagismus (level 95)
-A: esophagismus / B: oesophagismus
+A Dv: esophagismus / B D: oesophagismus
 
 # esophagitis (level 70)
-A: esophagitis / B: oesophagitis
+A Dv: esophagitis / B D: oesophagitis
 
 # esophagus <verified> (level 35)
-A C: esophagi / Av Cv: esophaguses / B: oesophagi / Bv: oesophaguses
+A Dv: esophagus / B D: oesophagus
+A C Dv: esophagi / Av Cv: esophaguses / B D: oesophagi / Bv: oesophaguses
 
 # Essenize (level 95)
 A Z: Essenize / B: Essenise
@@ -13985,17 +13991,17 @@ A Z: inorganizations / B: inorganisations
 A Z: inorganized / B: inorganised
 
 # inquire <verified> (level 20)
-A B. C D: inquire / B Cv Dv: enquire
-A B. C D: inquired / B Cv Dv: enquired
-A B. C D: inquiring / B Cv Dv: enquiring
-A B. C D: inquires / B Cv Dv: enquires
+A B. C D: inquire / B Cv D.: enquire
+A B. C D: inquired / B Cv D.: enquired
+A B. C D: inquiring / B Cv D.: enquiring
+A B. C D: inquires / B Cv D.: enquires
 ## Enquire is more common in British English, but inquire may still be
 ## used when meaning "make a formal investigation" -- Ox
 
 # inquiry <verified> (level 20)
-A B. C D: inquiry / B Cv Dv: enquiry
-A B. C D: inquiries / B Cv Dv: enquiries
-A B. C D: inquiry's / B Cv Dv: enquiry's
+A B. C D: inquiry / B Cv D.: enquiry
+A B. C D: inquiries / B Cv D.: enquiries
+A B. C D: inquiry's / B Cv D.: enquiry's
 ## See note for inquire 
 
 # insignia (level 35)
@@ -15066,12 +15072,9 @@ A: Laothoe's / B: Laothoae's
 A: lapeled / B: lapelled
 
 # lasagna (level 50)
-_: lasagna / _v: lasagne | :1
-_: lasagnas / _v: lasagnes | :1
-_: lasagna's / _v: lasagne's | :1
-_: lasagna | :2
-_: lasagnas | :2
-_: lasagna's | :2
+A Bv: lasagna / B: lasagne
+A Bv: lasagnas / B: lasagnes
+A Bv: lasagna's / B: lasagne's
 
 # laster (level 80)
 A: laster / B: lastre
@@ -15129,6 +15132,9 @@ _: lavalier_microphone's / _V: lavaliere_microphone's
 
 # lavolted (level 95)
 A: lavolted / B: lavoltaed
+
+# leaped (level XX)
+A Bv: leaped / Av B: leapt
 
 # learned <verified> (level 10)
 A B. Z: learned / B Zv: learnt
@@ -16270,6 +16276,9 @@ A Z: maternalizes / B: maternalises
 # maters (level 55)
 A: maters / B: matres
 
+# math (level XX)
+A C: math / B: maths
+
 # mathematicize (level 80)
 A Z: mathematicize / B: mathematicise
 A Z: mathematicized / B: mathematicised
@@ -17405,6 +17414,11 @@ A DV: molt's / B D: moult's
 A DV: molted / B D: moulted
 A DV: molting / B D: moulting
 A DV: molts / B D: moults
+
+# mom (level XX)
+A C: mom / B: mum
+A C: moms / B: mums
+A C: mom's / B: mum's
 
 # mommy (level 40)
 _: mommy / _-: mommie
@@ -22971,10 +22985,10 @@ A Z: professionizes / B: professionises
 A C D: program / B Dv: programme | <N>
 A C D: programs / B Dv: programmes | <N>
 A C D: program's / B Dv: programme's | <N>
-A Av C: program / AV B: programme | <V>
+A Av B C: program / AV BV: programme | <V>
 A AV B: programmed / Av: programed | <V>
 A AV B: programming / Av: programing | <V>
-A Av C: programs / AV B: programmes | <V>
+A Av B C: programs / AV BV: programmes | <V>
 A Av B: program | computer program
 A B: programmed / Av: programed | computer program
 A B: programming / Av: programing | computer program
@@ -23590,9 +23604,9 @@ A Z: racialize / B: racialise
 A Z: racializes / B: racialises
 
 # racket <verified> (level 20)
-A B Cv: racket / Av Bv C: racquet | :1
-A B Cv: rackets / Av Bv C: racquets | :1
-A B Cv: racket's / Av Bv C: racquet's | :1
+A B Cv Dv: racket / Av Bv C D: racquet | :1
+A B Cv Dv: rackets / Av Bv C D: racquets | :1
+A B Cv Dv: racket's / Av Bv C D: racquet's | :1
 A B: racket | :2
 A B: rackets | :2
 A B: racket's | :2

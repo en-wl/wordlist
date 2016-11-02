@@ -22985,13 +22985,15 @@ A Z: professionizes / B: professionises
 A C D: program / B Dv: programme | <N>
 A C D: programs / B Dv: programmes | <N>
 A C D: program's / B Dv: programme's | <N>
-A B C: program / AV Bv: programme | <V>
-A B C: programmed / Av: programed | <V>
-A B C: programming / Av: programing | <V>
-A B C: programs / AV Bv: programmes | <V>
-A B C: program | computer program
-A B C: programs | computer program
-A B C: program's | computer program
+A Av B C: program / AV BV: programme | <V>
+A AV B: programmed / Av: programed | <V>
+A AV B: programming / Av: programing | <V>
+A Av B C: programs / AV BV: programmes | <V>
+A Av B: program | computer program
+A B: programmed / Av: programed | computer program
+A B: programming / Av: programing | computer program
+A Av B: programs | computer program
+A Av B: program's | computer program
 
 # programmer <verified> (level 10)
 A B: programmer / AV: programer

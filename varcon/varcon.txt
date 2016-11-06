@@ -17416,9 +17416,10 @@ A DV: molting / B D: moulting
 A DV: molts / B D: moults
 
 # mom (level XX)
-A C: mom / B: mum
-A C: moms / B: mums
-A C: mom's / B: mum's
+A C: mom / B: mum | mother
+A C: moms / B: mums | mother
+A C: mom's / B: mum's | mother
+A B: mum | silent
 
 # mommy (level 40)
 _: mommy / _-: mommie

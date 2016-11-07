@@ -44,6 +44,16 @@ comm -12 working/words.$1 working/australian_variant_1.lst   \
 comm -12 working/words.$1 working/australian_variant_2.lst   \
   > working/australian_variant_2-all.$1.pre
 
+#
+# Hack to get australian only words in
+#
+if [ $1 -eq 35 ]
+then
+  mv working/australian-all.$1.pre working/australian-all.$1.pre.pre
+  cat r/special/australian.35 | src/filter \
+    | cat - working/australian-all.$1.pre.pre | sort -u > working/australian-all.$1.pre
+fi
+
 cat working/*-all.$1.pre         \
   | sort | uniq                  \
   | comm -13 - working/words.$1  \

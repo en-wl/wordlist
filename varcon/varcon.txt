@@ -3434,7 +3434,7 @@ A Z: carbonizer / B: carboniser
 A Z: carbonizers / B: carbonisers
 A Z: carbonizer's / B: carboniser's
 
-# carburetor (level XX)
+# carburetor (level 35)
 A: carburetor / B D: carburettor / Bv DV: carburetter
 A: carburetors / B D: carburettors / Bv DV: carburetters
 A: carburetor's / B D: carburettor's / Bv DV: carburetter's
@@ -15133,7 +15133,7 @@ _: lavalier_microphone's / _V: lavaliere_microphone's
 # lavolted (level 95)
 A: lavolted / B: lavoltaed
 
-# leaped (level XX)
+# leaped (level 35)
 A Bv: leaped / Av B: leapt
 
 # learned <verified> (level 10)
@@ -16276,7 +16276,7 @@ A Z: maternalizes / B: maternalises
 # maters (level 55)
 A: maters / B: matres
 
-# math (level XX)
+# math (level 35)
 A C: math / B: maths
 
 # mathematicize (level 80)
@@ -17415,7 +17415,7 @@ A DV: molted / B D: moulted
 A DV: molting / B D: moulting
 A DV: molts / B D: moults
 
-# mom (level XX)
+# mom (level 35)
 A C: mom / B: mum | mother
 A C: moms / B: mums | mother
 A C: mom's / B: mum's | mother

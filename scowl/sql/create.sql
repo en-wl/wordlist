@@ -38,7 +38,7 @@ create temp table step1 as
 create temp table step2 as
   select word,max(US) US, max(GBs) GBs, max(GBz) GBz, max(CA) CA, max(AU) AU, max(SP) SP, variant,category,size
     from step1
-  group by word,variant,category;
+  group by word,variant,category,size;
 
 create temp table step3 as
   select word,

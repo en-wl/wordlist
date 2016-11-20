@@ -1,6 +1,6 @@
 Variant Conversion Info (VarCon)
 
-Version 2016.06.26
+Version 2016.11.20
 
 Copyright 2000-2016 by Kevin Atkinson (kevina@gnu.org) and Benjamin
 Titze (btitze@protonmail.ch).
@@ -254,7 +254,7 @@ As well as several online dictionaries:
   Cambridge (ESL): http://dictionary.cambridge.org/
 
 In version 5.0 a massive effort to correct the numerous errors in
-VarCon was done.  The primary sources used for verification where:
+VarCon was done.  The primary sources used for verification were:
 
   Marriam-Webster: http://www.m-w.com/
   Free version of Oxford Dictionaries Online: 
@@ -281,7 +281,7 @@ but only to perform some initial verification, in the end I rechecked
 his data using the dictionaries above.  (However, his data is, by far,
 more accurate than Tysto's)
     
-In Version ??? Benjamin Titze added support for Australian English.
+In Version 2016.11.20 Benjamin Titze added support for Australian English.
 The primary sources for this addition were:
 
   The Macquarie Dictionary: https://www.macquariedictionary.com.au/
@@ -297,6 +297,13 @@ The primary sources for this addition were:
 
 
 CHANGELOG:
+
+From 2016.06.26 to 2016.11.20
+
+   - New Australian spelling category thanks to the work of Benjamin
+     Titze.
+
+   - Various other fixes.
 
 From 2016.01.19 to 2016.06.26
 

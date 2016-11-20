@@ -59,8 +59,8 @@ only found in the large dictionary for American English:
   incretion jalapeño's kelpie kishkes neuroglias pietisms pullulation
   stemwinder stenoses syce thalassic zees
 
-The en_US and en_CA are the official dictionaries for Hunspell.  The
-en_GB and large dictionaries are made available on an experimental
+The en_US, en_CA and en_AU are the official dictionaries for Hunspell.
+The en_GB and large dictionaries are made available on an experimental
 basis.  If you find them useful please send me a quick email at
 kevina@gnu.org.
 
@@ -80,7 +80,12 @@ kevina@gnu.org or to the wordlist-devel mailing lists
 have specific issues with any of these dictionaries please file a bug
 report at https://github.com/kevina/wordlist/issues.
 
-IMPORTANT CHANGES INTRODUCED IN 2015.04.24:
+IMPORTANT CHANGES INTRODUCED In 2016.11.20:
+
+New Australian dictionaries thanks to the work of Benjamin Titze
+(btitze@protonmail.ch).
+
+IMPORTANT CHANGES INTRODUCED IN 2016.04.24:
 
 The dictionaries are now in UTF-8 format instead of ISO-8859-1.  This
 was required to handle smart quotes correctly.

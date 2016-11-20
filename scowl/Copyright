@@ -1,7 +1,7 @@
-The collective work is Copyright 2000-2015 by Kevin Atkinson as well
+The collective work is Copyright 2000-2016 by Kevin Atkinson as well
 as any of the copyrights mentioned below:
 
-  Copyright 2000-2015 by Kevin Atkinson
+  Copyright 2000-2016 by Kevin Atkinson
 
   Permission to use, copy, modify, distribute and sell these word
   lists, the associated scripts, the output created from the scripts,
@@ -189,11 +189,30 @@ found anywhere else.
 
 Accent information was taken from UKACD.
 
-My VARCON package was used to create the American, British, and
-Canadian word list. 
+The VarCon package was used to create the American, British, Canadian,
+and Australian word list.  It is under the following copyright:
 
-Since the original word lists used in the VARCON package came
-from the Ispell distribution they are under the Ispell copyright:
+  Copyright 2000-2016 by Kevin Atkinson
+
+  Permission to use, copy, modify, distribute and sell this array, the
+  associated software, and its documentation for any purpose is hereby
+  granted without fee, provided that the above copyright notice appears
+  in all copies and that both that copyright notice and this permission
+  notice appear in supporting documentation. Kevin Atkinson makes no
+  representations about the suitability of this array for any
+  purpose. It is provided "as is" without express or implied warranty.
+
+  Copyright 2016 by Benjamin Titze
+
+  Permission to use, copy, modify, distribute and sell this array, the
+  associated software, and its documentation for any purpose is hereby
+  granted without fee, provided that the above copyright notice appears
+  in all copies and that both that copyright notice and this permission
+  notice appear in supporting documentation. Benjamin Titze makes no
+  representations about the suitability of this array for any
+  purpose. It is provided "as is" without express or implied warranty.
+
+  Since the original words lists come from the Ispell distribution:
 
   Copyright 1993, Geoff Kuenning, Granada Hills, CA
   All rights reserved.
@@ -216,15 +235,14 @@ from the Ispell distribution they are under the Ispell copyright:
      products derived from this software without specific prior
      written permission.
 
-  THIS SOFTWARE IS PROVIDED BY GEOFF KUENNING AND CONTRIBUTORS ``AS
-  IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-  FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL GEOFF
-  KUENNING OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-  POSSIBILITY OF SUCH DAMAGE.
+  THIS SOFTWARE IS PROVIDED BY GEOFF KUENNING AND CONTRIBUTORS ``AS IS'' AND
+  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED.  IN NO EVENT SHALL GEOFF KUENNING OR CONTRIBUTORS BE LIABLE
+  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+  OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  SUCH DAMAGE.

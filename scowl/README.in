@@ -27,10 +27,11 @@ Except for the special word lists the files follow the following
 naming convention:
   <spelling category>-<sub-category>.<size>
 Where the spelling category is one of
-  english, american, british, british_z, canadian, 
+  english, american, british, british_z, canadian, australian
   variant_1, variant_2, variant_3,
-  british_variant_1, british_variant_2,
+  british_variant_1, british_variant_2, 
   canadian_variant_1, canadian_variant_2,
+  australian_variant_1, australian_variant_2
 Sub-category is one of
   abbreviations, contractions, proper-names, upper, words
 And size is one of
@@ -54,21 +55,22 @@ word list.  If you rather see what files will be included, use the
 
 When manually combining the words lists the "english" spelling
 category should be used as well as one of "american", "british",
-"british_z" (british with ize spelling), or "canadian".  Great care
-has been taken so that only one spelling for any particular word
-is included in the main list (with some minor exceptions).  When two
-variants were considered equal I randomly picked one for inclusion in
-the main word list.  Unfortunately this means that my choice in how to
-spell a word may not match your choice.  If this is the case you can
-try including one of the "variant_1" spelling categories which
+"british_z" (british with ize spelling), "canadian" or "australian".
+Great care has been taken so that only one spelling for any particular
+word is included in the main list (with some minor exceptions).  When
+two variants were considered equal I randomly picked one for inclusion
+in the main word list.  Unfortunately this means that my choice in how
+to spell a word may not match your choice.  If this is the case you
+can try including one of the "variant_1" spelling categories which
 includes most variants which are considered almost equal.  The
 "variant_1" spelling category corresponds mostly to American variants,
-while the "british_variant_1" and "canadian_variant_1" are for British
-and Canadian variants, respectively.  The "variant_2" spelling
-categories include variants which are also generally considered
-acceptable, and "variant_3" contains variants which are seldom used
-and may not even be considered correct.  There is no
-"british_variant_3" or "canadian_variant_3" spelling category since
+while the "british_variant_1", "canadian_variant_1" and
+"australian_variant_1" are for British, Canadian and Australian
+variants, respectively.  The "variant_2" spelling categories include
+variants which are also generally considered acceptable, and
+"variant_3" contains variants which are seldom used and may not even
+be considered correct.  There is no "british_variant_3",
+"canadian_variant_3" or "australian_variant_3" spelling category since
 the distinction would be almost meaningless.
 
 The "abbreviation" category includes abbreviations and acronyms which
@@ -112,6 +114,13 @@ checking.
 Accents are present on certain words such as café in iso8859-1 format.
 
 CHANGES:
+
+From Version 2016.06.26 to 2016.11.20
+
+  New Australian spelling category thanks to the work of Benjamin
+  Titze (btitze@protonmail.ch)
+
+  Various new words.
 
 From Version 2016.01.19 to 2016.06.26
 

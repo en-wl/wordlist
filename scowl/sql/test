@@ -18,10 +18,15 @@ SPs="en_US en_GB-ise en_GB-ize en_CA en_AU en_US-large en_GB-large en_CA-large e
 #
 (
   cd $DIR/sh
+  if [ "$SCOWL_VERSION" ]; then
+    sufx="-$SCOWL_VERSION"
+  else
+    sufx=""
+  fi
   for sp in $SPs
   do
-    unzip -a -n ../../speller/hunspell/wordlist-$sp.zip
-    unzip -n ../../speller/hunspell/hunspell-$sp.zip
+    unzip -a -n ../../speller/hunspell/wordlist-$sp$sufx.zip
+    unzip -n ../../speller/hunspell/hunspell-$sp$sufx.zip
   done
 )
 

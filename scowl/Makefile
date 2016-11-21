@@ -234,5 +234,5 @@ scowl.db: final/*
 	sql/create.sh
 
 test: scowl.db
-	make -C speller clean hunspell
+	make -C speller hunspell
 	sql/test

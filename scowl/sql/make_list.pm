@@ -133,6 +133,7 @@ sub make_hunspell_dict ( $$$ ) {
     print F dump_parms($parms, '  ');
     close F;
     $ENV{SCOWL} = $cwd unless defined $ENV{SCOWL};
+    undef $ENV{SCOWL_VERSION};
     open F, "| $ENV{SCOWL}/speller/make-hunspell-dict -one $name parms.txt > /dev/null" or die;
     binmode(F, ':encoding(iso88591)');
     foreach (@$words) {

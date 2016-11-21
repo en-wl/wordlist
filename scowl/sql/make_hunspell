@@ -22,7 +22,7 @@ my $path = make_hunspell_dict($dict, $parms, $words);
 
 my($filename, $dir) = fileparse $path;
 
-copy $path, $dest or die "Copy failed: $!";
+copy $path, $dest or die "copy $path, $dest: $!";
 
 print "$filename\n";
 

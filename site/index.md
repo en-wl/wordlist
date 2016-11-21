@@ -13,11 +13,11 @@ information.
 SCOWL itself is a compilation of the information in the database into
 a set of simple word lists that can be combined to create speller
 dictionaries of various sizes and dialects (American, British (both
--ise and -ize) and Canadian).
+-ise and -ize), Canadian and Australian).
 
 [View readme](/scowl-readme).
-Download Version 2016.06.26 as: [tar.gz](http://downloads.sourceforge.net/wordlist/scowl-2016.06.26.tar.gz) (Unix EOL),
-[zip](http://downloads.sourceforge.net/wordlist/scowl-2016.06.26.zip) (DOS/Windows EOL).
+Download Version 2016.11.20 as: [tar.gz](http://downloads.sourceforge.net/wordlist/scowl-2016.11.20.tar.gz) (Unix EOL),
+[zip](http://downloads.sourceforge.net/wordlist/scowl-2016.11.20.zip) (DOS/Windows EOL).
 [Get source](http://github.com/en-wl/wordlist).
 
 [Premade dictionaries](dicts) are available for Hunspell, Aspell, and
@@ -36,7 +36,7 @@ less common word might cause a problem.
 
 [VarCon](varcon) (Variant Conversion) is the primary source of
 spelling differences and variant information.  It can also be used to
-convert between American, British and Canadian spellings.
+convert between American, British, Canadian and Australian spellings.
 
 Alan Beale [12Dicts](12dicts) is another main source of information in
 SCOWL.  It contains a variety of lists, of different sizes and

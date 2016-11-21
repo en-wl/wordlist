@@ -19,11 +19,11 @@ email me any corrections or additions.
 * Kevin Atkinson
 * Based on SCOWL
 * License: BSD/MIT-Like
-* Last Updated: 2012
+* Last Updated: 2016
 
 ## Alternative ##
 
-* <http://qa.openoffice.org/issues/show_bug.cgi?id=92383>
+* <https://bz.apache.org/ooo/show_bug.cgi?id=92383>
 * David Dibble
 * License: GPLv3
 * Last Updated: 2011
@@ -66,7 +66,7 @@ An Oxford spelling (en_GB-oed) version is also provided which follows the spelli
 * <http://marcoagpinto.cidadevirtual.pt/proofingtoolgui.html>
 * Marco A.G.Pinto
 * License: LGPL
-* Last Update: 2014
+* Last Update: 2016
 
 ## Alternative ##
 
@@ -74,12 +74,12 @@ An Oxford spelling (en_GB-oed) version is also provided which follows the spelli
 * Kevin Atkinson
 * Based on SCOWL
 * License: BSD/MIT-Like
-* Last Updated: 2012
+* Last Updated: 2016
 
 Since SCOWL was forked in David Bartlett version, it has undergone numerous corrections and should now be fairly accurate.  David Bartlett's en_GB dictionary includes both -ize and -ise forms, while with SCOWL it is possible to get one with just the -ise forms, it is also possible to have the option of including common variants or leaving them out to promote consistent spelling.  Furthermore, SCOWL 
 is also a bit more up-to-date and includes words such as "blog" and "Google" (which where not in R 1.18).  However, the SCOWL version still likely includes some American only words and misses some British only words, and it includes some words such as "alright" which David Bartlett made a point to leave out.  Also David Bartlett version includes hyphenated words while SCOWL does not yet.
 
-Since the official Aspell English dictionaries are generated from SCOWL, this is the version found in the official English dictionary for Aspell (which also includes American and Canadian options).
+Since the official Aspell English dictionaries are generated from SCOWL, this is the version found in the official English dictionary for Aspell (which also includes American, Canadian and Australian options).
 
 ## Others ##
 
@@ -93,7 +93,7 @@ A version of David Bartlett list (based on R 1.20) with some minor changes by L�
 * Kevin Atkinson
 * Based on SCOWL
 * License: BSD/MIT-Like
-* Last Updated: 2012
+* Last Updated: 2016
 
 ## Others ##
 
@@ -104,7 +104,15 @@ A version with some minor changes by László Németh (Hunspell author) is inclu
 
 # Australian (en_AU) #
 
-## Official? ##
+## Official ##
+
+* <http://wordlist.aspell.net/dicts>
+* Benjamin Titze and Kevin Atkinson
+* Based on SCOWL
+* License: BSD/MIT-Like
+* Last Updated: 2016
+
+## Alternative ##
 
 * <http://wiki.services.openoffice.org/wiki/Australian-English_Spelling_Dictionary>
 * David Wilson

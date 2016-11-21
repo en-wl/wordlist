@@ -4,15 +4,16 @@ title: English Spell Checker Dictionaries
 ---
 
 SCOWL is the basis for the official English dictionary in Aspell and
-the en_US and en_CA dictionary in Hunspell.  Dictionaries for British
-English are also available for Hunspell.
+the en_US, en_CA and en_AU dictionary in Hunspell.  Dictionaries for
+British English are also available for Hunspell.
 
 * Official Hunspell Dictionaries: 
   [readme](/hunspell-readme),
-  <a href="http://downloads.sourceforge.net/wordlist/hunspell-en_US-2016.06.26.zip">en_US</a>,
-  <a href="http://downloads.sourceforge.net/wordlist/hunspell-en_CA-2016.06.26.zip">en_CA</a>
-  (2016.06.26) 
-* [Additional Hunspell Dictionaries](https://sourceforge.net/projects/wordlist/files/speller/2016.06.26)
+  <a href="http://downloads.sourceforge.net/wordlist/hunspell-en_US-2016.11.20.zip">en_US</a>,
+  <a href="http://downloads.sourceforge.net/wordlist/hunspell-en_CA-2016.11.20.zip">en_CA</a>,
+  <a href="http://downloads.sourceforge.net/wordlist/hunspell-en_AU-2016.11.20.zip">en_AU</a>
+  (2016.11.20)
+* [Additional Hunspell Dictionaries](https://sourceforge.net/projects/wordlist/files/speller/2016.11.20)
   including ones for British English. 
 * <a href="http://ftp.gnu.org/gnu/aspell/dict/en/">Aspell Dictionaries</a>
 

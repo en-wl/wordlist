@@ -23,6 +23,7 @@ scowl/src/deaccent
 scowl/src/find-accented
 scowl/working/
 scowl/r/special/*.lst
+scowl/sqltest*
 uk-freq-class/*
 ukacd/*
 varcon/*

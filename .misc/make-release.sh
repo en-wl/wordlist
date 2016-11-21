@@ -85,3 +85,7 @@ fi
   ./proc
   ./configure
   make dist
+  cd ../../..
+
+#Test:
+  make test

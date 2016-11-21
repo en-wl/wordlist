@@ -226,3 +226,13 @@ deps: .symbolic-deps
 	src/make-symbolic-deps
 -include .symbolic-deps
 
+#
+# Sanity checks and related
+#
+scowl.db: final/*
+	-rm scowl.db
+	sql/create.sh
+
+test: scowl.db
+	make -C speller clean hunspell
+	sql/test

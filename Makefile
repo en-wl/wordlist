@@ -44,3 +44,14 @@ prep: .dirs .enable .enable-sup .ukacd .yawl .mwords .census .uk-freq-class
 .uk-freq-class: other/wlist.html.gz
 	gunzip -c other/wlist.html.gz > uk-freq-class/wlist.html
 	touch .uk-freq-class
+
+.PHONE: test
+test: scowl_test varcon_test
+
+.PHONY: scowl_test
+scowl_test: scowl
+	make -C scowl test
+
+.PHONY: varcon_test
+varcon_test:
+	cd varcon && echo 'color' | ./translate american australian > /dev/null

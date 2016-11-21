@@ -59,6 +59,10 @@ while ($#ARGV != -1) {
         &usage if $#what == -1;
         $w = shift @what;
         $$w = 'C';
+    } elsif ($p eq "australian" || $p eq "Australian") {
+        &usage if $#what == -1;
+        $w = shift @what;
+        $$w = 'D';
     } else {
         $file = $p;
     }

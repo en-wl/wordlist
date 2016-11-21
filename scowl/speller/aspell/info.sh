@@ -20,6 +20,7 @@ readme-extra extra.txt iso-8859-1
 alias en_US american
 alias en_GB british
 alias en_CA canadian
+alias en_AU australian
 alias en english
 
 dict:
@@ -65,6 +66,16 @@ dict:
   add en_GB-ize-w_accents-only
 
 dict:
+  name en_AU-wo_accents
+  alias en_AU:awli
+  add en-common
+  add en_AU-wo_accents-only
+dict:
+  name en_AU-w_accents
+  add en-common
+  add en_AU-w_accents-only
+
+dict:
   name en-wo_accents
   alias en:awli
   add en-common
@@ -99,4 +110,11 @@ dict:
 dict:
   name en_CA-variant_1
   add  en_CA-variant_1
+
+dict:
+  name en_AU-variant_0
+  add  en_AU-variant_0
+dict:
+  name en_AU-variant_1
+  add  en_AU-variant_1
 EOF

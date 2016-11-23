@@ -3,8 +3,8 @@ This is the git repository for SCOWL (and friends).
 SCOWL (Spell Checker Oriented Word Lists) is a database of English
 words that can be used to create word lists suitable for use in spell
 checkers of various sizes and dialects (America, British (both -ise
-and -ize) and Canadian). However, I am sure it will have numerous
-other uses as well.
+and -ize), Canadian and Australian). However, I am sure it will have
+numerous other uses as well.
 
 SCOWL is derived from many sources under a BSD compatible license.
 The combined work is freely available under a [MIT-like]

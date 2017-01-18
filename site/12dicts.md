@@ -32,12 +32,13 @@ done so in order to preserve continuity.
 
 # Unofficial Version
 
-The Unofficial Alternate 12 Dicts Package is the one used by SCOWL. It
-is based on Version 4 of the 12Dicts package.  It contains almost all
-of the information in offical version but in a different format as
-well as a good deal of additional information. However it is not meant
-as a replacement for the official 12Dicts package. It simply offers
-the information in a different way.
+The Unofficial Alternate 12 Dicts Package is the one used by SCOWL.
+It is based on version 6.0.2 of the official 12Dicts package.  It
+contains almost all of the information originally found in Version 4
+of the 12Dicts package but in a different format as well as a good
+deal of additional information.  However it is not meant as a
+replacement for the official 12Dicts package. It simply offers the
+information in a different way.
 
 <a href="/alt12dicts-readme">readme</a>,
 <a href="/alt12dicts-infl-readme">readme-infl</a>,

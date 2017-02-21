@@ -218,7 +218,7 @@ From Revision 7.1 to Version 2014.08.11 (August 11, 2014)
 
   Add schema and scripts for creating a SQLite database from SCOWL.
   Add some utility and library functions using them.  This database is
-  used by the new web app's (http://app.aspel.net/lookup & create).
+  used by the new web app's (http://app.aspell.net/lookup & create).
 
   Enhance speller/make-hunspell-dict.  The biggest improvement is that
   it that it now generates several more dictionaries in addition to

@@ -27,7 +27,7 @@ indicated by the "A") of the word, and "acknowledgement" is the
 preferred Canadian and British spelling ("B" and "C").  However the
 American spelling is sometimes used in Canada (as indicated by "Cv",
 where the lowercase "v" indicated a variant form) and the British
-spelling is sometimes used in America (as indicated the the "Av").
+spelling is sometimes used in America (as indicated the "Av").
 
 More generally each tag consists of a spelling category (for example
 "A") followed possible by a variant indicator.  The spelling
@@ -53,8 +53,8 @@ as variants in the dictionary.  However, some variants will be demoted
 to a "V".  For example, if the variant is marked as "also" by
 Merriam-Webster, or also if only some dictionaries acknowledge the
 existence the variant.  "-" is used when the variant is generally not
-listed is the dictionary but I could find some evidence of it use, or
-when it is it marked as as a archaic spelling for the word.  The "x"
+listed is the dictionary but I could find some evidence of its use, or
+when it is marked as an archaic spelling for the word.  The "x"
 is used when the spelling is almost generally considered a
 misspelling, and is only included for completeness.
 
@@ -106,8 +106,8 @@ Sometimes part-of-speech (POS) info is given to help distinguish which
 form is used.  For example:
   A B C: practice / AV Cv: practise | <N>
   A Cv: practice / AV B C: practise | <V>
-POS info is always given given in the form "<POS>" and if a definition
-is also given the the POS info is always first.  The POS tags used are as
+POS info is always given in the form "<POS>" and if a definition
+is also given the POS info is always first.  The POS tags used are as
 follows:
   <N>: Noun
   <V>: Verb
@@ -132,7 +132,7 @@ the cluster and are prefixed with "##", for example:
   A B C: coloration / B. Cv: colouration
   A B C: colorations / B. Cv: colourations
   A B C: coloration's / B. Cv: colouration's
-  ## OED has coloration as the prefered spelling and discolouration as a
+  ## OED has coloration as the preferred spelling and discolouration as a
   ## variant for British Engl or some reason
 In the notes ODE (not to be confused with OED) stands for Oxford
 Dictionary of English, "Ox" is used for any Oxford dictionary, and

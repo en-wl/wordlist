@@ -4781,7 +4781,7 @@ A: colorate / B: colourate
 A B C: coloration / B. Cv: colouration
 A B C: colorations / B. Cv: colourations
 A B C: coloration's / B. Cv: colouration's
-## OED has coloration as the prefered spelling and discolouration as a
+## OED has coloration as the preferred spelling and discolouration as a
 ## variant for British English for some reason
 
 # colorational (level 95)
@@ -11221,7 +11221,7 @@ A B: gluing / AV Bv: glueing
 
 # gluteal <verified> (level 70)
 A B: gluteal / BV: glutaeal
-## OED has glutaeal listed first, ODE doesn't reconize glutaeal
+## OED has glutaeal listed first, ODE doesn't recognize glutaeal
 
 # gluteus (level 70)
 A: gluteus / B: glutaeus
@@ -18302,7 +18302,7 @@ A Z: niggardizes / B: niggardises
 A B: night / Av: nite
 A B: nights / Av: nites
 A B: night's / Av: nite's
-## Ox lables nite as an informal spelling
+## Ox labels nite as an informal spelling
 
 # nightie (level 40)
 _: nightie / _v: nighty
@@ -32403,7 +32403,7 @@ A: zygenid / B: zygaenid
 _: Koran / _.: Quran / _v: Qur'an
 ## Quran is more correct bases on a modern transliterated from Arabic
 ## to English, but both M-W and Oxford has Koran marked as the primary
-## form.  Tecnically "Qur'an" more correct but that doesn't seam to be
+## form.  Technically "Qur'an" more correct but that doesn't seam to be
 ## used as much.
 
 # Koranic (level 60)

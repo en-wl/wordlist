@@ -7,8 +7,7 @@ and -ize), Canadian and Australian). However, I am sure it will have
 numerous other uses as well.
 
 SCOWL is derived from many sources under a BSD compatible license.
-The combined work is freely available under a [MIT-like]
-(https://raw.githubusercontent.com/kevina/wordlist/master/scowl/Copyright) license.
+The combined work is freely available under a [MIT-like](https://raw.githubusercontent.com/kevina/wordlist/master/scowl/Copyright) license.
 
 To build simply type:
 

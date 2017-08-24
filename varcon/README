@@ -1,6 +1,6 @@
 Variant Conversion Info (VarCon)
 
-Version 2016.11.20
+Version 2017.08.24
 
 Copyright 2000-2016 by Kevin Atkinson (kevina@gnu.org) and Benjamin
 Titze (btitze@protonmail.ch).
@@ -297,6 +297,10 @@ The primary sources for this addition were:
 
 
 CHANGELOG:
+
+From 2016.11.20 to 2017.08.24
+
+   - Typo fixes thanks to Jakub Wilk
 
 From 2016.06.26 to 2016.11.20
 

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 spellings="`src/list-spellings`"
 classes="`src/list-classes`"

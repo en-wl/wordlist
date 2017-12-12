@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo -n src/split-words  
 echo -n '' working/variant_1.lst

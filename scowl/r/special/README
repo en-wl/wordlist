@@ -137,3 +137,9 @@ australian.35:
 
 A list of extra Australian words added at the 35 level to the
 "australian" spelling category.
+
+chinese-names:
+chinese-names.also:
+
+A list of Chinese names from https://github.com/en-wl/wordlist/issues/203.
+The ".also" file contains two word names I have not decided how to process.

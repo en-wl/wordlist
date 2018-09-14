@@ -19,7 +19,7 @@ email me any corrections or additions.
 * Kevin Atkinson
 * Based on SCOWL
 * License: BSD/MIT-Like
-* Last Updated: 2016
+* Last Updated: 2018
 
 ## Alternative ##
 
@@ -63,10 +63,10 @@ An Oxford spelling (en_GB-oed) version is also provided which follows the spelli
 
 ## Fork of Official ##
 
-* <http://marcoagpinto.cidadevirtual.pt/proofingtoolgui.html>
+* <http://proofingtoolgui.org>
 * Marco A.G.Pinto
 * License: LGPL
-* Last Update: 2016
+* Last Update: 2018
 
 ## Alternative ##
 
@@ -74,7 +74,7 @@ An Oxford spelling (en_GB-oed) version is also provided which follows the spelli
 * Kevin Atkinson
 * Based on SCOWL
 * License: BSD/MIT-Like
-* Last Updated: 2016
+* Last Updated: 2018
 
 Since SCOWL was forked in David Bartlett version, it has undergone numerous corrections and should now be fairly accurate.  David Bartlett's en_GB dictionary includes both -ize and -ise forms, while with SCOWL it is possible to get one with just the -ise forms, it is also possible to have the option of including common variants or leaving them out to promote consistent spelling.  Furthermore, SCOWL 
 is also a bit more up-to-date and includes words such as "blog" and "Google" (which where not in R 1.18).  However, the SCOWL version still likely includes some American only words and misses some British only words, and it includes some words such as "alright" which David Bartlett made a point to leave out.  Also David Bartlett version includes hyphenated words while SCOWL does not yet.
@@ -93,7 +93,7 @@ A version of David Bartlett list (based on R 1.20) with some minor changes by L�
 * Kevin Atkinson
 * Based on SCOWL
 * License: BSD/MIT-Like
-* Last Updated: 2016
+* Last Updated: 2018
 
 ## Others ##
 
@@ -110,7 +110,7 @@ A version with some minor changes by László Németh (Hunspell author) is inclu
 * Benjamin Titze and Kevin Atkinson
 * Based on SCOWL
 * License: BSD/MIT-Like
-* Last Updated: 2016
+* Last Updated: 2018
 
 ## Alternative ##
 

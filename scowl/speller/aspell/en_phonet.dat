@@ -43,17 +43,21 @@
 #               Converted from header to data file.
 #
 
-version 1.1
+version 1.2
 
-AH(AEIOUY)-^         *H
-AR(AEIOUY)-^         *R
-A(HR)^               *
+#AH(AEIOUY)-^         *H
+#AR(AEIOUY)-^         *R
+#A(HR)^               *
 A^                   *
-AH(AEIOUY)-          H
-AR(AEIOUY)-          R
-A(HR)                _
+#AH(AEIOUY)-          H
+#AR(AEIOUY)-          R
+#A(HR)-$              _
+#A(HR)                _
+
 BB-                  _
 B                    B
+#B                    P
+
 CQ-                  _
 CIA                  X
 CH                   X
@@ -64,18 +68,22 @@ CC<                  C
 C                    K
 DG(EIY)              K
 DD-                  _
+
 D                    T
-É<                   E
-EH(AEIOUY)-^         *H
-ER(AEIOUY)-^         *R
-E(HR)^               *
+
+#EH(AEIOUY)-^         *H
+#ER(AEIOUY)-^         *R
+#E(HR)^               *
 ENOUGH^$             *NF
 E^                   *
-EH(AEIOUY)-          H
-ER(AEIOUY)-          R
-E(HR)                _
+#EH(AEIOUY)-          H
+#ER(AEIOUY)-          R
+#E(HR)-$              _
+#E(HR)                _
+
 FF-                  _
 F                    F
+
 GN^                  N
 GN$                  N
 GNS$                 NS
@@ -84,74 +92,100 @@ GH(AEIOUY)-          K
 GH                   _
 GG9                  K
 G                    K
+
 H                    H
-IH(AEIOUY)-^         *H
-IR(AEIOUY)-^         *R
-I(HR)^               *
+
+ISL-^                *   # island
+#IH(AEIOUY)-^         *H
+#IR(AEIOUY)-^         *R
+#I(HR)^               *
 I^                   *
 ING6                 N
-IH(AEIOUY)-          H
-IR(AEIOUY)-          R
-I(HR)                _
+#IH(AEIOUY)-          H
+#IR(AEIOUY)-          R
+#I(HR)-$              _
+#I(HR)                _
+
+JOSE^$               HS # San Jose
+JOSES^$              HSS # San Jose's
 J                    K
+
 KN^                  N
 KK-                  _
 K                    K
+
 LAUGH^               LF
 LL-                  _
 L                    L
+
 MB$                  M
 MM                   M
 M                    M
 NN-                  _
 N                    N
-OH(AEIOUY)-^         *H
-OR(AEIOUY)-^         *R
-O(HR)^               *
+
+#OH(AEIOUY)-^         *H
+#OR(AEIOUY)-^         *R
+#O(HR)^               *
 O^                   *
-OH(AEIOUY)-          H
-OR(AEIOUY)-          R
-O(HR)                _
+#OH(AEIOUY)-          H
+#OR(AEIOUY)-          R
+#O(HR)-$              _
+#O(HR)                _
+
 PH                   F
 PN^                  N
+PS^$                 PS # P.S.
+PS^                  S  # psychology
 PP-                  _
 P                    P
+
 Q                    K
+
 RH^                  R
 ROUGH^               RF
 RR-                  _
 R                    R
+
 SCH(EOU)-            SK
 SC(IEY)-             S
 SH                   X
 SI(AO)-              X
 SS-                  _
 S                    S
+
 TI(AO)-              X
 TH                   @
 TCH--                _
 TOUGH^               TF
 TT-                  _
 T                    T
-UH(AEIOUY)-^         *H
-UR(AEIOUY)-^         *R
-U(HR)^               *
+
+#UH(AEIOUY)-^         *H
+#UR(AEIOUY)-^         *R
+#U(HR)^               *
 U^                   *
-UH(AEIOUY)-          H
-UR(AEIOUY)-          R
-U(HR)                _
+#UH(AEIOUY)-          H
+#UR(AEIOUY)-          R
+#U(HR)-$              _
+#U(HR)                _
+
 V^                   W
 V                    F
+
 WR^                  R
 WH^                  W
 W(AEIOU)-            W
+
 X^                   S
 X                    KS
+
 Y(AEIOU)-            Y
+
 ZZ-                  _
 Z                    S
 
-#The rules in a different view:
+#The rules in a different view: (slightly outdated)
 #
 # Exceptions:
 #

@@ -1,9 +1,9 @@
 #   phonetic_english.h - phonetic transformation rules for use with phonetic.c
-#   Copyright (C) 2000 Björn Jacke
+#   Copyright (C) 2000 BjÃ¶rn Jacke
 #
 #   This rule set is based on Lawrence Phillips original metaphone 
 #   algorithm with modifications made by Michael Kuhn in his
-#   C implantation, more modifications by Björn Jacke when
+#   C implantation, more modifications by BjÃ¶rn Jacke when
 #   converting the algorithm to a rule set and minor 
 #   touch ups by Kevin Atkinson
 #
@@ -20,11 +20,11 @@
 #   License along with this library; if not, write to the Free Software
 #   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
-#   Björn Jacke may be reached by email at bjoern.jacke@gmx.de
+#   BjÃ¶rn Jacke may be reached by email at bjoern.jacke@gmx.de
 #
 #   Changelog:
 #
-#   2000-01-05  Björn Jacke <bjoern.jacke@gmx.de>
+#   2000-01-05  BjÃ¶rn Jacke <bjoern.jacke@gmx.de>
 #               - first version with translation rules derived from
 #                 metaphone.cc distributed with aspell 0.28.3
 #               - "TH" is now representated as "@" because "0" is a
@@ -43,20 +43,17 @@
 #               Converted from header to data file.
 #
 
-version 1.2
+# Symbols used:
+#   * - vowel at beginning of word
+#   @ - th (ascii approximation of Î˜)
+#   B F H J K L M N P R S T W X Y
 
-#AH(AEIOUY)-^         *H
-#AR(AEIOUY)-^         *R
-#A(HR)^               *
+version 1.2.1
+
 A^                   *
-#AH(AEIOUY)-          H
-#AR(AEIOUY)-          R
-#A(HR)-$              _
-#A(HR)                _
 
 BB-                  _
 B                    B
-#B                    P
 
 CQ-                  _
 CIA                  X
@@ -66,20 +63,13 @@ CK                   K
 COUGH^               KF
 CC<                  C
 C                    K
+
 DG(EIY)              K
 DD-                  _
-
 D                    T
 
-#EH(AEIOUY)-^         *H
-#ER(AEIOUY)-^         *R
-#E(HR)^               *
 ENOUGH^$             *NF
 E^                   *
-#EH(AEIOUY)-          H
-#ER(AEIOUY)-          R
-#E(HR)-$              _
-#E(HR)                _
 
 FF-                  _
 F                    F
@@ -96,15 +86,8 @@ G                    K
 H                    H
 
 ISL-^                *   # island
-#IH(AEIOUY)-^         *H
-#IR(AEIOUY)-^         *R
-#I(HR)^               *
 I^                   *
 ING6                 N
-#IH(AEIOUY)-          H
-#IR(AEIOUY)-          R
-#I(HR)-$              _
-#I(HR)                _
 
 JOSE^$               HS # San Jose
 JOSES^$              HSS # San Jose's
@@ -124,19 +107,13 @@ M                    M
 NN-                  _
 N                    N
 
-#OH(AEIOUY)-^         *H
-#OR(AEIOUY)-^         *R
-#O(HR)^               *
 O^                   *
-#OH(AEIOUY)-          H
-#OR(AEIOUY)-          R
-#O(HR)-$              _
-#O(HR)                _
 
 PH                   F
 PN^                  N
 PS^$                 PS # P.S.
-PS^                  S  # psychology
+PSYCH                SK # psychology
+PS^                  S
 PP-                  _
 P                    P
 
@@ -161,14 +138,7 @@ TOUGH^               TF
 TT-                  _
 T                    T
 
-#UH(AEIOUY)-^         *H
-#UR(AEIOUY)-^         *R
-#U(HR)^               *
 U^                   *
-#UH(AEIOUY)-          H
-#UR(AEIOUY)-          R
-#U(HR)-$              _
-#U(HR)                _
 
 V^                   W
 V                    F

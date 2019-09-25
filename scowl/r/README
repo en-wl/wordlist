@@ -1,6 +1,6 @@
 This directory contains the source of the raw data.  In order for the
 word lists to compile you will need to unpack all of the various word
-lists in the proper directory.  If you checkout SCOWL using SVN this
+lists in the proper directory.  If you checkout SCOWL using git this
 should be done for you automatically.
 
 The following word lists, which are created or distributed by me,
@@ -22,38 +22,45 @@ special:
   Special words lists that I added myself.
   Nothing needs to be downloaded for this directory.
 
-Plus the following additinal word list from various locations: 
-(These files are also available in SVN)
+Plus the following additinal word list from various locations.
 
 census:
   1990 Census Name Files
   http://www.census.gov/genealogy/names/
+  https://github.com/en-wl/wordlist/raw/cbd0e208/other/census-names-1990.zip
 
 enable:
   Updated millennial edition of ENABLE (ENABLE2K)
   http://personal.riverusers.com/~thegrendel/enable2k.zip
   http://members.tripod.com/~the_grendel/enable2k.zip
+  https://github.com/en-wl/wordlist/raw/cbd0e208/other/enable2k.zip
 
 enable-sup:
   Updated ENABLE SUPPLEMENT
   http://personal.riverusers.com/~thegrendel/supp2k.zip
   http://members.tripod.com/~the_grendel/supp2k.zip
+  https://github.com/en-wl/wordlist/raw/cbd0e208/other/supp2k.zip
+  https://github.com/en-wl/wordlist/raw/c50231ce/other/supp2k-nopos.lst
 
 mwords:
   The Moby Words Package.
   http://www.dcs.shef.ac.uk/research/ilash/Moby/
   ftp://sable.ox.ac.uk/pub/wordlists/Moby/
+  https://github.com/en-wl/wordlist/raw/cbd0e208/other/mwords.tar.gz
 
 uk-freq-class:
   UK English Wordlist With Frequency Classification
   April 2002
   http://www.cl.cam.ac.uk/users/bck1/menu.html
+  https://github.com/en-wl/wordlist/raw/cbd0e208/other/wlist.html.gz
 
 ukacd:
   The UK Advanced Cryptics Dictionary (UKACD)
+  https://github.com/en-wl/wordlist/raw/cbd0e208/other/ukacd17.zip
 
 yawl:
   Updated Y2K version of YAWL
   http://metalab.unc.edu/pub/Linux/libs/yawl-0.2.tar.gz
   http://personal.riverusers.com/~thegrendel/yawl-0.2.tar.gz
+  https://github.com/en-wl/wordlist/raw/cbd0e208/other/yawl-0.2.tar.gz
 

@@ -44,9 +44,7 @@ comm -12 working/words.$1 working/australian_variant_1.lst   \
 comm -12 working/words.$1 working/australian_variant_2.lst   \
   > working/australian_variant_2-all.$1.pre
 
-#
 # Hack to get australian only words in
-#
 if [ $1 -eq 35 ]
 then
   mv working/australian-all.$1.pre working/australian-all.$1.pre.pre
@@ -58,6 +56,17 @@ cat working/*-all.$1.pre         \
   | sort | uniq                  \
   | comm -13 - working/words.$1  \
   > working/english-all.$1.pre
+
+# Hack to get australian towns in
+if [ $1 -eq 50 ]
+then
+  mv working/australian-all.$1.pre working/australian-all.$1.pre.pre
+  cat r/special/australian-towns | src/add-possessive \
+    | cat - r/special/australian-towns-part | src/filter \
+    | sort -u \
+    | comm -23 - working/english-all.$1.pre \
+    | cat - working/australian-all.$1.pre.pre | sort -u > working/australian-all.$1.pre
+fi
 
 for s in `src/list-spellings`
 do

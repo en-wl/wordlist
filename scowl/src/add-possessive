@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+
+while (<STDIN>) {
+  print;
+  chomp;
+  print "$_\'s\n";
+}

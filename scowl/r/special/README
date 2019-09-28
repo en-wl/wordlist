@@ -148,9 +148,16 @@ cs.60
 
 Common words found in Software Development and Computer Science contexes.
 
+urban-areas:
+
+U.S Urban areas as defined by the U.S. Census Bureau.
+
+Source https://www2.census.gov/geo/docs/reference/ua/ua_list_ua.txt (2019-08).
+
 australian-towns:
 australian-towns-part:
 
 List of cities in Australia from
 https://en.wikipedia.org/wiki/List_of_cities_in_Australia_by_population
 (2019-09-24).
+

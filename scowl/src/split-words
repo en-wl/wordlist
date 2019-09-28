@@ -68,6 +68,17 @@ then
     | cat - working/australian-all.$1.pre.pre | sort -u > working/australian-all.$1.pre
 fi
 
+# Hack to get U.S. Urban areas in
+if [ $1 -eq 50 ]
+then
+  mv working/american-all.$1.pre working/american-all.$1.pre.pre
+  cat r/special/urban-areas | src/add-possessive \
+    | src/filter \
+    | sort -u \
+    | comm -23 - working/english-all.$1.pre \
+    | cat - working/american-all.$1.pre.pre | sort -u > working/american-all.$1.pre
+fi
+
 for s in `src/list-spellings`
 do
   for c in `src/list-classes -1`

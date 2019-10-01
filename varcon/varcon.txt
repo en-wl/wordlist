@@ -15134,7 +15134,7 @@ _: lavalier_microphone's / _V: lavaliere_microphone's
 A: lavolted / B: lavoltaed
 
 # leaped (level 35)
-A Bv: leaped / Av B: leapt
+A B.: leaped / A. B: leapt
 
 # learned <verified> (level 10)
 A B. Z: learned / B Zv: learnt

@@ -32413,3 +32413,7 @@ _: Koranic / _.: Quranic / _v: Qur'anic
 # virtualization (level 60)
 A: virtualization / B: virtualisation
 
+# volcanism (level 60)
+A B: volcanism / Av Bv: vulcanism
+A B: volcanisms / Av Bv: vulcanisms
+A B: volcanism's / Av Bv: vulcanism's

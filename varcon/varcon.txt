@@ -32417,3 +32417,15 @@ A: virtualization / B: virtualisation
 A B: volcanism / Av Bv: vulcanism
 A B: volcanisms / Av Bv: vulcanisms
 A B: volcanism's / Av Bv: vulcanism's
+
+# eukaryote (level 60)
+A B: eukaryote / Av Bv: eucaryote
+A B: eukaryotes / Av Bv: eucaryotes
+A B: eukaryote's / Av Bv: eucaryote's
+A B: eukaryotic / Av Bv: eucaryotic
+
+# prokaryote (level 60)
+A B: prokaryote / Av Bv: procaryote
+A B: prokaryotes / Av Bv: procaryotes
+A B: prokaryote's / Av Bv: procaryote's
+A B: prokaryotic / Av Bv: procaryotic

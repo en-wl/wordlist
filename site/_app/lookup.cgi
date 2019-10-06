@@ -7,7 +7,7 @@ use utf8;
 use IPC::Open2;
 use IO::Handle;
 
-use lib '/opt/app/wordlist-working/scowl/sql';
+use lib '/opt/app/wordlist/scowl/sql';
 use speller_lookup qw(lookup to_html);
 
 delete @ENV{qw(IFS CDPATH ENV BASH_ENV)};

@@ -1,6 +1,6 @@
-accessor
-completer
-completers
+dequeue
+dequeued
+dequeues
 enqueue
 enqueued
 enqueues
@@ -10,6 +10,6 @@ interoperate
 interoperates
 modularization
 prepend
+runtime
 serializable
 unary
-variadic

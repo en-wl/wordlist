@@ -102,11 +102,23 @@ set_param_from_form('special', [keys %special], 1);
 my $special_html = make_check_list("special",$param{special},[keys %special],\%special);
 
 if (defined $q->param("download")) {
-    $ENV{SCOWL}="/opt/app/wordlist/scowl";
+    $ENV{SCOWL}="/opt/app/wordlist/scowl-working";
     my $words = get_wordlist("$ENV{SCOWL}/scowl.db",\%param);
     if ($q->param("download") eq 'hunspell') {
         my $file = make_hunspell_dict (dict_name(\%param),\%param,$words);
         print $q->header(-type => 'application/zip',
+                         -attachment => basename $file,
+                         -Content_length  => -s $file);
+        $/ = undef;
+        open F, $file or die;
+        binmode(F);
+        binmode(STDOUT);
+        print <F>;
+        exit 1;
+    } elsif ($q->param("download") eq 'aspell') {
+        my $git_ver = `git log --pretty=format:'%cd [%h]' -n 1`;
+        my $file = make_hunspell_dict ($git_ver,\%param,$words);
+        print $q->header(-type => 'application/octet-stream',
                          -attachment => basename $file,
                          -Content_length  => -s $file);
         $/ = undef;
@@ -220,6 +232,7 @@ Format: <select name="format">
 </select>
 <br>
 <button type="submit" name="download" value="hunspell">Download as Hunspell Dictionary</button><br>
+<button type="submit" name="download" value="aspell">Download as Aspell Dictionary</button><br>
 <button type="reset">Reset to Defaults</button>
 <p>
 <i>

@@ -144,9 +144,30 @@ sub make_hunspell_dict ( $$$ ) {
     return "$dir/hunspell-$name.zip";
 }
 
+sub make_aspell_dict ( $$$ ) {
+    use File::Temp 'tempdir';
+    use POSIX 'getcwd';
+    my ($git_ver,$parms,$words) = (@_);
+    my $dir = tempdir(CLEANUP => 1);
+    my $cwd = getcwd();
+    chdir $dir;
+    open F, "> parms.txt";
+    print F dump_parms($parms, '  ');
+    close F;
+    $ENV{SCOWL} = $cwd unless defined $ENV{SCOWL};
+    open F, "| $ENV{SCOWL}/speller/make-aspell-dic '$git_ver' parms.txt > /dev/null" or die;
+    binmode(F, ':encoding(iso88591)');
+    foreach (@$words) {
+        print F "$_\n";
+    }
+    close F;
+    chdir $cwd;
+    return "$dir/aspell6-en-custom.tar.bz2";
+}
+
 sub copyright() {
     return <<'---';
-Copyright 2000-2014 by Kevin Atkinson
+Copyright 2000-2019 by Kevin Atkinson
 
   Permission to use, copy, modify, distribute and sell these word
   lists, the associated scripts, the output created from the scripts,

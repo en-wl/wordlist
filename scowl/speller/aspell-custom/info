@@ -1,0 +1,17 @@
+name_english Unknown
+name_native Unknown
+lang en
+author:
+  name Unknown
+  email unknown at someplace com
+copyright Unknown
+#url Unknown
+version 0.01-0
+#source-version 0.01
+accurate unknown
+complete unknown
+data-file en_phonet.dat
+data-file en_affix.dat
+dict:
+  name en-custom
+  add en-custom

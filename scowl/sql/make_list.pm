@@ -9,7 +9,8 @@ use DBI;
 
 use Exporter ();
 our @ISA = qw(Exporter);
-our @EXPORT_OK = qw(@standard %standard make_query get_wordlist make_hunspell_dict dict_name dump_parms copyright);
+our @EXPORT_OK = qw(@standard %standard make_query get_wordlist make_hunspell_dict make_aspell_dict
+                    dict_name dump_parms copyright);
 
 our @standard = qw(en_US en_GB-ise en_GB-ize en_CA en_AU en_US-large en_GB-large en_CA-large en_AU-large);
 our %standard = (
@@ -139,14 +140,36 @@ sub make_hunspell_dict ( $$$ ) {
     foreach (@$words) {
         print F "$_\n";
     }
-    close F;
+    close F or die "make-hunspell-dict failed";
     chdir $cwd;
     return "$dir/hunspell-$name.zip";
 }
 
+sub make_aspell_dict ( $$$ ) {
+    use File::Temp 'tempdir';
+    use POSIX 'getcwd';
+    my ($git_ver,$parms,$words) = (@_);
+    my $dir = tempdir(CLEANUP => 1);
+    my $cwd = getcwd();
+    chdir $dir;
+    open F, "> parms.txt";
+    print F dump_parms($parms, '  ');
+    close F;
+    $ENV{SCOWL} = $cwd unless defined $ENV{SCOWL};
+    $git_ver =~ /^([^\']+)$/ or die;
+    open F, "| $ENV{SCOWL}/speller/make-aspell-custom '$1' parms.txt > /dev/null" or die;
+    binmode(F, ':encoding(iso88591)');
+    foreach (@$words) {
+        print F "$_\n";
+    }
+    close F or die "make-aspell-custom failed";
+    chdir $cwd;
+    return "$dir/aspell6-en-custom.tar.bz2";
+}
+
 sub copyright() {
     return <<'---';
-Copyright 2000-2014 by Kevin Atkinson
+Copyright 2000-2019 by Kevin Atkinson
 
   Permission to use, copy, modify, distribute and sell these word
   lists, the associated scripts, the output created from the scripts,

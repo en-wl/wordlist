@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -e
+
+GIT_VER=$1
+PARMS_FILE=`pwd`/$2
+
+SCOWL=${SCOWL:-`pwd`}
+
+rm -rf aspell6-en-custom
+cp -a $SCOWL/speller/aspell-custom aspell6-en-custom
+cd aspell6-en-custom
+. README.in.sh > README
+rm README.in.sh
+mkdir lang
+cp -a $SCOWL/speller/aspell/{en.dat,en_affix.dat,en_phonet.dat} lang/
+mkdir doc
+cp -a $SCOWL/README doc/SCOWL-README
+
+cat > en-custom.wl
+
+./configure
+
+make dist
+
+mv aspell6-en-custom.tar.bz2 ..
+cd ..
+rm -r aspell6-en-custom
+
+

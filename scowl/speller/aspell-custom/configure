@@ -1,0 +1,105 @@
+#!/bin/sh
+
+# Note: future version will have a syntax something like
+#   ./configure [OPTIONS]
+#   Where OPTIONS is any of:
+#     --help
+#     --codes CODE1 ...
+#     --sizes SIZE1 ...
+#     --jargons JARGON1 ...
+#     --extras EXTRA1 ...
+#     --vars VAR1=VAL1 ...
+# which is why I warn when --vars is not used before VAR1=VAL1
+
+# Avoid depending upon Character Ranges.
+# Taken from autoconf 2.50
+cr_az='abcdefghijklmnopqrstuvwxyz'
+cr_AZ='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+cr_09='0123456789'
+cr_alnum=$cr_az$cr_AZ$cr_09
+
+# also taken form autoconf
+case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+  *c*,-n*) ECHO_N= ECHO_C='
+' ECHO_T='	' ;;
+  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
+esac
+
+
+mode=none
+for option
+do
+  case $option in
+    --vars) 
+      mode=vars
+      ;;
+    *=*)
+      if test $mode != vars; then
+        echo "Warning: future versions will require --vars before variables are set"
+        mode=vars
+      fi	
+      # Taken from autoconf 2.50
+      envvar=`expr "x$option" : 'x\([^=]*\)='`
+      optarg=`expr "x$option" : 'x[^=]*=\(.*\)'`
+      # Reject names that are not valid shell variable names.
+      expr "x$envvar" : ".*[^_$cr_alnum]" >/dev/null &&
+        { echo "$as_me: error: invalid variable name: $envvar" >&2
+      { (exit 1); exit 1; }; }
+      #echo $envvar $optarg
+      optarg=`echo "$optarg" | sed "s/'/'\\\\\\\\''/g"`
+      eval "$envvar='$optarg'"
+      export $envvar
+      ;;
+    --help)
+      echo "Usage: ./configure [--help | --vars VAR1=VAL1 ...]"
+      echo "  Note: Variables may also be set in the environment brefore running config"
+      echo "  Useful vars: ASPELL ASPELL_PARMS PREZIP DESTDIR"
+      exit 0
+      ;;
+    *)
+      echo "Error: unrecognized option $option";
+      exit 1 
+    ;;
+  esac
+done
+
+if test x = "x$ASPELL"
+  then ASPELL=aspell; fi
+if test x = "x$PREZIP"
+  then PREZIP=prezip-bin; fi
+ASPELL=`which $ASPELL`
+
+echo $ECHO_N "Finding Dictionary file location ... $ECHO_C"
+dictdir=`$ASPELL dump config dict-dir`
+echo $dictdir
+
+echo $ECHO_N "Finding Data file location ... $ECHO_C"
+datadir=`$ASPELL dump config data-dir`
+echo $datadir
+
+echo $ECHO_N "Testing if an English dictionary is already installed ... $ECHO_C"
+if $ASPELL create master --lang=en ./en-test.rws < /dev/null > /dev/null 2>&1
+then
+  echo yes
+  HAVE_LANG_FILES=yes
+else
+  echo no: will install lang data files
+  HAVE_LANG_FILES=no
+  ASPELL="$ASPELL --local-data-dir=lang"
+fi
+rm -f en-test.rws
+
+echo "ASPELL = $ASPELL" > Makefile
+echo "ASPELL_FLAGS = $ASPELL_FLAGS" >> Makefile
+echo "PREZIP = `which $PREZIP`" >> Makefile
+echo "DESTDIR = $DESTDIR" >> Makefile
+echo "dictdir = $dictdir" >> Makefile
+echo "datadir = $datadir" >> Makefile
+echo "name    = $name"    >> Makefile
+if test "$HAVE_LANG_FILES" = no; then
+echo                         >> Makefile
+echo "NEED_LANG_FILES = yes" >> Makefile
+fi
+echo                      >> Makefile
+cat Makefile.pre >> Makefile

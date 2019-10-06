@@ -8,7 +8,8 @@ use File::Basename;
 
 use lib '/opt/app/wordlist/scowl/sql';
 #use speller_lookup qw(lookup to_html);
-use make_list qw(@standard %standard get_wordlist make_hunspell_dict dict_name dump_parms copyright); 
+use make_list qw(@standard %standard get_wordlist make_hunspell_dict make_aspell_dict
+                 dict_name dump_parms copyright); 
 
 delete @ENV{qw(IFS CDPATH ENV BASH_ENV)};
 $ENV{PATH} = "/usr/local/bin:/bin:/usr/bin";
@@ -115,6 +116,19 @@ if (defined $q->param("download")) {
         binmode(STDOUT);
         print <F>;
         exit 1;
+    } elsif ($q->param("download") eq 'aspell') {
+        chdir $ENV{SCOWL};
+        my $git_ver = `git log --pretty=format:'%cd [%h]' -n 1`;
+        my $file = make_aspell_dict ($git_ver,\%param,$words);
+        print $q->header(-type => 'application/octet-stream',
+                         -attachment => basename $file,
+                         -Content_length  => -s $file);
+        $/ = undef;
+        open F, $file or die;
+        binmode(F);
+        binmode(STDOUT);
+        print <F>;
+        exit 1;
     } elsif ($q->param("download") eq 'wordlist') {
         use IO::Handle;
         chdir $ENV{SCOWL};
@@ -208,7 +222,7 @@ Include Spelling Variants up to Level: $variant_html
 Diacritic Handling (for example café): $accents_html
 <p>
 Special Lists to Include: $special_html
-<p>
+<p style="line-height: 2">
 <button type="submit" name="download" value="wordlist">Download as Word List</button> Encoding: <select name="encoding">
   <option value="utf-8">UTF-8
   <option value="iso-8859-1">ISO-8859-1
@@ -219,7 +233,9 @@ Format: <select name="format">
   <option value="zip">zip (Windows EOL)
 </select>
 <br>
-<button type="submit" name="download" value="hunspell">Download as Hunspell Dictionary</button><br>
+<button type="submit" name="download" value="hunspell">Download as Hunspell Dictionary</button>
+<button type="submit" name="download" value="aspell">Download as Aspell Dictionary</button>
+<p>
 <button type="reset">Reset to Defaults</button>
 <p>
 <i>

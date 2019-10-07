@@ -1,6 +1,6 @@
 Variant Conversion Info (VarCon)
 
-Version 2017.08.24
+Version 2019.10.06
 
 Copyright 2000-2016 by Kevin Atkinson (kevina@gnu.org) and Benjamin
 Titze (btitze@protonmail.ch).
@@ -298,6 +298,10 @@ The primary sources for this addition were:
 
 CHANGELOG:
 
+From 2017.08.24 to 2018.10.06
+
+   - Added entries for: eukaryote, prokaryote, virtualization, volcanism
+
 From 2016.11.20 to 2017.08.24
 
    - Typo fixes thanks to Jakub Wilk
@@ -421,7 +425,7 @@ From Revision 1 to Revision 2 (January 27, 2001)
 
 COPYRIGHT:
 
-Copyright 2000-2016 by Kevin Atkinson
+Copyright 2000-2018 by Kevin Atkinson
 
 Permission to use, copy, modify, distribute and sell this array, the
 associated software, and its documentation for any purpose is hereby

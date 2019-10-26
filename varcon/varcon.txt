@@ -1037,8 +1037,8 @@ A Cv Dv: anesthetist's / B C D: anaesthetist's
 
 # anesthetization <verified> (level 60)
 A: anesthetization / B D: anaesthetisation / Z: anaesthetization / Dv: anesthetisation
-A: anesthetizations / B D: anaesthetisations / Z: anaesthetizations / Dv: anesthetisation
-A: anesthetization's / B D: anaesthetisation's / Z: anaesthetization's / Dv: anesthetisation
+A: anesthetizations / B D: anaesthetisations / Z: anaesthetizations / Dv: anesthetisations
+A: anesthetization's / B D: anaesthetisation's / Z: anaesthetization's / Dv: anesthetisation's
 
 # anesthetize <verified> (level 40)
 A Cv: anesthetize / B D: anaesthetise / C Z: anaesthetize / Dv: anesthetise

@@ -25,7 +25,7 @@ abdomen N: abdomens
 abdominal A:
 -abdominal N: abdominals
 abduct V: abducted  abducting  abducts
-+abductee N: abductee  abductees
++abductee N: abductees
 abduction N: abductions
 abductor N: abductors
 abeam A:
@@ -35121,7 +35121,7 @@ robe N: robes
 robe V: robed  robing  robes
 robin N: robins
 +robocall N: robocalls
-+robocall N: robocalled  robocalling  robocalls
++robocall V: robocalled  robocalling  robocalls
 robot N: robots
 robotic A:
 robotics N:

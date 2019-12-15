@@ -12,7 +12,7 @@ create table post (
   pid integer primary key,
   iid integer, -- source list if any
   added boolean not null, -- if the word was added via a post processing step
-  accented int default 0 not null, -- 
+  accented boolean default false not null, -- 
   unique(iid,added,accented)
 );
 

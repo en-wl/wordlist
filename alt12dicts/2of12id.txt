@@ -38638,7 +38638,7 @@ spadework N: ~spadeworks
 spadix N: spadices (spadixes)
 spaghetti N: ~spaghettis
 +spam N: spams
-+spam V: spammed  spammming  spams
++spam V: spammed  spamming  spams
 +spammer N: spammers
 span N: spans
 span V: spanned  spanning  spans
@@ -45803,7 +45803,7 @@ water V: watered  watering  waters
 waterbed N: waterbeds
 waterbird N: waterbirds
 +waterboard N: waterboards
-+waterboard V: waterborded  waterboarding  waterboards
++waterboard V: waterboarded  waterboarding  waterboards
 +waterboarding N: waterboardings
 waterborne A:
 watercolor A:

@@ -24,16 +24,18 @@ sub readline_no_expand($;$) {
     local $_ = shift;
     my $n = shift;
     chomp;
-    my ($d,@n) = split / *\| */;
-    my (@d) = split / *\/ */, $d;
+    my ($entries,@rest) = split / *\| */;
     my %r;
     my $fragile = 0;
-    foreach (@d) {
+    foreach (split / *\/ */, $entries) {
         my ($s, $w) = /^(.+?): (.+)$/ or croak "Bad entry: $_";
         my @s = split / /, $s;
+        while ($s[-1] =~ /^\d$/) {
+            $fragile = 1;
+            pop @s;
+        }
         foreach (@s) {
-            my ($s, $v, $num) = /^([ABZCD_*Q])([.01234vVx-]?)(\d)?$/ or croak "Bad category: $_";
-            $fragile = 1 if defined $num;
+            my ($s, $v) = /^([ABZCD_*Q])([.01234vVx-]?)?$/ or croak "Bad category: $_";
             push @{$r{$s}[$vmap{$v}+1]}, $w;
         }
     }
@@ -42,19 +44,20 @@ sub readline_no_expand($;$) {
             unshift @{$r{$s}[1]}, splice(@{$r{$s}[0]}, 1);
         }
     }
-    die if @n > 1;
     if (defined $n) {
         $n->{fragile} = 1 if $fragile;
-        $n->{orig_data} = $d if $fragile;
+        $n->{orig_data} = $entries if $fragile;
+        $n->{_} = join (' | ', @rest) if @rest >= 1;
+        foreach (@rest) {
+            $n->{uncommon} = 1 if s/^ *\(-\)//;
+            $n->{pos} = $1 if s/^ *<(.+?)>//;
+            s/^ *//;
+            next unless length $_ > 0;
+            if    (/^-- (.+)/) {$n->{note} = $1}
+            else               {$n->{definition} = $_;}
+        }
     }
-    if (@n == 1 && defined $n) {
-        local $_ = $n[0];
-        $n->{_} = $_;
-        $n->{uncommon} = 1 if s/^ *\(-\)//;
-        $n->{pos} = $1 if s/^ *<(.+?)>//;
-        s/^ *//;
-        $n->{note} = $_;
-    }
+    
     return %r;
 }
 

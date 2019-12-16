@@ -31,7 +31,7 @@ if ($#ARGV == -1) {
     open $out, ">$ARGV[0]" or die;
 }
 
-foreach $w (keys lookup) 
+foreach $w (keys %lookup) 
 {
     my $dont_print = 0;
     foreach $s (&strip_plurel($w)) 

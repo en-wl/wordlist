@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use IO::Handle;
 
+use lib '.';
 use varcon qw(%map $NUM_SP);
 
 $varcon::MAX_VARIANT_LEVEL = 3;

@@ -1,5 +1,6 @@
 #!/usr/bin/perl -C 0
 
+use lib '.';
 use varcon;
 
 sub usage {

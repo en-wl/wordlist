@@ -3176,7 +3176,7 @@ A B: calipers's / Bv: callipers's | (-)
 # caliph (level 50)
 _: caliph / _V: calif / _-: khalif
 _: caliph's / _V: calif's / _-: khalif's
-_: caliphes / _V: califs / _-: khalifs
+_: caliphs / _V: califs / _-: khalifs
 
 # calisthenics (level 50)
 A C: calisthenic / B Cv: callisthenic
@@ -13106,7 +13106,7 @@ A Z: hurricanizes / B: hurricanises
 _: huzzah / _v: huzza
 _: huzzahed / _v: huzzaed
 _: huzzah's / _v: huzza's
-_: huzzahes / _v: huzzas
+_: huzzahs / _v: huzzas
 _: huzzahing / _v: huzzaing
 
 # hyalinization (level 80)
@@ -15983,7 +15983,7 @@ A Z: magnetizer's / B: magnetiser's
 # maharajah (level 50)
 _: maharajah / _v: maharaja
 _: maharajah's / _v: maharaja's
-_: maharajahes / _v: maharajas
+_: maharajahs / _v: maharajas
 
 # maharani (level 50)
 _: maharani / _v: maharanee
@@ -23686,7 +23686,7 @@ A Z: radiumizes / B: radiumises
 # rajah (level 50)
 _: rajah / _v: raja
 _: rajah's / _v: raja's
-_: rajahes / _v: rajas
+_: rajahs / _v: rajas
 
 # Rame (level 95)
 A: Rame / B: Ramae
@@ -25840,7 +25840,7 @@ A: septemia / B: septaemia
 # septet (level 50)
 _: septet / _V: septette
 _: septet's / _V: septette's
-_: septetes / _V: septettes
+_: septets / _V: septettes
 
 # septicemia <verified> (level 50)
 A C: septicemia / B: septicaemia
@@ -25965,7 +25965,7 @@ A Z: severizes / B: severises
 # sextet (level 50)
 _: sextet / _V: sextette
 _: sextet's / _V: sextette's
-_: sextetes / _V: sextettes
+_: sextets / _V: sextettes
 
 # sexualization (level 80)
 A Z: sexualization / B: sexualisation

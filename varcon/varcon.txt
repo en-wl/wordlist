@@ -16358,6 +16358,14 @@ A Cv: meager / B C: meagre
 A Cv: meagerrer / B C: meagrer
 A Cv: meagerrest / B C: meagrest
 
+# meagerly (level 50)
+A Cv: meagerly / B C: meagrely
+
+# meagerness (level 50)
+A Cv: meagerness / B C: meagreness
+A Cv: meagernesses / B C: meagrenesses
+A Cv: meagerness's / B C: meagreness's
+
 # meandrine (level 95)
 A: meandrine / B: maeandrine
 

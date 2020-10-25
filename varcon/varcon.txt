@@ -1500,6 +1500,16 @@ A Z: appetizingly / B: appetisingly
 # apprizal (level 95)
 A Z: apprizal / B: apprisal
 
+# apprize (level 60)
+A Z: apprize / B: apprise | value highly
+A Z: apprizing / B: apprising | value highly
+A Z: apprized / B: apprised | value highly
+A Z: apprizes / B: apprises | value highly
+A B: apprise | inform
+A B: apprising | inform
+A B: apprised | inform
+A B: apprises | inform
+
 # apprizer (level 80)
 A Z: apprizer / B: appriser
 A Z: apprizers / B: apprisers

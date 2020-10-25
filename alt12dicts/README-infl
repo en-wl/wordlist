@@ -1,3 +1,4 @@
+Author: Alan
 
 The 2of12id.txt file is a revision of a portion of version 2 of the
 AGID database.  It is intended to accurately reflect the level of
@@ -147,15 +148,20 @@ For these reasons, I feel that the reliability of the information
 about adjectival inflections is much lower than for other aspects
 of this list.
 
-Note by Kevin: Some of the inflections left by Alan where so uncommon
-that not there where not found in the Google Book's corpus[1] (for
-books from 1980-2008).  These inflected forms have been marked with a
-'!'.
-
 -- 
            Alan Beale               biljir@pobox.com
    "So toss away stuff you don't need in the end
     But keep what's important, and know who's your friend."
                                                     - Phish
+
+Author: Kevin
+
+Some of the inflections left by Alan for adjectives and adverbs where
+so uncommon that not there where not found in the Google Books
+corpus[1] (for books from 1980-2008).  These inflected forms have been
+marked with a '!'.
+
+The '!' is also used to mark verbs and nouns left by alan that are
+extremely uncommon.
 
 [1] http://storage.googleapis.com/books/ngrams/books/datasetsv2.html

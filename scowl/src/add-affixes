@@ -37,7 +37,7 @@ my %possessive_cross;
 while (<F>) {
   s/\r?\n$// or die;
   # (flags, base word, part of speach, infl forms)
-  my ($d,$w,$p,$a) = /^([-@\+]?)(\w+) (.).*: ?(.*)$/ or die "Bad line: >$_<";
+  my ($d,$w,$p,$a) = /^([-@\+\!]*)(\w+) (.).*: ?(.*)$/ or die "Bad line: >$_<";
   $d =~ tr/+//d;
   $possessive{$w} = "$w\'s\n" if $p eq 'N' && ($d eq '' || $use_all);
   next if $use_all;

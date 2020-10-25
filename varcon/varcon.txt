@@ -32420,14 +32420,16 @@ A: zoogleal / B: zoogloeal
 A: zygenid / B: zygaenid
 
 # Koran (level 35)
-_: Koran / _.: Quran / _v: Qur'an
+A. B.: Koran / A B: Quran / Av Bv: Qur'an
+A. B.: Korans / A B: Qurans / Av Bv: Qur'ans
+A. B.: Koran's / A B: Quran's / Av Bv: Qur'an's
 ## Quran is more correct bases on a modern transliterated from Arabic
 ## to English, but both M-W and Oxford has Koran marked as the primary
 ## form.  Technically "Qur'an" more correct but that doesn't seam to be
 ## used as much.
 
 # Koranic (level 60)
-_: Koranic / _.: Quranic / _v: Qur'anic
+A. B.: Koranic / A B: Quranic / Av Bv: Qur'anic
 ## See note for Quran
 
 # virtualization (level 60)

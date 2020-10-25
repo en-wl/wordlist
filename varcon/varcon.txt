@@ -1873,12 +1873,12 @@ A Z: aspheterizing / B: aspheterising
 A Z: aspheterizes / B: aspheterises
 
 # ass <verified> (level 20)
-A B: ass | :1
-A B: asses | :1
-A B: ass's | :1
-A: ass / B: arse | <N> :2
-A: asses / B: arses | <N> :2
-A: ass's / B: arse's | <N> :2
+A B: ass | animal
+A B: asses | animal
+A B: ass's | animal
+A: ass / B: arse | vulgar slang
+A: asses / B: arses | vulgar slang
+A: ass's / B: arse's | vulgar slang
 
 # assafetida (level 80)
 A: assafetida / B: assafoetida
@@ -2360,9 +2360,9 @@ _: barcaroles / _V: barcarolles
 _: barcarole's / _V: barcarolle's
 
 # bark <verified> (level 20)
-A B: bark | :1
-A B: barks | :1
-A B: bark's | :1
+A B: bark
+A B: barks
+A B: bark's
 A: bark / Av B: barque | (-) ship
 A: barks / Av B: barques | (-) ship
 A: bark's / Av B: barque's | (-) ship
@@ -7806,9 +7806,9 @@ A: dracenas / B: dracaenas
 A: dracenaceae / B: dracaenaceae
 
 # draft <verified> (level 20)
-A C: draft / B: draught | current
-A C: drafts / B: draughts | current
-A C: draft's / B: draught's | current
+A C: draft / B: draught | current of air
+A C: drafts / B: draughts | current of air
+A C: draft's / B: draught's | current of air
 A B: draft | <N> writing
 A B: drafts | <N> writing
 A B: draft's | <N> writing
@@ -10913,11 +10913,11 @@ A: gaufers / B: gaufres
 A: gauffer / B: gauffre
 
 # gauge <verified> (level 35)
-A B: gauge / AV B-: gage | :1
-A B: gauge's / AV B-: gage's | :1
-A B: gauged / AV B-: gaged | :1
-A B: gauging / AV B-: gaging | :1
-A B: gauges / AV B-: gages | :1
+A B: gauge / AV B-: gage
+A B: gauge's / AV B-: gage's
+A B: gauged / AV B-: gaged
+A B: gauging / AV B-: gaging
+A B: gauges / AV B-: gages
 A B: gage | (-) archaic; nautical, historical
 A B: gage's | (-) archaic; nautical, historical
 A B: gaged | (-) archaic; nautical, historical
@@ -17444,7 +17444,7 @@ A DV: molts / B D: moults
 A C: mom / B: mum | mother
 A C: moms / B: mums | mother
 A C: mom's / B: mum's | mother
-A B: mum | silent
+A B: mum | <Adj> silent
 
 # mommy (level 40)
 _: mommy / _-: mommie

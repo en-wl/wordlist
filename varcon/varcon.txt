@@ -14005,17 +14005,18 @@ A Z: inorganizations / B: inorganisations
 A Z: inorganized / B: inorganised
 
 # inquire <verified> (level 20)
-A B. C D: inquire / B Cv D.: enquire
-A B. C D: inquired / B Cv D.: enquired
-A B. C D: inquiring / B Cv D.: enquiring
-A B. C D: inquires / B Cv D.: enquires
+A B. C D Z: inquire / B Cv D.: enquire
+A B. C D Z: inquired / B Cv D.: enquired
+A B. C D Z: inquiring / B Cv D.: enquiring
+A B. C D Z: inquires / B Cv D.: enquires
 ## Enquire is more common in British English, but inquire may still be
 ## used when meaning "make a formal investigation" -- Ox
+## In addition oxford has marks inquire as the preferred variant.
 
 # inquiry <verified> (level 20)
-A B. C D: inquiry / B Cv D.: enquiry
-A B. C D: inquiries / B Cv D.: enquiries
-A B. C D: inquiry's / B Cv D.: enquiry's
+A B. C D Z: inquiry / B Cv D.: enquiry
+A B. C D Z: inquiries / B Cv D.: enquiries
+A B. C D Z: inquiry's / B Cv D.: enquiry's
 ## See note for inquire 
 
 # insignia (level 35)

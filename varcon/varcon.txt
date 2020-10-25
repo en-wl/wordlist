@@ -21176,11 +21176,6 @@ A Z: peroxidizement / B: peroxidisement
 A Z: peroxidizements / B: peroxidisements
 A Z: peroxidizement's / B: peroxidisement's
 
-# perpend (level 70)
-A: perpend / B: prepend
-A: perpended / B: prepended
-A: perpending / B: prepending
-
 # perperfect (level 95)
 A: perperfect / B: preperfect
 

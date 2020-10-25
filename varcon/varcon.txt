@@ -32451,3 +32451,10 @@ A B: prokaryote / Av Bv: procaryote
 A B: prokaryotes / Av Bv: procaryotes
 A B: prokaryote's / Av Bv: procaryote's
 A B: prokaryotic / Av Bv: procaryotic
+
+# adrenaline (level 40)
+_: adrenaline / _V: adrenalin
+_ _V: adrenalines
+_: adrenalin's / _V: adrenalin's
+## Adrenalin is a trademark but some dictionaries allow the lowercase
+## version as an alternative spelling for adrenaline.

@@ -19013,8 +19013,8 @@ A Z: onionized's / B: onionised's
 A Z: ontologize / B: ontologise
 
 # onward (level 20)
-_: onward | <Adj>
-_: onward / _V: onwards | <Adv>
+A B: onward | <Adj>
+A Z: onward / AV B: onwards | <Adv>
 
 # ooglea (level 95)
 A: ooglea / B: oogloea

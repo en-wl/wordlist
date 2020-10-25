@@ -4771,13 +4771,6 @@ A Cv DV: colorablier / B C D: colourablier
 A Cv DV: colorablies / B C D: colourablies
 A Cv DV: colorabliest / B C D: colourabliest
 
-# coloradan (level 95)
-A: coloradan / B: colouradan
-A: coloradans / B: colouradans
-
-# colorado (level 70)
-A: colorado / B: colourado
-
 # coloradoite (level 95)
 A: coloradoite / B: colouradoite
 A: coloradoite's / B: colouradoite's
@@ -4903,9 +4896,6 @@ A: colorimetrist's / B: colourimetrist's
 # colorimetry <verified> (level 80)
 A B: colorimetry / B-: colourimetry
 A B: colorimetries / B-: colourimetries
-
-# colorin (level 95)
-A: colorin / B: colourin
 
 # colorism (level 80)
 A: colorism / B: colourism

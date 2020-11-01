@@ -1875,12 +1875,15 @@ A Z: aspheterizing / B: aspheterising
 A Z: aspheterizes / B: aspheterises
 
 # ass <verified> (level 20)
-A B: ass | animal
-A B: asses | animal
-A B: ass's | animal
-A: ass / B: arse | vulgar slang
-A: asses / B: arses | vulgar slang
-A: ass's / B: arse's | vulgar slang
+A B: ass | <N> donkey
+A B: asses | <N> doneky
+A B: ass's | <N> donkey
+A: ass / B: arse | <N> buttocks
+A: asses / B: arses | <N> buttocks
+A: ass's / B: arse's | <N> buttocks
+## ass and arse have additional regional specific meanings and are
+## considered seperate words when not used to refer to a donkey or
+## someone buttock
 
 # assafetida (level 80)
 A: assafetida / B: assafoetida

@@ -32507,3 +32507,27 @@ _ _V: adrenalines
 _: adrenalin's / _V: adrenalin's
 ## Adrenalin is a trademark but some dictionaries allow the lowercase
 ## version as an alternative spelling for adrenaline.
+
+# dumpster (level 40)
+_: dumpster / _V: Dumpster
+_: dumpsters / _V: Dumpsters
+_: dumpster's / _V: Dumpster's
+## Dumpster was originally a trademark
+
+# zipper (level 35)
+_: zipper / _V: Zipper
+_: zippers / _V: Zippers
+_: zipper's / _V: Zipper's
+## Zipper was originally a trademark
+
+# sponge_cake (level 95)
+_: sponge_cake / _V: spongecake
+_: sponge_cakes / _V: spongecakes
+_: sponge_cake's / _V: spongecake's
+
+# name-drop (level 95)
+_: name-drop / _V: namedrop
+_: name-drops / _V: namedrops
+_: name-drop's / _V: namedrop's
+_: name-dropped / _V: namedropped
+_: name-dropping / _V: namedropping

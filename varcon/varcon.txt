@@ -13055,10 +13055,6 @@ A Z: humanizer / B: humaniser
 A Z: humanizers / B: humanisers
 A Z: humanizer's / B: humaniser's
 
-# hummus (level 50)
-_: hummus / _V: hoummos / _-: houmus / _-: humus | :1
-_: humus | :2
-
 # humongous (level 50)
 _: humongous / _V: humungous
 

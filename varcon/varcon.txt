@@ -1641,6 +1641,9 @@ A Dv: Archeozic / B D: Archaeozic
 A Dv: Archeozoic / B D: Archaeozoic
 A Dv: archeozoic / B D: archaeozoic
 
+# archetypal (level 35)
+_: archetypal / _V: archetypical
+
 # archetypally (level 80)
 _: archetypally / _V: archetypically
 

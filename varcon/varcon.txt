@@ -12578,7 +12578,7 @@ _: hijack / _V: highjack
 _: hijacked / _V: highjacked
 _: hijacking / _V: highjacking
 _: hijacks / _V: highjacks
-_: hijacks's / _V: highjack's
+_: hijack's / _V: highjack's
 
 # hijacker (level 40)
 _: hijacker / _V: highjacker
@@ -32174,7 +32174,7 @@ A Z: westernizes / B: westernises
 
 # whimsy (level 50)
 _: whimsy / _V: whimsey
-_: whimsys / _V: whimseys
+_: whimsies / _V: whimseys
 _: whimsy's / _V: whimsey's
 
 # whir <verified> (level 35)
@@ -32208,7 +32208,7 @@ A B: wizz | as in "gee whiz" | -- Ox: informal, chiefly N. Amer.
 # whodunit (level 40)
 _: whodunit / _V: whodunnit
 _: whodunits / _V: whodunnits
-_: whodunit's / _V: whodunnits's
+_: whodunit's / _V: whodunnit's
 
 # wigeon (level 50)
 _: wigeon / _v: widgeon

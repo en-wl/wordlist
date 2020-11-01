@@ -4403,11 +4403,12 @@ A Z: cinematize / B: cinematise
 # cinter (level 95)
 A: cinter / B: cintre
 
-# cipher <verified> (level 35)
-A B: cipher / Av Bv: cypher | :1
-A B: cipher's / Av Bv: cypher's | :1
-A B: cipher | :2
-A B: cipher's | :2
+# cipher (level 35)
+A B: cipher / Bv: cypher
+A B: ciphered / Bv: cyphered
+A B: ciphering / Bv: cyphering
+A B: ciphers / Bv: cyphers
+A B: cipher's / Bv: cypher's
 
 # Circean (level 80)
 A: Circean / B: Circaean

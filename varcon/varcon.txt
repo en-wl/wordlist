@@ -1502,10 +1502,12 @@ A Z: apprizal / B: apprisal
 
 # apprize (level 60)
 A Z: apprize / B: apprise | value highly
+A Z: apprize's / B: apprise's | value highly
 A Z: apprizing / B: apprising | value highly
 A Z: apprized / B: apprised | value highly
 A Z: apprizes / B: apprises | value highly
 A B: apprise | inform
+A B: apprise's | inform
 A B: apprising | inform
 A B: apprised | inform
 A B: apprises | inform
@@ -2360,12 +2362,12 @@ _: barcaroles / _V: barcarolles
 _: barcarole's / _V: barcarolle's
 
 # bark <verified> (level 20)
-A B: bark
-A B: barks
-A B: bark's
-A: bark / Av B: barque | (-) ship
-A: barks / Av B: barques | (-) ship
-A: bark's / Av B: barque's | (-) ship
+A B: bark | <N>
+A B: barks | <N>
+A B: bark's | <N>
+A: bark / Av B: barque | <N> (-) ship
+A: barks / Av B: barques | <N> (-) ship
+A: bark's / Av B: barque's | <N> (-) ship
 
 # baronetize (level 95)
 A Z: baronetize / B: baronetise
@@ -2729,10 +2731,16 @@ A Dv: blennorrhea / B D: blennorrhoea
 A Bv C: blond / Av B Cv: blonde | form generally used
 A Bv C: blonds / Av B Cv: blondes | form generally used
 A Bv C: blond's / Av B Cv: blonde's | form generally used
+A Bv C Av B Cv: blonder | form generally used
+A Bv C Av B Cv: blondest | form generally used
 A B: blond | often masculine forms, especially in Brit. English
+A B: blonder | often masculine forms, especially in Brit. English
+A B: blondest | often masculine forms, especially in Brit. English
 A B: blonds | often masculine forms, especially in Brit. English
 A B: blond's | often masculine forms, especially in Brit. English
 A B: blonde | often feminine forms, especially in Brit. English
+A B: blonder | often feminine forms, especially in Brit. English
+A B: blondest | often feminine forms, especially in Brit. English
 A B: blondes | often feminine forms, especially in Brit. English
 A B: blonde's | often feminine forms, especially in Brit. English
 
@@ -2769,6 +2777,8 @@ _: bogies / _V: bogeys | :1
 _: bogie's / _V: bogey's | :1
 _: bogey / _V 1: bogy / _V 2: bogie | :2
 _: bogeys / _V 1 2: bogies | :2
+_: bogeyed / _V 1 2: bogied | :2
+_: bogeying / _V 1 2: bogieing | :2
 _: bogey's / _V 1: bogy's / _V 2: bogie's | :2
 
 # boled (level 95)
@@ -5430,6 +5440,8 @@ _: cottar / _v: cotter | :1
 _: cottars / _v: cotters | :1
 _: cottar's / _v: cotter's | :1
 _: cotter | :2
+_: cottered | :2
+_: cottering | :2
 _: cotters | :2
 _: cotter's | :2
 
@@ -7209,6 +7221,8 @@ A Z: digitizer's / B: digitiser's
 
 # dike <verified> (level 35)
 A Bv C: dike / AV B Cv: dyke
+A Bv C: diked / AV B Cv: dyked
+A Bv C: diking / AV B Cv: dyking
 A Bv C: dikes / AV B Cv: dykes
 A Bv C: dike's / AV B Cv: dyke's
 A B: dyke / AV Bv: dike | lesbian
@@ -7463,10 +7477,12 @@ A Z: disindustrializing / B: disindustrialising
 A Z: disindustrializes / B: disindustrialises
 
 # disk <verified> (level 10)
-A B: disk / Av Bv: disc | :1
-A B: disk's / Av Bv: disc's | :1
-A B: disc / Av Bv: disk | :2
-A B: disc's / Av Bv: disk's | :2
+A B: disk / Av Bv: disc | <N> :1
+A B: disks / Av Bv: discs | <N> :1
+A B: disk's / Av Bv: disc's | <N> :1
+A B: disc / Av Bv: disk | <N> :2
+A B: discs / Av Bv: disks | <N> :2
+A B: disc's / Av Bv: disk's | <N> :2
 ## Disk vs. disc is a mess, rather than sort it out I will just mark
 ## each as a variant of each other.
 
@@ -11540,8 +11556,8 @@ A Cv: grayest / AV B C: greyest
 A Cv: graying / AV B C: greying
 A Cv: grays / AV B C: greys
 A Cv: gray's / AV B C: grey's
-A B: gray | (-) physical unit
-A B: grays | (-) physical unit
+A B: gray | (-) <N> physical unit
+A B: grays | (-) <N> physical unit
 
 # grayish <verified> (level 40)
 A: grayish / B: greyish
@@ -11595,6 +11611,8 @@ A Z: grizes / B: grises
 
 # groin <verified> (level 35)
 A: groin / B: groyne | wall
+A: groined / B: groyned | wall
+A: groining / B: groyning | wall
 A: groin's / B: groyne's | wall
 A: groins / B: groynes | wall
 A B: groin | body part
@@ -15615,7 +15633,10 @@ _: livableness / _V: liveableness
 
 # loathe (level 35)
 _: loathe | detest
-_: loath / _V: loth / _V: loathe | reluctant
+_: loathes | detest
+_: loathed | detest
+_: loathing | detest
+_: loath / _V: loth / _V: loathe | <Adj> reluctant
 
 # lobotomize <verified> (level 60)
 A Z: lobotomize / B: lobotomise
@@ -16250,17 +16271,21 @@ A Z: masculinizing / B: masculinising
 A Z: masculinizes / B: masculinises
 
 # mat <verified> (level 35)
-A Bv C: matte / Av: mat / AV B: matt | without lustre; cardboard ... picture
+A Bv C: matte / Av: mat / AV B: matt | <Adj> without lustre
 A: mat / A. Bv C: matte / AV B: matt | make matte # Ox Amer thinks its matte, M-W: mat
 A: mats / A. Bv C: mattes / AV B: matts | make matte
+A A. Bv C AV B: matted | make matte
+A A. Bv C AV B: matting | make matte
 A B: mat | otherwise, most uses
 A B: mats | otherwise, most uses
 A B: mat's | otherwise, most uses
+A B: matted | otherwise, most uses
+A B: matting | otherwise, most uses
 A B: matte | otherwise, some uses
 A B: mattes | otherwise, some uses
 A B: matte's | otherwise, some uses
-A B: matted | -- regardless of how mat is spelled
-A B: matting | -- regardless of how mat is spelled
+A B: matted | otherwise, some uses
+A B: matting | otherwise, some uses
 A B: Matt | <abbr> Matthew
 
 # materialization <verified> (level 50)
@@ -16371,8 +16396,10 @@ A: meandriniform / B: maeandriniform
 
 # meanie (level 55)
 _: meanie / _V: meany | :1
+_: meanies | :1
 _: meanie's / _V: meany's | :1
 _: meany | :2
+_: meanies | :2
 _: meany's | :2
 
 # mechanicalization (level 95)
@@ -16822,10 +16849,12 @@ A Z: meteorizes / B: meteorises
 # meter <verified> (level 20)
 A B: meter | measuring device
 A B: meters | measuring device
+A B: metered | measuring device
+A B: metering | measuring device
 A B: meter's | measuring device
-A Cv: meter / B C: metre | metric meter, rhythmic pattern
-A Cv: meters / B C: metres | metric meter, rhythmic pattern
-A Cv: meter's / B C: metre's | metric meter, rhythmic pattern
+A Cv: meter / B C: metre | <N> metric meter, rhythmic pattern
+A Cv: meters / B C: metres | <N> metric meter, rhythmic pattern
+A Cv: meter's / B C: metre's | <N> metric meter, rhythmic pattern
 
 # metergram (level 95)
 A: metergram / B: metregram
@@ -17975,7 +18004,11 @@ A Z: Napoleonize's / B: Napoleonise's
 _: narc / _V: nark | :1
 _: narcs / _V: narks | :1
 _: narc's / _V: nark's | :1
-_: nark | :2
+_: nark | :2 -- british
+_: narked | :2 -- british
+_: narking | :2 -- british
+_: narks | :2 -- british
+_: nark's | :2 -- british
 
 # narcotization (level 60)
 A Z: narcotization / B: narcotisation
@@ -21736,7 +21769,10 @@ _: piney / _.: piny
 
 # pinkie (level 40)
 _: pinkie | :1
+_: pinkies | :1
+_: pinkie's | :1
 _: pinkie / _v: pinky | :2
+_: pinkies | :2
 _: pinkie's / _v: pinky's | :2
 
 # pinnule (level 70)
@@ -22296,8 +22332,10 @@ A: pouders / B: poudres
 
 # pouf <verified> (level 55)
 A B: pouffe / Av Bv: pouf | :1
+A B: pouffes / Av Bv: poufs | :1
 A B: pouffe's / Av Bv: pouf's | :1
 A B: pouf | :2
+A B: poufs | :2
 A B: pouf's | :2
 
 # poulder (level 95)
@@ -22835,10 +22873,12 @@ A Z: preutilizes / B: preutilises
 _: preventable / _V: preventible
 
 # preview <verified> (level 20)
-A B: preview / AV: prevue | movie preview
-A B: previews / AV: prevues | movie preview
-A B: preview's / AV: prevue's | movie preview
-A B: preview | otherwise
+A B: preview / AV: prevue | <N> movie preview
+A B: previews / AV: prevues | <N> movie preview
+A B: preview's / AV: prevue's | <N> movie preview
+A B: preview
+A B: previews
+A B: preview's
 
 # previze (level 70)
 A Z: previze / B: previse
@@ -23618,12 +23658,14 @@ A Z: racialize / B: racialise
 A Z: racializes / B: racialises
 
 # racket <verified> (level 20)
-A B Cv Dv: racket / Av Bv C D: racquet | :1
-A B Cv Dv: rackets / Av Bv C D: racquets | :1
-A B Cv Dv: racket's / Av Bv C D: racquet's | :1
-A B: racket | :2
-A B: rackets | :2
-A B: racket's | :2
+A B Cv Dv: racket / Av Bv C D: racquet | <N> game, related implement
+A B Cv Dv: rackets / Av Bv C D: racquets | <N> game, related implement
+A B Cv Dv: racket's / Av Bv C D: racquet's | <N> game, related implement
+A B: racket
+A B: racketed
+A B: racketing
+A B: rackets
+A B: racket's
 
 # Radborne (level 95)
 A: Radborne / B: Radbourne
@@ -26642,6 +26684,7 @@ A Z: sovietizes / B: sovietises
 # soy (level 50)
 _: soy | sauce
 _: soy / _V: soya | soybean
+_: soys / _V: soyas | soybean
 _: soy's / _V: soya's | soybean
 
 # spacey (level 40)
@@ -27102,6 +27145,8 @@ A: storier / B: stourier
 A B: story | book
 A B: stories | book
 A B: story's | book
+A B: storied | book
+A B: storying | book
 A Cv DV: story / AV B C D: storey | level of building
 A Cv DV: stories / AV B C D: storeys | level of building
 A Cv DV: story's / AV B C D: storey's | level of building
@@ -28609,6 +28654,8 @@ A: tinseliest / B: tinselliest
 A B: tire | exhausted
 A B: tires | exhausted
 A B: tire's | exhausted
+A B: tired | exhausted
+A B: tiring | exhausted
 A C: tire / B: tyre | wheel
 A C: tires / B: tyres | whell
 A C: tire's / B: tyre's | wheel
@@ -32195,6 +32242,8 @@ A Z: Whitmanize's / B: Whitmanise's
 # whiz <verified> (level 35)
 A BV C: whiz / Av B Cv: whizz | :1
 A BV C Av B Cv: whizzes | :1
+A BV C Av B Cv: whizzed | :1
+A BV C Av B Cv: whizzing | :1
 A BV C: whiz's / Av B Cv: whizz's | :1
 A BV C 1: whiz / Av B Cv 2: whizz / AV Bv Cv 3: wiz | :2
 A BV C 1: whiz's / Av B Cv 2: whizz's / AV Bv Cv 3: wiz's | :2

@@ -313,7 +313,7 @@ achieve V: achieved  achieving  achieves
 achievement N: achievements
 achiever N: achievers
 achoo I:
-!achoo N: achoos
+achoo N: achoos
 achromatic A:
 achy A: achier  achiest
 acid A: -acider  -acidest
@@ -4247,7 +4247,7 @@ bobsled N: bobsleds
 bobsled V: bobsledded  bobsledding  bobsleds
 bobsledder N: bobsledders
 bobsleigh N: bobsleighs
-!bobsleigh V: bobsleighed  bobsleighing  bobsleighs
+bobsleigh V: bobsleighed  bobsleighing  bobsleighs
 -bobtail A:
 bobtail N: bobtails
 -bobtail V: bobtailed  bobtailing  bobtails
@@ -4331,7 +4331,7 @@ bombastic A:
 bombastically A:
 bomber N: bombers
 bombproof A:
-!bombproof V: bombproofed  bombproofing  bombproofs
+bombproof V: bombproofed  bombproofing  bombproofs
 bombshell N: bombshells
 bonanza N: bonanzas
 bonbon N: bonbons
@@ -9044,7 +9044,7 @@ countermand V: countermanded  countermanding  countermands
 countermeasure N: countermeasures
 counteroffensive N: counteroffensives
 counteroffer N: counteroffers
-!counteroffer V: counteroffered  counteroffering  counteroffers
+counteroffer V: counteroffered  counteroffering  counteroffers
 counterpane N: counterpanes
 counterpart N: counterparts
 counterpoint N: counterpoints
@@ -10185,7 +10185,7 @@ decaf N: ~decafs
 decaffeinate V: decaffeinated  decaffeinating  decaffeinates
 decagon N: decagons
 decal N: decals
-!-decal V: decaled (decalled)  decaling (decalling)  decals
+-decal V: decaled (decalled)  decaling (decalling)  decals
 decamp V: decamped  decamping  decamps
 decampment N: ~decampments
 decant V: decanted  decanting  decants
@@ -15732,7 +15732,7 @@ foot N: feet (foot)
 foot V: footed  footing  foots
 footage N: ~footages
 football N: footballs
-!-football V: footballed  footballing  footballs
+-football V: footballed  footballing  footballs
 footballer N: footballers
 footbridge N: footbridges
 footfall N: footfalls
@@ -17392,7 +17392,7 @@ goshawk N: goshawks
 gosling N: goslings
 gospel A:
 gospel N: gospels
-!-gospel V: gospeled (gospelled)  gospeling (gospelling)  gospels
+-gospel V: gospeled (gospelled)  gospeling (gospelling)  gospels
 gossamer A:
 gossamer N: ~gossamers
 gossip N: gossips
@@ -18578,7 +18578,7 @@ heathenism N: ~heathenisms
 heather N: ~heathers
 heating N: ~heatings
 heatproof A:
-!heatproof V: heatproofed  heatproofing  heatproofs
+heatproof V: heatproofed  heatproofing  heatproofs
 heatstroke N: ~heatstrokes
 heave N: heaves
 heave V: heaved | hove {nautical}  heaving  heaves
@@ -19311,7 +19311,7 @@ horsefly N: horseflies
 horsehair N: ~horsehairs
 horsehide N: ~horsehides
 horselaugh N: horselaughs
-!-horselaugh V: horselaughed  horselaughing  horselaughs
+-horselaugh V: horselaughed  horselaughing  horselaughs
 horseless A:
 horseman N: horsemen
 horsemanship N: ~horsemanships
@@ -24145,7 +24145,7 @@ mackerel N: mackerel | mackerels
 mackinaw N: mackinaws
 mackintosh N: mackintoshes
 macrame N: ~macrames
-!-macrame V: macramed (macrameed)  macrameing  macrames
+-macrame V: macramed (macrameed)  macrameing  macrames
 macro A:
 macro N: macros
 macrobiotic A:
@@ -26230,7 +26230,7 @@ motor V: motored  motoring  motors
 motorbike N: motorbikes
 motorbike V: motorbiked  motorbiking  motorbikes
 motorboat N: motorboats
-!motorboat V: motorboated  motorboating  motorboats
+motorboat V: motorboated  motorboating  motorboats
 motorcade N: motorcades
 -motorcade V: motorcaded  motorcading  motorcades
 motorcar N: motorcars
@@ -26650,7 +26650,7 @@ name A:
 name N: names
 name V: named  naming  names
 nameable A:
-!namedrop V: namedropped  namedropping  namedrops
+namedrop V: namedropped  namedropping  namedrops
 namedropping N: ~namedroppings
 nameless A:
 namelessly A:
@@ -27466,7 +27466,7 @@ nonresident A:
 nonresident N: nonresidents
 nonresidential A:
 nonresidual A:
-!nonresidual N: nonresiduals
+nonresidual N: nonresiduals
 nonresistance N: ~nonresistances
 nonresistant A:
 -nonresistant N: nonresistants
@@ -29138,7 +29138,7 @@ paltry A: paltrier  paltriest
 pampas N:
 pamper V: pampered  pampering  pampers
 pamphlet N: pamphlets
-!pamphlet V: pamphleted  pamphleting  pamphlets
+pamphlet V: pamphleted  pamphleting  pamphlets
 pamphleteer N: pamphleteers
 -pamphleteer V: pamphleteered  pamphleteering  pamphleteers
 pan N: pans
@@ -33083,7 +33083,7 @@ radiophone N: radiophones
 radioscopy N: ~radioscopies
 radiosonde N: radiosondes
 radiotelegraph N: radiotelegraphs
-!radiotelegraph V: radiotelegraphed  radiotelegraphing  radiotelegraphs
+radiotelegraph V: radiotelegraphed  radiotelegraphing  radiotelegraphs
 radiotelegraphy N: ~radiotelegraphies
 radiotelephone N: radiotelephones
 -radiotelephone V: radiotelephoned  radiotelephoning  radiotelephones
@@ -37214,7 +37214,7 @@ shortsightedness N: ~shortsightednesses
 shortstop N: shortstops
 shortwave A:
 shortwave N: shortwaves
-!-shortwave V: shortwaved  shortwaving  shortwaves
+-shortwave V: shortwaved  shortwaving  shortwaves
 -shorty A:
 shorty N: shorties
 shot A:
@@ -37400,7 +37400,7 @@ sight V: sighted  sighting  sights
 sighting N: sightings
 sightless A:
 sightly A: sightlier  sightliest
-!sightread V: sightread  sightreading  sightreads
+sightread V: sightread  sightreading  sightreads
 sightseeing N: ~sightseeings
 sightseer N: sightseers
 sigma N: sigmas
@@ -38938,7 +38938,7 @@ spokeswoman N: spokeswomen
 spoliation N: ~spoliations
 sponge N: sponges
 sponge V: sponged  sponging  sponges
-!spongecake N: spongecakes
+spongecake N: spongecakes
 sponger N: spongers
 sponginess N: ~sponginesses
 spongy A: spongier  spongiest

@@ -3917,9 +3917,9 @@ A: centiliters / B: centilitres
 A: centiliter's / B: centilitre's
 
 # centimeter <verified> (level 35)
-A: centimeter / B: centimetre
-A: centimeters / B: centimetres
-A: centimeter's / B: centimetre's
+A Cv: centimeter / B C: centimetre
+A Cv: centimeters / B C: centimetres
+A Cv: centimeter's / B C: centimetre's
 
 # centralization <verified> (level 50)
 A Z: centralization / B: centralisation
@@ -5939,16 +5939,6 @@ A Z: deaminize / B: deaminise
 _: deary / _v: dearie
 _: deary's / _v: dearie's
 
-# decaliter (level 70)
-A: decaliter / B: decalitre
-A: decaliters / B: decalitres
-A: decaliter's / B: decalitre's
-
-# decameter (level 70)
-A: decameter / B: decametre
-A: decameters / B: decametres
-A: decameter's / B: decametre's
-
 # decapitalization (level 80)
 A Z: decapitalization / B: decapitalisation
 A Z: decapitalizations / B: decapitalisations
@@ -6055,9 +6045,9 @@ A Z: decimalizing / B: decimalising
 A Z: decimalizes / B: decimalises
 
 # decimeter <verified> (level 60)
-A: decimeter / B: decimetre
-A: decimeters / B: decimetres
-A: decimeter's / B: decimetre's
+A Cv: decimeter / B C: decimetre
+A Cv: decimeters / B C: decimetres
+A Cv: decimeter's / B C: decimetre's
 
 # decivilize (level 80)
 A Z: decivilize / B: decivilise
@@ -6305,19 +6295,19 @@ A Z: deionizing / B: deionising
 A Z: deionizes / B: deionises
 
 # dekagram (level 70)
-A B C: dekagram / Bv: dekagramme
-A B C: dekagrams / Bv: dekagrammes
-A B C: dekagram's / Bv: dekagramme's
+A: dekagram's / A. B C: decagram / Bv: decagramme
+A: dekagram's  A. B C: decagrams / Bv: decagrammes
+A: dekagram's / A. B C: decagram's / Bv: decagramme's
 
 # dekaliter (level 70)
-A: dekaliter / B: dekalitre
-A: dekaliters / B: dekalitres
-A: dekaliter's / B: dekalitre's
+A: dekaliter / A.: decaliter / B: decalitre
+A: dekaliters / A.: decaliter / B: decalitres
+A: dekaliter's / A.: decaliter / B: decalitre's
 
 # dekameter (level 70)
-A: dekameter / B: dekametre
-A: dekameters / B: dekametres
-A: dekameter's / B: dekametre's
+A: dekameter / A. Cv: decameter / B C: decametre
+A: dekameters / A. Cv: decameter / B C: decametres
+A: dekameter's / A. Cv: decameter / B C: decametre's
 
 # delimitize (level 95)
 A Z: delimitize / B: delimitise
@@ -9934,7 +9924,8 @@ A Z: feminizing / B: feminising
 A Z: feminizes / B: feminises
 
 # femtometer (level 95)
-A: femtometer / B: femtometre
+A Cv: femtometer / B C: femtometre
+A Cv: femtometers / B C: femtometres
 
 # feralized (level 80)
 A Z: feralized / B: feralised
@@ -12027,9 +12018,9 @@ A: hectoliters / B: hectolitres
 A: hectoliter's / B: hectolitre's
 
 # hectometer <verified> (level 60)
-A: hectometer / B: hectometre
-A: hectometers / B: hectometres
-A: hectometer's / B: hectometre's
+A Cv: hectometer / B C: hectometre
+A Cv: hectometers / B C: hectometres
+A Cv: hectometer's / B C: hectometre's
 
 # hed (level 80)
 A: hed / B: haed
@@ -14830,9 +14821,9 @@ A B C: kilograms / Bv: kilogrammes
 A B C: kilogram's / Bv: kilogramme's
 
 # kiloliter <verified> (level 60)
-A Cv: kiloliter / B C: kilolitre
-A Cv: kiloliters / B C: kilolitres
-A Cv: kiloliter's / B C: kilolitre's
+A CV: kiloliter / B C: kilolitre
+A CV: kiloliters / B C: kilolitres
+A CV: kiloliter's / B C: kilolitre's
 
 # kilometer <verified> (level 35)
 A Cv: kilometer / B C: kilometre
@@ -16516,7 +16507,8 @@ A Z: mediumize / B: mediumise
 A Z: mediumizes / B: mediumises
 
 # megameter (level 95)
-A: megameter / B: megametre
+A Cv: megameter / B C: megametre
+A Cv: megameters / B C: megametres
 
 # megbote (level 95)
 A: megbote / B: maegbote
@@ -16949,9 +16941,9 @@ A: microliter's / B: microlitre's
 A B: micrometer | gauge
 A B: micrometers | gauge
 A B: micrometer's | gauge
-A: micrometer / B: micrometre | metric meter
-A: micrometers / B: micrometres | metric meter
-A: micrometer's / B: micrometre's | metric meter
+A Cv: micrometer / B C: micrometre | metric meter
+A Cv: micrometers / B C: micrometres | metric meter
+A Cv: micrometer's / B C: micrometre's | metric meter
 
 # micromillimeter (level 70)
 A: micromillimeter / B: micromillimetre
@@ -17040,9 +17032,9 @@ A: milliliters / B: millilitres
 A: milliliter's / B: millilitre's
 
 # millimeter <verified> (level 35)
-A: millimeter / B: millimetre
-A: millimeters / B: millimetres
-A: millimeter's / B: millimetre's
+A Cv: millimeter / B C: millimetre
+A Cv: millimeters / B C: millimetres
+A Cv: millimeter's / B C: millimetre's
 
 # millionaire (level 35)
 _: millionaire / _-: millionnaire
@@ -17981,8 +17973,8 @@ A Z: nanization / B: nanisation
 A Z: nanizations / B: nanisations
 
 # nanogram (level 80)
-A C: nanogram / B: nanogramme
-A C: nanograms / B: nanogrammes
+A B C: nanogram / Bv: nanogramme
+A B C: nanograms / Bv: nanogrammes
 
 # nanometer <verified> (level 70)
 A Cv: nanometer / B C: nanometre
@@ -21679,14 +21671,14 @@ A: piasters / B: piastres
 A: piaster's / B: piastre's
 
 # picogram (level 80)
-A C: picogram / B: picogramme
-A C: picograms / B: picogrammes
-A C: picogram's / B: picogramme's
+A B C: picogram / Bv: picogramme
+A B C: picograms / Bv: picogrammes
+A B C: picogram's / Bv: picogramme's
 
 # picometer (level 95)
-A: picometer / B: picometre
-A: picometers / B: picometres
-A: picometer's / B: picometre's
+A Cv: picometer / B C: picometre
+A Cv: picometers / B C: picometres
+A Cv: picometer's / B C: picometre's
 
 # pictorialization (level 80)
 A Z: pictorialization / B: pictorialisation
@@ -32531,3 +32523,19 @@ _: name-drops / _V: namedrops
 _: name-drop's / _V: namedrop's
 _: name-dropped / _V: namedropped
 _: name-dropping / _V: namedropping
+
+# gigameter (level 60)
+A Cv: gigameter / B C: gigametre
+A Cv: gigameters / B C: gigametres
+
+# megagram <verified> (level 60)
+A B C: megagram / Bv: megagramme
+A B C: megagrams / Bv: megagrammes
+
+# gigagram <verified> (level 60)
+A B C: gigagram / Bv: gigagramme
+A B C: gigagrams / Bv: gigagrammes
+
+# microgram (level 60)
+A B C: microgram / Bv: microgramme
+A B C: micrograms / Bv: nanogrammes

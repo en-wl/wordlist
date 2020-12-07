@@ -32523,6 +32523,8 @@ _: name-drops / _V: namedrops
 _: name-drop's / _V: namedrop's
 _: name-dropped / _V: namedropped
 _: name-dropping / _V: namedropping
+_: name-droppings / _V: namedroppings
+_: name-dropping's / _V: namedropping's
 
 # gigameter (level 60)
 A Cv: gigameter / B C: gigametre

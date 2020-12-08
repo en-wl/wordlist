@@ -42,9 +42,9 @@ information in a different way.
 
 <a href="/alt12dicts-readme">readme</a>,
 <a href="/alt12dicts-infl-readme">readme-infl</a>,
-<a href="http://downloads.sourceforge.net/wordlist/alt12dicts-2016.06.26.tar.gz">tar.gz</a>,
-<a href="http://downloads.sourceforge.net/wordlist/alt12dicts-2016.06.26.zip">zip</a>
-(2016.06.26) 
+<a href="http://downloads.sourceforge.net/wordlist/alt12dicts-2020.12.07.tar.gz">tar.gz</a>,
+<a href="http://downloads.sourceforge.net/wordlist/alt12dicts-2020.12.07.zip">zip</a>
+(2020.12.07)
 [source](http://github.com/en-wl/wordlist)        
 
 

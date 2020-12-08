@@ -1,9 +1,9 @@
 Variant Conversion Info (VarCon)
 ********************************
 
-Version 2019.10.06
+Version 2020.12.07
 
-Copyright 2000-2019 by Kevin Atkinson (kevina@gnu.org) and Benjamin
+Copyright 2000-2020 by Kevin Atkinson (kevina@gnu.org) and Benjamin
 Titze (btitze@protonmail.ch).
 
 This package contains information to convert between American,
@@ -385,9 +385,15 @@ The primary sources for this addition were:
 Changelog
 =========
 
-From 2018.10.06 to ????
+From 2018.10.06 to 2020.12.07
+
+   - Additional documentation on file format
 
    - Minor change in file format
+
+   - Fix scripts to work with modern versions of Perl.
+
+   - Various new entries
 
    - Additional cleanups
 

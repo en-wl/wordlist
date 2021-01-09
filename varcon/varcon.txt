@@ -6296,7 +6296,7 @@ A Z: deionizes / B: deionises
 
 # dekagram (level 70)
 A: dekagram's / A. B C: decagram / Bv: decagramme
-A: dekagram's  A. B C: decagrams / Bv: decagrammes
+A: dekagram's / A. B C: decagrams / Bv: decagrammes
 A: dekagram's / A. B C: decagram's / Bv: decagramme's
 
 # dekaliter (level 70)
@@ -23801,7 +23801,7 @@ A: ratite / B: ratitae
 # ratlines (level 60)
 _: ratlines / _-: ratlins
 _: ratline's / _-: ratlin's
-_: ratline / _-: ratlin -- o: usually plural
+_: ratline / _-: ratlin | -- o: usually plural
 
 # ravel <verified> (level 35)
 A: raveled / B: ravelled | <V>
@@ -32350,7 +32350,7 @@ _: woollier / _V: woolier | <Adj>
 _: woolliest / _V: wooliest | <Adj>
 _ 1: woolly / _V 2: wooly / _V 3: woolie | <N>
 _ 1: woollies / _V 2 3: woolies | <N>
-_ 1: woolly's / _V 2: wooly's  / _V 3: woolie's | <N>
+_ 1: woolly's / _V 2: wooly's / _V 3: woolie's | <N>
 
 # wornil (level 95)
 A: wornil / B: wournil

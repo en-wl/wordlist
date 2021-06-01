@@ -641,9 +641,11 @@ A Z: aluminizing / B: aluminising
 A Z: aluminizes / B: aluminises
 
 # aluminum <verified> (level 35)
-A C: aluminum / B: aluminium
-A C: aluminums / B: aluminiums
-A C: aluminum's / B: aluminium's
+A C: aluminum / AV B CV: aluminium
+A C: aluminums / AV B CV: aluminiums
+A C: aluminum's / AV B CV: aluminium's
+## Aluminium is the IUPAC spelling but still not used in American or
+## Canadian english.
 
 # alumni (level 40)
 _: alumni / _-: alumnuses
@@ -3912,14 +3914,16 @@ A B C: centigrams / Bv: centigrammes
 A B C: centigram's / Bv: centigramme's
 
 # centiliter <verified> (level 50)
-A: centiliter / B: centilitre
-A: centiliters / B: centilitres
-A: centiliter's / B: centilitre's
+A: centiliter / AV B: centilitre
+A: centiliters / AV B: centilitres
+A: centiliter's / AV B: centilitre's
+## Centilitre is the offical BIPM spelling
 
 # centimeter <verified> (level 35)
-A Cv: centimeter / B C: centimetre
-A Cv: centimeters / B C: centimetres
-A Cv: centimeter's / B C: centimetre's
+A Cv: centimeter / AV B C: centimetre
+A Cv: centimeters / AV B C: centimetres
+A Cv: centimeter's / AV B C: centimetre's
+## Centimetre is the official BIPM spelling
 
 # centralization <verified> (level 50)
 A Z: centralization / B: centralisation
@@ -4007,9 +4011,10 @@ A: Cesaria's / B: Caesaria's
 A: cesious / B: caesious
 
 # cesium <verified> (level 50)
-A C Dv: cesium / B Cv D: caesium
-A C Dv: cesiums / B Cv D: caesiums
-A C Dv: cesium's / B Cv D: caesium's
+A C Dv: cesium / AV B Cv D: caesium
+A C Dv: cesiums / AV B Cv D: caesiums
+A C Dv: cesium's / AV B Cv D: caesium's
+## Caesium is the IUPAC spelling but still not used in American english.
 
 # cespitose (level 70)
 A Dv: cespitose / B D: caespitose
@@ -15571,9 +15576,10 @@ _: litchis / _v: lychees / _V: lichees
 _: litchi's / _v: lychee's / _V: lichee's
 
 # liter <verified> (level 20)
-A: liter / B: litre
-A: liters / B: litres
-A: liter's / B: litre's
+A: liter / AV B: litre
+A: liters / AV B: litres
+A: liter's / AV B: litre's
+## Litre is the BIPM spelling.
 
 # literalization (level 80)
 A Z: literalization / B: literalisation
@@ -16847,9 +16853,10 @@ A B: meters | measuring device
 A B: metered | measuring device
 A B: metering | measuring device
 A B: meter's | measuring device
-A Cv: meter / B C: metre | <N> metric meter, rhythmic pattern
-A Cv: meters / B C: metres | <N> metric meter, rhythmic pattern
-A Cv: meter's / B C: metre's | <N> metric meter, rhythmic pattern
+A Cv: meter / AV B C: metre | <N> metric meter, rhythmic pattern
+A Cv: meters / AV B C: metres | <N> metric meter, rhythmic pattern
+A Cv: meter's / AV B C: metre's | <N> metric meter, rhythmic pattern
+## metre is the offical BIPM spelling
 
 # metergram (level 95)
 A: metergram / B: metregram
@@ -27467,16 +27474,15 @@ A Cv: sulfide's / B C: sulphide's
 A Cv: sulfides / B C: sulphides
 
 # sulfur <verified> (level 35)
-A BV Cv Dv: sulfur / B C D: sulphur
-A BV Cv Dv: sulfured / B C D: sulphured
-A BV Cv Dv: sulfuring / B C D: sulphuring
-A BV Cv Dv: sulfurs / B C D: sulphurs
-A BV Cv Dv: sulfur's / B C D: sulphur's
-A B: sulfur | (-) Chemistry
-A B: sulfured | (-) Chemistry
-A B: sulfuring | (-) Chemistry
-A B: sulfurs | (-) Chemistry
-A B: sulfur's | (-) Chemistry
+A Bv: sulfur / B: sulphur
+A Bv: sulfured / B: sulphured
+A Bv: sulfuring / B: sulphuring
+A Bv: sulfurs / B: sulphurs
+A Bv: sulfur's / B: sulphur's
+## From lexico.com: The standard US spelling is sulfur; sulphur is the
+## traditional British spelling. However, the -f- spelling is now
+## standard in scientific and technical writing in the UK, and is
+## increasingly used in other contexts as well
 
 # sulfuric <verified> (level 50)
 A Cv Dv: sulfuric / B C D: sulphuric

@@ -33,7 +33,9 @@ prep: .dirs .enable .enable-sup .ukacd .yawl .mwords .census .uk-freq-class
 	touch .yawl
 
 .mwords: other/mwords.tar.gz
-	tar xfvz other/mwords.tar.gz
+	tar xfvz other/mwords.tar.gz --exclude=mwords/README
+	cp other/mwords-readme-prefix mwords/README
+	tar xfz other/mwords.tar.gz --to-stdout mwords/README >> mwords/README
 	touch mwords
 	touch .mwords
 

@@ -41,7 +41,7 @@ a few special verbs):
   <past tense> [<past participle>] <-ing form> <-s form> 
 and for adjective or adverbs:
   <-er form> <-est form>
-Each form is seperated by a ' | '.
+Each form is separated by a ' | '.
 
 Special cases:
 be:
@@ -79,15 +79,15 @@ current word.  A ? after a word means that the word was not in the
 word list but if it was it would be considered an inflected form of
 the base word.
 
-This verson is now almost as accurate as Alan Beale's 2of12id file
+This version is now almost as accurate as Alan Beale's 2of12id file
 distributed with the "Unofficial Alternate 12 Dicts Package" for the
 base words which have an entry in 2of12id.txt with a few notable
 exceptions.  The most obvious one is the "person" entry.  Alan Beale
 considers, based on what his sources have told him, that "persons" is
 the proper plural for "person" and "people" is considered a variant.
 I however disagree and decided to consider "people" the primary form
-and "persons" as the sligtly less perfered variant based on my own
-experence and http://www.quinion.com/words/usagenotes/un-person.htm
+and "persons" as the slightly less preferred variant based on my own
+experience and http://www.quinion.com/words/usagenotes/un-person.htm
 which says:
 
   The normal plural of person was persons ... However, there is

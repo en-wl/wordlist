@@ -87,7 +87,7 @@ A version of David Bartlett list (based on R 1.20) with some minor changes by L�
 
 # Canadian (en_CA) #
 
-## Offical ##
+## Official ##
 
 * <http://wordlist.aspell.net/dicts>
 * Kevin Atkinson
@@ -121,7 +121,7 @@ A version with some minor changes by László Németh (Hunspell author) is inclu
 
 ## Others ##
 
-There was a version at www.JustLocal.com.au under a Free license.  However, the author pulled that version.  I belive there is a non-free one still available.
+There was a version at www.JustLocal.com.au under a Free license.  However, the author pulled that version.  I believe there is a non-free one still available.
 
 # New Zealand (en_NZ) #
 

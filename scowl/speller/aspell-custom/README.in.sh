@@ -6,7 +6,7 @@ Original Word List By:
 Copyright Terms: Copyrighted (see the file Copyright for the exact terms)
 Wordlist URL: http://wordlist.aspell.net/
 
-Created with http://app.aspell.net/create with the following paramaters:
+Created with http://app.aspell.net/create with the following parameters:
 `cat "$PARMS_FILE"`
 
 This is a Custom English dictionary for Aspell.  It requires Aspell 
@@ -61,7 +61,7 @@ example to to make it the default for en_US:
 
 If you wish to use this dictionary with a particular program than does
 not allow you to directly select the dictionary than you can also add
-the alias to the ASPELL_CONF env. varable, for example:
+the alias to the ASPELL_CONF env. variable, for example:
   ASPELL_CONF='add-dict-alias en_US en-custom' emacs
 
 If you already have an English dictionary installed and do not wish to

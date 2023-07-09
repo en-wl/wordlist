@@ -56,7 +56,7 @@ entries will sum to the total dictionary count, while the scond-class
 entry count is independent of them, except that of course it is never
 greater than the total count.
 
-Words marked with a colon (":") after it are abbrevations which are
+Words marked with a colon (":") after it are abbreviations which are
 entirely lower-case and alphabetic.
 
 This file contains almost all the information found in the normal
@@ -153,7 +153,7 @@ Additional notes on the list from Alan:
   occasionally disagree.
 
 Variants.txt has not been updated for release 6, as critical
-information about how the list was contructed has unfortunately been
+information about how the list was constructed has unfortunately been
 lost.
 
 
@@ -191,7 +191,7 @@ See README-infl
 
 2of4brif.txt, 3esl.txt, and 5desk.txt neol2016.txt description:
 
-These files are identical to the orignal files in the 12Dicts package.
+These files are identical to the original files in the 12Dicts package.
 See README-orig for more info.
 
 

@@ -119,7 +119,7 @@ Varcon Groups
 -------------
 
 Sometimes the spelling of a word depends on the usage in which case a
-cluster is split into multiple groups, with each group represting one
+cluster is split into multiple groups, with each group representing one
 usage of a word.  Usage annotations and/or pos tags are used to
 distinguish one group from another.
 

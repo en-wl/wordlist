@@ -105,7 +105,7 @@ Newness score is defined as the frequency the word appears between the
 The "should incl" score indicates if a word should or should not be
 considered for inclusion in the given dictionary based on the
 frequency of the word in the corpus.  A word that is already included
-is labled as "incl.".  A word with 5 stars should most likely be
+is labeled as "incl.".  A word with 5 stars should most likely be
 included unless there is a good reason not to.  A word with 3 stars
 (***) is still worth considering and a word with 1 star (*) should
 most likely not be considered.

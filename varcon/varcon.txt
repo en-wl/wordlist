@@ -28762,7 +28762,7 @@ A Z: tourizes / B: tourises
 
 # toward (level 10)
 _: toward | <Adj>
-_: toward / _v: towards | <Prep>
+_: toward / _.: towards | <Prep>
 
 # towel <verified> (level 35)
 A: toweled / B: towelled

@@ -11453,23 +11453,10 @@ A Z: governmentalizes / B: governmentalises
 A: Goyesque / B: Goyaesque
 
 # Graecize (level 70)
-A Z: Graecize / B: Graecise | :1
-A Z: Graecized / B: Graecised | :1
-A Z: Graecizing / B: Graecising | :1 
-A Z: Graecizes / B: Graecises | :1
-A: Grecise / B: Graecise | :2
-A: Grecise's / B: Graecise's | :2
-A: Grecised / B: Graecised | :2
-A: Grecised's / B: Graecised's | :2
-A: Grecising / B: Graecising | :2
-A: Grecising's / B: Graecising's | :2
-A Z: Grecize / B: Grecise | :3
-A Z: Grecized / B: Grecised | :3
-A Z: Grecizing / B: Grecising | :3
-A Z: grecize / B: grecise | :4
-A Z: grecized / B: grecised | :4
-A Z: grecizing / B: grecising | :4
-A Z: grecizes / B: grecises | :4
+A: Grecize / Av: grecize / B: Graecise / Z: Graecize / B-: Grecise
+A: Grecized / Av: grecized / B: Graecised / Z: Graecized / B-: Grecised
+A: Grecizing / Av: grecizing / B: Graecising / Z: Graecizing / B-: Grecising
+A: Grecizes / Av: grecizes / B: Graecises / Z: Graecizes / B-: Grecises
 
 # grammaticize (level 80)
 A Z: grammaticize / B: grammaticise

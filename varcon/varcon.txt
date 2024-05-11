@@ -87,7 +87,8 @@ A: accouterments / Av B: accoutrements
 A: accouterment's / Av B: accoutrement's
 
 # accursed <verified> (level 50)
-A B: accursed / AV B-: accurst # ODE: archaic, M-W: "or" but can find little evidence of use
+A B: accursed / AV B-: accurst
+## ODE: archaic, M-W: "or" but can find little evidence of use
 
 # Acemetae (level 95)
 A Dv: Acemetae / B D: Acoemetae
@@ -1746,7 +1747,7 @@ A Cv DV: armorless / B C D: armourless
 
 # armory <verified> (level 35)
 A Cv DV: armory / B C D: armoury
-A Cv DV: armories / B C D: armouries # Ox claims "armories" is the British plural but that has got to be a mistake 
+A Cv DV: armories / B C D: armouries # Ox claims "armories" is the British plural but that has got to be a mistake
 A Cv DV: armory's / B C D: armoury's
 
 # aromatite (level 95)
@@ -9127,7 +9128,7 @@ A Dv: esophagismus / B D: oesophagismus
 A Dv: esophagitis / B D: oesophagitis
 
 # esophagus <verified> (level 35)
-A Dv: esophagus / B D: oesophagus
+A C Dv: esophagus / B D: oesophagus
 A C Dv: esophagi / Av Cv: esophaguses / B D: oesophagi / Bv: oesophaguses
 
 # Essenize (level 95)
@@ -10069,7 +10070,7 @@ A: feture / B: foeture
 A B C Z: fetus / Bv ZV: foetus
 A B C Z: fetuses / Bv ZV: foetuses
 A B C Z: fetus's / Bv ZV: foetus's
-## foetus marked as British-only variant for "non-technical use" by Ox 
+## foetus marked as British-only variant for "non-technical use" by Ox
 
 # feudalizable (level 95)
 A Z: feudalizable / B: feudalisable
@@ -14034,7 +14035,7 @@ A B. C D Z: inquires / B Cv D.: enquires
 A B. C D Z: inquiry / B Cv D.: enquiry
 A B. C D Z: inquiries / B Cv D.: enquiries
 A B. C D Z: inquiry's / B Cv D.: enquiry's
-## See note for inquire 
+## See note for inquire
 
 # insignia (level 35)
 _ 1: insignia / _V 2: insigne
@@ -14371,6 +14372,7 @@ A C Dv: ischemia's / B D: ischaemia's
 
 # ischemic <verified> (level 70)
 A C Dv: ischemic / B D: ischaemic
+A C Dv: ischemics / B D: ischaemics
 
 # Islamicize (level 80)
 A Z: Islamicize / B: Islamicise
@@ -32084,9 +32086,6 @@ A Z: vulgarizes / B: vulgarises
 A Z: vulgarizer / B: vulgariser
 A Z: vulgarizers / B: vulgarisers
 A Z: vulgarizer's / B: vulgariser's
-
-# wackes (level 50)
-A: wackes / B: wackoes
 
 # wacky (level 40)
 _: wacky / _V: whacky

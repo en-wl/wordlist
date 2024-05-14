@@ -3230,9 +3230,6 @@ A Z: Calvinize's / B: Calvinise's
 # camelhair (level 60)
 _: camelhair # camel hair (camel's hair)
 
-# camisades (level 80)
-A: camisades / B: camisadoes
-
 # camize (level 70)
 A Z: camize / B: camise
 
@@ -5524,9 +5521,6 @@ A C: cozy's / B Cv: cosy's
 
 # craizey (level 95)
 A Z: craizey / B: craisey
-
-# crambes (level 80)
-A: crambes / B: cramboes
 
 # crawlerize (level 95)
 A Z: crawlerize / B: crawlerise
@@ -10875,9 +10869,6 @@ A Z: galvanizer / B: galvaniser
 A Z: galvanizers / B: galvanisers
 A Z: galvanizer's / B: galvaniser's
 
-# gambades (level 80)
-A: gambades / B: gambadoes
-
 # gambol <verified> (level 50)
 A: gamboled / B: gambolled
 A: gamboling / B: gambolling
@@ -16133,9 +16124,6 @@ A Z: mannerizes / B: mannerises
 # mantelpiece (level 35)
 _: mantelpiece / _V: mantlepiece
 _: mantelpieces / _V: mantlepieces
-
-# mantes (level 50)
-A: mantes / B: mantoes
 
 # marabou (level 50)
 _: marabou / _V: marabout | :1
@@ -30912,9 +30900,6 @@ A Z: unserialized / B: unserialised
 
 # unshakable <verified> (level 50)
 A Bv C: unshakable / Av B Cv: unshakeable
-
-# unshed (level 80)
-A: unshed / B: unshoed
 
 # unsignalized (level 95)
 A Z: unsignalized / B: unsignalised

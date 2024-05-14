@@ -6301,19 +6301,19 @@ A Z: deionizing / B: deionising
 A Z: deionizes / B: deionises
 
 # dekagram (level 70)
-A: dekagram's / A. B C: decagram / Bv: decagramme
-A: dekagram's / A. B C: decagrams / Bv: decagrammes
-A: dekagram's / A. B C: decagram's / Bv: decagramme's
+A: dekagram / Av B: decagram / Bv: decagramme
+A: dekagrams / Av B: decagrams / Bv: decagrammes
+A: dekagram's / Av B: decagram's / Bv: decagramme's
 
 # dekaliter (level 70)
-A: dekaliter / A.: decaliter / B: decalitre
-A: dekaliters / A.: decaliter / B: decalitres
-A: dekaliter's / A.: decaliter / B: decalitre's
+A: dekaliter / Av: decaliter / AV B: decalitre
+A: dekaliters / Av: decaliters / AV B: decalitres
+A: dekaliter's / Av: decaliter's / AV B: decalitre's
 
 # dekameter (level 70)
-A: dekameter / A. Cv: decameter / B C: decametre
-A: dekameters / A. Cv: decameter / B C: decametres
-A: dekameter's / A. Cv: decameter / B C: decametre's
+A: dekameter / Av Cv: decameter / AV B C: decametre
+A: dekameters / Av Cv: decameters / AV B C: decametres
+A: dekameter's / Av Cv: decameter's / AV B C: decametre's
 
 # delimitize (level 95)
 A Z: delimitize / B: delimitise

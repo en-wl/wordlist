@@ -32520,3 +32520,9 @@ A B C: gigagrams / Bv: gigagrammes
 # microgram (level 60)
 A B C: microgram / Bv: microgramme
 A B C: micrograms / Bv: nanogrammes
+
+# online (level 50)
+_: online / _V: on-line
+
+# offline (level 50)
+_: offline / _V: off-line

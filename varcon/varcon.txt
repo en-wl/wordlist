@@ -4132,11 +4132,12 @@ A Z: chattelize / B: chattelise
 A Z: chattelizes / B: chattelises
 
 # check <verified> (level 10)
-A CV: check / B C: cheque | bank
-A CV: checked / B C: chequed | bank
-A CV: checking / B C: chequing | bank
-A CV: checks / B C: cheques | bank
-A CV: check's / B C: cheque's | bank
+A CV: check / B C: cheque | <N> bank
+A CV: checks / B C: cheques | <N> bank
+A CV: check's / B C: cheque's | <N> bank
+A B: check | <N> verify
+A B: checks | <N> verify
+A B: check's | <N> verify
 A C: checker / B CV: chequer | pattern
 A C: checkers / B CV: chequers | pattern
 A C: checker's / B CV: chequer's | pattern

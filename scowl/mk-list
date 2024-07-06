@@ -29,10 +29,10 @@ $dir = "final" unless defined $dir;
 
 die "Cannot specify both --file-names-only and --accents" if $file_names_only && $accents;
 
-my %spelling_map = qw(en-us american en-gb british? en-gb-ise british
+my %spelling_map = qw(en english en-us american en-gb british? en-gb-ise british
                       en-gb-ize british_z en-gb-oed british_z en-ca canadian en-au australian);
 $spelling_map{$_} = $_
-    foreach (qw(english special american british canadian
+    foreach (qw(english special american british british_z canadian australian
                 variant_1 variant_2 variant_3 
                 british_variant_1 british_variant_2
                 canadian_variant_1 canadian_variant_2
@@ -55,12 +55,13 @@ my $SIZE = pop @ARGV;
 die "Invalid size: $SIZE\n" unless $SIZE =~ /^\d\d$/;
 
 my @SPS = map {my $sp = $_;
-               $sp =~ tr/_/-/;
-               $sp = $spelling_map{lc $sp};
+               $sp = lc $sp;
+               $sp =~ tr/_/-/ unless defined $spelling_map{$sp};
+               $sp = $spelling_map{$sp};
+               die "Unknown spelling category: $_\n" unless defined $sp;
                die "Must specify en_GB-ise or en_GB-ize\n" 
                    if $sp eq 'british?' && $use_variant_level{non};
                $sp = 'british' if $sp eq 'british?';
-               die "Unknown spelling category: $_\n" unless defined $sp;
                $sp;} @ARGV;
 my %SPS;
 $SPS{$_} = 1 foreach (@SPS);

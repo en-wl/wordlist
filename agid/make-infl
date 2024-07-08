@@ -407,6 +407,7 @@ sub separate0 ($$) # $in $order_num
 {
     my $in = $_[0];
     my $order_num = $_[1];
+
     foreach (@$in) {
 	$_ = {word  => $_, 
 	      level => 0,
@@ -547,7 +548,7 @@ sub separate ($$;$) # $in $order_num ; $notin
     my $order_num = $_[1];
     my $notin = $_[2];
     separate0 $in,$order_num;
-    
+
     if (@$in == 0) {
 
 	$in = [copy_infl_list $_[0]];
@@ -738,7 +739,7 @@ sub try_V ()
 	if ($inflections_c == 3) {
 	    if ($is_verb) {
 		output 'V';
-	    } elsif (length $word > 2) {
+	    } elsif (length $word > 2 || $word =~ /^[A-Z]{2,}$/) {
 		output 'V?';
 		$is_verb = 1;
 	    }
@@ -755,7 +756,7 @@ sub try_N () {
     if ($inflections_c == 1) {
 	if (/N/) {
 	    output 'N';
-	} elsif (!$is_verb && length $word > 2) {
+	} elsif (!$is_verb && (length $word > 2 || $word =~ /^[A-Z]{2,}$/)) {
 	    output 'N?';
 	}
     } elsif (/N/) {
@@ -777,7 +778,7 @@ sub try_A () {
 	if ($inflections_c == 2) {
 	    if (/[Av]/) {
 		output 'A';
-	    } elsif (length $word > 2) {
+	    } elsif (length $word > 2 || $word =~ /^[A-Z]{2,}$/) {
 		output 'A?';
 	    }
 	} elsif (/[Av]/) {

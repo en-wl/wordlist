@@ -17723,8 +17723,12 @@ A Dv: mucorrhea / B D: mucorrhoea
 A: mucose / B: mucosae
 
 # mujahideen (level 60)
-_: mujahideen / _v: mujahedin / _V: mujahedeen
-_: mujahideen's / _v: mujahedin's / _V: mujahedeen's
+_: mujahideen / _v: mujahedin / _V: mujahedeen / _V: mujahidin / _-: mujaheddin
+_: mujahideen's / _v: mujahedin's / _V: mujahedeen's / _V: mujahidin's / _-: mujaheddin's
+## all dictionaries agree on the primary form
+## m-w only lists mujahedin & mujahedeen as variants and lables mujahedeen as less common
+## ODE also includes mujahidin with no indication of how common it is
+## wikidictionary lists many other forms one of them is mujaheddin
 
 # multicolor (level 70)
 A DV: multicolor / B D: multicolour
@@ -26414,9 +26418,6 @@ A Cv: snorkeling / B C: snorkelling
 A C: snowplow / B Cv: snowplough
 A C: snowplow's / B Cv: snowplough's
 A C: snowplows / B Cv: snowploughs
-
-# snowshed (level 50)
-A: snowshed / B: snowshoed
 
 # snuffcolored (level 80)
 A: snuffcolored / B: snuffcoloured

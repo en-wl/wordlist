@@ -2142,8 +2142,8 @@ _: awestruck / _V: awestricken
 _: AWOL / _v: awol
 
 # ax <verified> (level 20)
-A: ax / B: axe
-A: ax's / B: axe's
+A: ax / A. B: axe
+A: ax's / A. B: axe's
 
 # axiomatization (level 80)
 A Z: axiomatization / B: axiomatisation
@@ -16175,8 +16175,9 @@ A Z: marmelizing / B: marmelising
 A Z: marmelizes / B: marmelises
 
 # marshal <verified> (level 35)
-A: marshaled / B: marshalled
-A: marshaling / B: marshalling
+A B: marshal / AV: marshall
+A: marshaled / AV B: marshalled
+A: marshaling / AV B: marshalling
 
 # marsupialization (level 95)
 A Z: marsupialization / B: marsupialisation
@@ -21769,9 +21770,9 @@ _: pinochle / _-: pinocle
 _: pinochle's / _-: pinocle's
 
 # pinyon (level 60)
-_: pinyon / _v: piñon
-_: pinyons / _v: piñons
-_: pinyon's / _v: piñon's
+_ 1: piñon / _v 2: pinyon / _- 3: pinon
+_ 1: piñons / _v 1: piñones / _v 2: pinyons / _- 3: pinons / _- 3: pinones
+_ 1: piñon's / _v 2: pinyon's / _- 3: pinon's
 
 # piratize (level 95)
 A Z: piratize / B: piratise

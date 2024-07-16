@@ -2224,9 +2224,6 @@ A Dv: bacteremia / B D: bacteraemia
 A Dv: bacteremias / B D: bacteraemias
 A Dv: bacteremia's / B D: bacteraemia's
 
-# bacteria <verified> (level 20)
-A B: bacteria / AV: bacterias | -- pl: bacteria
-
 # bacteriemia (level 95)
 A: bacteriemia / B: bacteriaemia
 

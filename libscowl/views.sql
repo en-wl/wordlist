@@ -22,38 +22,26 @@ select word
 
 create view variant_info as
 select word_id,
-       lemma_id,
        spelling,
        case when a.variant_level >= coalesce(b.variant_level,-1) then a.variant_level else b.variant_level end as variant_level,
        a.variant_level as lemma_variant_level,
-       b.variant_level as derived_variant_level 
+       b.variant_level as derived_variant_level
  from lemma_variant_info as a
  join words using (lemma_id)
  left join (select word_id, spelling, variant_level from derived_variant_info) as b using (word_id, spelling)
+ left join (select distinct lemma_id, pos from derived_variant_info join words using (word_id)) as c using (lemma_id, pos)
+ where b.variant_level is not null or c.pos is null
 union all 
 select word_id,
-       lemma_id,
        spelling,
        variant_level,
        null as lemma_variant_level,
        variant_level as derived_variant_info
   from derived_variant_info d
-  left join (select lemma_id, spelling from lemma_variant_info) l using (lemma_id, spelling)
-  where l.spelling is null;
+  join words using (word_id)
+  where lemma_id not in (select lemma_id from lemma_variant_info)
+;
 select * from variant_info limit 0;
-
-create view scowl_ as
-select * from scowl_data
-  join words using (group_id, pos)
-  join groups using (group_id)
-  join (select base_pos, pos_category from base_poses) as base_poses using (base_pos)
-  left join variant_info using (word_id);
-select * from scowl_ limit 0;
-
-create view scowl_v0 as
-  select level, category, region, tag, pos, base_pos, pos_category, pos_class, usage_note, coalesce(spelling,'_') as spelling, coalesce(variant_level,0) as variant_level, word
-  from scowl_;
-select * from scowl_v0 limit 0;
 
 create view duplicate_lemma_check as
 select lemma, base_pos, pos_class, defn_note, usage_note from lemmas group by lemma, base_pos, pos_class, defn_note, usage_note having count(distinct group_id) > 1;

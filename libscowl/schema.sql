@@ -1,3 +1,5 @@
+begin;
+
 --
 -- constant tables
 --
@@ -5,48 +7,49 @@
 --
 
 create table poses (
-  order_num integer primary key,
-  pos text not null unique,
+  order_num integer not null unique,
+  pos text not null primary key,
   base_pos text not null references base_poses(base_pos) deferrable initially deferred,
-  pos_category text not null check (pos_category in ('', 'placeholder', 'special', 'wordpart')),
+  pos_category text not null check (pos_category in ('', 'special', 'wordpart', 'nonword')),
   name text,
   note text,
   extra_info text
-);
+) without rowid;
 
 create table base_poses (
-  order_num integer primary key,
-  base_pos text not null unique,
+  order_num integer not null unique,
+  base_pos text not null primary key,
   lemma_pos text references poses(pos),
-  pos_category text not null check (pos_category in ('', 'placeholder', 'special', 'wordpart')),
+  pos_category text not null check (pos_category in ('', 'special', 'wordpart', 'nonword')),
   descr text,
   extra_info text
-);
+) without rowid;
 
 create table ranks (
-  order_num integer primary key,
-  rank_symbol text not null unique,
+  order_num integer not null unique,
+  rank_symbol text not null primary key,
   rank_descr text
-);
+) without rowid;
 
 create table variant_levels (
   variant_level integer primary key check (0 <= variant_level and variant_level <= 9),
   variant_symbol text not null unique,
-  variant_descr text
+  variant_descr text,
+  legacy_level integer not null
 );
 
 create table regions (
-  order_num integer primary key,
-  region text not null unique,
+  order_num not null unique,
+  region text not null primary key,
   region_descr text
-);
+) without rowid;
 
 create table spellings (
-  order_num integer primary key,
-  spelling text not null unique,
+  order_num not null unique,
+  spelling text not null primary key,
   region text not null references regions(region),
   spelling_descr text not null
-);
+) without rowid;
 
 --
 -- normal tables
@@ -76,21 +79,18 @@ create index words_word on words (word);
 create index words_idx on words (group_id, pos);
 
 create table lemma_variant_info (
-  lemma_id integer not null references words(word_id),
+  lemma_id integer not null references words(word_id) on delete cascade,
   spelling text not null references spellings(spelling),
   variant_level smallint not null default 0 references variant_levels(variant_level),
   primary key (lemma_id, spelling)
 ) without rowid;
 
 create table derived_variant_info (
-  word_id integer not null references words(word_id),
-  lemma_id integer not null references words(word_id),
+  word_id integer not null references words(word_id) on delete cascade,
   spelling text not null default '_' references spellings(spelling),
   variant_level smallint not null references variant_levels(variant_level),
   primary key (word_id, spelling)
 ) without rowid;
-
-create index derived_variant_info_lemma_id on derived_variant_info(lemma_id, spelling);
 
 create table scowl_data (
   level integer not null check(5 <= level and level <= 95),
@@ -100,8 +100,19 @@ create table scowl_data (
   group_id integer not null references groups(group_id),
   pos text not null references poses(pos),
   --foreign key (group_id, pos) references words(group_id, pos),
-  primary key (group_id, pos, level, category, region, tag)
+  primary key (level, region, category, tag, group_id, pos)
 ) without rowid;
+create index scowl_data_index on scowl_data(group_id, pos);
+
+create table scowl_override (
+  level integer not null check(5 <= level and level <= 95),
+  category text not null default '',
+  region text not null default '' references regions(region),
+  tag text not null default '',
+  word_id integer not null references words(word_id),
+  primary key (level, region, category, tag, word_id)
+) without rowid;
+create index scowl_override_index on scowl_override(word_id);
 
 create table cluster_comments (
   headword text not null primary key,
@@ -110,7 +121,7 @@ create table cluster_comments (
 );
 
 create table group_comments (
-  group_id integer not null references groups(group_id),
+  group_id integer not null references groups(group_id) on delete cascade,
   word text not null,
   other_words text not null,
   comment text not null,
@@ -118,7 +129,7 @@ create table group_comments (
 );
 
 create table lemma_comments (
-  lemma_id integer not null references words(word_id),
+  lemma_id integer not null references words(word_id) on delete cascade,
   order_num int not null,
   comment text,
   primary key (lemma_id, order_num)
@@ -150,3 +161,37 @@ create table tags (
   tag text not null primary key
 ) without rowid;
 
+--
+-- materialized views
+--
+-- populate by using corresponding view that doesn't end in '_mview'
+-- 
+
+create table variant_info_mview (
+  word_id integer not null,
+  spelling text not null,
+  variant_level smallint not null,
+  lemma_variant_level,
+  derived_variant_level,
+  primary key (word_id, spelling)
+) without rowid;
+
+--
+-- internal tables
+--
+
+create table _variables (
+  var text not null primary key,
+  val text
+);
+
+create table _combined (
+  group_id integer primary key,
+  other_id integer not null 
+);
+
+--
+--
+--
+
+commit;

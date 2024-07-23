@@ -1,0 +1,95 @@
+#!/bin/bash
+
+shopt -s nullglob
+set -e
+
+rm -f *.twl
+
+export LANG=C
+export LC_ALL=C
+export LC_CTYPE=C
+export LC_COLLATE=C
+
+SIZE=60
+
+if [ "$SCOWL_VERSION" ]; then
+  true
+elif git status 2>&1 > /dev/null; then
+  SCOWL_VERSION="`git log --pretty=format:'%cd-%h' --date=short -n 1 -- ..`"
+else
+  SCOWL_VERSION=unknown
+fi
+export SCOWL_VERSION
+
+mk-list() { ../mk-list -d ../scowl.db "$@"; }
+
+# may be slightly faster
+#mk-list() { ../mk-list -f -d final "$@" | (cd final; xargs cat) | sort -u; }
+
+echo base
+
+mk-list english $SIZE > en.wl0
+mk-list en_US     $SIZE > en_US-w_accents.twl
+mk-list en_GB-ise $SIZE > en_GB-ise-w_accents.twl
+mk-list en_GB-ize $SIZE > en_GB-ize-w_accents.twl
+mk-list en_CA     $SIZE > en_CA-w_accents.twl
+mk-list en_AU     $SIZE > en_AU-w_accents.twl
+cat en_??-w_accents.twl | sort -u > en-w_accents.twl
+
+mk-list en_US $SIZE --variants 1 > en-variant_0.wl0
+mk-list en_US $SIZE --variants 1,2 > en-variant_1.wl0
+mk-list en_US $SIZE --variants 1,2,3 > en-variant_2.wl0
+
+mk-list en_GB $SIZE --variants 1 > en_GB-variant_0.wl0
+mk-list en_GB $SIZE --variants 1,2 > en_GB-variant_1.wl0
+
+mk-list en_CA $SIZE --variants 1 > en_CA-variant_0.wl0
+mk-list en_CA $SIZE --variants 1,2 > en_CA-variant_1.wl0
+
+mk-list en_AU $SIZE --variants 1 > en_AU-variant_0.wl0
+mk-list en_AU $SIZE --variants 1,2 > en_AU-variant_1.wl0
+
+echo deaccent
+
+for f in *-w_accents.twl
+do
+  b=`basename $f -w_accents.twl`
+  ./deaccent < $f | sort -u > $b-wo_accents.twl
+  #cat $f $b-wo_accents.twl | sort -u > $b.twl
+done
+
+for f in en*-variant_*.wl0
+do
+  b=`basename $f .wl0`
+  ./deaccent < $f > $b.wl1
+  cat $f $b.wl1 | sort -u > $b.wl
+done
+
+echo common
+
+# find the intersection of all *.twl word lists
+
+cat *.twl | sort -u > en-common.wl.0
+for f in *.twl
+do
+  comm -12 en-common.wl.0 $f > en-common.wl
+  mv en-common.wl en-common.wl.0
+done
+mv en-common.wl.0 en-common.wl
+
+echo finish
+
+for f in *.twl
+do
+  b=`basename $f .twl`
+  comm -13 en-common.wl $f > $b-only.wl
+done
+ 
+rm -f *.wl.* *.twl *.wl{0,1} *.vwl
+cp -p *.wl aspell/
+#cp -p ../README aspell/doc/SCOWL-README
+sh aspell/info.sh > aspell/info
+sh aspell/Copyright.sh > aspell/Copyright
+#cat ../Copyright >> aspell/Copyright
+
+

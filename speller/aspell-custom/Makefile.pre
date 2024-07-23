@@ -1,0 +1,69 @@
+cwl_files = en-custom.cwl
+lang_files = en.dat en_phonet.dat en_affix.dat
+doc_files = README Copyright
+extra_files = configure Makefile.pre
+multi_files = en-custom.multi
+rws_files = en-custom.rws
+
+distdir=aspell6-en-custom
+
+all: ${rws_files} 
+
+install: all
+	mkdir -p ${DESTDIR}${dictdir}/
+	cp ${rws_files} ${multi_files} ${DESTDIR}${dictdir}/
+	cd ${DESTDIR}${dictdir}/ && chmod 644 ${rws_files} ${multi_files}
+	mkdir -p ${DESTDIR}${datadir}/
+ifdef NEED_LANG_FILES
+	cd lang && cp ${lang_files} ${DESTDIR}${datadir}/
+	cd ${DESTDIR}${datadir}/ && chmod 644 ${lang_files}
+endif
+
+clean:
+	rm -f ${rws_files}
+
+distclean: clean
+	rm -f Makefile
+
+maintainer-clean: distclean
+	rm -f ${multi_files} configure Makefile.pre
+
+uninstall:
+	-cd ${DESTDIR}${dictdir}/ && rm ${rws_files} ${multi_files} ${link_files}
+ifdef NEED_LANG_FILES
+	-cd ${DESTDIR}${datadir}/ && rm ${lang_files}
+endif
+
+dist: ${cwl_files}
+	rm -rf ${distdir}.tar.bz2 ${distdir}
+	mkdir ${distdir}
+	cp -p ${extra_files} ${cwl_files} ${multi_files} ${doc_files} ${distdir}/
+	cp -a lang ${distdir}/lang
+	cp -a doc ${distdir}/doc
+	tar -c --owner=0 --group=0 -f ${distdir}.tar ${distdir}/
+	chmod -R go-w ${distdir}
+	bzip2 -9 ${distdir}.tar
+	rm -r ${distdir}/
+
+distcheck:
+	tar xfj ${distdir}.tar.bz2
+	cd ${distdir} && ./configure && make
+
+rel:
+	mv ${distdir}.tar.bz2 ../rel
+
+
+en-custom.rws: en-custom.cwl
+
+
+.SUFFIXES: .cwl .rws .wl
+
+.cwl.rws:
+	${PREZIP} -d < $< | ${ASPELL} ${ASPELL_FLAGS} --lang=en create master ./$@
+
+.wl.cwl:
+	cat $< | LC_COLLATE=C sort -u | ${PREZIP} -z > $@
+
+.pz:
+	${PREZIP} -d < $< > $@
+

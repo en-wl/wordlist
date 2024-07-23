@@ -1,0 +1,96 @@
+2020.12.07:
+
+  Updates to SCOWL 2020.12.07 which added some new words.  The update
+  also fixed a number of variant problems and removed irregardless,
+  froward (+ derivatives) and perpend.
+
+2019.10.06:
+
+  Updated to SCOWL 2019.10.06 which added some new words and removed
+  some improbable possessive forms.
+
+2018.04.16:
+
+  Updated to SCOWL 2018.04.16 which added some new words.
+
+2017.08.24:
+
+  Updated to SCOWL 2017.08.24 which added some new words.
+
+2017.01.22:
+
+  Updated to SCOWL 2017.01.22 which added some new words.
+
+2016.11.20:
+
+  Updated to SCOWL 2016.11.20 which added some new words.  The update
+  also added a New Australian spelling category thanks to the work of
+  Benjamin Titze (btitze@protonmail.ch).
+
+2016.06.26:
+
+  Updated to SCOWL 2016.06.26 which added some new words and other fixes
+  from updating to Version 6.0.2 of 12dicts.
+
+2016.01.19:
+
+  Updated to SCOWL 2016.01.19 which added some new words amd removed some
+  very uncommon possessive forms.
+
+2015.04.24:
+
+  Updated to SCOWL 2015.04.24 which added some new words.
+
+2015.02.15:
+
+  Updated to SCOWL 2015.02.15 which added a large number of new words
+  such as "inbox", "smartphone", and "selfie" and removed some
+  problematic words.
+
+7.1: January 6, 2011
+
+  Updated to SCOWL 7.1 which corrected several errors and also added
+  several now common proper names and some other words now in
+  common use.
+
+7.0: December 27, 2010
+
+  Updated to SCOWL 7 which was created with a new version of Varcon
+  which corrected many errors, especially in the British and Canadian
+  dictionaries.  Numerous other corrections are also included.
+
+  Added en_CA-variant_* and en_GB-variant_* auxiliary dictionaries.
+
+6.0: August 10, 2004
+
+  Updated to SCOWL 6 which avoided using the original Ispell
+  dictionaries as they were a source of too many errors, among other
+  changes.
+
+  Added en_GB-ize dictionary (British with "ize" spelling).
+
+  Added en-variant_* auxiliary dictionaries.
+
+  Avoided using the strip-accents options since Aspell 0.60 no longer
+  supports it.
+
+  Added affix support for the aspell6 package.  Affix compression is
+  not used though.
+
+0.51-0: January 3, 2003
+
+  Updated to SCOWL 5 which:
+
+    Added variants that were not really spelling variants (such as
+    forwards)
+
+    Removed some spelling variants and other strange words from the
+    word list (for example meaneing).
+
+    Removed rarely used inflections of a word.
+
+    Removed the DEC Word List due to the questionable license and
+    because removing it will not seriously decrease the quality of SCOWL
+    (there are a few less proper names).
+
+    Among others.

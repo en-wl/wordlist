@@ -1,0 +1,23 @@
+# This file is used to generate the clean target
+# Do not put list any files that are not automatically generated
+.aspell
+.hunspell
+hunspell/
+*.wl
+en_*.dic
+en_*.aff
+*.zip
+*.tocheck
+README_en_*.txt
+*.0
+*.1
+*.2
+*.misspelled
+eng.dat
+eng_affix.dat
+nosug
+aspell/info
+aspell/Copyright
+aspell/doc/SCOWL-README
+*.txt
+deaccent

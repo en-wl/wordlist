@@ -1,5 +1,5 @@
 from collections import namedtuple, defaultdict
-from itertools import groupby
+from itertools import groupby, chain
 from types import SimpleNamespace
 from pathlib import Path
 import sys
@@ -12,6 +12,8 @@ import re
 
 from ._common import *
 from ._constdata import *
+
+LEMMA_POSES = frozenset(i.lemma_pos for i in basePosInfo.values());
 
 def _warn(msg):
     sys.stderr.write(f'warning: {msg}\n')
@@ -39,7 +41,6 @@ for i, c in enumerate(_order.encode('iso-8859-1')):
 _sortOrder0 = bytearray(256)
 for c in _orderAlpha:
     _sortOrder0[ord(c)] = _sortOrder[ord(_deaccentMap.get(c,c).lower())]
-
 for c in '0123456789':
     _sortOrder0[ord(c)] = _sortOrder[ord(c)]
 
@@ -47,9 +48,23 @@ _deaccent = str.maketrans(_accented, _deaccented)
 def deaccent(w):
     return w.translate(_deaccent)
 
+_clusterKey = bytearray(256)
+for c in _orderAlpha:
+    _clusterKey[ord(c)] = ord(_deaccentMap.get(c,c).lower())
+for c in '0123456789':
+    _clusterKey[ord(c)] = ord(c)
+def clusterKey(w):
+    w = w.encode('iso-8859-1')
+    return w.translate(_clusterKey).translate(None, b'\0')
+
 def wordOrderKey(w):
     w = w.encode('iso-8859-1')
     return (w.translate(_sortOrder0).translate(None, b'\0'), w.translate(_sortOrder))
+
+def validateWord(w):
+    m = re.fullmatch(_wordRegex, w)
+    if not m:
+        raise ValueError(f"invalid word: {w}")
 
 wordPartRegex = re.compile(f'(\+?)({_wordRegex})([*@~!-]?)†?')
 
@@ -224,7 +239,7 @@ class Spellings(dict):
         for sp in str_.split():
             m = re.fullmatch(r'([_ABZCD]?)([^1-9]?)', sp)
             if not m:
-                raise ValueError('unrecognized spelling string: {sp}')
+                raise ValueError(f'unrecognized spelling string: {sp}')
             spelling = m[1]
             try:
                 variant_level = variantFromSymbol[m[2]]
@@ -274,10 +289,6 @@ def getRedundantSpellings(seq):
             exclude.add('C')
         if tally.get('Z', None) == tally.get('B', None):
             exclude.add('Z')
-        if len(tally) != 5:
-            missing = [sp for sp in _spellings_ab if sp not in tally]
-        else:
-            missing = []
         return (exclude, tally.keys())
     else:
         return (None, tally.keys())
@@ -311,6 +322,7 @@ class Group:
         'lemma_rank',# str
         'entries',   # [ LemmaEntry ]
         'lines',     # [ Line ]
+        'override',  # { lemma: Override }
         'problems',  # [ str ]
         'comments',  # [ Comment ]
         '_group_id',
@@ -323,7 +335,7 @@ class Group:
         return (l.level + (100 if l.region != '' else 0) + (200 if l.category != '' else 0),
                 wordOrderKey(self.headword), self.defn_note, basePosInfo[self.base_pos].order_num, self.pos_class)
 
-    def finalize(self):
+    def finalize(self, expected_spellings):
         self.entries.sort(key = LemmaEntry.sortKey)
         self.headword = self.entries[0].lemma
 
@@ -338,8 +350,8 @@ class Group:
         (self._redundantSpellings, tally) = getRedundantSpellings((le.spellings,le.lemma) for le in self.entries)
 
         self.problems = []
-        if tally and len(tally) != len(_spellings_ab):
-            missing = [sp for sp in _spellings_ab if sp not in tally]
+        if tally and len(tally) != len(expected_spellings):
+            missing = [sp for sp in expected_spellings if sp not in tally]
             self.problems.append(f"missing spellings: {' '.join(missing)}");
 
         self.lines.sort(key = Line.sortKey)
@@ -347,6 +359,15 @@ class Group:
         self._lemmaIncluded = False
         for l in self.lines:
             self._lemmaIncluded |= l.lemmaIncluded()
+
+        for lemma, ov in self.override.items():
+            try:
+                le = next(le for le in self.entries if le.lemma == lemma)
+                notfound = set(ov.words) - { we.word for we in chain.from_iterable(le.words.values()) }
+                if notfound:
+                    raise ValueError(f"\"{ov}\": unable to find: {', '.join(sorted(notfound))}")
+            except StopIteration:
+                raise ValueError(f"\"{ov}\": unable to find lemma: {lemma}")
 
 class LemmaEntry(SlotsDataClass):
     __slots__ = (
@@ -378,6 +399,11 @@ class LemmaEntry(SlotsDataClass):
                     we.spellings = Spellings((sp, 0) for sp in self.spellings.keys())
                 elif we.spellings is None:
                     we.spellings = Spellings((('_', 0),))
+                if self.spellings:
+                    extra = sorted(we.spellings.keys() - self.spellings.keys())
+                    if extra:
+                        self.problems.append(f"{we.word}: extra spellings: {' '.join(extra)}")
+                    
             wes.sort(key = WordEntry.sortKey)
             tally_vl0 = {}
             for we in wes:
@@ -398,29 +424,136 @@ class LemmaEntry(SlotsDataClass):
             words = ', '.join(unmarked)
             self.problems.append(f"unmarked variants: {words}")
 
-class Line(SlotsDataClass):
+class LineBase(SlotsDataClass):
     __slots__ = (
         'grp',      # Group -- back reference
         'level',    # int
         'category', # str
         'region',   # str
-        'tag',      # str
-        'poses'     # { <pos> } -- i.e. set of poses
+        'tags',     # { str } -- i.e. set of tags
     )
 
-    def __init__(self, grp, level, category = '', region = '', tag = ''):
+    def __init__(self, grp, level, category = '', region = '', tags = None, poses = None):
         self.grp = grp
         self.level = level
         self.category = category
         self.region = region
-        self.tag = tag
-        self.poses = set()
+        if tags is None:
+            self.tags = []
+        else:
+            self.tags = tags
 
-    def match(self, level, category, region, tag):
-        return self.level == level and self.category == category and self.region == region and self.tag == tag
+    def __str__(self):
+        from io import StringIO
+        buf = StringIO()
+        self.print(buf)
+        return buf.getvalue().rstrip()
+
+    def _keyPart(self, out):
+        out.write(f'{self.level}')
+        if self.category != '': out.write(f' {self.category}')
+        if self.region != '': out.write(f' {self.region}')
+        tags = self.tags
+        if len(tags) == 1 and '' in tags:
+            tags = ()
+        for tag in sorted(tags):
+            if tag == '':
+                tag = '[]'
+            out.write(f' {tag}')
+
+    def _lemmaPart(self, out, lemma):
+        base_pos = self.grp.base_pos
+        lemma_pos = basePosInfo[base_pos].lemma_pos
+        
+        if lemma:
+            out.write(f': {lemma}{self.grp.lemma_rank}')
+        else:
+            out.write(f': -')
+
+        if self.grp.pos_class == '' and base_pos == '':
+            pass
+        elif self.grp.pos_class == '':
+            out.write(f' <{base_pos}>')
+        else:
+            out.write(f' <{base_pos}/{self.grp.pos_class}>')
+        if self.grp.defn_note != '':
+            out.write(f' {{{self.grp.defn_note}}}')
+        if self.grp.usage_note != '':
+            out.write(f' ({self.grp.usage_note})')
+                
+    @staticmethod
+    def parse(line, g, entriesBySpellings):
+        line = line.strip()
+        m = re.fullmatch(r'(?P<level>[0-9]+) (?P<tags>[^:#]*):\s*' 
+                         r'(?: (?P<override>\+)\s*:\s* | (?P<spellings>[^:<>{}#]+) (\{(?P<num> [0-9])\}\s*|):\s* |)'
+                         r'(?P<lemma>[^:<>{}#()]+)'
+                         r'(?: <(?P<base_pos>[^/]*) (?:/(?P<pos_class>.+)|)>\s* |)'
+                         r'(?: {(?P<defn_note>.+)}\s* |)'
+                         r'(?: \((?P<usage_note>[^:#|]+)\)\s* |)'
+                         r'(?: : \s* (?P<words>[^#]+) |)'   
+                         r'(?: \# (?P<comments>.*) |)'
+                         ,       
+                         line,
+                         re.VERBOSE)
+        if m is None:
+            return None
+        if m['override'] is None:
+            l = Line(g, int(m['level']))
+        else:
+            l = Override(g, int(m['level']))
+        tags = set()
+        for tag in m['tags'].split():
+            if tag in REGIONS:
+                if l.region != '':
+                    raise ValueError("duplicate regions")
+                l.region = tag
+            elif tag[0] == '[':
+                if tag[-1] != ']':
+                    raise ValueError(f"invalid tag: '{tag}'")
+                if tag == '[]':
+                    tags.add('')
+                else:
+                    tags.add(tag)
+            else:
+                if l.category != '':
+                    raise ValueError("duplicate categories")
+                l.category = tag
+        if not tags:
+            tags.add('')
+        l.tags = sorted(tags)
+        def merge(attr, v):
+            v = ifNone(v, '')
+            if not hasattr(g, attr):
+                setattr(g, attr, v)
+            elif getattr(g, attr) != v:
+                raise ValueError(f'conflicting values for {attr} with group')
+        lemmaStr = m['lemma'].strip()
+        if lemmaStr == '-':
+            lemma = None
+        else:
+            (lemma_variant_override, lemma, lemma_rank) = parseWordPart(lemmaStr)
+            merge('lemma_rank', lemma_rank)
+        merge('base_pos', m['base_pos'])
+        merge('pos_class', m['pos_class'])
+        merge('defn_note', m['defn_note'])
+        merge('usage_note', m['usage_note'])
+        l.finishParse(g, lemma, m, entriesBySpellings)
+        return l
+
+class Line(LineBase):
+    __slots__ = (
+        'poses'    # { <pos> } -- i.e. set of poses
+    );
+
+    def __init__(self, grp, level, category = '', region = '', tags = None, poses = None):
+        super().__init__(grp, level, category, region, tags)
+        if poses is None:
+            self.poses = set()
+        else:
+            self.poses = poses
 
     def sortKey(self):
-        return (self.level, self.category, self.region, self.tag)
+        return (self.level, self.category, self.region, not bool(self.poses & LEMMA_POSES), self.tags)
 
     def lemmaIncluded(self):
         return basePosInfo[self.grp.base_pos].lemma_pos in self.poses
@@ -429,23 +562,8 @@ class Line(SlotsDataClass):
         if out is None:
             out = sys.stdout
 
-        keyStr = f'{self.level}'
-        if self.category != '': keyStr += f' {self.category}'
-        if self.region != '': keyStr += f' {self.region}'
-        if self.tag != '': keyStr += f' {self.tag}'
-
-        base_pos = self.grp.base_pos
-        lemma_pos = basePosInfo[base_pos].lemma_pos
-        
-        if lemma_pos in self.poses:
-            assert(self.lemmaIncluded())
-            lemmaIncluded = True
-        else:
-            assert(not self.lemmaIncluded())
-            lemmaIncluded = False
-
         for le in self.grp.entries:
-            out.write(keyStr)
+            self._keyPart(out);
             
             if le.spellings:
                 exclude = self.grp._redundantSpellings if trimSpellings and self.grp._redundantSpellings is not None else ()
@@ -454,24 +572,9 @@ class Line(SlotsDataClass):
                 if num != 0:
                     out.write(f' {{{num}}}')
 
-            if lemmaIncluded:
-                assert(len(le.words[lemma_pos]) == 1)
-                out.write(f': {le.lemma}{self.grp.lemma_rank}')
-            else:
-                out.write(f': -')
+            self._lemmaPart(out, le.lemma if self.lemmaIncluded() else None)
 
-            if self.grp.pos_class == '' and base_pos == '':
-                pass
-            elif self.grp.pos_class == '':
-                out.write(f' <{base_pos}>')
-            else:
-                out.write(f' <{base_pos}/{self.grp.pos_class}>')
-            if self.grp.defn_note != '':
-                out.write(f' {{{self.grp.defn_note}}}')
-            if self.grp.usage_note != '':
-                out.write(f' ({self.grp.usage_note})')
-
-            poses = posmap(base_pos, (pos for pos in self.poses if pos in le.words))
+            poses = posmap(self.grp.base_pos, (pos for pos in self.poses if pos in le.words))
 
             wordEntries = []
             for pos in poses[1:]:
@@ -519,55 +622,9 @@ class Line(SlotsDataClass):
                 out.write(''.join(' # ' + c for c in le.comments))
             
             out.write('\n')
-                
-    @staticmethod
-    def parse(line, g, entriesBySpellings):
-        line = line.strip()
-        m = re.fullmatch(r'(?P<level>[0-9]+) (?P<tags>[^:#]*):\s*' 
-                         r'(?: (?P<spellings>[^:<>{}#]+) (\{(?P<num> [0-9])\}\s*|):\s* |)'
-                         r'(?P<lemma>[^:<>{}#()]+)'
-                         r'(?: <(?P<base_pos>[^/]*) (?:/(?P<pos_class>.+)|)>\s* |)'
-                         r'(?: {(?P<defn_note>.+)}\s* |)'
-                         r'(?: \((?P<usage_note>[^:#|]+)\)\s* |)'
-                         r'(?: : \s* (?P<words>[^#]+) |)'   
-                         r'(?: \# (?P<comments>.*) |)'
-                         ,       
-                         line,
-                         re.VERBOSE)
-        if m is None:
-            return None
-        l = Line(g, int(m['level']))
-        for tag in m['tags'].split():
-            if tag in REGIONS:
-                if l.region != '':
-                    raise ValueError("duplicate regions")
-                l.region = tag
-            elif tag[0] == '[':
-                if tag[-1] != ']':
-                    raise ValueError(f"invalid tag: '{tag}'")
-                if l.tag != '':
-                    raise ValueError("duplicate tags")
-                l.tag = tag
-            else:
-                if l.category != '':
-                    raise ValueError("duplicate categories")
-                l.category = tag
-        def merge(attr, v):
-            v = ifNone(v, '')
-            if not hasattr(g, attr):
-                setattr(g, attr, v)
-            elif getattr(g, attr) != v:
-                raise ValueError(f'conflicting values for {attr} with group')
-        lemmaStr = m['lemma'].strip()
-        if lemmaStr == '-':
-            lemma = None
-        else:
-            (lemma_variant_override, lemma, lemma_rank) = parseWordPart(lemmaStr)
-            merge('lemma_rank', lemma_rank)
-        merge('base_pos', m['base_pos'])
-        merge('pos_class', m['pos_class'])
-        merge('defn_note', m['defn_note'])
-        merge('usage_note', m['usage_note'])
+
+    def finishParse(self, g, lemma, m, entriesBySpellings):
+        l = self
         spellings = Spellings.parse(ifNone(m['spellings'], ''))
         spellingKey = (spellings.key(), m['num'])
         le = entriesBySpellings.get(spellingKey, None)
@@ -618,7 +675,43 @@ class Line(SlotsDataClass):
                 raise ValueError(f"conflicting word entry for '{pos}' for '{spellings}': {le.words[pos]}, {wes}")
         if m['comments']:
             le.comments.extend(c.strip() for c in m['comments'].split('#') if not c.startswith('!'))
-        return l
+        
+
+class Override(LineBase):
+    __slots__ = (
+        'lemma',  #
+        'words'   # [ <word> ] 
+    )
+    
+    def __init__(self, grp, level, category = '', region = '', tags = None, lemma = None, words = ()):
+        super().__init__(grp, level, category, region, tags)
+        if lemma is not None:
+            self.lemma = lemma
+            self.words = words
+
+    def print(self, out = None):
+        self._keyPart(out);
+        out.write(f': +')
+        self._lemmaPart(out, self.lemma)
+        if self.words:
+            out.write(': ')
+            out.write(', '.join(self.words))
+        out.write('\n')
+    
+    def finishParse(self, g, lemma, m, entriesBySpellings):
+        wordStrs = []
+        if m['words']:
+            wordStrs = m['words'].split(',')
+        words = []
+        for w in wordStrs:
+            w = w.strip()
+            validateWord(w)
+            words.append(w)
+        #le = next((le for le in self.grp.entries if le.lemma == lemma), None)
+        #if le is None:
+        #    raise ValueError('unable to find lemma: {lemma}')
+        self.lemma = lemma
+        self.words = sorted(words)
 
 class Comment(SlotsDataClass):
     __slots__  = ('word', 'other_words', 'comment')
@@ -712,18 +805,23 @@ class WordEntry(SlotsDataClass):
             return NotImplemented
         return self.spellings == other.spellings and self.word == other.word and self.entry_rank == other.entry_rank
 
-def createClusters(groups, clusterComments):
+def createClusters(groups, clusterComments, conn = None):
+
+    if conn:
+        expected_spellings = tuple(sp for sp, in conn.execute("select spelling from spellings where spelling != '_' order by order_num"))
+    else:
+        expected_spellings = _spellings_ab
     
     groupsByHeadword = defaultdict(list)
     clusterMapping = {}
     for grp in groups:
         if not grp.lines: continue
-        grp.finalize()
-        groupsByHeadword[grp.headword].append(grp)
+        grp.finalize(expected_spellings)
+        groupsByHeadword[clusterKey(grp.headword)].append(grp)
         members = set()
         for le in grp.entries:
             le.finalize()
-            w = le.lemma
+            w = clusterKey(le.lemma)
             try:
                 members |= clusterMapping[w]
             except KeyError:
@@ -763,10 +861,17 @@ def _dict_factory(cursor, row):
 
 _dir = Path(__file__).parent.resolve()
     
-def openDB(dbfile, create = False):
+def openDB(dbfile, create = False, copyFrom = None, transCopy = False):
+
+    if transCopy:
+        copyFrom = openDB(dbfile)
+        dbfile = ':memory:'
 
     if not dbfile:
         raise ValueError
+
+    if copyFrom:
+        create = True
 
     if dbfile == ':memory:':
         create = True
@@ -779,15 +884,19 @@ def openDB(dbfile, create = False):
             raise FileNotFoundError(dbfile)
         create = True
 
-    conn = sqlite3.connect(dbfile)
+    conn = sqlite3.connect(dbfile, isolation_level = 'DEFERRED')
+    
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON");
     conn.execute("PRAGMA synchronous = OFF");
 
-    if create:
+    if copyFrom:
+        copyFrom.backup(conn)
+    elif create:
         conn.executescript((_dir / 'schema.sql').read_text())
         conn.executescript((_dir / 'constdata.sql').read_text())
         conn.executescript((_dir / 'views.sql').read_text())
+        conn.executescript((_dir / 'scowl.sql').read_text())
     
     return conn
 
@@ -808,6 +917,7 @@ def importFromDB(conn):
         grp._group_id = r['group_id']
         grp.entries = []
         grp.lines = []
+        grp.override = {}
         grp.comments = []
         groups[r['group_id']] = grp
 
@@ -866,35 +976,58 @@ def importFromDB(conn):
         if r['word_id'] == lemma_id:
             le.lemma = r['word']
 
-    for r in cur.execute('select * from scowl_data order by group_id, level, category, region, tag, pos'):
-        grp = groups[r['group_id']]
+    linesByGroup = defaultdict(lambda: defaultdict(set))
+    for r in cur.execute('select group_id, level, category, region, pos, group_concat(tag) as tags from scowl_data group by group_id, level, category, region, pos'):
+        lines = linesByGroup[r['group_id']]
         level = r['level']
         category = r['category']
         region = r['region']
-        tag = r['tag']
-        if not grp.lines or not grp.lines[-1].match(level, category, region, tag):
-            grp.lines.append(Line(grp, level, category, region, tag))
-        l = grp.lines[-1]
-        l.poses.add(r['pos'])
+        tags = sorted(r['tags'].split(','))
+        key = (level, category, region, *tags)
+        lines[key].add(r['pos'])
+
+    for group_id, lines in linesByGroup.items():
+        grp = groups[group_id]
+        for (level, category, region, *tags), poses in lines.items():
+            grp.lines.append(Line(grp, level, category, region, tags, poses))
+
+    overrideByGroup = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+    for r in cur.execute("select group_id, level, category, region, lemma, word, group_concat(tag) as tags "
+                         "from scowl_override join entries using (word_id) "
+                         "group by group_id, level, category, region, lemma, word"):
+        override = overrideByGroup[r['group_id']]
+        level = r['level']
+        category = r['category']
+        region = r['region']
+        tags = sorted(r['tags'].split(','))
+        key = (level, category, region, *tags)
+        override[key][r['lemma']].append(r['word'])
+
+    for group_id, override in overrideByGroup.items():
+        grp = groups[group_id]
+        for (level, category, region, *tags), ov in override.items():
+            for lemma, words in ov.items():
+                grp.override[lemma] = Override(grp, level, category, region, tags, lemma, sorted(w for w in words if w != lemma))
 
     clusterComments = {}
     for r in cur.execute("select * from cluster_comments"):
-        clusterComments[r['headword']] = ClusterComment(r['headword'], r['other_words'], r['comment'])
+        clusterComments[clusterKey(r['headword'])] = ClusterComment(r['headword'], r['other_words'], r['comment'])
 
     for k in list(clusterComments.keys()):
         c = clusterComments[k]
         m = re.match(r'^see note( for | )"?([\w]+)"?', c.comment, re.IGNORECASE)
         if m:
-            other = clusterComments['Koran' if m[2] == 'Quran' else m[2]]
+            other = clusterComments[b'koran' if m[2] == 'Quran' else clusterKey(m[2])]
             other.other_words += f' {c.word} {c.other_words}'
             del clusterComments[k]
 
-    return createClusters(groups.values(), clusterComments)
+    return createClusters(groups.values(), clusterComments, conn)
 
 def exportToDB(clusters, conn):
     group_id = 1
     word_id = 1
 
+    conn.execute("delete from scowl_override")
     conn.execute("delete from scowl_data")
     conn.execute("delete from cluster_comments")
     conn.execute("delete from group_comments")
@@ -920,23 +1053,34 @@ def exportToDB(clusters, conn):
                         if we.spellings is not None and '' in we.spellings:
                             variant_level = we.spellings['']
                             spellings = le.spellings.keys() if le.spellings else ['_']
-                            conn.executemany("insert into derived_variant_info (word_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
-                                             ((word_id, lemma_id, sp, variant_level) for sp in spellings))
+                            conn.executemany("insert into derived_variant_info (word_id, spelling, variant_level) values (?, ?, ?)",
+                                             ((word_id, sp, variant_level) for sp in spellings))
                         elif we.spellings is not None:
-                            conn.executemany("insert into derived_variant_info (word_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
-                                             ((word_id, lemma_id, sp, vl) for sp, vl in we.spellings.items()))
+                            conn.executemany("insert into derived_variant_info (word_id, spelling, variant_level) values (?, ?, ?)",
+                                             ((word_id, sp, vl) for sp, vl in we.spellings.items()))
                         word_id += 1
 
                 conn.executemany("insert into lemma_variant_info (lemma_id, spelling, variant_level) values (?, ?, ?)",
                                  ((lemma_id, sp, vl) for sp, vl in le.spellings.items()))
-                    
+
                 conn.executemany("insert into lemma_comments (lemma_id, order_num, comment) values (?, ?, ?)",
                                  ((lemma_id, i, c) for i, c in enumerate(le.comments)))
-                                     
+
+                ov = group.override.get(le.lemma, None)
+                if ov:
+                    for tag in ov.tags:
+                        conn.execute("insert into scowl_override (level, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
+                                     (ov.level, ov.category, ov.region, tag, lemma_id))
+                        for word in ov.words:
+                            conn.execute("insert into scowl_override "
+                                         "select ?, ?, ?, ?, word_id from words where lemma_id = ? and word = ?",
+                                         (ov.level, ov.category, ov.region, tag, lemma_id, word))
+
             for l in group.lines:
                 for pos in l.poses:
-                    conn.execute("insert into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
-                                 (l.level, l.category, l.region, l.tag, group_id, pos))
+                    for tag in l.tags:
+                        conn.execute("insert into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
+                                     (l.level, l.category, l.region, tag, group_id, pos))
 
             for c in group.comments:
                 conn.execute("insert into group_comments (group_id, word, other_words, comment) values (?, ?, ?, ?)",
@@ -950,20 +1094,26 @@ def exportToDB(clusters, conn):
                          (c.word, c.other_words, c.comment))
 
     conn.execute("analyze")
-
-    conn.execute("insert into pos_classes select distinct pos_class from groups order by pos_class");
-
-    conn.execute("insert into usage_notes select distinct usage_note from groups order by usage_note");
-
-    conn.execute("insert into categories select distinct category from scowl_data data order by category");
-
-    conn.execute("insert into tags select distinct tag from scowl_data data order by category");
-    
     conn.commit()
 
-def exportAsText(clusters, conn = None, out = None, trimSpellings = True):
+    conn.executescript((_dir / 'post.sql').read_text())
+
+def exportAsText(clusters, conn = None, out = None, *, trimSpellings = True, showClusters = False):
     if out is None:
         out = sys.stdout
+
+    dbVars = SimpleNamespace()
+    if conn:
+        for var, val in conn.execute('select var, val from _variables'):
+            setattr(dbVars, var, val)
+
+    if hasattr(dbVars, 'filter_type'):
+        out.write("#: FILTERED VIEW OF SCOWL DATA:\n")
+        out.write(f"#:   {dbVars.filter_type}\n")
+        out.write(f"#:   {dbVars.filter_where_clause}\n")
+        if hasattr(dbVars, "filter_simplifications"):
+            out.write(f"#:   simplifications: {dbVars.filter_simplifications}\n")
+        out.write("\n")
 
     for cluster in clusters:
 
@@ -976,6 +1126,8 @@ def exportAsText(clusters, conn = None, out = None, trimSpellings = True):
                 except ValueError as err:
                     _warn(f'skipping line: {line.grp.headword}: {line.poses}: {err}')
                 first = False
+            for lemma in sorted(group.override.keys()):
+                group.override[lemma].print(out)
 
             if not group._lemmaIncluded:
                 l = Line(group, 99)
@@ -990,6 +1142,9 @@ def exportAsText(clusters, conn = None, out = None, trimSpellings = True):
 
         for c in cluster.comments:
             c.print(out)
+
+        if showClusters:
+            out.write('\n')
 
     if conn:
         out.write('#: Part of Speech Codes:\n')
@@ -1011,8 +1166,8 @@ def exportAsText(clusters, conn = None, out = None, trimSpellings = True):
         out.write(f"#:   _:     Other\n")
         out.write('#:\n')
         out.write('#: Variant Levels:\n')
-        for symbol, descr in conn.execute("select variant_symbol, variant_descr from variant_levels where variant_symbol != '' order by variant_level"):
-            out.write(f"#:   {symbol}: {descr}\n")
+        for symbol, num, descr in conn.execute("select variant_symbol, variant_level, variant_descr from variant_levels where variant_symbol != '' order by variant_level"):
+            out.write(f"#:   {symbol}: {num}: {descr}\n")
         out.write('#:\n')
         out.write('#: Usage Notes:\n')
         for usage_note, in conn.execute("select usage_note from usage_notes where usage_note != '' order by usage_note"):
@@ -1035,16 +1190,16 @@ def importText(f = None):
     
     grp = None
     lines = defaultdict(set)
+    override = []
     entriesBySpellings = {}
     commentLines = []
-    for lineStr in f:
+    for lineStr in chain(f, ['']):
         lineStr = lineStr.strip()
         if lineStr == '':
             if lines:
                 grp.lines = []
-                for (level, category, region, tag), poses in lines.items():
-                    l = Line(grp, level, category, region, tag)
-                    l.poses = poses
+                for (level, category, region, tags), poses in lines.items():
+                    l = Line(grp, level, category, region, tags, poses)
                     grp.lines.append(l)
                 grp.entries = list(entriesBySpellings.values())
                 have = addMissingSpellings(grp.entries)
@@ -1054,11 +1209,15 @@ def importText(f = None):
                 groups.append(grp)
                 for cl in commentLines:
                     grp.comments.append(GroupComment.parse(cl))
+                grp.override = {}
+                for ov in override:
+                    grp.override[ov.lemma] = ov
             elif commentLines:
                 c = ClusterComment.parse(*commentLines)
-                clusterComments[c.word] = c
+                clusterComments[clusterKey(c.word)] = c
             grp = None
             lines.clear()
+            override.clear()
             entriesBySpellings.clear()
             commentLines.clear()
             continue
@@ -1066,6 +1225,7 @@ def importText(f = None):
         if grp is None:
             grp = Group()
             grp.comments = []
+
         try:
             l = Line.parse(lineStr, grp, entriesBySpellings)
         except ValueError as err:
@@ -1081,16 +1241,20 @@ def importText(f = None):
         if l is None:
             raise ValueError(f'invalid line: {lineStr}')
 
-        if l.level < 99:
-            key = (l.level, l.category, l.region, l.tag)
+        if isinstance(l, Override):
+            override.append(l)
+        elif l.level < 99:
+            key = (l.level, l.category, l.region, frozenset(l.tags))
             lines[key].update(l.poses)
-
-    #fixme handle last element
-    #if grp and grp.lines:
-    #    groups.append(grp)
 
     return createClusters(groups, clusterComments)
 
+def combinePOS(conn):
+    conn.executescript((_dir / 'combine_pos.sql').read_text())
+
+def splitPOS(conn):
+    conn.executescript((_dir / 'split_pos.sql').read_text())
+    
 class SetFilter(set):
     def __init__(self, *members, noDefault = False):
         super().__init__(members)
@@ -1108,12 +1272,15 @@ class Include (SetFilter):
 class Exclude (SetFilter):
     pass
 
+Query = namedtuple('Query', 'select from_ where')
+
 def queryString(
         *,
-        size = 60,
-        spellings = ('A',),
+        size = None,
+        spellings = None,
         regions = None,
-        variantLevel = '.',
+        variantLevel = None,
+        variantLevels = None,
         poses = None,
         posClasses = None,
         posCategories = None,
@@ -1129,8 +1296,16 @@ def queryString(
         clauses.append(f"level <= {size}")
 
     if variantLevel is not None:
-        vl = variantFromSymbol[variantLevel]
+        try:
+            vl = int(variantLevel)
+        except ValueError:
+            vl = variantFromSymbol[variantLevel]
         clauses.append(f"variant_level <= {vl}")
+
+    if variantLevels is not None:
+        if not (variantLevel is None):
+            raise ValueError('both variantLevel and variantLevels can not be defined at the same time')
+        clauses.append(f"variant_level in ({','.join(str(int(v)) for v in sorted(variantLevels))})")
 
     def addSetQueryClause(var, check, default, members):
         if members is None:
@@ -1178,8 +1353,7 @@ def queryString(
 
     addSetQueryClause('pos_class', lambda _: True, '', posClasses)
 
-    validPosCategories = set(p.category for p in basePosInfo.values())
-    addSetQueryClause('pos_category', lambda p: p in validPosCategories, '', posCategories)
+    addSetQueryClause('pos_category', lambda p: p in POS_CATEGORIES, '', posCategories)
 
     addSetQueryClause('category', lambda _: True, '', categories)
 
@@ -1187,7 +1361,10 @@ def queryString(
 
     addSetQueryClause('usage_note', lambda _: True, '', usageNotes)
 
-    return (
+    if not clauses:
+        clauses.append('true')
+
+    return Query(
         "select distinct word",
         "from scowl_v0",
         "where {}".format(' and '.join(clauses)),
@@ -1214,7 +1391,7 @@ def wordFilterRegEx(
         return ''.join([f"([{charSet}](?:[{charSetMiddle}]*[{charSet}]|))",
                         r'\.?' if dot == 'strip' else ''])
 
-def getWords(conn, *, deaccent = False, useWordFilter = True, **args):
+def getWords(conn, *, deaccent = False, useWordFilter = True, nosuggest = None, nosuggestSuffix = '/!', **args):
     """Returns a generator of words based on the arguments.
 
     Many arguments can filter by either including or excluding a set of
@@ -1224,7 +1401,16 @@ def getWords(conn, *, deaccent = False, useWordFilter = True, **args):
     instead, use the Exclude class.  A value of None means to not filter based
     on that argument.
 
+    If _size_ is None it defaults to 60. 
+    If _spellings_ is None it defaults to ('A',)
+    If _region_ is None it value depends on _spellings_
+    If _variant_level_ is None it defaults to '.'
     """
+    args.setdefault('size', 60)
+    args.setdefault('spellings', ('A',))
+    if 'variantLevel' not in args and 'variantLevels' not in args:
+        args['variantLevel'] = '.'
+    
     queryArgs = {p.name: args.pop(p.name, p.default) for p in signature(queryString).parameters.values()}
     query = ' '.join(queryString(**queryArgs))
     print(query, file=sys.stderr)
@@ -1242,7 +1428,24 @@ def getWords(conn, *, deaccent = False, useWordFilter = True, **args):
     else:
         deaccent = None
 
+    nosuggestWords = set()
+    if nosuggest is not None:
+        if nosuggest:
+            nosuggest = set(nosuggest)
+        else:
+            nosuggest = {'vulgar-1', 'vulgar-2', 'offensive-1', 'offensive-2'}
+        possibleValues = {'vulgar-1', 'vulgar-2', 'vulgar-3', 'offensive-1', 'offensive-2', 'offensive-3'}
+        leftover = nosuggest - possibleValues;
+        if leftover:
+            raise ValueError(leftover) # fixme
+        choices = ','.join(f"'{c}'" for c in nosuggest)
+        nosuggestQuery = f"select word from words join groups using (group_id) where usage_note in ({choices})"
+        print(nosuggestQuery, file=sys.stderr)
+        for w, in conn.execute(nosuggestQuery):
+            nosuggestWords.add(w)
+
     for w, in conn.execute(query):
+        orig = w
         if useWordFilter:
             m = wordFilter.fullmatch(w)
             if not m:
@@ -1250,6 +1453,8 @@ def getWords(conn, *, deaccent = False, useWordFilter = True, **args):
             w = m[1]
         if deaccent:
             w = deaccent(w)
+        if orig in nosuggestWords:
+            w = f"{w}{nosuggestSuffix}"
         yield w
 
 import inspect
@@ -1262,3 +1467,136 @@ getWords.__signature__ = Signature([
     *(p for p in signature(getWords).parameters.values() if p.kind == Parameter.KEYWORD_ONLY),
 ])
 
+def _filterDB(filterType, conn, orig, *, simplify = (), **args):
+    queryArgs = {p.name: args.pop(p.name, p.default) for p in signature(queryString).parameters.values()}
+    whereClause = queryString(**queryArgs).where
+    if 'variantsOnly' in args:
+        del args['variantsOnly']
+        whereClause = f"{whereClause} and group_id in (select group_id from orig.words group by group_id, pos having count(*) > 1)"
+    print(whereClause, file=sys.stderr)
+    if args:
+        raise TypeError("unexpected args: {}".format(', '.join(args.keys())))
+
+    conn.execute('attach database ? as orig', (orig,));
+
+    if filterType == 'by-line':
+        simplify = set(simplify)
+        _filterByLine(conn, simplify, queryArgs, whereClause)
+    elif filterType == 'by-group':
+        simplify = ()
+        _filterByGroup(conn, whereClause)
+    elif filterType == 'by-cluster':
+        simplify = ()
+        _filterByGroup(conn, whereClause, includeCluster = True)
+    else:
+        raise ValueError(f"invalid filter type: {filterType}")
+
+    conn.execute("insert into cluster_comments select * from orig.cluster_comments where headword in (select word from words)")
+    conn.execute("insert into group_comments select * from orig.group_comments where group_id in (select group_id from groups)")
+    conn.execute("insert into lemma_comments select * from orig.lemma_comments where lemma_id in (select lemma_id from words)")
+
+    conn.execute("insert into clusters select * from orig.clusters")
+
+    conn.execute("insert into _variables values(?, ?)", ('filter_type', filterType))
+    conn.execute("insert into _variables values(?, ?)", ('filter_where_clause', whereClause))
+    if simplify:
+        conn.execute("insert into _variables values(?, ?)", ('filter_simplifications', ', '.join(sorted(simplify))))
+
+def _filterByLine(conn, simplify, queryArgs, whereClause):
+    conn.execute(f"create temp table filtered as select group_id, lemma_id, word_id from orig.scowl_ {whereClause}")
+    conn.execute("insert into groups select * from orig.groups where group_id in (select group_id from filtered)")
+    conn.execute("insert into words select * from orig.words where word_id in (select word_id from filtered union select lemma_id from filtered)")
+    
+    if queryArgs['size'] is None:
+        simplify.discard('size')
+    leftover = simplify - {'size', 'category', 'region', 'tag', 'tags'}
+    if leftover:
+        raise ValueError(f"invalid values for simplfy: {', '.join(sorted(leftover))}")
+
+    _size_ = queryArgs['size'] if 'size' in simplify else 'level'
+    _category_ = "''" if 'category' in simplify else 'category'
+    _region_ = "''" if 'region' in simplify else 'region'
+    _tag_ = "''" if 'tag' in simplify or 'tags' in simplify else 'tag'
+    conn.execute(f"insert or ignore into scowl_data select {_size_}, {_category_}, {_region_}, {_tag_}, group_id, pos from orig._scowl_main {whereClause}")
+    conn.execute(f"insert or ignore into scowl_override select {_size_}, {_category_}, {_region_}, {_tag_}, word_id from orig._scowl_override {whereClause}")
+    if simplify:
+        cleanupScowlData(conn)
+
+    conn.execute("create temp table filtered_variant_info as select lemma_id, word_id, spelling, lemma_variant_level, derived_variant_level "
+                 "from orig._scowl_main "
+                 f"{whereClause} and (lemma_variant_level is not null or derived_variant_level is not null)")
+    spellings = queryArgs['spellings']
+    if spellings and len(spellings) == 1:
+        conn.execute("insert into lemma_variant_info "
+                     "select lemma_id, '_', min(lemma_variant_level) from filtered_variant_info where lemma_variant_level is not null group by lemma_id")
+        conn.execute("insert into derived_variant_info "
+                     "select word_id, '_', min(derived_variant_level) from filtered_variant_info where derived_variant_level is not null group by word_id")
+        conn.execute("analyze")
+        conn.execute("delete from lemma_variant_info "
+                     "where lemma_id in (select lemma_id from lemmas where group_id in ("
+                     "  select group_id from lemma_variant_info join lemmas using (lemma_id) group by group_id having min(variant_level = 0) is True))")
+        conn.execute("delete from derived_variant_info "
+                     "where word_id in (select word_id from words where (lemma_id, pos) in ("
+                     "  select lemma_id, pos from derived_variant_info join words using (word_id) group by lemma_id, pos having min(variant_level = 0) is True))")
+        simplify.add('spellings')
+    else:
+        conn.execute("insert into lemma_variant_info "
+                     "select distinct lemma_id, spelling, lemma_variant_level from filtered_variant_info where lemma_variant_level is not null")
+        conn.execute("insert into derived_variant_info "
+                     "select distinct word_id, spelling, derived_variant_level from filtered_variant_info where derived_variant_level is not null")
+        conn.execute("analyze")
+
+    pruneConstTables(conn)
+
+def _filterByGroup(conn, whereClause, includeCluster = False):
+    conn.execute("create temp table filtered (group_id integer primary key)")
+    conn.execute(f"insert or ignore into filtered select group_id from orig.scowl_ {whereClause}")
+
+    if includeCluster:
+        conn.execute("create temp table cluster_map as "
+                     "select (select max(cluster_id) from orig.clusters where cluster_id <= group_id) as cluster_id, group_id from orig.groups")
+        conn.execute("insert or ignore into filtered "
+                     "select b.group_id from cluster_map a join filtered using (group_id) join cluster_map b using (cluster_id)")
+                 
+    conn.execute("insert into groups select * from orig.groups where group_id in (select group_id from filtered)")
+    conn.execute("insert into words select * from orig.words where group_id in (select group_id from filtered)")
+
+    conn.execute("insert into scowl_data select * from orig.scowl_data where group_id in (select group_id from filtered)")
+    conn.execute("insert or ignore into scowl_override select level, category, region, tag, word_id "
+                 "from orig._scowl_override where group_id in (select group_id from filtered)")
+
+    conn.execute("insert into lemma_variant_info "
+                 "select v.* from orig.lemma_variant_info v join lemmas using (lemma_id) where group_id in (select group_id from filtered)")
+    conn.execute("insert into derived_variant_info "
+                 "select v.* from orig.derived_variant_info v join words using (word_id) where group_id in (select group_id from filtered)")
+    
+def cleanupScowlData(conn):
+    cleanupWhereClause = ("where a.level <= b.level "
+                          "and (a.category = b.category or a.category = '' and b.category != '') "
+                          "and (a.region = b.region or a.region = '' and b.region != '') "
+                          "and (a.tag = b.tag or a.tag = '' and b.tag != '') "
+                          "and (a.category != b.category or a.region != b.region or a.tag != b.tag) ")
+    conn.execute("delete from scowl_data "
+                 "where (level, category, region, tag, group_id, pos) "
+                 f"in (select b.* from scowl_data a join scowl_data b using(group_id,pos) {cleanupWhereClause})");
+    conn.execute("delete from scowl_override "
+                 "where (level, category, region, tag, word_id) "
+                 f"in (select b.* from scowl_override a join scowl_override b using(word_id) {cleanupWhereClause})");
+    
+def pruneConstTables(conn):
+    conn.execute('create temp table used_variant_info as '
+                 'select spelling, variant_level from lemma_variant_info '
+                 'union '
+                 'select spelling, variant_level from derived_variant_info')
+    conn.execute("delete from spellings where spelling not in (select spelling from used_variant_info)")
+    conn.execute("delete from variant_levels where variant_level not in (select variant_level from used_variant_info)")
+
+def filterDB(orig, new, filterType, **args):
+    
+    conn = openDB(new, create=True)
+    _filterDB(filterType, conn, orig, **args)
+    conn.commit()
+    if filterType == 'by-line' and conn.execute("select true from orig.groups where base_pos in ('n_v','aj_av') limit 1").fetchone():
+        combinePOS(conn)
+
+    conn.executescript((_dir / 'post.sql').read_text())

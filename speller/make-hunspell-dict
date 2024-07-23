@@ -1,0 +1,112 @@
+#!/usr/bin/env bash
+
+ASPELL=aspell
+HUNSPELL=hunspell
+: ${SCOWL:=..}
+SPELLER="$SCOWL/speller"
+: ${UNIX2DOS:=unix2dos}
+SQLITE=sqlite3
+
+set -e
+
+export LANG=C
+export LC_ALL=C
+export LC_CTYPE=C
+export LC_COLLATE=C
+
+SIZE=60
+
+mk-list() { $SCOWL/mk-list -d $SCOWL/scowl.db "$@"; }
+
+prep() {
+  echo prep
+
+  $SQLITE -readonly $SCOWL/scowl.db \
+    "select distinct word from groups cross join words using(group_id) where usage_note in ('offensive-1', 'offensive-2', 'vulgar-1', 'vulgur-2') order by word" > nosug
+}
+
+doit() {
+  echo creating $1.dic
+
+  eval $2 | sort -u > $1.0
+
+  comm -12 $1.0 nosug > $1-nosug.1
+
+  comm -23 $1.0 nosug > $1.1
+
+  $SPELLER/munch-list munch $SPELLER/en.aff < $1-nosug.1 | $SPELLER/add-no-suggest > $1.2
+
+  $SPELLER/munch-list munch $SPELLER/en.aff < $1.1 >> $1.2
+
+  cat $SPELLER/en.dic.supp >> $1.2
+
+  wc -l < $1.2 | tr -d '[:blank:]' > $1.dic
+  cat $1.2 | sort | iconv -f iso-8859-1 -t utf-8 >> $1.dic
+
+  cp $SPELLER/en.aff $1.aff
+  
+  if [ "$SCOWL_VERSION" ]; then
+    fn="$1-$SCOWL_VERSION"
+  else
+    fn="$1"
+  fi
+
+  WHAT="$1 Hunspell Dictionary" sh $SPELLER/README_en.txt.sh > README_$1.txt
+  if [ -z "$3" ]; then
+    echo "Wordlist Command: $2" >> README_$1.txt
+  else
+    cat $3 >> README_$1.txt
+  fi
+
+  rm -f hunspell-$fn.zip
+  zip -9 hunspell-$fn.zip README_$1.txt $1.dic $1.aff
+
+  if [ -z "$3" ]; then
+    mkdir -p hunspell
+    cp hunspell-$fn.zip hunspell/
+
+    #echo check
+
+    cat $1-nosug.1 $1.1 | sort -u > $1.tocheck
+
+    hunspell -l -d ./$1 < $1.tocheck > $1.misspelled
+
+    cat $1.tocheck | iconv -f iso-8859-1 -t utf-8 | $UNIX2DOS > $1.txt
+    cat <<EOF > README.txt
+This zip file contains the words found in the corresponding Hunspell
+dictionary.  See the file README_$1.txt.
+EOF
+    zip -9 hunspell/wordlist-$fn.zip README.txt README_$1.txt $1.txt
+  fi
+}
+
+prep
+
+if [ "$1" = "-all" ]
+then 
+
+  doit en_US "mk-list --accents=strip en_US $SIZE"
+  doit en_CA "mk-list --accents=strip en_CA $SIZE"
+  doit en_GB-ize "mk-list --accents=strip en_GB-ize $SIZE"
+  doit en_GB-ise "mk-list --accents=strip en_GB-ise $SIZE"
+  doit en_AU "mk-list --accents=strip en_AU $SIZE"
+
+  doit en_US-large "mk-list -v1 --accents=both en_US 70"
+  doit en_CA-large "mk-list -v1 --accents=both en_CA 70"
+  doit en_GB-large "mk-list -v1 --accents=both en_GB-ize en_GB-ise 70"
+  doit en_AU-large "mk-list -v1 --accents=both en_AU 70"
+
+  sh $SPELLER/README_en.txt.sh > hunspell/README
+
+elif [ "$1" = "-one" -a -n "$2" -a -n "$3" ]
+then
+
+  doit $2 "cat" $3
+
+else 
+
+  echo "usage: $0 -all | -one <dict-name> <parms file>"
+
+fi
+
+#rm eng*.dat nosug en_US*.? en_CA*.?

@@ -1,0 +1,155 @@
+#!/usr/bin/python3
+
+import argparse
+import libscowl
+import re
+import sys
+
+spellingCategorySQL = {
+    'english':    "spelling = '_' and region = '' and legacy_level = 0",
+    'american':   "(spelling = 'A' and region in ('','US') or spelling = '_' and region = 'US') and legacy_level = 0",
+    'british':    "(spelling = 'B' and region in ('','GB') or spelling = '_' and region = 'GB') and legacy_level = 0",
+    'british-z':  "(spelling = 'Z' and region in ('','GB') or spelling = '_' and region = 'GB') and legacy_level = 0",
+    'canadian':   "(spelling = 'C' and region in ('','CA') or spelling = '_' and region = 'CA') and legacy_level = 0",
+    'australian': "(spelling = 'D' and region in ('','AU') or spelling = '_' and region = 'AU') and legacy_level = 0",
+    'variant-1': "spelling in ('_','A') and region in ('','US') and legacy_level = 1",
+    'variant-2': "spelling in ('_','A') and region in ('','US') and legacy_level = 2",
+    'variant-3': "legacy_level = 3",
+    'british-variant-1': "spelling in ('_', 'B', 'Z') and region in ('','GB') and legacy_level = 1",
+    'british-variant-2': "spelling in ('_', 'B', 'Z') and region in ('','GB') and legacy_level = 2",
+    'canadian-variant-1': "spelling in ('_', 'C') and region in ('','CA') and legacy_level = 1",
+    'canadian-variant-2': "spelling in ('_', 'C') and region in ('','CA') and legacy_level = 2",
+    'australian-variant-1': "spelling in ('_', 'D') and region in ('','AU') and legacy_level = 1",
+    'australian-variant-2': "spelling in ('_', 'D') and region in ('','AU') and legacy_level = 2",
+    'special': None
+}
+
+spellingMap = {
+    'en': 'english',
+    'en-us': 'american',
+    'en-gb': 'british?',
+    'en-gb-ise': 'british',
+    'en-gb-ize': 'british-z',
+    'en-gb-oed': 'british-z',
+    'en-ca': 'canadian',
+    'en-au': 'australian'
+}
+for sp in spellingCategorySQL.keys():
+    spellingMap[sp] = sp
+
+p = argparse.ArgumentParser('mk-list')
+p.add_argument('--db', '--dir', '-d', default='scowl.db')
+grp = p.add_mutually_exclusive_group()
+grp.add_argument('--with-variants', '-v', type=int, choices = [0,1,2,3])
+grp.add_argument('--variants')
+p.add_argument('--no-implied', action='store_false', dest='implied')
+p.add_argument('--accents', type = str.lower, choices = ['keep', 'strip', 'both'], default='keep')
+p.add_argument('--encoding', type = str.lower, choices = ['iso-8859-1', 'utf-8'], default='iso-8859-1')
+norm = str.maketrans('ABCDEFGHIJKLMNOPQRSTUVWXY_','abcdefghijklmnopqrstuvwxy-')
+p.add_argument('spelling_categories', type = lambda s: s.translate(norm), choices=spellingMap.keys(), nargs='+')
+p.add_argument('size', type=int)
+args = p.parse_args()
+
+if args.with_variants is not None:
+    variant_levels = set(range(0, args.with_variants + 1))
+elif args.variants is not None:
+    variant_levels = set(int(v) for v in args.variants.split(','))
+else:
+    variant_levels = {0}
+
+sps = set(spellingMap[sp] for sp in args.spelling_categories)
+if 'british?' in sps:
+    if 0 in variant_levels:
+        print('error: must specify en_GB-ise or en_GB-ize', file=sys.stderr)
+        exit(2)
+    sps.remove('british?')
+    sps.add('british')
+orig_sps = set(sps)
+
+if args.implied and 0 in variant_levels:
+    sps.add('english')
+    sps.add('special')
+
+if 'american' in sps:
+    if 1 in variant_levels:
+        sps.add('variant-1')
+    if 2 in variant_levels:
+        sps.add('variant-2')
+elif 'british' in sps or 'british-z' in sps:
+    if 1 in variant_levels:
+        sps.add('british-variant-1')
+    if 2 in variant_levels:
+        sps.add('british-variant-2')
+elif 'canadian' in sps:
+    if 1 in variant_levels:
+        sps.add('canadian-variant-1')
+    if 2 in variant_levels:
+        sps.add('canadian-variant-2')
+elif 'australian' in sps:
+    if 1 in variant_levels:
+        sps.add('australian-variant-1')
+    if 2 in variant_levels:
+        sps.add('australian-variant-2')
+if 3 in variant_levels:
+    sps.add('variant-3')
+
+if 0 not in variant_levels:
+    sps -= orig_sps
+
+if 'special' in sps:
+    sps.remove('special')
+    if sps:
+        categoryClause = ''
+    else: # sps is empty
+        print('warning: special list will include alternative spellings', file=sys.stderr)
+        categoryClause = "category != ''"
+else:
+    categoryClause = "category = ''"
+
+whereClause = ' AND '.join(map(lambda s: f'({s})', 
+                               filter(lambda s: s != '', [
+                                   ' OR '.join(spellingCategorySQL[sp] for sp in sorted(sps)),
+                                   categoryClause,
+                                   f'level <= {args.size}'
+                               ])))
+query = f"select word from scowl_v0 where {whereClause}"
+
+#print(sorted(sps))
+#print(query)
+#exit(1)
+
+wordFilter = re.compile(libscowl.wordFilterRegEx())
+
+if args.accents == 'keep':
+    deaccent = False
+    keepOrig = True
+elif args.accents == 'strip':
+    deaccent = True
+    keepOrig = False
+elif args.accents == 'both':
+    deaccent = True
+    keepOrig = True
+
+conn = libscowl.openDB(args.db)
+
+words = set()
+for w, in conn.execute(query):
+    m = wordFilter.fullmatch(w)
+    if not m:
+        continue
+    w = m[1]
+    if deaccent:
+        w_ = libscowl.deaccent(w)
+        words.add(w_)
+        if keepOrig and w != w_:
+            words.add(w)
+    else:
+        words.add(w)
+
+if args.encoding == 'iso-8859-1':
+    sys.stdout.reconfigure(encoding='iso-8859-1')
+
+for w in sorted(words):
+    print(w)
+    
+

@@ -1,0 +1,453 @@
+---
+60: _: piñon <n>: (piñons | v: piñones), piñon's # accented
+60: _v: pinyon <n>: pinyons, pinyon's
+60: _-: pinon <n>: (pinons | ~: pinones), pinon's # need-accent
++++
+60: _: piñon <n>: (piñons | v: piñones), piñon's
+60: _v: pinyon <n>: pinyons, pinyon's
+60: _-: pinon <n>: (pinons | v: pinones), pinon's
+===
+
+---
+40: A C: kindergartner <n>: kindergartners, kindergartner's # need-accent
+40: AV B: kindergartener <n>: kindergarteners, kindergartener's
+---
+40: kindergärtner <n>: kindergärtners, kindergärtner's # accented
++++
+40: A C: kindergartner <n>: kindergartners, kindergartner's
+40: AV B: kindergartener <n>: kindergarteners, kindergartener's
+40: A- B-: kindergärtner <n>: kindergärtners, kindergärtner's
+===
+
+---
+35: _-: - <m>: tasselled†, tasselling†, tassells
+70 [moby]: _-: tassell <m>
+---
+70 [moby]: _: tiercel <n>: tiercels, tiercel's
++++
+70 [moby]: _: tiercel <n>: tiercels, tiercel's
+70 [moby]: _-: tassell <n>: tassells, tassell's
+===
+
+---
+50: applique <v>: (appliqued | -: appliqueed-), appliqueing, appliques # need-accent # fixme: appliqueed: check if variant
+---
+50: appliqué <n>: appliqués, appliqué's # accented
+50: _~: applique <n>: appliques, applique's # need-accent
+---
+70 [5desk]: appliquéd # accented
+70 [5desk]: _~: appliqued # need-accent
+---
+50: appliquéing # accented
++++
+50: appliqué <v>: appliquéd, appliquéing, appliqués
+50: _V: applique <v>: (appliqued | -: appliqueed), appliqueing, appliques
++++
+50: appliqué <n>: appliqués, appliqué's # accented
+50: _V: applique <n>: appliques, applique's # need-accent
+===
+
+---
+35: fete <v>: feted, feting, fetes
+---
+35: fête <n>: fêtes, fête's # accented
+35: _~: fete <n>: fetes, fete's # need-accent
++++
+35: A B=: fete <n_v>: feted, feting, fetes, fete's
+35: Av B: fête <n_v>: fêted, fêting, fêtes, fête's
+===
+
+---
+35: sauté <n_v>: sautéed, sautéing, sautés # accented
+35: _~: saute <n_v>: (sauteed | ~: sauted†), (sauteing | -: sauting-†), sautes, saute's # need-accent
+---
+35: sauté <aj> # accented
+35: _~: saute <aj> # need-accent
+---
+40: sauteed <aj>
++++
+35: sauté <n_v>: (sautéed | ~: sautéd), sautéing, sautés
+35: _V: saute <n_v>: (sauteed | ~: sauted), sauteing, sautes, saute's
++++
+35: sauté <aj>
+35: _V: saute <aj>
+===
+
+---
+60: soigné <aj> # accented
+60: _~: soigne <aj> # need-accent
+---
+55: _: soignee <aj> # need-accent
+---
+55: soignée # accented
++++
+60: soigné <aj>
+60: _V: soigne <aj>
++++
+55: soignée <aj>
+55: _V: soignee <aj>
+===
+
+---
+35: souffle <a>
+---
+35: soufflé <n>: soufflés, soufflé's # accented
+35: _~: souffle <n>: souffles, souffle's # need-accent
++++
+35: soufflé <aj>
+35: _V: souffle <aj>
++++
+35: soufflé <n>: soufflés, soufflé's
+35: _V: souffle <n>: souffles, souffle's
+===
+
+---
+55: _: lovey <n> {:2}: loveys
+55: _-: luvvie <n> {:2}: luvvies
+---
+55: _: luvvy <n> {:1}
+55: _V: luvvie <n> {:1}
++++
+55: _: lovey <n>: loveys
++++
+55 GB: _: luvvie <n>: luvvies
+55 GB: _v: luvvy <n>: luvvies
+===
+
+---
+60: déshabillé <n>: déshabillés, déshabillé's # accented
+---
+60: _: dishabille <n>: dishabille's
+60: _v: deshabille <n>: deshabille's # need-accent
+80: _: - <n>: dishabilles~
+80: _v: - <n>: deshabilles~
++++
+60: A Bv: dishabille <n>
+60: Av: deshabille <n>
+60: B: déshabillé <n>
+80: A Bv: - <n>: dishabilles~
+80: Av: - <n>: deshabilles~
+80: B: - <n>: déshabillés
+===
+
+---
+50 [name]: Réunion <n>: Réunion's # accented # fixme: pos_class originally "place"
+50 [name]: _~: Reunion <n>: Reunion's # need-accent # fixme: pos_class originally "name?"
+60: Réunion <n>: Réunion's
+60: _~: Reunion <n>: Reunion's
++++
+50 [name]: Réunion <n/place>: Réunion's
+50 [name]: _-: Reunion <n/place>: Reunion's
+60: Réunion <n/place>: Réunion's
+60: _-: Reunion <n/place>: Reunion's
+===
+
+---
+50 [name]: Curaçao <n>: Curaçao's # accented # fixme: pos_class originally "place"
+50 [name]: _~: Curacao <n>: Curacao's # need-accent # fixme: pos_class originally "upper"
+70 [5desk]: Curaçao <n>: Curaçao's
+70 [5desk]: _~: Curacao <n>: Curacaos-, Curacao's
++++
+50 [name]: Curaçao <n/place>: Curaçao's
+50 [name]: _-: Curacao <n/place>: Curacao's
+70 [5desk]: Curaçao <n/place>: Curaçao's
+70 [5desk]: _-: Curacao <n/place>: Curacao's
+===
+
+---
+35: get <n_v>: got, (got | ?: gotten), getting, gets
++++
+35: get <n_v>: got, (A B C: got | A. B@ C.: gotten), getting, gets
+===
+
+---
+35: strew <v>: strewed, (strewed | ?: strewn), strewing, strews
++++
+35: strew <v>: strewed, (strewn | .: strewed), strewing, strews
+===
+
+---
+35: hoof <n>: (hoofs | ~: hooves), hoof's
++++
+35: hoof <n>: (hooves | .: hoofs), hoof's
+===
+
+---
+35: wake <n_v>: (woke | ?: waked), (waked | ~: woke | ~: woken), waking, wakes, wake's
+50 [+]: - <n_v>: (woke | ?: waked), (waked | ~: woke | ~: woken), -, -
++++
+35: wake <n_v>: (A B: woke | AV B@: waked), (A B: woken | A. B@: waked | AV: woke), waking, wakes, wake's
++++
+50 [+]: woke <aj>: woker, wokest
+===
+
+---
+35: forum <n>: (forums | ~: fora), forum's, (forums' | ~: fora's)
++++
+35: forum <n>: (forums | V: fora), forum's, (forums' | V: fora's)
+===
+
+---
+35 [ukfreq]: persona <n>
+40: persona <n>: (personae | ~: personas)
++++
+35 [ukfreq]: persona <n>
+40: persona <n>: (personae | .: personas)
+===
+
+---
+50 hacker: AV: donuts <n>
+80: AV: donuts <n>
+#! missing spellings: B Z C D
+---
+35: A B: doughnut <n>: doughnuts, doughnut's
+35: AV: donut <n>: donuts, donut's
++++
+35: A B: doughnut <n>: doughnuts, doughnut's
+35: A. B-: donut <n>: donuts, donut's
+===
+
+---
+35: formula <n>: (A B: formulas | Av B: formulae), formula's, (A B: formulas' | Av B: formulae's) #! unmarked variants: formulas, formulae, formulas', formulae's
++++
+35: formula <n>: (A B: formulas | Av B.: formulae), formula's, (A B: formulas' | Av B.: formulae's)
+===
+
+---
+50: - <v>: -, (rived | ~: riven), -, -
+60: rive <v>: rived, riving, rives
++++
+50: riven <aj>
++++
+60: rive <v>: rived, (riven | V: rived), riving, rives
+===
+
+---
+35: A B: through <aj_av>
+35: Av: thru <aj_av>
+---
+35: A B: through <c>
+35: Av: thru <c>
++++
+35: A B: through <aj_av>
+35: AV B-: thru <aj_av>
+70: +: thru <aj_av>
++++
+35: A B: through <c>
+35: AV B-: thru <c>
+70: +: thru <c>
++++
+50 US: thru <we>
+===
+
+---
+40: drive-through <n>: drive-throughs
++++
+40: A B: drive-through <n>: drive-throughs
+40: A.: drive-thru <n>: drive-thrus
+===
+
+---
+35: person <n>: (persons | ~: people), person's, (persons' | ~: people's)
++++
+35: person <n>: (people | V: persons), person's, (people's | V: persons')
+60: +: person <n>: persons
+===
+
+---
+50: layperson <n>: (laypersons | ~: laypeople), layperson's, (laypersons' | ~: laypeople's)
++++
+50: layperson <n>: (laypeople | V: laypersons), layperson's, (laypeople's | V: laypersons')
+60: +: layperson <n>: laypersons
+===
+
+---
+35: spokesperson <n>: (spokespersons | ?: spokespeople), spokesperson's, (spokespersons' | ?: spokespeople's)
++++
+35: spokesperson <n>: (spokespeople | V: spokespersons), spokesperson's, (spokespeople's | V: spokespersons')
+60: +: spokesperson <n>: spokespersons
+===
+
+---
+35: _: hyena <n>: (hyenas | V: hyena), hyena's
+35: _V: hyaena <n>: (hyaena | hyaenas), hyaena's #! unmarked variants: hyaena, hyaenas
+---
+## hyena (hyaena):
+## If hyaena not variant than: _ 2: hyaenas / _V 2: hyaena
++++
+35: _: hyena <n>: (hyenas | V: hyena), hyena's
+35: _V: hyaena <n>: (hyaenas | V: hyaena), hyaena's
+===
+
+---
+55: B: arse- <v>: arsed, arsing, arses
+#! missing spellings: A
++++
+55 GB: arse <v>: arsed, arsing, arses
+===
+
+---
+40: - <m>: -, (- | Av: binging†), - #! missing non-variants: binging
+80 [ukacd]: bing <m>: -, -, bings
+80: - <m>: binged†, -, -
++++
+80 [ukacd]: bing <n>: bings
+===
+
+---
+35: alight <v>: (alit | .: alighted), alighting, alights
++++
+35: alight <v>: (alighted | V: alit), alighting, alights
+===
+
+---
+50: A C Dv: edema <n>: edema's
+50: B D: oedema <n>: oedema's
+80: A C Dv: - <n>: (_~: edemata~ | A C Dv: edemas~)
+80: B D: - <n>: oedemas~
++++
+50: A C Dv: edema <n>: edema's
+50: B D: oedema <n>: oedema's
+60: A C Dv: - <n>: edemas~
+60: B D: - <n>: oedemas~
+===
+
+---
+35: A BV C: whiz <n> {:2}: whizzes, whiz's
+35: Av B Cv: whizz <n> {:2}: whizzes, whizz's
+35: AV Bv Cv: wiz <n> {:2}: (_?: wizes | AV Bv Cv: wizzes), wiz's #! missing non-variants: wizes, wizzes
++++
+35: A BV C: whiz <n> {:2}: whizzes, whiz's
+35: Av B Cv: whizz <n> {:2}: whizzes, whizz's
+35: AV Bv Cv: wiz <n> {:2}: wizzes, wiz's
+===
+
+---
+35: bacteria <n>
+80: - <n>: bacterias~
++++
+35: bacteria <n>
+80: - <n>: bacterias!
+===
+
+---
+35: A C D: program <n>: programs, program's
+35: B Dv: programme <n>: programmes, programme's
+---
+35: A B: program <v>: (A B: programmed | Av: programed), (A B: programming | Av: programing), programs
+35: AV BV: programme <v>: programmed, programming, programmes
+---
+35: A B: program <n_v> {computer program}: (A B: programmed | Av: programed), -, programs, program's
++++
+35: A C D: program <n>: programs, program's
+35: B Cv Dv: programme <n>: programmes, programme's
++++
+35: A C D: program <v>: (A C D: programmed | Av: programed), (A C D: programming | Av: programing), programs
+35: AV B Cv Dv: programme <v>: programmed, programming, programmes
++++
+35: A B: program <n_v> {coded instructions}: (A B: programmed | Av: programed), (A B: programming | Av: programing), programs, program's
+===
+
+---
+50: deprogram <v>: (deprogrammed† | ~: deprogramed), (deprogramming† | ~: deprograming), deprograms
+---
+80 [ukacd]: deprogramme <m>: -, -, deprogrammes
+80: - <m>: deprogrammed†, deprogramming†, -
++++
+35: A C D: deprogram <v>: (A C D: deprogrammed | Av: deprogramed), (A C D: deprogramming | Av: deprograming), deprograms
+35: B Cv Dv: deprogramme <v>: deprogrammed, deprogramming, deprogrammes
+===
+
+---
+35 [ukfreq]: A B: - <v>: (_: reprogrammed | _~: reprogramed), -, -
+35 [ukfreq]: Bv: - <v>
+50 [ukfreq]: A B: reprogram <v>: -, (_: reprogramming | _~: reprograming), -
+50 [ukfreq]: Bv: reprogramme <v>
+60: A B: reprogram <v>: (_: reprogrammed | _~: reprogramed), (_: reprogramming | _~: reprograming), reprograms
+60: Bv: reprogramme <v>
++++
+35 [ukfreq]: A B Z: - <v>: (A B: reprogrammed | AV: reprogramed), -, -
+35 [ukfreq]: Bv: - <v>: reprogrammed, -, -
+50 [ukfreq]: A B Z: reprogram <v>: -, (A B: reprogramming | AV: reprograming), -
+50 [ukfreq]: Bv: reprogramme <v>: -, reprogramming, -
+60: A B Z: reprogram <v>: (A B: reprogrammed | AV: reprogramed), (A B: reprogramming | AV: reprograming), reprograms
+60: Bv: reprogramme <v>: reprogrammed, reprogramming, reprograms
+===
+
+---
+50 hacker: bot <n>: bot's
+70 [5desk] [moby]: bot <n>: bots, bot's
++++
+50 [+]: bot <n>: bots, bot's
+70 [5desk] [moby]: bot <n>: bots, bot's
+===
+
+---
+55: - <n>: (imagoes | imagos | ~: imagines†) #! unmarked variants: imagoes, imagos
+60: imago <n>: imago's
++++
+55: - <n>: (A: imagoes | Av Bv: imagines | B: imagos)
+60: imago <n>: imago's
+===
+
+---
+50: spec <n_v>: (spec'd | ~: specced | ~: specked†), (spec'ing | ~: speccing | ~: specking†), specs
++++
+50: spec <n_v>: (specced | v: spec'd | -: specked), (speccing | v: spec'ing | -: specking), specs
+===
+
+---
+50: scampi <n>: (scampi | scampis | ~: scampies) #! unmarked variants: scampi, scampis
++++
+50: scampi <n>: (scampi | -: scampies | -: scampis)
+===
+
++++
+50 [+]: _: dox <v>: doxed, doxing, doxes
+50 [+]: _.: doxx <v>: doxxed, doxxing, doxxes
++++
+50 [+]: _: doxing <n>: doxings
+50 [+]: _.: doxxing <n>: doxxings
+===
+
+---
+35: A B Z C: fetus <n>: fetuses, fetus's
+35: Bv ZV: foetus <n>: (_-: foeti | Bv ZV: foetuses), foetus's, (_-: foeti's | Bv ZV: foetuses')
++++
+35: A B Z C: fetus <n>: fetuses, fetus's
+35: Bv ZV: foetus <n>: (foetuses | -: foeti), foetus's, (foetuses' | -: foeti's)
+===
+
+---
+50: intaglio <n>: (intaglioes | intaglios | ~: intagli), intaglio's, (intaglioes' | intaglios' | ~: intagli's) #! unmarked variants: intaglioes, intaglios, intaglioes', intaglios'
+---
+70 [5desk] [moby]: intaglio- <v>: intaglioed, intaglioing, (intaglioes | intaglios) #! unmarked variants: intaglioes, intaglios
++++
+50: intaglio <n>: (intaglios | ~: intagli), intaglio's, (intaglios' | ~: intagli's)
++++
+70 [5desk] [moby]: intaglio- <v>: intaglioed, intaglioing, intaglioes
+===
+
+---
+35: virtuoso <n>: (A B: virtuosi | Av Bv: virtuosos | A-: virtuosoes), virtuoso's, (A B: virtuosi's | Av Bv: virtuosos' | A-: virtuosoes')
++++
+35: virtuoso <n>: (A B=: virtuosos | A= B: virtuosi | A-: virtuosoes), virtuoso's, (A B=: virtuosos' | A= B: virtuosi's | A-: virtuosoes')
+===
+
+---
+35: misspell <v>: (misspelled | ~: misspelt), misspelling, misspells
++++
+35: misspell <v>: (A B: misspelled | AV B.: misspelt), misspelling, misspells
+===
+
++++
+50 [+]: metaverse <n>: metaverses, metaverse's
+===
+
+---
+35: A B Dv: dialog <n> {dialog box}
+35: Bv D: dialogue <n> {dialog box}
++++
+35: A B Dv: dialog <wp> {dialog box}
+35: Bv D: dialogue <wp> {dialog box}
+===

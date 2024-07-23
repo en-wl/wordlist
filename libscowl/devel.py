@@ -43,9 +43,10 @@ def populateConstDataFromDB(conn):
             descr = r['spelling_descr']
         )
 
-    global SPELLINGS, REGIONS
+    global SPELLINGS, REGIONS, POS_CATEGORIES
     SPELLINGS = tuple(sp for (sp,) in conn.execute("select spelling from spellings order by order_num"));
     REGIONS = tuple(rgn for (rgn,) in conn.execute("select region from regions order by order_num"));
+    POS_CATEGORIES = tuple(c for (c,) in conn.execute("select distinct pos_category from poses order by pos_category"));
 
 _moduleHeader = """
 # generated file, must be kept in sync with constdata.sql
@@ -96,6 +97,8 @@ def exportConstData(out=None):
     out.write(f'SPELLINGS = {SPELLINGS!r}\n\n')
 
     out.write(f'REGIONS = {REGIONS!r}\n\n')
+
+    out.write(f'POS_CATEGORIES = {POS_CATEGORIES!r}\n\n')
     
     out.write(_moduleFooter)
 

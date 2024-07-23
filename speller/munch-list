@@ -1,0 +1,71 @@
+#!/usr/bin/perl
+
+#
+# Quick and dirty script to use aspell to munch and expand a hunspell
+# list.  For munching using Aspell gives much better results than the
+# hunspell scripts for expanding hunspell could theoretical be used
+# but it just as easy to use Aspell.
+#
+# Note. this script is only intended to work with english.  Other
+# languages might work but the hunspell Affix file needs to be
+# compatible with Aspell.
+#
+# For now expected the input to be in ASCII or iso-8859-1.
+#
+
+my $ASPELL="aspell";
+
+use strict;
+use warnings;
+
+use File::Temp;
+
+sub usage() {
+    print STDERR "$0: [munch|expand] AFFIX_FILE < INPUT\n";
+    exit 1;
+}
+
+usage() unless @ARGV == 2;
+my $action = $ARGV[0];
+usage() unless $action eq 'munch' or $action eq 'expand';
+my $affix_fn = $ARGV[1];
+my $affix_file;
+
+{
+    local $/ = undef;
+    open F, $affix_fn or die "Unable to open: $affix_fn\n";
+    $affix_file = <F>;
+}
+
+# Aspell expects the dictionary to be in iso8859-1 so fake it for now.
+# The fact that there may be some Hunspell specific entries in UTF-8
+# (such as the ICONV entry) should not be a problem as Aspell ignores
+# it.  The words them self are already in iso8859-1.
+ 
+$affix_file =~ s/^SET UTF-8$/SET ISO8859-1/m;
+
+my $datadir = File::Temp->newdir();
+
+open F, ">$datadir/eng_affix.dat";
+print F $affix_file;
+
+open F, ">$datadir/eng.dat";
+print F "name eng\n";
+print F "charset iso8859-1\n";
+print F "special ' -*-\n";
+print F "affix eng\n";
+
+if ($action eq 'munch') {
+    open F, '-|', $ASPELL, '--local-data-dir', $datadir, '--lang', 'eng', 'munch-list';
+    while (<F>) {
+        next if /^(XXX\|>>>)/;
+        print;
+    }
+} elsif ($action eq 'expand') {
+    open F, '-|', $ASPELL, '--local-data-dir', $datadir, '--lang', 'eng', 'expand';
+    while (<F>) {
+        foreach (split ' ') {
+            print "$_\n";
+        }
+    }
+}

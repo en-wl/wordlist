@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+
+while (<>) {
+  chop;
+  my ($w, $a) = split /\//;
+  $a .= '!';
+  print "$w";
+  print "/$a" if length($a) > 0;
+  print "\n";
+}

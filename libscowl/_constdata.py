@@ -13,7 +13,7 @@ class SpellingInfo(SlotsDataClass):
     __slots__ = ('order_num', 'spelling', 'region', 'descr')
 
 posInfo = {
-  '?': PosInfo(order_num=1, name='?', base_pos='', category='placeholder', descr='unknown', note=None, extra_info=None),
+  '?': PosInfo(order_num=1, name='?', base_pos='', category='', descr='unknown', note=None, extra_info=None),
   'c': PosInfo(order_num=2, name='c', base_pos='c', category='', descr='conjunction/preposition', note=None, extra_info=None),
   'i': PosInfo(order_num=3, name='i', base_pos='i', category='', descr='interjection', note=None, extra_info=None),
   'p': PosInfo(order_num=4, name='p', base_pos='p', category='', descr='pronoun', note=None, extra_info=None),
@@ -42,12 +42,13 @@ posInfo = {
   'a0': PosInfo(order_num=27, name='a0', base_pos='a', category='', descr=None, note='aj0 or av0', extra_info=None),
   'a1': PosInfo(order_num=28, name='a1', base_pos='a', category='', descr='comparative (-er)', note='aj1 or av1', extra_info=None),
   'a2': PosInfo(order_num=29, name='a2', base_pos='a', category='', descr='superlative (-est)', note='aj2 or av2', extra_info=None),
-  'pre': PosInfo(order_num=30, name='pre', base_pos='pre', category='wordpart', descr='prefix', note=None, extra_info=None),
-  'wp': PosInfo(order_num=31, name='wp', base_pos='wp', category='wordpart', descr='multi-word part', note=None, extra_info=None),
-  'we': PosInfo(order_num=32, name='we', base_pos='we', category='wordpart', descr='multi-word ending', note=None, extra_info=None),
-  'wep': PosInfo(order_num=33, name='wep', base_pos='we', category='wordpart', descr='possessive', note=None, extra_info=None),
-  'abbr': PosInfo(order_num=34, name='abbr', base_pos='abbr', category='special', descr='abbreviation', note=None, extra_info=None),
-  'x': PosInfo(order_num=35, name='x', base_pos='x', category='special', descr='non word', note=None, extra_info='for example a roman numeral'),
+  'pre': PosInfo(order_num=30, name='pre', base_pos='pre', category='nonword', descr='prefix', note=None, extra_info=None),
+  'suf': PosInfo(order_num=31, name='suf', base_pos='suf', category='nonword', descr='suffix', note=None, extra_info=None),
+  'wp': PosInfo(order_num=32, name='wp', base_pos='wp', category='wordpart', descr='multi-word part', note=None, extra_info=None),
+  'we': PosInfo(order_num=33, name='we', base_pos='we', category='wordpart', descr='multi-word ending', note=None, extra_info=None),
+  'wep': PosInfo(order_num=34, name='wep', base_pos='we', category='wordpart', descr='possessive', note=None, extra_info=None),
+  'abbr': PosInfo(order_num=35, name='abbr', base_pos='abbr', category='special', descr='abbreviation', note=None, extra_info=None),
+  'x': PosInfo(order_num=36, name='x', base_pos='x', category='nonword', descr='non word', note=None, extra_info='for example a roman numeral'),
 }
 
 basePosInfo = {
@@ -64,16 +65,17 @@ basePosInfo = {
   'i': BasePosInfo(order_num=11, name='i', lemma_pos='i', category='', descr='interjection', extra_info=None),
   'p': BasePosInfo(order_num=12, name='p', lemma_pos='p', category='', descr='pronoun', extra_info=None),
   's': BasePosInfo(order_num=13, name='s', lemma_pos='s', category='special', descr='contraction', extra_info=None),
-  'pre': BasePosInfo(order_num=14, name='pre', lemma_pos='pre', category='wordpart', descr='prefix', extra_info=None),
-  'wp': BasePosInfo(order_num=15, name='wp', lemma_pos='wp', category='wordpart', descr='multi-word part', extra_info=None),
-  'we': BasePosInfo(order_num=16, name='we', lemma_pos='we', category='wordpart', descr='multi-word ending', extra_info=None),
-  'abbr': BasePosInfo(order_num=17, name='abbr', lemma_pos='abbr', category='special', descr='abbreviation', extra_info=None),
-  'x': BasePosInfo(order_num=18, name='x', lemma_pos='x', category='special', descr='non word', extra_info='for example a roman numeral'),
+  'pre': BasePosInfo(order_num=14, name='pre', lemma_pos='pre', category='nonword', descr='prefix', extra_info=None),
+  'suf': BasePosInfo(order_num=15, name='suf', lemma_pos='suf', category='nonword', descr='suffix', extra_info=None),
+  'wp': BasePosInfo(order_num=16, name='wp', lemma_pos='wp', category='wordpart', descr='multi-word part', extra_info=None),
+  'we': BasePosInfo(order_num=17, name='we', lemma_pos='we', category='wordpart', descr='multi-word ending', extra_info=None),
+  'abbr': BasePosInfo(order_num=18, name='abbr', lemma_pos='abbr', category='special', descr='abbreviation', extra_info=None),
+  'x': BasePosInfo(order_num=19, name='x', lemma_pos='x', category='nonword', descr='non word', extra_info='for example a roman numeral'),
 }
 
-variantAsSymbol = {0: '', 1: '.', 2: '=', 3: '?', 4: 'v', 5: '~', 6: 'V', 8: '-', 9: 'x'}
+variantAsSymbol = {0: '', 1: '.', 2: '=', 3: '?', 4: 'v', 5: '~', 6: 'V', 7: '-', 8: '@', 9: 'x'}
 
-variantFromSymbol = {'': 0, '.': 1, '=': 2, '?': 3, 'v': 4, '~': 5, 'V': 6, '-': 8, 'x': 9}
+variantFromSymbol = {'': 0, '.': 1, '=': 2, '?': 3, 'v': 4, '~': 5, 'V': 6, '-': 7, '@': 8, 'x': 9}
 
 spellingInfo = {
   '_': SpellingInfo(order_num=1, spelling='_', region='', descr=''),
@@ -87,5 +89,7 @@ spellingInfo = {
 SPELLINGS = ('_', 'A', 'B', 'Z', 'C', 'D')
 
 REGIONS = ('', 'US', 'GB', 'CA', 'AU')
+
+POS_CATEGORIES = ('', 'nonword', 'special', 'wordpart')
 
 

@@ -451,3 +451,15 @@
 35: A B Dv: dialog <wp> {dialog box}
 35: Bv D: dialogue <wp> {dialog box}
 ===
+
+---
+35 [ukfreq]: A Bv C: adapter <n>
+35 [ukfreq]: AV B Cv: adaptor <n>
+40: A Bv C: adapter <n>: adapters, adapter's
+40: AV B Cv: adaptor <n>: adaptors, adaptor's
++++
+35 [ukfreq]: A B: adapter <n>
+35 [ukfreq]: AV Bv: adaptor <n>
+40: A B: adapter <n>: adapters, adapter's
+40: AV Bv: adaptor <n>: adaptors, adaptor's
+===

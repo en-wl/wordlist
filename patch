@@ -463,3 +463,16 @@
 40: A B: adapter <n>: adapters, adapter's
 40: AV Bv: adaptor <n>: adaptors, adaptor's
 ===
+
+---
+35: anyway <av>
+---
+55: - <n>: anyways
+70 [5desk] [moby]: anyway- <n>
+---
+70 [moby]: anyways <av>
++++
+35: A B: anyway <av>
+35: AV: anyways <av>
+70 US: +: anyways <av>
+===

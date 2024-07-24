@@ -481,3 +481,9 @@
 60: lbs. <abbr>
 ===
 
+---
+35: referendum <n>: (referendums | ~: referenda)
++++
+35: referendum <n>: (referendums | .: referenda)
+===
+

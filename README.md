@@ -37,14 +37,14 @@ forms or variants in SCOWLv1.  The handling of possessive forms have been
 completely redone based partly on the noun category assigned by WordNet.  For
 American English any new changes to non-possessive forms of words included in
 speller dictionary have been accounted for and noted in the file
-misc/comp-60.txt.  The 70 size should also be about the same but no attempt
+`misc/comp-60.txt`.  The 70 size should also be about the same but no attempt
 has been made to verify this as of yet.
 
 SCOWLv2 is generated from the the same sources that SCOWLv1 uses but via a far
 more complicated, and unreleased, process.  At some point I will be be happy
 with the results and the resulting file (`scowl.txt`) will be directly
 editable.  However for now, I want the freedom to update the source scrips to
-fix systemic errors so SCOWLv2 is distributed in a set of two files: the
+fix systematic errors so SCOWLv2 is distributed in a set of two files: the
 result of the automatic process (`scowl-orig.txt`), and a patch file
 (`patch`).
 
@@ -56,7 +56,7 @@ SCOWLv2 requires Python 3 and SQLite.  It is currently tested with Python 3.7
 and SQLite 3.27.2.  Newer versions should work, older versions may work but
 are not supported.
 
-A Unix like envirment is also required for now.
+A Unix like environment is also required for now.
 
 
 Basic Usage
@@ -64,14 +64,14 @@ Basic Usage
 
 In order to use SCOWL `scowl-orig.txt` must be combined with the patch file
 (`patch`) to create `scowl.txt` and the a SQLite3 database file `scowl.db`.
-To do both via the provied makefile simply type:
+To do both via the provided makefile simply type:
 
   make
 
 To work with SCOWL use the `scowl` script provided in the root directory.
 This script is a very thin wrapper around the `libscowl` python module.  The
 module is not available on PyPI, but instead included with SCOWL.  This script
-is meant to be run from the root directory of the SCOWL distrubution.
+is meant to be run from the root directory of the SCOWL distribution.
 
 To extract wordlists from the database use:
 
@@ -134,7 +134,7 @@ Filtering the Database
 ----------------------
 
 In addition to creating wordlists you can also filter the database to only
-show the information you are intereted in and avoid noise.  This works by
+show the information you are interested in and avoid noise.  This works by
 creating a new database file that then needs to be reexported with
 `./scowl export-db`.
 
@@ -145,9 +145,9 @@ For example, to filter the database to only include sizes 70 or lower:
 
 There are three ways to filter the database `by-line`, `by-group` and
 `by-cluster`.  `by-line` will only keep the lines that match the filter
-arguments.  `by-group` will instead keep the entrie group, which is useful if
+arguments.  `by-group` will instead keep the entire group, which is useful if
 you want to then edit the groups and reintegrate into the larger scowl
-database.  `by-cluster` will instead keep the entrie cluster, which is useful
+database.  `by-cluster` will instead keep the entire cluster, which is useful
 to provide additional context.  If you use the `by-cluster` option the
 `--show-clusters` option might be useful when exporting the database.  For
 example:
@@ -176,14 +176,14 @@ As previously mentioned the `scowl` script is a very thin wrapper around the
 `libscowl` package.  As such, you can instead use `python3 -m libscowl`
 instead of going through the script.  Use of the python module directly
 instead of through the command line interface is also supported but the API
-may change without notice.  The best documenation to the API is via
+may change without notice.  The best documentation to the API is via
 `__main__.py`.
 
 
 File Format
 -----------
 
-Most everything is stored in a single file ('scowl.txt') with the following format:
+Most everything is stored in a single file (`scowl.txt`) with the following format:
 
     FILE := CLUSTER ...
             [FOOTNOTES]
@@ -497,15 +497,15 @@ the `final/` directory your scripts will need to be rewritten.  Please use the
 `word-list` command of the `scowl` script to get the wordslists you want.
 
 If you are using the `word-list` command please note that the variant levels
-has changed.  The original 0 level is now levels 0-1, the orignal 1 variant
+has changed.  The original 0 level is now levels 0-1, the original 1 variant
 level is now 2-4, level 2 is now 5-6, level 3 is now 7-8, and level 4 is 9.
 This mapping is also available in the `varinats_levels` table in the database.
 
 
-Create Hunspell and Aspell Dictionaries
----------------------------------------
+Creating Hunspell and Aspell Dictionaries
+-----------------------------------------
 
 The `speller/` directory of SCOWLv1 has been ported over.  Creating the Aspell
-and Hunspell dictaionries should work the same as they did with SCOWLv1, but
+and Hunspell dictionaries should work the same as they did with SCOWLv1, but
 again please sanity check the results.  Official dictionaries will continue to
 be created.

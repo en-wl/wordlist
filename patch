@@ -496,3 +496,11 @@
 50 [extra]: _v: resume <n>: resumes
 50 [extra]: _V: resumé <n>: resumés
 ===
+
+---
+50: A Bv C: unbeknownst <aj_av>
+50: A= B Cv: unbeknown <aj_av>
++++
+50: A B. C: unbeknownst <aj_av>
+50: Av B Cv: unbeknown <aj_av>
+===

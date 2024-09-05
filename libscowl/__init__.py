@@ -532,6 +532,8 @@ class LineBase(SlotsDataClass):
         m = _matchLine(line)
         if m is None:
             return None
+        if m['level'] is None:
+            raise ValueError('size must be provided')
         if m['override'] is None:
             l = Line(g, int(m['level']))
         else:
@@ -577,7 +579,7 @@ class LineBase(SlotsDataClass):
 
 def _matchLine(line):
     line = line.strip()
-    m = re.fullmatch(r'(?P<level>[0-9]+) (?P<tags>[^:#]*):\s*' 
+    m = re.fullmatch(r'(?: (?P<level>[0-9]+) (?P<tags>[^:#]*):\s* |)'
                      r'(?: (?P<override>\+)\s*:\s* | (?P<spellings>[^:<>{}#]+) (\{(?P<num> [0-9])\}\s*|):\s* |)'
                      r'(?P<lemma>[^:<>{}#()]+)'
                      r'(?: <(?P<base_pos>[^/]*) (?:/(?P<pos_class>.+)|)>\s* |)'
@@ -794,7 +796,7 @@ class Comment(SlotsDataClass):
     def parse(cls, first, *rest):
         m = re.fullmatch(r'\#\# \s* (.+?) \s* (\( (.*) \)|)  \s* : (.*)', first, re.VERBOSE)
         if not m:
-            raise ValueError(f'invalid commit line: {first}')
+            raise ValueError(f'invalid comment line: {first}')
         c = cls(m[1].strip(), ifNone(m[3], '').strip(), m[4].strip())
         if c.comment:
             lines = [c.comment]
@@ -860,6 +862,8 @@ class WordEntry(SlotsDataClass):
             return NotImplemented
         return self.spellings == other.spellings and self.word == other.word and self.entry_rank == other.entry_rank
 
+########################################################################
+
 def _createClusters(groups, clusterComments, conn = None):
 
     if conn:
@@ -910,10 +914,6 @@ def _createClusters(groups, clusterComments, conn = None):
     return clusters
 
 
-def _dict_factory(cursor, row):
-    fields = [column[0] for column in cursor.description]
-    return {key: value for key, value in zip(fields, row)}
-
 _dir = Path(__file__).parent.resolve()
     
 def openDB(dbfile, create = False, copyFrom = None, transCopy = False):
@@ -955,6 +955,12 @@ def openDB(dbfile, create = False, copyFrom = None, transCopy = False):
     
     return conn
 
+########################################################################
+
+def importFromDB(conn, filterTable = None):
+    groups, clusterComments = _importFromDB(conn, filterTable)
+    return _createClusters(groups, clusterComments, conn)
+
 def _importFromDB(conn, filterTable = None):
     words = {}
 
@@ -970,7 +976,6 @@ def _importFromDB(conn, filterTable = None):
         headwordFilter = 'true'
 
     cur = conn.cursor()
-    #cur.row_factory = _dict_factory
 
     groups = {}
     for r in cur.execute(f"select * from groups where {groupIdFilter}"):
@@ -1093,10 +1098,6 @@ def _importFromDB(conn, filterTable = None):
             del clusterComments[k]
 
     return (groups.values(), clusterComments)
-
-def importFromDB(conn, filterTable = None):
-    groups, clusterComments = _importFromDB(conn, filterTable)
-    return _createClusters(groups, clusterComments, conn)
 
 def searchDB(conn, words, byCluster):
     conn.execute("create temp table group_id_filter (group_id integer primary key)")
@@ -1365,7 +1366,6 @@ def roughParse(f = None):
             for we in ws:
                 yield BasicInfo(base_pos, pos_class, we.word, False)
 
-
 def combinePOS(conn):
     conn.executescript((_dir / 'combine_pos.sql').read_text())
     conn.executescript((_dir / 'post.sql').read_text())
@@ -1374,6 +1374,8 @@ def splitPOS(conn):
     conn.executescript((_dir / 'split_pos.sql').read_text())
     conn.executescript((_dir / 'post.sql').read_text())
     
+########################################################################
+
 class SetFilter(set):
     def __init__(self, *members, noDefault = False):
         super().__init__(members)

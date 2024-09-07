@@ -118,7 +118,7 @@ create table cluster_comments (
   headword text not null primary key,
   other_words text not null,
   comment text not null
-);
+) without rowid;
 
 create table group_comments (
   group_id integer not null references groups(group_id) on delete cascade,

@@ -42,7 +42,7 @@ insert into _new_pos values
   ('m0', 'n0', 'v0'),
   ('ms', 'ns', 'vs');
 
-create table _new_words (
+create temp table _new_words (
   word_id integer primary key,
   group_id integer,
   lemma_id integer,

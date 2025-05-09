@@ -24,7 +24,6 @@ def searchDB(args):
     conn = libscowl.openDB(args.db)
     kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'func')}
     clusters = libscowl.searchDB(conn, **kwargs)
-    sys.stdout.write('\n')
     libscowl.exportAsText(clusters, conn, sys.stdout, showExtraInfo = False, showClusters = kwargs.get('byCluster', False))
 
 def combinePOS(args):

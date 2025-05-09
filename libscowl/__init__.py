@@ -1,6 +1,7 @@
 from collections import namedtuple, defaultdict
 from itertools import groupby, chain
 from types import SimpleNamespace
+from typing import NamedTuple,Any
 from pathlib import Path
 import sys
 import os
@@ -66,11 +67,16 @@ def validateWord(w):
 
 wordPartRegex = re.compile(rf'(\+?)({_wordRegex})([*@~!-]?)†?')
 
+class WordPart(NamedTuple):
+    lemma_variant_override: Any
+    lemma: Any
+    lemma_rank: Any
+
 def parseWordPart(w):
     m = wordPartRegex.fullmatch(w)
     if not m:
         raise ValueError(f"invalid word part: {w}")
-    return (0 if m[1] == '+' else None, m[2],m[3])
+    return WordPart(0 if m[1] == '+' else None, m[2],m[3])
 
 def posmap(base_pos, poses):
     poses = set(poses)
@@ -339,6 +345,15 @@ def getRedundantSpellings(seq):
     else:
         return (None, tally.keys())
 
+def _addMissingSpellings(sps, have):
+    if sps is None: return
+    if 'Z' not in have and 'Z' not in sps and 'B' in sps:
+        sps['Z'] = sps['B']
+    if 'C' not in have and 'C' not in sps and 'Z' in sps:
+        sps['C'] = sps['Z']
+    if 'D' not in have and 'D' not in sps and 'B' in sps:
+        sps['D'] = sps['B']
+
 def addMissingSpellings(entries, have = ()):
     have = set(have)
     for e in entries:
@@ -348,14 +363,7 @@ def addMissingSpellings(entries, have = ()):
             if sp == '_' or sp == '': continue
             have.add(sp)
     for e in entries:
-        sps = e.spellings
-        if sps is None: continue
-        if 'Z' not in have and 'Z' not in sps and 'B' in sps:
-            sps['Z'] = sps['B']
-        if 'C' not in have and 'C' not in sps and 'Z' in sps:
-            sps['C'] = sps['Z']
-        if 'D' not in have and 'D' not in sps and 'B' in sps:
-            sps['D'] = sps['B']
+        _addMissingSpellings(e.spellings, have)
     return have
     
 class Group:
@@ -423,7 +431,7 @@ class LemmaEntry(SlotsDataClass):
         'words',     # { <pos>: [WordEntry] }
         'problems', 
         'comments',
-        '_num'
+        '_num',
     )
 
     def __init__(self):
@@ -560,10 +568,11 @@ class LineBase(SlotsDataClass):
         l.tags = sorted(tags)
         def merge(attr, v):
             v = ifNone(v, '')
-            if not hasattr(g, attr):
+            v0 = getattr(g, attr, None)
+            if v0 is None:
                 setattr(g, attr, v)
-            elif getattr(g, attr) != v:
-                raise ValueError(f'conflicting values for {attr} with group')
+            elif v != v0:
+                raise ValueError(f'conflicting values for {attr} within group')
         lemmaStr = m['lemma'].strip()
         if lemmaStr == '-':
             lemma = None
@@ -611,7 +620,7 @@ def _splitWords(wordsStr, lemmaSpellingsKeys = ('_',)):
 
 class Line(LineBase):
     __slots__ = (
-        'poses'    # { <pos> } -- i.e. set of poses
+        'poses',    # { <pos> } -- i.e. set of poses
     );
 
     def __init__(self, grp, level, category = '', region = '', tags = None, poses = None):
@@ -707,7 +716,7 @@ class Line(LineBase):
             if not hasattr(le, 'lemma'):
                 le.lemma = lemma
             elif le.lemma != lemma:
-                raise ValueError(f"conflicting lemma entry for '{spellings}'")
+                raise ValueError(f"conflicting lemma entry for '{spellings}': {le.lemma} vs {lemma}")
             we = WordEntry()
             we.word = lemma
             we.entry_rank = ''
@@ -737,7 +746,7 @@ class Line(LineBase):
 class Override(LineBase):
     __slots__ = (
         'lemma',  #
-        'words'   # [ <word> ] 
+        'words',  # [ <word> ]
     )
     
     def __init__(self, grp, level, category = '', region = '', tags = None, lemma = None, words = ()):
@@ -957,15 +966,18 @@ def openDB(dbfile, create = False, copyFrom = None, transCopy = False):
 
 ########################################################################
 
-def importFromDB(conn, filterTable = None):
-    groups, clusterComments = _importFromDB(conn, filterTable)
+def importFromDB(conn, *, filterTable = None, filterQuery = None):
+    groups, clusterComments = _importFromDB(conn, filterTable, filterQuery)
     return _createClusters(groups, clusterComments, conn)
 
-def _importFromDB(conn, filterTable = None):
+def _importFromDB(conn, filterTable, filterQuery):
     words = {}
 
     if filterTable:
-        groupIdFilter = f"(group_id in (select * from {filterTable}))"
+        filterQuery = f"select * from {filterTable}"
+        filterTable = None
+    if filterQuery:
+        groupIdFilter = f"(group_id in ({filterQuery}))"
         lemmaIdFilter = f"(lemma_id in (select lemma_id from words where {groupIdFilter}))"
         wordIdFilter = f"(word_id in (select word_id from words where {groupIdFilter}))"
         headwordFilter = f"(headword in (select word from words where {groupIdFilter}))"
@@ -1187,9 +1199,24 @@ def exportToDB(clusters, conn):
 
     conn.executescript((_dir / 'post.sql').read_text())
 
+class StreamWrapper:
+    def __init__(self, out):
+        self.lastLine = None
+        self.out = out
+
+    def write(self, line):
+        if self.lastLine is not None:
+            self.out.write(self.lastLine)
+        self.lastLine = line
+
+    def finish(self):
+        if self.lastLine != '\n':
+            self.out.write(self.lastLine)
+
 def exportAsText(clusters, conn = None, out = None, *, trimSpellings = True, showClusters = False, showExtraInfo = True):
     if out is None:
         out = sys.stdout
+    out = StreamWrapper(out)
 
     dbVars = SimpleNamespace()
     if conn:
@@ -1270,6 +1297,8 @@ def exportAsText(clusters, conn = None, out = None, *, trimSpellings = True, sho
         for tag, in conn.execute("select tag from tags where tag != '' order by tag"):
             out.write(f'#:   {tag}\n')
 
+    out.finish()
+
 def _mergeText(f, groups, clusterComments):
     grp = None
     lines = defaultdict(set)
@@ -1326,7 +1355,7 @@ def _mergeText(f, groups, clusterComments):
 
         if isinstance(l, Override):
             override.append(l)
-        elif l.level < 99:
+        elif l.level is None or l.level < 99:
             key = (l.level, l.category, l.region, frozenset(l.tags))
             lines[key].update(l.poses)
 

@@ -65,18 +65,29 @@ def validateWord(w):
     if not m:
         raise ValueError(f"invalid word: {w}")
 
-wordPartRegex = re.compile(rf'(\+?)({_wordRegex})([*@~!-]?)†?')
+wordPartRegex = re.compile(rf'({_wordRegex})([*@~!-]?)†?')
 
 class WordPart(NamedTuple):
-    lemma_variant_override: Any
-    lemma: Any
-    lemma_rank: Any
+    word: Any
+    rank: Any
 
 def parseWordPart(w):
     m = wordPartRegex.fullmatch(w)
     if not m:
         raise ValueError(f"invalid word part: {w}")
-    return WordPart(0 if m[1] == '+' else None, m[2],m[3])
+    return WordPart(m[1],m[2])
+
+class LemmaPart(NamedTuple):
+    lemma_rank: Any
+    lemma: Any
+    entry_rank: Any
+
+def parseLemmaPart(w):
+    lemma_rank = ''
+    if w[0] in '@!-':
+        lemma_rank = w[0]
+        w = w[1:]
+    return LemmaPart(lemma_rank, *parseWordPart(w))
 
 def posmap(base_pos, poses):
     poses = set(poses)
@@ -520,7 +531,7 @@ class LineBase(SlotsDataClass):
         lemma_pos = basePosInfo[base_pos].lemma_pos
         
         if lemma:
-            out.write(f': {lemma}{self.grp.lemma_rank}')
+            out.write(f': {self.grp.lemma_rank}{lemma}')
         else:
             out.write(f': -')
 
@@ -577,7 +588,9 @@ class LineBase(SlotsDataClass):
         if lemmaStr == '-':
             lemma = None
         else:
-            (lemma_variant_override, lemma, lemma_rank) = parseWordPart(lemmaStr)
+            (lemma_rank, lemma, entry_rank) = parseLemmaPart(lemmaStr)
+            if entry_rank != '':
+                raise ValueError(f'not yet implemented')
             merge('lemma_rank', lemma_rank)
         merge('base_pos', m['base_pos'])
         merge('pos_class', m['pos_class'])
@@ -863,7 +876,7 @@ class WordEntry(SlotsDataClass):
             we.spellings = Spellings((sp, 0) for sp in lemmaSpellingsKeys)
         else:
             we.spellings = Spellings.parse(m[2], lemmaSpellingsKeys)
-        (variant_override, we.word, we.entry_rank) = parseWordPart(m[3])
+        (we.word, we.entry_rank) = parseWordPart(m[3])
         we.duplicate = False
         return we
     def __eq__(self, other):
@@ -1381,7 +1394,7 @@ def roughParse(f = None):
             raise ValueError(f"bad line: {line}")
         lemma = m['lemma'].strip()
         if lemma != '-':
-            (_, lemma, lemma_rank) = parseWordPart(lemma)
+            (lemma_rank, lemma, entry_rank) = parseLemmaPart(lemma)
             base_pos = m['base_pos']
             pos_class = m['pos_class']
             yield BasicInfo(base_pos, pos_class, lemma, True)

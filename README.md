@@ -215,13 +215,15 @@ Most everything is stored in a single file (`scowl.txt`) with the following form
 
     TAG := '[' TAG-TEXT ']'
 
-    LEMMA := WORD [ANNOTATION] | '-'
+    LEMMA := [GROUP-ANNOTATION] WORD [ANNOTATION] | '-'
 
     VARIANT-INFO := SPELLING [VARIANT-LEVEL]
 
     SPELLING := 'A' | 'B' | 'Z' | 'C' | 'D' | '_'
 
     VARIANT-INFO := '.' | '=' | '?' | 'v' | '~' | 'V' | '-' | 'x'
+
+    GROUP-ANNOTATION := '-' | '@' | '!'
 
     ANNOTATION := '*' | '-' | '@' | '~' | '!' | '†'
 

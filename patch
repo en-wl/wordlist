@@ -280,7 +280,7 @@
 ===
 
 ---
-55: B: arse- <v>: arsed, arsing, arses
+55: B: -arse <v>: arsed, arsing, arses
 #! missing spellings: A
 +++
 55 GB: arse <v>: arsed, arsing, arses
@@ -421,11 +421,11 @@
 ---
 50: intaglio <n>: (intaglioes | intaglios | ~: intagli)
 ---
-70 [5desk] [moby]: intaglio- <v>: intaglioed, intaglioing, (intaglioes | intaglios)
+70 [5desk] [moby]: -intaglio <v>: intaglioed, intaglioing, (intaglioes | intaglios)
 +++
 50: intaglio <n>: (intaglios | ~: intagli)
 +++
-70 [5desk] [moby]: intaglio- <v>: intaglioed, intaglioing, intaglioes
+70 [5desk] [moby]: -intaglio <v>: intaglioed, intaglioing, intaglioes
 ===
 
 ---
@@ -468,7 +468,7 @@
 35: anyway <av>
 ---
 55: - <n>: anyways
-70 [5desk] [moby]: anyway- <n>
+70 [5desk] [moby]: -anyway <n>
 ---
 70 [moby]: anyways <av>
 +++

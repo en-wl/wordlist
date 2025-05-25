@@ -526,12 +526,12 @@ class LineBase(SlotsDataClass):
                 tag = '[]'
             out.write(f' {tag}')
 
-    def _lemmaPart(self, out, lemma):
+    def _lemmaPart(self, out, lemma, entry_rank = ''):
         base_pos = self.grp.base_pos
         lemma_pos = basePosInfo[base_pos].lemma_pos
         
         if lemma:
-            out.write(f': {self.grp.lemma_rank}{lemma}')
+            out.write(f': {self.grp.lemma_rank}{lemma}{entry_rank}')
         else:
             out.write(f': -')
 
@@ -587,16 +587,15 @@ class LineBase(SlotsDataClass):
         lemmaStr = m['lemma'].strip()
         if lemmaStr == '-':
             lemma = None
+            entry_rank = None
         else:
             (lemma_rank, lemma, entry_rank) = parseLemmaPart(lemmaStr)
-            if entry_rank != '':
-                raise ValueError(f'not yet implemented')
             merge('lemma_rank', lemma_rank)
         merge('base_pos', m['base_pos'])
         merge('pos_class', m['pos_class'])
         merge('defn_note', m['defn_note'])
         merge('usage_note', m['usage_note'])
-        l.finishParse(g, lemma, m, entriesBySpellings)
+        l.finishParse(g, lemma, entry_rank, m, entriesBySpellings)
         return l
 
 def _matchLine(line):
@@ -663,9 +662,12 @@ class Line(LineBase):
                 if num != 0:
                     out.write(f' {{{num}}}')
 
-            self._lemmaPart(out, le.lemma if self.lemmaIncluded() else None)
-
             poses = posmap(self.grp.base_pos, (pos for pos in self.poses if pos in le.words))
+            if self.lemmaIncluded():
+                lwe = le.words[poses[0]][0]
+                self._lemmaPart(out, lwe.word, lwe.entry_rank)
+            else:
+                self._lemmaPart(out, None)
 
             wordEntries = []
             for pos in poses[1:]:
@@ -714,7 +716,7 @@ class Line(LineBase):
             
             out.write('\n')
 
-    def finishParse(self, g, lemma, m, entriesBySpellings):
+    def finishParse(self, g, lemma, entry_rank, m, entriesBySpellings):
         l = self
         spellings = Spellings.parse(ifNone(m['spellings'], ''))
         spellingKey = (spellings.key(), m['num'])
@@ -732,7 +734,7 @@ class Line(LineBase):
                 raise ValueError(f"conflicting lemma entry for '{spellings}': {le.lemma} vs {lemma}")
             we = WordEntry()
             we.word = lemma
-            we.entry_rank = ''
+            we.entry_rank = entry_rank
             words = [[we]]
         if spellings:
             lemmaSpellingsKeys = spellings.keys();
@@ -777,7 +779,7 @@ class Override(LineBase):
             out.write(', '.join(self.words))
         out.write('\n')
     
-    def finishParse(self, g, lemma, m, entriesBySpellings):
+    def finishParse(self, g, lemma, entry_rank, m, entriesBySpellings):
         wordStrs = []
         if m['words']:
             wordStrs = m['words'].split(',')

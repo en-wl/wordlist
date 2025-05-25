@@ -70,7 +70,7 @@ create table words (
   lemma_id integer not null references words(word_id),
   pos text not null references poses(pos),
   word text not null,
-  entry_rank text default null references ranks(rank_symbol)
+  entry_rank text default '' not null references ranks(rank_symbol)
 );
 
 create unique index words_lemma on words(group_id, word) where word_id = lemma_id;

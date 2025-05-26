@@ -203,7 +203,7 @@ Most everything is stored in a single file (`scowl.txt`) with the following form
              GROUP-COMMENT
              '\n'
 
-    LINE := SIZE [' ' REGION] [' ' CATEGORY] [' ' TAG] ': '
+    LINE := SIZE [' ' REGION] [' ' CATEGORY] ([' ' TAG] ...) ': '
             [VARIANT-INFO ' ' ... ': ']
             LEMMA [' <' POS ['/' POS-CLASS ] '>'] [' {' DEFN-NOTE '}'] [' (' USAGE-NOTE ')']
             [': ' ENTRY ', ' ...]

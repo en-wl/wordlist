@@ -8,6 +8,7 @@ import os
 import sqlite3
 import json
 import re
+import copy
 
 # †
 
@@ -1424,6 +1425,173 @@ def roughParse(f = None):
         for ws in words:
             for we in ws:
                 yield BasicInfo(base_pos, pos_class, we.word, False)
+
+class LineInfo(SlotsDataClass):
+    __slots__ = ('line', 'size', 'lemma', 'pos', 'group_id', 'lemma_id', 'spellings')
+    def __init__(self, line):
+        self.line = line
+
+class SubGroupInfo(SlotsDataClass):
+    __slots__ = ('id', 'lines')
+    def __init__(self, id, lines = None):
+        self.id = id
+        if lines is None:
+            self.lines = []
+        else:
+            self.lines = lines
+
+class GroupInfo(SlotsDataClass):
+    __slots__ = ('id', 'subGroups', 'pos', 'commentLines', 'spellings', 'errors')
+    def __init__(self):
+        self.subGroups = {}
+        self.pos = ''
+        self.commentLines = []
+        self.spellings = set()
+        self.errors = []
+
+def mergeGroups(conn, f = None, *,
+                preview = False, ignoreErrors = False,
+                groupComment = None, replaceGroupComments = True):
+    if f is None:
+        f = sys.stdin
+
+    groups = []
+    word_ids = {}
+
+    errors = False
+    gi = GroupInfo()
+
+    def registerLine(li, orig_pos):
+        ids = [*conn.execute("select distinct group_id, lemma_id from lemmas "
+                             "where lemma = ? and base_pos = ? and defn_note = ?",
+                             (li.lemma, li.pos, ifNone(m['defn_note'], ''),))]
+        if len(ids) == 0:
+            if li.pos == 'n_v':
+                try:
+                    li_n = copy.copy(li)
+                    li_n.pos = 'n'
+                    registerLine(li_n, orig_pos)
+                    li_v = copy.copy(li)
+                    li_v.pos = 'v'
+                    registerLine(li_v, orig_pos)
+                    return
+                except:
+                    raise
+            raise ValueError(f'no match found for: {li.line}')
+        elif len(ids) > 1:
+            raise ValueError(f'multiple matches found for: {li.line}')
+        li.group_id = ids[0][0]
+        li.lemma_id = ids[0][1]
+
+        if not replaceGroupComments:
+            res = [*conn.execute("select * from group_comments where group_id = ?", (li.group_id,))]
+            if res:
+                raise ValueError(f'conflicting group comments for line: {li.line}')
+
+        if li.pos not in gi.subGroups:
+            gi.subGroups[li.pos] = SubGroupInfo(li.group_id)
+
+        if gi.pos == '':
+            gi.pos = orig_pos
+        elif orig_pos != '' and orig_pos != gi.pos:
+            raise ValueError(f'mismatch pos: {li.lemma}: expected {gi.pos}: got {orig_pos}')
+
+        gi.spellings.update(li.spellings)
+        gi.subGroups[li.pos].lines.append(li)
+
+    def finalizeGroup():
+        nonlocal gi, errors
+        for err in gi.errors:
+            errors = True
+            _warn(f"skipping group: {err}")
+        nopos_sg = gi.subGroups.pop('', None)
+        if nopos_sg and gi.subGroups:
+            for sg in gi.subGroups.values():
+                sg.lines += nopos_sg.lines
+        elif nopos_sg:
+            gi.subGroups[''] = nopos_sg
+        if not gi.errors and gi.subGroups:
+            groups.append(gi)
+        gi = GroupInfo()
+
+    for line in f:
+        line = line.strip()
+        if line == '':
+            finalizeGroup()
+            continue
+
+        if line.startswith('##'):
+            gi.commentLines.append(line)
+            continue
+
+        li = LineInfo(line)
+        
+        try:
+            m = _matchLine(line)
+            if m is None:
+                raise ValueError(f"bad line: {line}")
+
+            li.size = m['level']
+            li.lemma = parseLemmaPart(m['lemma'].strip()).lemma
+            li.pos = ifNone(m['base_pos'], '')
+            li.spellings = Spellings.parse(m['spellings'])
+
+            registerLine(li, li.pos)
+            
+        except Exception as err:
+            gi.errors.append(err)
+
+    finalizeGroup()
+
+    if errors and not ignoreErrors:
+        raise ValueError('aborting due to previous errors')
+    
+    #conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
+    conn.executescript((_dir / 'adjust_init.sql').read_text());
+
+    for gi in groups:
+        comment = None
+        if gi.commentLines:
+            comment = GroupComment.parse(*gi.commentLines)
+        elif groupComment:
+            comment = groupComment
+        for sg in gi.subGroups.values():
+            for li in sg.lines:
+                try:
+                    _addMissingSpellings(li.spellings, gi.spellings)
+                    conn.execute("insert or ignore into to_merge (main_group_id, other_group_id) values (?, ?)", (sg.id, li.group_id))
+                    conn.executemany("insert into new_lemma_variant_info (main_group_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
+                                     ((sg.id, li.lemma_id, sp, vl) for sp, vl in li.spellings.items()))
+                    if li.size:
+                        conn.execute("insert or ignore into new_scowl_data (main_group_id, level) values (?, ?)", (sg.id, li.size))
+                except Exception as err:
+                    raise ValueError(f"failed to add line: {li.line}")
+            if comment:
+                conn.execute("insert or replace into new_group_comments values (?, ?)", (sg.id, str(comment)))
+
+    conn.execute("create temp table filtered as "
+                 "select to_merge.* "
+                 "from to_merge "
+                 "join groups a on main_group_id  = a.group_id "
+                 "join groups b on other_group_id = b.group_id where a.base_pos = '' or b.base_pos != ''")
+    res = [*conn.execute("select * from filtered a join filtered b on a.other_group_id = b.other_group_id and a.main_group_id != b.main_group_id")]
+    if res:
+        raise ValueError("duplicates found")
+    conn.execute("drop table filtered")
+
+    conn.commit()
+    conn.executescript((_dir / 'adjust_proc.sql').read_text())
+
+    if preview:
+        clusters = importFromDB(conn, filterQuery = 'select main_group_id from to_merge')
+        exportAsText(clusters, conn, sys.stdout, showExtraInfo = False)
+        conn.rollback()
+        conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
+        conn.commit()
+    else:
+        conn.commit()
+        conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
+        conn.commit()
 
 def combinePOS(conn):
     conn.executescript((_dir / 'combine_pos.sql').read_text())

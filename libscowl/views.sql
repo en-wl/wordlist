@@ -43,4 +43,16 @@ create view duplicate_lemma_check as
 select lemma, base_pos, pos_class, defn_note, usage_note from lemmas group by lemma, base_pos, pos_class, defn_note, usage_note having count(distinct group_id) > 1;
 select * from duplicate_lemma_check limit 0;
 
+create view scowl_data_cleanup as
+select b.*
+  from scowl_data as a join scowl_data b using (group_id, pos)
+  where (
+         (a.level < b.level and a.category = b.category and a.region = b.region and a.tag = b.tag)
+         or (a.level <= b.level and a.category = '' and b.category = 'hacker' and a.region = b.region)
+         or (a.level <= b.level and a.category = b.category and a.region = b.region and a.tag = '' and b.tag not in ('', '[cs]', '[-]') and b.level <= 35)
+         or (a.level <= b.level and a.category = b.category and a.region = b.region and a.tag = '' and b.tag not in ('', '[cs]', '[+]', '[-]'))
+         or (a.level < b.level and b.level >= 80 and a.category = b.category and a.region = b.region and a.tag not in ('[cs]', '[name]', '[town]'))
+        );
+select * from scowl_data_cleanup limit 0;
+
 commit;

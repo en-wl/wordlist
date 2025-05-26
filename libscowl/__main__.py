@@ -26,6 +26,16 @@ def searchDB(args):
     clusters = libscowl.searchDB(conn, **kwargs)
     libscowl.exportAsText(clusters, conn, sys.stdout, showExtraInfo = False, showClusters = kwargs.get('byCluster', False))
 
+def mergeGroups(args):
+    conn = libscowl.openDB(args.db)
+    kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'func')}
+    preview = kwargs.get('preview')
+    if preview:
+        libscowl.mergeGroups(conn, sys.stdin, preview = True, ignoreErrors = kwargs.get('ignoreErrors'))
+    else:
+        libscowl.mergeGroups(conn, sys.stdin, preview = False, ignoreErrors = kwargs.get('ignoreErrors'))
+        conn.executescript((libscowl._dir / 'post.sql').read_text())
+
 def combinePOS(args):
     conn = libscowl.openDB(args.db)
     libscowl.combinePOS(conn)
@@ -136,6 +146,14 @@ p.add_argument('--db', metavar='FILE', default='scowl.db',
 p.add_argument('--by-cluster', action='store_true', default=False, dest='byCluster')
 p.add_argument('words', nargs='+', metavar='WORD',
                help="word to search for")
+
+
+p = addParser('merge-groups')
+p.set_defaults(func=mergeGroups)
+p.add_argument('--preview', action='store_true', default=False, dest='preview')
+p.add_argument('--ignore-errors', action='store_true', default=False, dest='ignoreErrors')
+p.add_argument('db', nargs='?', default='scowl.db')
+
 
 
 p = subparsers.add_parser('combine-pos',

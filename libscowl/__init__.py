@@ -389,7 +389,7 @@ class Group:
         'lines',     # [ Line ]
         'override',  # { lemma: Override }
         'problems',  # [ str ]
-        'comments',  # [ Comment ]
+        'commentLines', # GroupComment
         '_group_id',
         '_redundantSpellings',
         '_lemmaIncluded',
@@ -794,7 +794,7 @@ class Override(LineBase):
         self.lemma = lemma
         self.words = sorted(words)
 
-class Comment(SlotsDataClass):
+class ClusterComment(SlotsDataClass):
     __slots__  = ('word', 'other_words', 'comment')
 
     def __init__(self, word, other_words, comment):
@@ -808,13 +808,10 @@ class Comment(SlotsDataClass):
             out.write(f' ({self.other_words}):')
         else:
             out.write(f':');
-        if self.singleLine:
-            out.write(f' {self.comment}\n')
-        else:
-            out.write('\n')
-            for line in self.comment.splitlines():
-                out.write(f'## {line}\n')
-            out.write('\n')
+        out.write('\n')
+        for line in self.comment.splitlines():
+            out.write(f'## {line}\n')
+        out.write('\n')
 
     @classmethod
     def parse(cls, first, *rest):
@@ -832,13 +829,32 @@ class Comment(SlotsDataClass):
         c.comment = '\n'.join(lines)
         return c
 
-class GroupComment(Comment):
-    __slots__ = ()
-    singleLine = True
+class GroupComment(SlotsDataClass):
+    __slots__ = ('lines',)
 
-class ClusterComment(Comment):
-    __slots__ = ()
-    singleLine = False
+    def __init__(self, text = None):
+        if text is None:
+            self.lines = []
+        else:
+            self.lines = text.splitlines()
+
+    def __str__(self):
+        return '\n'.join(self.lines)
+
+    def __bool__(self):
+        return bool(self.lines)
+    
+    def print(self, out = None):
+        for line in self.lines:
+            out.write(f'## {line}\n')
+
+    @classmethod
+    def parse(cls, *lines):
+        c = cls()
+        for l in lines:
+            l = re.sub(r'^## ?','', l)
+            c.lines.append(l)
+        return c
 
 class WordEntry(SlotsDataClass):
     __slots__ = (
@@ -1016,11 +1032,11 @@ def _importFromDB(conn, filterTable, filterQuery):
         grp.entries = []
         grp.lines = []
         grp.override = {}
-        grp.comments = []
+        grp.commentLines = GroupComment()
         groups[r['group_id']] = grp
 
     for r in cur.execute(f"select * from group_comments where {groupIdFilter}"):
-        groups[r['group_id']].comments.append(GroupComment(r['word'], r['other_words'], r['comment']))
+        groups[r['group_id']].commentLines = GroupComment(r['comment']);
 
     wordsById = {}
     lemmasById = {}
@@ -1198,9 +1214,9 @@ def exportToDB(clusters, conn):
                         conn.execute("insert into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
                                      (l.level, l.category, l.region, tag, group_id, pos))
 
-            for c in group.comments:
-                conn.execute("insert into group_comments (group_id, word, other_words, comment) values (?, ?, ?, ?)",
-                             (group_id, c.word, c.other_words, c.comment))
+            if group.commentLines:
+                conn.execute("insert into group_comments (group_id, comment) values (?, ?)",
+                             (group_id, str(group.commentLines)))
 
             group_id += 2 if group.base_pos in ('n_v', 'aj_av') else 1
 
@@ -1267,8 +1283,7 @@ def exportAsText(clusters, conn = None, out = None, *, trimSpellings = True, sho
 
             for c in group.problems:
                 out.write(f"#! {c}\n")
-            for c in group.comments:
-                c.print(out)
+            group.commentLines.print(out)
             out.write('\n')
 
         for c in cluster.comments:
@@ -1334,8 +1349,8 @@ def _mergeText(f, groups, clusterComments):
                     for wes in le.words.values():
                         addMissingSpellings(wes, have)
                 groups.append(grp)
-                for cl in commentLines:
-                    grp.comments.append(GroupComment.parse(cl))
+                if commentLines:
+                    grp.commentLines = GroupComment.parse(*commentLines)
                 grp.override = {}
                 for ov in override:
                     grp.override[ov.lemma] = ov
@@ -1351,7 +1366,7 @@ def _mergeText(f, groups, clusterComments):
         
         if grp is None:
             grp = Group()
-            grp.comments = []
+            grp.commentLines = GroupComment('')
 
         try:
             l = Line.parse(lineStr, grp, entriesBySpellings)

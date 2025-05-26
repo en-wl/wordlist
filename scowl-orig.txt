@@ -20374,7 +20374,7 @@
 
 35: A Cv DV: armory <n>: armories, armory's
 35: B C D: armoury <n>: armouries, armoury's
-## armories (armouries): Ox claims "armories" is the British plural but that has got to be a mistake
+## Ox claims "armories" is the British plural but that has got to be a mistake
 
 80 [ukacd]: armozeen <n>: armozeens
 
@@ -49539,10 +49539,10 @@
 80 [ukacd]: Bury St Edmunds </upper?>
 
 35: A B: bus <n>: (A B C: buses | AV B- CV: busses), bus's
-## bus: to avoid confusion with buss
+## to avoid confusion with buss
 
 35: A B: bus <v>: (A Bv C: bused | AV B: bussed), (A Bv C: busing | AV B: bussing), (A Bv C: buses | AV B: busses)
-## bus: to avoid confusion with buss
+## to avoid confusion with buss
 
 60: bus. <abbr>
 
@@ -52444,7 +52444,7 @@
 
 60: _: camelhair <n>
 80: _: - <n>: camelhairs~
-## camelhair: camel hair (camel's hair)
+## camel hair (camel's hair)
 
 80 [ukacd]: camel-hair
 
@@ -223166,10 +223166,10 @@
 35: A: mat <n_v> {make matte}: matted, matting, mats, mat's
 35: A= Bv C: matte <n_v> {make matte}: matted, matting, mattes
 35: AV B: matt <n_v> {make matte}: matted, matting, matts
-## mat (matt matte): Ox Amer thinks its matte, M-W: mat
+## Ox Amer thinks its matte, M-W: mat
 
 35: A B: mat <n_v> {otherwise, most uses}: matted, matting, mats, mat's
-## mat (matt matte): Ox Amer thinks its matte, M-W: mat
+## Ox Amer thinks its matte, M-W: mat
 
 35: A Bv C: matte <aj>
 35: Av: mat <aj>
@@ -293495,7 +293495,7 @@
 
 55: A B: presidium <n>: (A B: presidiums | A=: presidia), presidium's, (A B: presidiums' | A=: presidia's)
 55: AV Bv: praesidium <n>: praesidiums, praesidium's
-## presidiums (praesidiums presidia): M-w has presidiums as a variant, but Ox doesn't say anything about the variant form
+## M-w has presidiums as a variant, but Ox doesn't say anything about the variant form
 
 70 [5desk]: Presidium <n/upper?>: Presidiums
 

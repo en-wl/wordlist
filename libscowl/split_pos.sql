@@ -97,7 +97,7 @@ insert into lemma_comments
   select b.lemma_id, order_num, comment from (words a join lemma_comments using (lemma_id)) join _new_words b on a.word_id = b.orig_word_id where a.word_id = a.lemma_id;
 
 insert into group_comments
-  select other_id,word,other_words,comment from _groups a join group_comments b on a.other_id = b.group_id;
+  select other_id,comment from _groups a join group_comments b on a.other_id = b.group_id;
 
 update or ignore words as w
  set pos = (select a_pos from _new_pos where pos = w.pos)

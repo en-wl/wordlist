@@ -122,10 +122,8 @@ create table cluster_comments (
 
 create table group_comments (
   group_id integer not null references groups(group_id) on delete cascade,
-  word text not null,
-  other_words text not null,
   comment text not null,
-  primary key (group_id, word)
+  primary key (group_id)
 );
 
 create table lemma_comments (

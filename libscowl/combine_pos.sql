@@ -12,7 +12,7 @@ select group_id, lemma_id, word_id, base_pos,
        level as sk1, category as sk2, region as sk3, tag as sk4, -- sk = scowl key
        coalesce(spelling,'') as vk1, coalesce(lemma_variant_level,-1) as vk2, coalesce(derived_variant_level,-1) as vk3, -- vk = variant key
        lemma, w.word, pos, lemma_rank as wk1, pos_class as wk2, defn_note as wk3, usage_note as wk4, coalesce(entry_rank,'') as wk5, -- wk = word key
-       coalesce(gc.word,'') as ck1, coalesce(gc.comment, '') as ck2, coalesce(lc.comment, '') as ck3, -- ck = comment key
+       coalesce(gc.comment, '') as ck1, coalesce(lc.comment, '') as ck2, -- ck = comment key
        false as override
  from (scowl_data
        join entries using (group_id, pos)) as w
@@ -24,7 +24,7 @@ select group_id, lemma_id, word_id, base_pos,
        level as sk1, category as sk2, region as sk3, tag as sk4, -- sk = scowl key
        '', -1, -1, -- vk
        lemma, w.word, pos, lemma_rank as wk1, pos_class as wk2, defn_note as wk3, usage_note as wk4, coalesce(entry_rank,'') as wk5, -- wk = word key
-       '','','', -- ck
+       '','', -- ck
        true as override
  from (scowl_override
        join entries using (word_id)) as w
@@ -37,7 +37,7 @@ select a.group_id as a_group_id, b.group_id as b_group_id,
        a.pos as a_pos, b.pos as b_pos,
        word, lemma, override,
        sk1, sk2, sk3, sk4, vk1, vk2, vk3
-  from _scowl a join _scowl b using (sk1, sk2, sk3, sk4, lemma, word, wk1, wk2, wk3, wk4, wk4, wk5, vk1, vk2, vk3, ck1, ck2, ck3, override)
+  from _scowl a join _scowl b using (sk1, sk2, sk3, sk4, lemma, word, wk1, wk2, wk3, wk4, wk4, wk5, vk1, vk2, vk3, ck1, ck2, override)
   where (a.pos = 'aj0' and b.pos = 'av0')
      or (a.pos = 'aj1' and b.pos = 'av1')
      or (a.pos = 'aj2' and b.pos = 'av2')

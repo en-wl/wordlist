@@ -233,7 +233,7 @@ Most everything is stored in a single file (`scowl.txt`) with the following form
 
     DERIVED-VARIANT-INFO := [SPELLING] [VARIANT-LEVEL]
 
-    GROUP-COMMENT := '## ' HEADWORD [' (' OTHER-WORDS ')'] ': ' COMMENT-TEXT
+    GROUP-COMMENT := '## ' COMMENT-TEXT
 
     CLUSTER-COMMENT :=  '## ' HEADWORD [' (' OTHER-WORDS ')'] ':\n'
                         ('## ' COMMENT-TEXT '\n') ...

@@ -1,3 +1,5 @@
+begin;
+
 create table temp.to_merge (
   main_group_id integer,
   other_group_id integer,
@@ -19,6 +21,13 @@ create table temp.new_lemma_variant_info (
   spelling text,
   variant_level smallint,
   primary key (main_group_id, lemma_id, spelling)
+) without rowid;
+
+create table temp.new_lemma_comments (
+  lemma_id integer not null,
+  order_num int not null,
+  comment text,
+  primary key (lemma_id, order_num)
 ) without rowid;
 
 create table temp.new_derived_variant_info (
@@ -51,6 +60,8 @@ create table temp.new_scowl_data (
 );
 
 create table temp.new_group_comments (
-  main_group_id integer primary key,
+  group_id integer primary key,
   comment text
 );
+
+commit;

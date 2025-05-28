@@ -756,8 +756,14 @@ class Line(LineBase):
             elif le.words[pos] != wes:
                 raise ValueError(f"conflicting word entry for '{pos}' for '{spellings}': {le.words[pos]}, {wes}")
         if m['comments']:
-            le.comments.extend(c.strip() for c in m['comments'].split('#') if not c.startswith('!'))
-        
+            le.comments.extend(Line.splitComments(m['comments']))
+
+    @staticmethod
+    def splitComments(commentsStr):
+        if commentsStr is None:
+            return None
+        else:
+            return (c.strip() for c in commentsStr.split('#') if not c.startswith('!'))
 
 class Override(LineBase):
     __slots__ = (
@@ -1427,7 +1433,7 @@ def roughParse(f = None):
                 yield BasicInfo(base_pos, pos_class, we.word, False)
 
 class LineInfo(SlotsDataClass):
-    __slots__ = ('line', 'action', 'size', 'lemma', 'pos', 'group_id', 'lemma_id', 'spellings')
+    __slots__ = ('line', 'action', 'size', 'lemma', 'pos', 'group_id', 'lemma_id', 'spellings', 'comments')
     def __init__(self, line):
         self.line = line
         self.action = 'adjust'
@@ -1452,7 +1458,7 @@ class GroupInfo(SlotsDataClass):
 
 def mergeGroups(conn, f = None, *,
                 preview = False, ignoreErrors = False,
-                groupComment = None, replaceGroupComments = True):
+                groupComment = None, replaceComments = True):
     if f is None:
         f = sys.stdin
 
@@ -1475,27 +1481,32 @@ def mergeGroups(conn, f = None, *,
         elif li.action == 'adjust':
             if len(ids) == 0:
                 if li.pos == 'n_v':
-                    try:
-                        li_n = copy.copy(li)
-                        li_n.pos = 'n'
-                        registerLine(li_n, orig_pos)
-                        li_v = copy.copy(li)
-                        li_v.pos = 'v'
-                        registerLine(li_v, orig_pos)
-                        return
-                    except:
-                        raise
+                    li_n = copy.copy(li)
+                    li_n.pos = 'n'
+                    registerLine(li_n, orig_pos)
+                    li_v = copy.copy(li)
+                    li_v.pos = 'v'
+                    registerLine(li_v, orig_pos)
+                    return
+                elif li.pos == 'aj_av':
+                    li_n = copy.copy(li)
+                    li_n.pos = 'aj'
+                    registerLine(li_n, orig_pos)
+                    li_v = copy.copy(li)
+                    li_v.pos = 'av'
+                    registerLine(li_v, orig_pos)
+                    return
                 raise ValueError(f'no match found for: {li.line}')
             elif len(ids) > 1:
                 raise ValueError(f'multiple matches found for: {li.line}')
             li.group_id = ids[0][0]
             li.lemma_id = ids[0][1]
 
-            if not replaceGroupComments:
+            if not replaceComments:
                 res = [*conn.execute("select * from group_comments where group_id = ?", (li.group_id,))]
                 if res:
                     raise ValueError(f'conflicting group comments for line: {li.line}')
-            
+
             if li.pos not in gi.subGroups:
                 gi.subGroups[li.pos] = SubGroupInfo(li.group_id)
             elif gi.subGroups[li.pos].id is None:
@@ -1550,6 +1561,7 @@ def mergeGroups(conn, f = None, *,
             li.lemma = parseLemmaPart(m['lemma'].strip()).lemma
             li.pos = ifNone(m['base_pos'], '')
             li.spellings = Spellings.parse(m['spellings'])
+            li.comments = Line.splitComments(m['comments'])
 
             registerLine(li, li.pos)
             
@@ -1560,9 +1572,9 @@ def mergeGroups(conn, f = None, *,
 
     if errors and not ignoreErrors:
         raise ValueError('aborting due to previous errors')
-    
+
     #conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
-    conn.executescript((_dir / 'adjust_init.sql').read_text());
+    conn.executescript((_dir / 'adjust_init.sql').read_text())
 
     next_word_id = conn.execute("select max(word_id) from words").fetchone()[0] + 1
 
@@ -1583,10 +1595,18 @@ def mergeGroups(conn, f = None, *,
                         next_word_id += 1
                     else:
                         conn.execute("insert or ignore into to_merge (main_group_id, other_group_id) values (?, ?)", (sg.id, li.group_id))
+                        if replaceComments:
+                            conn.execute("insert or ignore into new_group_comments values (?, null)", (li.group_id,))
+                        
                     conn.executemany("insert into new_lemma_variant_info (main_group_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
                                      ((sg.id, li.lemma_id, sp, vl) for sp, vl in li.spellings.items()))
                     if li.size:
                         conn.execute("insert or ignore into new_scowl_data (main_group_id, level) values (?, ?)", (sg.id, li.size))
+                    if li.comments:
+                        conn.executemany("insert into new_lemma_comments (lemma_id, order_num, comment) values (?, ?, ?)",
+                                         ((li.lemma_id, i, c) for (i, c) in enumerate(li.comments)));
+                    elif replaceComments:
+                        conn.execute("insert or ignore into new_lemma_comments (lemma_id, order_num) values (?, -1)", (li.lemma_id,))
                 except Exception as err:
                     raise ValueError(f"failed to add line: {li.line}")
             if comment:
@@ -1602,7 +1622,6 @@ def mergeGroups(conn, f = None, *,
         raise ValueError("duplicates found")
     conn.execute("drop table filtered")
 
-    conn.commit()
     conn.executescript((_dir / 'adjust_proc.sql').read_text())
 
     if preview:

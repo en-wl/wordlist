@@ -1,3 +1,5 @@
+begin;
+
 insert into words select * from new_words;
 
 create table temp.split_info as
@@ -39,5 +41,8 @@ delete from lemma_variant_info where lemma_id in (select lemma_id from new_lemma
 insert into lemma_variant_info
   select coalesce(new_word_lemma_id,lemma_id) as lemma_id, spelling, variant_level from new_lemma_variant_info left join split_info using (main_group_id,lemma_id);
 
-delete from group_comments where group_id in (select other_group_id from to_merge);
-insert into group_comments select * from new_group_comments;
+delete from lemma_comments where lemma_id in (select lemma_id from new_lemma_comments);
+insert into lemma_comments select * from new_lemma_comments where comment is not null;
+
+delete from group_comments where group_id in (select group_id from new_group_comments);
+insert into group_comments select * from new_group_comments where comment is not null;

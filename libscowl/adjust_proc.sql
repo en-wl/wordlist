@@ -1,3 +1,5 @@
+insert into words select * from new_words;
+
 create table temp.split_info as
       select row_number() over (order by main_group_id,lemma_pos,word) + (select max(word_id) from words) as new_word_lemma_id, 
       w.lemma_id as lemma_id, main_group_id, lemma_pos as new_pos, word, other_group_id, w.pos 

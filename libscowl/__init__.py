@@ -1427,9 +1427,10 @@ def roughParse(f = None):
                 yield BasicInfo(base_pos, pos_class, we.word, False)
 
 class LineInfo(SlotsDataClass):
-    __slots__ = ('line', 'size', 'lemma', 'pos', 'group_id', 'lemma_id', 'spellings')
+    __slots__ = ('line', 'action', 'size', 'lemma', 'pos', 'group_id', 'lemma_id', 'spellings')
     def __init__(self, line):
         self.line = line
+        self.action = 'adjust'
 
 class SubGroupInfo(SlotsDataClass):
     __slots__ = ('id', 'lines')
@@ -1465,31 +1466,42 @@ def mergeGroups(conn, f = None, *,
         ids = [*conn.execute("select distinct group_id, lemma_id from lemmas "
                              "where lemma = ? and base_pos = ? and defn_note = ?",
                              (li.lemma, li.pos, ifNone(m['defn_note'], ''),))]
-        if len(ids) == 0:
-            if li.pos == 'n_v':
-                try:
-                    li_n = copy.copy(li)
-                    li_n.pos = 'n'
-                    registerLine(li_n, orig_pos)
-                    li_v = copy.copy(li)
-                    li_v.pos = 'v'
-                    registerLine(li_v, orig_pos)
-                    return
-                except:
-                    raise
-            raise ValueError(f'no match found for: {li.line}')
-        elif len(ids) > 1:
-            raise ValueError(f'multiple matches found for: {li.line}')
-        li.group_id = ids[0][0]
-        li.lemma_id = ids[0][1]
 
-        if not replaceGroupComments:
-            res = [*conn.execute("select * from group_comments where group_id = ?", (li.group_id,))]
-            if res:
-                raise ValueError(f'conflicting group comments for line: {li.line}')
+        if li.action == 'add':
+            if len(ids) > 0:
+                raise ValueError(f"lemma already exists, cannot add: {li.line}")
+            if li.pos not in gi.subGroups:
+                gi.subGroups[li.pos] = SubGroupInfo(None)
+        elif li.action == 'adjust':
+            if len(ids) == 0:
+                if li.pos == 'n_v':
+                    try:
+                        li_n = copy.copy(li)
+                        li_n.pos = 'n'
+                        registerLine(li_n, orig_pos)
+                        li_v = copy.copy(li)
+                        li_v.pos = 'v'
+                        registerLine(li_v, orig_pos)
+                        return
+                    except:
+                        raise
+                raise ValueError(f'no match found for: {li.line}')
+            elif len(ids) > 1:
+                raise ValueError(f'multiple matches found for: {li.line}')
+            li.group_id = ids[0][0]
+            li.lemma_id = ids[0][1]
 
-        if li.pos not in gi.subGroups:
-            gi.subGroups[li.pos] = SubGroupInfo(li.group_id)
+            if not replaceGroupComments:
+                res = [*conn.execute("select * from group_comments where group_id = ?", (li.group_id,))]
+                if res:
+                    raise ValueError(f'conflicting group comments for line: {li.line}')
+            
+            if li.pos not in gi.subGroups:
+                gi.subGroups[li.pos] = SubGroupInfo(li.group_id)
+            elif gi.subGroups[li.pos].id is None:
+                gi.subGroups[li.pos].id = li.group_id
+        else:
+            raise AssertionError
 
         if gi.pos == '':
             gi.pos = orig_pos
@@ -1525,7 +1537,10 @@ def mergeGroups(conn, f = None, *,
             continue
 
         li = LineInfo(line)
-        
+        if line.startswith('+ '):
+            li.action = 'add'
+            line = line[2:]
+            
         try:
             m = _matchLine(line)
             if m is None:
@@ -1538,7 +1553,7 @@ def mergeGroups(conn, f = None, *,
 
             registerLine(li, li.pos)
             
-        except Exception as err:
+        except ValueError as err:
             gi.errors.append(err)
 
     finalizeGroup()
@@ -1548,6 +1563,8 @@ def mergeGroups(conn, f = None, *,
     
     #conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
     conn.executescript((_dir / 'adjust_init.sql').read_text());
+
+    next_word_id = conn.execute("select max(word_id) from words").fetchone()[0] + 1
 
     for gi in groups:
         comment = None
@@ -1559,7 +1576,13 @@ def mergeGroups(conn, f = None, *,
             for li in sg.lines:
                 try:
                     _addMissingSpellings(li.spellings, gi.spellings)
-                    conn.execute("insert or ignore into to_merge (main_group_id, other_group_id) values (?, ?)", (sg.id, li.group_id))
+                    if li.action == 'add':
+                        conn.execute("insert into new_words (word_id, main_group_id, lemma_id, pos, word) values (?, ?, ?, ?, ?)",
+                                     (next_word_id, sg.id, next_word_id, basePosInfo[li.pos].lemma_pos, li.lemma))
+                        li.lemma_id = next_word_id
+                        next_word_id += 1
+                    else:
+                        conn.execute("insert or ignore into to_merge (main_group_id, other_group_id) values (?, ?)", (sg.id, li.group_id))
                     conn.executemany("insert into new_lemma_variant_info (main_group_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
                                      ((sg.id, li.lemma_id, sp, vl) for sp, vl in li.spellings.items()))
                     if li.size:

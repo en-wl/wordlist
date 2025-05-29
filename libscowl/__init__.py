@@ -603,15 +603,15 @@ class LineBase(SlotsDataClass):
         lemmaStr = m['lemma'].strip()
         if lemmaStr == '-':
             lemma = None
-            entry_rank = None
         else:
-            (lemma_rank, lemma, entry_rank) = parseLemmaPart(lemmaStr)
+            lemma = WordEntry()
+            (lemma_rank, lemma.word, lemma.entry_rank) = parseLemmaPart(lemmaStr)
             merge('lemma_rank', lemma_rank)
         merge('base_pos', m['base_pos'])
         merge('pos_class', m['pos_class'])
         merge('defn_note', m['defn_note'])
         merge('usage_note', m['usage_note'])
-        l.finishParse(g, lemma, entry_rank, m, entriesBySpellings)
+        l.finishParse(g, lemma, m, entriesBySpellings)
         return l
 
 def _matchLine(line):
@@ -732,7 +732,7 @@ class Line(LineBase):
             
             out.write('\n')
 
-    def finishParse(self, g, lemma, entry_rank, m, entriesBySpellings):
+    def finishParse(self, g, lemma, m, entriesBySpellings):
         l = self
         spellings = Spellings.parse(ifNone(m['spellings'], ''))
         spellingKey = (spellings.key(), m['num'])
@@ -745,13 +745,10 @@ class Line(LineBase):
             words = [[]]
         else:
             if not hasattr(le, 'lemma'):
-                le.lemma = lemma
-            elif le.lemma != lemma:
-                raise ValueError(f"conflicting lemma entry for '{spellings}': {le.lemma} vs {lemma}")
-            we = WordEntry()
-            we.word = lemma
-            we.entry_rank = entry_rank
-            words = [[we]]
+                le.lemma = lemma.word
+            elif le.lemma != lemma.word:
+                raise ValueError(f"conflicting lemma entry for '{spellings}': {le.lemma} vs {lemma.word}")
+            words = [[lemma]]
         if spellings:
             lemmaSpellingsKeys = spellings.keys();
         else:
@@ -801,7 +798,7 @@ class Override(LineBase):
             out.write(', '.join(self.words))
         out.write('\n')
     
-    def finishParse(self, g, lemma, entry_rank, m, entriesBySpellings):
+    def finishParse(self, g, lemma, m, entriesBySpellings):
         wordStrs = []
         if m['words']:
             wordStrs = m['words'].split(',')
@@ -813,7 +810,7 @@ class Override(LineBase):
         #le = next((le for le in self.grp.entries if le.lemma == lemma), None)
         #if le is None:
         #    raise ValueError('unable to find lemma: {lemma}')
-        self.lemma = lemma
+        self.lemma = lemma.word
         self.words = sorted(words)
 
 class ClusterComment(SlotsDataClass):

@@ -14,7 +14,6 @@ create table poses (
   order_num integer not null unique,
   pos pos not null primary key,
   base_pos base_pos not null,
-  pos_category pos_category not null,
   descr text,
   note text,
   extra_info text

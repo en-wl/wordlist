@@ -10,7 +10,6 @@ create table poses (
   order_num integer not null unique,
   pos text not null primary key,
   base_pos text not null references base_poses(base_pos) deferrable initially deferred,
-  pos_category text not null check (pos_category in ('', 'special', 'wordpart', 'nonword')),
   descr text,
   note text,
   extra_info text

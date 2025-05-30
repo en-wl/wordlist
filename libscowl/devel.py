@@ -11,7 +11,6 @@ def populateConstDataFromDB(conn):
             order_num = r['order_num'],
             name = r['pos'],
             base_pos = r['base_pos'],
-            category = r['pos_category'],
             descr = r['descr'],
             note = r['note'],
             extra_info = r['extra_info'],
@@ -46,7 +45,7 @@ def populateConstDataFromDB(conn):
     global SPELLINGS, REGIONS, POS_CATEGORIES
     SPELLINGS = tuple(sp for (sp,) in conn.execute("select spelling from spellings order by order_num"));
     REGIONS = tuple(rgn for (rgn,) in conn.execute("select region from regions order by order_num"));
-    POS_CATEGORIES = tuple(c for (c,) in conn.execute("select distinct pos_category from poses order by pos_category"));
+    POS_CATEGORIES = tuple(c for (c,) in conn.execute("select distinct pos_category from base_poses order by pos_category"));
 
 _moduleHeader = """
 # generated file, must be kept in sync with constdata.sql
@@ -54,7 +53,7 @@ _moduleHeader = """
 from ._common import SlotsDataClass
 
 class PosInfo(SlotsDataClass):
-    __slots__ = ('order_num', 'name', 'base_pos', 'category', 'descr', 'note', 'extra_info')
+    __slots__ = ('order_num', 'name', 'base_pos', 'descr', 'note', 'extra_info')
 
 class BasePosInfo(SlotsDataClass):
     __slots__ = ('order_num', 'name', 'lemma_pos', 'category', 'descr', 'extra_info')

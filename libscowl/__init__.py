@@ -21,6 +21,9 @@ def _warn(msg):
 def ifNone(a, b):
     return b if a is None else a
 
+def noneIf(a, b):
+    return None if a == b else a
+
 _accented   = "ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜÝàáâãäåçèéêëìíîïñòóôõöøùúûüý"
 _deaccented = "AAAAAACEEEEIIIINOOOOOOUUUUYaaaaaaceeeeiiiinoooooouuuuy"
 _orderAlpha = "aáàâåäãAÁÀÂÅÄÃæÆbBcçCÇdDðÐeéèêëEÉÈÊËfFgGhHiíìîïIÍÌÎÏjJkKlLmMnñNÑoóòôöõøOÓÒÔÖÕØpPqQrRsSßtTuúùûüUÚÙÛÜvVwWxXyýYÝzZþÞ"
@@ -66,7 +69,7 @@ def validateWord(w):
     if not m:
         raise ValueError(f"invalid word: {w}")
 
-wordPartRegex = re.compile(rf'({_wordRegex})([*@~!-]?)†?')
+wordPartRegex = re.compile(rf'({_wordRegex})([_*@~!-]?)†?')
 
 class WordPart(NamedTuple):
     word: Any
@@ -85,7 +88,7 @@ class LemmaPart(NamedTuple):
 
 def parseLemmaPart(w):
     lemma_rank = ''
-    if w[0] in '@!-':
+    if w[0] in '_@!-':
         lemma_rank = w[0]
         w = w[1:]
     return LemmaPart(lemma_rank, *parseWordPart(w))
@@ -299,6 +302,8 @@ class Spellings(dict):
 
     @staticmethod
     def parse(str_, lemmaSpellingsKeys = None):
+        if str_ is None:
+            return None
         s = Spellings()
         for sp in str_.split():
             m = re.fullmatch(r'([_ABZCD]?)([^1-9]?)', sp)
@@ -619,7 +624,7 @@ def _matchLine(line):
     m = re.fullmatch(r'(?: (?P<level>[0-9]+) (?P<tags>[^:#]*):\s* |)'
                      r'(?: (?P<override>\+)\s*:\s* | (?P<spellings>[^:<>{}#]+) (\{(?P<num> [0-9])\}\s*|):\s* |)'
                      r'(?P<lemma>[^:<>{}#()]+)'
-                     r'(?: <(?P<base_pos>[^/]*) (?:/(?P<pos_class>.+)|)>\s* |)'
+                     r'(?: <(?P<base_pos>[^/]*) (?:/(?P<pos_class>.*)|)>\s* |)'
                      r'(?: {(?P<defn_note>.+)}\s* |)'
                      r'(?: \((?P<usage_note>[^:#|]+)\)\s* |)'
                      r'(?: : \s* (?P<words>[^#]+) |)'   
@@ -733,7 +738,6 @@ class Line(LineBase):
             out.write('\n')
 
     def finishParse(self, g, lemma, m, entriesBySpellings):
-        l = self
         spellings = Spellings.parse(ifNone(m['spellings'], ''))
         spellingKey = (spellings.key(), m['num'])
         le = entriesBySpellings.get(spellingKey, None)
@@ -741,34 +745,44 @@ class Line(LineBase):
             le = LemmaEntry()
             le.spellings = spellings
             entriesBySpellings[spellingKey] = le
-        if lemma is None:
-            words = [[]]
-        else:
+        if lemma is not None:
             if not hasattr(le, 'lemma'):
                 le.lemma = lemma.word
             elif le.lemma != lemma.word:
                 raise ValueError(f"conflicting lemma entry for '{spellings}': {le.lemma} vs {lemma.word}")
-            words = [[lemma]]
-        if spellings:
-            lemmaSpellingsKeys = spellings.keys();
+        addedPoses = Line.procWords(spellings, lemma, g.base_pos, m, le.words)
+        self.poses.update(addedPoses)
+        if m['comments']:
+            le.comments.extend(Line.splitComments(m['comments']))
+
+    @staticmethod
+    def procWords(lemmaSpellings, lemma, base_pos, m, wordsByPos):
+        if lemmaSpellings is None:
+            lemmaSpellingsKeys = None
+        elif lemmaSpellings:
+            lemmaSpellingsKeys = lemmaSpellings.keys();
         else:
             lemmaSpellingsKeys = '_',
+        if lemma is None:
+            words = [[]]
+        else:
+            words = [[lemma]]
         words += _splitWords(m['words'], lemmaSpellingsKeys)
-        poses = posesFromList(g.base_pos, words)
+        poses = posesFromList(base_pos, words)
         if poses is None:
             raise ValueError(f"could not map list of words of length {len(words)} with base pos of '{g.base_pos}'")
         assert(len(words) == len(poses))
+        addedPoses = []
         for pos, wes in zip(poses, words):
             if not wes:
                 continue
-            l.poses.add(pos)
             # fixme? sort wes first
-            if pos not in le.words:
-                le.words[pos] = wes
-            elif le.words[pos] != wes:
-                raise ValueError(f"conflicting word entry for '{pos}' for '{spellings}': {le.words[pos]}, {wes}")
-        if m['comments']:
-            le.comments.extend(Line.splitComments(m['comments']))
+            addedPoses.append(pos)
+            if pos not in wordsByPos:
+                wordsByPos[pos] = wes
+            elif wordsByPos[pos] != wes:
+                raise ValueError(f"conflicting word entry for '{pos}' for '{spellings}': {wordsByPos[pos]}, {wes}")
+        return addedPoses
 
     @staticmethod
     def splitComments(commentsStr):

@@ -3,7 +3,7 @@ begin;
 --
 -- constant tables
 --
--- the tables are populated using constdata.sql
+-- populated via constdata.sql unless otherwise indicated
 --
 
 create table poses (
@@ -22,6 +22,19 @@ create table base_poses (
   pos_category text not null check (pos_category in ('', 'special', 'wordpart', 'nonword')),
   descr text,
   extra_info text
+) without rowid;
+
+-- populated via fix_pos.sql
+create table fix_pos (
+  base_pos text not null references base_poses(base_pos),
+  orig_pos text not null references poses(pos),
+  new_pos  text not null references poses(pos),
+  level int not null,
+  -- level 0: no change, the pos is correct for the base_pos
+  -- level 1: change needed after splitting a group in two
+  -- level 2 - 4: other possible changes
+  -- missing entry, pos change not possible
+  primary key (base_pos, orig_pos)
 ) without rowid;
 
 create table ranks (

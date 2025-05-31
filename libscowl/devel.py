@@ -27,6 +27,10 @@ def populateConstDataFromDB(conn):
             extra_info = r['extra_info'],
         )
 
+    fixPos.clear()
+    for r in conn.execute("select * from fix_pos order by base_pos, orig_pos"):
+        fixPos[(r['base_pos'],r['orig_pos'])] = r['new_pos']
+
     variantAsSymbol.clear()
     variantFromSymbol.clear()
     for r in conn.execute("select * from variant_levels"):
@@ -81,6 +85,11 @@ def exportConstData(out=None):
 
     out.write('basePosInfo = {\n')
     for k, v in basePosInfo.items():
+        out.write(f'  {k!r}: {v!r},\n')
+    out.write('}\n\n')
+
+    out.write('fixPos = {\n')
+    for k, v in fixPos.items():
         out.write(f'  {k!r}: {v!r},\n')
     out.write('}\n\n')
 

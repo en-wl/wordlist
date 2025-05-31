@@ -184,8 +184,8 @@ def posmap(base_pos, poses):
             new_poses = ['we', 'wep']
         else:
             new_poses = ['we']
-    elif len(poses) == 1:
-        new_poses = [*poses]
+    elif len(poses) <= 1:
+        new_poses = [basePosInfo[base_pos].lemma_pos]
     else:
         raise ValueError(f'posmap: unrecognized pattern')
     leftover = poses - set(new_poses)

@@ -1491,9 +1491,9 @@ class GroupInfo(SlotsDataClass):
         self.spellings = set()
         self.errors = []
 
-def mergeGroups(conn, f = None, *,
-                preview = False, ignoreErrors = False,
-                groupComment = None, replaceComments = True):
+def adjustEntries(conn, f = None, *,
+                  preview = False, ignoreErrors = False,
+                  groupComment = None, replaceComments = True):
     if f is None:
         f = sys.stdin
 

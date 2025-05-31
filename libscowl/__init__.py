@@ -992,7 +992,7 @@ _dir = Path(__file__).parent.resolve()
 def openDB(dbfile, create = False, copyFrom = None, transCopy = False):
 
     if transCopy:
-        copyFrom = openDB(dbfile)
+        copyFrom = dbfile
         dbfile = ':memory:'
 
     if not dbfile:
@@ -1018,7 +1018,10 @@ def openDB(dbfile, create = False, copyFrom = None, transCopy = False):
     conn.execute("PRAGMA foreign_keys = ON");
     conn.execute("PRAGMA synchronous = OFF");
 
-    if copyFrom:
+    if isinstance(copyFrom, str):
+        with openDB(copyFrom) as conn0:
+            conn0.backup(conn)
+    elif copyFrom:
         copyFrom.backup(conn)
     elif create:
         conn.executescript((_dir / 'schema.sql').read_text())

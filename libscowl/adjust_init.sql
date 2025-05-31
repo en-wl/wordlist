@@ -1,10 +1,19 @@
 begin;
 
+-- note: use "create table temp.<name>"
+--   rather than "create temp table <name>"
+--   to make it easy to change everything to main.<name> when required for
+--   debugging
+
 create table temp.to_merge (
   main_group_id integer,
   other_group_id integer,
   primary key (main_group_id, other_group_id)
 ) without rowid;
+
+create table temp.to_remove (
+ word_id integer primary key
+);
 
 create table temp.new_words (
   word_id integer primary key,
@@ -39,6 +48,8 @@ create table temp.new_derived_variant_info (
 
 create table temp.new_group_info (
   main_group_id integer primary key,
+  base_pos text not null,
+  defn_note text,
   pos_class text,
   usage_note text,
   lemma_rank text

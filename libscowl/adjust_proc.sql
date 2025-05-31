@@ -1,4 +1,11 @@
+-- Requires Sqlite 3.33.0
+
 begin;
+
+create temp table group_ids_to_clean_up as
+select distinct group_id from to_remove join words using (word_id);
+
+delete from words where word_id in (select * from to_remove);
 
 insert into words select * from new_words;
 
@@ -40,6 +47,34 @@ delete from groups where group_id not in (select group_id from words);
 delete from lemma_variant_info where lemma_id in (select lemma_id from new_lemma_variant_info);
 insert into lemma_variant_info
   select coalesce(new_word_lemma_id,lemma_id) as lemma_id, spelling, variant_level from new_lemma_variant_info left join split_info using (main_group_id,lemma_id);
+
+insert into group_ids_to_clean_up select distinct main_group_id from new_lemma_variant_info;
+
+delete from lemma_variant_info
+where lemma_id in (select lemma_id from useless_lemma_variant_entries join group_ids_to_clean_up using (group_id));
+
+drop table group_ids_to_clean_up;
+
+update groups as a
+   set base_pos = b.base_pos,
+       defn_note = coalesce(b.defn_note, a.defn_note),
+       pos_class = coalesce(b.pos_class, a.pos_class),
+       usage_note = coalesce(b.usage_note, a.usage_note),
+       lemma_rank = coalesce(b.lemma_rank, a.lemma_rank)
+ from new_group_info as b
+ where a.group_id = b.main_group_id;
+
+update words as a
+   set pos = new_pos
+  from new_group_info g, fix_pos as b
+  where a.group_id = main_group_id and g.base_pos = b.base_pos and a.pos = b.orig_pos
+    and a.pos != new_pos;
+
+update scowl_data as a
+   set pos = new_pos
+  from new_group_info g, fix_pos as b
+  where a.group_id = main_group_id and g.base_pos = b.base_pos and a.pos = b.orig_pos
+    and a.pos != new_pos;
 
 delete from lemma_comments where lemma_id in (select lemma_id from new_lemma_comments);
 insert into lemma_comments select * from new_lemma_comments where comment is not null;

@@ -55,4 +55,13 @@ select b.*
         );
 select * from scowl_data_cleanup limit 0;
 
+create view useless_lemma_variant_entries as
+  select group_id, v.lemma_id, v.variant_level
+  from lemma_variant_info v
+  join words w on v.lemma_id = w.word_id
+  join (select group_id from lemma_variant_info v join words w on v.lemma_id = w.word_id
+        group by group_id
+        having sum(cast(variant_level != 0 as int)) = 0) as group_ids_to_remove using (group_id);
+select * from useless_lemma_variant_entries limit 0;
+
 commit;

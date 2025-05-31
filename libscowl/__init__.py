@@ -325,7 +325,7 @@ class Spellings(dict):
             for sp in lemmaSpellingsKeys:
                 s.add(sp,0)
         return s
-            
+
     def sortKey(self):
         res = []
         for idx, sp in enumerate(_spellings):
@@ -400,6 +400,14 @@ class Group:
         '_redundantSpellings',
         '_lemmaIncluded',
     )
+
+    def merge(self, attr, v):
+        v = ifNone(v, '')
+        v0 = getattr(self, attr, None)
+        if v0 is None:
+            setattr(self, attr, v)
+        elif v != v0:
+            raise ValueError(f'conflicting values for {attr} within group')
 
     def sortKey(self):
         l = self.lines[0]
@@ -495,28 +503,58 @@ class LemmaEntry(SlotsDataClass):
             words = ', '.join(unmarked)
             self.problems.append(f"unmarked variants: {words}")
 
+class Tags(SlotsDataClass):
+    __slots__ = ('data',)
+
+    def __init__(self, *args):
+        self.data = set(*args)
+        if len(self.data) == 1 and '' in self.data:
+            self.data.remove('')
+
+    def add(self, item):
+        return self.data.add(item)
+
+    def print(self, out):
+        for tag in sorted(self.data):
+            if tag == '':
+                tag = '[]'
+            out.write(f' {tag}')
+
+    def __contains__(self, item):
+        return self.data.__contains__(item)
+
+    def __iter__(self):
+        if self.data:
+            return self.data.__iter__()
+        else:
+            return ('',).__iter__()
+
+    def __len__(self):
+        length = self.data.__len__()
+        return 1 if length == 1 else length
+
+
 class ScowlInfo(SlotsDataClass):
     __slots__ = (
         'level',    # int
         'category', # str
         'region',   # str
-        'tags',     # [ str ] -- i.e. list of tags
+        'tags',     # Tags
     )
     def __init__(self, level, category = '', region = '', tags = None):
         self.level = level
         self.category = category
         self.region = region
         if tags is None:
-            self.tags = []
+            self.tags = Tags()
         else:
-            self.tags = tags
+            self.tags = Tags(tags)
 
     @staticmethod
     def parse(m):
         if m['level'] is None:
             return None
         si = ScowlInfo(int(m['level']))
-        tags = set()
         for tag in m['tags'].split():
             if tag in REGIONS:
                 if si.region != '':
@@ -526,29 +564,20 @@ class ScowlInfo(SlotsDataClass):
                 if tag[-1] != ']':
                     raise ValueError(f"invalid tag: '{tag}'")
                 if tag == '[]':
-                    tags.add('')
+                    si.tags.add('')
                 else:
-                    tags.add(tag)
+                    si.tags.add(tag)
             else:
                 if si.category != '':
                     raise ValueError("duplicate categories")
                 si.category = tag
-        if not tags:
-            tags.add('')
-        si.tags = sorted(tags)
         return si
 
     def print(self, out):
         out.write(f'{self.level}')
         if self.category != '': out.write(f' {self.category}')
         if self.region != '': out.write(f' {self.region}')
-        tags = self.tags
-        if len(tags) == 1 and '' in tags:
-            tags = ()
-        for tag in sorted(tags):
-            if tag == '':
-                tag = '[]'
-            out.write(f' {tag}')
+        self.tags.print(out)
 
 class LineBase(SlotsDataClass):
     __slots__ = (
@@ -598,24 +627,17 @@ class LineBase(SlotsDataClass):
             l = Line(g, si)
         else:
             l = Override(g, si)
-        def merge(attr, v):
-            v = ifNone(v, '')
-            v0 = getattr(g, attr, None)
-            if v0 is None:
-                setattr(g, attr, v)
-            elif v != v0:
-                raise ValueError(f'conflicting values for {attr} within group')
         lemmaStr = m['lemma'].strip()
         if lemmaStr == '-':
             lemma = None
         else:
             lemma = WordEntry()
             (lemma_rank, lemma.word, lemma.entry_rank) = parseLemmaPart(lemmaStr)
-            merge('lemma_rank', lemma_rank)
-        merge('base_pos', m['base_pos'])
-        merge('pos_class', m['pos_class'])
-        merge('defn_note', m['defn_note'])
-        merge('usage_note', m['usage_note'])
+            g.merge('lemma_rank', lemma_rank)
+        g.merge('base_pos', m['base_pos'])
+        g.merge('pos_class', m['pos_class'])
+        g.merge('defn_note', m['defn_note'])
+        g.merge('usage_note', m['usage_note'])
         l.finishParse(g, lemma, m, entriesBySpellings)
         return l
 
@@ -664,7 +686,7 @@ class Line(LineBase):
             self.poses = poses
 
     def sortKey(self):
-        return (self.si.level, self.si.category, self.si.region, basePosInfo[self.grp.base_pos].lemma_pos not in self.poses, self.si.tags)
+        return (self.si.level, self.si.category, self.si.region, basePosInfo[self.grp.base_pos].lemma_pos not in self.poses, sorted(self.si.tags))
 
     def lemmaIncluded(self):
         return basePosInfo[self.grp.base_pos].lemma_pos in self.poses
@@ -1210,53 +1232,7 @@ def exportToDB(clusters, conn):
         conn.execute("insert into clusters (cluster_id) values (?)", (group_id,))
 
         for group in cluster.groups:
-            conn.execute("insert into groups (group_id, base_pos, pos_class, defn_note, usage_note, lemma_rank) values (?, ?, ?, ?, ?, ?)",
-                         (group_id, group.base_pos, group.pos_class, group.defn_note, group.usage_note, group.lemma_rank))
-
-            for le in group.entries:
-                lemma_id = word_id
-                for pos in posmap(group.base_pos, le.words.keys()):
-                    for we in le.words.get(pos, []):
-                        conn.execute("insert into words (word_id, group_id, lemma_id, pos, word, entry_rank) values (?, ?, ?, ?, ?, ?)",
-                                     (word_id, group_id, lemma_id, pos, we.word, we.entry_rank))
-                        if we.spellings is not None and '' in we.spellings:
-                            variant_level = we.spellings['']
-                            spellings = le.spellings.keys() if le.spellings else ['_']
-                            conn.executemany("insert into derived_variant_info (word_id, spelling, variant_level) values (?, ?, ?)",
-                                             ((word_id, sp, variant_level) for sp in spellings))
-                        elif we.spellings is not None:
-                            conn.executemany("insert into derived_variant_info (word_id, spelling, variant_level) values (?, ?, ?)",
-                                             ((word_id, sp, vl) for sp, vl in we.spellings.items()))
-                        word_id += 1
-
-                conn.executemany("insert into lemma_variant_info (lemma_id, spelling, variant_level) values (?, ?, ?)",
-                                 ((lemma_id, sp, vl) for sp, vl in le.spellings.items()))
-
-                conn.executemany("insert into lemma_comments (lemma_id, order_num, comment) values (?, ?, ?)",
-                                 ((lemma_id, i, c) for i, c in enumerate(le.comments)))
-
-                ov = group.override.get(le.lemma, None)
-                if ov:
-                    for tag in ov.si.tags:
-                        conn.execute("insert into scowl_override (level, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
-                                     (ov.si.level, ov.si.category, ov.si.region, tag, lemma_id))
-                        for word in ov.words:
-                            conn.execute("insert into scowl_override "
-                                         "select ?, ?, ?, ?, word_id from words where lemma_id = ? and word = ?",
-                                         (ov.si.level, ov.si.category, ov.si.region, tag, lemma_id, word))
-
-            for l in group.lines:
-                for pos in l.poses:
-                    for tag in l.si.tags:
-                        conn.execute("insert into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
-                                     (l.si.level, l.si.category, l.si.region, tag, group_id, pos))
-
-            if group.commentLines:
-                conn.execute("insert into group_comments (group_id, comment) values (?, ?)",
-                             (group_id, str(group.commentLines)))
-
-            group_id += 2 if group.base_pos in ('n_v', 'aj_av') else 1
-
+            group_id, word_id = _exportGroup(conn, group, group_id, word_id)
                 
         for c in cluster.comments:
             conn.execute("insert into cluster_comments (headword, other_words, comment) values (?, ?, ?)",
@@ -1266,6 +1242,56 @@ def exportToDB(clusters, conn):
     conn.commit()
 
     conn.executescript((_dir / 'post.sql').read_text())
+
+def _exportGroup(conn, group, group_id, word_id):
+    conn.execute("insert into groups (group_id, base_pos, pos_class, defn_note, usage_note, lemma_rank) values (?, ?, ?, ?, ?, ?)",
+                 (group_id, group.base_pos, group.pos_class, group.defn_note, group.usage_note, group.lemma_rank))
+
+    for le in group.entries:
+        lemma_id = word_id
+        for pos in posmap(group.base_pos, le.words.keys()):
+            for we in le.words.get(pos, []):
+                conn.execute("insert into words (word_id, group_id, lemma_id, pos, word, entry_rank) values (?, ?, ?, ?, ?, ?)",
+                             (word_id, group_id, lemma_id, pos, we.word, we.entry_rank))
+                if we.spellings is not None and '' in we.spellings:
+                    variant_level = we.spellings['']
+                    spellings = le.spellings.keys() if le.spellings else ['_']
+                    conn.executemany("insert into derived_variant_info (word_id, spelling, variant_level) values (?, ?, ?)",
+                                     ((word_id, sp, variant_level) for sp in spellings))
+                elif we.spellings is not None:
+                    conn.executemany("insert into derived_variant_info (word_id, spelling, variant_level) values (?, ?, ?)",
+                                     ((word_id, sp, vl) for sp, vl in we.spellings.items()))
+                word_id += 1
+
+        conn.executemany("insert into lemma_variant_info (lemma_id, spelling, variant_level) values (?, ?, ?)",
+                         ((lemma_id, sp, vl) for sp, vl in le.spellings.items()))
+
+        conn.executemany("insert into lemma_comments (lemma_id, order_num, comment) values (?, ?, ?)",
+                         ((lemma_id, i, c) for i, c in enumerate(le.comments)))
+
+        ov = group.override.get(le.lemma, None)
+        if ov:
+            for tag in ov.si.tags:
+                conn.execute("insert into scowl_override (level, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
+                             (ov.si.level, ov.si.category, ov.si.region, tag, lemma_id))
+                for word in ov.words:
+                    conn.execute("insert into scowl_override "
+                                 "select ?, ?, ?, ?, word_id from words where lemma_id = ? and word = ?",
+                                 (ov.si.level, ov.si.category, ov.si.region, tag, lemma_id, word))
+
+    for l in group.lines:
+        for pos in l.poses:
+            for tag in l.si.tags:
+                conn.execute("insert into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
+                             (l.si.level, l.si.category, l.si.region, tag, group_id, pos))
+
+    if group.commentLines:
+        conn.execute("insert into group_comments (group_id, comment) values (?, ?)",
+                     (group_id, str(group.commentLines)))
+
+    group_id += 2 if group.base_pos in ('n_v', 'aj_av') else 1
+    return (group_id, word_id)
+
 
 class StreamWrapper:
     def __init__(self, out):
@@ -1724,6 +1750,7 @@ def adjustEntries(conn, f = None, *,
         conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
         conn.commit()
     else:
+        conn.execute("delete from clusters")
         conn.commit()
         conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
         conn.commit()

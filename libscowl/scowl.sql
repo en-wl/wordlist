@@ -59,8 +59,9 @@ select * from scowl_v0 limit 0;
 create view duplicate_derived_view as
 with duplicate_derived as (
   select word
-   from (select (select max(cluster_id) from clusters where cluster_id <= group_id) as cluster_id, word
+   from (select cluster_id, word
            from words
+           join cluster_map using (group_id)
            join (select word_id as lemma_id, word as lemma from words) as lemmas using (lemma_id)
           where word_id != lemma_id) as q
    group by word

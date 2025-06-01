@@ -46,7 +46,6 @@ set search_path=$SCHEMA;
 \i data.sql
 commit;
 \i views.sql
-alter view cluster_map_view rename to cluster_map;
 alter view variant_info_view rename to variant_info;
 \i scowl.sql
 alter view duplicate_derived_view rename to duplicate_derived;

@@ -12,9 +12,6 @@ insert into categories select distinct category from _scowl_combined order by ca
 delete from tags;
 insert into tags select distinct tag from _scowl_combined order by category;
 
-delete from cluster_map;
-insert into cluster_map select * from cluster_map_view;
-
 delete from variant_info;
 insert into variant_info select * from variant_info_view;
 

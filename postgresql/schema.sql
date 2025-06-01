@@ -142,9 +142,11 @@ create table lemma_comments (
 -- these tables are populated when exporting but not used when importing
 --
 
-create table clusters (
-  cluster_id integer primary key
+create table cluster_map (
+  group_id integer primary key,
+  cluster_id integer not null
 );
+create index cluster_map_idx on cluster_map(cluster_id);
 
 create table pos_classes (
   pos_class text primary key

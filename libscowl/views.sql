@@ -10,12 +10,6 @@ select a.word_id, a.group_id, a.lemma_id, b.word as lemma, b.pos as lemma_pos, b
   from words a left join words b on (a.lemma_id = b.word_id) left join groups g on a.group_id = g.group_id;
 select * from entries limit 0;
 
-create view cluster_map_view as
-select group_id, (select max(cluster_id) from clusters where cluster_id <= group_id) as cluster_id
-  from groups
-;
-select * from cluster_map_view limit 0;
-
 create view variant_info_view as
 select word_id,
        spelling,

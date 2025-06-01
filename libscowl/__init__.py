@@ -1293,11 +1293,13 @@ def exportToDB(clusters, conn):
     conn.execute("delete from groups")
     
     for cluster in clusters:
-        conn.execute("insert into clusters (cluster_id) values (?)", (group_id,))
+        cluster_id = group_id
 
         for group in cluster.groups:
+            conn.execute("insert into cluster_map (group_id, cluster_id) values (?, ?)", (group_id,cluster_id))
+
             group_id, word_id = _exportGroup(conn, group, group_id, word_id)
-                
+
         for c in cluster.comments:
             conn.execute("insert into cluster_comments (headword, other_words, comment) values (?, ?, ?)",
                          (c.word, c.other_words, c.comment))
@@ -1583,7 +1585,7 @@ def mergeEntries(conn, f = None, *, tag = None, onConflict = 'merge', preview = 
         conn.rollback()
     else:
         conn.execute("drop table merged_groups")
-        conn.execute("delete from clusters")
+        conn.execute("delete from cluster_map")
         conn.commit()
 
 
@@ -1964,7 +1966,7 @@ def adjustEntries(conn, f = None, *,
         conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
         conn.commit()
     else:
-        conn.execute("delete from clusters")
+        conn.execute("delete from cluster_map")
         conn.commit()
         conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
         conn.commit()
@@ -2219,7 +2221,7 @@ def _filterDB(filterType, conn, orig, *, simplify = (), **args):
     conn.execute("insert into group_comments select * from orig.group_comments where group_id in (select group_id from groups)")
     conn.execute("insert into lemma_comments select * from orig.lemma_comments where lemma_id in (select lemma_id from words)")
 
-    conn.execute("insert into clusters select * from orig.clusters")
+    conn.execute("insert into cluster_map select * from orig.cluster_map")
 
     conn.execute("insert into _variables values(?, ?)", ('filter_type', filterType))
     conn.execute("insert into _variables values(?, ?)", ('filter_where_clause', whereClause))
@@ -2277,8 +2279,6 @@ def _filterByGroup(conn, whereClause, includeCluster = False):
     conn.execute(f"insert or ignore into filtered select group_id from orig.scowl_ {whereClause}")
 
     if includeCluster:
-        conn.execute("create temp table cluster_map as "
-                     "select (select max(cluster_id) from orig.clusters where cluster_id <= group_id) as cluster_id, group_id from orig.groups")
         conn.execute("insert or ignore into filtered "
                      "select b.group_id from cluster_map a join filtered using (group_id) join cluster_map b using (cluster_id)")
                  

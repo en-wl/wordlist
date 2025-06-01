@@ -13,7 +13,7 @@ scowl_override
 cluster_comments
 group_comments
 lemma_comments
-clusters
+cluster_map
 pos_classes
 usage_notes
 categories

@@ -25,18 +25,54 @@ def noneIf(a, b):
     return None if a == b else a
 
 # Default is a speical value to indicate that a value has not been provided in
-# the text input.  Unlike None, it does not create a special case when the
-# distinction betwen no value and an empty string is unimportant.
-class DefaultType(str):
+# the text input.
+class DefaultType:
     __slots__ = ()
     def __new__(cls):
         return Default
+    def __bool__(self):
+        return False
+    def __str__(self):
+        return ''
+    def __conform__(self, protocol):
+        if protocol is sqlite3.PrepareProtocol:
+            return ''
+        else:
+            raise LookupError(protocol)
     def __repr__(self):
         return "Default"
-Default = str.__new__(DefaultType, '')
+    def __lt__(self, other):
+        if isinstance(other, DefaultType):
+            return False
+        elif isinstance(other, str):
+            return True
+        return NotImplemented
+    def __le__(self, other):
+        if isinstance(other, DefaultType):
+            return True
+        elif isinstance(other, str):
+            return True
+        return NotImplemented
+    def __gt__(self, other):
+        if isinstance(other, DefaultType):
+            return False
+        elif isinstance(other, str):
+            return False
+        return NotImplemented
+    def __ge__(self, other):
+        if isinstance(other, DefaultType):
+            return True
+        elif isinstance(other, str):
+            return False
+        return NotImplemented
+
+Default = object.__new__(DefaultType)
 
 def ifDefault(a, b):
     return b if a is Default else a
+
+def defaultIf(a, b):
+    return Default if a == b else a
 
 _accented   = "ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜÝàáâãäåçèéêëìíîïñòóôõöøùúûüý"
 _deaccented = "AAAAAACEEEEIIIINOOOOOOUUUUYaaaaaaceeeeiiiinoooooouuuuy"
@@ -621,24 +657,26 @@ class LineBase(SlotsDataClass):
         self.print(buf)
         return buf.getvalue().rstrip()
 
-    def _lemmaPart(self, out, lemma, entry_rank = ''):
-        base_pos = self.grp.base_pos
-        lemma_pos = basePosInfo[base_pos].lemma_pos
+    def _lemmaPart(self, out, lemma, entry_rank = Default):
+        base_pos = defaultIf(self.grp.base_pos, '')
+        pos_class = defaultIf(self.grp.pos_class, '')
+        defn_note = defaultIf(self.grp.defn_note, '')
+        usage_note = defaultIf(self.grp.usage_note, '')
         
         if lemma:
             out.write(f': {self.grp.lemma_rank}{lemma}{entry_rank}')
         else:
             out.write(f': -')
 
-        if self.grp.pos_class == '' and base_pos == '':
+        if base_pos is Default and pos_class is Default:
             pass
-        elif self.grp.pos_class == '':
+        elif pos_class is Default:
             out.write(f' <{base_pos}>')
         else:
             out.write(f' <{base_pos}/{self.grp.pos_class}>')
-        if self.grp.defn_note != '':
+        if defn_note is not Default:
             out.write(f' {{{self.grp.defn_note}}}')
-        if self.grp.usage_note != '':
+        if usage_note is not Default:
             out.write(f' ({self.grp.usage_note})')
 
     @staticmethod
@@ -660,7 +698,7 @@ class LineBase(SlotsDataClass):
             lemma = WordEntry()
             (lemma_rank, lemma.word, lemma.entry_rank) = parseLemmaPart(lemmaStr)
             g.merge('lemma_rank', lemma_rank, allowDefault = False)
-        g.merge('base_pos', m['base_pos'])
+        g.merge('base_pos', ifNone(m['base_pos'],''))
         g.merge('pos_class', m['pos_class'])
         g.merge('defn_note', m['defn_note'])
         g.merge('usage_note', m['usage_note'])
@@ -1838,7 +1876,7 @@ def adjustEntries(conn, f = None, *,
             merge('defn_note', new_defn_note)
             merge('pos_class', m['pos_class'])
             merge('usage_note', m['usage_note'])
-            merge('lemma_rank', noneIf(lemma_rank, ''))
+            merge('lemma_rank', noneIf(lemma_rank, Default))
 
             Line.procWords(li.spellings, li.lemma, base_pos, m, li.words)
 

@@ -29,11 +29,21 @@ def searchDB(args):
 def adjust(args):
     conn = libscowl.openDB(args.db)
     kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'func')}
-    preview = kwargs.get('preview')
+    preview = kwargs.pop('preview')
     if preview:
-        libscowl.adjustEntries(conn, sys.stdin, preview = True, ignoreErrors = kwargs.get('ignoreErrors'))
+        libscowl.adjustEntries(conn, sys.stdin, preview = True, **kwargs)
     else:
-        libscowl.adjustEntries(conn, sys.stdin, preview = False, ignoreErrors = kwargs.get('ignoreErrors'))
+        libscowl.adjustEntries(conn, sys.stdin, preview = False, **kwargs)
+        conn.executescript((libscowl._dir / 'post.sql').read_text())
+
+def merge(args):
+    conn = libscowl.openDB(args.db)
+    kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'func')}
+    preview = kwargs.pop('preview')
+    if preview:
+        libscowl.mergeEntries(conn, sys.stdin, preview = True, **kwargs)
+    else:
+        libscowl.mergeEntries(conn, sys.stdin, preview = False, **kwargs)
         conn.executescript((libscowl._dir / 'post.sql').read_text())
 
 def combinePOS(args):
@@ -154,6 +164,13 @@ p.add_argument('--preview', action='store_true', default=False, dest='preview')
 p.add_argument('--ignore-errors', action='store_true', default=False, dest='ignoreErrors')
 p.add_argument('db', nargs='?', default='scowl.db')
 
+p = addParser('merge')
+p.set_defaults(func=merge)
+p.add_argument('--preview', action='store_true', default=False, dest='preview')
+#p.add_argument('--ignore-errors', action='store_true', default=False, dest='ignoreErrors')
+p.add_argument('--on-conflict', default = 'error', dest='onConflict', choices=['merge', 'replace', 'error'])
+p.add_argument('--tag', dest='tag')
+p.add_argument('db', nargs='?', default='scowl.db')
 
 
 p = subparsers.add_parser('combine-pos',

@@ -24,6 +24,20 @@ def ifNone(a, b):
 def noneIf(a, b):
     return None if a == b else a
 
+# Default is a speical value to indicate that a value has not been provided in
+# the text input.  Unlike None, it does not create a special case when the
+# distinction betwen no value and an empty string is unimportant.
+class DefaultType(str):
+    __slots__ = ()
+    def __new__(cls):
+        return Default
+    def __repr__(self):
+        return "Default"
+Default = str.__new__(DefaultType, '')
+
+def ifDefault(a, b):
+    return b if a is Default else a
+
 _accented   = "ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜÝàáâãäåçèéêëìíîïñòóôõöøùúûüý"
 _deaccented = "AAAAAACEEEEIIIINOOOOOOUUUUYaaaaaaceeeeiiiinoooooouuuuy"
 _orderAlpha = "aáàâåäãAÁÀÂÅÄÃæÆbBcçCÇdDðÐeéèêëEÉÈÊËfFgGhHiíìîïIÍÌÎÏjJkKlLmMnñNÑoóòôöõøOÓÒÔÖÕØpPqQrRsSßtTuúùûüUÚÙÛÜvVwWxXyýYÝzZþÞ"
@@ -75,11 +89,19 @@ class WordPart(NamedTuple):
     word: Any
     rank: Any
 
+def _fixRank(rank):
+    if rank == '':
+        return Default
+    elif rank == '_':
+        return ''
+    else:
+        return rank
+
 def parseWordPart(w):
     m = wordPartRegex.fullmatch(w)
     if not m:
         raise ValueError(f"invalid word part: {w}")
-    return WordPart(m[1],m[2])
+    return WordPart(m[1], _fixRank(m[2]))
 
 class LemmaPart(NamedTuple):
     lemma_rank: Any
@@ -87,9 +109,9 @@ class LemmaPart(NamedTuple):
     entry_rank: Any
 
 def parseLemmaPart(w):
-    lemma_rank = ''
+    lemma_rank = Default
     if w[0] in '_@!-':
-        lemma_rank = w[0]
+        lemma_rank = _fixRank(w[0])
         w = w[1:]
     return LemmaPart(lemma_rank, *parseWordPart(w))
 
@@ -382,7 +404,7 @@ def addMissingSpellings(entries, have = ()):
     for e in entries:
         _addMissingSpellings(e.spellings, have)
     return have
-    
+
 class Group:
     __slots__ = (
         'headword',  # str
@@ -401,13 +423,17 @@ class Group:
         '_lemmaIncluded',
     )
 
-    def merge(self, attr, v):
-        v = ifNone(v, '')
+    def merge(self, attr, v, allowDefault = True):
+        v = ifNone(v, Default)
         v0 = getattr(self, attr, None)
-        if v0 is None:
+        if v0 is None or (allowDefault and v0 is Default):
             setattr(self, attr, v)
         elif v != v0:
             raise ValueError(f'conflicting values for {attr} within group')
+
+    def adjDefault(self, attr, v):
+        if getattr(self, attr, Default) is Default:
+            setattr(self, attr, v)
 
     def sortKey(self):
         l = self.lines[0]
@@ -633,7 +659,7 @@ class LineBase(SlotsDataClass):
         else:
             lemma = WordEntry()
             (lemma_rank, lemma.word, lemma.entry_rank) = parseLemmaPart(lemmaStr)
-            g.merge('lemma_rank', lemma_rank)
+            g.merge('lemma_rank', lemma_rank, allowDefault = False)
         g.merge('base_pos', m['base_pos'])
         g.merge('pos_class', m['pos_class'])
         g.merge('defn_note', m['defn_note'])
@@ -792,7 +818,7 @@ class Line(LineBase):
         words += _splitWords(m['words'], lemmaSpellingsKeys)
         poses = posesFromList(base_pos, words)
         if poses is None:
-            raise ValueError(f"could not map list of words of length {len(words)} with base pos of '{g.base_pos}'")
+            raise ValueError(f"could not map list of words of length {len(words)} with base pos of '{base_pos}'")
         assert(len(words) == len(poses))
         addedPoses = []
         for pos, wes in zip(poses, words):
@@ -1487,6 +1513,156 @@ def roughParse(f = None):
         for ws in words:
             for we in ws:
                 yield BasicInfo(base_pos, pos_class, we.word, False)
+
+def mergeEntries(conn, f = None, *, tag = None, onConflict = 'merge', preview = False):
+    clusters = importText(f)
+
+    conn.execute("begin")
+
+    next_group_id,  = next(conn.execute("select max(group_id) + 2 from groups"))
+    next_word_id, = next(conn.execute("select max(word_id) + 1 from words"))
+
+    conn.execute("create temp table merged_groups (group_id integer primary key)")
+
+    for cluster in clusters:
+        for grp in cluster.groups:
+            if tag is not None:
+                for l in grp.lines:
+                    l.si.tags.add(tag)
+                for o in grp.override.values():
+                    o.si.tags.add(tag)
+            (next_group_id, next_word_id) = _mergeGroup(conn, grp, next_group_id, next_word_id,
+                                                        onConflict = onConflict)
+            conn.execute("insert into merged_groups values (?)", (grp._group_id,))
+
+        for comment in cluster.comments:
+            # fixme
+            pass
+
+    if preview:
+        clusters = importFromDB(conn, filterTable = 'merged_groups')
+        exportAsText(clusters, conn, sys.stdout, showExtraInfo = False)
+        conn.rollback()
+    else:
+        conn.execute("drop table merged_groups")
+        conn.execute("delete from clusters")
+        conn.commit()
+
+
+def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict):
+    assert onConflict in ('merge', 'replace', 'error')
+
+    group_ids = set()
+    for lemma in grp.entries:
+        for (id,) in conn.execute("select group_id from lemmas "
+                                  "where lemma = ? and base_pos = ? and defn_note = ?",
+                                  (lemma.lemma, grp.base_pos, grp.defn_note)):
+            group_ids.add(id)
+    if len(group_ids) > 0 and onConflict == 'error':
+        raise ValueError(f"group already exists: {grp.entries[0].lemma} <{grp.base_pos}> {{{grp.defn_note}}}")
+    if len(group_ids) > 1:
+        raise ValueError(f"multiple groups found: {grp.entries[0].lemma} <{grp.base_pos}> {{{grp.defn_note}}}")
+
+    group_id = next(iter(group_ids), None)
+    if onConflict == 'replace' and group_id is not None:
+        conn.execute("delete from groups where group_id = ?", (group_id,))
+        group_id = None
+
+    if group_id is None:
+        grp._group_id = next_group_id
+        return _exportGroup(conn, grp, next_group_id, next_word_id)
+
+    grp._group_id = group_id
+    cur = conn.execute("select pos_class, usage_note, lemma_rank from groups where group_id = ?" , (group_id,))
+    (pos_class, usage_note, lemma_rank) = next(cur)
+    conn.execute("update groups set pos_class = ?, usage_note = ?, lemma_rank = ? where group_id = ?",
+                 (ifDefault(grp.pos_class, pos_class),
+                  ifDefault(grp.usage_note, usage_note),
+                  ifDefault(grp.lemma_rank, lemma_rank),
+                  group_id))
+
+    haveLemmaSpelling = next((True for le in grp.entries if le.spellings), False)
+
+    for le in grp.entries:
+        lemma_id = None
+        foundLemma = None
+
+        for pos in posmap(grp.base_pos, le.words.keys()):
+            wes = le.words.get(pos, [])
+            haveDerivedSpelling = next((True for we in wes if we.spellings is not None), False)
+
+            for we in wes:
+                if we.spellings is not None:
+                    haveDerivedSpelling = True
+
+            for we in wes:
+                if lemma_id is None:
+                    word_id, = next(conn.execute("select word_id from words where group_id = ? and word = ? and pos = ? and word_id = lemma_id",
+                                                 (group_id, we.word, pos)),
+                                    (None,))
+                    foundLemma = word_id is not None
+                elif foundLemma:
+                    word_id, = next(conn.execute("select word_id from words where group_id = ? and lemma_id = ? and word = ? and pos = ?",
+                                                 (group_id, lemma_id, we.word, pos)),
+                                    (None,))
+                else:
+                    word_id = None
+
+                if word_id is None:
+                    word_id = next_word_id
+                    next_word_id += 1
+                    if lemma_id is None:
+                        lemma_id = word_id
+                    conn.execute("insert into words (word_id, group_id, lemma_id, pos, word, entry_rank) values (?, ?, ?, ?, ?, ?)",
+                                 (word_id, group_id, lemma_id, pos, we.word, we.entry_rank))
+                else:
+                    if lemma_id is None:
+                        lemma_id = word_id
+                    if we.entry_rank != '':
+                        conn.execute("update words set entry_rank = ? where word_id = ?", (we.entry_rank, word_id,))
+                    if haveDerivedSpelling:
+                        conn.execute("delete from derived_variant_info where word_id = ?", (word_id,))
+
+                if we.spellings is not None and '' in we.spellings:
+                    variant_level = we.spellings['']
+                    spellings = le.spellings.keys() if le.spellings else ['_']
+                    conn.executemany("insert into derived_variant_info (word_id, spelling, variant_level) values (?, ?, ?)",
+                                     ((word_id, sp, variant_level) for sp in spellings))
+                elif we.spellings is not None:
+                    conn.executemany("insert into derived_variant_info (word_id, spelling, variant_level) values (?, ?, ?)",
+                                     ((word_id, sp, vl) for sp, vl in we.spellings.items()))
+                word_id += 1
+
+        if foundLemma and haveLemmaSpelling:
+            conn.execute("delete from lemma_variant_info where lemma_id = ?", (lemma_id,))
+
+        conn.executemany("insert into lemma_variant_info (lemma_id, spelling, variant_level) values (?, ?, ?)",
+                         ((lemma_id, sp, vl) for sp, vl in le.spellings.items()))
+
+        conn.executemany("insert into lemma_comments (lemma_id, order_num, comment) values (?, ?, ?)",
+                         ((lemma_id, i, c) for i, c in enumerate(le.comments)))
+
+        ov = grp.override.get(le.lemma, None)
+        if ov:
+            for tag in ov.si.tags:
+                conn.execute("insert or ignore into scowl_override (level, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
+                             (ov.si.level, ov.si.category, ov.si.region, tag, lemma_id))
+                for word in ov.words:
+                    conn.execute("insert or ignore into scowl_override "
+                                 "select ?, ?, ?, ?, word_id from words where lemma_id = ? and word = ?",
+                                 (ov.si.level, ov.si.category, ov.si.region, tag, lemma_id, word))
+
+    for l in grp.lines:
+        for pos in l.poses:
+            for tag in l.si.tags:
+                conn.execute("insert or ignore into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
+                             (l.si.level, l.si.category, l.si.region, tag, group_id, pos))
+
+    if grp.commentLines:
+        conn.execute("insert into group_comments (group_id, comment) values (?, ?)",
+                     (group_id, str(group.commentLines)))
+
+    return (next_group_id, next_word_id)
 
 class LineInfo(SlotsDataClass):
     __slots__ = ('line', 'action', 'si', 'lemma', 'pos', 'defn_note', 'group_id', 'lemma_id', 'spellings', 'words', 'comments')

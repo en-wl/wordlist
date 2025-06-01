@@ -473,7 +473,8 @@ class Group:
 
     def sortKey(self):
         l = self.lines[0]
-        return (l.si.level + (100 if l.si.region != '' else 0) + (200 if l.si.category != '' else 0),
+        si = l.si[0]
+        return (si.level + (100 if si.region != '' else 0) + (200 if si.category != '' else 0),
                 wordOrderKey(self.headword), self.defn_note, basePosInfo[self.base_pos].order_num, self.pos_class)
 
     def finalize(self, expected_spellings):
@@ -613,27 +614,36 @@ class ScowlInfo(SlotsDataClass):
             self.tags = Tags(tags)
 
     @staticmethod
-    def parse(m):
-        if m['level'] is None:
-            return None
-        si = ScowlInfo(int(m['level']))
-        for tag in m['tags'].split():
-            if tag in REGIONS:
-                if si.region != '':
-                    raise ValueError("duplicate regions")
-                si.region = tag
-            elif tag[0] == '[':
-                if tag[-1] != ']':
-                    raise ValueError(f"invalid tag: '{tag}'")
-                if tag == '[]':
-                    si.tags.add('')
+    def parse(tagsStr):
+        sil = []
+        tags = tagsStr.split()
+        tags_len = len(tags)
+        idx = 0
+        while idx < tags_len:
+            si = ScowlInfo(int(tags[idx]))
+            idx += 1
+            while idx < tags_len:
+                tag = tags[idx]
+                if tag[0] in '0123456789':
+                    break
+                if tag in REGIONS:
+                    if si.region != '':
+                        raise ValueError("duplicate regions")
+                    si.region = tag
+                elif tag[0] == '[':
+                    if tag[-1] != ']':
+                        raise ValueError(f"invalid tag: '{tag}'")
+                    if tag == '[]':
+                        si.tags.add('')
+                    else:
+                        si.tags.add(tag)
                 else:
-                    si.tags.add(tag)
-            else:
-                if si.category != '':
-                    raise ValueError("duplicate categories")
-                si.category = tag
-        return si
+                    if si.category != '':
+                        raise ValueError("duplicate categories")
+                    si.category = tag
+                idx += 1
+            sil.append(si)
+        return sil
 
     def print(self, out):
         out.write(f'{self.level}')
@@ -644,12 +654,11 @@ class ScowlInfo(SlotsDataClass):
 class LineBase(SlotsDataClass):
     __slots__ = (
         'grp',      # Group -- back reference
-        'si',       # ScowlInfo
+        'si',       # [ScowlInfo]
     )
 
     def __init__(self, grp, si):
         self.grp = grp
-        assert(isinstance(si, ScowlInfo))
         self.si = si
     def __str__(self):
         from io import StringIO
@@ -684,8 +693,8 @@ class LineBase(SlotsDataClass):
         m = _matchLine(line)
         if m is None:
             return None
-        si = ScowlInfo.parse(m)
-        if si is None:
+        si = ScowlInfo.parse(ifNone(m['tags'], ''))
+        if not si:
             raise ValueError('size must be provided')
         if m['override'] is None:
             l = Line(g, si)
@@ -707,7 +716,7 @@ class LineBase(SlotsDataClass):
 
 def _matchLine(line):
     line = line.strip()
-    m = re.fullmatch(r'(?: (?P<level>[0-9]+) (?P<tags>[^:#]*):\s* |)'
+    m = re.fullmatch(r'(?: (?P<tags>[0-9]+ [^:#]*):\s* |)'
                      r'(?: (?P<override>\+)\s*:\s* | (?P<spellings>[^:<>{}#]+) (\{(?P<num> [0-9])\}\s*|):\s* |)'
                      r'(?P<lemma>[^:<>{}#()]+)'
                      r'(?: <(?P<base_pos>[^/]*) (?:/(?P<pos_class>.*)|)>\s* |)'
@@ -750,7 +759,8 @@ class Line(LineBase):
             self.poses = poses
 
     def sortKey(self):
-        return (self.si.level, self.si.category, self.si.region, basePosInfo[self.grp.base_pos].lemma_pos not in self.poses, sorted(self.si.tags))
+        si = self.si[0]
+        return (si.level, si.category, si.region, basePosInfo[self.grp.base_pos].lemma_pos not in self.poses, sorted(si.tags))
 
     def lemmaIncluded(self):
         return basePosInfo[self.grp.base_pos].lemma_pos in self.poses
@@ -760,7 +770,12 @@ class Line(LineBase):
             out = sys.stdout
 
         for le in self.grp.entries:
-            self.si.print(out);
+            needSep = False
+            for si in self.si:
+                if needSep:
+                    out.write(' ')
+                si.print(out)
+                needSep = True
             
             if le.spellings:
                 exclude = self.grp._redundantSpellings if trimSpellings and self.grp._redundantSpellings is not None else ()
@@ -890,7 +905,8 @@ class Override(LineBase):
             self.words = words
 
     def print(self, out = None):
-        self.si.print(out);
+        for si in self.si:
+            si.print(out);
         out.write(f': +')
         self._lemmaPart(out, self.lemma)
         if self.words:
@@ -1214,23 +1230,30 @@ def _importFromDB(conn, filterTable, filterQuery):
         if r['word_id'] == lemma_id:
             le.lemma = r['word']
 
+    scowlInfoByGroupPos = defaultdict(lambda: defaultdict(list))
     linesByGroup = defaultdict(lambda: defaultdict(set))
+
     for r in cur.execute("select group_id, level, category, region, pos, group_concat(tag) as tags "
                          "from scowl_data "
                          f"where {groupIdFilter} "
                          "group by group_id, level, category, region, pos"):
-        lines = linesByGroup[r['group_id']]
         level = r['level']
         category = r['category']
         region = r['region']
         tags = sorted(r['tags'].split(','))
         key = (level, category, region, *tags)
-        lines[key].add(r['pos'])
+        linesByGroup[r['group_id']][key,].add(r['pos'])
+        #scowlInfoByGroupPos[r['group_id']][r['pos']].append(key)
+
+    #for group_id, byPos in scowlInfoByGroupPos.items():
+    #    for pos, key in byPos.items():
+    #        key.sort()
+    #        linesByGroup[group_id][tuple(key)].add(pos)
 
     for group_id, lines in linesByGroup.items():
         grp = groups[group_id]
-        for (level, category, region, *tags), poses in lines.items():
-            grp.lines.append(Line(grp, ScowlInfo(level, category, region, tags), poses))
+        for si, poses in lines.items():
+            grp.lines.append(Line(grp, [ScowlInfo(level, category, region, tags) for (level, category, region, *tags) in si], poses))
 
     overrideByGroup = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
     for r in cur.execute("select group_id, level, category, region, lemma, word, group_concat(tag) as tags "
@@ -1249,7 +1272,7 @@ def _importFromDB(conn, filterTable, filterQuery):
         grp = groups[group_id]
         for (level, category, region, *tags), ov in override.items():
             for lemma, words in ov.items():
-                grp.override[lemma] = Override(grp, ScowlInfo(level, category, region, tags), lemma, sorted(w for w in words if w != lemma))
+                grp.override[lemma] = Override(grp, [ScowlInfo(level, category, region, tags)], lemma, sorted(w for w in words if w != lemma))
 
     clusterComments = {}
     for r in cur.execute(f"select * from cluster_comments where {headwordFilter}"):
@@ -1337,19 +1360,21 @@ def _exportGroup(conn, group, group_id, word_id):
 
         ov = group.override.get(le.lemma, None)
         if ov:
-            for tag in ov.si.tags:
-                conn.execute("insert into scowl_override (level, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
-                             (ov.si.level, ov.si.category, ov.si.region, tag, lemma_id))
-                for word in ov.words:
-                    conn.execute("insert into scowl_override "
-                                 "select ?, ?, ?, ?, word_id from words where lemma_id = ? and word = ?",
-                                 (ov.si.level, ov.si.category, ov.si.region, tag, lemma_id, word))
+            for si in ov.si:
+                for tag in si.tags:
+                    conn.execute("insert into scowl_override (level, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
+                                 (si.level, si.category, si.region, tag, lemma_id))
+                    for word in ov.words:
+                        conn.execute("insert into scowl_override "
+                                     "select ?, ?, ?, ?, word_id from words where lemma_id = ? and word = ?",
+                                     (si.level, si.category, si.region, tag, lemma_id, word))
 
     for l in group.lines:
         for pos in l.poses:
-            for tag in l.si.tags:
-                conn.execute("insert into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
-                             (l.si.level, l.si.category, l.si.region, tag, group_id, pos))
+            for si in l.si:
+                for tag in si.tags:
+                    conn.execute("insert into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
+                                 (si.level, si.category, si.region, tag, group_id, pos))
 
     if group.commentLines:
         conn.execute("insert into group_comments (group_id, comment) values (?, ?)",
@@ -1406,7 +1431,7 @@ def exportAsText(clusters, conn = None, out = None, *, trimSpellings = True, sho
                 group.override[lemma].print(out)
 
             if not group._lemmaIncluded:
-                l = Line(group, ScowlInfo(99))
+                l = Line(group, [ScowlInfo(99)])
                 l.poses.add(basePosInfo[group.base_pos].lemma_pos)
                 l.print(out, False, trimSpellings)
 
@@ -1470,7 +1495,7 @@ def _mergeText(f, groups, clusterComments):
             if lines:
                 grp.lines = []
                 for (level, category, region, tags), poses in lines.items():
-                    l = Line(grp, ScowlInfo(level, category, region, tags), poses)
+                    l = Line(grp, [ScowlInfo(level, category, region, tags)], poses)
                     grp.lines.append(l)
                 grp.entries = list(entriesBySpellings.values())
                 have = addMissingSpellings(grp.entries)
@@ -1514,8 +1539,9 @@ def _mergeText(f, groups, clusterComments):
 
         if isinstance(l, Override):
             override.append(l)
-        elif l.si.level is None or l.si.level < 99:
-            key = (l.si.level, l.si.category, l.si.region, frozenset(l.si.tags))
+        # fixme: generalize and rework to index by pos not scowl info
+        elif l.si[0].level is None or l.si[0].level < 99:
+            key = (l.si[0].level, l.si[0].category, l.si[0].region, frozenset(l.si[0].tags))
             lines[key].update(l.poses)
 
 def importText(f = None):
@@ -1568,9 +1594,11 @@ def mergeEntries(conn, f = None, *, tag = None, onConflict = 'merge', preview = 
         for grp in cluster.groups:
             if tag is not None:
                 for l in grp.lines:
-                    l.si.tags.add(tag)
+                    for si in l.si:
+                        si.tags.add(tag)
                 for o in grp.override.values():
-                    o.si.tags.add(tag)
+                    for si in o.si:
+                        si.tags.add(tag)
             (next_group_id, next_word_id) = _mergeGroup(conn, grp, next_group_id, next_word_id,
                                                         onConflict = onConflict)
             conn.execute("insert into merged_groups values (?)", (grp._group_id,))
@@ -1850,7 +1878,7 @@ def adjustEntries(conn, f = None, *,
             if m is None:
                 raise ValueError(f"bad line: {line}")
 
-            li.si = ScowlInfo.parse(m)
+            li.si = ScowlInfo.parse(ifNone(m['tags'],''))
             li.lemma = WordEntry()
             (lemma_rank, li.lemma.word, li.lemma.entry_rank) = parseLemmaPart(m['lemma'].strip())
 
@@ -1927,9 +1955,9 @@ def adjustEntries(conn, f = None, *,
                         
                     conn.executemany("insert into new_lemma_variant_info (main_group_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
                                      ((sg.id, li.lemma_id, sp, vl) for sp, vl in li.spellings.items()))
-                    if li.si:
+                    for si in li.si:
                         conn.executemany("insert or ignore into new_scowl_data (main_group_id, level, category, region, tag) values (?, ?, ?, ?, ?)",
-                                         ((sg.id, li.si.level, li.si.category, li.si.region, tag) for tag in li.si.tags))
+                                         ((sg.id, si.level, si.category, si.region, tag) for tag in si.tags))
                     if li.comments:
                         conn.executemany("insert into new_lemma_comments (lemma_id, order_num, comment) values (?, ?, ?)",
                                          ((li.lemma_id, i, c) for (i, c) in enumerate(li.comments)));

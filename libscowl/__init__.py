@@ -1761,6 +1761,7 @@ class GroupInfo(SlotsDataClass):
         self.spellings = set()
         self.errors = []
 
+DEBUG_SQL = False
 def adjustEntries(conn, f = None, *,
                   preview = False, ignoreErrors = False,
                   groupComment = None, replaceComments = True):
@@ -1788,7 +1789,7 @@ def adjustEntries(conn, f = None, *,
         if li.action == 'add':
             assert li.pos == new_pos
             if len(ids) > 0:
-                raise ValueError(f"lemma already exists, cannot add: {li.line}")
+                raise ValueError(f"cannot add line: lemma already exists")
             if new_pos not in gi.subGroups:
                 gi.subGroups[new_pos] = SubGroupInfo(None)
         else:
@@ -1809,16 +1810,16 @@ def adjustEntries(conn, f = None, *,
                     li_v.pos = 'av'
                     registerLine(li_v, None, outer_pos)
                     return
-                raise ValueError(f'no match found for: {li.line}')
+                raise ValueError(f'could not find match')
             elif len(ids) > 1:
-                raise ValueError(f'multiple matches found for: {li.line}')
+                raise ValueError(f'multiple matches found')
             li.group_id = ids[0][0]
             li.lemma_id = ids[0][1]
 
             if not replaceComments:
                 res = [*conn.execute("select * from group_comments where group_id = ?", (li.group_id,))]
                 if res:
-                    raise ValueError(f'conflicting group comments for line: {li.line}')
+                    raise ValueError(f'conflicting group comments')
 
             if new_pos not in gi.subGroups:
                 gi.subGroups[new_pos] = SubGroupInfo(li.group_id)
@@ -1836,9 +1837,9 @@ def adjustEntries(conn, f = None, *,
 
     def finalizeGroup():
         nonlocal gi, errors
-        for err in gi.errors:
+        for line, err in gi.errors:
             errors = True
-            _warn(f"skipping group: {err}")
+            _warn(f'{line}: {err}: skipping group')
         nopos_sg = gi.subGroups.pop('', None)
         if nopos_sg and gi.subGroups:
             for sg in gi.subGroups.values():
@@ -1861,6 +1862,9 @@ def adjustEntries(conn, f = None, *,
             finalizeGroup()
             continue
 
+        if line.startswith('# '):
+            continue
+
         if line.startswith('##'):
             gi.commentLines.append(line)
             continue
@@ -1871,6 +1875,9 @@ def adjustEntries(conn, f = None, *,
             line = line[2:]
         elif line.startswith('- '):
             li.action = 'remove'
+            line = line[2:]
+        elif line.startswith('= '):
+            li.action = 'replace'
             line = line[2:]
             
         try:
@@ -1913,15 +1920,18 @@ def adjustEntries(conn, f = None, *,
             registerLine(li, new_base_pos)
             
         except ValueError as err:
-            gi.errors.append(err)
+            gi.errors.append((line, err))
 
     finalizeGroup()
 
     if errors and not ignoreErrors:
         raise ValueError('aborting due to previous errors')
 
-    #conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
-    conn.executescript((_dir / 'adjust_init.sql').read_text())
+    if DEBUG_SQL:
+        conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
+        conn.executescript((_dir / 'adjust_init.sql').read_text().replace("temp.", "main."))
+    else:
+        conn.executescript((_dir / 'adjust_init.sql').read_text())
 
     next_word_id = conn.execute("select max(word_id) from words").fetchone()[0] + 1
 
@@ -1934,12 +1944,18 @@ def adjustEntries(conn, f = None, *,
         for base_pos, sg in gi.subGroups.items():
             for li in sg.lines:
                 try:
+                    group_id = getattr(li, 'group_id', sg.id)
+                    conn.execute("insert or ignore into to_merge (main_group_id, other_group_id) values (?, ?)", (sg.id, group_id))
+                    
                     if li.action == 'remove':
                         conn.execute("insert into to_remove select word_id from words where lemma_id = ?", (li.lemma_id,))
                         continue
 
+                    if li.action == 'replace':
+                        conn.execute("insert into to_remove select word_id from words where lemma_id = ?", (li.lemma_id,))
+                
                     _addMissingSpellings(li.spellings, gi.spellings)
-                    if li.action == 'add':
+                    if li.action in ('add', 'replace'):
                         li.lemma_id = next_word_id
                         # fixme: need a check elsewhere that the line provided a lemma, otherwise this will fail
                         for pos, wes in li.words.items():
@@ -1949,12 +1965,12 @@ def adjustEntries(conn, f = None, *,
                                 # fixme: need to also handle derived variant info
                                 next_word_id += 1
                     else:
-                        conn.execute("insert or ignore into to_merge (main_group_id, other_group_id) values (?, ?)", (sg.id, li.group_id))
                         if replaceComments:
                             conn.execute("insert or ignore into new_group_comments values (?, null)", (li.group_id,))
-                        
-                    conn.executemany("insert into new_lemma_variant_info (main_group_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
-                                     ((sg.id, li.lemma_id, sp, vl) for sp, vl in li.spellings.items()))
+
+                    if li.spellings:
+                        conn.executemany("insert into new_lemma_variant_info (main_group_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
+                                         ((sg.id, li.lemma_id, sp, vl) for sp, vl in li.spellings.items()))
                     for si in li.si:
                         conn.executemany("insert or ignore into new_scowl_data (main_group_id, level, category, region, tag) values (?, ?, ?, ?, ?)",
                                          ((sg.id, si.level, si.category, si.region, tag) for tag in si.tags))
@@ -1965,7 +1981,7 @@ def adjustEntries(conn, f = None, *,
                         conn.execute("insert or ignore into new_lemma_comments (lemma_id, order_num) values (?, -1)", (li.lemma_id,))
                 except Exception as err:
                     raise ValueError(f"failed to add line: {li.line}")
-            # fixme: look into avoid duplicates
+            # fixme: look into avoiding duplicates
             conn.execute("insert or replace into new_group_info (main_group_id, base_pos, defn_note, pos_class, usage_note, lemma_rank) values (?, ?, ?, ?, ?, ?)",
                          (sg.id, base_pos, gi.defn_note, gi.pos_class, gi.usage_note,
                           None if gi.lemma_rank is None else '' if gi.lemma_rank == '_' else gi.lemma_rank))
@@ -1991,11 +2007,11 @@ def adjustEntries(conn, f = None, *,
         clusters = importFromDB(conn, filterQuery = 'select main_group_id from to_merge')
         exportAsText(clusters, conn, sys.stdout, showExtraInfo = False)
         conn.rollback()
-        conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
-        conn.commit()
     else:
         conn.execute("delete from cluster_map")
         conn.commit()
+
+    if not DEBUG_SQL:
         conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
         conn.commit()
 

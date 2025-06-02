@@ -1,9 +1,9 @@
 begin;
 
--- note: use "create table temp.<name>"
---   rather than "create temp table <name>"
---   to make it easy to change everything to main.<name> when required for
---   debugging
+-- note: tables and views must be created with "temp.<name>"
+--   (and not create ... temp <name>"
+--   as the python code will replace "temp." with "main." when SQL_DEBUG is
+--   set to "True"
 
 create table temp.to_merge (
   main_group_id integer,

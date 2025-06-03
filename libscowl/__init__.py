@@ -3,6 +3,7 @@ from itertools import groupby, chain
 from types import SimpleNamespace
 from typing import NamedTuple,Any
 from pathlib import Path
+from operator import methodcaller
 import sys
 import os
 import sqlite3
@@ -397,7 +398,7 @@ class Cluster:
     __slots__ = ('groups', 'comments')
 
     def finalize(self):
-        self.groups.sort(key = Group.sortKey)
+        self.groups.sort(key = methodcaller('sortKey'))
 
 class Data:
     __slots__ = ('clusters', 'notes', 'fixme')
@@ -458,6 +459,10 @@ class Group:
         '_redundantSpellings',
         '_lemmaIncluded',
     )
+
+    @property
+    def lemmas(self):
+        return (le.lemma for le in self.entries)
 
     def merge(self, attr, v, allowDefault = True):
         v = ifNone(v, Default)
@@ -1037,23 +1042,32 @@ class WordEntry(SlotsDataClass):
 
 ########################################################################
 
-def _createClusters(groups, clusterComments, conn = None):
-
+def _finalizeGroups(groups, conn = None):
     if conn:
         expected_spellings = tuple(sp for sp, in conn.execute("select spelling from spellings where spelling != '_' order by order_num"))
     else:
         expected_spellings = _spellings_ab
 
+    filteredGroups = []
+    for grp in groups:
+        if not grp.lines:
+            continue
+        grp.finalize(expected_spellings)
+        for le in grp.entries:
+            le.finalize()
+        filteredGroups.append(grp)
+
+    return filteredGroups
+
+
+def _createClusters(groups, clusterComments):
     groupsByHeadword = defaultdict(list)
     clusterMapping = {}
     for grp in groups:
-        if not grp.lines: continue
-        grp.finalize(expected_spellings)
         groupsByHeadword[clusterKey(grp.headword)].append(grp)
         members = set()
-        for le in grp.entries:
-            le.finalize()
-            w = clusterKey(le.lemma)
+        for lemma in grp.lemmas:
+            w = clusterKey(lemma)
             try:
                 members |= clusterMapping[w]
             except KeyError:
@@ -1136,7 +1150,8 @@ def openDB(dbfile, create = False, copyFrom = None, transCopy = False):
 
 def importFromDB(conn, *, filterTable = None, filterQuery = None):
     groups, clusterComments = _importFromDB(conn, filterTable, filterQuery)
-    return _createClusters(groups, clusterComments, conn)
+    groups = _finalizeGroups(groups, conn)
+    return _createClusters(groups, clusterComments)
 
 def _importFromDB(conn, filterTable, filterQuery):
     words = {}
@@ -1546,6 +1561,7 @@ def importText(f = None):
     groups = []
     clusterComments = {}
     _mergeText(sys.stdin if f is None else f, groups, clusterComments)
+    groups = _finalizeGroups(groups)
     return _createClusters(groups, clusterComments)
 
 BasicInfo = namedtuple('BasicInfo', 'base_pos pos_class word is_lemma')
@@ -1579,7 +1595,10 @@ def roughParse(f = None):
                 yield BasicInfo(base_pos, pos_class, we.word, False)
 
 def mergeEntries(conn, f = None, *, tag = None, onConflict = 'merge', preview = False):
-    clusters = importText(f)
+    groups = []
+    clusterComments = {}
+    _mergeText(sys.stdin if f is None else f, groups, clusterComments)
+    groups = _finalizeGroups(groups)
 
     conn.execute("begin")
 
@@ -1588,22 +1607,21 @@ def mergeEntries(conn, f = None, *, tag = None, onConflict = 'merge', preview = 
 
     conn.execute("create temp table merged_groups (group_id integer primary key)")
 
-    for cluster in clusters:
-        for grp in cluster.groups:
-            if tag is not None:
-                for l in grp.lines:
-                    for si in l.si:
-                        si.tags.add(tag)
-                for o in grp.override.values():
-                    for si in o.si:
-                        si.tags.add(tag)
-            (next_group_id, next_word_id) = _mergeGroup(conn, grp, next_group_id, next_word_id,
-                                                        onConflict = onConflict)
-            conn.execute("insert into merged_groups values (?)", (grp._group_id,))
+    for grp in groups:
+        if tag is not None:
+            for l in grp.lines:
+                for si in l.si:
+                    si.tags.add(tag)
+            for o in grp.override.values():
+                for si in o.si:
+                    si.tags.add(tag)
+        (next_group_id, next_word_id) = _mergeGroup(conn, grp, next_group_id, next_word_id,
+                                                    onConflict = onConflict)
+        conn.execute("insert into merged_groups values (?)", (grp._group_id,))
 
-        for comment in cluster.comments:
-            # fixme
-            pass
+    for comment in clusterComments:
+        # fixme
+        pass
 
     if preview:
         clusters = importFromDB(conn, filterTable = 'merged_groups')

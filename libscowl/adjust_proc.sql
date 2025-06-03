@@ -7,6 +7,7 @@ select distinct group_id from to_remove join words using (word_id);
 
 delete from words where word_id in (select * from to_remove);
 insert into words select * from new_words;
+insert into derived_variant_info select * from new_derived_variant_info;
 
 delete from groups
   where group_id in (

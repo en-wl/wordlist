@@ -858,9 +858,7 @@ class Line(LineBase):
 
     @staticmethod
     def procWords(lemmaSpellings, lemma, base_pos, m, wordsByPos):
-        if lemmaSpellings is None:
-            lemmaSpellingsKeys = None
-        elif lemmaSpellings:
+        if lemmaSpellings:
             lemmaSpellingsKeys = lemmaSpellings.keys();
         else:
             lemmaSpellingsKeys = '_',
@@ -1763,7 +1761,7 @@ class GroupInfo(SlotsDataClass):
 
 DEBUG_SQL = False
 def adjustEntries(conn, f = None, *,
-                  preview = False, ignoreErrors = False,
+                  preview = False, strict = True, ignoreErrors = False,
                   groupComment = None, replaceComments = True):
     if f is None:
         f = sys.stdin
@@ -1809,6 +1807,10 @@ def adjustEntries(conn, f = None, *,
                     li_v = copy.copy(li)
                     li_v.pos = 'av'
                     registerLine(li_v, None, outer_pos)
+                    return
+                elif not li.pos and gi.pos:
+                    li.pos = gi.pos
+                    registerLine(li, new_pos)
                     return
                 raise ValueError(f'could not find match')
             elif len(ids) > 1:
@@ -1942,8 +1944,13 @@ def adjustEntries(conn, f = None, *,
         elif groupComment:
             comment = groupComment
         for base_pos, sg in gi.subGroups.items():
+            conn.execute("savepoint sp")
+            conn.execute("create temp table lemmas_accounted_for (lemma_id)")
             for li in sg.lines:
                 try:
+                    if getattr(li, 'lemma_id', 0):
+                        conn.execute("insert into lemmas_accounted_for values (?)", (li.lemma_id,))
+
                     group_id = getattr(li, 'group_id', sg.id)
                     conn.execute("insert or ignore into to_merge (main_group_id, other_group_id) values (?, ?)", (sg.id, group_id))
                     
@@ -1962,9 +1969,12 @@ def adjustEntries(conn, f = None, *,
                             for we in wes:
                                 conn.execute("insert into new_words (word_id, main_group_id, lemma_id, pos, word) values (?, ?, ?, ?, ?)",
                                              (next_word_id, sg.id, li.lemma_id, pos, we.word))
-                                # fixme: need to also handle derived variant info
+                                if we.spellings:
+                                    conn.executemany("insert into new_derived_variant_info (word_id, spelling, variant_level) values (?, ?, ?)",
+                                                     ((next_word_id, sp, vl) for sp, vl in we.spellings.items()))
                                 next_word_id += 1
                     else:
+                        # fixme: be more intelligent about this
                         if replaceComments:
                             conn.execute("insert or ignore into new_group_comments values (?, null)", (li.group_id,))
 
@@ -1987,6 +1997,22 @@ def adjustEntries(conn, f = None, *,
                           None if gi.lemma_rank is None else '' if gi.lemma_rank == '_' else gi.lemma_rank))
             if comment:
                 conn.execute("insert or replace into new_group_comments values (?, ?)", (sg.id, str(comment)))
+
+            unaccountedFor = [
+                *conn.execute("select word from words join to_merge on group_id = other_group_id "
+                              "where main_group_id = ? and word_id = lemma_id and word_id not in (select * from lemmas_accounted_for)",
+                              (sg.id,))] if strict else None
+            if unaccountedFor:
+                _warn(f"unaccounted lemmas, skipping group: {', '.join(word for word, in unaccountedFor)}")
+                errors = True
+                conn.execute("rollback to sp")
+            else:
+                conn.execute("drop table lemmas_accounted_for")
+
+            conn.execute("release savepoint sp")
+
+    if errors and not ignoreErrors:
+        raise ValueError('aborting due to previous errors')
 
     conn.execute("create temp table filtered as "
                  "select to_merge.* "

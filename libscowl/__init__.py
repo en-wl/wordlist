@@ -146,6 +146,9 @@ class LemmaPart(NamedTuple):
     entry_rank: Any
 
 def parseLemmaPart(w):
+    w = w.strip()
+    if w == '-':
+        return LemmaPart(None, None, None)
     lemma_rank = Default
     if w[0] in '_@!-':
         lemma_rank = _fixRank(w[0])
@@ -465,11 +468,10 @@ class Group:
         return (le.lemma for le in self.entries)
 
     def merge(self, attr, v, allowDefault = True):
-        v = ifNone(v, Default)
         v0 = getattr(self, attr, None)
         if v0 is None or (allowDefault and v0 is Default):
             setattr(self, attr, v)
-        elif v != v0:
+        elif v is not None and v != v0:
             raise ValueError(f'conflicting values for {attr} within group')
 
     def adjDefault(self, attr, v):
@@ -706,32 +708,30 @@ class LineBase(SlotsDataClass):
         else:
             l = Override(g, si)
         lemmaStr = m['lemma'].strip()
-        if lemmaStr == '-':
+        lemma = WordEntry()
+        (lemma_rank, lemma.word, lemma.entry_rank) = parseLemmaPart(m['lemma'])
+        if lemma.word is None:
             lemma = None
-        else:
-            lemma = WordEntry()
-            (lemma_rank, lemma.word, lemma.entry_rank) = parseLemmaPart(lemmaStr)
-            g.merge('lemma_rank', lemma_rank, allowDefault = False)
+        g.merge('lemma_rank', lemma_rank, allowDefault = False)
         g.merge('base_pos', ifNone(m['base_pos'],''))
-        g.merge('pos_class', m['pos_class'])
-        g.merge('defn_note', m['defn_note'])
-        g.merge('usage_note', m['usage_note'])
+        g.merge('pos_class', ifNone(m['pos_class'], Default))
+        g.merge('defn_note', ifNone(m['defn_note'], Default))
+        g.merge('usage_note', ifNone(m['usage_note'], Default))
         l.finishParse(g, lemma, m, entriesBySpellings)
         return l
 
+_lineRegex = re.compile(r'(?: (?P<tags>[0-9]+ [^:#]*):\s* |)'
+                        r'(?: (?P<override>\+)\s*:\s* | (?P<spellings>[A-Za-z_][^:<>{}#]*) (\{(?P<num> [0-9])\}\s*|):\s* |)'
+                        r'(?P<lemma>[^:<>{}#()]+)'
+                        r'(?: <(?P<base_pos>[^/]*) (?:/(?P<pos_class>.*)|)>\s* |)'
+                        r'(?: {(?P<defn_note>.+)}\s* |)'
+                        r'(?: \((?P<usage_note>[^:#|]+)\)\s* |)'
+                        r'(?: : \s* (?P<words>[^#]+) |)'
+                        r'(?: \# (?P<comments>.*) |)',
+                        re.VERBOSE)
 def _matchLine(line):
     line = line.strip()
-    m = re.fullmatch(r'(?: (?P<tags>[0-9]+ [^:#]*):\s* |)'
-                     r'(?: (?P<override>\+)\s*:\s* | (?P<spellings>[^:<>{}#]+) (\{(?P<num> [0-9])\}\s*|):\s* |)'
-                     r'(?P<lemma>[^:<>{}#()]+)'
-                     r'(?: <(?P<base_pos>[^/]*) (?:/(?P<pos_class>.*)|)>\s* |)'
-                     r'(?: {(?P<defn_note>.+)}\s* |)'
-                     r'(?: \((?P<usage_note>[^:#|]+)\)\s* |)'
-                     r'(?: : \s* (?P<words>[^#]+) |)'
-                     r'(?: \# (?P<comments>.*) |)'
-                     ,
-                     line,
-                     re.VERBOSE)
+    m = _lineRegex.fullmatch(line)
     return m
 
 def _splitWords(wordsStr, lemmaSpellingsKeys = ('_',)):
@@ -1059,8 +1059,9 @@ def _finalizeGroups(groups, conn = None):
 
     return filteredGroups
 
-
-def _createClusters(groups, clusterComments):
+def _createClusters(groups, clusterComments = None):
+    if clusterComments is None:
+        clusterComments = {}
     groupsByHeadword = defaultdict(list)
     clusterMapping = {}
     for grp in groups:
@@ -1408,7 +1409,7 @@ class StreamWrapper:
         self.lastLine = line
 
     def finish(self):
-        if self.lastLine != '\n':
+        if self.lastLine is not None and self.lastLine != '\n':
             self.out.write(self.lastLine)
 
 def exportAsText(clusters, conn = None, out = None, *, trimSpellings = True, showClusters = False, showExtraInfo = True):
@@ -1578,14 +1579,13 @@ def roughParse(f = None):
         m = _matchLine(line)
         if m is None:
             raise ValueError(f"bad line: {line}")
-        lemma = m['lemma'].strip()
-        if lemma != '-':
-            (lemma_rank, lemma, entry_rank) = parseLemmaPart(lemma)
-            base_pos = m['base_pos']
-            pos_class = m['pos_class']
-            yield BasicInfo(base_pos, pos_class, lemma, True)
-
         try:
+            (lemma_rank, lemma, entry_rank) = parseLemmaPart(m['lemma'])
+            if lemma:
+                base_pos = m['base_pos']
+                pos_class = m['pos_class']
+                yield BasicInfo(base_pos, pos_class, lemma, True)
+
             words = _splitWords(m['words'])
         except:
             raise ValueError(f"bad line: {line}")
@@ -2042,9 +2042,6 @@ def adjustEntries(conn, f = None, *,
         raise ValueError("duplicates found")
     conn.execute("drop table filtered")
 
-    #conn.commit()
-    #exit(1)
-
     conn.executescript((_dir / 'adjust_proc.sql').read_text())
 
     if preview:
@@ -2058,6 +2055,119 @@ def adjustEntries(conn, f = None, *,
     if not DEBUG_SQL:
         conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
         conn.commit()
+
+class RoughGroupInfo(SlotsDataClass):
+    __slots__ = ('headword', 'base_pos', 'defn_note', 'lemmas', 'lines')
+
+    def __init__(self):
+        self.headword = None
+        self.base_pos = None
+        self.defn_note = None
+        self.lemmas = set()
+        self.lines = []
+
+    def parseLine(self, line):
+        m = _matchLine(line)
+        if m is None:
+            raise ValueError(f"bad line: {line}")
+
+        try:
+            lemma = parseLemmaPart(m['lemma'].strip()).lemma
+        except ValueError:
+            raise ValueError(f"bad line: {line}")
+        if lemma:
+            self.lemmas.add(lemma)
+
+        if self.headword is None:
+            self.headword = lemma
+
+        if not self.base_pos:
+            base_pos = ifNone(m['base_pos'], '')
+            (base_pos, sep, new_base_pos) = base_pos.partition('→')
+            if sep:
+                self.base_pos = new_base_pos.strip()
+            else:
+                self.base_pos = base_pos.strip()
+
+        if not self.defn_note:
+            defn_note = ifNone(m['defn_note'], '')
+            (defn_note, sep, new_defn_note) = defn_note.partition('→')
+            if sep:
+                self.defn_note = new_defn_note.strip()
+            else:
+                self.defn_note = defn_note.strip()
+
+
+    def sortKey(self):
+        return (wordOrderKey(self.headword), self.defn_note, basePosInfo[self.base_pos].order_num)
+
+def sortFile(*, infh = None, inFiles = None, outfh = None, fileFormat, indent = True):
+
+    assert fileFormat in ('adjust', 'merge')
+
+    if outfh is None:
+        outfh = sys.stdout
+    out = StreamWrapper(outfh)
+
+    groups = []
+    commentsOnly = []
+    gi = RoughGroupInfo()
+
+    def readFile(fh):
+        for origLine in fh:
+            line = origLine.strip()
+            if line == '':
+                finishGroup()
+                continue
+
+            gi.lines.append(origLine)
+
+            if line.startswith('#'):
+                continue
+
+            if fileFormat == 'adjust':
+                if line.startswith('+ ') or line.startswith('- ') or line.startswith('= '):
+                    line = line[2:]
+
+            gi.parseLine(line)
+
+        finishGroup()
+
+    def finishGroup():
+        nonlocal gi
+        if gi.headword:
+            groups.append(gi)
+        elif gi.lines:
+            commentsOnly.append(gi)
+        gi = RoughGroupInfo()
+
+    if inFiles:
+        for fn in inFiles:
+            with open(fn) as fh:
+                readFile(fh)
+    else:
+        readFile(sys.stdin if infh is None else infh)
+
+
+    clusters = _createClusters(groups)
+
+    for cls in clusters:
+        for grp in cls.groups:
+            for line in grp.lines:
+                if indent and fileFormat == 'adjust':
+                    line = line.strip()
+                    sp = '' if line[0] in ('+', '-', '=') else '  '
+                    out.write(f"{sp}{line}\n")
+                else:
+                    out.write(line)
+            out.write("\n")
+    for grp in commentsOnly:
+        for line in grp.lines:
+            out.write(line)
+        out.write("\n")
+
+    out.finish()
+
 
 def combinePOS(conn):
     conn.executescript((_dir / 'combine_pos.sql').read_text())

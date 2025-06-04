@@ -1,6 +1,8 @@
 import os
 import sys
 import argparse
+from pathlib import Path
+from tempfile import NamedTemporaryFile
 
 import libscowl
 from libscowl import variantFromSymbol, SPELLINGS, REGIONS, POS_CATEGORIES, Include, Exclude
@@ -45,6 +47,26 @@ def merge(args):
     else:
         libscowl.mergeEntries(conn, sys.stdin, preview = False, **kwargs)
         conn.executescript((libscowl._dir / 'post.sql').read_text())
+
+def sortFile(args):
+    if args.replace:
+        destFile = Path(args.files[0]).resolve(strict=True)
+        if not destFile.is_file():
+            raise OSError(None, 'Not a normal file', str(destFile))
+        fp = NamedTemporaryFile(mode='w', delete = False, prefix=".tmp", dir=destFile.parent)
+        try:
+            libscowl.sortFile(inFiles = args.files, outfh = fp, fileFormat=args.fileFormat, indent=args.indent)
+            fp.close()
+            os.replace(fp.name, destFile)
+        except:
+            fp.close()
+            try:
+                os.remove(fp.name)
+            except FileNotFoundError:
+                pass
+            raise
+    else:
+        libscowl.sortFile(inFiles = args.files if args.files else None, fileFormat=args.fileFormat, indent=args.indent)
 
 def combinePOS(args):
     conn = libscowl.openDB(args.db)
@@ -172,6 +194,12 @@ p.add_argument('--on-conflict', default = 'error', dest='onConflict', choices=['
 p.add_argument('--tag', dest='tag')
 p.add_argument('db', nargs='?', default='scowl.db')
 
+p = addParser('sort')
+p.set_defaults(func=sortFile)
+p.add_argument('--indent', action='store_true', default=False, dest='indent')
+p.add_argument('--replace', action='store_true', default=False, dest='replace')
+p.add_argument('fileFormat', metavar='FORMAT', choices=['adjust','merge'])
+p.add_argument('files', metavar='FILE', nargs='*', default=[])
 
 p = subparsers.add_parser('combine-pos',
                           allow_abbrev=False,

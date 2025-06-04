@@ -1754,6 +1754,22 @@ class LineInfo(SlotsDataClass):
         self.line = line
         self.words = {}
         self.action = 'adjust'
+    def copy(self, base_pos):
+        other = LineInfo(self.line)
+        other.action = self.action
+        other.si = self.si
+        other.lemma = self.lemma
+        other.pos = base_pos
+        other.defn_note = self.defn_note
+        other.spellings = self.spellings
+        for pos,we in self.words.items():
+            try:
+                new_pos = fixPos[(base_pos,pos)]
+                other.words[new_pos] = we
+            except KeyError:
+                pass
+        other.comments = self.comments
+        return other
 
 class SubGroupInfo(SlotsDataClass):
     __slots__ = ('id', 'lines')
@@ -1791,16 +1807,32 @@ def adjustEntries(conn, f = None, *,
     gi = GroupInfo()
 
     def registerLine(li, new_pos, outer_pos = None):
-        ids = [*conn.execute("select distinct group_id, lemma_id from lemmas "
-                             "where lemma = ? and base_pos = ? and defn_note = ?",
-                             (li.lemma.word, li.pos, li.defn_note))]
-
         assert li.action in ('add', 'remove', 'adjust', 'replace')
 
         if new_pos is None:
             new_pos = li.pos
         if outer_pos is None:
             outer_pos = new_pos
+
+        if li.pos == 'n_v':
+            registerLine(li.copy('n'), None, outer_pos)
+            registerLine(li.copy('v'), None, outer_pos)
+            return
+        if li.pos == 'aj_av':
+            registerLine(li.copy('aj'), None, outer_pos)
+            registerLine(li.copy('av'), None, outer_pos)
+            return
+
+        combined_pos = 'n_v' if li.pos in ('n', 'v') else 'aj_av' if li.pos in ('aj', 'av') else None
+        ids = [*conn.execute("select group_id from lemmas "
+                             "where lemma = ? and base_pos = ? and defn_note = ?",
+                             (li.lemma.word, combined_pos, li.defn_note))]
+        if ids:
+            raise ValueError(f"combined pos ({combined_pos}) found in database")
+
+        ids = [*conn.execute("select distinct group_id, lemma_id from lemmas "
+                             "where lemma = ? and base_pos = ? and defn_note = ?",
+                             (li.lemma.word, li.pos, li.defn_note))]
 
         if li.action == 'add':
             assert li.pos == new_pos
@@ -1810,23 +1842,7 @@ def adjustEntries(conn, f = None, *,
                 gi.subGroups[new_pos] = SubGroupInfo(None)
         else:
             if len(ids) == 0:
-                if li.pos == 'n_v':
-                    li_n = copy.copy(li)
-                    li_n.pos = 'n'
-                    registerLine(li_n, None, outer_pos)
-                    li_v = copy.copy(li)
-                    li_v.pos = 'v'
-                    registerLine(li_v, None, outer_pos)
-                    return
-                elif li.pos == 'aj_av':
-                    li_n = copy.copy(li)
-                    li_n.pos = 'aj'
-                    registerLine(li_n, None, outer_pos)
-                    li_v = copy.copy(li)
-                    li_v.pos = 'av'
-                    registerLine(li_v, None, outer_pos)
-                    return
-                elif not li.pos and gi.pos:
+                if not li.pos and gi.pos:
                     li.pos = gi.pos
                     registerLine(li, new_pos)
                     return

@@ -22,8 +22,8 @@ delete from scowl_data
       where (group_id, pos) not in (select group_id, pos from words));
 
 create table temp.split_info as
-      select row_number() over (order by main_group_id,lemma_pos,word) + (select max(word_id) from words) as new_word_lemma_id, 
-      w.lemma_id as lemma_id, main_group_id, lemma_pos as new_pos, word, other_group_id, w.pos 
+      select row_number() over (order by main_group_id,lemma_pos,word) + (select max(word_id) from words) as new_word_lemma_id,
+      w.lemma_id as lemma_id, main_group_id, lemma_pos as new_pos, word, other_group_id, w.pos
 from to_merge join words as w on other_group_id = w.group_id join groups on main_group_id = groups.group_id join base_poses using (base_pos)
 where pos = '?' and lemma_pos != '?';
 
@@ -54,8 +54,8 @@ delete from scowl_data
   where (level,category,region,tag,group_id,pos)
         in (select * from scowl_data_cleanup where group_id in (select main_group_id from new_scowl_data));
 
-update words set group_id = main_group_id 
-from to_merge 
+update words set group_id = main_group_id
+from to_merge
 where words.group_id = to_merge.other_group_id and to_merge.other_group_id != to_merge.main_group_id;
 
 delete from words where lemma_id in (select lemma_id from split_info);

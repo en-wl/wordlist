@@ -40,6 +40,8 @@ create table temp.new_lemma_comments (
 ) without rowid;
 
 create table temp.new_derived_variant_info (
+  lemma_id integer,
+  pos text,
   word_id integer,
   spelling text,
   variant_level smallint,
@@ -57,6 +59,8 @@ create table temp.new_group_info (
 
 create table temp.new_entry_info (
   word_id integer primary key,
+  main_group_id integer not null,
+  orig_group_id integer not null,
   entry_rank text
 );
 

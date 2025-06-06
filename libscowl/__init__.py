@@ -4,17 +4,19 @@ from types import SimpleNamespace
 from typing import NamedTuple,Any
 from pathlib import Path
 from operator import methodcaller
+from copy import copy, deepcopy
 import sys
 import os
 import sqlite3
 import json
 import re
-import copy
 
 # †
 
 from ._common import *
 from ._constdata import *
+
+DEBUG_SQL = strtobool(os.environ.get('SCOWL_DEBUG_SQL', 'False'))
 
 def _warn(msg):
     sys.stderr.write(f'warning: {msg}\n')
@@ -328,7 +330,7 @@ def posesFromList(base_pos, words):
     return poses
 
 _spellings_ab = ('A', 'B', 'Z', 'C', 'D')
-_spellings = ('_', 'A', 'B', 'Z', 'C', 'D')
+_spellings = ('*', '_', 'A', 'B', 'Z', 'C', 'D')
 
 class Spellings(dict):
 
@@ -856,22 +858,19 @@ class Line(LineBase):
                 le.lemma = lemma.word
             elif le.lemma != lemma.word:
                 raise ValueError(f"conflicting lemma entry for '{spellings}': {le.lemma} vs {lemma.word}")
-        addedPoses = Line.procWords(spellings, lemma, g.base_pos, m, le.words)
+        addedPoses = Line.procWords(spellings.keys() if spellings else '_',
+                                    lemma, g.base_pos, m['words'], le.words)
         self.poses.update(addedPoses)
         if m['comments']:
             le.comments.extend(Line.splitComments(m['comments']))
 
     @staticmethod
-    def procWords(lemmaSpellings, lemma, base_pos, m, wordsByPos):
-        if lemmaSpellings:
-            lemmaSpellingsKeys = lemmaSpellings.keys();
-        else:
-            lemmaSpellingsKeys = '_',
+    def procWords(lemmaSpellingsKeys, lemma, base_pos, wordsStr, wordsByPos):
         if lemma is None:
             words = [[]]
         else:
             words = [[lemma]]
-        words += _splitWords(m['words'], lemmaSpellingsKeys)
+        words += _splitWords(wordsStr, lemmaSpellingsKeys)
         poses = posesFromList(base_pos, words)
         if poses is None:
             raise ValueError(f"could not map list of words of length {len(words)} with base pos of '{base_pos}'")
@@ -1000,6 +999,7 @@ class WordEntry(SlotsDataClass):
         'word',           # str
         'entry_rank',     # str
         'duplicate',      # bool
+        '_word_id',
     )
     def __init__(self):
         self.spellings = None
@@ -1762,10 +1762,10 @@ class LineInfo(SlotsDataClass):
         other.pos = base_pos
         other.defn_note = self.defn_note
         other.spellings = self.spellings
-        for pos,we in self.words.items():
+        for pos,wes in self.words.items():
             try:
                 new_pos = fixPos[(base_pos,pos)]
-                other.words[new_pos] = we
+                other.words[new_pos] = [copy(we) for we in wes]
             except KeyError:
                 pass
         other.comments = self.comments
@@ -1793,7 +1793,6 @@ class GroupInfo(SlotsDataClass):
         self.spellings = set()
         self.errors = []
 
-DEBUG_SQL = False
 def adjustEntries(conn, f = None, *,
                   preview = False, strict = True, ignoreErrors = False,
                   groupComment = None, replaceComments = True):
@@ -1804,6 +1803,12 @@ def adjustEntries(conn, f = None, *,
     word_ids = {}
 
     errors = False
+    def warn(msg):
+        nonlocal errors
+        errors = True
+        _warn(msg)
+
+
     gi = GroupInfo()
 
     def registerLine(li, new_pos, outer_pos = None):
@@ -1843,8 +1848,7 @@ def adjustEntries(conn, f = None, *,
         else:
             if len(ids) == 0:
                 if not li.pos and gi.pos:
-                    li.pos = gi.pos
-                    registerLine(li, new_pos)
+                    registerLine(li.copy(gi.pos), new_pos)
                     return
                 raise ValueError(f'could not find match')
             elif len(ids) > 1:
@@ -1874,8 +1878,7 @@ def adjustEntries(conn, f = None, *,
     def finalizeGroup():
         nonlocal gi, errors
         for line, err in gi.errors:
-            errors = True
-            _warn(f'{line}: {err}: skipping group')
+            warn(f'{line}: {err}: skipping group')
         nopos_sg = gi.subGroups.pop('', None)
         if nopos_sg and gi.subGroups:
             for sg in gi.subGroups.values():
@@ -1919,11 +1922,13 @@ def adjustEntries(conn, f = None, *,
         try:
             m = _matchLine(line)
             if m is None:
-                raise ValueError(f"bad line: {line}")
+                raise ValueError("bad line")
 
             li.si = ScowlInfo.parse(ifNone(m['tags'],''))
             li.lemma = WordEntry()
             (lemma_rank, li.lemma.word, li.lemma.entry_rank) = parseLemmaPart(m['lemma'].strip())
+            if li.lemma.word is None:
+                raise ValueError("must provide lemma")
 
             base_pos = ifNone(m['base_pos'], '')
             (base_pos, sep, new_base_pos) = base_pos.partition('→')
@@ -1951,7 +1956,8 @@ def adjustEntries(conn, f = None, *,
             merge('usage_note', m['usage_note'])
             merge('lemma_rank', noneIf(lemma_rank, Default))
 
-            Line.procWords(li.spellings, li.lemma, base_pos, m, li.words)
+            Line.procWords(li.spellings.keys() if li.spellings else '*',
+                           li.lemma, base_pos, m['words'], li.words)
 
             registerLine(li, new_base_pos)
 
@@ -1980,68 +1986,88 @@ def adjustEntries(conn, f = None, *,
         for base_pos, sg in gi.subGroups.items():
             conn.execute("savepoint sp")
             conn.execute("create temp table lemmas_accounted_for (lemma_id)")
-            for li in sg.lines:
-                try:
-                    if getattr(li, 'lemma_id', 0):
-                        conn.execute("insert into lemmas_accounted_for values (?)", (li.lemma_id,))
+            try:
+                haveLemmaSpelling = False
+                for li in sg.lines:
+                    try:
+                        if getattr(li, 'lemma_id', 0):
+                            conn.execute("insert into lemmas_accounted_for values (?)", (li.lemma_id,))
 
-                    group_id = getattr(li, 'group_id', sg.id)
-                    conn.execute("insert or ignore into to_merge (main_group_id, other_group_id) values (?, ?)", (sg.id, group_id))
+                        group_id = getattr(li, 'group_id', sg.id)
+                        conn.execute("insert or ignore into to_merge (main_group_id, other_group_id) values (?, ?)", (sg.id, group_id))
 
-                    if li.action == 'remove':
-                        conn.execute("insert into to_remove select word_id from words where lemma_id = ?", (li.lemma_id,))
-                        continue
+                        if li.action == 'remove':
+                            conn.execute("insert into to_remove select word_id from words where lemma_id = ?", (li.lemma_id,))
+                            continue
 
-                    if li.action == 'replace':
-                        conn.execute("insert into to_remove select word_id from words where lemma_id = ?", (li.lemma_id,))
+                        if li.action == 'replace':
+                            conn.execute("insert into to_remove select word_id from words where lemma_id = ?", (li.lemma_id,))
 
-                    _addMissingSpellings(li.spellings, gi.spellings)
-                    if li.action in ('add', 'replace'):
-                        li.lemma_id = next_word_id
-                        # fixme: need a check elsewhere that the line provided a lemma, otherwise this will fail
+                        _addMissingSpellings(li.spellings, gi.spellings)
+
+                        if li.action == 'adjust':
+                            for pos, wes in li.words.items():
+                                for word_id, word, entry_rank in conn.execute("select word_id, word, entry_rank "
+                                                                              "from words where lemma_id = ? and pos = ?",
+                                                                              (li.lemma_id, pos)):
+                                    we = next((we for we in wes if we.word == word), None)
+                                    if we is None:
+                                        raise ValueError(f"unaccounted for words with pos '{pos}' within line", )
+                                    we._word_id = word_id
+                                    if we.entry_rank is not Default and we.entry_rank != entry_rank:
+                                        conn.execute("insert into new_entry_info values (?, ?, ?, ?)", (word_id, sg.id, group_id, we.entry_rank))
+
+                        if li.action in ('add', 'replace'):
+                            li.lemma_id = next_word_id
+
                         for pos, wes in li.words.items():
+                            addMissingSpellings(wes, gi.spellings)
                             for we in wes:
-                                conn.execute("insert into new_words (word_id, main_group_id, lemma_id, pos, word) values (?, ?, ?, ?, ?)",
-                                             (next_word_id, sg.id, li.lemma_id, pos, we.word))
+                                if not hasattr(we, '_word_id'):
+                                  conn.execute("insert into new_words (word_id, main_group_id, lemma_id, pos, word) values (?, ?, ?, ?, ?)",
+                                               (next_word_id, sg.id, li.lemma_id, pos, we.word))
+                                  we._word_id = next_word_id
+                                  next_word_id += 1
                                 if we.spellings:
-                                    conn.executemany("insert into new_derived_variant_info (word_id, spelling, variant_level) values (?, ?, ?)",
-                                                     ((next_word_id, sp, vl) for sp, vl in we.spellings.items()))
-                                next_word_id += 1
-                    else:
+                                    conn.executemany("insert into new_derived_variant_info values (?, ?, ?, ?, ?)",
+                                                     ((li.lemma_id, pos, we._word_id, sp, vl) for sp, vl in we.spellings.items()))
+
                         # fixme: be more intelligent about this
-                        if replaceComments:
+                        if getattr(li, 'group_id', 0) and replaceComments:
                             conn.execute("insert or ignore into new_group_comments values (?, null)", (li.group_id,))
 
-                    if li.spellings:
-                        conn.executemany("insert into new_lemma_variant_info (main_group_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
-                                         ((sg.id, li.lemma_id, sp, vl) for sp, vl in li.spellings.items()))
-                    for si in li.si:
-                        conn.executemany("insert or ignore into new_scowl_data (main_group_id, level, category, region, tag) values (?, ?, ?, ?, ?)",
-                                         ((sg.id, si.level, si.category, si.region, tag) for tag in si.tags))
-                    if li.comments:
-                        conn.executemany("insert into new_lemma_comments (lemma_id, order_num, comment) values (?, ?, ?)",
-                                         ((li.lemma_id, i, c) for (i, c) in enumerate(li.comments)));
-                    elif replaceComments:
-                        conn.execute("insert or ignore into new_lemma_comments (lemma_id, order_num) values (?, -1)", (li.lemma_id,))
-                except Exception as err:
-                    raise ValueError(f"failed to add line: {li.line}")
-            # fixme: look into avoiding duplicates
-            conn.execute("insert or replace into new_group_info (main_group_id, base_pos, defn_note, pos_class, usage_note, lemma_rank) values (?, ?, ?, ?, ?, ?)",
-                         (sg.id, base_pos, gi.defn_note, gi.pos_class, gi.usage_note,
-                          None if gi.lemma_rank is None else '' if gi.lemma_rank == '_' else gi.lemma_rank))
-            if comment:
-                conn.execute("insert or replace into new_group_comments values (?, ?)", (sg.id, str(comment)))
+                        if li.spellings:
+                            haveLemmaSpelling = True
+                            conn.executemany("insert into new_lemma_variant_info (main_group_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
+                                             ((sg.id, li.lemma_id, sp, vl) for sp, vl in li.spellings.items()))
+                        for si in li.si:
+                            conn.executemany("insert or ignore into new_scowl_data (main_group_id, level, category, region, tag) values (?, ?, ?, ?, ?)",
+                                             ((sg.id, si.level, si.category, si.region, tag) for tag in si.tags))
+                        if li.comments:
+                            conn.executemany("insert into new_lemma_comments (lemma_id, order_num, comment) values (?, ?, ?)",
+                                             ((li.lemma_id, i, c) for (i, c) in enumerate(li.comments)));
+                        elif replaceComments:
+                            conn.execute("insert or ignore into new_lemma_comments (lemma_id, order_num) values (?, -1)", (li.lemma_id,))
+                    except ValueError as err:
+                        raise ValueError(f"failed to add line: {li.line}: {err}")
+                # fixme: look into avoiding duplicates
+                conn.execute("insert or replace into new_group_info (main_group_id, base_pos, defn_note, pos_class, usage_note, lemma_rank) values (?, ?, ?, ?, ?, ?)",
+                             (sg.id, base_pos, gi.defn_note, gi.pos_class, gi.usage_note,
+                              None if gi.lemma_rank is None else '' if gi.lemma_rank == '_' else gi.lemma_rank))
+                if comment:
+                    conn.execute("insert or replace into new_group_comments values (?, ?)", (sg.id, str(comment)))
 
-            unaccountedFor = [
-                *conn.execute("select word from words join to_merge on group_id = other_group_id "
-                              "where main_group_id = ? and word_id = lemma_id and word_id not in (select * from lemmas_accounted_for)",
-                              (sg.id,))] if strict else None
-            if unaccountedFor:
-                _warn(f"unaccounted lemmas, skipping group: {', '.join(word for word, in unaccountedFor)}")
-                errors = True
-                conn.execute("rollback to sp")
-            else:
+                unaccountedFor = [
+                    *conn.execute("select word from words join to_merge on group_id = other_group_id "
+                                  "where main_group_id = ? and word_id = lemma_id and word_id not in (select * from lemmas_accounted_for)",
+                                  (sg.id,))] if haveLemmaSpelling and strict else None
+                if unaccountedFor:
+                    raise ValueError(f"unaccounted lemmas: {', '.join(word for word, in unaccountedFor)}")
+
                 conn.execute("drop table lemmas_accounted_for")
+            except ValueError as err:
+                warn(f"{err}: skipping group")
+                conn.execute("rollback to sp")
 
             conn.execute("release savepoint sp")
 

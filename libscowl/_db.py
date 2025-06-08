@@ -28,6 +28,7 @@ def openDB(dbfile, create = False, copyFrom = None, transCopy = False):
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON");
     conn.execute("PRAGMA synchronous = OFF");
+    conn.execute("PRAGMA temp_store = MEMORY");
 
     if isinstance(copyFrom, str):
         with openDB(copyFrom) as conn0:

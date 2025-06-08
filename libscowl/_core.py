@@ -271,7 +271,7 @@ def posmap(base_pos, poses):
         raise ValueError(f'posmap: leftover forms: {leftover}')
     return new_poses
 
-def posesFromList(base_pos, words):
+def posesFromList(base_pos, words, isPossessive):
     poses = None
     if len(words) == 1:
         poses = [basePosInfo[base_pos].lemma_pos]
@@ -281,7 +281,7 @@ def posesFromList(base_pos, words):
         elif len(words) == 3:
             poses = ['n0', 'ns', 'np']
         elif len(words) == 2:
-            if words[1] and words[1][0].word.endswith("'s"):
+            if words[1] and isPossessive(words[1]):
                 poses = ['n0', 'np']
             else:
                 poses = ['n0', 'ns']
@@ -291,7 +291,7 @@ def posesFromList(base_pos, words):
         elif len(words) == 3:
             poses = ['ns', 'nss', 'nsp']
         elif len(words) == 2:
-            if words[1] and words[1][0].word.endswith("'s"):
+            if words[1] and isPossessive(words[1]):
                 poses = ['ns', 'nsp']
             else:
                 poses = ['ns', 'nss']
@@ -306,12 +306,12 @@ def posesFromList(base_pos, words):
         if len(words) == 7:
             poses = ['m0', 'vd', 'vn', 'vg', 'ms', 'np', 'nsp']
         if len(words) == 6:
-            if words[-1] and words[-1][0].word.endswith("'s"):
+            if words[-1] and isPossessive(words[-1]):
                 poses = ['m0', 'vd', 'vn', 'vg', 'ms', 'np']
             else:
                 poses = ['m0', 'vd', 'vg', 'ms', 'np', 'nsp']
         if len(words) == 5:
-            if words[-1] and words[-1][0].word.endswith("'s"):
+            if words[-1] and isPossessive(words[-1]):
                 poses = ['m0', 'vd', 'vg', 'ms', 'np']
             else:
                 poses = ['m0', 'vd', 'vn', 'vg', 'ms']
@@ -341,6 +341,8 @@ def posesFromList(base_pos, words):
     elif base_pos == 'we':
         if len(words) == 2:
             poses = ['we', 'wep']
+    if poses is None:
+        raise ValueError(f"could not map list of words of length {len(words)} with base pos of '{base_pos}'")
     return poses
 
 _spellings_ab = ('A', 'B', 'Z', 'C', 'D')
@@ -742,7 +744,7 @@ _lineRegex = re.compile(r'(?: (?P<tags>[0-9]+ [^:#]*):\s* |)'
                         r'(?: <(?P<base_pos>[^/]*) (?:/(?P<pos_class>.*)|)>\s* |)'
                         r'(?: {(?P<defn_note>.+)}\s* |)'
                         r'(?: \((?P<usage_note>[^:#|]+)\)\s* |)'
-                        r'(?: : \s* (?P<words>[^#]+) |)'
+                        r'(?: : \s* (?P<words>[^#]*) |)'
                         r'(?: \# (?P<comments>.*) |)',
                         re.VERBOSE)
 def _matchLine(line):
@@ -885,9 +887,7 @@ class Line(LineBase):
         else:
             words = [[lemma]]
         words += _splitWords(wordsStr, lemmaSpellingsKeys)
-        poses = posesFromList(base_pos, words)
-        if poses is None:
-            raise ValueError(f"could not map list of words of length {len(words)} with base pos of '{base_pos}'")
+        poses = posesFromList(base_pos, words, lambda w: w[0].word.endswith("'s"))
         assert(len(words) == len(poses))
         addedPoses = []
         for pos, wes in zip(poses, words):

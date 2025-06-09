@@ -1,13 +1,9 @@
 from ._core import *
 
-def openDB(dbfile, create = False, copyFrom = None, transCopy = False):
-
-    if transCopy:
-        copyFrom = dbfile
-        dbfile = ':memory:'
+def openDB(dbfile, create = False, copyFrom = None):
 
     if not dbfile:
-        raise ValueError
+        dbfile = ':memory:'
 
     if copyFrom:
         create = True

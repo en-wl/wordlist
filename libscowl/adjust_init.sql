@@ -12,7 +12,8 @@ create table temp.to_merge (
 ) without rowid;
 
 create table temp.to_remove (
- word_id integer primary key
+ word_id integer primary key,
+ explicit boolean not null default false
 );
 
 create table temp.new_words (
@@ -60,9 +61,18 @@ create table temp.new_group_info (
 create table temp.new_entry_info (
   word_id integer primary key,
   main_group_id integer not null,
-  orig_group_id integer not null,
+  other_group_id integer not null,
   entry_rank text
 );
+
+create table temp.scowl_info_to_clear (
+  level integer,
+  category text default '',
+  region text default '',
+  tag text default '',
+  main_group_id integer,
+  primary key (main_group_id, level, category, region, tag)
+) without rowid;
 
 create table temp.new_scowl_data (
   level integer,
@@ -71,8 +81,20 @@ create table temp.new_scowl_data (
   tag text default '',
   main_group_id integer,
   pos text,
-  unique (level, category, region, tag, main_group_id, pos)
-);
+  replace boolean,
+  primary key (main_group_id, pos, level, category, region, tag)
+) without rowid;
+
+create table temp.new_scowl_override (
+  level integer,
+  category text default '',
+  region text default '',
+  tag text default '',
+  main_group_id integer,
+  word text,
+  replace boolean,
+  primary key (main_group_id, word, level, category, region, tag)
+) without rowid;
 
 create table temp.new_group_comments (
   group_id integer primary key,

@@ -71,6 +71,15 @@ class GroupInfo(SlotsDataClass):
         self.haveDerived = False
         self.errors = []
 
+class ClusterComment(SlotsDataClass):
+    __slots__ = ('lines', 'action', 'headword', 'other_words', 'commentLines')
+    def __init__(self, action):
+        assert action in ('replace', 'add', 'remove')
+        self.lines = []
+        self.action = action
+        self.other_words = []
+        self.commentLines = []
+
 def adjustEntries(conn, f = None, *,
                   preview = False, strict = True, ignoreErrors = False,
                   groupComment = None, replaceComments = True):
@@ -78,7 +87,7 @@ def adjustEntries(conn, f = None, *,
         f = sys.stdin
 
     groups = []
-    word_ids = {}
+    clusterComments = []
 
     errors = False
     def warn(msg):
@@ -86,8 +95,7 @@ def adjustEntries(conn, f = None, *,
         errors = True
         _warn(msg)
 
-
-    gi = GroupInfo()
+    gi = None
 
     def registerLine(li, new_pos, outer_pos = None):
         assert li.action in ('add', 'remove', 'adjust', 'replace')
@@ -159,23 +167,35 @@ def adjustEntries(conn, f = None, *,
     next_group_id = conn.execute("select max(group_id) from groups").fetchone()[0] + 1
 
     def finalizeGroup():
-        nonlocal gi, errors, next_group_id
-        for line, err in gi.errors:
-            warn(f'{line}: {err}: skipping group')
-            return
-        if not gi.subGroups:
-            return
-        nopos_sg = gi.subGroups.pop('', None)
-        if nopos_sg and gi.subGroups:
+        nonlocal gi, next_group_id
+        if gi is None:
+            pass
+        elif isinstance(gi, GroupInfo):
+            for line, err in gi.errors:
+                warn(f'{line}: {err}: skipping group')
+                return
+            if not gi.subGroups:
+                warn("empty group")
+                return
+            nopos_sg = gi.subGroups.pop('', None)
+            if nopos_sg and gi.subGroups:
+                for sg in gi.subGroups.values():
+                    sg.lines += nopos_sg.lines
+            elif nopos_sg:
+                gi.subGroups[''] = nopos_sg
             for sg in gi.subGroups.values():
-                sg.lines += nopos_sg.lines
-        elif nopos_sg:
-            gi.subGroups[''] = nopos_sg
-        for sg in gi.subGroups.values():
-            if sg.id is None:
-                sg.id = next_group_id
-                next_group_id += 1
-        groups.append(gi)
+                if sg.id is None:
+                    sg.id = next_group_id
+                    next_group_id += 1
+            groups.append(gi)
+        elif isinstance(gi, ClusterComment):
+            if gi.action == 'remove':
+                gi.headword = gi.commentLines[0][3:].lstrip()
+            else:
+                raise RuntimeError("not yet implemented")
+            clusterComments.append(gi)
+        else:
+            raise AssertionError
 
     def merge(attr, v):
         if v is None: return
@@ -187,27 +207,37 @@ def adjustEntries(conn, f = None, *,
         line = line.strip()
         if line == '':
             finalizeGroup()
-            gi = GroupInfo()
+            gi = None
             continue
 
         if line.startswith('# '):
             continue
 
-        if line.startswith('##'):
-            gi.commentLines.append(line)
-            continue
-
         action = 'adjust'
         if line.startswith('+ '):
             action = 'add'
-            line = line[2:]
+            line = line[2:].lstrip()
         elif line.startswith('- '):
             action = 'remove'
-            line = line[2:]
+            line = line[2:].lstrip()
         elif line.startswith('= '):
             action = 'replace'
-            line = line[2:]
+            line = line[2:].lstrip()
 
+        if line.startswith('##'):
+            if gi is None:
+                if action == 'adjust':
+                    gi = GroupInfo()
+                else:
+                    gi = ClusterComment(action)
+            gi.commentLines.append(line)
+            continue
+
+        if gi is None:
+            gi = GroupInfo()
+        elif not isinstance(gi, GroupInfo):
+            raise ValueError("bad line")
+            
         try:
             m = _matchLine(line)
             if m is None:
@@ -465,6 +495,10 @@ def adjustEntries(conn, f = None, *,
                 conn.execute("rollback to sp")
 
             conn.execute("release savepoint sp")
+
+    for cs in clusterComments:
+        if cs.action == 'remove':
+            conn.execute("insert into new_cluster_comments(headword) values (?)", (cs.headword,))
 
     if errors and not ignoreErrors:
         raise ValueError('aborting due to previous errors')

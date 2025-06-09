@@ -229,7 +229,7 @@ delete from scowl_data
         in (select * from scowl_data_cleanup join group_ids_to_clean_up using (group_id));
 
 --
--- fix up lemma and group comments
+-- fix up comments
 --
 
 delete from lemma_comments where lemma_id in (select lemma_id from new_lemma_comments);
@@ -237,6 +237,8 @@ insert into lemma_comments select * from new_lemma_comments where comment is not
 
 delete from group_comments where group_id in (select group_id from new_group_comments);
 insert into group_comments select * from new_group_comments where comment is not null;
+
+delete from cluster_comments where headword in (select headword from new_cluster_comments);
 
 --
 -- cleanup

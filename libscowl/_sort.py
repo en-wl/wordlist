@@ -66,12 +66,12 @@ def sortFile(*, infh = None, inFiles = None, outfh = None, fileFormat, indent = 
 
             gi.lines.append(origLine)
 
-            if line.startswith('#'):
-                continue
-
             if fileFormat == 'adjust':
                 if line.startswith('+ ') or line.startswith('- ') or line.startswith('= '):
-                    line = line[2:]
+                    line = line[2:].lstrip()
+
+            if line.startswith('#'):
+                continue
 
             gi.parseLine(line)
 

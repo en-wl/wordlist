@@ -98,7 +98,13 @@ create table temp.new_scowl_override (
 
 create table temp.new_group_comments (
   group_id integer primary key,
-  comment text
+  comment text -- null to remove comment
 );
+
+create table temp.new_cluster_comments (
+  headword text not null primary key,
+  other_words text,
+  comment text -- null to remove comment
+) without rowid;
 
 commit;

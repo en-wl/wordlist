@@ -1,7 +1,6 @@
 begin;
 
-drop table if exists split_info;
-
+drop table if exists new_cluster_comments;
 drop table if exists new_group_comments;
 drop table if exists new_scowl_data;
 drop table if exists scowl_info_to_clear;

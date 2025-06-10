@@ -20,7 +20,7 @@ SCHEMA="$2"
       cat <<EOF
 COPY $tbl FROM stdin WITH (FORMAT csv, QUOTE '''', NULL 'NULL');
 EOF
-      "$SQLITE3" "$SQLITE_DB" <<EOF
+      "$SQLITE3" -init /dev/null "$SQLITE_DB" <<EOF
 .mode quote
 .nullvalue '\N'
 select * from $tbl;

@@ -16,5 +16,5 @@ echo 'insert into variant_info select * from variant_info_view;' >> data.sql
 echo 'analyze; ' >> data.sql
 echo 'END;' >> data.sql
 
-cat ../libscowl/schema.sql data.sql ../libscowl/views.sql ../libscowl/scowl.sql | "$SQLITE3" --bail "$SQLITE_DB"
+cat ../libscowl/schema.sql data.sql ../libscowl/views.sql ../libscowl/scowl.sql | "$SQLITE3" -init /dev/null --bail "$SQLITE_DB"
 

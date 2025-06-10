@@ -21,7 +21,7 @@ mk-list() { $SCOWL/mk-list -d $SCOWL/scowl.db "$@"; }
 prep() {
   echo prep
 
-  $SQLITE -readonly $SCOWL/scowl.db \
+  $SQLITE -init /dev/null -readonly $SCOWL/scowl.db \
     "select distinct word from groups cross join words using(group_id) where usage_note in ('offensive-1', 'offensive-2', 'vulgar-1', 'vulgur-2') order by word" > nosug
 }
 

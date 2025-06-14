@@ -180,18 +180,21 @@ p.add_argument('words', nargs='+', metavar='WORD',
                help="word to search for")
 
 
-p = addParser('adjust')
+p = addParser('adjust',
+              help='add, remove, or adjust entries')
 p.set_defaults(func=adjust)
 p.add_argument('--preview', action='store_true', default=False, dest='preview')
 p.add_argument('--ignore-errors', action='store_true', default=False, dest='ignoreErrors')
 p.add_argument('db', nargs='?', default='scowl.db')
 
-p = addParser('merge')
+p = addParser('merge',
+              help='add new entries')
 p.set_defaults(func=merge)
 p.add_argument('--preview', action='store_true', default=False, dest='preview')
 #p.add_argument('--ignore-errors', action='store_true', default=False, dest='ignoreErrors')
 p.add_argument('--on-conflict', default = 'error', dest='onConflict', choices=['merge', 'replace', 'error'])
-p.add_argument('--tag', dest='tag')
+p.add_argument('--tag', dest='tag',
+               help='scowl tag to add to all new entries')
 p.add_argument('db', nargs='?', default='scowl.db')
 
 p = addParser('sort')

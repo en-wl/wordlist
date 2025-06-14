@@ -1,0 +1,79 @@
+A B: adapter <n>
+AV Bv: adaptor <n>
+
+alight <v>: (alighted | V: alit), -, -
+
+_: Curaçao <n/place>
+_-: Curacao <n/place>
+
+A C D: deprogram <v>: (A C D: deprogrammed | Av: deprogramed), (A C D: deprogramming | Av: deprograming), deprograms
+B Cv Dv: deprogramme <m→v>: deprogrammed, deprogramming, deprogrammes
+
+A B=: fete <n>: fetes
+Av B: fête <n>: fêtes
+
+A B=: fete <v>: feted, feting, fetes
++ Av B: fête <v>: fêted, fêting, fêtes
+
+foetus <n>: (foetuses | -: foeti), foetus's, (foetuses' | -: foeti's)
+
+formula <n>: (A B: formulas | Av B.: formulae), formula's, (A B: formulas' | Av B.: formulae's)
+
+forum <n>: (forums | V: fora), forum's, (forums' | V: fora's)
+
+get <v>: -, (A B C: got | A. B@ C.: gotten), -, -
+
+hoof <n>: (hooves | .: hoofs)
+
+imago <n>: (A: imagoes | Av Bv: imagines | B: imagos)
+
+A C: kindergartner <n>
+AV B: kindergartener <n>
+A- B-: kindergärtner <n>
+
+misspell <v>: (A B: misspelled | AV B.: misspelt), -, -
+
+persona <n>: (personae | .: personas), persona's, (personae's | .: personas')
+
+_: piñon <n>
+_v: pinyon <n>
+_-: pinon <n>
+
+A C D: program <n>: programs
+B Cv Dv: programme <n>: programmes
+
+A C D: program <v>: (A C D: programmed | Av: programed), (A C D: programming | Av: programing), programs
+AV B Cv Dv: programme <v>: programmed, programming, programmes
+
+A B: program <n_v> {computer program → coded instructions}: (A B: programmed | Av: programed), (A B: programming | Av: programing), -
+
+referendum <n>: (referendums | .: referenda)
+
+A B Z: reprogram <v>: (A B: reprogrammed | AV: reprogramed), (A B: reprogramming | AV: reprograming), reprograms
+Bv: reprogramme <v>: reprogrammed, reprogramming, reprograms
+
+_: Réunion <n/place>
+_-: Reunion <n/place>
+
+scampi <n>: (scampi | -: scampies | -: scampis)
+
+_: soigné <aj>
+_V: soigne <aj>
+
+_: soignée
+_V: soignee <aj>
+
+soufflé <n>
+_V: souffle <n>
+
++ soufflé <aj>
+_V: souffle <a→aj>
+
+spec <n_v>: (specced | v: spec'd | -: specked), (speccing | v: spec'ing | -: specking), specs
+
+strew <v>: -, (strewn | .: strewed), -, -
+
+A B. C: unbeknownst <aj_av>
+Av B Cv: unbeknown <aj_av>
+
+virtuoso <n>: (A B=: virtuosos | A= B: virtuosi | A-: virtuosoes), virtuoso's, (A B=: virtuosos' | A= B: virtuosi's | A-: virtuosoes')

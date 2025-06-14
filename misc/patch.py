@@ -11,9 +11,15 @@ from sys import stdout, stderr
 from pathlib import Path
 from collections import deque
 
-re.compile(r"#![^\n]+")
+if len(sys.argv) > 1 and sys.argv[1] == '--prune':
+    prune = True
+elif len(sys.argv) > 1:
+    sys.stderr.write(f"usage {sys.argv[0]} [--prune] < PATCHFILE > RESULT\n")
+    exit(1)
+else:
+    prune = False
 
-clusters = Path('scowl-orig.txt').read_text().replace('†','')
+clusters = Path('scowl-new.txt').read_text().replace('†','')
 clusters = re.sub(r" +#![^\n]+", "", clusters)
 clusters = clusters.split('\n\n')
 clusters.pop()
@@ -31,23 +37,25 @@ failed = 0
 toRemove = []
 toAdd = []
 curCluster = None
+good = []
+bad = []
 while True:
     try:
         line = patchLines.popleft()
     except IndexError:
         break
-    
+
     if line == '' and curCluster is None:
         pass
-    
+
     elif line == '---':
         curCluster = []
         toRemove.append(curCluster)
-        
+
     elif line == '+++':
         curCluster = []
         toAdd.append(curCluster)
-        
+
     elif line == '===':
         try:
             if toRemove:
@@ -66,6 +74,7 @@ while True:
                         skipped += 1
                         continue
                     newClusters.add(cluster)
+            good.append((toRemove,toAdd))
 
         except KeyError:
             if clusters.issuperset(map(lambda c: '\n'.join(c), toAdd)):
@@ -73,31 +82,49 @@ while True:
             else:
                 stderr.write(f'unable to find cluster>>>\n{cluster}\n<<<skipping hunk\n')
                 failed += 1
-            
+            bad.append((toRemove,toAdd))
+
         toRemove = []
         toAdd = []
         curCluster = None
-        
+
     elif curCluster is not None:
         curCluster.append(line)
 
     else:
         raise ValueError(f'unexpected line: {line}')
 
-for cluster in newClusters:
-    stdout.write(cluster)
-    stdout.write('\n\n')
+if prune:
 
-stdout.write('\n')
+    for toRemove,toAdd in good:
+        for cluster in toRemove:
+            print('---')
+            for line in cluster:
+                print(line)
+        for cluster in toAdd:
+            print('+++')
+            for line in cluster:
+                print(line)
+        print('===')
+        print()
 
-for cluster in clusters:
-    stdout.write(cluster)
-    stdout.write('\n\n')
+else:
 
-if skipped > 0:
-    stderr.write(f'skipped {skipped}/{total} hunks\n')
+    for cluster in newClusters:
+        stdout.write(cluster)
+        stdout.write('\n\n')
 
-if failed > 0:
-    stderr.write(f'{failed}/{total} hunks failed\n')
-    exit(1)
-    
+    stdout.write('\n')
+
+    for cluster in clusters:
+        stdout.write(cluster)
+        stdout.write('\n\n')
+
+
+    if skipped > 0:
+        stderr.write(f'skipped {skipped}/{total} hunks\n')
+
+    if failed > 0:
+        stderr.write(f'{failed}/{total} hunks failed\n')
+        exit(1)
+

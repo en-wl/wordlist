@@ -1,0 +1,120 @@
+- anyway <n>
+
+A B: anyway <av>
+AV: anyways <av>
++ 70 US: +: anyways
+
+= appliqué <n>: appliqués
+= _V: applique <n>: appliques
+
+- appliqued
+- appliquéd
+- appliquéing
++ appliqué <v>: appliquéd, appliquéing, appliqués
+= _V: applique <v>: (appliqued | -: appliqueed), appliqueing, appliques
+
+_: _arse <v> (vulgar-3)
+= 99: ...
++ 50 GB: ...
+
+bot <n>:
+- 50 hacker: ...
++ 50 [+]: ...
+
++ lovey <wp> # lovey-dovey
+= 60: ...
+
+lovey <n> {:2→}: loveys
+- luvvie <n> {:2}
+= 99: ...
++ 60 GB: ...
+
+_: luvvie <n> {:1→}: luvvies
+_v: luvvy <n> {:1}: luvvies
+= 99: ...
++ 60 GB: ...
+
++ _: résumé <n>: résumés
+  _v: resume <n>: resumes
++ _V: resumé <n>: resumés
+= 50 [extra]: ...
+
+rive <v>: -, (riven | V: rived), -, -
+- 50: ...
+
++ riven <aj>
+= 50: ...
+
+A B: through <aj_av>
+AV B-: thru <aj_av>
++ 70: +: thru <aj_av>
+
+A B: through <pp>
+AV B-: thru <pp>
++ 70: +: thru <pp>
+
++ thru <we>
+= 50 US: ...
+
+wake <v>: (A B: woke | AV B@: waked), (A B: woken | A. B@: waked | AV: woke), waking, wakes
+
+wake <v>
+- 50 [+]: ...
+
++ woke <aj>: woker, wokest
+= 50 [+]: ...
+
+bacteria <n>: bacterias!
+
+bing <m→n>
+
+dialog <n→wp> {dialog box}
+dialogue <n→wp> {dialog box}
+
+= A Bv: dishabille <n>: dishabilles~
+= Av: deshabille <n>: deshabilles~
+= B: déshabillé <n>: déshabillés~
+
+- donuts <n>
+
+A B: doughnut <n>
+A. B-: donut <n>
+
+A B: drive-through <n>: drive-throughs
++ A.: drive-thru <n>: drive-thrus
+
+= edema <n>: edemas~, edema's
+
+hyaena <n>: (hyaenas | V: hyaena)
+
+= intaglio <n>: (intaglios | ~: intagli)
+
+= intaglio <v>: intaglioed, intaglioing, intaglioes
+
+layperson <n>: (laypeople | V: laypersons), layperson's, (laypeople's | V: laypersons')
++ 60: +: layperson <n>: laypersons
+
+- lbs. <abbr>
+
+person <n>: (people | V: persons), person's, (people's | V: persons')
++ 60: +: person <n>: persons
+
+= sauté <n_v>: (sautéed | ~: sautéd), sautéing, sautés
+= _V: saute <n_v>: (sauteed | ~: sauted), sauteing, sautes
+
+ sauté <aj>
+ _V: saute <aj>
+
+- sauteed <aj>
+
+spokesperson <n>: (spokespeople | V: spokespersons), spokesperson's, (spokespeople's | V: spokespersons')
++ 60: +: spokesperson <n>: spokespersons
+
+- tassell <m>
+
+  _: tiercel <n>: tiercels, tiercel's
++ _-: tassell <n>: tassells, tassell's
+
+= wiz <n> {:2}: wizzes, wiz's
+
+- ## hyena

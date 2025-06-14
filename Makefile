@@ -1,19 +1,15 @@
 .PHONY: all clean
 
-all: scowl.db scowl.txt
+all: scowl.db
 
 .DELETE_ON_ERROR:
-scowl-tmp.txt: scowl-orig.txt patch
-	./util/patch.py < patch > scowl-tmp.txt
-
-.DELETE_ON_ERROR:
-scowl.db: scowl-tmp.txt
+scowl.db: ./combine.py
 	rm -f scowl.db
-	./scowl create-db scowl.db < scowl-tmp.txt
+	./combine.py
 
 .DELETE_ON_ERROR:
 scowl.txt: scowl.db
 	./scowl export-db scowl.db > scowl.txt
 
 clean:
-	rm -f scowl-tmp.txt
+	rm -f scowl.db scowl.txt

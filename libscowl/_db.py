@@ -206,6 +206,38 @@ def searchDB(conn, words, byCluster):
     conn.execute("drop table group_id_filter")
     return clusters
 
+class BasicGroupInfo(SlotsDataClass):
+    __slots__ = ('lemmas', 'group_id')
+    def __init__(self, lemmas, group_id):
+        self.lemmas = lemmas
+        self.group_id = group_id
+    @property
+    def headword(self):
+        return self.lemmas[0]
+    def sortKey(self):
+        return self.group_id
+
+def createClusterMap(conn):
+    groups = []
+    for group_id, in conn.execute("select group_id from groups"):
+        lemmas = []
+        for word, in conn.execute("select word from words where group_id = ? and word_id = lemma_id order by word_id", (group_id,)):
+            lemmas.append(word)
+        if lemmas:
+            groups.append(BasicGroupInfo(lemmas, group_id))
+    clusters = _createClusters(groups)
+    conn.execute("delete from cluster_map")
+    for cls in clusters:
+        cluster_id = cls.groups[0].group_id
+        for grp in cls.groups:
+            conn.execute("insert into cluster_map (group_id, cluster_id) values (?, ?)", (grp.group_id, cluster_id))
+    conn.execute("analyze cluster_map")
+
+def finalizeDB(conn):
+    createClusterMap(conn)
+    conn.commit()
+    conn.executescript((_dir / 'post.sql').read_text())
+
 def exportToDB(clusters, conn):
     group_id = 1
     word_id = 1

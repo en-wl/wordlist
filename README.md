@@ -70,11 +70,15 @@ is meant to be run from the root directory of the SCOWL distribution.
 
 To extract wordlists from the database use:
 
-    ./scowl word-list scowl.db > wl.txt
+    ./scowl --db scowl.db word-list > wl.txt
 
-Which will create a word list that corresponds to the default dictionary size
-and variant level used when creating spell-checkers dictionaries, except that
-dialectic marks (i.e. accents) are preserved.  To remove then marks use:
+If `--db` option specifies the database file to use.  The option defaults to
+'scowl.db' or the value of the `SCOWL_DB` environment variable if set.
+
+The default options for word-list will create a word-list that corresponds to
+the default dictionary for American English, with the exception that dialectic
+marks (i.e. accents) are preserved.  To remove the marks use the `--deaccent`
+option:
 
     ./scowl word-list scowl.db --deaccent > wl.txt
 
@@ -114,8 +118,10 @@ For additional options use:
 
     ./scowl word-list --help
 
-Using the SQLite3 database directly is also supported.  The main entry point
-is the `scowl_v0` query.
+Using the SQLite3 database directly is also supported.  Most of the database
+is defined in the files `schema.sql`, `views.sql` and `scowl.sql` in the
+`libscowl/` directory.  The main entry point for extrating word lists is the
+`scowl_v0` query.
 
 As SCOWLv2 is still in an alpha/testing phase the command line utility and
 schema is subject to change.  At some point the command line interface will
@@ -141,25 +147,26 @@ Filtering the Database
 ----------------------
 
 You can also filter the database to only show the information you are
-interested in and avoid noise.  This works by creating a new database file
-that then needs to be reexported with `./scowl export-db`.
+interested in and avoid noise.  You can either create a new database or simply
+export the results.
 
-For example, to filter the database to only include sizes 70 or lower:
+For example, to filter the database to only include sizes 70 or lower and
+export the results to scowl-filtered.txt:
 
-    ./scowl filter --size 70 by-line scowl.db scowl-filtered.db
-    ./scowl export-db scowl-filtered.db > scowl-filtered.txt
+    ./scowl filter --size 70 by-line --db scowl.db --export > scowl-filtered.txt
+
+To instead create a new database with the results use:
+
+    ./scowl filter --size 70 by-line --db scowl.db --target scowl-filtered.dn
 
 There are three ways to filter the database `by-line`, `by-group` and
 `by-cluster`.  `by-line` will only keep the lines that match the filter
-arguments.  `by-group` will instead keep the entire group, which is useful if
-you want to then edit the groups and reintegrate into the larger scowl
-database.  `by-cluster` will instead keep the entire cluster, which is useful
-to provide additional context.  If you use the `by-cluster` option the
+arguments, `by-group` will instead keep the entire group and `by-cluster`
+will keep the entire cluster.  If you use the `by-cluster` option the
 `--show-clusters` option might be useful when exporting the database.  For
 example:
 
-    ./scowl filter --size 70 by-cluster scowl.db scowl-filtered.db
-    ./scowl export-db --show-clusters scowl-filtered.db > scowl-filtered.txt
+    ./scowl filter --size 70 by-cluster --export --show-clusters > scowl-filtered.txt
 
 When filtering by line you can also remove some information, which can help
 simplify complex entries.  The available filters are `size` to remove the size
@@ -169,8 +176,8 @@ tags.  If you filter by a single spelling then the spelling information will
 automatically be removed.  For example, to get a simplified view of what will
 be included for the default word list in American English:
 
-    ./scowl filter --size 60 --spellings A --variant-level 1 --simplify size,tag by-line scowl.db scowl-filtered.db
-    ./scowl export-db --show-clusters scowl-filtered.db > scowl-filtered.txt
+    ./scowl filter by-line --size 60 --spellings A --variant-level 1 \
+            --simplify size,tag --export > scowl-filtered.txt
 
 See `./scowl filter --help` for additional usage.
 
@@ -181,9 +188,10 @@ Using the libscowl package directly
 As previously mentioned the `scowl` script is a very thin wrapper around the
 `libscowl` package.  As such, you can instead use `python3 -m libscowl`
 instead of going through the script.  Use of the python module directly
-instead of through the command line interface is also supported but the API
-may change without notice.  The best documentation to the API is via
-`__main__.py`.
+instead of through the command line interface is also supported to some
+extent.  Calling the high level functions as it done in the `__main__.py` is
+supported, but the API may stil change.  Direct use of the internal data
+structures, however, is not supported.
 
 
 File Format
@@ -202,7 +210,7 @@ Most everything is stored in a single file (`scowl.txt`) with the following form
              '\n'
 
     LINE := SIZE [' ' REGION] [' ' CATEGORY] ([' ' TAG] ...) ': '
-            [VARIANT-INFO ' ' ... ': ']
+            ([VARIANT-INFO ' ' ... | OVERRIDE) ': ']
             LEMMA [' <' POS ['/' POS-CLASS ] '>'] [' {' DEFN-NOTE '}'] [' (' USAGE-NOTE ')']
             [': ' ENTRY ', ' ...]
             ['#!' WARNING] ...
@@ -219,7 +227,9 @@ Most everything is stored in a single file (`scowl.txt`) with the following form
 
     SPELLING := 'A' | 'B' | 'Z' | 'C' | 'D' | '_'
 
-    VARIANT-INFO := '.' | '=' | '?' | 'v' | '~' | 'V' | '-' | 'x'
+    VARIANT-LEVEL := '.' | '=' | '?' | 'v' | '~' | 'V' | '-' | '@' | 'x'
+
+    OVERRIDE := '+'
 
     GROUP-ANNOTATION := '-' | '@' | '!'
 
@@ -263,8 +273,8 @@ The sizes have the following approximate meanings:
 A TAG is sometimes use to provide information on what source list the word
 came from.
 
-The source for the majority of words is from lists Alan Beale has a large part
-in creating, which provides a level of consistency.  These lists are then
+The source for the majority of words is from lists that Alan Beale has a large
+part in creating, which provides a level of consistency.  These lists are then
 supplemented from a number of signature lists.  Most of these words are
 unmarked.  Finally, some additional sources where used that Alan had no part
 in and are often of British origin, words from these lists are tagged as the

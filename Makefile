@@ -9,7 +9,7 @@ scowl.db: ./combine.py
 
 .DELETE_ON_ERROR:
 scowl.txt: scowl.db
-	./scowl export-db scowl.db > scowl.txt
+	./scowl export --db scowl.db > scowl.txt
 
 clean:
 	rm -f scowl.db scowl.txt

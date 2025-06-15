@@ -1,4 +1,6 @@
 from ._core import *
+from ._db import *
+from ._misc import *
 
 class SetFilter(set):
     def __init__(self, *members, noDefault = False):
@@ -343,3 +345,4 @@ def filterDB(orig, new, filterType, **args):
         combinePOS(conn)
 
     conn.executescript((_dir / 'post.sql').read_text())
+    return conn

@@ -147,13 +147,12 @@ def _importFromDB(conn, filterTable, filterQuery):
         region = r['region']
         tags = sorted(r['tags'].split(','))
         key = (level, category, region, *tags)
-        linesByGroup[r['group_id']][key,].add(r['pos'])
-        #scowlInfoByGroupPos[r['group_id']][r['pos']].append(key)
+        scowlInfoByGroupPos[r['group_id']][r['pos']].append(key)
 
-    #for group_id, byPos in scowlInfoByGroupPos.items():
-    #    for pos, key in byPos.items():
-    #        key.sort()
-    #        linesByGroup[group_id][tuple(key)].add(pos)
+    for group_id, byPos in scowlInfoByGroupPos.items():
+        for pos, key in byPos.items():
+            key.sort()
+            linesByGroup[group_id][tuple(key)].add(pos)
 
     for group_id, lines in linesByGroup.items():
         grp = groups[group_id]
@@ -310,7 +309,7 @@ def _exportGroup(conn, group, group_id, word_id):
         for pos in l.poses:
             for si in l.si:
                 for tag in si.tags:
-                    conn.execute("insert into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
+                    conn.execute("insert or ignore into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
                                  (si.level, si.category, si.region, tag, group_id, pos))
 
     if group.commentLines:

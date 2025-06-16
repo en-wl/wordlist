@@ -2,7 +2,7 @@ from ._core import *
 
 def _mergeText(f, groups, clusterComments):
     grp = None
-    lines = defaultdict(set)
+    lines = []
     override = []
     entriesBySpellings = {}
     commentLines = []
@@ -10,10 +10,7 @@ def _mergeText(f, groups, clusterComments):
         lineStr = lineStr.strip()
         if lineStr == '':
             if lines:
-                grp.lines = []
-                for (level, category, region, tags), poses in lines.items():
-                    l = Line(grp, [ScowlInfo(level, category, region, tags)], poses)
-                    grp.lines.append(l)
+                grp.lines = lines
                 grp.entries = list(entriesBySpellings.values())
                 have = addMissingSpellings(grp.entries)
                 for le in grp.entries:
@@ -29,7 +26,7 @@ def _mergeText(f, groups, clusterComments):
                 c = ClusterComment.parse(*commentLines)
                 clusterComments[clusterKey(c.word)] = c
             grp = None
-            lines.clear()
+            lines = []
             override.clear()
             entriesBySpellings.clear()
             commentLines.clear()
@@ -56,10 +53,8 @@ def _mergeText(f, groups, clusterComments):
 
         if isinstance(l, Override):
             override.append(l)
-        # fixme: generalize and rework to index by pos not scowl info
-        elif l.si[0].level is None or l.si[0].level < 99:
-            key = (l.si[0].level, l.si[0].category, l.si[0].region, frozenset(l.si[0].tags))
-            lines[key].update(l.poses)
+        else:
+            lines.append(l)
 
 def importText(f = None):
     groups = []

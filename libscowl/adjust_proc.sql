@@ -177,7 +177,18 @@ insert or ignore into scowl_data(level, category, region, tag, group_id, pos)
       on a.group_id = b.group_id and a.pos = b.pos and a.adj_rank = w.entry_rank and b.adj_rank is null;
 drop table adj_scowl_data;
 
--- clear out any requested scowl info
+-- clear out any requested scowl info and assign any removed entries the same
+-- scowl info as the lemma
+insert or ignore into scowl_data(level,category,region,tag,group_id,pos)
+select sd2.level,sd2.category,sd2.region,sd2.tag,group_id,sd.pos
+  from scowl_info_to_clear
+  join to_merge using (main_group_id)
+  join scowl_data sd using (level, category, region, tag)
+  join words as w using (group_id)
+  join scowl_data sd2 using (group_id)
+  where other_group_id = sd.group_id
+    and w.word_id = w.lemma_id
+    and w.pos = sd2.pos;
 delete from scowl_data
   where (group_id, level, category, region, tag) in
     (select other_group_id, level, category, region, tag

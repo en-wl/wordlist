@@ -60,7 +60,7 @@ adjustFiles = ('data/variants', 'data/fixes')
 for fn in adjustFiles:
     start(fn)
     with open(fn) as f:
-        adjustEntries(conn, f)
+        adjustEntries(conn, f, simplifyScowlInfo=False)
     finish()
 
 mergeFiles = (('data/signature', '[+]'),)
@@ -70,6 +70,12 @@ for fn, tag in mergeFiles:
     with open(fn) as f:
         mergeEntries(conn, f, tag = tag)
     finish()
+
+start("simplify SCOWL info")
+conn.execute("delete from scowl_data "
+             "where (level,category,region,tag,group_id,pos) "
+             "  in (select level,category,region,tag,group_id,pos from scowl_data_cleanup)")
+finish()
 
 start("combine POS")
 combinePOS(conn)

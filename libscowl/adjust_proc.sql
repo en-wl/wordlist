@@ -11,6 +11,7 @@ begin;
 -- join"s are also used in places below to force a good join order
 
 insert into new_entry_info values (0,0,0,'');
+insert into scowl_info_to_clear values (99, '', '', '', 0);
 
 analyze temp;
 
@@ -235,9 +236,6 @@ select b.level, b.category, b.region, b.tag, group_id, w.pos
 delete from scowl_data as sd
   where group_id in (select * from group_ids_to_clean_up)
   and not exists (select * from words where group_id = sd.group_id and pos = sd.pos);
-delete from scowl_data
-  where (level,category,region,tag,group_id,pos)
-        in (select * from scowl_data_cleanup join group_ids_to_clean_up using (group_id));
 
 --
 -- fix up comments
@@ -258,7 +256,6 @@ delete from cluster_comments where headword in (select headword from new_cluster
 delete from groups as g
   where group_id in (select * from group_ids_to_clean_up)
     and not exists (select * from words where group_id = g.group_id);
-drop table group_ids_to_clean_up;
 
 drop table adj_entry_ranks;
 drop table extra_scowl_data;

@@ -1,5 +1,6 @@
 begin;
 
+drop table if exists group_ids_to_clean_up;
 drop table if exists new_cluster_comments;
 drop table if exists new_group_comments;
 drop table if exists new_scowl_data;

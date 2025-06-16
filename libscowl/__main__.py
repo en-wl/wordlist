@@ -280,6 +280,9 @@ addDbArgument(p)
 p.add_argument('--preview', action='store_true', default=False, dest='preview')
 p.add_argument('--ignore-errors', action='store_true', default=False, dest='ignoreErrors',
                help='ignore errors when possible by skipping the group')
+p.add_argument('--no-cleanup', action='store_false', dest='simplifyScowlInfo',
+               help="simplify scowl info")
+p.add_argument('--cleanup',  action='store_true', dest='simplifyScowlInfo', help=SUPPRESS)
 
 
 p = addParser('merge',

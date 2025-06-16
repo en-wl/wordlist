@@ -82,6 +82,7 @@ class ClusterComment(SlotsDataClass):
 
 def adjustEntries(conn, f = None, *,
                   preview = False, strict = True, ignoreErrors = False,
+                  simplifyScowlInfo = True,
                   groupComment = None, replaceComments = True):
     if f is None:
         f = sys.stdin
@@ -515,6 +516,10 @@ def adjustEntries(conn, f = None, *,
 
     t = time.monotonic()
     conn.executescript((_dir / 'adjust_proc.sql').read_text())
+    if simplifyScowlInfo:
+        conn.execute("delete from scowl_data"
+                     "  where (level,category,region,tag,group_id,pos) "
+                     "    in (select * from scowl_data_cleanup join group_ids_to_clean_up using (group_id))");
     print(f'adjust_proc.sql: {time.monotonic()-t}s')
 
     if preview:

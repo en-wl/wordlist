@@ -11,6 +11,7 @@ begin;
 -- join"s are also used in places below to force a good join order
 
 insert into new_entry_info values (0,0,0,'');
+insert into explicit values (0);
 insert into scowl_info_to_clear values (99, '', '', '', 0);
 
 analyze temp;
@@ -26,12 +27,12 @@ analyze group_ids_to_clean_up;
 
 create temp table extra_scowl_data as
 select other_group_id, a.pos as orig_pos, b.main_group_id, c.pos
-  from to_remove
+  from explicit
     join words a using (word_id)
-    join to_merge on a.group_id = other_group_id
+    join use_info_from on a.group_id = other_group_id
     join new_words b using (main_group_id,word)
     join new_words c on b.lemma_id = c.lemma_id
- where explicit and b.word_id = b.lemma_id;
+ where b.word_id = b.lemma_id;
 insert into extra_scowl_data values (0, '', 0, '');
 analyze extra_scowl_data;
 

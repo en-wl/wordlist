@@ -99,7 +99,7 @@ def adjustEntries(conn, f = None, *,
     gi = None
 
     def registerLine(li, new_pos, outer_pos = None):
-        assert li.action in ('add', 'remove', 'adjust', 'replace')
+        assert li.action in ('add', 'remove', 'adjust', 'replace', 'transfer')
 
         if new_pos is None:
             new_pos = li.pos
@@ -148,10 +148,11 @@ def adjustEntries(conn, f = None, *,
                 if res:
                     raise ValueError(f'conflicting group comments')
 
+            group_id = None if action == 'transfer' else li.group_id
             if new_pos not in gi.subGroups:
-                gi.subGroups[new_pos] = SubGroupInfo(li.group_id)
+                gi.subGroups[new_pos] = SubGroupInfo(group_id)
             elif gi.subGroups[new_pos].id is None:
-                gi.subGroups[new_pos].id = li.group_id
+                gi.subGroups[new_pos].id = group_id
 
         registerBasePos(outer_pos)
 
@@ -224,6 +225,9 @@ def adjustEntries(conn, f = None, *,
         elif line.startswith('= '):
             action = 'replace'
             line = line[2:].lstrip()
+        elif line.startswith('~ '):
+            action = 'transfer'
+            line = line[2:].lstrip()
 
         if line.startswith('##'):
             if gi is None:
@@ -238,7 +242,7 @@ def adjustEntries(conn, f = None, *,
             gi = GroupInfo()
         elif not isinstance(gi, GroupInfo):
             raise ValueError("bad line")
-            
+
         try:
             m = _matchLine(line)
             if m is None:
@@ -385,9 +389,17 @@ def adjustEntries(conn, f = None, *,
                             conn.execute("insert into lemmas_accounted_for values (?)", (li.lemma_id,))
 
                         group_id = getattr(li, 'group_id', sg.id)
-                        conn.execute("insert or ignore into to_merge (main_group_id, other_group_id) values (?, ?)", (sg.id, group_id))
 
-                        if li.action == 'remove':
+                        if li.action == 'transfer':
+                            conn.execute("insert into use_info_from (main_group_id, other_group_id, also_merge) values (?, ?, false)"
+                                         " on conflict do nothing",
+                                         (sg.id, group_id))
+                        else:
+                            conn.execute("insert into use_info_from (main_group_id, other_group_id, also_merge) values (?, ?, true)"
+                                         " on conflict (main_group_id, other_group_id) do update set also_merge = true where not excluded.also_merge",
+                                         (sg.id, group_id))
+
+                        if li.action == 'remove' or li.action == 'transfer':
                             for pos, wes in li.words.items():
                                 for we in wes:
                                     try:
@@ -395,9 +407,12 @@ def adjustEntries(conn, f = None, *,
                                                                      (li.lemma_id, pos, we.word)))
                                     except StopIteration:
                                         raise ValueError("uanble to find match for {we.word} with pos '{pos}'")
-                                    conn.execute("insert into to_remove values (?, true)", (word_id,))
-                            conn.execute("insert or ignore into to_remove (word_id) select word_id from words "
-                                         "where lemma_id = ?", (li.lemma_id,))
+                                    if li.action == 'remove':
+                                        conn.execute("insert into to_remove(word_id) values (?)", (word_id,))
+                                    conn.execute("insert into explicit(word_id) values (?)", (word_id,))
+                            if li.action == 'remove':
+                                conn.execute("insert or ignore into to_remove (word_id) select word_id from words "
+                                             "where lemma_id = ?", (li.lemma_id,))
                             continue
 
                         if li.action == 'replace':

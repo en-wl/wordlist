@@ -5,15 +5,25 @@ begin;
 --   as the python code will replace "temp." with "main." when SQL_DEBUG is
 --   set to "True"
 
-create table temp.to_merge (
+create table temp.use_info_from (
   main_group_id integer,
   other_group_id integer,
+  also_merge boolean not null default true,
   primary key (main_group_id, other_group_id)
 ) without rowid;
 
+create view temp.to_merge as
+  select main_group_id, other_group_id
+  from temp.use_info_from
+  where also_merge;
+select * from temp.to_merge limit 0;
+
 create table temp.to_remove (
- word_id integer primary key,
- explicit boolean not null default false
+ word_id integer primary key
+);
+
+create table temp.explicit (
+ word_id integer primary key
 );
 
 create table temp.new_words (

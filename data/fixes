@@ -1,3 +1,6 @@
+- analytic <n>: analytics
++ _analytics <n>
+
 - anyway <n>
 
 A B: anyway <av>
@@ -95,6 +98,9 @@ layperson <n>: (laypeople | V: laypersons), layperson's, (laypeople's | V: laype
 + 60: +: layperson <n>: laypersons
 
 - lbs. <abbr>
+
+= A C: math <n>
+= B: maths <n>
 
 person <n>: (people | V: persons), person's, (people's | V: persons')
 + 60: +: person <n>: persons

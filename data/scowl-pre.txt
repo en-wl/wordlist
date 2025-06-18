@@ -7626,7 +7626,7 @@
 
 80 [moby]: Ainsworth <n/place>
 
-35 70 [moby] 80 [ukacd]: ain't
+35 70 [moby] 80 [ukacd]: ain't <s>
 
 80 [ukacd]: Aintree </upper?>
 
@@ -21172,7 +21172,7 @@
 
 80: arenous
 
-35 70 [moby] 80 [ukacd]: aren't
+35 70 [moby] 80 [ukacd]: aren't <s>
 
 80 [moby]: Arenzville <n/place>
 
@@ -58508,7 +58508,7 @@
 35 [ukfreq] 50 70 [5desk] [moby] 80 [ukacd]: cant <v>
 50 70 [5desk] [moby] 80 [ukacd]: - <v>: canted, canting, cants
 
-35 70 [moby]: can't
+35 70 [moby]: can't <s>
 
 80 [moby]: Cant. <abbr>
 
@@ -89310,13 +89310,13 @@
 
 80: couldest
 
-35 70 [moby] 80 [ukacd]: couldn't
+35 70 [moby] 80 [ukacd]: couldn't <s>
 
 80: couldn't've <s>
 
 70 [moby] 80: couldst
 
-50 [+]: could've
+50 [+]: could've <s>
 
 60 70 [5desk] [moby]: coulée <n>: coulées # accented
 60 70 [5desk] [moby]: _~: coulee <n>: coulees # need-accent
@@ -109157,7 +109157,7 @@
 
 80: didjeridoo <n>: didjeridoos
 
-35 70 [moby] 80 [ukacd]: didn't
+35 70 [moby] 80 [ukacd]: didn't <s>
 
 50 [name] 70 [5desk] [moby]: Dido <n/upper>: Dido's
 
@@ -115688,7 +115688,7 @@
 
 80 [ukacd]: doe-skin
 
-35 80 [ukacd]: doesn't
+35 80 [ukacd]: doesn't <s>
 
 80 [] [ukacd]: doeth
 
@@ -116765,7 +116765,7 @@
 
 80: donsy
 
-35 70 [moby] 80 [ukacd]: don't
+35 70 [moby] 80 [ukacd]: don't <s>
 
 50 hacker 80 [] [ukacd]: AV: donuts <n>
 #! missing spellings: B Z C D
@@ -174166,7 +174166,7 @@
 
 80 [moby]: Hadlyme <n/place>
 
-40 70 [moby] 80 [ukacd]: hadn't
+40 70 [moby] 80 [ukacd]: hadn't <s>
 
 50 [name]: Hadoop <n/name?>: Hadoop's
 
@@ -177647,7 +177647,7 @@
 80: A: Hasmonean <n/upper?>: Hasmoneans-
 80: B: Hasmonaean <n/upper?>: Hasmonaeans-
 
-40 70 [moby] 80 [ukacd]: hasn't
+40 70 [moby] 80 [ukacd]: hasn't <s>
 
 50 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: hasp <n>
 50 70 [5desk] [moby] 80 [ukacd]: - <n>: hasps
@@ -178120,7 +178120,7 @@
 
 80 [moby]: Havensville <n/place>
 
-35 70 [moby] 80 [ukacd]: haven't
+35 70 [moby] 80 [ukacd]: haven't <s>
 
 70 [moby] 80 [ukacd]: have on <v>
 
@@ -179645,7 +179645,7 @@
 50 [name] 70 [5desk] [moby] 80 [ukacd]: Hecuba <n/name?>
 50 [name] 70 [5desk] [moby]: - <n/name?>: Hecuba's
 
-40 80 [ukacd]: he'd
+40 80 [ukacd]: he'd <s>
 
 80 [] [ukacd]: A: hed
 80 [] [ukacd]: B: haed
@@ -180314,7 +180314,7 @@
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: hell <i>
 
-40: he'll
+40: he'll <s>
 
 65 70 [5desk]: - <n/upper>: Hells-
 70 [] [5desk]: Hell <n/upper>
@@ -181973,7 +181973,7 @@
 50 [name]: - <n/upper>: Herero's
 80 [] [ukacd]: - <n/upper>: (Hereros- | -: Hereroes-)
 
-60: here's
+60: here's <s>
 
 70 [moby] 80 [] [ukacd]: heresiarch <n>: heresiarchs
 
@@ -182468,7 +182468,7 @@
 
 80 [ukacd]: Herzog </upper?>
 
-35: he's
+35: he's <s>
 
 80 [ukacd]: Heseltine </upper?>
 
@@ -189550,7 +189550,7 @@
 
 60 [extra] 80: how're <s>
 
-60: how's
+60: how's <s>
 
 80 [ukacd]: howso
 
@@ -194306,7 +194306,7 @@
 
 35 70 [5desk] [moby]: ID <n/upper>: IDs
 
-40: I'd </upper?>
+40: I'd <s/upper?>
 
 60: I.D. <n/upper>
 
@@ -195072,7 +195072,7 @@
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: ill <av>: (worse | -: iller), (worst | -: illest)
 
-40: I'll </upper?>
+40: I'll <s/upper?>
 
 50: Ill. <n/upper>
 
@@ -195485,7 +195485,7 @@
 
 50 [name]: Ilyushin <n/name?>: Ilyushin's
 
-35 70 [moby] 80 [ukacd]: I'm </upper?>
+35 70 [moby] 80 [ukacd]: I'm <s/upper?>
 
 80 [moby]: im <pre>
 
@@ -208903,7 +208903,7 @@
 
 80 [ukacd]: ismy
 
-35 70 [moby] 80 [ukacd]: isn't
+35 70 [moby] 80 [ukacd]: isn't <s>
 
 50 [name]: -ISO <n/name?>: ISO's
 
@@ -209671,7 +209671,7 @@
 
 35 70 [5desk] [moby] 80 [] [ukacd]: itchy <aj>: itchier, itchiest
 
-40: it'd
+40: it'd <s>
 
 80 [moby]: ite <suf>
 
@@ -209761,7 +209761,7 @@
 
 80 [moby]: itis <suf>
 
-40 80 [ukacd]: it'll
+40 80 [ukacd]: it'll <s>
 
 80 [moby]: Itmann <n/place>
 
@@ -209772,7 +209772,7 @@
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: its <a>
 
-35 70 [moby]: it's
+35 70 [moby]: it's <s>
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: itself <pn>
 
@@ -209825,7 +209825,7 @@
 
 70 [5desk] [moby]: Ivanovo </upper?>
 
-40 70 [moby] 80 [ukacd]: I've </upper?>
+40 70 [moby] 80 [ukacd]: I've <s/upper?>
 
 80 [moby]: ive <suf>
 
@@ -227766,7 +227766,7 @@
 
 80 [ukacd]: Letraset </upper?>
 
-40 70 [moby]: let's
+40 70 [moby]: let's <s>
 
 70 [5desk] [moby] 80 [] [ukacd]: Lett <n/upper>
 70 [5desk] [moby]: - <n/upper>: Lett's
@@ -251925,7 +251925,7 @@
 50 70 [5desk] 80 [ukacd]: mightiness <n>
 80 [] [5desk]: - <n>: mightinesses~
 
-60: mightn't
+60: mightn't <s>
 
 80: mightn't've <s>
 
@@ -263701,11 +263701,11 @@
 50 70 [5desk] 80 [ukacd]: mustiness <n>
 80 [] [5desk]: - <n>: mustinesses~
 
-40: mustn't
+40: mustn't <s>
 
 80 [moby]: Mustoe <n/place>
 
-60 [extra]: must've
+60 [extra]: must've <s>
 
 35 70 [5desk] [moby] 80 [] [ukacd]: musty <aj>: mustier, mustiest
 
@@ -368212,7 +368212,7 @@
 70 [moby] 80 [] [ukacd]: shanny <n>: shannies
 70 [moby]: - <n>: shanny's
 
-50 70 [moby] 80 [ukacd]: shan't
+50 70 [moby] 80 [ukacd]: shan't <s>
 
 80 [] [ukacd]: shantey <n>: shanteys
 
@@ -368786,7 +368786,7 @@
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: shed <v>
 35 50 [ukfreq] 70 [5desk] [moby] 80 [ukacd]: - <v>: shed, shedding, sheds
 
-40 70 [moby]: she'd
+40 70 [moby]: she'd <s>
 
 70 [5desk] [moby] 80 [] [ukacd]: -shed <aj>
 
@@ -369081,7 +369081,7 @@
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: shell <v>
 35 70 [5desk] [moby] 80 [ukacd]: - <v>: shelled, shelling, shells
 
-40 70 [moby]: she'll
+40 70 [moby]: she'll <s>
 
 50 [name]: Shell <n/name?>: Shell's
 
@@ -369420,7 +369420,7 @@
 
 50 70 [5desk]: Sheryl <n/person>: Sheryl's
 
-40 70 [moby]: she's
+40 70 [moby]: she's <s>
 
 80 [ukacd]: shet
 
@@ -370893,13 +370893,13 @@
 
 60 70 [moby]: shoulder strap <n>: shoulder straps
 
-40 70 [moby] 80 [ukacd]: shouldn't
+40 70 [moby] 80 [ukacd]: shouldn't <s>
 
 80: shouldn't've <s>
 
 70 [moby] 80 [] [ukacd]: shouldst
 
-50 [+] 60 [extra]: should've
+50 [+] 60 [extra]: should've <s>
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: shout <n>: shouts
 
@@ -412587,13 +412587,13 @@
 
 80: thatchy <a>: thatchier, thatchiest
 
-60 [+]: that'd
+60 [+]: that'd <s>
 
-60 [+]: that'll
+60 [+]: that'll <s>
 
 80 [ukacd]: thatness
 
-35: that's
+35: that's <s>
 
 80 [ukacd]: thaumasite
 
@@ -413288,7 +413288,7 @@
 
 80: there're <s>
 
-35: there's
+35: there's <s>
 
 50 [] [name] 70 [5desk] [moby] 80 [ukacd]: Theresa <n/person>
 50 [] [name] 70 [5desk] [moby]: - <n/person>: Theresa's
@@ -413788,13 +413788,13 @@
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: they <pn>
 
-40 70 [moby] 80 [ukacd]: they'd
+40 70 [moby] 80 [ukacd]: they'd <s>
 
-40 80 [ukacd]: they'll
+40 80 [ukacd]: they'll <s>
 
-35 70 [moby] 80 [ukacd]: they're
+35 70 [moby] 80 [ukacd]: they're <s>
 
-40 70 [moby] 80 [ukacd]: they've
+40 70 [moby] 80 [ukacd]: they've <s>
 
 80 [moby]: thi <pre>
 
@@ -453960,7 +453960,7 @@
 
 80 [ukacd]: wasm <n>: wasms
 
-35 70 [moby] 80 [ukacd]: wasn't
+35 70 [moby] 80 [ukacd]: wasn't <s>
 
 80 [moby]: Wasola <n/place>
 
@@ -455685,7 +455685,7 @@
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: wed <v>: (wedded | ~: wed), wedding, weds
 
-40: we'd
+40: we'd <s>
 
 40: Wed. <abbr>
 
@@ -456208,7 +456208,7 @@
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: well <i>
 
-40: we'll
+40: we'll <s>
 
 80 [] [ukacd]: welladay <n>: welladays
 
@@ -456555,11 +456555,11 @@
 
 80 [moby]: Weott <n/place>
 
-35 70 [moby]: we're
+35 70 [moby]: we're <s>
 
 80 [] [ukacd]: weregild <n>: weregilds
 
-40 70 [moby] 80 [ukacd]: weren't
+40 70 [moby] 80 [ukacd]: weren't <s>
 
 35 70 [5desk] [moby] 80 [ukacd]: _: werewolf <n>: werewolves
 35 70 [5desk] [moby] 80 [ukacd]: _-: werwolf <n>: werwolves
@@ -456886,7 +456886,7 @@
 50 hacker 80 [] [ukacd]: wetware <n>
 50 hacker 80: - <n>: wetwares
 
-40 70 [moby] 80 [ukacd]: we've
+40 70 [moby] 80 [ukacd]: we've <s>
 
 80 [moby]: Wever <n/place>
 
@@ -457068,7 +457068,7 @@
 50 70 [5desk] [moby] 80 [ukacd]: whatnot <n>
 80 [] [5desk] [moby] [ukacd]: - <n>: whatnots~
 
-40: what's
+40: what's <s>
 
 55: whatshername
 
@@ -457391,7 +457391,7 @@
 
 80 [ukacd]: whereout
 
-60: where's
+60: where's <s>
 
 80 [ukacd]: whereso
 
@@ -458534,7 +458534,7 @@
 
 80 [ukacd]: whoas
 
-40 80 [ukacd]: who'd
+40 80 [ukacd]: who'd <s>
 
 40 60 [extra] 70 [5desk] [moby] 80 [ukacd]: _: whodunit <n>
 40 60 [extra] 70 [5desk] [moby] 80 [ukacd]: _V: whodunnit <n>
@@ -458632,7 +458632,7 @@
 
 70 [5desk]: wholistically
 
-40 80 [ukacd]: who'll
+40 80 [ukacd]: who'll <s>
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: wholly <av>
 
@@ -458701,7 +458701,7 @@
 35 70 [5desk] [moby]: - <n>: whore's
 35 70 [5desk] [moby] 80 [ukacd]: - <n>: whores
 
-40: who're
+40: who're <s>
 
 55 70 [5desk] [moby] 80 [ukacd]: - <v>: -, whoring, -
 70 [5desk] [moby] 80 [] [ukacd]: -whore <v>: whored, -, whores
@@ -458744,7 +458744,7 @@
 
 70 [moby] 80 [] [ukacd]: whortleberry <n>: whortleberries
 
-40 70 [moby] 80 [ukacd]: who's
+40 70 [moby] 80 [ukacd]: who's <s>
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: whose <a>
 
@@ -458760,7 +458760,7 @@
 
 50 70 [5desk] [moby] 80 [ukacd]: whosoever <pn>
 
-40: who've
+40: who've <s>
 
 80 [moby]: whsle. <abbr>
 
@@ -458783,7 +458783,7 @@
 
 50 AU [town] 70 [moby]: Whyalla <n/place>: Whyalla's
 
-60: why'd
+60: why'd <s>
 
 70 [moby] 80 [] [ukacd]: whydah <n>
 70 [moby]: - <n>: whydah's
@@ -461631,7 +461631,7 @@
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: wont <a>
 
-35: won't
+35: won't <s>
 
 70 [5desk] [moby] 80 [] [ukacd]: -wont <v>: wonted, wonting, wonts
 
@@ -462864,11 +462864,11 @@
 
 70 [5desk] 80: wouldest
 
-35 70 [moby] 80 [ukacd]: wouldn't
+35 70 [moby] 80 [ukacd]: wouldn't <s>
 
 80: wouldn't've <s>
 
-40 50 [+]: would've
+40 50 [+]: would've <s>
 
 80 [ukacd]: Woulfe bottle <n/upper?>: Woulfe bottles
 
@@ -465793,11 +465793,11 @@
 
 60: you all
 
-40 80 [ukacd]: you'd
+40 80 [ukacd]: you'd <s>
 
 80 [ukacd]: youk <m>: youked, youking, youks
 
-40 80 [ukacd]: you'll
+40 80 [ukacd]: you'll <s>
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: young <n>: young
 35 70 [5desk] [moby]: - <n>: young's
@@ -465865,7 +465865,7 @@
 
 70 [5desk] [moby] 80 [] [ukacd]: -your <n>: yours
 
-35 70 [moby] 80 [ukacd]: you're
+35 70 [moby] 80 [ukacd]: you're <s>
 
 80 [] [ukacd]: yourn
 
@@ -465911,7 +465911,7 @@
 
 50 [name]: YouTube <n/name?>: YouTube's
 
-40 70 [moby] 80 [ukacd]: you've
+40 70 [moby] 80 [ukacd]: you've <s>
 
 60 80 [ukacd]: yow <i>
 

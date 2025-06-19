@@ -98,11 +98,17 @@ def adjustEntries(conn, f = None, *,
 
     gi = None
 
-    def registerLine(li, new_pos, outer_pos = None):
-        assert li.action in ('add', 'remove', 'adjust', 'replace', 'transfer')
+    def registerLine(li, new_pos = None, outer_pos = None):
+        assert li.action in ('adjust', 'add', 'remove', 'replace', 'transfer')
 
         if new_pos is None:
-            new_pos = li.pos
+            if li.action in ('adjust', 'add', 'replace'):
+                new_pos = li.pos
+            elif li.action in ('remove', 'transfer'):
+                new_pos = ''
+            else:
+                raise AssertError
+
         if outer_pos is None:
             outer_pos = new_pos
 

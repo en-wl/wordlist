@@ -55,7 +55,7 @@ with open('data/basic') as f:
     mergeEntries(conn, f, onConflict = 'error')
 finish()
 
-adjustFiles = ('data/variants', 'data/fixes')
+adjustFiles = ('data/compounds', 'data/variants', 'data/fixes')
 
 for fn in adjustFiles:
     start(fn)
@@ -63,7 +63,8 @@ for fn in adjustFiles:
         adjustEntries(conn, f, simplifyScowlInfo=False)
     finish()
 
-mergeFiles = (('data/signature', '[+]'),)
+mergeFiles = (('data/extra', '[extra]'),
+              ('data/signature', '[+]'))
 
 for fn, tag in mergeFiles:
     start(fn)

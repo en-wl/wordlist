@@ -5874,7 +5874,7 @@
 
 80: affectionless
 
-70 [-]: affective <aj>
+70 [5desk] [moby] 80 [] [ukacd]: affective <aj>
 
 70 [5desk] 80 [] [ukacd]: affectively
 
@@ -56354,11 +56354,11 @@
 
 40 70 [moby] 80 [ukacd]: calendar year <n>: calendar years
 
-70 [-]: calender <n>: calenders
+60 70 [5desk] [moby] 80 [ukacd]: calender <n>: calenders
 
-70 [-]: calender <v>: calendered, calendering, calenders
+60 70 [5desk] [moby] 80 [ukacd]: calender <v>: calendered, calendering, calenders
 
-80 [-]: calendered <aj>
+80 [] [ukacd]: calendered <aj>
 
 80: calenderer <n>: calenderers
 
@@ -155728,13 +155728,13 @@
 
 70 [moby] 80 [] [ukacd]: frow <n>: frows
 
-70 [-]: froward <aj>
+60 70 [5desk] [moby] 80 [ukacd]: froward <aj>
 
 70 [5desk]: Froward </upper?>
 
-70 [-]: frowardly
+70 [5desk] 80 [] [ukacd]: frowardly
 
-70 [-]: frowardness <n>
+60 70 [5desk] 80 [ukacd]: frowardness <n>
 80 [] [5desk]: - <n>: frowardnesses~
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: frown <n>
@@ -194983,9 +194983,9 @@
 50 [name] 80 [ukacd]: Ike <n/upper>
 50 [name]: - <n/upper>: Ike's
 
-50 [name]: IKEA <n/name?>: IKEA's
+50 [name]: Ikea <n/name?>: Ikea's
 
-70 [-]: Ikea <n/name?>: Ikea's
+50 [name]: IKEA <n/name?>: IKEA's
 
 70 [moby] 80 [] [ukacd]: ikebana <n>
 70 [moby] 80: - <n>: ikebanas
@@ -208224,7 +208224,7 @@
 
 80 [moby]: irreg. <abbr>
 
-70 [-]: irregardless <av>
+50 70 [5desk]: irregardless <av>
 
 35 [] [ukfreq] 70 [5desk] [moby] 80 [ukacd]: irregular <n>
 35 70 [5desk] [moby]: - <n>: irregular's
@@ -212205,7 +212205,7 @@
 35 50 [name] 70 [5desk] [moby]: - <n/upper>: Jew's
 35 70 [5desk] [moby] 80 [ukacd]: - <n/upper>: Jews
 
-70 [-]: jew <v>: jewed, jewing, jews
+60: jew <v>: jewed, jewing, jews
 
 70 [moby] 80 [ukacd]: Jew-baiting </upper?>
 
@@ -212878,7 +212878,7 @@
 
 80 [moby]: Joes <n/place>
 
-70 [-]: Joesph <n/person>: Joesph's
+50: Joesph <n/person>: Joesph's
 
 50: Joey <n/person>: Joey's
 
@@ -297294,9 +297294,9 @@
 
 80 [ukacd]: pay-out
 
-50 [name]: PayPal <n/name?>: PayPal's
+50 [name]: Paypal <n/name?>: Paypal's
 
-80 [-]: Paypal <n/name?>: Paypal's
+50 [name]: PayPal <n/name?>: PayPal's
 
 60 80 [ukacd]: pay-per-view
 

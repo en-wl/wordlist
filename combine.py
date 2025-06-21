@@ -8,10 +8,42 @@ import sys
 
 from contextlib import suppress
 
+def usage():
+    sys.stderr.write(f"usage: {sys.argv[0]} {{create-db,sort}}\n")
+    exit(1)
+
 sys.path.insert(0, '.')
 import libscowl
 from libscowl import *
 from libscowl import _importFromDB, _finalizeGroups, _createClusters, _mergeText
+
+adjustFiles = (
+    'data/compounds',
+    'data/variants',
+    'data/fixes',
+    'data/exclude',
+)
+mergeFiles = (
+    ('data/extra', '[extra]'),
+    ('data/signature', '[+]'),
+)
+
+action = None
+
+if len(sys.argv) == 2:
+    if sys.argv[1] in ('create-db','sort'):
+        action = sys.argv[1]
+    else:
+        usage()
+else:
+    usage()
+
+if action == 'sort':
+    for fn in adjustFiles:
+        sortFileInPlace('adjust', files=[fn])
+    for fn, _ in mergeFiles:
+        sortFileInPlace('merge', files=[fn])
+    exit(0)
 
 t = None
 def start(msg):
@@ -55,16 +87,11 @@ with open('data/basic') as f:
     mergeEntries(conn, f, onConflict = 'error')
 finish()
 
-adjustFiles = ('data/compounds', 'data/variants', 'data/fixes')
-
 for fn in adjustFiles:
     start(fn)
     with open(fn) as f:
         adjustEntries(conn, f, simplifyScowlInfo=False)
     finish()
-
-mergeFiles = (('data/extra', '[extra]'),
-              ('data/signature', '[+]'))
 
 for fn, tag in mergeFiles:
     start(fn)

@@ -562,6 +562,11 @@ corrections, the seond for adding variant information, and the last for adding
 variant information strictly related to the preferred form of compound words.
 These files are in the _adjust_ format.
 
+To bump a word to a higher SCOWL size use `data/exclude`.  This file is also
+in the _adjust_ format however it should only use a subset of the format.  The
+SCOWL size given should be the minimal SCOWL size that the word should be
+included and the tag '[-]' must be used.
+
 There are other files are used by the `combine.py` that are in a special
 format.  These files should, in general, not need to be modified.
 

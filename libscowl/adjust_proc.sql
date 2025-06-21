@@ -198,12 +198,13 @@ delete from scowl_data
        join to_merge using (main_group_id));
 
 -- add/update any explicitly provided scowl data
+create temp table old_scowl_data as
+  select other_group_id as group_id, sd.pos, sd.level
+     from (select main_group_id, pos, min(level) as level from new_scowl_data where replace group by main_group_id, pos)  nsd
+     join to_merge using (main_group_id)
+     join scowl_data sd on sd.group_id = other_group_id and (nsd.pos = '*' or sd.pos = nsd.pos) and sd.level < nsd.level;
 delete from scowl_data
-  where (group_id, pos, level) in
-    (select other_group_id, sd.pos, sd.level
-       from (select main_group_id, pos, min(level) as level from new_scowl_data where replace group by main_group_id, pos)  nsd
-       join to_merge using (main_group_id)
-       join scowl_data sd on sd.group_id = other_group_id and (nsd.pos = '*' or sd.pos = nsd.pos) and sd.level < nsd.level);
+  where (group_id, pos, level) in (select * from old_scowl_data);
 insert or ignore into scowl_data(level,category,region,tag,group_id,pos)
   select nsd.level,category,region,tag,main_group_id,coalesce(new_pos, nsd.pos)
     from new_scowl_data nsd
@@ -215,7 +216,12 @@ insert or ignore into scowl_data(level,category,region,tag,group_id,pos)
     from new_scowl_data nsd
     cross join words w on nsd.main_group_id = w.group_id
     -- note: words has already been updated with the corrected pos, so no need to join with fix_pos
-  where nsd.pos = '*';
+  where nsd.pos = '*'
+    and (nsd.tag != '[-]'
+         or exists (select * from old_scowl_data osd
+                    where osd.group_id = nsd.main_group_id and osd.pos = w.pos and osd.level <= nsd.level))
+;
+drop table old_scowl_data;
 
 --add any explicitly provided scowl overrides
 -- fixme?: we might need to be a little more precise.... lemma....

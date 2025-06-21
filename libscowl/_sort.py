@@ -1,3 +1,6 @@
+from contextlib import suppress
+from tempfile import NamedTemporaryFile
+
 from ._core import *
 
 class RoughGroupInfo(SlotsDataClass):
@@ -45,8 +48,22 @@ class RoughGroupInfo(SlotsDataClass):
     def sortKey(self):
         return (wordOrderKey(self.headword), self.defn_note, basePosInfo[self.base_pos].order_num)
 
-def sortFile(*, infh = None, inFiles = None, outfh = None, fileFormat, indent = True):
+def sortFileInPlace(fileFormat, *, files, indent = False):
+    destFile = Path(files[0]).resolve(strict=True)
+    if not destFile.is_file():
+        raise OSError(None, 'Not a normal file', str(destFile))
+    fp = NamedTemporaryFile(mode='w', delete = False, prefix=".tmp", dir=destFile.parent)
+    try:
+        sortFile(fileFormat, inFiles = files, outfh = fp, indent=indent)
+        fp.close()
+        os.replace(fp.name, destFile)
+    except:
+        fp.close()
+        with suppress(FileNotFoundError):
+            os.remove(fp.name)
+        raise
 
+def sortFile(fileFormat, *, infh = None, inFiles = (), outfh = None, indent = False):
     assert fileFormat in ('adjust', 'merge')
 
     if outfh is None:

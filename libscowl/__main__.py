@@ -3,7 +3,6 @@ import sys
 import argparse
 from argparse import SUPPRESS,RawDescriptionHelpFormatter
 from pathlib import Path
-from tempfile import NamedTemporaryFile
 
 import libscowl
 from libscowl import variantFromSymbol, SPELLINGS, REGIONS, POS_CATEGORIES, Include, Exclude
@@ -51,23 +50,9 @@ def merge(args):
 
 def sortFile(args):
     if args.replace:
-        destFile = Path(args.files[0]).resolve(strict=True)
-        if not destFile.is_file():
-            raise OSError(None, 'Not a normal file', str(destFile))
-        fp = NamedTemporaryFile(mode='w', delete = False, prefix=".tmp", dir=destFile.parent)
-        try:
-            libscowl.sortFile(inFiles = args.files, outfh = fp, fileFormat=args.fileFormat, indent=args.indent)
-            fp.close()
-            os.replace(fp.name, destFile)
-        except:
-            fp.close()
-            try:
-                os.remove(fp.name)
-            except FileNotFoundError:
-                pass
-            raise
+        libscowl.sortFileInPlace(args.fileFormat, files = args.files, indent=args.indent)
     else:
-        libscowl.sortFile(inFiles = args.files if args.files else None, fileFormat=args.fileFormat, indent=args.indent)
+        libscowl.sortFile(args.fileFormat, inFiles = args.files, indent=args.indent)
 
 def combinePOS(args):
     conn = libscowl.openDB(args.db)

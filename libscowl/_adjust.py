@@ -255,7 +255,7 @@ def adjustEntries(conn, f = None, *,
                 raise ValueError("bad line")
 
             tags = m['tags']
-            if tags is None:
+            if tags is None: # i.e. no SCOWL info
 
                 li = LineInfo(line, action)
 
@@ -297,7 +297,7 @@ def adjustEntries(conn, f = None, *,
                                li.lemma, base_pos, wordsStr, li.words)
                 registerLine(li, new_base_pos)
 
-            else: # tags not None
+            else: # have SCOWL info
 
                 if action not in ('add', 'remove', 'replace'):
                     raise ValueError("scowl info must be prefixed with one of: +, -, or =")

@@ -1,3 +1,5 @@
+import io
+
 from contextlib import suppress
 from tempfile import NamedTemporaryFile
 
@@ -52,9 +54,16 @@ def sortFileInPlace(fileFormat, *, files, indent = False):
     destFile = Path(files[0]).resolve(strict=True)
     if not destFile.is_file():
         raise OSError(None, 'Not a normal file', str(destFile))
-    fp = NamedTemporaryFile(mode='w', delete = False, prefix=".tmp", dir=destFile.parent)
+    infh = io.StringIO(destFile.read_text())
+    outfh = io.StringIO()
+    sortFile(fileFormat, infh = infh, inFiles = files[1:], outfh = outfh, indent=indent)
+    inStr = infh.getvalue()
+    outStr = outfh.getvalue()
+    if inStr == outStr:
+        return
+    fp = NamedTemporaryFile(mode='wb', delete = False, prefix=".tmp", dir=destFile.parent)
     try:
-        sortFile(fileFormat, inFiles = files, outfh = fp, indent=indent)
+        fp.write(outStr.encode('utf-8'))
         fp.close()
         os.replace(fp.name, destFile)
     except:
@@ -102,13 +111,14 @@ def sortFile(fileFormat, *, infh = None, inFiles = (), outfh = None, indent = Fa
             commentsOnly.append(gi)
         gi = RoughGroupInfo()
 
-    if inFiles:
-        for fn in inFiles:
-            with open(fn) as fh:
-                readFile(fh)
-    else:
-        readFile(sys.stdin if infh is None else infh)
+    if infh is None and not inFiles:
+        readFile(sys.stdin)
+    elif infh is not None:
+        readFile(infh)
 
+    for fn in inFiles:
+        with open(fn) as fh:
+            readFile(fh)
 
     clusters = _createClusters(groups)
 

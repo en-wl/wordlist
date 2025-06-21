@@ -45,7 +45,7 @@ select b.*
          or (a.level <= b.level and a.category = '' and b.category = 'hacker' and a.region = b.region)
          or (a.level <= b.level and a.category = b.category and a.region = b.region and a.tag = '' and b.tag not in ('', '[cs]', '[-]') and b.level <= 35)
          or (a.level <= b.level and a.category = b.category and a.region = b.region and a.tag = '' and b.tag not in ('', '[cs]', '[+]', '[-]'))
-         or (a.level < b.level and b.level >= 80 and a.category = b.category and a.region = b.region and a.tag not in ('[cs]', '[name]', '[town]'))
+         --or (a.level < b.level and b.level >= 80 and a.category = b.category and a.region = b.region and a.tag not in ('[cs]', '[name]', '[town]'))
         );
 select * from scowl_data_cleanup limit 0;
 

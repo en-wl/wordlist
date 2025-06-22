@@ -14742,8 +14742,8 @@
 50 [name] 80: _~: Angstrom <n> # need-accent # fixme: pos_class originally "upper"
 50 [name]: - <n>: Ångström's
 50 [name]: _~: - <n>: Angstrom's
-80: - <n>: Ångströms-
-80: _~: - <n>: Angstroms-
+80: - <n>: Ångströms
+80: _~: - <n>: Angstroms
 
 80 [ukacd]: anguiform
 
@@ -96490,8 +96490,8 @@
 
 50 70 [5desk] 80 [ukacd]: _: cutesy <a>
 50 70 [5desk] 80 [ukacd]: _-: cutesie <a>
-80 95 [] [5desk]: _: - <a>: cutesier!, cutesiest!
-80 95 [] [5desk]: _-: - <a>: cutesier!, cutesiest!
+80: _: - <a>: cutesier!, cutesiest!
+80: _-: - <a>: cutesier!, cutesiest!
 
 55 80 [ukacd]: cutey <n>: cuteys
 
@@ -114628,10 +114628,8 @@
 
 55 70 [5desk] 80 [ukacd]: _: ditsy <a>
 55 70 [5desk] 80 [ukacd]: _v: ditzy <a>
-80: _: - <a>: ditsier!, -
-80: _v: - <a>: ditzier!, -
-80 95 [] [5desk]: _: - <a>: -, ditsiest!
-80 95 [] [5desk]: _v: - <a>: -, ditziest!
+80: _: - <a>: ditsier!, ditsiest!
+80: _v: - <a>: ditzier!, ditziest!
 
 80 [ukacd]: ditt <n>: ditts
 
@@ -185323,7 +185321,7 @@
 70 [moby]: H.M.S. <abbr>
 
 35 [ukfreq] 50 70 [moby] 80 [ukacd]: ho <n>
-65 70 [moby] 80 [ukacd]: - <n>: (ho's- | ?: hos-)
+50 70 [moby] 80 [ukacd]: - <n>: hos
 
 35 [ukfreq] 50 70 [moby] 80 [ukacd]: ho <i>
 

@@ -3,6 +3,11 @@ AV Bv: adaptor <n>
 
 alight <v>: (alighted | V: alit), -, -
 
+= _: angstrom <n/>: angstroms
++ _V: ångström <n/>: ångströms
+= _-: Ångström <n/>: Ångströms
+- Angstrom <n/>
+
 A B: axe <n_v>
 A.: ax <n_v>
 ## Up to around 2021 M-W preferred _ax_ over _axe_, but the entry was updated

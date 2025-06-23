@@ -8,8 +8,8 @@ then
     exit 1
 fi
 
-SQLITE3=${SQLITE3:-sqlite3}
-SQLITE_DB="../scowl.db"
+: ${SQLITE3:="sqlite3"}
+: ${SCOWL_DB:="../scowl.db"}
 PSQL="psql"
 PGDATABASE="$1"
 SCHEMA="$2"
@@ -20,7 +20,7 @@ SCHEMA="$2"
       cat <<EOF
 COPY $tbl FROM stdin WITH (FORMAT csv, QUOTE '''', NULL 'NULL');
 EOF
-      "$SQLITE3" -init /dev/null "$SQLITE_DB" <<EOF
+      "$SQLITE3" -init /dev/null "$SCOWL_DB" <<EOF
 .mode quote
 .nullvalue '\N'
 select * from $tbl;

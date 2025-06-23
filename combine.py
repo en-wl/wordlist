@@ -9,7 +9,7 @@ import sys
 from contextlib import suppress
 
 def usage():
-    sys.stderr.write(f"usage: {sys.argv[0]} {{create-db,sort}}\n")
+    sys.stderr.write(f"usage: {sys.argv[0]} (create-db [--raw] [<db file>]) | sort\n")
     exit(1)
 
 sys.path.insert(0, '.')
@@ -28,22 +28,37 @@ mergeFiles = (
     ('data/signature', '[+]'),
 )
 
-action = None
-
-if len(sys.argv) == 2:
-    if sys.argv[1] in ('create-db','sort'):
-        action = sys.argv[1]
-    else:
-        usage()
-else:
+if len(sys.argv) < 2:
     usage()
 
-if action == 'sort':
+if sys.argv[1] == 'sort':
     for fn in adjustFiles:
         sortFileInPlace('adjust', files=[fn])
     for fn, _ in mergeFiles:
         sortFileInPlace('merge', files=[fn])
     exit(0)
+
+if sys.argv[1] != 'create-db':
+    usage()
+
+idx = 2
+
+rawMode = False
+if len(sys.argv) > idx and sys.argv[idx] == '--raw':
+    rawMode = True
+    idx += 1
+
+dbfile = ''
+if len(sys.argv) > idx:
+    dbfile = sys.argv[idx]
+    if dbfile.startswith('-'):
+        usage()
+
+if not dbfile:
+    dbfile = os.environ.get('SCOWL_DB', '')
+if not dbfile:
+    dbfile = 'scowl.db'
+    
 
 t = None
 def start(msg):
@@ -99,19 +114,20 @@ for fn, tag in mergeFiles:
         mergeEntries(conn, f, tag = tag)
     finish()
 
-start("simplify SCOWL info")
-conn.execute("delete from scowl_data "
-             "where (level,category,region,tag,group_id,pos) "
-             "  in (select level,category,region,tag,group_id,pos from scowl_data_cleanup)")
-finish()
+if not rawMode:
+    start("simplify SCOWL info")
+    conn.execute("delete from scowl_data "
+                 "where (level,category,region,tag,group_id,pos) "
+                 "  in (select level,category,region,tag,group_id,pos from scowl_data_cleanup)")
+    finish()
 
-start("combine POS")
-combinePOS(conn)
-finish()
+    start("combine POS")
+    combinePOS(conn)
+    finish()
 
 start("finalizing DB")
 finalizeDB(conn)
-final = openDB("scowl.db", copyFrom=conn)
+final = openDB(dbfile, copyFrom=conn)
 final.close()
 finish()
 

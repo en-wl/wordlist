@@ -66,8 +66,11 @@ def printWordList(args):
     conn = libscowl.openDB(args.db)
     kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'func')}
     words = sorted(libscowl.getWords(conn, **kwargs))
+    prev = None
     for w in words:
-        print(w)
+        if w != prev:
+            print(w)
+        prev = w
 
 def filterDB(args):
     kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'target', 'export', 'func', 'show_clusters')}

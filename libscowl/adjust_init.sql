@@ -117,4 +117,6 @@ create table temp.new_cluster_comments (
   comment text -- null to remove comment
 ) without rowid;
 
+
+
 commit;

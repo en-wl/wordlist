@@ -480,7 +480,6 @@ def adjustEntries(conn, f = None, *,
                         conn.executemany("insert or replace into scowl_info_to_clear values (?, ?, ?, ?, ?)",
                                          ((si.level, si.category, si.region, tag,
                                            sg.id) for si in s.si for tag in si.tags))
-
                     if isinstance(s, ScowlLineInfo):
                         # fixme: should likely verify words
                         if s.expand:
@@ -496,6 +495,16 @@ def adjustEntries(conn, f = None, *,
                         conn.executemany("insert or replace into new_scowl_override values (?, ?, ?, ?, ?, ?, ?)",
                                          ((si.level, si.category, si.region, tag,
                                            sg.id, word, s.action == 'replace') for si in s.si for tag in si.tags for word in s.words))
+
+                for level, category, region, tag in conn.execute(           
+                        "select level, category, region, tag "
+                        "  from scowl_info_to_clear c "
+                        "  cross join (select main_group_id, other_group_id as group_id from to_merge) m using (main_group_id) "
+                        "  left join scowl_data d using (group_id, level, category, region, tag) "
+                        "  where main_group_id = ? "
+                        "  group by level, category, region, tag "
+                        "  having count(d.group_id) == 0 ", (sg.id,)):
+                    raise ValueError(f"unable to remove scowl info: {level} {category} {region} {tag}")
 
                 # fixme: look into avoiding duplicates
                 conn.execute("insert or replace into new_group_info (main_group_id, base_pos, defn_note, pos_class, usage_note, lemma_rank) values (?, ?, ?, ?, ?, ?)",

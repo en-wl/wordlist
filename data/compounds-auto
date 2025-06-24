@@ -1,0 +1,13668 @@
+_: A1
+_v: A-1
+
+_: aboveboard <aj>
+_V: above-board
+
+_: aboveboard <av>
+_V: above-board
+
+_: aboveground <aj>
+_V: above-ground
+
+_: above-mentioned <aj>
+_V: abovementioned
+
+_: absent-minded
+_v: absentminded <aj>
+
+_: absent-mindedly
+_.: absentmindedly <av>
+
+_: absent-mindedness
+_.: absentmindedness <n>
+
+_: acoustoelectric
+_=: acousto-electric
+
+_: addlebrained <aj>
+_?: addle-brained
+
+_: addleheaded
+_=: addle-headed
+
+_: addlepated <aj>
+_V: addle-pated
+
+_: adman <n>
+_V: ad-man
+
+_: African-American <n>
+_v: African American <n>
+
+_: after all <av>
+_v: afterall
+
+_: afterclap <n>
+_?: after-clap
+
+_: afterdamp <n>
+_?: after-damp
+
+_: aftereffect <n>
+_V: after-effect <n>
+
+_: afterguard
+_V: after-guard
+
+_: afterimage <n>
+_V: after-image
+
+_: afterlife <n>
+_-: after-life <n>
+
+_: after-school <aj>
+_v: afterschool
+
+_: aftertax
+_=: after-tax
+
+_: air bag <n>
+_v: airbag <n>
+
+_: air base <n>
+_v: airbase <n>
+_-: air-base <n>
+
+_: airbed <n>
+_?: air bed <n>
+
+_: air-conditioned <aj>
+_v: air conditioned
+
+_: air conditioner <n>
+_v: air-conditioner <n>
+
+_: air conditioning <n>
+_v: air-conditioning
+
+_: airdrop <v>
+_v: air-drop <v>
+
+_: air gun <n>
+_v: airgun <n>
+_V: air-gun
+
+_: air hole <n>
+_v: airhole <n>
+
+_: air letter <n>
+_v: airletter <n>
+
+_: air lock <n>
+_.: airlock <n>
+_-: air-lock <n>
+
+_: airmail <n>
+_v: air mail <n>
+
+_: air power <n>
+_v: airpower <n>
+
+_: air shaft <n>
+_v: airshaft <n>
+
+_: airshot <n>
+_=: air shot
+
+_: airshow <n>
+_?: air show <n>
+
+_: airspace <n>
+_v: air space <n>
+
+_: airspeed <n>
+_v: air speed
+
+_: airstrike <n>
+_v: air strike <n>
+_-: air-strike <n>
+
+_: air time
+_v: airtime <n>
+
+_: air-traffic control
+_v: air traffic control
+
+_: a la
+_v: ala <n>
+
+_: alackaday
+_=: alack-a-day
+
+_: alderfly <n>
+_=: alder-fly
+
+_: alehouse <n>
+_V: ale-house <n>
+
+_: alfresco <aj>
+_v: al fresco
+
+_: alfresco <av>
+_v: al fresco
+
+_: all-clear
+_=: all clear <n>
+
+_: all in <aj>
+_v: all-in
+
+_: allover <aj>
+_?: all over <aj>
+_v: all-over
+
+_: all over <av>
+_v: all-over
+
+_: allover <n>
+_=: all-over
+
+_: allsorts
+_=: all-sorts
+
+_: almshouse <n>
+_-: alms-house <n>
+
+_: almsman <n>
+_V: alms-man
+
+_: almswoman <n>
+_?: alms-woman
+
+_: aluminosilicate <n>
+_=: alumino-silicate <n>
+
+_: alumroot <n>
+_V: alum-root
+
+_: amazonstone <n>
+_=: amazon-stone
+
+_: ambsace <n>
+_?: ambs-ace
+
+_: amesace <n>
+_?: ames-ace
+
+_: amour propre <n>
+_=: amour-propre
+
+_: angelfish <n>
+_-: angel-fish
+
+_: angleworm <n>
+_V: angle-worm
+
+_: answerback <n>
+_=: answer back
+
+_: ant bear <n>
+_=: ant-bear <n>
+_V: antbear <n>
+
+_: antbird <n>
+_V: ant-bird <n>
+
+_: anteater <n>
+_V: ant-eater <n>
+
+_: antebellum <aj>
+_v: ante-bellum
+
+_: antemortem <aj>
+_V: ante mortem
+
+_: anthill <n>
+_-: ant-hill <n>
+
+_: antiabortion <a>
+_v: anti-abortion
+
+_: antiaircraft <aj>
+_?: anti-aircraft
+
+_: anti-aircraft
+_.: antiaircraft <n>
+
+_: anti-choice
+_v: antichoice
+
+_: antiestablishment
+_?: anti-establishment
+
+_: antifederalism <n>
+_=: anti-federalism
+
+_: antifederalist <n>
+_=: anti-federalist
+
+_: antihero <n>
+_v: anti-hero <n>
+
+_: antilock
+_?: anti-lock
+
+_: antimatter <n>
+_-: anti-matter
+
+_: antinational
+_=: anti-national
+
+_: antinovel <n>
+_V: anti-novel
+
+_: antipersonnel <aj>
+_?: anti-personnel
+
+_: antipredator <n>
+_V: anti-predator <n>
+
+_: antiroll
+_V: anti-roll
+
+_: antitank <aj>
+_?: anti-tank
+
+_: antitrust <aj>
+_-: anti-trust
+
+_: antivitamin <n>
+_=: anti-vitamin <n>
+
+_: ant lion <n>
+_?: ant-lion <n>
+_v: antlion <n>
+
+_: anymore <av>
+_V: any more
+
+_: apelike <aj>
+_V: ape-like
+
+_: ape-man <n>
+_v: apeman <n>
+
+_: apeshit
+_V: ape shit
+
+_: applejack <n>
+_-: apple-jack
+
+_: applesauce <n>
+_-: apple sauce <n>
+
+_: aqua fortis <n>
+_.: aquafortis
+
+_: aqua regia <n>
+_v: aqua-regia
+
+_: aquiver
+_V: a-quiver
+
+_: archenemy <n>
+_v: arch-enemy <n>
+
+_: archerfish <n>
+_V: archer-fish
+
+_: archfiend <n>
+_V: arch-fiend
+
+_: archpriest <n>
+_V: arch-priest
+
+_: armyworm <n>
+_V: army worm <n>
+
+_: art-house
+_v: art house <n>
+_v: arthouse
+
+_: artilleryman <n>
+_-: artillery-man
+
+_: ashcan <n>
+_-: ash-can <n>
+
+_: ashplant <n>
+_V: ash-plant
+
+_: ashtray <n>
+_-: ash-tray <n>
+
+_: at home <n>
+_v: at-home <n>
+
+_: at risk
+_v: at-risk
+
+_: attorney general <n>
+_v: attorney-general
+
+_: audio book <n>
+_v: audiobook <n>
+
+_: audiovisual <aj>
+_v: audio-visual
+
+_: audio-visual
+_.: audiovisual <n>
+
+_: autoimmunity <n>
+_-: auto-immunity
+
+_: autointoxication <n>
+_V: auto-intoxication
+
+_: autosuggestion <n>
+_V: auto-suggestion <n>
+
+_: aweather
+_?: a-weather
+
+_: aweigh <aj>
+_V: a-weigh
+
+_: awe-stricken
+_V: awestricken <aj>
+
+_: awestruck <aj>
+_v: awe-struck
+
+_: axletree <n>
+_V: axle-tree
+
+_: babydoll <n>
+_=: baby doll <n>
+
+_: babysit <v>
+_?: baby-sit <v>
+
+_: babysitter <n>
+_v: baby sitter
+_v: baby-sitter <n>
+
+_: babysitting <n>
+_V: baby-sitting
+
+_: baby talk <n>
+_?: baby-talk
+_v: babytalk <n>
+
+_: backbench <n>
+_V: back-bench <n>
+
+_: backblock <n>
+_=: back-block <n>
+
+_: back burner <n>
+_V: backburner
+
+_: backcloth <n>
+_-: back-cloth <n>
+
+_: backcountry <n>
+_v: back country <n>
+_V: back-country
+
+_: backdoor <n>
+_?: back door <n>
+_V: back-door <n>
+
+_: backlight <m>
+_V: back light
+
+_: backlighting <n>
+_V: back-lighting
+
+_: backload <m>
+_=: back-load <m>
+
+_: back seat <n>
+_v: backseat <n>
+
+_: back-seat driver
+_v: backseat driver <n>
+
+_: backstreet <n>
+_v: back street <n>
+
+_: back talk <n>
+_.: backtalk <n>
+
+_: backup <n>
+_v: back-up <n>
+
+_: backyard <n>
+_v: back yard
+
+_: baldhead <n>
+_V: bald-head
+
+_: baldheaded
+_?: bald-headed <aj>
+
+_: balefire <n>
+_?: bale-fire
+
+_: ball boy <n>
+_.: ballboy <n>
+
+_: ballcock <n>
+_v: ball cock <n>
+
+_: ballflower <n>
+_?: ball-flower
+
+_: ball game <n>
+_v: ballgame <n>
+
+_: ballgirl <n>
+_?: ball girl <n>
+
+_: ballpark <n>
+_v: ball park
+
+_: ballpoint <n>
+_V: ball-point <n>
+
+_: ballroom <n>
+_-: ball-room <n>
+
+_: band-aid
+_v: bandaid <n>
+
+_: bandbox <n>
+_-: band-box <n>
+
+_: band saw <n>
+_v: bandsaw <n>
+_V: band-saw <n>
+
+_: bandy-legged <aj>
+_v: bandylegged
+
+_: bangtail <n>
+_?: bang-tail
+
+_: bankbook <n>
+_-: bank-book <n>
+
+_: bank card <n>
+_v: bankcard <n>
+
+_: banknote <n>
+_v: bank note <n>
+_-: bank-note <n>
+
+_: bantamweight <n>
+_-: bantam-weight
+
+_: barbell <n>
+_-: bar-bell <n>
+
+_: barbershop <n>
+_-: barber-shop
+
+_: bare-bones
+_v: bare bones
+
+_: bare-knuckle <aj>
+_v: bareknuckle
+
+_: bare-knuckled <aj>
+_v: bareknuckled
+
+_: bargain-basement
+_=: bargain basement <n>
+
+_: barklouse
+_=: bark louse <n>
+
+_: barrelhouse <n>
+_V: barrel-house
+
+_: barroom <n>
+_-: bar-room <n>
+
+_: baseborn <aj>
+_?: base-born
+
+_: baseline <n>
+_v: base line
+_-: base-line <n>
+
+_: base runner <n>
+_v: baserunner <n>
+
+_: bashibazouk
+_?: bashi-bazouk
+
+_: bathmat <n>
+_?: bath mat <n>
+
+_: bathwater <n>
+_v: bath water <n>
+
+_: battle cruiser <n>
+_V: battle-cruiser <n>
+_V: battlecruiser <n>
+
+_: bawdyhouse <n>
+_V: bawdy-house
+
+_: B & B
+_v: B&B
+
+_: beach ball <n>
+_V: beachball <n>
+
+_: beachboy <n>
+_=: beach boy <n>
+
+_: beadroll <n>
+_?: bead-roll
+
+_: beanbag <n>
+_-: bean-bag <n>
+
+_: beansprout <n>
+_?: bean sprout <n>
+
+_: bearbaiting <n>
+_=: bear-baiting
+
+_: bearberry <n>
+_V: bear-berry
+
+_: bearcat <n>
+_?: bear-cat <n>
+
+_: bear hug <n>
+_V: bearhug <n>
+
+_: bed and breakfast <n>
+_=: bed-and-breakfast <n>
+
+_: bed linen <n>
+_?: bed-linen
+_v: bedlinen
+
+_: bedplate <n>
+_?: bed-plate
+
+_: bedroll <n>
+_-: bed-roll <n>
+
+_: bedsheet <n>
+_V: bed sheet <n>
+
+_: bedsitter <n>
+_v: bed-sitter <n>
+
+_: bed-wetter
+_V: bedwetter <n>
+
+_: bed-wetting <n>
+_v: bedwetting <n>
+
+_: beebread <n>
+_V: bee-bread
+
+_: beechdrops
+_V: beech-drops
+
+_: beefwood <n>
+_?: beef-wood
+
+_: beer mat <n>
+_=: beer-mat <n>
+_v: beermat <n>
+
+_: behindhand <aj>
+_V: behind-hand
+
+_: behindhand <av>
+_V: behind-hand
+
+_: bellbird <n>
+_V: bell-bird
+
+_: bell-bottom <aj>
+_v: bellbottom <aj>
+
+_: bell-bottomed <aj>
+_v: bellbottomed
+
+_: bell-bottoms
+_v: bell bottoms
+
+_: bellboy <n>
+_-: bell-boy <n>
+
+_: belles-lettres <n>
+_=: belles lettres <n>
+
+_: bellflower <n>
+_V: bell-flower <n>
+
+_: bellhop <n>
+_-: bell-hop <n>
+
+_: bell pull <n>
+_v: bellpull <n>
+
+_: bell push <n>
+_v: bellpush <n>
+
+_: bellyband <n>
+_V: belly-band
+
+_: bellybutton <n>
+_?: belly button <n>
+_V: belly-button <n>
+
+_: belly flop <n>
+_v: bellyflop <n>
+
+_: benchmark <n>
+_v: bench mark <n>
+
+_: bench press <n>
+_=: bench-press
+
+_: bent grass <n>
+_.: bentgrass <n>
+_V: bent-grass <n>
+
+_: bestseller <n>
+_?: best-seller
+_v: best seller <n>
+
+_: best-selling <aj>
+_v: bestselling
+
+_: beta-carotene <n>
+_v: betacarotene
+
+_: betel nut <n>
+_=: betel-nut <n>
+_V: betelnut <n>
+
+_: big bang theory <n>
+_=: big-bang theory <n>
+
+_: big-headed
+_v: bigheaded <aj>
+
+_: bighearted <aj>
+_?: big-hearted
+
+_: big-league
+_=: big league <n>
+
+_: bigmouth <n>
+_?: big mouth <n>
+
+_: bigmouthed <aj>
+_=: big-mouthed
+
+_: big name <n>
+_=: big-name
+
+_: big shot <n>
+_v: bigshot <n>
+
+_: big stick <n>
+_v: bigstick
+
+_: big-ticket <aj>
+_v: big ticket
+
+_: big-time
+_=: big time <n>
+_V: bigtime
+
+_: bilge water <n>
+_=: bilge-water
+_V: bilgewater <n>
+
+_: billycan <n>
+_V: billy-can
+
+_: birdbrained <a>
+_?: bird-brained
+
+_: birdlife
+_=: bird life
+
+_: birdlime <n>
+_V: bird-lime
+
+_: birdlime <v>
+_V: bird-lime
+
+_: birdshot <n>
+_v: bird shot <n>
+
+_: birdsong <n>
+_V: bird song
+
+_: bird watcher <n>
+_.: birdwatcher <n>
+_=: bird-watcher <n>
+
+_: bird-watching
+_v: birdwatching <n>
+
+_: birth date
+_V: birthdate <n>
+
+_: birth mother <n>
+_v: birthmother <n>
+
+_: birth parent <n>
+_v: birthparent <n>
+
+_: birthrate <n>
+_?: birth rate <n>
+_-: birth-rate
+
+_: birthweight <n>
+_V: birth-weight
+
+_: bite-size
+_V: bitesize
+
+_: bitmapped
+_V: bit-mapped
+
+_: bitterroot <n>
+_V: bitter-root
+
+_: bittersweet <aj>
+_v: bitter-sweet
+
+_: bittersweet <n>
+_v: bitter-sweet
+
+_: biweekly <n>
+_V: bi-weekly <n>
+
+_: black-and-blue <aj>
+_=: black and blue
+
+_: black and white <aj>
+_=: black-and-white <aj>
+
+_: black body <n>
+_.: blackbody <n>
+
+_: black buck <n>
+_v: blackbuck <n>
+
+_: blackfly <n>
+_=: black fly <n>
+
+_: black light
+_v: blacklight
+
+_: blacksnake <n>
+_V: black-snake
+
+_: black spot <n>
+_v: blackspot <n>
+
+_: bladdernut <n>
+_V: bladder-nut
+
+_: blastoff <n>
+_v: blast-off <n>
+
+_: blind gut <n>
+_v: blindgut <n>
+
+_: blindman's buff <n>
+_=: blindman's-buff
+_v: blind man's buff
+
+_: blind side <n>
+_v: blind-side
+
+_: blindside <v>
+_V: blind-side
+
+_: blockchain <n>
+_V: block-chain
+
+_: bloodbath <n>
+_v: blood bath
+_-: blood-bath <n>
+
+_: bloodcurdling <aj>
+_V: blood-curdling
+
+_: bloodcurdlingly
+_=: blood-curdlingly
+
+_: bloodguilt <n>
+_=: blood-guilt
+
+_: bloodguiltiness <n>
+_=: blood-guiltiness
+
+_: bloodguilty <aj>
+_=: blood-guilty
+
+_: blood heat <n>
+_v: bloodheat
+
+_: blood-red <aj>
+_v: bloodred
+
+_: blood sport <n>
+_v: bloodsport <n>
+
+_: bloodworm <n>
+_V: blood-worm
+
+_: blow-dryer <n>
+_=: blow dryer <n>
+
+_: blowhard <n>
+_v: blow-hard
+
+_: blowhole <n>
+_v: blow-hole
+
+_: blow job <n>
+_v: blowjob <n>
+
+_: blowout <n>
+_-: blow-out <n>
+
+_: blowup <n>
+_v: blow-up <n>
+
+_: blue blood <n>
+_v: blue-blood
+_v: blueblood <n>
+
+_: bluebonnet <n>
+_V: blue-bonnet
+
+_: blue book <n>
+_v: bluebook <n>
+
+_: blue gum <n>
+_v: bluegum <n>
+
+_: blue jay <n>
+_v: bluejay <n>
+
+_: blue jeans <n>
+_v: bluejeans <n>
+
+_: bluepoint <n>
+_?: blue point <n>
+
+_: blue tit <n>
+_v: bluetit <n>
+
+_: bluetongue <n>
+_V: blue-tongue
+
+_: boardinghouse <n>
+_?: boarding house <n>
+
+_: boatbuilder <n>
+_=: boat-builder <n>
+
+_: boat hook <n>
+_.: boathook <n>
+_V: boat-hook <n>
+
+_: boatload <n>
+_-: boat-load <n>
+
+_: boat race <n>
+_v: boatrace <n>
+
+_: bobby socks
+_v: bobbysocks
+
+_: bobby sox
+_v: bobbysox
+
+_: bobbysoxer <n>
+_v: bobby-soxer <n>
+
+_: bobwhite <n>
+_-: bob-white
+
+_: bodybuilder <n>
+_v: body builder
+_V: body-builder <n>
+
+_: bodybuilding <n>
+_v: body building
+_v: body-building
+
+_: bodycheck <m>
+_V: body-check <m>
+
+_: body warmer <n>
+_v: bodywarmer <n>
+
+_: bogyman <n>
+_V: bogy-man
+
+_: boiler suit <n>
+_v: boilersuit <n>
+
+_: boiloff <n>
+_=: boil off
+
+_: boldface <n>
+_V: bold face <n>
+
+_: bold-faced
+_.: boldfaced <a>
+
+_: bollworm <n>
+_V: boll-worm
+
+_: bolthead <n>
+_V: bolt-head
+
+_: bolthole <n>
+_?: bolt-hole <n>
+
+_: boltrope <n>
+_?: bolt-rope
+
+_: bombsite <n>
+_v: bomb site <n>
+_V: bomb-site <n>
+
+_: bondholder <n>
+_-: bond-holder
+
+_: bondwoman <n>
+_v: bond-woman
+
+_: boneblack <n>
+_?: bone-black
+
+_: bone-dry <aj>
+_v: bone dry <aj>
+
+_: bone meal
+_v: bonemeal <n>
+_V: bone-meal
+
+_: bonnyclabber <n>
+_?: bonny-clabber
+
+_: boo-boo <n>
+_v: booboo <n>
+
+_: bookend <n>
+_-: book-end <n>
+
+_: boombox <n>
+_v: boom box <n>
+
+_: boom town <n>
+_.: boomtown <n>
+
+_: boot-cut
+_v: bootcut
+
+_: bootjack <n>
+_V: boot-jack <n>
+
+_: bopeep <n>
+_=: bo-peep
+
+_: borderline <aj>
+_v: border line
+
+_: borderline <n>
+_v: border line
+
+_: bottlenose <n>
+_V: bottle-nose
+
+_: bottomland <n>
+_V: bottom-land
+
+_: bottom line <n>
+_v: bottom-line
+
+_: bowerbird <n>
+_V: bower-bird
+
+_: bowleg <aj>
+_?: bow-leg
+
+_: bowleg <n>
+_V: bow-leg
+
+_: bowlegged <aj>
+_v: bow-legged
+
+_: bowwow <n>
+_?: bow-wow <n>
+
+_: boxcar <n>
+_-: box-car
+
+_: boxhaul <m>
+_?: box-haul
+
+_: boxroom <n>
+_v: box room <n>
+
+_: brain-dead
+_V: braindead
+
+_: brain stem <n>
+_v: brainstem <n>
+
+_: brainteaser <n>
+_v: brain-teaser <n>
+
+_: brain wave <n>
+_v: brainwave <n>
+
+_: brakesman
+_?: brakes-man
+
+_: branch line <n>
+_v: branchline <n>
+
+_: brand name <n>
+_v: brand-name
+
+_: brat pack <n>
+_.: bratpack
+
+_: brazen-faced <aj>
+_v: brazenfaced
+
+_: brazilwood <n>
+_V: brazil-wood
+
+_: bread and butter <n>
+_=: bread-and-butter
+
+_: breadbasket <n>
+_-: bread-basket
+
+_: breadboard <n>
+_-: bread-board <n>
+
+_: breadcrumb <n>
+_V: bread-crumb <n>
+
+_: breadstick <n>
+_V: bread-stick <n>
+
+_: break-even
+_v: breakeven <a>
+
+_: break-even
+_v: breakeven <n>
+
+_: breakfront <a>
+_-: break-front
+
+_: breakfront <n>
+_-: break-front
+
+_: breakout <n>
+_-: break-out <n>
+
+_: break point <n>
+_v: breakpoint <n>
+
+_: breakup <n>
+_v: break-up <n>
+
+_: breaststroke <n>
+_v: breast stroke
+
+_: breast stroke
+_.: breaststroke <v>
+
+_: breechloader <n>
+_?: breech-loader
+
+_: breeze-block <n>
+_v: breeze block <n>
+
+_: brewhouse
+_V: brew-house
+
+_: bridlewise
+_?: bridle-wise
+
+_: brierroot <n>
+_V: brier-root
+
+_: brierwood <n>
+_?: brier-wood <n>
+
+_: bristletail <n>
+_V: bristle-tail
+
+_: broadbrim
+_?: broad-brim
+
+_: broad-brush
+_v: broadbrush
+
+_: broadleaf <aj>
+_V: broad-leaf
+
+_: broadleaf <n>
+_V: broad-leaf
+
+_: broad-mindedness <n>
+_V: broadmindedness
+
+_: brokenhearted <aj>
+_v: broken-hearted
+
+_: bromegrass <n>
+_V: brome-grass
+
+_: bronchodilator <n>
+_V: broncho-dilator
+
+_: broncobuster <n>
+_V: bronco-buster
+
+_: broodmare <n>
+_V: brood-mare <n>
+
+_: broomcorn <n>
+_V: broom-corn
+
+_: brown-noser <n>
+_.: brownnoser <n>
+
+_: brushfire <n>
+_V: brush-fire
+
+_: brush-off <n>
+_v: brushoff <n>
+
+_: brushup <n>
+_=: brush-up <n>
+
+_: bubble gum <n>
+_v: bubblegum <n>
+
+_: bubbleheaded
+_V: bubble-headed
+
+_: buckeye <n>
+_-: buck-eye
+
+_: buckjumper
+_?: buck-jumper
+
+_: bucksaw <n>
+_V: buck-saw <n>
+
+_: buffaloberry <n>
+_V: buffalo-berry
+
+_: buffalo fish <n>
+_v: buffalofish <n>
+
+_: buildup <n>
+_v: build-up <n>
+
+_: built-in <aj>
+_v: builtin
+
+_: bullbaiting <n>
+_=: bull-baiting
+
+_: bull bar <n>
+_v: bullbar <n>
+
+_: bullfighting <n>
+_-: bull-fighting
+
+_: bullheaded <aj>
+_v: bull-headed
+
+_: bullheadedly <a>
+_V: bull-headedly
+
+_: bullheadedness <n>
+_-: bull-headedness
+
+_: bullhorn <n>
+_-: bull-horn
+
+_: bull mastiff <n>
+_v: bullmastiff <n>
+
+_: bull-necked
+_v: bullnecked <aj>
+
+_: bullnose <n>
+_v: bull nose <n>
+
+_: bullpen <n>
+_v: bull pen
+_-: bull-pen <n>
+
+_: bullring <n>
+_-: bull-ring <n>
+
+_: bull snake <n>
+_v: bullsnake <n>
+
+_: bull terrier <n>
+_V: bull-terrier <n>
+_V: bullterrier <n>
+
+_: bullyboy <n>
+_?: bully-boy <n>
+_v: bully boy <n>
+
+_: bumblebee <n>
+_v: bumble bee
+_-: bumble-bee <n>
+
+_: bumboat <n>
+_?: bum-boat <n>
+
+_: bunch grass <n>
+_.: bunchgrass <n>
+_V: bunch-grass
+
+_: bunghole <n>
+_-: bung-hole <n>
+
+_: burned out
+_=: burned-out <aj>
+
+_: burnout <n>
+_-: burn-out
+
+_: burn out <v>
+_v: burn-out
+
+_: busbar <n>
+_=: bus-bar
+
+_: busboy <n>
+_v: bus boy
+
+_: bush baby <n>
+_V: bushbaby <n>
+
+_: bushbuck <n>
+_V: bush-buck
+
+_: bushelman <n>
+_?: bushel-man
+
+_: bushpig <n>
+_=: bush pig
+
+_: bushtit <n>
+_V: bush-tit <n>
+
+_: businesslike <aj>
+_V: business-like
+
+_: butcherbird <n>
+_V: butcher-bird
+
+_: butterfat <n>
+_-: butter-fat
+
+_: butterfingered <aj>
+_V: butter-fingered
+
+_: butterfingers <n>
+_V: butter-fingers
+
+_: butterfish <n>
+_V: butter-fish
+
+_: butterflyfish <n>
+_V: butterfly-fish
+
+_: buttermilk <n>
+_-: butter-milk
+
+_: buttonball <n>
+_?: button-ball
+
+_: buttonbush <n>
+_V: button-bush
+
+_: buttonhook <n>
+_V: button-hook <n>
+
+_: buttonwood <n>
+_V: button-wood
+
+_: buyback <n>
+_V: buy-back
+
+_: buzz cut <n>
+_v: buzzcut <n>
+
+_: buzz saw <n>
+_v: buzzsaw <n>
+
+_: buzzwig <n>
+_=: buzz-wig <n>
+
+_: buzzword <n>
+_V: buzz word <n>
+
+_: bye-law <n>
+_V: byelaw <n>
+
+_: byline <n>
+_v: by-line <n>
+
+_: byname <n>
+_V: by-name
+
+_: bypass <n>
+_v: by-pass
+
+_: bypass <v>
+_v: by-pass
+
+_: bypast <aj>
+_=: by-past
+
+_: byplay <n>
+_v: by-play
+
+_: by-product <n>
+_.: byproduct <n>
+
+_: bystreet <n>
+_?: by-street
+
+_: cabdriver <n>
+_v: cab driver <n>
+
+_: cabinetmaking <n>
+_V: cabinet-making
+
+_: cabstand <n>
+_-: cab-stand <n>
+
+_: ca'canny
+_?: ca' canny
+
+_: cachepot <n>
+_V: cache-pot
+
+_: caddisworm <n>
+_=: caddis worm
+
+_: cakehole <n>
+_=: cake hole <n>
+
+_: calc-tufa <n>
+_v: calctufa <n>
+
+_: calctuff <n>
+_=: calc-tuff
+
+_: call-board <n>
+_v: callboard <n>
+
+_: callboy <n>
+_V: call-boy <n>
+
+_: call-out <n>
+_v: callout <n>
+
+_: call-up <n>
+_=: call up <n>
+
+_: camelhair <n>
+_v: camel-hair
+
+_: campfire <n>
+_-: camp-fire <n>
+
+_: campstool <n>
+_V: camp-stool <n>
+
+_: camwood <n>
+_V: cam-wood
+
+_: candleberry <n>
+_V: candle-berry
+
+_: candlefish <n>
+_V: candle-fish
+
+_: candleholder <n>
+_V: candle-holder
+
+_: candlelight <n>
+_-: candle-light
+
+_: candlelighter <n>
+_=: candle-lighter
+
+_: candlenut <n>
+_?: candle-nut
+
+_: candlepower <n>
+_-: candle-power
+
+_: candlesnuffer <n>
+_=: candle-snuffer
+
+_: candlestick <n>
+_-: candle-stick <n>
+
+_: candlewood <n>
+_V: candle-wood
+
+_: candyfloss <n>
+_v: candy-floss
+
+_: candy striper <n>
+_v: candystriper
+
+_: canebrake <n>
+_-: cane-brake
+
+_: cankerworm <n>
+_V: canker-worm
+
+_: cannon fodder <n>
+_?: cannon-fodder
+_v: cannonfodder <n>
+
+_: cant hook <n>
+_v: canthook <n>
+
+_: canvasback <n>
+_-: canvas-back
+
+_: cap rock
+_.: caprock <n>
+
+_: cardcase <n>
+_=: card-case
+
+_: cardholder <n>
+_-: card-holder
+
+_: cardsharp <n>
+_v: card sharp <n>
+_-: card-sharp <n>
+
+_: cardsharper <n>
+_V: card-sharper <n>
+
+_: care worker <n>
+_v: careworker <n>
+
+_: car park <n>
+_v: carpark <n>
+
+_: car pool <n>
+_.: carpool <n>
+
+_: car-pooler
+_.: carpooler <n>
+
+_: carryback <n>
+_=: carry-back
+
+_: carry back <v>
+_v: carry-back
+
+_: carry-on <n>
+_v: carryon <n>
+
+_: carryout <a>
+_?: carry-out
+
+_: carry-out
+_v: carryout <n>
+
+_: carry out <v>
+_v: carry-out
+
+_: carryover <n>
+_=: carry-over <n>
+
+_: carte blanche <n>
+_V: carte-blanche
+
+_: carthorse <n>
+_?: cart horse <n>
+_V: cart-horse <n>
+
+_: car wash <n>
+_v: carwash <n>
+_V: car-wash <n>
+
+_: casebound
+_?: case-bound
+
+_: caseload <n>
+_-: case-load
+
+_: casework <n>
+_-: case-work
+
+_: caseworker <n>
+_-: case-worker <n>
+
+_: caseworm <n>
+_?: case-worm
+
+_: cashbook <n>
+_V: cash-book <n>
+
+_: cash card <n>
+_V: cashcard <n>
+
+_: cash flow <n>
+_v: cashflow
+
+_: castoff <n>
+_?: cast-off <n>
+
+_: catchall <n>
+_?: catch-all <n>
+
+_: catch phrase <n>
+_v: catchphrase <n>
+_V: catch-phrase
+
+_: catch-up
+_V: catchup <n>
+
+_: catch up <v>
+_v: catch-up
+
+_: cater-corner
+_.: catercorner <aj>
+
+_: cater-cornered <aj>
+_V: catercornered
+
+_: cathode-ray tube <n>
+_v: cathode ray tube <n>
+
+_: catlike <a>
+_V: cat-like
+
+_: catwalk <n>
+_-: cat-walk <n>
+
+_: cave-in <n>
+_=: cave in <n>
+
+_: caveman <n>
+_v: cave man <n>
+
+_: cedarbird <n>
+_=: cedar-bird
+
+_: cerecloth <n>
+_?: cere-cloth
+
+_: chainsaw <n>
+_?: chain saw <n>
+_v: chain-saw
+
+_: chainsaw <v>
+_v: chain-saw
+
+_: chain smoker <n>
+_v: chain-smoker <n>
+
+_: chainwheel <n>
+_V: chain wheel
+
+_: chairbed <n>
+_=: chair-bed
+
+_: chairlift <n>
+_v: chair lift <n>
+
+_: chamber pot <n>
+_V: chamberpot <n>
+
+_: changeover <n>
+_-: change-over <n>
+
+_: change-up <n>
+_.: changeup <n>
+_V: change up
+
+_: charbroil <v>
+_v: char-broil
+
+_: charge card <n>
+_V: chargecard <n>
+
+_: chargehand <n>
+_=: charge-hand
+
+_: charge sheet <n>
+_v: charge-sheet <n>
+
+_: chatline <n>
+_v: chat line <n>
+
+_: chawbacon <n>
+_=: chaw-bacon
+
+_: cheap-jack <n>
+_.: cheapjack <n>
+
+_: checkerberry <n>
+_?: checker-berry
+
+_: checklist <n>
+_v: check list
+
+_: checkoff <n>
+_v: check-off
+
+_: checkrein <n>
+_?: check-rein
+
+_: checkup <n>
+_v: check-up <n>
+
+_: cheekbone <n>
+_-: cheek-bone <n>
+
+_: cheerleader <n>
+_-: cheer-leader <n>
+
+_: cheeseparing <aj>
+_V: cheese-paring
+
+_: cheeseparing <n>
+_V: cheese-paring
+
+_: chef d'oeuvre
+_=: chef-d'oeuvre <n>
+
+_: cheongsam <n>
+_V: cheong-sam
+
+_: cherry-pick <m>
+_v: cherrypick <m>
+
+_: cherrystone <n>
+_V: cherry-stone
+
+_: cheval glass <n>
+_V: cheval-glass <n>
+
+_: chichi <aj>
+_v: chi-chi
+
+_: chichi <n>
+_v: chi-chi
+
+_: chickabiddy
+_?: chick-a-biddy <n>
+
+_: chicken feed <n>
+_v: chickenfeed <n>
+_V: chicken-feed
+
+_: chicken-hearted
+_v: chickenhearted <aj>
+
+_: chicken pox
+_v: chickenpox <n>
+
+_: chickpea <n>
+_v: chick pea
+_v: chick-pea <n>
+
+_: chiffchaff <n>
+_V: chiff-chaff
+
+_: childminder <n>
+_v: child minder <n>
+
+_: childproof <v>
+_V: child-proof <v>
+
+_: chili dog <n>
+_v: chilidog <n>
+
+_: chillout
+_V: chill out <v>
+
+_: chimneypiece <n>
+_V: chimney-piece <n>
+
+_: chitchat <n>
+_v: chit-chat <n>
+
+_: chitchat <v>
+_v: chit-chat <v>
+
+_: chock-full <aj>
+_v: chockfull
+
+_: chophouse <n>
+_-: chop-house <n>
+
+_: choplogic <n>
+_?: chop-logic
+
+_: chow chow <n>
+_.: chowchow <n>
+_=: chow-chow <n>
+
+_: chow mein <n>
+_V: chow-mein
+
+_: christcross
+_?: christ-cross
+
+_: chucklehead <n>
+_V: chuckle-head
+
+_: chuckleheaded
+_=: chuckle-headed
+
+_: chug-a-lug <m>
+_v: chugalug <m>
+
+_: churchgoer <n>
+_-: church-goer <n>
+
+_: churchgoing <aj>
+_V: church-going
+
+_: churchgoing <n>
+_V: church-going
+
+_: churchwarden <n>
+_-: church-warden <n>
+
+_: cinder block <n>
+_V: cinderblock <n>
+
+_: cinquefoil <n>
+_V: cinque-foil <n>
+
+_: cirrocumulus <n>
+_V: cirro-cumulus
+
+_: cirrostratus <n>
+_V: cirro-stratus
+
+_: clamshell <n>
+_V: clam-shell
+
+_: clapped-out
+_v: clapped out <aj>
+
+_: class action <n>
+_=: class-action
+
+_: class consciousness
+_v: class-consciousness
+
+_: clawfoot <n>
+_V: claw foot
+
+_: claw hammer <n>
+_=: claw-hammer <n>
+_v: clawhammer <n>
+
+_: claybank <n>
+_V: clay-bank
+
+_: cleanup <n>
+_v: clean-up <n>
+
+_: clear-headed
+_v: clearheaded <aj>
+
+_: clearheadedly
+_=: clear-headedly
+
+_: clear-headedness
+_.: clearheadedness <n>
+
+_: clearinghouse <n>
+_v: clearing house <n>
+
+_: clear-out <n>
+_v: clearout <n>
+
+_: clearstory <n>
+_?: clear-story
+
+_: clear up <v>
+_v: clear-up
+
+_: clergywoman <n>
+_-: clergy-woman
+
+_: clever dick <n>
+_v: cleverdick <n>
+
+_: cliffhanger <n>
+_v: cliff-hanger <n>
+
+_: climbdown <n>
+_V: climb-down <n>
+
+_: clingfilm <n>
+_v: cling film <n>
+
+_: clipboard <n>
+_-: clip-board <n>
+
+_: clock watcher <n>
+_v: clock-watcher <n>
+
+_: closed-circuit television <n>
+_v: closed circuit television
+
+_: closedown <n>
+_V: close-down <n>
+
+_: closefisted <aj>
+_?: close-fisted
+
+_: close-fitting <aj>
+_v: closefitting
+
+_: closemouthed <aj>
+_?: close-mouthed
+
+_: close-stool
+_.: closestool <n>
+
+_: close-up <n>
+_v: closeup <n>
+
+_: clothesbasket
+_V: clothes-basket <n>
+
+_: clotheshorse <n>
+_v: clothes horse <n>
+_V: clothes-horse <n>
+
+_: clothesline <n>
+_v: clothes line <n>
+_-: clothes-line <n>
+
+_: clothespin <n>
+_-: clothes-pin
+
+_: clothespress <n>
+_V: clothes-press <n>
+
+_: clubface <n>
+_V: club-face
+
+_: clubfoot <n>
+_v: club foot
+_-: club-foot
+
+_: clubfooted <aj>
+_?: club-footed
+
+_: clubhaul <m>
+_?: club-haul
+
+_: coach dog <n>
+_v: coachdog <n>
+
+_: coagency <n>
+_=: co-agency
+
+_: coagent <n>
+_=: co-agent
+
+_: coalbox <n>
+_=: coal-box <n>
+
+_: coalface <n>
+_V: coal-face <n>
+
+_: coalhole <n>
+_=: coal-hole <n>
+
+_: coalmine <n>
+_?: coal mine <n>
+_v: coal-mine <n>
+
+_: coal miner <n>
+_.: coalminer <n>
+_=: coal-miner
+
+_: coalsack <n>
+_=: coal-sack <n>
+
+_: coast guard
+_v: coastguard <n>
+
+_: coatdress <n>
+_V: coat-dress
+
+_: coatimondi <n>
+_=: coati-mondi <n>
+
+_: coatimundi <n>
+_V: coati-mundi <n>
+
+_: coauthor <v>
+_?: co-author <v>
+
+_: cobelligerent <n>
+_?: co-belligerent
+
+_: cock-a-leekie <n>
+_v: cockaleekie <n>
+
+_: cockcrow <n>
+_V: cock-crow
+
+_: cocklebur <n>
+_V: cockle-bur <n>
+
+_: cock-up <n>
+_v: cockup <n>
+
+_: code name <n>
+_=: code-name <n>
+_v: codename <n>
+
+_: codependency <n>
+_v: co-dependency
+
+_: codependent <n>
+_v: co-dependent <n>
+
+_: code word <n>
+_V: codeword <n>
+
+_: cod-liver oil <n>
+_v: cod liver oil <n>
+
+_: codpiece <n>
+_-: cod-piece <n>
+
+_: codriver <n>
+_=: co-driver <n>
+
+_: coed <n>
+_v: co-ed <n>
+
+_: coessential
+_?: co-essential
+
+_: coessentiality <n>
+_=: co-essentiality
+
+_: coeternally
+_V: co-eternally
+
+_: coeternity <n>
+_?: co-eternity
+
+_: coexistence <n>
+_V: co-existence
+
+_: coexistent <aj>
+_-: co-existent
+
+_: coextend <m>
+_?: co-extend
+
+_: coextension <n>
+_V: co-extension
+
+_: coextensive <aj>
+_V: co-extensive
+
+_: coffee cake <n>
+_v: coffeecake <n>
+
+_: coffeehouse <n>
+_v: coffee house <n>
+_-: coffee-house <n>
+
+_: coffeemaker <n>
+_v: coffee maker <n>
+_-: coffee-maker <n>
+
+_: coffeepot <n>
+_-: coffee-pot <n>
+
+_: cofferdam <n>
+_-: coffer-dam <n>
+
+_: cogwheel <n>
+_-: cog-wheel <n>
+
+_: coheir <n>
+_V: co-heir
+
+_: cohost <m>
+_?: co-host <m>
+
+_: coinhere <m>
+_V: co-inhere
+
+_: coinstantaneous
+_?: co-instantaneous
+
+_: coinsurance <n>
+_V: co-insurance
+
+_: cold-hearted
+_V: coldhearted <aj>
+
+_: cold-heartedly
+_V: coldheartedly
+
+_: cold-heartedness
+_V: coldheartedness <n>
+
+_: coleseed <n>
+_=: cole-seed
+
+_: coleslaw <n>
+_v: cole slaw
+_-: cole-slaw
+
+_: coletit <n>
+_=: cole-tit <n>
+
+_: colewort <n>
+_V: cole-wort
+
+_: collarbone <n>
+_-: collar-bone <n>
+
+_: colour-blindness
+_v: colour blindness <n>
+
+_: comeback <n>
+_-: come-back <n>
+
+_: commander in chief <n>
+_v: commander-in-chief <n>
+
+_: commanders-in-chief
+_v: commanders in chief
+
+_: common-sense
+_.: commonsense <aj>
+
+_: common sense <n>
+_v: common-sense
+
+_: companionway <n>
+_-: companion-way <n>
+
+_: concertmaster <n>
+_-: concert-master
+
+_: con man <n>
+_v: con-man
+_v: conman <n>
+
+_: con men
+_=: con-men
+
+_: container ship <n>
+_v: containership <n>
+
+_: cookbook <n>
+_-: cook-book <n>
+
+_: cool box <n>
+_v: coolbox <n>
+
+_: cool-headed
+_V: coolheaded <aj>
+
+_: cooncan <n>
+_?: coon-can
+
+_: coop <n>
+_?: co-op <n>
+
+_: cooperation <n>
+_v: co-operation
+
+_: cooperative <n>
+_v: co-operative <n>
+
+_: cooperatively <av>
+_v: co-operatively
+
+_: cooption <n>
+_?: co-option <n>
+
+_: cooptive
+_?: co-optive
+
+_: coordinate <n>
+_v: co-ordinate <n>
+
+_: coordinate <v>
+_v: co-ordinate <v>
+
+_: coordinated <aj>
+_v: co-ordinated <aj>
+
+_: coordinateness <n>
+_=: co-ordinateness
+
+_: coordination <n>
+_v: co-ordination
+
+_: copestone <n>
+_?: cope-stone
+
+_: copilot <n>
+_?: co-pilot <n>
+
+_: coping stone <n>
+_=: coping-stone <n>
+_v: copingstone <n>
+
+_: copolymer <n>
+_V: co-polymer
+
+_: cop-out <n>
+_V: copout <n>
+
+_: copresent <m>
+_=: co-present
+
+_: cop shop <n>
+_v: copshop <n>
+
+_: copy editor <n>
+_v: copyeditor <n>
+
+_: coralberry <n>
+_V: coral-berry
+
+_: coralroot <n>
+_=: coral-root
+
+_: corbiestep <n>
+_=: corbie-step <n>
+
+_: cordgrass <n>
+_V: cord-grass
+
+_: cordwood <n>
+_V: cord-wood
+
+_: corelation
+_?: co-relation
+
+_: corelative
+_?: co-relative
+
+_: coreligionist <n>
+_V: co-religionist <n>
+
+_: corespondent <n>
+_v: co-respondent <n>
+
+_: corival <n>
+_=: co-rival <n>
+
+_: corkscrew <n>
+_-: cork-screw <n>
+
+_: cornball <a>
+_-: corn-ball
+
+_: cornball <n>
+_-: corn-ball
+
+_: corn borer <n>
+_v: cornborer <n>
+
+_: cornbread <n>
+_v: corn bread
+_-: corn-bread
+
+_: corncake <n>
+_=: corn-cake
+
+_: corncob <n>
+_-: corn-cob <n>
+
+_: corn dodger <n>
+_=: corn-dodger
+_v: corndodger <n>
+
+_: cornerman <n>
+_V: corner-man
+
+_: cornerstone <n>
+_-: corner-stone <n>
+
+_: cornfed
+_=: corn-fed <aj>
+
+_: cornflakes <n>
+_v: corn flakes
+
+_: cornflour <n>
+_v: corn-flour
+
+_: cornmeal <n>
+_v: corn meal
+
+_: corn pone
+_.: cornpone <n>
+_V: corn-pone
+
+_: cosignatory <n>
+_V: co-signatory <n>
+
+_: costar <n>
+_?: co-star <n>
+
+_: costar <v>
+_?: co-star <v>
+
+_: cost-effective <aj>
+_v: cost effective
+
+_: cotenancy <n>
+_=: co-tenancy
+
+_: cotenant <n>
+_?: co-tenant <n>
+
+_: cotidal
+_?: co-tidal
+
+_: cottonweed <n>
+_?: cotton-weed
+
+_: cottonwood <n>
+_-: cotton-wood
+
+_: countdown <n>
+_V: count-down <n>
+
+_: counteragent <n>
+_V: counter-agent <n>
+
+_: counterattraction <n>
+_?: counter-attraction <n>
+
+_: counterblast <n>
+_V: counter-blast <n>
+
+_: counterblow <n>
+_V: counter-blow
+
+_: counterclaim <n>
+_-: counter-claim <n>
+
+_: countercurrent <n>
+_V: counter-current
+
+_: counterespionage <n>
+_v: counter-espionage
+
+_: counterevidence <n>
+_=: counter-evidence
+
+_: counterforce <n>
+_V: counter-force
+
+_: counterglow <n>
+_?: counter-glow
+
+_: counterinfluence <m>
+_=: counter-influence
+
+_: counterintelligence <n>
+_V: counter-intelligence
+
+_: counterirritant <n>
+_V: counter-irritant <n>
+
+_: counterirritation <n>
+_V: counter-irritation
+
+_: countermeasure <n>
+_-: counter-measure <n>
+
+_: countermove <n>
+_V: counter-move
+
+_: countermove <v>
+_V: counter-move
+
+_: countermovement <n>
+_V: counter-movement
+
+_: counteroffensive <n>
+_V: counter-offensive <n>
+
+_: counterpoison <n>
+_V: counter-poison
+
+_: counterpressure <n>
+_V: counter-pressure
+
+_: counterproductive <aj>
+_-: counter-productive
+
+_: counterproposal <n>
+_V: counter-proposal <n>
+
+_: counterrevolution <n>
+_v: counter-revolution <n>
+
+_: counterrevolutionary <n>
+_v: counter-revolutionary <n>
+
+_: countersignature <n>
+_V: counter-signature <n>
+
+_: counterspy <n>
+_V: counter-spy
+
+_: counterstatement <n>
+_?: counter-statement <n>
+
+_: countersubject <n>
+_?: counter-subject <n>
+
+_: countertenor <n>
+_-: counter-tenor <n>
+
+_: counterview <n>
+_V: counter-view
+
+_: counterweigh <m>
+_V: counter-weigh
+
+_: counterweight <n>
+_-: counter-weight <n>
+
+_: counterwork <n>
+_?: counter-work
+
+_: countinghouse <n>
+_V: counting-house <n>
+
+_: country and western <n>
+_v: country-and-western
+
+_: country dance <n>
+_v: country-dance <n>
+
+_: country seat <n>
+_v: countryseat <n>
+_V: country-seat <n>
+
+_: courthouse <n>
+_-: court-house
+
+_: court-martial <n>
+_v: court martial
+
+_: court-martial <v>
+_v: court martial
+
+_: courts-martial
+_v: courts martial
+
+_: cover-up <n>
+_v: coverup <n>
+
+_: cowlstaff <n>
+_=: cowl-staff
+
+_: coworker <n>
+_?: co-worker <n>
+
+_: cowpea <n>
+_V: cow-pea
+
+_: cow pie <n>
+_v: cowpie <n>
+
+_: cowrite <n>
+_=: co-write <n>
+
+_: cowriting
+_=: co-writing
+
+_: cowritten
+_=: co-written
+
+_: crabgrass <n>
+_v: crab grass <n>
+
+_: crack house <n>
+_V: crackhouse <n>
+
+_: crackup <n>
+_?: crack-up <n>
+
+_: crampfish <n>
+_V: cramp-fish
+
+_: crane fly <n>
+_=: crane-fly <n>
+_V: cranefly <n>
+
+_: crash landing <n>
+_v: crash-landing <n>
+
+_: crawl space <n>
+_v: crawlspace <n>
+
+_: cream puff <n>
+_V: creampuff <n>
+
+_: crew cut <n>
+_v: crewcut <n>
+_V: crew-cut <n>
+
+_: crew neck <n>
+_.: crewneck <n>
+_V: crew-neck
+
+_: criosphinx <n>
+_=: crio-sphinx
+
+_: crop-dusting <n>
+_v: crop dusting
+
+_: crosscheck <v>
+_?: cross-check <v>
+
+_: crosscurrent <n>
+_V: cross-current <n>
+
+_: crossfire <n>
+_v: cross fire
+
+_: cross-hatching
+_.: crosshatching <n>
+
+_: crosshead <n>
+_V: cross-head
+
+_: cross-pollinate <v>
+_v: crosspollinate
+
+_: cross-pollination <n>
+_v: crosspollination
+
+_: cross-purposes
+_v: cross purposes
+
+_: cross-reference <n>
+_v: cross reference <n>
+
+_: crossruff <v>
+_?: cross-ruff
+
+_: cross section <n>
+_V: cross-section <n>
+
+_: crosstalk <n>
+_V: cross-talk
+
+_: crosstie <n>
+_V: cross-tie
+
+_: crosstown <aj>
+_v: cross-town <aj>
+
+_: crowbar <n>
+_-: crow-bar <n>
+
+_: crowberry <n>
+_V: crow-berry
+
+_: crownpiece
+_?: crown-piece
+
+_: crow's-feet
+_v: crow's feet <n>
+
+_: crow's-nest
+_v: crow's nest <n>
+
+_: cruiserweight <n>
+_V: cruiser-weight
+
+_: crybaby <n>
+_-: cry-baby <n>
+
+_: cubbyhole <n>
+_v: cubby hole
+_-: cubby-hole <n>
+
+_: cucking stool <n>
+_v: cucking-stool <n>
+
+_: cuckooflower <n>
+_?: cuckoo-flower
+
+_: cuckoopint <n>
+_?: cuckoo-pint
+
+_: cuff link <n>
+_v: cufflink <n>
+
+_: cumulonimbus <n>
+_-: cumulo-nimbus
+
+_: cupronickel <n>
+_V: cupro-nickel
+
+_: curlpaper <n>
+_V: curl-paper
+
+_: currycomb <n>
+_V: curry-comb
+
+_: currycomb <v>
+_V: curry-comb
+
+_: curtain raiser <n>
+_=: curtain-raiser <n>
+
+_: cussword <n>
+_V: cuss-word
+
+_: customhouse <n>
+_-: custom-house
+
+_: customshouse <n>
+_=: customs-house
+
+_: cut-and-dried <aj>
+_=: cut and dried
+
+_: cut glass <n>
+_v: cut-glass
+
+_: cutoff <n>
+_V: cut-off <n>
+
+_: cutout <n>
+_V: cut-out <n>
+
+_: cutover <n>
+_=: cut-over
+
+_: cutthroat <n>
+_-: cut-throat <n>
+
+_: cuttlebone <n>
+_V: cuttle-bone
+
+_: cutup <n>
+_v: cut-up <n>
+
+_: cutwater <n>
+_?: cut-water
+
+_: cy pres <n>
+_v: cypres <n>
+
+_: daddy longlegs <n>
+_v: daddy-longlegs
+
+_: daggerboard <n>
+_?: dagger board
+
+_: daisy wheel <n>
+_V: daisywheel
+
+_: dampproof
+_?: damp-proof
+
+_: dance floor <n>
+_v: dancefloor <n>
+
+_: daredevil <n>
+_-: dare-devil <n>
+
+_: daredevilry <n>
+_V: dare-devilry
+
+_: darkroom <n>
+_-: dark-room <n>
+
+_: dashpot <n>
+_V: dash-pot <n>
+
+_: data bank <n>
+_v: databank <n>
+
+_: database <n>
+_v: data base
+
+_: data base
+_.: database <v>
+
+_: data bus
+_V: databus <n>
+
+_: dataset <n>
+_v: data set <n>
+
+_: dateline <n>
+_v: date line <n>
+
+_: daybed <n>
+_v: day bed <n>
+_-: day-bed
+
+_: daybook <n>
+_V: day-book <n>
+
+_: day care <n>
+_v: day-care
+_v: daycare <n>
+
+_: dayfly <n>
+_?: day-fly
+
+_: daylight saving time
+_v: daylight-saving time <n>
+
+_: day lily <n>
+_.: daylily <n>
+_V: day-lily
+
+_: day room <n>
+_.: dayroom <n>
+
+_: day shift <n>
+_=: day-shift
+_v: dayshift <n>
+
+_: day trader <n>
+_v: daytrader <n>
+
+_: day-tripper <n>
+_v: day tripper <n>
+
+_: daywork <n>
+_=: day-work
+
+_: deadbeat <a>
+_v: dead beat
+_-: dead-beat
+
+_: deadbeat <n>
+_v: dead beat
+_-: dead-beat
+
+_: deadbolt <n>
+_v: dead bolt <n>
+_V: dead-bolt <n>
+
+_: deadeye <n>
+_V: dead-eye
+
+_: deadfall <n>
+_V: dead-fall <n>
+
+_: deadman <n>
+_=: dead man
+
+_: deadpan <aj>
+_-: dead-pan
+
+_: deadpan <av>
+_-: dead-pan
+
+_: deadpan <n>
+_-: dead-pan
+
+_: deadpan <v>
+_-: dead-pan
+
+_: deadset
+_?: dead set <aj>
+_v: dead-set
+
+_: dead weight <n>
+_v: deadweight <n>
+_V: dead-weight
+
+_: deadwood <n>
+_v: dead wood
+_-: dead-wood
+
+_: deathbed <a>
+_-: death-bed
+
+_: deathbed <n>
+_-: death-bed
+
+_: deathblow <n>
+_?: death blow <n>
+_V: death-blow
+
+_: death cup <n>
+_=: death-cup
+_v: deathcup <n>
+
+_: death's-head
+_v: death's head <n>
+
+_: deathtrap <n>
+_?: death trap <n>
+_-: death-trap <n>
+
+_: deathwatch <n>
+_V: death-watch
+
+_: deckchair <n>
+_?: deck chair <n>
+
+_: deckhand <n>
+_-: deck-hand <n>
+
+_: deckhouse <n>
+_V: deck-house <n>
+
+_: deep freeze <n>
+_v: deep-freeze <n>
+_v: deepfreeze <n>
+
+_: deep-froze
+_v: deepfroze
+
+_: deep-frozen
+_v: deepfrozen
+
+_: deep-fry <v>
+_v: deep fry
+
+_: deep-six <v>
+_v: deep six
+
+_: deerhound <n>
+_V: deer-hound
+
+_: deescalate <v>
+_?: de-escalate <v>
+
+_: de-escalation <n>
+_v: deescalation <n>
+
+_: de-ice <v>
+_v: deice <v>
+
+_: deicer <n>
+_?: de-icer <n>
+
+_: deliveryman <n>
+_-: delivery-man
+
+_: deluxe <aj>
+_v: de luxe <aj>
+
+_: demibastion
+_?: demi-bastion
+
+_: demilune <n>
+_V: demi-lune
+
+_: demimondaine <n>
+_V: demi-mondaine <n>
+
+_: demimonde <n>
+_V: demi-monde
+
+_: demisemiquaver <n>
+_?: demi-semiquaver <n>
+
+_: deskbound <aj>
+_=: desk-bound <aj>
+
+_: deutsche mark
+_v: deutschemark <n>
+
+_: devilfish <n>
+_V: devil-fish
+
+_: dewberry <n>
+_V: dew-berry
+
+_: dewclaw <n>
+_V: dew-claw
+
+_: dewdrop <n>
+_V: dew-drop <n>
+
+_: dewfall <n>
+_=: dew-fall
+
+_: dew point <n>
+_V: dewpoint
+
+_: dickybird <n>
+_v: dicky bird <n>
+_V: dicky-bird <n>
+
+_: diddlysquat <n>
+_?: diddly-squat <n>
+
+_: die-hard <n>
+_.: diehard <n>
+
+_: diesinker <n>
+_=: die-sinker <n>
+
+_: diesinking <n>
+_=: die-sinking
+
+_: diestock <n>
+_?: die-stock
+
+_: digital audiotape <n>
+_v: digital audio tape <n>
+
+_: dik-dik <n>
+_v: dikdik <n>
+
+_: dillydally <v>
+_?: dilly-dally <v>
+
+_: dimout <n>
+_=: dim-out
+
+_: ding-dong <n>
+_v: dingdong <n>
+
+_: dinnertime <n>
+_v: dinner time
+_-: dinner-time
+
+_: dipstick <n>
+_-: dip-stick <n>
+
+_: dirt-cheap
+_=: dirt cheap <aj>
+
+_: dirt-poor
+_v: dirt poor
+
+_: dishcloth <n>
+_-: dish-cloth <n>
+
+_: dishclout <n>
+_=: dish-clout
+
+_: dishrag <n>
+_-: dish-rag <n>
+
+_: dishtowel <n>
+_?: dish towel <n>
+_-: dish-towel <n>
+
+_: dishwater <n>
+_-: dish-water
+
+_: ditchwater
+_V: ditch-water
+
+_: dive bomber <n>
+_=: dive-bomber <n>
+
+_: divi-divi <n>
+_v: dividivi <n>
+
+_: dockmaster <n>
+_V: dock-master
+
+_: dodge ball
+_.: dodgeball <n>
+
+_: doeskin <n>
+_-: doe-skin
+
+_: dogcatcher <n>
+_-: dog-catcher <n>
+
+_: dog days <n>
+_V: dogdays
+
+_: dog-ear <n>
+_v: dogear <n>
+
+_: dog-eared <aj>
+_v: dogeared
+
+_: dogfight <n>
+_-: dog-fight <n>
+
+_: doggy paddle <n>
+_v: doggy-paddle
+
+_: doghouse <n>
+_-: dog-house
+
+_: dogleg <a>
+_-: dog-leg
+
+_: dogleg <n>
+_-: dog-leg
+
+_: dogleg <v>
+_-: dog-leg
+
+_: dog paddle <n>
+_v: dog-paddle
+
+_: dogsled <n>
+_v: dog sled <n>
+
+_: dogwatch <n>
+_?: dog-watch
+
+_: donkey work
+_.: donkeywork <n>
+_=: donkey-work
+
+_: doo-doo
+_V: doodoo <n>
+
+_: doorkeeper <n>
+_-: door-keeper <n>
+
+_: doorknocker <n>
+_v: door-knocker <n>
+
+_: doorman <n>
+_-: door-man
+
+_: doorplate <n>
+_V: door-plate <n>
+
+_: doorsill <n>
+_V: door-sill
+
+_: doorstone
+_?: door-stone
+
+_: dooryard <n>
+_-: door-yard
+
+_: doowop <n>
+_=: doo-wop <n>
+
+_: dorbeetle <n>
+_=: dor-beetle
+
+_: dorbug <n>
+_=: dor-bug
+
+_: dosshouse <n>
+_v: doss-house <n>
+
+_: dot-matrix printer
+_v: dot matrix printer <n>
+
+_: doubleheader <n>
+_v: double-header <n>
+
+_: double-talk
+_v: double talk <n>
+_V: doubletalk
+
+_: doublethink <n>
+_V: double-think
+
+_: doughboy <n>
+_V: dough-boy <n>
+
+_: down-bow <n>
+_v: downbow <n>
+
+_: downcast <aj>
+_-: down-cast
+
+_: downcast <n>
+_V: down-cast
+
+_: downhaul <n>
+_V: down-haul
+
+_: down-home
+_V: downhome
+
+_: downmarket <aj>
+_?: down-market
+
+_: down payment <n>
+_V: downpayment <n>
+
+_: downthrow <n>
+_?: down-throw
+
+_: downtown <aj>
+_-: down-town
+
+_: downtown <av>
+_-: down-town
+
+_: downtown <n>
+_-: down-town
+
+_: downtrod
+_=: down-trod
+
+_: draggletailed
+_?: draggle-tailed
+
+_: draghound
+_?: drag-hound
+
+_: dragnet <n>
+_-: drag-net <n>
+
+_: dragonroot <n>
+_?: dragon-root
+
+_: drainpipe <n>
+_-: drain-pipe <n>
+
+_: dramshop <n>
+_V: dram-shop
+
+_: drawbar <n>
+_V: draw-bar
+
+_: drawdown <n>
+_V: draw-down
+
+_: drawnwork <n>
+_=: drawn-work
+
+_: drawplate <n>
+_?: draw-plate
+
+_: drawstring <n>
+_-: draw-string
+
+_: drawtube <n>
+_V: draw-tube
+
+_: dreamtime <n>
+_=: dream time
+
+_: dream world
+_v: dreamworld <n>
+_V: dream-world
+
+_: dress up <v>
+_v: dress-up
+
+_: driftnet <n>
+_v: drift net <n>
+_V: drift-net <n>
+
+_: driftwood <n>
+_-: drift-wood
+
+_: drillmaster <n>
+_V: drill-master
+
+_: dripstone <n>
+_V: drip-stone
+
+_: drive time
+_.: drivetime
+
+_: drop cloth <n>
+_v: dropcloth <n>
+
+_: drop forge <n>
+_v: drop-forge
+
+_: drop-forge
+_v: dropforge <v>
+
+_: drop kick
+_.: dropkick <n>
+
+_: drop-kick <v>
+_=: drop kick
+_v: dropkick <v>
+
+_: drop-kicker
+_V: dropkicker <n>
+
+_: dropout <n>
+_v: drop-out <n>
+
+_: drop shot <n>
+_=: drop-shot <n>
+_v: dropshot <n>
+
+_: dropwort <n>
+_?: drop-wort
+
+_: drugstore <n>
+_-: drug-store <n>
+
+_: drum roll <n>
+_v: drumroll <n>
+
+_: dry cleaner <n>
+_v: dry-cleaner <n>
+
+_: dry cleaning <n>
+_v: dry-cleaning
+
+_: dry land <n>
+_V: dryland
+
+_: drypoint <n>
+_V: dry-point
+
+_: drystone
+_=: dry-stone
+
+_: duckbilled platypus <n>
+_v: duck-billed platypus <n>
+
+_: duckboard <n>
+_V: duck-board <n>
+
+_: ducktail <n>
+_V: duck-tail
+
+_: dumbcane <n>
+_=: dumb-cane
+
+_: dum-dum
+_v: dumdum <n>
+
+_: dungheap <n>
+_=: dung-heap <n>
+
+_: dustcart <n>
+_V: dust-cart <n>
+
+_: dust cover <n>
+_V: dustcover <n>
+
+_: dustpan <n>
+_-: dust-pan <n>
+
+_: dustsheet <n>
+_v: dust sheet <n>
+_v: dust-sheet <n>
+
+_: dust-up <n>
+_.: dustup <n>
+
+_: dyewood <n>
+_?: dye-wood
+
+_: dynamoelectric
+_?: dynamo-electric
+
+_: dynamoelectrical
+_=: dynamo-electrical
+
+_: eaglestone
+_?: eagle-stone
+
+_: earlobe <n>
+_v: ear lobe <n>
+
+_: earlywood <n>
+_=: early wood
+
+_: earshot <n>
+_-: ear-shot
+
+_: earsplitting <aj>
+_?: ear-splitting
+
+_: earthlight <n>
+_V: earth-light
+
+_: earthnut <n>
+_?: earth-nut <n>
+
+_: earthpea <n>
+_=: earth-pea
+
+_: earth-shattering
+_V: earthshattering
+
+_: earthshine <n>
+_V: earth-shine
+
+_: earthstar <n>
+_V: earth-star
+
+_: earwitness <n>
+_V: ear-witness
+
+_: easygoing <aj>
+_v: easy-going
+
+_: e-book <n>
+_v: ebook <n>
+
+_: eco-friendly
+_v: ecofriendly
+
+_: eggbeater <n>
+_V: egg-beater <n>
+
+_: eggcase <n>
+_=: egg-case <n>
+
+_: eggcup <n>
+_?: egg cup <n>
+
+_: eggfruit <n>
+_=: egg-fruit
+
+_: eggplant <n>
+_-: egg-plant <n>
+
+_: eight ball <n>
+_v: eightball <n>
+
+_: elbowroom <n>
+_?: elbow room <n>
+_-: elbow-room
+
+_: electroconvulsive
+_V: electro-convulsive
+
+_: email <n>
+_v: e-mail <n>
+
+_: email <v>
+_v: e-mail <v>
+
+_: em dash <n>
+_v: emdash <n>
+
+_: en dash <n>
+_v: endash <n>
+
+_: endpoint <n>
+_v: end point <n>
+
+_: engineman
+_V: engine-man
+
+_: enqueue <n>
+_V: en queue
+
+_: en route <av>
+_V: enroute
+
+_: erlking <n>
+_V: erl-king
+
+_: e-tailer <n>
+_v: etailer <n>
+
+_: e-tailing
+_v: etailing
+
+_: et cetera <n>
+_V: etcetera <n>
+
+_: evenhanded <aj>
+_v: even-handed
+
+_: evenhandedly <av>
+_V: even-handedly
+
+_: evenhandedness <n>
+_V: even-handedness
+
+_: ex libris <n>
+_v: ex-libris
+
+_: extracellular <aj>
+_-: extra-cellular
+
+_: extracurricular <aj>
+_V: extra-curricular
+
+_: extracurricular <n>
+_V: extra-curricular
+
+_: extragalactic <aj>
+_V: extra-galactic
+
+_: extrajudicial <aj>
+_V: extra-judicial
+
+_: extrajudicially
+_V: extra-judicially
+
+_: extralimital
+_V: extra-limital
+
+_: extramarital <aj>
+_V: extra-marital
+
+_: extramundane
+_?: extra-mundane
+
+_: extramural <aj>
+_-: extra-mural
+
+_: extrasensory <aj>
+_V: extra-sensory
+
+_: extraterrestrial <aj>
+_-: extra-terrestrial
+
+_: extraterrestrial <n>
+_-: extra-terrestrial
+
+_: extraterritorial <aj>
+_V: extra-territorial
+
+_: extraterritoriality <n>
+_V: extra-territoriality
+
+_: extrauterine
+_?: extra-uterine
+
+_: extravascular
+_V: extra-vascular
+
+_: eyebeam <n>
+_V: eye-beam
+
+_: eyehole <n>
+_V: eye-hole <n>
+
+_: eye-opener <n>
+_v: eyeopener <n>
+
+_: eyeopening <a>
+_?: eye-opening
+
+_: eyepiece <n>
+_-: eye-piece <n>
+
+_: eye shadow <n>
+_v: eyeshadow <n>
+
+_: eyeshot <n>
+_V: eye-shot
+
+_: eyespot <n>
+_V: eye-spot
+
+_: eyestrain <n>
+_v: eye strain
+
+_: eye teeth
+_v: eye-teeth
+
+_: eyetooth <n>
+_V: eye-tooth
+
+_: eyewash <n>
+_-: eye-wash
+
+_: eyewater <n>
+_V: eye-water
+
+_: eyewink <n>
+_V: eye-wink
+
+_: eyewitness <n>
+_-: eye-witness <n>
+
+_: facecloth <n>
+_V: face-cloth <n>
+
+_: facedown <n>
+_?: face down
+
+_: face-lift <v>
+_v: facelift <v>
+
+_: face mask <n>
+_v: facemask <n>
+
+_: faceplate <n>
+_V: face-plate
+
+_: fact sheet <n>
+_v: factsheet <n>
+
+_: fadeaway <n>
+_V: fade-away
+
+_: fade-in
+_v: fadein <n>
+
+_: fade-out
+_.: fadeout <n>
+
+_: fail-safe <aj>
+_V: failsafe
+
+_: fail-safe <n>
+_V: failsafe
+
+_: faintheart
+_?: faint-heart
+
+_: fainthearted <aj>
+_v: faint-hearted <aj>
+
+_: faintheartedly
+_=: faint-heartedly
+
+_: faintheartedness <n>
+_V: faint-heartedness
+
+_: fairlead <n>
+_V: fair-lead
+
+_: fairleader <n>
+_=: fair-leader
+
+_: fair trade <n>
+_v: fairtrade
+
+_: fairy tale <n>
+_v: fairytale <n>
+
+_: fallback <n>
+_V: fall-back <n>
+
+_: fallout <n>
+_-: fall-out
+
+_: fall out <v>
+_V: fall-out
+
+_: fanjet <n>
+_V: fan-jet <n>
+
+_: far-fetched <aj>
+_v: farfetched <aj>
+
+_: far gone
+_v: far-gone
+
+_: farmhand <n>
+_-: farm-hand <n>
+
+_: farmworker <n>
+_=: farm worker <n>
+
+_: far-off <aj>
+_=: far off
+
+_: farseeing <aj>
+_v: far-seeing
+
+_: farsighted <aj>
+_v: far-sighted
+
+_: fast food <n>
+_=: fast-food
+
+_: fast-forward <m>
+_v: fast forward
+
+_: fathead <n>
+_-: fat-head <n>
+
+_: fatheaded <aj>
+_v: fat-headed
+
+_: faultfinder <n>
+_V: fault-finder <n>
+
+_: faultfinding <aj>
+_v: fault-finding
+
+_: faultfinding <n>
+_v: fault-finding
+
+_: fault line <n>
+_v: faultline <n>
+
+_: feather bed <n>
+_v: featherbed <n>
+
+_: featherbrain <n>
+_V: feather-brain
+
+_: featheredge <n>
+_V: feather-edge
+
+_: featheredge <v>
+_V: feather-edge
+
+_: featherhead <n>
+_?: feather-head
+
+_: featherstitch <m>
+_V: feather-stitch
+
+_: featherweight <n>
+_-: feather-weight <n>
+
+_: feeble-minded
+_v: feebleminded <aj>
+
+_: feeblemindedly
+_=: feeble-mindedly
+
+_: feeble-mindedness
+_.: feeblemindedness <n>
+
+_: feedback <n>
+_-: feed-back
+
+_: feelgood
+_?: feel-good
+
+_: fellowman <n>
+_V: fellow-man
+
+_: fender-bender <n>
+_v: fender bender <n>
+
+_: fennelflower
+_?: fennel-flower
+
+_: ferroalloy <n>
+_=: ferro-alloy
+
+_: ferromanganese <n>
+_V: ferro-manganese
+
+_: ferryboat <n>
+_-: ferry-boat <n>
+
+_: fiber-optic <aj>
+_V: fiberoptic <aj>
+
+_: fiber optics <n>
+_V: fiberoptics
+
+_: fiddleback <n>
+_V: fiddle-back
+
+_: field mouse <n>
+_v: fieldmouse <n>
+
+_: fieldwork <n>
+_v: field work <n>
+
+_: filefish <n>
+_?: file-fish
+
+_: filmmaker <n>
+_v: film-maker <n>
+
+_: fin de siecle <aj>
+_=: fin-de-siecle <aj>
+
+_: finespun <aj>
+_v: fine-spun
+
+_: finger bowl <n>
+_V: fingerbowl <n>
+
+_: fingerbreadth <n>
+_?: finger-breadth
+
+_: firearm <n>
+_-: fire-arm <n>
+
+_: fireback <n>
+_V: fire-back
+
+_: fireball <n>
+_-: fire-ball <n>
+
+_: firebird <n>
+_V: fire-bird <n>
+
+_: firebreak <n>
+_-: fire-break <n>
+
+_: fireclay <n>
+_V: fire-clay
+
+_: firecracker <n>
+_-: fire-cracker <n>
+
+_: firedrake <n>
+_?: fire-drake
+
+_: firefight <n>
+_-: fire-fight <n>
+
+_: firefighter <n>
+_v: fire fighter <n>
+_-: fire-fighter <n>
+
+_: firefighting <n>
+_V: fire-fighting
+
+_: firehose <n>
+_V: fire-hose <n>
+
+_: firelock <n>
+_V: fire-lock
+
+_: fireplug <n>
+_-: fire-plug
+
+_: firepower <n>
+_v: fire power
+_-: fire-power
+
+_: firescreen <n>
+_?: fire screen <n>
+_V: fire-screen
+
+_: fire ship <n>
+_v: fireship <n>
+
+_: firestorm <n>
+_-: fire-storm
+
+_: firethorn <n>
+_=: fire thorn <n>
+
+_: fire truck <n>
+_v: firetruck <n>
+
+_: firewarden
+_?: fire-warden
+
+_: firewater <n>
+_-: fire-water
+
+_: first aid <n>
+_v: first-aid
+
+_: firstborn <n>
+_v: first-born <n>
+
+_: first-degree
+_v: first degree <n>
+
+_: first fruits
+_v: firstfruits
+
+_: firsthand <aj>
+_v: first hand
+_v: first-hand
+
+_: firsthand <av>
+_v: first hand
+_v: first-hand
+
+_: fishbone <n>
+_V: fish-bone <n>
+
+_: fishcake <n>
+_?: fish cake <n>
+
+_: fisheye lens <n>
+_v: fish-eye lens <n>
+
+_: fish finger <n>
+_=: fish-finger <n>
+_v: fishfinger <n>
+
+_: fishhook <n>
+_-: fish-hook <n>
+
+_: fish meal <n>
+_v: fishmeal <n>
+_V: fish-meal
+
+_: fishnet <n>
+_-: fish-net <n>
+
+_: fishplate <n>
+_?: fish-plate <n>
+
+_: fishway <n>
+_V: fish-way
+
+_: five and ten
+_v: five-and-ten
+
+_: five-spot <n>
+_v: fivespot <n>
+
+_: flameout <n>
+_v: flame-out <n>
+
+_: flare-up <n>
+_v: flareup <n>
+
+_: flashback <n>
+_-: flash-back <n>
+
+_: flashboard <n>
+_V: flash-board
+
+_: flashbulb <n>
+_v: flash bulb <n>
+_-: flash-bulb <n>
+
+_: flash card <n>
+_v: flashcard <n>
+
+_: flashgun <n>
+_V: flash-gun <n>
+
+_: flash lamp <n>
+_.: flashlamp <n>
+
+_: flashover <n>
+_V: flash-over
+
+_: flash point <n>
+_v: flashpoint <n>
+
+_: flat cap <n>
+_=: flat-cap
+_v: flatcap <n>
+
+_: flatfoot <n>
+_V: flat-foot
+
+_: flatfoot <v>
+_V: flat-foot
+
+_: flatfooted <aj>
+_?: flat-footed <aj>
+
+_: flatfootedness <n>
+_V: flat-footedness
+
+_: flat-out
+_v: flat out <av>
+_V: flatout
+
+_: flat-pack <n>
+_.: flatpack <n>
+
+_: flat wash <n>
+_v: flatwash <n>
+
+_: flatworm <n>
+_-: flat-worm
+
+_: flaxseed <n>
+_V: flax-seed
+
+_: fleabag <n>
+_V: flea-bag <n>
+
+_: fleabane <n>
+_V: flea-bane
+
+_: fleabite <n>
+_V: flea-bite <n>
+
+_: flea-bitten <aj>
+_v: fleabitten
+
+_: fleapit <n>
+_v: flea-pit <n>
+
+_: fleshpot <n>
+_V: flesh-pot <n>
+
+_: flimflam <v>
+_V: flim-flam <v>
+
+_: flip chart <n>
+_=: flip-chart <n>
+_V: flipchart <n>
+
+_: flip-flop <n>
+_V: flipflop <n>
+
+_: flittermouse
+_?: flitter-mouse
+
+_: floatstone
+_?: float-stone
+
+_: floodplain <n>
+_v: flood plain <n>
+
+_: flood tide <n>
+_V: floodtide <n>
+
+_: floor show <n>
+_v: floorshow <n>
+
+_: flow chart <n>
+_v: flowchart <n>
+
+_: flowerbed <n>
+_?: flower bed <n>
+_V: flower-bed <n>
+
+_: flyblown <aj>
+_V: fly-blown
+
+_: flyby <n>
+_v: fly-by <n>
+
+_: fly-fishing <n>
+_v: fly fishing
+
+_: flyman <n>
+_V: fly-man
+
+_: flypast <n>
+_v: fly-past <n>
+
+_: fly-posting
+_v: flyposting
+
+_: flysheet <n>
+_v: fly sheet <n>
+
+_: flyswatter <n>
+_v: fly swatter <n>
+
+_: flytrap <n>
+_V: fly-trap <n>
+
+_: flywhisk <n>
+_=: fly whisk <n>
+
+_: fogbow <n>
+_?: fog-bow
+
+_: fogdog <n>
+_?: fog-dog
+
+_: foldout <n>
+_v: fold-out
+
+_: folk singer <n>
+_v: folksinger <n>
+
+_: folksinging <n>
+_?: folk singing
+
+_: folk song <n>
+_v: folksong <n>
+
+_: folktale <n>
+_=: folk tale <n>
+
+_: follow-up <n>
+_v: followup <n>
+
+_: foot brake <n>
+_v: footbrake <n>
+
+_: foot-dragging
+_V: footdragging
+
+_: foot fault <n>
+_v: footfault <n>
+
+_: foot-lambert <n>
+_v: footlambert <n>
+
+_: footlocker <n>
+_v: foot locker
+
+_: footloose <aj>
+_-: foot-loose
+
+_: footrace <n>
+_-: foot-race <n>
+
+_: footracing <n>
+_=: foot-racing
+
+_: footrope <n>
+_V: foot-rope
+
+_: foot rot <n>
+_v: footrot <n>
+
+_: foot rule <n>
+_.: footrule <n>
+
+_: footstall <n>
+_?: foot-stall
+
+_: fore-and-aft <aj>
+_=: fore and aft
+
+_: forebody <n>
+_V: fore-body
+
+_: forebrain <n>
+_V: fore-brain
+
+_: forerank <n>
+_=: fore-rank
+
+_: fore-topmast <n>
+_v: foretopmast <n>
+
+_: fore-topsail <n>
+_v: foretopsail <n>
+
+_: forever <av>
+_v: for ever
+
+_: forever <n>
+_v: for ever
+
+_: formfitting <a>
+_?: form-fitting
+
+_: forte-piano <n>
+_.: fortepiano <n>
+
+_: fortune teller <n>
+_v: fortune-teller <n>
+_v: fortuneteller <n>
+
+_: fortune-telling
+_v: fortunetelling <n>
+
+_: foulbrood <n>
+_V: foul-brood
+
+_: fountainhead <n>
+_-: fountain-head <n>
+
+_: four-flush
+_v: four flush <n>
+
+_: four-flusher <n>
+_v: fourflusher
+
+_: four-poster <n>
+_v: fourposter <n>
+
+_: foursquare <aj>
+_v: four-square
+
+_: foursquare <av>
+_v: four-square
+
+_: foursquare <n>
+_=: four-square
+
+_: fourth-class
+_=: fourth class
+
+_: fourwheeled
+_?: four-wheeled <aj>
+
+_: fowling piece <n>
+_v: fowlingpiece <n>
+
+_: foxhunt <n>
+_v: fox hunt <n>
+_V: fox-hunt <n>
+
+_: foxhunter <n>
+_V: fox-hunter <n>
+
+_: foxhunting <n>
+_?: fox hunting <n>
+_?: fox-hunting
+
+_: foxtail <n>
+_V: fox-tail
+
+_: foxtrot <n>
+_?: fox trot
+_?: fox-trot <n>
+
+_: foxtrot <v>
+_?: fox trot
+
+_: frankpledge <n>
+_?: frank-pledge
+
+_: freak out <n>
+_v: freak-out <n>
+_v: freakout <n>
+
+_: freebase <v>
+_v: free-base <v>
+
+_: freeboard <n>
+_V: free-board
+
+_: free-form
+_v: free form <n>
+_v: freeform
+
+_: freehand <aj>
+_-: free-hand
+
+_: free hand <n>
+_V: free-hand
+
+_: freehanded <aj>
+_v: free-handed
+
+_: free-hearted
+_v: freehearted <aj>
+
+_: freelance <aj>
+_v: free-lance <aj>
+
+_: freelance <n>
+_v: free-lance <n>
+
+_: freelancer <n>
+_v: free-lancer
+
+_: freerunning
+_?: free-running
+
+_: freestanding <aj>
+_V: free-standing
+
+_: freestyle <n>
+_-: free-style
+
+_: freethinker <n>
+_V: free-thinker <n>
+
+_: freewill <aj>
+_v: free-will
+
+_: free will <n>
+_V: free-will
+
+_: frequent-flier
+_=: frequent flier
+
+_: froghopper <n>
+_V: frog-hopper
+
+_: frogspawn
+_V: frog-spawn
+
+_: frontbench <n>
+_?: front bench <n>
+_v: front-bench
+
+_: frontbencher <n>
+_v: front-bencher <n>
+
+_: front line <n>
+_.: frontline <n>
+
+_: front man <n>
+_.: frontman <n>
+
+_: front page
+_v: front-page
+
+_: front-runner <n>
+_v: frontrunner <n>
+
+_: froufrou <n>
+_V: frou-frou
+
+_: fruit bat <n>
+_=: fruit-bat <n>
+_v: fruitbat <n>
+
+_: fruitcake <n>
+_v: fruit cake
+_-: fruit-cake <n>
+
+_: fuckup <n>
+_=: fuck-up <n>
+
+_: full-mouthed
+_v: fullmouthed
+
+_: full-time <aj>
+_v: full time
+
+_: full-time <av>
+_v: full time
+
+_: fully-fledged
+_v: fully fledged <aj>
+
+_: fund-raiser <n>
+_.: fundraiser <n>
+_v: fund raiser
+
+_: fund-raising
+_v: fundraising <n>
+
+_: fun house <n>
+_V: funhouse <n>
+
+_: funk hole <n>
+_v: funkhole <n>
+
+_: funnyman <n>
+_v: funny man
+
+_: fuse box <n>
+_v: fusebox <n>
+
+_: fussbudget <n>
+_V: fuss-budget <n>
+
+_: fusspot <n>
+_V: fuss-pot <n>
+
+_: fuzzbox <n>
+_V: fuzz box <n>
+
+_: gaffsail <n>
+_=: gaff-sail
+
+_: gallbladder <n>
+_v: gall bladder <n>
+_-: gall-bladder <n>
+
+_: gallfly <n>
+_?: gall-fly
+
+_: gallnut <n>
+_V: gall-nut <n>
+
+_: gallstone <n>
+_-: gall-stone <n>
+
+_: garbage man <n>
+_v: garbageman <n>
+
+_: gasbag <n>
+_-: gas-bag <n>
+
+_: gas-guzzler <n>
+_v: gas guzzler <n>
+
+_: gasholder <n>
+_V: gas-holder <n>
+
+_: gaslit
+_V: gas-lit
+
+_: gastight
+_?: gas-tight <aj>
+
+_: gasworks <n>
+_V: gas-works
+
+_: gatecrasher <n>
+_?: gate-crasher
+
+_: gatekeeper <n>
+_-: gate-keeper <n>
+
+_: gazehound <n>
+_V: gaze-hound
+
+_: gearchange <n>
+_=: gear-change <n>
+
+_: gearshift <n>
+_v: gear shift
+_-: gear-shift <n>
+
+_: gearwheel <n>
+_V: gear-wheel <n>
+
+_: genitourinary <aj>
+_-: genito-urinary
+
+_: getatable <aj>
+_=: get-at-able <aj>
+
+_: get-out <n>
+_v: getout <n>
+
+_: getup <n>
+_v: get-up <n>
+
+_: ghostlike <aj>
+_V: ghost-like
+
+_: ghostwriter <n>
+_v: ghost writer
+_v: ghost-writer <n>
+
+_: ghostwriting
+_V: ghost-writing
+
+_: giddyup
+_=: giddy-up
+
+_: gilthead <n>
+_V: gilt-head
+
+_: gingersnap <n>
+_v: ginger snap <n>
+
+_: girlfriend <n>
+_v: girl friend
+
+_: glassblower <n>
+_V: glass-blower <n>
+
+_: glassblowing <n>
+_V: glass-blowing
+
+_: glassmaker <n>
+_V: glass-maker <n>
+
+_: glassmaking <n>
+_V: glass-making
+
+_: glasspaper <m>
+_=: glass-paper
+
+_: globefish <n>
+_?: globe-fish
+
+_: globeflower <n>
+_?: globe-flower
+
+_: globetrotter <n>
+_?: globe-trotter <n>
+
+_: globetrotting
+_?: globe-trotting
+
+_: glove box <n>
+_V: glovebox <n>
+
+_: glow lamp <n>
+_v: glowlamp <n>
+
+_: glowworm <n>
+_v: glow-worm <n>
+
+_: gluepot <n>
+_V: glue-pot
+
+_: goalkeeper <n>
+_-: goal-keeper <n>
+
+_: goalkeeping <n>
+_V: goal-keeping
+
+_: goalpost <n>
+_?: goal post
+
+_: goaltender <n>
+_-: goal-tender
+
+_: goaltending <n>
+_V: goal-tending
+
+_: goatfish <n>
+_V: goat-fish
+
+_: god-awful <aj>
+_v: godawful
+
+_: godforsaken <aj>
+_V: god-forsaken
+
+_: gofer <n>
+_v: go-fer
+
+_: go-go
+_V: gogo <n>
+
+_: goldbeater <n>
+_V: gold-beater <n>
+
+_: goldbeating <n>
+_=: gold-beating
+
+_: goldbug <n>
+_=: gold-bug <n>
+
+_: goldeneye <n>
+_?: golden-eye
+
+_: goldenrod <n>
+_-: golden-rod <n>
+
+_: goldenseal <n>
+_V: golden-seal
+
+_: gold mine <n>
+_v: goldmine <n>
+_V: gold-mine <n>
+
+_: gold plate <v>
+_v: gold-plate <v>
+
+_: good-heartedly
+_v: goodheartedly
+
+_: good-heartedness
+_v: goodheartedness <n>
+
+_: good-humored <aj>
+_v: goodhumored
+
+_: goodo
+_V: good-o
+
+_: goodwill <n>
+_v: good will <n>
+
+_: goody-two-shoes
+_v: goody two-shoes
+
+_: goose bumps
+_v: goosebumps <n>
+
+_: goosefish <n>
+_V: goose-fish
+
+_: goose flesh
+_.: gooseflesh <n>
+_V: goose-flesh
+
+_: goose grass <n>
+_v: goosegrass <n>
+_V: goose-grass
+
+_: gooseherd <n>
+_V: goose-herd
+
+_: gooseneck <n>
+_V: goose-neck
+
+_: goosestep <m>
+_?: goose-step <m>
+
+_: gorbelly <n>
+_=: gor-belly
+
+_: go to <v>
+_v: go-to
+
+_: grandaunt <n>
+_V: grand-aunt <n>
+
+_: grand master <n>
+_.: grandmaster <n>
+
+_: grassplot
+_?: grass-plot
+
+_: grass-roots
+_.: grassroots <aj>
+
+_: grass-roots
+_v: grass roots <n>
+
+_: graveclothes
+_V: grave-clothes
+
+_: gravedigger <n>
+_-: grave-digger <n>
+
+_: greasepaint <n>
+_v: grease paint
+
+_: greaseproof <aj>
+_V: grease-proof
+
+_: greaseproof <n>
+_V: grease-proof
+
+_: great-aunt <n>
+_v: great aunt
+
+_: greathearted <aj>
+_v: great-hearted
+
+_: greatheartedness <n>
+_=: great-heartedness
+
+_: great-uncle <n>
+_v: great uncle
+
+_: greenbelt <n>
+_=: green belt <n>
+
+_: greenkeeper <n>
+_V: green-keeper <n>
+
+_: greenroom <n>
+_?: green room <n>
+
+_: greenway <n>
+_V: green way <n>
+
+_: griddlecake <n>
+_?: griddle cake
+
+_: grigri <n>
+_V: gri-gri <n>
+
+_: grillroom <n>
+_V: grill-room <n>
+
+_: gris-gris
+_V: grisgris
+
+_: gristmill <n>
+_-: grist-mill
+
+_: grogshop <n>
+_?: grog-shop
+
+_: ground bait <n>
+_.: groundbait <n>
+
+_: groundcloth <n>
+_?: ground cloth <n>
+
+_: groundhog <n>
+_-: ground-hog <n>
+
+_: groundnut <n>
+_-: ground-nut <n>
+
+_: ground plan <n>
+_v: groundplan <n>
+
+_: ground speed
+_v: groundspeed <n>
+
+_: groundstroke <n>
+_v: ground stroke <n>
+
+_: groundswell <n>
+_v: ground swell <n>
+
+_: groundwater <n>
+_v: ground water <n>
+_-: ground-water
+
+_: grown-up <n>
+_v: grownup <n>
+
+_: grubstake <n>
+_-: grub-stake
+
+_: grubstake <v>
+_V: grub-stake
+
+_: Grubstreet
+_=: Grub street
+
+_: grugru <n>
+_?: gru-gru <n>
+
+_: guard dog <n>
+_v: guarddog <n>
+
+_: guardrail <n>
+_v: guard rail <n>
+_-: guard-rail <n>
+
+_: guardroom <n>
+_-: guard-room <n>
+
+_: guelderrose <n>
+_=: guelder rose <n>
+
+_: guestbook <n>
+_?: guest book <n>
+
+_: guesthouse <n>
+_?: guest house <n>
+_-: guest-house <n>
+
+_: guestroom <n>
+_?: guest room <n>
+_V: guest-room <n>
+
+_: guidebook <n>
+_-: guide-book <n>
+
+_: guidepost <n>
+_-: guide-post
+
+_: guinea fowl <n>
+_=: guinea-fowl
+_V: guineafowl <n>
+
+_: gullwing <n>
+_=: gull-wing
+
+_: gum tree <n>
+_V: gumtree <n>
+
+_: gun dog <n>
+_v: gundog <n>
+
+_: gung-ho
+_v: gung ho <aj>
+
+_: gunlock <n>
+_?: gun-lock
+
+_: gunnysack <n>
+_V: gunny sack <n>
+
+_: gun room <n>
+_v: gunroom <n>
+
+_: gunrunning <n>
+_?: gun-running
+
+_: guy rope <n>
+_=: guy-rope <n>
+_v: guyrope <n>
+
+_: gymslip <n>
+_V: gym slip <n>
+
+_: habeas corpus <n>
+_V: habeas-corpus
+
+_: hacksaw <n>
+_v: hack saw <n>
+_-: hack-saw <n>
+
+_: hackwork <n>
+_-: hack-work
+
+_: hag-ridden <aj>
+_.: hagridden <aj>
+
+_: hagride <m>
+_?: hag-ride
+
+_: ha-ha <n>
+_=: ha ha
+_V: haha <n>
+
+_: hailstorm <n>
+_-: hail-storm <n>
+
+_: hairball <n>
+_-: hair-ball <n>
+
+_: hairband <n>
+_-: hair-band
+
+_: hairbrained
+_=: hair-brained
+
+_: hairbreadth <n>
+_V: hair-breadth <n>
+
+_: hairbrush <n>
+_-: hair-brush <n>
+
+_: hair dryer <n>
+_v: hairdryer <n>
+
+_: hairnet <n>
+_-: hair-net <n>
+
+_: hairpiece <n>
+_-: hair-piece <n>
+
+_: hair's-breadth <n>
+_v: hair's breadth
+
+_: hair slide <n>
+_=: hair-slide <n>
+_v: hairslide <n>
+
+_: hairsplitter <n>
+_v: hair-splitter
+
+_: hairsplitting <aj>
+_v: hair-splitting
+
+_: hairsplitting <n>
+_v: hair-splitting
+
+_: hair spray <n>
+_v: hairspray <n>
+_-: hair-spray <n>
+
+_: hairtail <n>
+_V: hair-tail
+
+_: hair-trigger <n>
+_v: hair trigger <n>
+
+_: hairwork <n>
+_V: hair-work
+
+_: hairworm <n>
+_?: hair-worm
+
+_: halfback <n>
+_-: half-back <n>
+
+_: halfbeak <n>
+_?: half-beak
+
+_: half-blood <n>
+_v: half blood <n>
+
+_: half-cocked
+_v: halfcocked
+
+_: half-dollar <n>
+_=: half dollar <n>
+
+_: halfhearted <aj>
+_?: half-hearted <aj>
+
+_: halfheartedness <n>
+_V: half-heartedness
+
+_: half-life <n>
+_v: half life <n>
+_V: halflife <n>
+
+_: half-pipe <n>
+_.: halfpipe <n>
+
+_: half sister <n>
+_=: half-sister <n>
+
+_: halftime <a>
+_v: half time
+
+_: half time
+_=: half-time <aj>
+
+_: half time
+_=: half-time <av>
+
+_: halftime <n>
+_v: half time
+
+_: halftrack <n>
+_=: half-track <n>
+
+_: half-wit <n>
+_v: halfwit <n>
+
+_: half-witted <aj>
+_v: halfwitted
+
+_: halterneck <n>
+_v: halter-neck
+
+_: hammerheaded
+_=: hammer-headed
+
+_: hammertoe <n>
+_V: hammer-toe
+
+_: handball <n>
+_-: hand-ball <n>
+
+_: handbarrow <n>
+_V: hand-barrow <n>
+
+_: handbasket <n>
+_V: hand-basket <n>
+
+_: handbreadth <n>
+_V: hand-breadth
+
+_: handclasp <n>
+_-: hand-clasp
+
+_: handgun <n>
+_-: hand-gun <n>
+
+_: handheld <aj>
+_=: hand-held <aj>
+
+_: handlist <n>
+_=: hand-list
+
+_: handloom <n>
+_V: hand-loom
+
+_: handoff <n>
+_v: hand-off <n>
+
+_: handpick <v>
+_V: hand-pick <v>
+
+_: handpress <n>
+_V: hand-press
+
+_: handsewn <aj>
+_=: hand-sewn
+
+_: hands-off <aj>
+_=: hands off
+
+_: handwoven <aj>
+_V: hand-woven
+
+_: hand-wringing
+_v: handwringing <n>
+
+_: hang glider <n>
+_v: hang-glider <n>
+
+_: hang gliding <n>
+_v: hang-gliding
+
+_: hang-up <n>
+_v: hangup <n>
+
+_: hara-kiri <n>
+_V: harakiri <n>
+
+_: harbormaster <n>
+_V: harbor master <n>
+
+_: harbour master <n>
+_v: harbourmaster <n>
+
+_: hard-core <aj>
+_v: hardcore <aj>
+
+_: hard core <n>
+_.: hardcore <n>
+
+_: hardedge <n>
+_=: hard edge
+
+_: hardfisted <aj>
+_=: hard-fisted
+
+_: hardhanded
+_=: hard-handed
+
+_: hard hat <n>
+_v: hardhat <n>
+
+_: hardheaded <aj>
+_v: hard-headed
+
+_: hardhearted <aj>
+_?: hard-hearted
+
+_: hardheartedly <a>
+_V: hard-heartedly
+
+_: hardheartedness <n>
+_?: hard-heartedness
+
+_: hard-line <aj>
+_v: hardline <aj>
+
+_: hard-liner <n>
+_v: hardliner <n>
+
+_: hardmouthed
+_=: hard-mouthed
+
+_: hardpan <n>
+_V: hard-pan <n>
+
+_: hard-pressed <aj>
+_V: hardpressed
+
+_: hard rock
+_V: hardrock
+
+_: hard-set
+_v: hardset
+
+_: hard-shell
+_V: hardshell
+
+_: hard-wired
+_v: hardwired
+
+_: hard-working
+_v: hardworking <aj>
+
+_: harebrained <aj>
+_v: hare-brained
+
+_: harelip <n>
+_V: hare-lip <n>
+
+_: harelipped <a>
+_V: hare-lipped
+
+_: hatchet man <n>
+_V: hatchetman <n>
+
+_: hawk-eyed <aj>
+_V: hawkeyed
+
+_: hawk moth <n>
+_.: hawkmoth <n>
+_=: hawk-moth
+
+_: hazelhen <n>
+_=: hazel hen
+
+_: headcheese <n>
+_V: head-cheese
+
+_: head count <n>
+_v: headcount <n>
+
+_: headdress <n>
+_-: head-dress <n>
+
+_: head gate <n>
+_.: headgate <n>
+
+_: headstream <n>
+_V: head-stream
+
+_: headteacher <n>
+_?: head teacher <n>
+
+_: headwind <n>
+_v: head wind
+
+_: heartbeat <n>
+_-: heart-beat <n>
+
+_: hearthstone <n>
+_-: hearth-stone
+
+_: heart-rending
+_.: heartrending <aj>
+
+_: heartrendingly <a>
+_V: heart-rendingly
+
+_: heartsick <aj>
+_-: heart-sick
+
+_: heartsickness <n>
+_V: heart-sickness
+
+_: heartsore
+_V: heart-sore
+
+_: heartthrob <n>
+_-: heart-throb <n>
+
+_: heartwarming <aj>
+_v: heart-warming
+
+_: heat wave <n>
+_v: heatwave <n>
+
+_: heavy-hearted
+_v: heavyhearted <aj>
+
+_: heavyset <aj>
+_v: heavy-set
+
+_: hedgehopper <n>
+_=: hedge-hopper <n>
+
+_: heehaw <n>
+_?: hee-haw <n>
+
+_: heehaw <v>
+_?: hee-haw <v>
+
+_: heelball <n>
+_=: heel-ball
+
+_: heelpiece <n>
+_V: heel-piece
+
+_: heeltap <n>
+_?: heel-tap
+
+_: hellbox <n>
+_?: hell-box
+
+_: hellbroth <n>
+_=: hell-broth
+
+_: hellcat <n>
+_-: hell-cat <n>
+
+_: hellfire <n>
+_-: hell-fire
+
+_: hellhole <n>
+_V: hell-hole <n>
+
+_: hellkite <n>
+_?: hell-kite <n>
+
+_: hell-raiser <n>
+_v: hellraiser <n>
+
+_: help desk <n>
+_.: helpdesk <n>
+
+_: hempseed <n>
+_V: hemp-seed
+
+_: henbit <n>
+_V: hen-bit
+
+_: hencoop <n>
+_V: hen-coop <n>
+
+_: henhouse <n>
+_V: hen-house <n>
+
+_: hepcat <n>
+_V: hep-cat <n>
+
+_: herdbook <n>
+_=: herd-book
+
+_: heroicomic
+_=: heroi-comic
+
+_: heroicomical
+_=: heroi-comical
+
+_: herringbone <a>
+_-: herring-bone
+
+_: herringbone <n>
+_-: herring-bone
+
+_: herringbone <v>
+_V: herring-bone
+
+_: hidebound <aj>
+_-: hide-bound
+
+_: hideout <n>
+_v: hide-out
+
+_: highborn <aj>
+_v: high-born
+
+_: highbred
+_V: high-bred
+
+_: high chair <n>
+_v: highchair <n>
+_V: high-chair <n>
+
+_: highfalutin <aj>
+_V: high-falutin
+
+_: high five <n>
+_=: high-five <n>
+
+_: highflier <n>
+_=: high-flier <n>
+
+_: high-flyer <n>
+_v: highflyer <n>
+
+_: high-flying
+_v: highflying <aj>
+
+_: high-handedness <n>
+_v: highhandedness <n>
+
+_: high life <n>
+_V: highlife <n>
+
+_: highlight <n>
+_v: high light
+
+_: highlight <v>
+_v: high light
+
+_: high-pressure <aj>
+_v: high pressure
+
+_: high-rise <aj>
+_v: high rise
+
+_: high-rise <n>
+_v: high rise
+_v: highrise <n>
+
+_: high road <n>
+_v: highroad <n>
+
+_: high spot <n>
+_v: highspot <n>
+
+_: high-test
+_v: hightest
+
+_: high top
+_=: high-top <aj>
+
+_: high top
+_=: high-top <n>
+
+_: high-water mark <n>
+_v: high water mark <n>
+
+_: hillbilly <n>
+_-: hill-billy <n>
+
+_: hindbrain <n>
+_V: hind-brain
+
+_: hindgut <n>
+_V: hind-gut
+
+_: hipbath <n>
+_v: hip bath <n>
+_v: hip-bath <n>
+
+_: hipbone <n>
+_V: hip-bone <n>
+
+_: hip-hop <n>
+_v: hiphop
+
+_: hiphuggers
+_?: hip-huggers
+
+_: hipshot
+_V: hip-shot
+
+_: hitchhiker <n>
+_-: hitch-hiker <n>
+
+_: hit man <n>
+_v: hitman <n>
+
+_: hoarfrost <n>
+_V: hoar-frost
+
+_: hobblebush <n>
+_=: hobble-bush
+
+_: hoecake <n>
+_V: hoe-cake
+
+_: hogfish <n>
+_V: hog-fish
+
+_: hogmane <n>
+_=: hog-mane
+
+_: hognose <n>
+_V: hog-nose
+
+_: hog-tie <v>
+_.: hogtie <v>
+
+_: hogweed <n>
+_V: hog-weed
+
+_: hokey-pokey
+_v: hokeypokey <n>
+
+_: hokypoky <n>
+_=: hoky-poky
+
+_: holdfast <n>
+_V: hold-fast
+
+_: holdup <n>
+_v: hold-up <n>
+
+_: hollowware <n>
+_V: hollow-ware
+
+_: holy day <n>
+_v: holyday <n>
+
+_: homebody <n>
+_-: home body <n>
+
+_: homebred <n>
+_?: home-bred
+
+_: home brew <n>
+_v: homebrew <n>
+
+_: homebrewed
+_=: home-brewed <aj>
+
+_: homegrown <aj>
+_v: home-grown
+
+_: homemade <aj>
+_v: home-made
+
+_: home page <n>
+_v: homepage <n>
+
+_: homeroom <n>
+_v: home room <n>
+
+_: homestretch <n>
+_?: home stretch
+_-: home-stretch
+
+_: hometown <n>
+_v: home town
+_-: home-town
+
+_: honeybee <n>
+_-: honey-bee <n>
+
+_: honeydew <n>
+_-: honey-dew
+
+_: honeyeater <n>
+_=: honey-eater
+
+_: honey guide <n>
+_=: honey-guide <n>
+_v: honeyguide <n>
+
+_: honeylocust <n>
+_?: honey locust <n>
+_v: honey-locust
+
+_: honeysucker <n>
+_?: honey-sucker
+
+_: hoofbound
+_?: hoof-bound
+
+_: hooknose <n>
+_?: hook-nose <n>
+
+_: hook-nosed <aj>
+_v: hooknosed
+
+_: hookup <n>
+_v: hook-up <n>
+
+_: hoopla <n>
+_-: hoop-la
+
+_: hoop skirt
+_V: hoopskirt <n>
+
+_: hophead <n>
+_V: hop-head
+
+_: hopscotch <n>
+_-: hop-scotch
+
+_: hopscotch <v>
+_-: hop-scotch
+
+_: hornpout <n>
+_=: horn pout
+
+_: horse bean <n>
+_v: horsebean <n>
+
+_: horsebox <n>
+_V: horse box <n>
+
+_: horse-drawn <aj>
+_v: horsedrawn
+
+_: horsefly <n>
+_v: horse fly <n>
+
+_: horseleech <n>
+_?: horse-leech
+
+_: horse race <n>
+_V: horserace <n>
+
+_: horse racing <n>
+_?: horse-racing
+_v: horseracing <n>
+
+_: horsetrading
+_?: horse-trading
+
+_: hot-button
+_v: hot button <n>
+
+_: hotcake <n>
+_v: hot cake <n>
+
+_: hot dog <n>
+_v: hotdog <n>
+
+_: hot-dog <v>
+_v: hotdog <v>
+
+_: hotdogger <n>
+_=: hot-dogger <n>
+
+_: hotelkeeper <n>
+_=: hotel-keeper
+
+_: hotheaded <aj>
+_v: hot-headed
+
+_: hotkey <n>
+_?: hot key <n>
+
+_: hot line <n>
+_.: hotline <n>
+
+_: hotlink <n>
+_v: hot link <n>
+
+_: hot plate <n>
+_v: hotplate <n>
+
+_: hot-press
+_v: hotpress <m>
+
+_: hot rod <n>
+_V: hotrod <n>
+
+_: hotshot <a>
+_v: hot shot
+
+_: hotshot <n>
+_v: hot shot
+
+_: hot spot <n>
+_v: hotspot <n>
+
+_: houseboat <n>
+_-: house-boat <n>
+
+_: housebreaker <n>
+_V: house-breaker <n>
+
+_: housebreaking <n>
+_V: house-breaking
+
+_: housebroken <aj>
+_V: house-broken
+
+_: housecarl <n>
+_V: house-carl
+
+_: housefly <n>
+_-: house-fly <n>
+
+_: house guest <n>
+_.: houseguest <n>
+
+_: househusband <n>
+_v: house husband <n>
+_-: house-husband <n>
+
+_: houseleek <n>
+_?: house-leek
+
+_: houselights <n>
+_?: house lights
+
+_: houseline
+_?: house-line
+
+_: housemate <n>
+_-: house-mate
+
+_: houseproud
+_?: house-proud <aj>
+
+_: houseroom <n>
+_V: house-room
+
+_: house-sitter <n>
+_V: housesitter <n>
+
+_: housewarming <n>
+_V: house-warming <n>
+
+_: humblebee <n>
+_?: humble-bee
+
+_: hummingbird <n>
+_-: humming-bird <n>
+
+_: hungover <a>
+_?: hung over
+_V: hung-over
+
+_: hung up
+_v: hung-up
+
+_: hymnbook <n>
+_?: hymn book <n>
+
+_: hypnoanalysis <n>
+_V: hypno-analysis
+
+_: hysteron proteron <n>
+_v: hysteron-proteron
+
+_: iceboat <n>
+_V: ice-boat <n>
+
+_: icebound <aj>
+_V: ice-bound
+
+_: icebreaker <n>
+_V: ice-breaker <n>
+
+_: icebreaking
+_?: ice-breaking
+
+_: ice cap <n>
+_v: icecap <n>
+_-: ice-cap <n>
+
+_: ice-cream cone <n>
+_=: ice cream cone
+
+_: icefall <n>
+_V: ice-fall <n>
+
+_: ice field <n>
+_v: icefield <n>
+
+_: ice floe <n>
+_V: icefloe <n>
+
+_: ice pack <n>
+_V: icepack <n>
+
+_: ice skater <n>
+_v: ice-skater <n>
+
+_: in-between <aj>
+_=: in between
+
+_: inbuilt <aj>
+_V: in-built
+
+_: inchworm <n>
+_-: inch-worm
+
+_: in conclusion <av>
+_v: inconclusion
+
+_: in-depth
+_v: in depth
+
+_: in-flight
+_v: inflight <a>
+
+_: infrared <aj>
+_-: infra-red
+
+_: infrared <n>
+_-: infra-red
+
+_: inglenook <n>
+_V: ingle-nook <n>
+
+_: ingleside
+_?: ingle-side
+
+_: in-group <n>
+_v: ingroup <n>
+
+_: inkjet
+_=: ink jet
+
+_: inkjet printer
+_v: ink-jet printer <n>
+
+_: inner city <n>
+_=: inner-city
+
+_: inpatient <n>
+_v: in-patient <n>
+
+_: insofar as
+_v: in so far as
+
+_: in-store
+_v: in store <aj>
+_v: instore
+
+_: internal-combustion engine <n>
+_=: internal combustion engine <n>
+
+_: intrauterine <aj>
+_-: intra-uterine
+
+_: in turn <n>
+_v: inturn <n>
+
+_: ironbound
+_?: iron-bound
+
+_: ironhanded
+_V: iron-handed
+
+_: ironhearted
+_=: iron-hearted
+
+_: iron man <n>
+_v: ironman <n>
+
+_: ironmaster <n>
+_V: iron-master
+
+_: isooctane <n>
+_?: iso-octane
+
+_: jackbooted
+_V: jack-booted
+
+_: jackfruit <n>
+_V: jack-fruit
+
+_: jackrabbit <n>
+_v: jack rabbit <n>
+
+_: jacksnipe <n>
+_V: jack-snipe
+
+_: jackstraw <n>
+_V: jack-straw <n>
+
+_: jailbait
+_V: jail-bait
+
+_: jam-packed <aj>
+_v: jampacked
+
+_: jellybean <n>
+_?: jelly bean <n>
+
+_: jellylike <aj>
+_V: jelly-like
+
+_: jellyroll <n>
+_=: jelly roll <n>
+
+_: jerrybuilder <n>
+_=: jerry-builder <n>
+
+_: jet lag <n>
+_v: jetlag <n>
+
+_: jet setter
+_=: jet-setter <n>
+
+_: jewelweed <n>
+_V: jewel-weed
+
+_: jibboom <n>
+_=: jib-boom <n>
+
+_: jiggermast <n>
+_?: jigger-mast
+
+_: jim crow <n>
+_V: jim-crow
+
+_: jimsonweed <n>
+_v: jimson weed <n>
+_-: jimson-weed
+
+_: job seeker <n>
+_.: jobseeker <n>
+
+_: job-share <m>
+_V: job share
+
+_: jobshare <n>
+_v: job share
+
+_: jog trot <n>
+_=: jog-trot <n>
+_V: jogtrot
+
+_: jointworm <n>
+_?: joint-worm
+
+_: jolly boat <n>
+_v: jollyboat <n>
+
+_: journeywork <n>
+_?: journey-work
+
+_: joyride <n>
+_v: joy ride
+_-: joy-ride <n>
+
+_: joyride <v>
+_v: joy ride
+
+_: joyrider <n>
+_V: joy-rider <n>
+
+_: joyriding <n>
+_v: joy riding
+_V: joy-riding
+
+_: joystick <n>
+_-: joy-stick <n>
+
+_: jukebox <n>
+_v: juke box
+
+_: jump-off <n>
+_v: jumpoff <n>
+
+_: jumpsuit <n>
+_v: jump suit <n>
+
+_: jungle gym <n>
+_v: junglegym
+
+_: junkyard <n>
+_-: junk-yard <n>
+
+_: key ring <n>
+_=: key-ring <n>
+_V: keyring <n>
+
+_: keyway <n>
+_V: key-way
+
+_: keyword <n>
+_?: key word <n>
+
+_: kick-ass
+_V: kickass
+
+_: kickboxing <n>
+_V: kick boxing
+
+_: kickoff <n>
+_v: kick-off <n>
+
+_: kickup <n>
+_=: kick-up
+
+_: kidglove
+_=: kid-glove <aj>
+
+_: kidskin <n>
+_-: kid-skin
+
+_: killjoy <n>
+_v: kill-joy
+
+_: kindhearted <aj>
+_v: kind-hearted <aj>
+
+_: kindheartedly <a>
+_v: kind-heartedly
+
+_: kindheartedness <n>
+_v: kind-heartedness <n>
+
+_: kingbird <n>
+_V: king-bird
+
+_: kingbolt <n>
+_V: king-bolt
+
+_: kingcraft <n>
+_V: king-craft
+
+_: kingmaker <n>
+_V: king-maker
+
+_: king post <n>
+_v: kingpost <n>
+
+_: king snake <n>
+_v: kingsnake <n>
+
+_: kipskin <n>
+_=: kip-skin
+
+_: kissoff <n>
+_?: kiss-off <n>
+
+_: kit bag <n>
+_v: kitbag <n>
+_V: kit-bag <n>
+
+_: kitchenmaid
+_V: kitchen-maid <n>
+
+_: Kitemark
+_?: Kite mark
+
+_: kiwifruit <n>
+_=: kiwi fruit <n>
+
+_: knee-jerk
+_v: knee jerk <n>
+
+_: kneepan <n>
+_?: knee-pan
+
+_: kneesock <n>
+_=: knee sock <n>
+
+_: knickknack <n>
+_v: knick-knack <n>
+
+_: knife-edge <n>
+_=: knife edge <n>
+
+_: knifepoint <n>
+_V: knife-point
+
+_: knight-errant <n>
+_v: knight errant
+
+_: knockdown <aj>
+_=: knock-down <aj>
+
+_: knockdown-dragout <aj>
+_=: knock-down-drag-out
+
+_: know-how <n>
+_v: knowhow
+
+_: knucklebone <n>
+_V: knuckle-bone
+
+_: knucklehead <n>
+_-: knuckle-head
+
+_: lacewing <n>
+_-: lace-wing
+
+_: lady-killer <n>
+_.: ladykiller <n>
+
+_: ladylove <n>
+_V: lady-love
+
+_: lady-slipper <n>
+_=: lady slipper <n>
+
+_: lady's-slipper <n>
+_v: lady's slipper <n>
+
+_: lagend <n>
+_=: lag-end
+
+_: laisser faire
+_=: laisser-faire
+
+_: lamebrain <n>
+_V: lame brain
+
+_: lame duck <n>
+_v: lame-duck
+
+_: lampblack <n>
+_-: lamp-black
+
+_: lamp shell <n>
+_=: lamp-shell
+_v: lampshell <n>
+
+_: lancewood <n>
+_?: lance-wood
+
+_: landline <n>
+_V: land-line
+
+_: landlocked <aj>
+_V: land-locked
+
+_: landlubber <n>
+_-: land-lubber <n>
+
+_: landlubberly <aj>
+_V: land-lubberly
+
+_: landmass <n>
+_?: land mass <n>
+
+_: land mine <n>
+_v: landmine <n>
+_V: land-mine <n>
+
+_: landowning <a>
+_V: land-owning
+
+_: landowning <n>
+_V: land-owning
+
+_: land rail <n>
+_.: landrail <n>
+
+_: landwaiter
+_?: land-waiter
+
+_: langsyne <av>
+_?: lang syne <av>
+
+_: lantern fish
+_.: lanternfish <n>
+
+_: lapboard <a>
+_V: lap-board
+
+_: lapboard <n>
+_V: lap-board
+
+_: lap dancer <n>
+_v: lapdancer <n>
+
+_: lap dancing
+_.: lapdancing
+
+_: lap dog
+_.: lapdog <n>
+
+_: laser disc <n>
+_V: laserdisc <n>
+
+_: laser disk
+_v: laserdisk <n>
+
+_: lashup <n>
+_=: lash-up <n>
+
+_: latchstring <n>
+_V: latch-string
+
+_: latecomer <n>
+_V: late-comer <n>
+
+_: latewood <n>
+_=: late wood
+
+_: latticework <n>
+_-: lattice-work
+
+_: laughingstock <n>
+_v: laughing stock <n>
+_-: laughing-stock <n>
+
+_: launch pad <n>
+_v: launchpad <n>
+
+_: lava-lava
+_.: lavalava <n>
+
+_: lawbook <n>
+_V: law-book <n>
+
+_: lawbreaker <n>
+_-: law-breaker <n>
+
+_: lawbreaking <n>
+_V: law-breaking <n>
+
+_: lawn mower <n>
+_v: lawnmower <n>
+_V: lawn-mower <n>
+
+_: layoff <n>
+_v: lay-off <n>
+
+_: layout <n>
+_-: lay-out <n>
+
+_: layup <n>
+_v: lay-up <n>
+
+_: lazybones <n>
+_V: lazy-bones
+
+_: leading edge <n>
+_v: leading-edge
+
+_: lead-off
+_.: leadoff <n>
+
+_: lead-off
+_=: lead off <v>
+
+_: leaf bud <n>
+_v: leafbud <n>
+
+_: leafhopper <n>
+_V: leaf-hopper
+
+_: leaflike <aj>
+_=: leaf-like <aj>
+
+_: leafstalk <n>
+_V: leaf-stalk
+
+_: leatherback <n>
+_V: leather-back
+
+_: leatherjacket <n>
+_?: leather-jacket <n>
+
+_: leeboard <n>
+_V: lee-board
+
+_: left-wing <aj>
+_V: leftwing
+
+_: left wing <n>
+_V: leftwing
+
+_: legman <n>
+_V: leg-man
+
+_: lemminglike
+_=: lemming-like
+
+_: lemongrass <n>
+_v: lemon grass <n>
+_-: lemon-grass
+
+_: lese majesty <n>
+_V: lese-majesty
+
+_: letdown <n>
+_-: let-down <n>
+
+_: let out <v>
+_v: let-out
+
+_: letter bomb <n>
+_=: letter-bomb <n>
+_v: letterbomb <n>
+
+_: letterbox <n>
+_v: letter box <n>
+
+_: letup <n>
+_v: let-up <n>
+
+_: levelheaded <aj>
+_?: level-headed <aj>
+
+_: levelheadedness <n>
+_?: level-headedness
+
+_: life belt <n>
+_v: lifebelt <n>
+
+_: lifeblood <n>
+_-: life-blood
+
+_: life buoy <n>
+_v: lifebuoy <n>
+_V: life-buoy <n>
+
+_: life jacket <n>
+_V: life-jacket <n>
+_V: lifejacket <n>
+
+_: lifesaver <n>
+_-: life-saver <n>
+
+_: lifesaving <a>
+_v: life-saving
+
+_: lifesaving <n>
+_v: life-saving
+
+_: lifestyle <n>
+_v: life style <n>
+
+_: life support system
+_v: life-support system <n>
+
+_: lifework <n>
+_V: life-work
+
+_: liftoff <n>
+_v: lift-off <n>
+
+_: light bulb <n>
+_V: lightbulb <n>
+
+_: lightface <a>
+_?: light face
+
+_: lightface <n>
+_v: light face
+
+_: lightfaced <a>
+_v: light-faced
+
+_: lightfoot
+_=: light-foot
+
+_: light-headed <aj>
+_v: lightheaded <aj>
+
+_: lightheadedly
+_V: light-headedly <av>
+
+_: light-headedness
+_.: lightheadedness <n>
+
+_: lighthearted <aj>
+_v: light-hearted <aj>
+
+_: lightheartedness <n>
+_-: light-heartedness
+
+_: lights-out <n>
+_=: lights out
+
+_: lighttight
+_=: light-tight <aj>
+
+_: light-year <n>
+_v: light year <n>
+_v: lightyear
+
+_: lignum vitae <n>
+_v: lignum-vitae
+
+_: lime-green
+_v: lime green
+
+_: line-out <n>
+_v: lineout <n>
+
+_: lineup <n>
+_v: line-up <n>
+
+_: linkup <n>
+_V: link-up <n>
+
+_: lionhearted <aj>
+_V: lion-hearted
+
+_: lionlike
+_=: lion-like
+
+_: lip gloss <n>
+_V: lipgloss <n>
+
+_: lip-read <v>
+_v: lipread <v>
+
+_: lipreader <n>
+_?: lip-reader <n>
+
+_: lipreading <n>
+_?: lip reading
+_?: lip-reading
+
+_: lip synch <n>
+_v: lipsynch
+
+_: lip-synch <v>
+_v: lipsynch
+
+_: litterbug <n>
+_V: litter-bug <n>
+
+_: loansharking <n>
+_?: loan-sharking
+
+_: loanword <n>
+_v: loan word <n>
+
+_: lobster pot <n>
+_=: lobster-pot <n>
+_v: lobsterpot <n>
+
+_: local <aj>
+_v: lo-cal
+
+_: local <n>
+_v: lo-cal
+
+_: local <v>
+_v: lo-cal
+
+_: lockjaw <n>
+_-: lock-jaw
+
+_: lock-keeper <n>
+_.: lockkeeper <n>
+
+_: lockup <n>
+_v: lock-up <n>
+
+_: locoweed <n>
+_V: loco-weed
+
+_: logbook <n>
+_-: log-book <n>
+
+_: logjam <n>
+_-: log-jam <n>
+
+_: log line <n>
+_v: logline <n>
+
+_: logroller <n>
+_?: log-roller <n>
+
+_: loincloth <n>
+_-: loin-cloth <n>
+
+_: longcloth
+_?: long-cloth
+
+_: longhair <n>
+_v: long-hair <n>
+
+_: longhaired
+_?: long-haired <aj>
+
+_: long haul <n>
+_v: long-haul
+
+_: longhead <n>
+_=: long-head
+
+_: long-headed <aj>
+_v: longheaded
+
+_: longheadedness <n>
+_=: long-headedness
+
+_: longhouse <n>
+_-: long-house
+
+_: longline <n>
+_V: long-line
+
+_: longsighted <aj>
+_?: long-sighted
+
+_: longsightedness <n>
+_=: long-sightedness
+
+_: long-standing <aj>
+_v: longstanding <aj>
+
+_: longtime <aj>
+_v: long-time <aj>
+
+_: long-winded <aj>
+_V: longwinded
+
+_: lookalike <n>
+_?: look-alike <n>
+
+_: loony bin <n>
+_V: loonybin <n>
+
+_: loosestrife <n>
+_V: loose-strife
+
+_: lotusland <n>
+_=: lotus land <n>
+
+_: loudhailer <n>
+_v: loud-hailer <n>
+
+_: love bite <n>
+_v: lovebite <n>
+
+_: lovechild <n>
+_?: love child <n>
+
+_: lovemaking <n>
+_V: love-making
+
+_: love seat <n>
+_v: loveseat <n>
+
+_: lowborn <aj>
+_v: low-born
+
+_: lowbred <aj>
+_?: low-bred
+
+_: lowbrow <n>
+_V: low-brow <n>
+
+_: lowdown <n>
+_v: low-down <n>
+
+_: lowercase <aj>
+_v: lower case
+_v: lower-case
+
+_: lowercase <n>
+_v: lower case
+_v: lower-case
+
+_: lower case
+_.: lowercase <v>
+_v: lower-case
+
+_: lowlife <n>
+_=: low-life
+_v: low life
+
+_: lumberjack <n>
+_-: lumber-jack <n>
+
+_: lumber jacket <n>
+_V: lumberjacket <n>
+
+_: lumberyard <n>
+_-: lumber-yard <n>
+
+_: lumpenproletariat <n>
+_V: lumpen proletariat
+
+_: lunchbox <n>
+_?: lunch box <n>
+
+_: lunch break <n>
+_.: lunchbreak <n>
+
+_: lungfish <n>
+_-: lung-fish
+
+_: lupus erythematosus <n>
+_v: lupuserythematosus
+
+_: lyme grass <n>
+_v: lyme-grass
+
+_: lyrebird <n>
+_V: lyre-bird <n>
+
+_: macebearer <n>
+_=: mace-bearer <n>
+
+_: machine-readable
+_v: machine readable <aj>
+
+_: magnetoelectric
+_=: magneto-electric
+
+_: magnetoelectricity <n>
+_?: magneto-electricity
+
+_: magnetohydrodynamic <n>
+_V: magneto-hydrodynamic <n>
+
+_: magnetostriction <n>
+_?: magneto-striction
+
+_: mahimahi <n>
+_=: mahi-mahi
+
+_: mah-jongg <n>
+_v: mahjongg <n>
+
+_: mailbag <n>
+_-: mail-bag <n>
+
+_: mailbox <n>
+_-: mail-box <n>
+
+_: mail car <n>
+_v: mailcar <n>
+
+_: mail drop <n>
+_v: maildrop <n>
+
+_: mail merge
+_v: mailmerge
+
+_: mail order <n>
+_=: mail-order
+
+_: mainline <n>
+_v: main line <n>
+
+_: main-topmast <n>
+_v: maintopmast <n>
+
+_: main yard <n>
+_v: mainyard <n>
+
+_: major-domo <n>
+_.: majordomo <n>
+
+_: major-league
+_=: major league <n>
+
+_: makeready <n>
+_=: make-ready
+
+_: makeup <n>
+_v: make-up <n>
+
+_: make-work <n>
+_V: makework <n>
+
+_: man about town
+_=: man-about-town <n>
+
+_: man-eater <n>
+_V: maneater <n>
+
+_: manic-depressive <n>
+_v: manic depressive <n>
+
+_: man-made <aj>
+_v: manmade
+
+_: manslayer <n>
+_V: man-slayer
+
+_: mantle rock
+_v: mantlerock <n>
+
+_: markdown <n>
+_V: mark-down
+
+_: marketplace <n>
+_-: market-place <n>
+
+_: markup <n>
+_v: mark-up <n>
+
+_: marshmallow <n>
+_v: marsh mallow <n>
+
+_: masterclass <n>
+_v: master class <n>
+
+_: masterwork <n>
+_-: master-work
+
+_: maxicoat <n>
+_=: maxi-coat
+
+_: maxiskirt <n>
+_V: maxi-skirt
+
+_: mayapple <n>
+_V: may-apple <n>
+
+_: maybird <n>
+_=: may-bird
+
+_: meadowlark <n>
+_-: meadow-lark
+
+_: meadowsweet <n>
+_V: meadow-sweet
+
+_: mealtime <n>
+_-: meal-time <n>
+
+_: mealworm <n>
+_V: meal-worm
+
+_: mealybug <n>
+_-: mealy-bug <n>
+
+_: mealy-mouthed <aj>
+_v: mealymouthed <aj>
+
+_: meanspirited <aj>
+_=: mean-spirited
+
+_: meantime <n>
+_v: mean time <n>
+
+_: meatball <n>
+_-: meat-ball <n>
+
+_: meatloaf <n>
+_v: meat loaf <n>
+
+_: meatman <n>
+_V: meat-man
+
+_: meatpacker <n>
+_V: meat packer <n>
+
+_: meatpacking <n>
+_V: meat packing <n>
+
+_: medicolegal <aj>
+_=: medico-legal
+
+_: meetinghouse <n>
+_v: meeting house <n>
+_-: meeting-house <n>
+
+_: meltwater <n>
+_V: melt-water
+
+_: memsahib <n>
+_V: mem-sahib <n>
+
+_: merchant ship <n>
+_v: merchantship
+
+_: merrythought <n>
+_V: merry-thought
+
+_: meshwork <n>
+_V: mesh-work
+
+_: messroom
+_V: mess-room
+
+_: metalwork <n>
+_-: metal-work
+
+_: metalworker <n>
+_-: metal-worker <n>
+
+_: metalworking <n>
+_V: metal-working
+
+_: me-too
+_=: me too
+_v: metoo <n>
+
+_: microbrew <n>
+_V: micro-brew <n>
+
+_: microbrewery <n>
+_-: micro-brewery <n>
+
+_: micrometeorite <n>
+_V: micro-meteorite <n>
+
+_: micrometeorology <n>
+_V: micro-meteorology
+
+_: micromini <n>
+_=: micro-mini <n>
+
+_: microorganism <n>
+_-: micro-organism <n>
+
+_: midair <a>
+_v: mid-air
+
+_: midair <n>
+_v: mid-air
+
+_: midbrain <n>
+_V: mid-brain
+
+_: middlebrow <a>
+_v: middle-brow
+
+_: middlebrow <n>
+_v: middle-brow
+
+_: midgut <n>
+_V: mid-gut
+
+_: midleg <n>
+_V: mid-leg
+
+_: midlife <n>
+_V: mid-life
+
+_: midmorning <n>
+_=: mid-morning
+
+_: mid-range
+_.: midrange <n>
+
+_: midterm <a>
+_V: mid-term
+
+_: midterm <n>
+_V: mid-term
+
+_: midweek <av>
+_V: mid-week
+
+_: midweek <n>
+_V: mid-week
+
+_: midwinter <a>
+_V: mid-winter
+
+_: midwinter <n>
+_V: mid-winter
+
+_: midyear <a>
+_V: mid-year
+
+_: midyear <n>
+_V: mid-year
+
+_: milk shake <n>
+_.: milkshake <n>
+_-: milk-shake <n>
+
+_: milksop <n>
+_V: milk-sop <n>
+
+_: milkweed <n>
+_-: milk-weed
+
+_: millboard <n>
+_V: mill-board
+
+_: millstream <n>
+_V: mill-stream
+
+_: millwork <n>
+_V: mill-work
+
+_: mindset <n>
+_v: mind-set <n>
+
+_: minefield <n>
+_-: mine-field <n>
+
+_: minelayer <n>
+_V: mine-layer <n>
+
+_: minesweeper <n>
+_-: mine-sweeper <n>
+
+_: minesweeping <n>
+_=: mine-sweeping
+
+_: mini-break <n>
+_.: minibreak <n>
+
+_: minor league <n>
+_=: minor-league
+
+_: mintmark <n>
+_=: mint-mark
+
+_: mirrorball <n>
+_V: mirror ball <n>
+
+_: misch metal <n>
+_v: mischmetal
+
+_: miss out
+_v: missout <n>
+
+_: mistflower <n>
+_V: mist-flower <n>
+
+_: mixed-up <aj>
+_=: mixed up
+
+_: mix-up <n>
+_v: mixup <n>
+
+_: mizzenmast <n>
+_V: mizzen-mast <n>
+
+_: mobcap <n>
+_V: mob-cap <n>
+
+_: mock-up <n>
+_v: mockup <n>
+
+_: moldboard <n>
+_-: mold-board
+
+_: molehill <n>
+_-: mole-hill <n>
+
+_: moneybag <n>
+_V: money-bag <n>
+
+_: moneybox <n>
+_v: money box <n>
+_V: money-box <n>
+
+_: moneychanger <n>
+_?: money-changer <n>
+
+_: money-grubber <n>
+_v: moneygrubber <n>
+
+_: money-grubbing
+_v: moneygrubbing <a>
+
+_: money-grubbing
+_v: moneygrubbing <n>
+
+_: moneylender <n>
+_-: money-lender <n>
+
+_: moneymaker <n>
+_v: money-maker <n>
+
+_: moneymaking <aj>
+_v: money-making
+
+_: moneymaking <n>
+_v: money-making
+
+_: money-spinner <n>
+_v: moneyspinner <n>
+
+_: monkey nut <n>
+_v: monkeynut <n>
+
+_: monkeypot <n>
+_?: monkey-pot
+
+_: monkeyshine <n>
+_V: monkey-shine <n>
+
+_: monkfish <n>
+_V: monk-fish
+
+_: moonblind
+_=: moon-blind
+
+_: moonbow <n>
+_=: moon-bow
+
+_: mooneye <n>
+_?: moon-eye
+
+_: mooneyed
+_=: moon-eyed
+
+_: moon-faced <aj>
+_v: moonfaced
+
+_: moonfish <n>
+_V: moon-fish
+
+_: moonshot <n>
+_?: moon shot <n>
+
+_: mop up <n>
+_v: mop-up
+
+_: mop up <v>
+_v: mop-up
+
+_: morning glory <n>
+_v: morning-glory <n>
+
+_: mortarboard <n>
+_-: mortar-board <n>
+
+_: mosh pit <n>
+_.: moshpit <n>
+
+_: mosquitofish <n>
+_=: mosquito fish
+
+_: mossback <n>
+_V: moss-back
+
+_: moss-grown <aj>
+_v: mossgrown
+
+_: mosstrooper <n>
+_?: moss-trooper <n>
+
+_: motorbike <n>
+_-: motor-bike <n>
+
+_: motorboat <n>
+_-: motor-boat <n>
+
+_: motorbus <n>
+_?: motor-bus <n>
+
+_: motorcar <n>
+_v: motor car <n>
+_-: motor-car <n>
+
+_: motorcyclist <n>
+_-: motor-cyclist <n>
+
+_: motor home <n>
+_V: motorhome <n>
+
+_: moundbird <n>
+_=: mound-bird <n>
+
+_: mountaintop <n>
+_-: mountain-top
+
+_: mouse mat <n>
+_v: mousemat <n>
+
+_: mousepad <n>
+_v: mouse pad <n>
+
+_: mousetail <n>
+_?: mouse-tail
+
+_: mousetrap <n>
+_-: mouse-trap <n>
+
+_: mouthbreeder <n>
+_=: mouth-breeder
+
+_: muckraker <n>
+_-: muck-raker <n>
+
+_: muckworm <n>
+_?: muck-worm
+
+_: mudbath <n>
+_=: mud-bath <n>
+
+_: muddle-headed
+_v: muddleheaded <aj>
+
+_: mudfish <n>
+_V: mud-fish
+
+_: mudflat <n>
+_v: mud flat <n>
+
+_: mudguard <n>
+_V: mud-guard <n>
+
+_: mud hen <n>
+_v: mudhen <n>
+
+_: mudhole <n>
+_V: mud-hole
+
+_: mud puppy <n>
+_v: mudpuppy <n>
+_V: mud-puppy
+
+_: mudskipper <n>
+_V: mud-skipper
+
+_: mudslinger <n>
+_V: mud-slinger <n>
+
+_: mudslinging <n>
+_V: mud-slinging
+
+_: mug shot <n>
+_v: mugshot <n>
+
+_: mule skinner <n>
+_v: muleskinner <n>
+
+_: multiauthor
+_=: multi-author
+
+_: multiple-choice <aj>
+_v: multiple choice
+
+_: multistage <a>
+_V: multi-stage
+
+_: multistage <n>
+_V: multi-stage
+
+_: multi-storey
+_v: multistorey <aj>
+
+_: multi-storey
+_v: multistorey <n>
+
+_: multitrack <m>
+_=: multi-track
+
+_: multiwall
+_V: multi-wall
+
+_: mumbletypeg <n>
+_?: mumblety-peg <n>
+
+_: mumbo jumbo <n>
+_v: mumbo-jumbo <n>
+
+_: muscleman <n>
+_-: muscle-man
+
+_: muskmelon <n>
+_-: musk-melon
+
+_: musk ox <n>
+_v: musk-ox
+_v: muskox <n>
+
+_: muttonhead <n>
+_V: mutton-head <n>
+
+_: muttonheaded
+_=: mutton-headed
+
+_: muumuu <n>
+_v: muu-muu <n>
+
+_: muzzleloader <n>
+_v: muzzle-loader
+
+_: muzzleloading
+_V: muzzle-loading <aj>
+
+_: nailbrush <n>
+_v: nail brush <n>
+
+_: nail file <n>
+_V: nail-file <n>
+_V: nailfile <n>
+
+_: nailhead <n>
+_V: nail-head
+
+_: nail set
+_.: nailset <n>
+
+_: name-brand
+_v: name brand <n>
+
+_: name-drop <n>
+_V: namedrop <n>
+
+_: name-drop <v>
+_V: namedrop <v>
+
+_: name-dropper <n>
+_V: namedropper <n>
+
+_: name-dropping <n>
+_V: namedropping <n>
+
+_: nameplate <n>
+_-: name-plate <n>
+
+_: name tag <n>
+_V: nametag <n>
+
+_: narcoanalysis <n>
+_?: narco-analysis
+
+_: narrowboat <n>
+_?: narrow boat <n>
+
+_: nation-state <n>
+_v: nation state <n>
+
+_: naysay <m>
+_=: nay-say
+
+_: naysayer <n>
+_V: nay-sayer <n>
+
+_: neap tide <n>
+_V: neaptide <n>
+
+_: nearby <aj>
+_-: near-by
+
+_: nearby <av>
+_-: near-by
+
+_: nearsighted <aj>
+_V: near-sighted
+
+_: nearsightedness <n>
+_V: near-sightedness
+
+_: neatherd <n>
+_=: neat-herd
+
+_: neckpiece <n>
+_V: neck-piece
+
+_: needlefish <n>
+_V: needle-fish
+
+_: needlepoint <a>
+_-: needle-point
+
+_: needlepoint <n>
+_-: needle-point
+
+_: needlepoint <v>
+_V: needle-point
+
+_: nerve-racking <aj>
+_v: nerveracking
+
+_: netherworld <n>
+_v: nether world
+
+_: nettle rash <n>
+_v: nettlerash
+
+_: never mind
+_v: nevermind <n>
+
+_: new-fashioned
+_v: newfashioned
+
+_: newfound <aj>
+_V: new-found
+
+_: newlywed <n>
+_-: newly-wed <n>
+
+_: new-mown <aj>
+_v: newmown
+
+_: newsagency <n>
+_?: news agency <n>
+
+_: newsflash <n>
+_?: news flash <n>
+_V: news-flash <n>
+
+_: newsreader <n>
+_-: news-reader
+
+_: news-sheet <n>
+_v: newssheet <n>
+
+_: newsstand <n>
+_-: news-stand <n>
+
+_: next-door
+_=: next door <av>
+_v: nextdoor
+
+_: niggerhead
+_?: nigger-head
+
+_: nightblind
+_?: night-blind
+
+_: nightclothes <n>
+_-: night-clothes
+
+_: nightclub <n>
+_-: night-club <n>
+
+_: nighthawk <n>
+_V: night-hawk <n>
+
+_: nightlife <n>
+_v: night life <n>
+
+_: night light
+_v: night-light <n>
+_v: nightlight <n>
+
+_: nightrider <n>
+_?: night-rider
+
+_: nightside <n>
+_=: night-side
+
+_: nightstand <n>
+_v: night stand
+
+_: nightstick <n>
+_v: night stick
+_-: night-stick <n>
+
+_: nighttime <a>
+_V: night-time
+
+_: nighttime <n>
+_-: night-time
+
+_: nightwalker <n>
+_?: night-walker
+
+_: nightwatchman
+_?: night watchman <n>
+_V: night-watchman <n>
+
+_: nightwatchmen
+_v: night watchmen
+
+_: ninepin <n>
+_v: nine-pin
+
+_: ninnyhammer <n>
+_?: ninny-hammer
+
+_: nitpicker <n>
+_v: nit-picker
+
+_: nitpicking <a>
+_v: nit-picking
+
+_: nitpicking <n>
+_v: nit-picking
+
+_: N.Mex. <abbr>
+_=: N. Mex. <abbr>
+
+_: no-good <aj>
+_v: no good
+
+_: no man's land <n>
+_=: no-man's-land
+
+_: nonacceptance <n>
+_V: non-acceptance
+
+_: nonadmission <n>
+_=: non-admission
+
+_: nonaggression <n>
+_v: non-aggression
+
+_: nonalcoholic <aj>
+_v: non-alcoholic
+
+_: nonalcoholic <n>
+_v: non-alcoholic
+
+_: nonaligned <aj>
+_v: non-aligned
+
+_: nonalignment <n>
+_v: non-alignment
+
+_: nonallergic <a>
+_v: non-allergic
+
+_: nonappearance <n>
+_?: non-appearance
+
+_: nonarrival
+_?: non-arrival
+
+_: nonattendance <n>
+_v: non-attendance
+
+_: nonbeliever <n>
+_v: non-believer <n>
+
+_: nonbelligerency <n>
+_=: non-belligerency
+
+_: noncollegiate
+_V: non-collegiate
+
+_: noncom <n>
+_V: non-com <n>
+
+_: noncombatant <n>
+_v: non-combatant <n>
+
+_: noncommissioned <aj>
+_V: non-commissioned
+
+_: noncommissioned officer <n>
+_v: non-commissioned officer <n>
+
+_: noncommittal <aj>
+_v: non-committal
+
+_: noncommittally <a>
+_v: non-committally
+
+_: noncommunicant <n>
+_=: non-communicant
+
+_: noncompliance <n>
+_v: non-compliance
+
+_: noncomplying <a>
+_V: non-complying
+
+_: noncomplying <n>
+_V: non-complying
+
+_: nonconcurrence <n>
+_?: non-concurrence
+
+_: nonconducting <aj>
+_V: non-conducting <aj>
+
+_: nonconductor <n>
+_V: non-conductor <n>
+
+_: noncontributory <a>
+_v: non-contributory
+
+_: noncontributory <n>
+_v: non-contributory
+
+_: noncooperation <n>
+_v: non-cooperation
+
+_: noncurrent <aj>
+_V: non-current
+
+_: noncustodial <a>
+_v: non-custodial
+
+_: nondairy <a>
+_v: non-dairy
+
+_: nondelivery <n>
+_v: non-delivery
+
+_: nondenominational <aj>
+_V: non-denominational
+
+_: nondriver <n>
+_?: non-driver <n>
+
+_: noneffective <a>
+_v: non-effective
+
+_: noneffective <n>
+_?: non-effective
+
+_: nonego <n>
+_?: non-ego
+
+_: nonelect
+_=: non-elect
+
+_: nonelection <n>
+_?: non-election
+
+_: nonelective <aj>
+_?: non-elective <aj>
+
+_: nonelectric <a>
+_V: non-electric
+
+_: nonelectric <n>
+_V: non-electric
+
+_: nonelectrolyte <n>
+_=: non-electrolyte
+
+_: nonentry <n>
+_=: non-entry
+
+_: nonessential <n>
+_v: non-essential <n>
+
+_: nonevent <n>
+_?: non-event <n>
+
+_: nonexecutive <n>
+_=: non-executive
+
+_: nonexistence <n>
+_v: non-existence
+
+_: nonexistent <aj>
+_v: non-existent
+
+_: nonfat <aj>
+_v: non-fat
+
+_: nonfeasance <n>
+_V: non-feasance
+
+_: nonferrous <a>
+_V: non-ferrous
+
+_: nonfiction <a>
+_v: non-fiction
+
+_: nonfiction <n>
+_v: non-fiction
+
+_: nonfictional <aj>
+_V: non-fictional
+
+_: nonfinite <aj>
+_v: non-finite <aj>
+
+_: nonflammable <aj>
+_v: non-flammable
+
+_: nongovernmental <a>
+_v: non-governmental
+
+_: nonhero <n>
+_?: non-hero <n>
+
+_: nonhuman <aj>
+_v: non-human
+
+_: nonintervention <n>
+_v: non-intervention
+
+_: noninvasive <aj>
+_v: non-invasive
+
+_: noninvolvement <n>
+_=: non-involvement <n>
+
+_: noniron
+_=: non-iron
+
+_: nonjoinder <n>
+_?: non-joinder
+
+_: nonjuring
+_V: non-juring
+
+_: nonlinear <aj>
+_v: non-linear
+
+_: nonmember <n>
+_v: non-member <n>
+
+_: nonmetal <aj>
+_V: non-metal
+
+_: nonmetal <n>
+_V: non-metal
+
+_: nonmetallic <aj>
+_V: non-metallic
+
+_: nonmoral
+_?: non-moral
+
+_: nonnative <aj>
+_?: non-native
+
+_: nonnative <n>
+_?: non-native
+
+_: nonnatural <aj>
+_=: non-natural
+
+_: nonnucleated
+_=: non-nucleated
+
+_: nonobjective <aj>
+_V: non-objective
+
+_: nonobservance <n>
+_V: non-observance
+
+_: nonparticipating <a>
+_V: non-participating
+
+_: nonpartisan <aj>
+_v: non-partisan
+
+_: nonpartisan <n>
+_v: non-partisan
+
+_: nonparty <n>
+_=: non-party
+
+_: nonpayment <n>
+_v: non-payment
+
+_: nonperformance <n>
+_V: non-performance
+
+_: nonperson <n>
+_v: non-person <n>
+
+_: nonprescription <aj>
+_v: non-prescription
+
+_: nonproductive <aj>
+_V: non-productive
+
+_: nonprofessional <aj>
+_V: non-professional
+
+_: nonprofessional <n>
+_V: non-professional
+
+_: nonproficient
+_=: non-proficient
+
+_: nonprofit <n>
+_v: non-profit <n>
+
+_: nonproliferation <n>
+_v: non-proliferation <n>
+
+_: nonquota
+_=: non-quota
+
+_: nonrefundable <a>
+_v: non-refundable
+
+_: nonrenewable <aj>
+_v: non-renewable
+
+_: nonrepresentational <aj>
+_V: non-representational
+
+_: nonresidence <n>
+_?: non-residence
+
+_: nonresident <n>
+_v: non-resident <n>
+
+_: nonresidential <aj>
+_v: non-residential
+
+_: nonresistance <n>
+_V: non-resistance
+
+_: nonresistant <n>
+_V: non-resistant <n>
+
+_: nonrestrictive <aj>
+_v: non-restrictive
+
+_: nonreturnable <aj>
+_v: non-returnable
+
+_: nonreturnable <n>
+_v: non-returnable
+
+_: nonrigid <aj>
+_V: non-rigid
+
+_: nonscheduled <a>
+_V: non-scheduled
+
+_: nonskid <aj>
+_V: non-skid
+
+_: nonslip <aj>
+_v: non-slip
+
+_: nonsmoker <n>
+_v: non-smoker <n>
+
+_: nonsmoking <a>
+_v: non-smoking
+
+_: nonspecialist <a>
+_V: non-specialist
+
+_: nonspecialist <n>
+_V: non-specialist
+
+_: nonspecific <aj>
+_v: non-specific
+
+_: nonstandard <aj>
+_v: non-standard
+
+_: nonstarter <n>
+_?: non-starter <n>
+
+_: nonstick <aj>
+_v: non-stick
+
+_: nonstop <aj>
+_v: non-stop
+
+_: nonstop <av>
+_v: non-stop
+
+_: nonstop <n>
+_v: non-stop
+
+_: nonunion <aj>
+_v: non-union
+
+_: nonunion <n>
+_=: non-union
+
+_: nonunionist <n>
+_=: non-unionist
+
+_: nonuser <n>
+_v: non-user
+
+_: nonutility <n>
+_=: non-utility
+
+_: non-vegetarian
+_v: nonvegetarian <n>
+
+_: nonverbal <aj>
+_v: non-verbal
+
+_: nonviolence <n>
+_v: non-violence
+
+_: nonviolent <aj>
+_v: non-violent
+
+_: nonvoting <a>
+_V: non-voting
+
+_: nonwhite <n>
+_v: non-white <n>
+
+_: no place
+_v: noplace
+
+_: nor'easter
+_-: nor'-easter
+
+_: northbound <aj>
+_-: north-bound
+
+_: northeast <av>
+_v: north-east <av>
+
+_: northeaster <n>
+_V: north-easter <n>
+
+_: northeasterly <aj>
+_v: north-easterly
+
+_: northeastern <aj>
+_v: north-eastern
+
+_: northeastward <n>
+_v: north-eastward <n>
+
+_: northeastwardly <av>
+_V: north-eastwardly
+
+_: northwest <av>
+_v: north-west <av>
+
+_: northwester <n>
+_V: north-wester <n>
+
+_: northwesterly <aj>
+_v: north-westerly
+
+_: northwestern <aj>
+_v: north-western
+
+_: northwestward <n>
+_v: north-westward <n>
+
+_: northwestwardly <av>
+_?: north-westwardly
+
+_: nor'wester
+_V: nor'-wester
+
+_: noseband <n>
+_?: nose-band <n>
+
+_: nosebleed <n>
+_-: nose-bleed <n>
+
+_: nose cone <n>
+_v: nosecone <n>
+
+_: nosedive <n>
+_v: nose dive <n>
+
+_: nosepiece <n>
+_V: nose-piece
+
+_: nose ring <n>
+_v: nosering <n>
+
+_: nosewheel <n>
+_V: nose-wheel <n>
+
+_: noticeboard <n>
+_V: notice-board <n>
+
+_: no way
+_v: noway <a>
+
+_: no way
+_v: noway <n>
+
+_: nucleoprotein <n>
+_?: nucleo-protein
+
+_: number-crunching
+_v: number crunching <n>
+
+_: number plate <n>
+_=: number-plate <n>
+_v: numberplate <n>
+
+_: nut-brown
+_v: nutbrown <aj>
+
+_: nutgall <n>
+_?: nut-gall
+
+_: nutgrass <n>
+_=: nut-grass
+
+_: nymphlike
+_?: nymph-like
+
+_: oarfish <n>
+_?: oar-fish
+
+_: oarlock <n>
+_-: oar-lock <n>
+
+_: oasthouse <n>
+_=: oast-house <n>
+
+_: oceangoing <aj>
+_v: ocean-going
+
+_: odd-job man <n>
+_v: odd-jobman <n>
+
+_: officeholder <n>
+_V: office-holder <n>
+
+_: off-key <aj>
+_v: offkey
+
+_: off-limits <aj>
+_v: off limits
+
+_: offline <aj>
+_V: off-line <aj>
+
+_: off-peak
+_V: offpeak
+
+_: off-ramp <n>
+_V: offramp <n>
+
+_: offscouring <n>
+_=: off-scouring <n>
+
+_: offscreen
+_=: off-screen
+
+_: off-season <n>
+_v: off season <n>
+
+_: off-site <aj>
+_v: offsite
+
+_: offstage <aj>
+_V: off-stage
+
+_: offstage <av>
+_V: off-stage
+
+_: offstage <n>
+_V: off-stage
+
+_: off-the-record
+_=: off the record <av>
+
+_: off year <n>
+_=: off-year
+
+_: ofttimes <av>
+_V: oft-times
+
+_: oilbird <n>
+_?: oil-bird
+
+_: oilcup <n>
+_?: oil-cup <n>
+
+_: oilfield <n>
+_V: oil-field <n>
+
+_: oilseed <n>
+_V: oil-seed
+
+_: okey-doke
+_V: okeydoke
+
+_: okey-dokey
+_V: okeydokey
+
+_: old school <n>
+_v: old-school
+
+_: old squaw <n>
+_v: oldsquaw <n>
+
+_: old-style
+_v: old style <n>
+_v: oldstyle <n>
+
+_: old-timer <n>
+_v: old timer
+
+_: oldwife <n>
+_?: old wife <n>
+
+_: oleoresin <n>
+_V: oleo-resin
+
+_: olive-green <n>
+_v: olive green <n>
+
+_: olla podrida <n>
+_v: olla-podrida
+
+_: onboard
+_v: on-board
+
+_: one-of-a-kind
+_v: one of a kind
+
+_: onetime <aj>
+_?: one-time <aj>
+
+_: onionskin <n>
+_V: onion-skin
+
+_: online <aj>
+_V: on-line <aj>
+
+_: onscreen <a>
+_?: on-screen
+
+_: on-site <aj>
+_v: onsite
+
+_: onstream
+_=: on-stream
+
+_: open door <n>
+_v: open-door
+
+_: openhanded <aj>
+_?: open-handed
+
+_: openhandedness <n>
+_V: open-handedness
+
+_: open-hearted
+_v: openhearted <aj>
+
+_: openheartedness <n>
+_=: open-heartedness
+
+_: open-mouthed
+_v: openmouthed <aj>
+
+_: orangeroot <n>
+_=: orange-root
+
+_: orangewood <n>
+_?: orange-wood
+
+_: orangoutang <n>
+_=: orang-outang <n>
+
+_: orangutan <n>
+_v: orang-utan <n>
+
+_: orchardman
+_V: orchard-man
+
+_: orebody <n>
+_=: ore body
+
+_: organ grinder <n>
+_v: organ-grinder <n>
+
+_: orrisroot <n>
+_V: orris-root
+
+_: ostrichlike
+_=: ostrich-like
+
+_: ottava rima <n>
+_v: ottavarima
+
+_: otterhound <n>
+_V: otter-hound
+
+_: outask <m>
+_=: out-ask
+
+_: out-of-date <aj>
+_v: out of date
+
+_: out-of-doors
+_=: out of doors <av>
+
+_: out-of-the-way <aj>
+_v: out of the way <aj>
+
+_: out-of-work
+_v: out of work <aj>
+
+_: outpatient <n>
+_-: out-patient <n>
+
+_: outtake <n>
+_v: out-take <n>
+
+_: ovenbird <n>
+_-: oven-bird
+
+_: overage <aj>
+_V: over-age
+
+_: overage <n>
+_V: over-age
+
+_: overanxiety <n>
+_=: over-anxiety
+
+_: overanxious <aj>
+_V: over-anxious
+
+_: overconfidence <n>
+_V: over-confidence
+
+_: overconfident <aj>
+_-: over-confident
+
+_: overcool <m>
+_V: over-cool
+
+_: overdetermined
+_V: over-determined
+
+_: overfamiliar <aj>
+_?: over-familiar
+
+_: overfamiliarity <n>
+_V: over-familiarity
+
+_: overprecise <a>
+_v: over-precise
+
+_: overrefine <v>
+_?: over-refine <v>
+
+_: overrefinement <n>
+_?: over-refinement
+
+_: oxbow <a>
+_-: ox-bow
+
+_: oxbow <n>
+_-: ox-bow
+
+_: oxpecker <n>
+_?: ox-pecker
+
+_: oxtongue <n>
+_=: ox-tongue
+
+_: oxyacetylene <a>
+_V: oxy-acetylene
+
+_: oxyacetylene <n>
+_V: oxy-acetylene
+
+_: oxyacid <n>
+_?: oxy-acid
+
+_: oxyhydrogen
+_?: oxy-hydrogen
+
+_: oxysalt <n>
+_?: oxy-salt
+
+_: oystercatcher <n>
+_V: oyster-catcher <n>
+
+_: pacesetter <n>
+_V: pace-setter <n>
+
+_: packet boat <n>
+_?: packet-boat <n>
+_v: packetboat
+
+_: packinghouse <n>
+_v: packing house
+
+_: packsaddle <n>
+_V: pack-saddle <n>
+
+_: packthread <n>
+_?: pack-thread
+
+_: paddleboard <n>
+_V: paddle-board
+
+_: paddle boat
+_v: paddleboat <n>
+_V: paddle-boat
+
+_: paddywhack <m>
+_=: paddy-whack
+
+_: padnag <n>
+_?: pad-nag
+
+_: padsaw <n>
+_=: pad-saw
+
+_: pageboy <n>
+_V: page-boy <n>
+
+_: painkiller <n>
+_-: pain-killer <n>
+
+_: paintbox <n>
+_v: paint-box <n>
+
+_: paintbrush <n>
+_-: paint-brush <n>
+
+_: pallbearer <n>
+_-: pall-bearer <n>
+
+_: palmerworm <n>
+_=: palmer-worm
+
+_: pantyhose <n>
+_v: panty hose
+
+_: pantyliner <n>
+_v: panty liner <n>
+
+_: pantywaist <n>
+_V: panty-waist <n>
+
+_: paperboy <n>
+_v: paper boy <n>
+
+_: paper clip <n>
+_v: paperclip <n>
+_V: paper-clip <n>
+
+_: papergirl <n>
+_?: paper girl <n>
+
+_: paperhanger <n>
+_-: paper-hanger <n>
+
+_: paperhanging <n>
+_V: paper-hanging <n>
+
+_: paper knife <n>
+_v: paperknife <n>
+_V: paper-knife <n>
+
+_: papermaker <n>
+_V: paper-maker
+
+_: papermaking <n>
+_V: paper-making
+
+_: paperweight <n>
+_-: paper-weight <n>
+
+_: pari-mutuel <n>
+_v: parimutuel <n>
+
+_: parrotfish <n>
+_V: parrot-fish
+
+_: particleboard <n>
+_V: particle board <n>
+
+_: partridgeberry <n>
+_V: partridge-berry
+
+_: part-song <n>
+_v: part song
+
+_: party-pooper
+_=: party pooper <n>
+
+_: pasqueflower <n>
+_V: pasque-flower
+
+_: passback <n>
+_=: pass-back
+
+_: passband <n>
+_V: pass band <n>
+
+_: passbook <n>
+_-: pass-book <n>
+
+_: passerby <n>
+_v: passer-by <n>
+
+_: passionflower <n>
+_-: passion-flower <n>
+
+_: passkey <n>
+_v: pass key <n>
+
+_: pass out <v>
+_V: passout
+
+_: pastedown <n>
+_=: paste down
+
+_: paste-up <n>
+_v: pasteup <n>
+
+_: pastureland <n>
+_-: pasture-land
+
+_: patternmaker <n>
+_V: pattern-maker
+
+_: pattypan <n>
+_V: patty-pan <n>
+
+_: paving stone <n>
+_v: pavingstone <n>
+
+_: pawn ticket <n>
+_v: pawnticket <n>
+
+_: pay cheque <n>
+_.: paycheque <n>
+
+_: payload <n>
+_-: pay-load <n>
+
+_: payout <n>
+_-: pay-out
+
+_: pay out <v>
+_v: pay-out
+
+_: pay phone <n>
+_v: payphone <n>
+_V: pay-phone <n>
+
+_: payroll <n>
+_-: pay-roll <n>
+
+_: payslip <n>
+_V: pay-slip <n>
+
+_: pay stub <n>
+_.: paystub <n>
+
+_: pay-TV
+_v: pay TV
+
+_: peacekeeper <n>
+_-: peace-keeper <n>
+
+_: peacekeeping <aj>
+_V: peace-keeping
+
+_: peacekeeping <n>
+_-: peace-keeping
+
+_: peachblow <n>
+_V: peach-blow
+
+_: pea coat
+_.: peacoat <n>
+_V: pea-coat
+
+_: pearlash <n>
+_=: pearl-ash
+
+_: peasecod <n>
+_?: pease-cod
+
+_: pea-souper <n>
+_.: peasouper <n>
+
+_: peatbog
+_?: peat-bog <n>
+
+_: peat moss <n>
+_v: peatmoss
+_V: peat-moss
+
+_: peepbo
+_v: peep-bo
+
+_: peephole <n>
+_-: peep-hole <n>
+
+_: peepshow <n>
+_V: peep-show <n>
+
+_: pegbox <n>
+_V: peg-box
+
+_: penfriend <n>
+_V: pen-friend <n>
+
+_: pen name <n>
+_v: penname <n>
+_V: pen-name <n>
+
+_: penny ante <n>
+_=: penny-ante
+
+_: penny pincher <n>
+_=: penny-pincher <n>
+
+_: penny whistle <n>
+_v: pennywhistle <n>
+_V: penny-whistle <n>
+
+_: pen-pusher <n>
+_v: penpusher <n>
+
+_: pepperbox <n>
+_=: pepper-box
+
+_: peppergrass <n>
+_V: pepper-grass
+
+_: pepper mill <n>
+_V: peppermill <n>
+
+_: pepper pot <n>
+_=: pepper-pot <n>
+_v: pepperpot <n>
+
+_: pepper shaker <n>
+_V: peppershaker <n>
+
+_: pepper tree <n>
+_v: peppertree <n>
+
+_: percent <a>
+_v: per cent
+
+_: percent <n>
+_v: per cent
+
+_: pewholder <n>
+_=: pew-holder
+
+_: phone call <n>
+_V: phonecall <n>
+
+_: phonecard <n>
+_v: phone card <n>
+
+_: photocall <n>
+_?: photo call <n>
+
+_: photoemission <n>
+_V: photo-emission
+
+_: photoresist <n>
+_V: photo-resist <n>
+
+_: photosensitivity <n>
+_V: photo-sensitivity
+
+_: phrasebook <n>
+_?: phrase book <n>
+_-: phrase-book <n>
+
+_: pickerelweed <n>
+_V: pickerel-weed
+
+_: pickpocket <n>
+_-: pick-pocket <n>
+
+_: pickthank <n>
+_=: pick-thank
+
+_: pickup <n>
+_V: pick-up <n>
+
+_: picture-postcard
+_v: picture postcard <n>
+
+_: piecework <n>
+_-: piece-work
+
+_: pie chart <n>
+_V: piechart <n>
+
+_: pieplant <n>
+_V: pie-plant
+
+_: pigeonwing <n>
+_V: pigeon-wing
+
+_: pigfish <n>
+_?: pig-fish
+
+_: piggy bank <n>
+_v: piggy-bank
+_V: piggybank <n>
+
+_: pignut <n>
+_V: pig-nut
+
+_: pigsticker <n>
+_=: pig-sticker
+
+_: pigsticking <n>
+_=: pig-sticking
+
+_: pikeperch <n>
+_?: pike-perch <n>
+
+_: pile driver <n>
+_=: pile-driver <n>
+_V: piledriver <n>
+
+_: pileup <n>
+_v: pile-up <n>
+
+_: pillbox <n>
+_-: pill-box <n>
+
+_: pilotfish <n>
+_=: pilot-fish <n>
+
+_: pilothouse <n>
+_-: pilot-house
+
+_: pinch-hit <n>
+_v: pinch hit
+
+_: pinch hitter <n>
+_v: pinch-hitter
+
+_: pin down <v>
+_v: pindown
+
+_: pine cone <n>
+_V: pine-cone <n>
+_V: pinecone <n>
+
+_: pinewood <n>
+_-: pine-wood <n>
+
+_: pinfeather <n>
+_V: pin-feather
+
+_: pinfire <n>
+_=: pin-fire
+
+_: pinkeye <n>
+_-: pink-eye
+
+_: pinprick <n>
+_-: pin-prick <n>
+
+_: pinstripe <a>
+_v: pin stripe
+
+_: pinstripe <n>
+_v: pin stripe
+_-: pin-stripe <n>
+
+_: pinstriped <aj>
+_v: pin-striped
+
+_: pint-size <aj>
+_v: pintsize
+
+_: pint-sized <aj>
+_v: pintsized
+
+_: pinup <n>
+_v: pin-up <n>
+
+_: pinwheel <n>
+_-: pin-wheel
+
+_: pinwheel <v>
+_-: pin-wheel
+
+_: pipefish <n>
+_V: pipe-fish
+
+_: pipefitting <n>
+_=: pipe fitting <n>
+
+_: pipestem <n>
+_=: pipe-stem
+
+_: pipsqueak <n>
+_v: pip-squeak <n>
+
+_: pisspot <n>
+_=: piss-pot <n>
+
+_: pitch pine <n>
+_v: pitchpine <n>
+
+_: pitch pipe <n>
+_V: pitchpipe <n>
+
+_: pitchpole <m>
+_=: pitch-pole <m>
+
+_: pivotman <n>
+_V: pivot-man
+
+_: placekick <n>
+_=: place kick <n>
+
+_: place mat <n>
+_V: placemat <n>
+
+_: place name <n>
+_v: placename
+
+_: plainchant <n>
+_-: plain-chant
+
+_: plainclothes <a>
+_v: plain-clothes
+
+_: plainclothesman <n>
+_v: plainclothes man
+
+_: plainspoken <aj>
+_?: plain-spoken
+
+_: plain text
+_v: plaintext <n>
+
+_: plantlike <a>
+_V: plant-like
+
+_: plasterwork <n>
+_V: plaster-work
+
+_: plate glass <n>
+_=: plate-glass
+_V: plateglass
+
+_: play date <n>
+_.: playdate <n>
+
+_: playday <n>
+_=: play-day
+
+_: playgoer <n>
+_-: play-goer <n>
+
+_: playgoing <n>
+_V: play-going
+
+_: playlist <n>
+_-: play-list <n>
+
+_: playoff <n>
+_v: play-off <n>
+
+_: playpen <n>
+_-: play-pen <n>
+
+_: plea-bargain <v>
+_=: plea bargain <v>
+
+_: pleinairist <n>
+_=: plein-airist
+
+_: pleuropneumonia <n>
+_?: pleuro-pneumonia
+
+_: plugin <n>
+_?: plug-in <n>
+
+_: plug-ugly <n>
+_v: plugugly <n>
+
+_: pocketbook <n>
+_v: pocket book <n>
+_-: pocket-book <n>
+
+_: pocketknife <n>
+_v: pocket knife <n>
+_-: pocket-knife <n>
+
+_: point-blank <aj>
+_v: pointblank
+
+_: point-blank <av>
+_v: pointblank
+
+_: point man <n>
+_V: pointman <n>
+
+_: pole-vaulter <n>
+_=: pole vaulter <n>
+
+_: policyholder <n>
+_-: policy-holder <n>
+
+_: polka dot <n>
+_=: polka-dot <n>
+
+_: pompom <n>
+_?: pom-pom <n>
+
+_: pool hall
+_V: poolhall <n>
+
+_: pooper scooper
+_=: pooper-scooper <n>
+
+_: poor boy <n>
+_v: poorboy <n>
+
+_: poor-mouth <m>
+_v: poormouth
+
+_: pop-eyed
+_v: popeyed <aj>
+
+_: popgun <n>
+_-: pop-gun <n>
+
+_: poppyhead <n>
+_?: poppy-head
+
+_: poppy seed <n>
+_V: poppyseed <n>
+
+_: pop-up <n>
+_v: popup <n>
+
+_: porkpie <n>
+_v: pork pie <n>
+_V: pork-pie <n>
+
+_: portfire
+_?: port-fire
+
+_: postbag <n>
+_v: post-bag <n>
+
+_: post-bellum
+_.: postbellum
+
+_: postbox <n>
+_-: post-box <n>
+
+_: postcard <n>
+_v: post card <n>
+
+_: post chaise <n>
+_V: postchaise <n>
+
+_: postdiluvial
+_V: post-diluvial
+
+_: postdiluvian <aj>
+_V: post-diluvian
+
+_: postdiluvian <n>
+_V: post-diluvian
+
+_: postdoc <n>
+_V: post-doc <n>
+
+_: postdoctoral <aj>
+_V: post-doctoral
+
+_: postdoctoral <n>
+_V: post-doctoral
+
+_: postexilian
+_?: post-exilian
+
+_: postexilic <aj>
+_V: post-exilic
+
+_: postglacial <aj>
+_V: post-glacial
+
+_: postgraduate <n>
+_V: post-graduate <n>
+
+_: posthole <n>
+_V: post-hole
+
+_: post house <n>
+_v: posthouse <n>
+
+_: posthypnotic <a>
+_V: post-hypnotic
+
+_: postindustrial <aj>
+_v: post-industrial
+
+_: postmeridian <aj>
+_V: post-meridian
+
+_: postmillenarian <n>
+_=: post-millenarian
+
+_: postmillennial <aj>
+_V: post-millennial
+
+_: postmillennialism <n>
+_V: post-millennialism
+
+_: postmodern <aj>
+_-: post-modern
+
+_: postmodernism <n>
+_-: post-modernism
+
+_: postmodernist <n>
+_V: post-modernist <n>
+
+_: postmortem <n>
+_v: post-mortem <n>
+
+_: postnasal <a>
+_V: post-nasal
+
+_: postnatal <aj>
+_V: post-natal
+
+_: postnuptial <aj>
+_V: post-nuptial
+
+_: postoperative <aj>
+_v: post-operative
+
+_: postpartum <aj>
+_V: post-partum
+
+_: postprandial <aj>
+_V: post-prandial
+
+_: postprimary
+_=: post-primary
+
+_: postproduction <n>
+_=: post-production
+
+_: poststructuralism <n>
+_V: post-structuralism
+
+_: posttension <m>
+_=: post-tension <m>
+
+_: postwar <aj>
+_v: post-war
+
+_: postwoman <n>
+_V: post-woman
+
+_: potbellied <aj>
+_V: pot-bellied
+
+_: potbelly <n>
+_V: pot-belly <n>
+
+_: potboiler <n>
+_-: pot-boiler <n>
+
+_: potbound <aj>
+_=: pot-bound
+
+_: potboy <n>
+_V: pot-boy <n>
+
+_: pothunter <n>
+_V: pot-hunter <n>
+
+_: pothunting <n>
+_V: pot-hunting
+
+_: potluck <a>
+_v: pot luck
+_-: pot-luck
+
+_: potluck <n>
+_v: pot luck
+_-: pot-luck
+
+_: potpie <n>
+_?: pot pie
+
+_: potpourri <n>
+_-: pot-pourri <n>
+
+_: potshot <n>
+_v: pot shot
+_-: pot-shot <n>
+
+_: pound cake <n>
+_v: poundcake
+_V: pound-cake
+
+_: power broker <n>
+_V: powerbroker <n>
+
+_: powerhouse <n>
+_-: power-house <n>
+
+_: precancel <n>
+_V: pre-cancel
+
+_: precancel <v>
+_V: pre-cancel
+
+_: preconquest
+_V: pre-conquest
+
+_: preeclampsia <n>
+_V: pre-eclampsia <n>
+
+_: preelect <m>
+_=: pre-elect
+
+_: preelection <n>
+_?: pre-election
+
+_: preeminence <n>
+_v: pre-eminence
+
+_: preeminent <aj>
+_v: pre-eminent
+
+_: preeminently <av>
+_v: pre-eminently <av>
+
+_: pre-empt <n>
+_.: preempt <n>
+
+_: preempt <v>
+_v: pre-empt <v>
+
+_: preemption <n>
+_v: pre-emption <n>
+
+_: preemptive <aj>
+_v: pre-emptive <aj>
+
+_: preengage
+_?: pre-engage
+
+_: preestablish <m>
+_?: pre-establish
+
+_: preexilian
+_=: pre-exilian
+
+_: preexilic
+_=: pre-exilic
+
+_: preexistence <n>
+_V: pre-existence
+
+_: preexisting <aj>
+_v: pre-existing <aj>
+
+_: preglacial
+_V: pre-glacial
+
+_: preignition <n>
+_?: pre-ignition
+
+_: pre-owned
+_v: preowned
+
+_: preprint <m>
+_V: pre-print
+
+_: prequalification <n>
+_V: pre-qualification
+
+_: prequalify <m>
+_=: pre-qualify
+
+_: present-day <aj>
+_v: present day
+
+_: press-gang <m>
+_v: pressgang <m>
+
+_: pressroom <n>
+_V: press-room <n>
+
+_: presswork <n>
+_V: press-work
+
+_: pretax <a>
+_v: pre-tax
+
+_: preteen <n>
+_v: pre-teen <n>
+
+_: prewar <aj>
+_v: pre-war
+
+_: prie-dieu <n>
+_v: priedieu <n>
+
+_: prime time <n>
+_v: primetime
+
+_: printout <n>
+_-: print-out <n>
+
+_: privatdocent <n>
+_=: privat-docent
+
+_: privatdozent <n>
+_V: privat-dozent
+
+_: prizefight <n>
+_V: prize-fight <n>
+
+_: prizefighter <n>
+_-: prize-fighter <n>
+
+_: prizefighting <n>
+_V: prize-fighting
+
+_: prize-giving <n>
+_v: prizegiving <n>
+
+_: prizewinner <n>
+_V: prize-winner <n>
+
+_: prizewinning <aj>
+_v: prize-winning
+
+_: pro-choice <aj>
+_v: prochoice
+
+_: profit sharing <n>
+_=: profit-sharing
+
+_: pro forma <aj>
+_v: proforma
+
+_: pro forma <av>
+_v: proforma
+
+_: proforma
+_?: pro forma <n>
+
+_: promptbook <n>
+_?: prompt-book
+
+_: proofreader <n>
+_-: proof-reader <n>
+
+_: propjet <n>
+_V: prop-jet <n>
+
+_: protohistoric
+_V: proto-historic
+
+_: protohistory <n>
+_V: proto-history
+
+_: proudhearted
+_=: proud-hearted
+
+_: psalmbook <n>
+_V: psalm-book
+
+_: pseudoscience <n>
+_V: pseudo-science
+
+_: pseudoscientific <aj>
+_=: pseudo-scientific
+
+_: public address system <n>
+_v: public-address system
+
+_: public-spirited <aj>
+_v: public spirited
+
+_: pudding stone <n>
+_=: pudding-stone
+_v: puddingstone <n>
+
+_: puffbird <n>
+_V: puff-bird
+
+_: pullback <n>
+_-: pull-back
+
+_: pull back <v>
+_v: pull-back
+
+_: pullout <n>
+_V: pull-out <n>
+
+_: pull-up <n>
+_v: pullup <n>
+
+_: pump-priming
+_=: pump priming <n>
+
+_: punchbag <n>
+_v: punch-bag <n>
+
+_: punchball <n>
+_?: punch-ball <n>
+
+_: punch bowl <n>
+_V: punch-bowl <n>
+_V: punchbowl <n>
+
+_: punch card <n>
+_V: punchcard <n>
+
+_: punch line <n>
+_v: punchline <n>
+
+_: pureblood <aj>
+_=: pure-blood
+
+_: pureblood <n>
+_=: pure-blood
+
+_: pureblooded <aj>
+_=: pure-blooded
+
+_: purebred <aj>
+_v: pure-bred
+
+_: purebred <n>
+_v: pure-bred
+
+_: pushball <n>
+_?: push-ball
+
+_: pushbike <n>
+_v: push-bike <n>
+
+_: push button <n>
+_.: pushbutton
+_=: push-button
+
+_: pushcart <n>
+_-: push-cart <n>
+
+_: pushchair <n>
+_V: push-chair <n>
+
+_: pushover <n>
+_-: push-over <n>
+
+_: pushpin <n>
+_V: push-pin <n>
+
+_: push-up <n>
+_v: pushup <n>
+
+_: pussycat <n>
+_-: pussy-cat <n>
+
+_: pussy willow <n>
+_V: pussywillow <n>
+
+_: put-down <n>
+_v: putdown <n>
+
+_: putoff <n>
+_=: put-off
+
+_: put off <v>
+_V: put-off
+
+_: put-on <n>
+_V: puton <n>
+
+_: put upon
+_v: put-upon <aj>
+
+_: puzzleheaded
+_=: puzzle-headed
+
+_: puzzleheadedness <n>
+_=: puzzle-headedness
+
+_: pyroelectric <aj>
+_V: pyro-electric
+
+_: pyroelectric <n>
+_V: pyro-electric
+
+_: pyroelectricity <n>
+_V: pyro-electricity
+
+_: quarterback <n>
+_-: quarter-back <n>
+
+_: quarterdeck <n>
+_-: quarter-deck <n>
+
+_: quarterfinal <n>
+_v: quarter-final <n>
+
+_: quarterfinalist <n>
+_V: quarter-finalist <n>
+
+_: queenlike <aj>
+_V: queen-like
+
+_: quickfire
+_?: quick-fire
+
+_: quitclaim <n>
+_V: quit-claim
+
+_: quitclaim <v>
+_V: quit-claim
+
+_: quitrent <n>
+_?: quit-rent
+
+_: quizmaster <n>
+_V: quiz-master <n>
+
+_: rabbitfish <n>
+_V: rabbit-fish
+
+_: race car <n>
+_v: racecar <n>
+
+_: racehorse <n>
+_v: race horse <n>
+
+_: racewalker <n>
+_=: race-walker <n>
+
+_: racewalking <n>
+_V: race-walking
+
+_: radio astronomy <n>
+_V: radioastronomy
+
+_: radioelement <n>
+_?: radio-element
+
+_: radioimmunoassay <n>
+_V: radio-immuno-assay
+
+_: radioisotope <n>
+_-: radio-isotope <n>
+
+_: radiostrontium <n>
+_V: radio-strontium
+
+_: radiothorium <n>
+_?: radio-thorium
+
+_: ragbag <n>
+_V: rag-bag <n>
+
+_: ragpicker <n>
+_?: rag-picker
+
+_: ragtag <a>
+_V: rag-tag
+
+_: ragtag <n>
+_V: rag-tag
+
+_: railcar <n>
+_V: rail-car <n>
+
+_: rainband <n>
+_?: rain-band
+
+_: rainbird <n>
+_V: rain-bird <n>
+
+_: rain check <n>
+_V: raincheck <n>
+
+_: rain forest <n>
+_v: rainforest <n>
+_V: rain-forest
+
+_: rainmaker <n>
+_-: rain-maker
+
+_: rainmaking <n>
+_-: rain making
+
+_: rainwater <n>
+_-: rain-water
+
+_: rake-off <n>
+_V: rakeoff <n>
+
+_: ramjet <n>
+_-: ram-jet <n>
+
+_: random-access
+_=: random access
+
+_: rangefinder <n>
+_v: range finder <n>
+
+_: rapeseed <n>
+_-: rape-seed
+
+_: rareripe <n>
+_=: rare-ripe
+
+_: rat-a-tat <n>
+_v: ratatat <n>
+
+_: rat fink
+_.: ratfink <n>
+
+_: rathole <n>
+_=: rat-hole <n>
+
+_: rat-tail
+_v: rattail <n>
+
+_: rattailed
+_=: rat-tailed
+
+_: rattlebrain <n>
+_V: rattle-brain
+
+_: rattlebrained <aj>
+_V: rattle-brained
+
+_: rattlehead
+_?: rattle-head
+
+_: rattlepate <n>
+_?: rattle-pate
+
+_: rattletrap <n>
+_-: rattle-trap
+
+_: rattrap <n>
+_v: rat-trap
+
+_: razorback <n>
+_-: razor-back <n>
+
+_: razorbill <n>
+_?: razor-bill
+
+_: readout <n>
+_v: read-out <n>
+
+_: ready-made <n>
+_V: readymade <n>
+
+_: real-life
+_=: real life <n>
+
+_: realter <m>
+_=: re-alter <m>
+
+_: real-time <aj>
+_V: realtime
+
+_: real time <n>
+_V: realtime
+
+_: reannexation <n>
+_V: re-annexation
+
+_: rearview mirror <n>
+_v: rear-view mirror <n>
+
+_: rebar <n>
+_V: re-bar <n>
+
+_: recreate <v>
+_v: re-create <v>
+
+_: recreation <n>
+_v: re-creation <n>
+
+_: redbud <n>
+_V: red-bud
+
+_: red carpet <aj>
+_v: red-carpet <aj>
+
+_: redcurrant <n>
+_?: red currant <n>
+
+_: red-handed <aj>
+_V: redhanded
+
+_: red-handed <av>
+_V: redhanded
+
+_: redhead <n>
+_-: red-head <n>
+
+_: redheaded <aj>
+_v: red-headed
+
+_: redlining <n>
+_v: red-lining
+
+_: redout <n>
+_=: red out
+
+_: redroot <n>
+_V: red-root
+
+_: redshank <n>
+_?: red-shank <n>
+
+_: redshift <n>
+_v: red shift <n>
+
+_: redshifted
+_V: red-shifted
+
+_: redshirt <m>
+_V: red-shirt
+
+_: redstart <n>
+_V: red-start
+
+_: reecho <v>
+_V: re-echo <v>
+
+_: reedbird <n>
+_?: reed-bird
+
+_: reeducation <n>
+_?: re-education
+
+_: reelection <n>
+_?: re-election
+
+_: reeligibility <n>
+_=: re-eligibility
+
+_: reeligible
+_=: re-eligible
+
+_: reemerge <v>
+_V: re-emerge <v>
+
+_: reemergence <n>
+_v: re-emergence
+
+_: reemployment <n>
+_V: re-employment
+
+_: reenactment <n>
+_v: re-enactment <n>
+
+_: reendow <m>
+_=: re-endow <m>
+
+_: reengagement <n>
+_V: re-engagement
+
+_: reenlistment <n>
+_V: re-enlistment
+
+_: reenter <v>
+_?: re-enter <v>
+
+_: reentrant <aj>
+_V: re-entrant <aj>
+
+_: reentry <n>
+_?: re-entry <n>
+
+_: reequip <v>
+_v: re-equip <v>
+
+_: reerect <m>
+_=: re-erect <m>
+
+_: reestablishment <n>
+_V: re-establishment <n>
+
+_: reevaluation <n>
+_V: re-evaluation <n>
+
+_: reexamination <n>
+_v: re-examination
+
+_: reexamine <v>
+_v: re-examine <v>
+
+_: reformed <aj>
+_v: re-formed <aj>
+
+_: remainderman
+_V: remainder-man
+
+_: resign <v>
+_v: re-sign
+
+_: resite <m>
+_=: re-site <m>
+
+_: restharrow <n>
+_?: rest-harrow <n>
+
+_: rest room <n>
+_.: restroom <n>
+
+_: retrorocket <n>
+_v: retro-rocket <n>
+
+_: ribbonfish <n>
+_?: ribbon-fish
+
+_: rib cage <n>
+_v: ribcage <n>
+
+_: ribgrass <n>
+_=: rib-grass
+
+_: ricebird <n>
+_?: rice-bird
+
+_: rice paper <n>
+_=: rice-paper
+_v: ricepaper
+
+_: rickrack <n>
+_V: rick-rack
+
+_: ricrac <n>
+_V: ric-rac
+
+_: ridgepiece <n>
+_=: ridge-piece
+
+_: riffraff <n>
+_v: riff-raff
+
+_: riflebird <n>
+_=: rifle-bird
+
+_: rightabout
+_=: right-about
+
+_: right of way <n>
+_=: right-of-way
+
+_: right on <av>
+_v: right-on
+
+_: rights-of-way
+_v: rights of way
+
+_: rig-out <n>
+_v: rigout <n>
+
+_: rimshot <n>
+_=: rim-shot <n>
+
+_: ringbark <m>
+_=: ring-bark
+
+_: ringbolt <n>
+_V: ring-bolt
+
+_: ringdove <n>
+_V: ring-dove
+
+_: ring-in <n>
+_=: ring in
+
+_: ringmaster <n>
+_-: ring-master <n>
+
+_: ringstraked
+_=: ring-straked
+
+_: ringtail <n>
+_V: ring-tail
+
+_: ringtaw <n>
+_=: ring-taw
+
+_: rip cord <n>
+_v: ripcord <n>
+_-: rip-cord <n>
+
+_: rip-off <n>
+_v: ripoff <n>
+
+_: ripsaw <n>
+_-: rip-saw <n>
+
+_: riverbank <n>
+_-: river-bank <n>
+
+_: riverbed <n>
+_v: river bed <n>
+_-: river-bed <n>
+
+_: riverboat <n>
+_-: river-boat <n>
+
+_: riverfront <n>
+_-: river-front
+
+_: riverhead <n>
+_?: river-head
+
+_: roadbed <n>
+_-: road-bed
+
+_: road hog <n>
+_?: road-hog <n>
+_v: roadhog <n>
+
+_: roadkill <n>
+_v: road kill
+
+_: road map <n>
+_V: road-map <n>
+_V: roadmap <n>
+
+_: roadrunner <n>
+_v: road runner <n>
+_-: road-runner
+
+_: roadshow <n>
+_?: road show <n>
+
+_: roadworthiness <n>
+_=: road-worthiness
+
+_: rock and roll <n>
+_v: rock-and-roll <n>
+
+_: rockbound <aj>
+_v: rock-bound
+
+_: rockfall <n>
+_-: rock-fall <n>
+
+_: rockfish <n>
+_V: rock-fish
+
+_: rockrose <n>
+_V: rock-rose
+
+_: rockshaft <n>
+_=: rock-shaft
+
+_: rockwork <n>
+_V: rock-work
+
+_: roll bar <n>
+_V: rollbar <n>
+
+_: roller coaster <n>
+_?: roller-coaster <n>
+_v: rollercoaster <n>
+
+_: roller-skate <m>
+_v: rollerskate
+
+_: roller skate <n>
+_v: rollerskate
+
+_: roller skate <v>
+_v: rollerskate
+
+_: rollout <n>
+_V: roll-out <n>
+
+_: rollover <n>
+_-: roll-over <n>
+
+_: roll-top
+_.: rolltop
+
+_: roll-up <n>
+_v: rollup <n>
+
+_: rooflike
+_V: roof-like
+
+_: rooftop <n>
+_-: roof-top <n>
+
+_: rooftree <n>
+_V: roof-tree <n>
+
+_: roommate <n>
+_-: room-mate <n>
+
+_: rootcap <n>
+_=: root-cap
+
+_: ropedancer <n>
+_?: rope-dancer <n>
+
+_: ropewalk <n>
+_V: rope-walk <n>
+
+_: ropewalker <n>
+_V: rope-walker <n>
+
+_: rosebay <n>
+_V: rose-bay
+
+_: rosebud <n>
+_-: rose-bud <n>
+
+_: rosebush <n>
+_-: rose-bush
+
+_: rose hip <n>
+_V: rosehip <n>
+
+_: roseroot <n>
+_=: rose-root <n>
+
+_: rosewater <n>
+_?: rose water <n>
+_v: rose-water
+
+_: rosinweed <n>
+_V: rosin-weed
+
+_: rough-hewn
+_v: roughhewn <aj>
+
+_: roughneck <n>
+_-: rough-neck <n>
+
+_: roughrider <n>
+_V: rough-rider <n>
+
+_: roughshod <aj>
+_-: rough-shod
+
+_: round hand <n>
+_v: roundhand
+
+_: roundheaded <aj>
+_=: round-headed
+
+_: roundhouse <n>
+_-: round-house <n>
+
+_: round table <n>
+_.: roundtable <n>
+_v: round-table
+
+_: round-trip <n>
+_=: round trip <n>
+_v: roundtrip
+
+_: roundup <n>
+_v: round-up <n>
+
+_: roundworm <n>
+_-: round-worm
+
+_: rowanberry <n>
+_V: rowan-berry
+
+_: row house <n>
+_V: rowhouse <n>
+
+_: rubblework <n>
+_=: rubble-work
+
+_: rubythroat <n>
+_V: ruby-throat
+
+_: rudderfish <n>
+_=: rudder-fish
+
+_: rugrat <n>
+_?: rug rat <n>
+
+_: rule book <n>
+_v: rulebook <n>
+
+_: rumrunner <n>
+_V: rum-runner
+
+_: rumrunning <n>
+_=: rum-running
+
+_: runback <n>
+_=: run back
+
+_: runoff <n>
+_v: run-off <n>
+
+_: runtime
+_v: run time
+
+_: run-up <n>
+_V: runup <n>
+
+_: rushlike <aj>
+_V: rush-like
+
+_: rustbelt <n>
+_=: rust belt
+
+_: ryegrass <n>
+_V: rye-grass
+
+_: saddlebag <n>
+_-: saddle-bag <n>
+
+_: saddlebow <n>
+_V: saddle-bow <n>
+
+_: saddlecloth <n>
+_?: saddle-cloth
+
+_: saddle-sore <aj>
+_v: saddlesore
+
+_: saddle sore <n>
+_v: saddlesore
+
+_: saddletree <n>
+_V: saddle-tree
+
+_: sadiron <n>
+_?: sad-iron <n>
+
+_: sadomasochism <n>
+_V: sado-masochism
+
+_: sadomasochist <n>
+_V: sado-masochist <n>
+
+_: sadomasochistic <aj>
+_V: sado-masochistic
+
+_: safe-conduct <n>
+_v: safe conduct
+
+_: safecracker <n>
+_V: safe-cracker <n>
+
+_: safecracking <n>
+_V: safe-cracking
+
+_: safe-deposit box <n>
+_v: safe deposit box <n>
+
+_: safekeeping <n>
+_-: safe-keeping
+
+_: safety-deposit box
+_v: safety deposit box <n>
+
+_: sailboat <n>
+_-: sail-boat <n>
+
+_: sailcloth <n>
+_-: sail-cloth
+
+_: sailfish <n>
+_-: sail-fish
+
+_: saleroom <n>
+_V: sale-room <n>
+
+_: salesclerk <n>
+_?: sales clerk <n>
+_-: sales-clerk
+
+_: sales force <n>
+_v: salesforce <n>
+
+_: salmonberry <n>
+_V: salmon-berry
+
+_: saloonkeeper <n>
+_=: saloon-keeper
+
+_: saltbox <n>
+_-: salt-box <n>
+
+_: saltbush <n>
+_V: salt-bush
+
+_: saltcellar <n>
+_v: salt cellar <n>
+_-: salt-cellar <n>
+
+_: saltfish <n>
+_=: salt fish
+
+_: saltpan <n>
+_=: salt-pan <n>
+
+_: saltshaker <n>
+_?: salt shaker <n>
+
+_: saltwater <a>
+_v: salt water
+_v: salt-water
+
+_: saltwater <n>
+_v: salt water
+_v: salt-water
+
+_: saltwork <n>
+_=: salt-work <n>
+
+_: saltwort <n>
+_V: salt-wort
+
+_: sandbank <n>
+_-: sand-bank <n>
+
+_: sandbar <n>
+_v: sand bar <n>
+_-: sand-bar <n>
+
+_: sandbox <n>
+_-: sand-box <n>
+
+_: sandcastle <n>
+_?: sand castle <n>
+
+_: sand dab <n>
+_.: sanddab <n>
+
+_: sand fly <n>
+_v: sandfly <n>
+_V: sand-fly <n>
+
+_: sandglass <n>
+_V: sand-glass <n>
+
+_: sandgrouse <n>
+_V: sand-grouse
+
+_: sandhog <n>
+_V: sand-hog <n>
+
+_: sand painting <n>
+_v: sandpainting <n>
+
+_: sandpeep <n>
+_=: sand-peep
+
+_: sandpit <n>
+_V: sand-pit <n>
+
+_: sandshoe <n>
+_V: sand-shoe <n>
+
+_: sandstorm <n>
+_-: sand-storm <n>
+
+_: sandworm <n>
+_V: sand-worm
+
+_: sangfroid <n>
+_v: sang-froid <n>
+
+_: sapanwood
+_?: sapan-wood
+
+_: sappanwood <n>
+_V: sappan-wood
+
+_: sapwood <n>
+_-: sap-wood
+
+_: sauceboat <n>
+_V: sauce-boat <n>
+
+_: saucebox <n>
+_=: sauce-box <n>
+
+_: savoir-faire <n>
+_v: savoir faire
+
+_: sawbill <n>
+_=: saw-bill <n>
+
+_: sawbones <n>
+_-: saw-bones
+
+_: sawbuck <n>
+_-: saw-buck <n>
+
+_: sawfish <n>
+_V: saw-fish
+
+_: sawfly <n>
+_-: saw-fly
+
+_: sawhorse <n>
+_-: saw-horse <n>
+
+_: sawmill <n>
+_-: saw-mill <n>
+
+_: sawtooth <n>
+_V: saw-tooth
+
+_: scaleboard
+_?: scale-board
+
+_: scarehead <n>
+_=: scare-head
+
+_: scarfpin <n>
+_=: scarf-pin <n>
+
+_: scatterbrain <n>
+_V: scatter-brain <n>
+
+_: scatterbrained <aj>
+_V: scatter-brained
+
+_: scattergun <n>
+_V: scatter-gun
+
+_: sceneshifter <n>
+_V: scene-shifter <n>
+
+_: schoolbook <n>
+_-: school-book <n>
+
+_: schoolchild <n>
+_-: school-child
+
+_: school friend <n>
+_.: schoolfriend <n>
+_V: school-friend <n>
+
+_: schoolma'am <n>
+_V: school-ma'am
+
+_: schoolmarm <n>
+_-: school-marm <n>
+
+_: schoolmarmish <a>
+_V: school-marmish
+
+_: schoolmate <n>
+_-: school-mate <n>
+
+_: schoolteacher <n>
+_-: school-teacher <n>
+
+_: schoolteaching <n>
+_=: school-teaching
+
+_: schooltime <n>
+_=: school-time
+
+_: scissortail <n>
+_V: scissor-tail
+
+_: scoreboard <n>
+_-: score-board <n>
+
+_: scorecard <n>
+_-: score-card <n>
+
+_: scoresheet <n>
+_V: score-sheet <n>
+
+_: scorpionfish <n>
+_V: scorpion-fish
+
+_: scoutmaster <n>
+_-: scout-master <n>
+
+_: scrapbook <n>
+_-: scrap-book <n>
+
+_: scrapheap <n>
+_?: scrap heap <n>
+_V: scrap-heap <n>
+
+_: scrapyard <n>
+_V: scrap-yard <n>
+
+_: scratchcard <n>
+_v: scratch card <n>
+
+_: scratchpad <n>
+_?: scratch pad <n>
+
+_: screen-printing
+_v: screenprinting
+_V: screen printing
+
+_: screen saver <n>
+_v: screensaver <n>
+_V: screen-saver <n>
+
+_: screenwriter <n>
+_-: screen-writer <n>
+
+_: screwball <n>
+_-: screw-ball <n>
+
+_: screwcap <n>
+_=: screw-cap
+
+_: screwdriver <n>
+_-: screw-driver <n>
+
+_: screw-top
+_v: screw top <n>
+
+_: screw-up <n>
+_v: screwup <n>
+
+_: screwworm <n>
+_-: screw-worm
+
+_: scriptwriter <n>
+_-: script-writer <n>
+
+_: scrumhalf <n>
+_V: scrum-half
+
+_: scuttlebutt <n>
+_-: scuttle-butt
+
+_: S.Dak. <abbr>
+_?: S. Dak. <abbr>
+
+_: seabeach <n>
+_=: sea-beach <n>
+
+_: seabird <n>
+_v: sea bird <n>
+_-: sea-bird <n>
+
+_: seablite <n>
+_=: sea-blite
+
+_: seacoast <n>
+_-: sea-coast <n>
+
+_: seacock <n>
+_?: sea-cock
+
+_: sea dog <n>
+_v: seadog <n>
+_V: sea-dog <n>
+
+_: seafloor <n>
+_-: sea-floor
+
+_: seafood <n>
+_-: sea-food
+
+_: seafowl <n>
+_=: sea-fowl
+
+_: seagirt <aj>
+_?: sea-girt
+
+_: seagoing <aj>
+_-: sea-going
+
+_: sea gull <n>
+_.: seagull <n>
+
+_: sea horse <n>
+_.: seahorse <n>
+_-: sea-horse <n>
+
+_: sea lane <n>
+_v: sealane
+
+_: sea moss <n>
+_=: sea-moss
+_v: seamoss <n>
+
+_: seamount <n>
+_-: sea-mount
+
+_: seapiece <n>
+_=: sea-piece <n>
+
+_: sea robin <n>
+_=: sea-robin
+_v: searobin <n>
+
+_: sea room <n>
+_v: searoom <n>
+_V: sea-room
+
+_: seascout <n>
+_=: sea-scout <n>
+
+_: seashell <n>
+_v: sea shell
+_-: sea-shell <n>
+
+_: seashore <n>
+_-: sea-shore
+
+_: seastrand <n>
+_=: sea-strand
+
+_: seat belt <n>
+_v: seatbelt <n>
+_V: seat-belt <n>
+
+_: sea trout <n>
+_v: seatrout <n>
+_V: sea-trout
+
+_: seawall <n>
+_v: sea wall <n>
+_-: sea-wall <n>
+
+_: seaware <n>
+_?: sea-ware
+
+_: seawater <n>
+_-: sea-water
+
+_: secondhand <aj>
+_v: second-hand
+
+_: secondhand <av>
+_v: second hand <av>
+_v: second-hand
+
+_: second-hand
+_v: second hand <n>
+
+_: seed corn <n>
+_=: seed-corn
+_v: seedcorn
+
+_: seedlike
+_=: seed-like
+
+_: seedpod <n>
+_v: seed pod <n>
+
+_: seedtime <n>
+_V: seed-time
+
+_: selectman <n>
+_-: select-man
+
+_: selfheal <n>
+_?: self-heal <n>
+
+_: self-serve
+_v: self serve
+
+_: sellout <n>
+_v: sell-out <n>
+
+_: semiannual <aj>
+_V: semi-annual
+
+_: semiannually <av>
+_V: semi-annually
+
+_: semiattached
+_=: semi-attached
+
+_: semiautomatic <n>
+_v: semi-automatic <n>
+
+_: semicentennial <aj>
+_?: semi-centennial
+
+_: semicentennial <n>
+_?: semi-centennial
+
+_: semidetached <aj>
+_?: semi-detached
+
+_: semi-detached
+_v: semidetached <n>
+
+_: semidiameter <n>
+_=: semi-diameter
+
+_: semidiurnal
+_?: semi-diurnal
+
+_: semidivine
+_?: semi-divine
+
+_: semidocumentary <n>
+_=: semi-documentary
+
+_: semidome <n>
+_V: semi-dome
+
+_: semidomesticated
+_=: semi-domesticated
+
+_: semidrying
+_=: semi-drying
+
+_: semielliptical
+_V: semi-elliptical
+
+_: semiliquid <aj>
+_?: semi-liquid
+
+_: semiliquid <n>
+_?: semi-liquid
+
+_: semilunar <aj>
+_V: semi-lunar
+
+_: semimetal <n>
+_V: semi-metal
+
+_: semimonthly <aj>
+_V: semi-monthly
+
+_: semimonthly <av>
+_V: semi-monthly
+
+_: semimonthly <n>
+_V: semi-monthly
+
+_: semimute
+_=: semi-mute
+
+_: seminude <aj>
+_=: semi-nude
+
+_: semiofficial <aj>
+_v: semi-official
+
+_: semiofficially
+_=: semi-officially
+
+_: semiopaque <aj>
+_=: semi-opaque
+
+_: semiprecious <aj>
+_v: semi-precious
+
+_: semiprofessional <a>
+_v: semi-professional
+
+_: semiprofessional <n>
+_v: semi-professional
+
+_: semirigid <aj>
+_?: semi-rigid
+
+_: semiskilled <aj>
+_?: semi-skilled
+
+_: semisoft <aj>
+_V: semi-soft
+
+_: semiweekly <aj>
+_V: semi-weekly
+
+_: semiweekly <av>
+_V: semi-weekly
+
+_: semiweekly <n>
+_V: semi-weekly
+
+_: send-off <n>
+_v: sendoff <n>
+
+_: send-up <n>
+_V: sendup <n>
+
+_: sergeant at arms <n>
+_=: sergeant-at-arms
+
+_: serviceberry <n>
+_V: service-berry
+
+_: serviceman <n>
+_v: service man <n>
+
+_: setenant <n>
+_=: se tenant
+
+_: setline <n>
+_V: set-line
+
+_: setoff <n>
+_V: set-off
+
+_: set off <v>
+_v: set-off
+
+_: setout <n>
+_V: set-out
+
+_: set out <v>
+_v: set-out
+
+_: set point <n>
+_v: setpoint <n>
+
+_: setscrew <n>
+_V: set-screw
+
+_: setsquare <n>
+_?: set square <n>
+_v: set-square <n>
+
+_: setup <n>
+_v: set-up <n>
+
+_: shacklebone <n>
+_=: shackle-bone
+
+_: shadowboxing <n>
+_V: shadow-boxing
+
+_: shagbark <n>
+_V: shag-bark
+
+_: shakedown <n>
+_-: shake-down <n>
+
+_: shakeout <n>
+_v: shake-out <n>
+
+_: shakeup <n>
+_?: shake-up <n>
+
+_: shantytown <n>
+_v: shanty town <n>
+_-: shanty-town <n>
+
+_: sharecropper <n>
+_-: share-cropper <n>
+
+_: sharksucker <n>
+_=: shark sucker
+
+_: shatterproof <aj>
+_V: shatter-proof
+
+_: sheatfish <n>
+_?: sheat-fish
+
+_: sheathbill <n>
+_?: sheath-bill
+
+_: sheepcote <n>
+_?: sheep-cote
+
+_: sheep-dip
+_v: sheep dip <n>
+
+_: sheepdog <n>
+_v: sheep dog <n>
+
+_: sheepshearer <n>
+_=: sheep-shearer
+
+_: sheepshearing <n>
+_?: sheep-shearing
+
+_: shelfful <n>
+_=: shelf-ful <n>
+
+_: shell shock <n>
+_V: shellshock
+
+_: shell-shocked
+_v: shellshocked
+
+_: shinplaster <n>
+_=: shin-plaster
+
+_: shin splints <n>
+_.: shinsplints <n>
+
+_: shipmaster <n>
+_V: ship-master
+
+_: shipowner <n>
+_-: ship-owner <n>
+
+_: shipworm <n>
+_V: ship-worm
+
+_: shirtdress <n>
+_=: shirt dress <n>
+
+_: shirtfront <n>
+_V: shirt-front <n>
+
+_: shirtsleeve <n>
+_V: shirt-sleeve <n>
+
+_: shirttail <n>
+_v: shirt tail <n>
+_-: shirt-tail <n>
+
+_: shitfaced
+_?: shit-faced
+
+_: shockheaded
+_?: shock-headed <aj>
+
+_: shockproof <a>
+_V: shock-proof
+
+_: shock wave <n>
+_v: shockwave <n>
+
+_: shoebill <n>
+_V: shoe-bill
+
+_: shoetree <n>
+_?: shoe tree
+
+_: shoe tree
+_v: shoetree <v>
+
+_: shootout <n>
+_v: shoot-out <n>
+
+_: shopboy <n>
+_=: shop-boy <n>
+
+_: shop floor <n>
+_v: shopfloor
+
+_: shopfront <n>
+_v: shop front <n>
+_V: shop-front <n>
+
+_: shopgirl <n>
+_V: shop-girl <n>
+
+_: shopwindow <n>
+_?: shop-window
+
+_: shorebird <n>
+_v: shore bird <n>
+
+_: shoreside
+_V: shore-side
+
+_: shortchange <v>
+_v: short-change <v>
+
+_: shortcut <n>
+_v: short cut <n>
+
+_: shortsighted <aj>
+_v: short-sighted
+
+_: shortsightedly <a>
+_v: short-sightedly
+
+_: shortsightedness <n>
+_v: short-sightedness
+
+_: shortstop <n>
+_-: short-stop <n>
+
+_: shortwave <a>
+_V: short-wave
+
+_: shortwave <n>
+_v: short wave <n>
+_V: short-wave
+
+_: shortwave <v>
+_V: short-wave
+
+_: shot hole <n>
+_=: shot-hole
+_v: shothole <n>
+
+_: shot-putter <n>
+_v: shot putter <n>
+
+_: shout-out <n>
+_v: shoutout <n>
+
+_: shovelboard <n>
+_V: shovel-board
+
+_: shovelhead <n>
+_V: shovel-head
+
+_: show-and-tell
+_=: show and tell
+
+_: showdown <n>
+_-: show-down <n>
+
+_: showerproof
+_V: shower-proof
+
+_: show jumper <n>
+_v: showjumper <n>
+
+_: showjumping <n>
+_v: show jumping
+_v: show-jumping
+
+_: show-off <n>
+_v: showoff <n>
+
+_: showstopper <n>
+_v: show-stopper <n>
+_V: show stopper <n>
+
+_: shrewmouse <n>
+_?: shrew-mouse
+
+_: shuffleboard <n>
+_-: shuffle-board
+
+_: shutdown <n>
+_-: shut-down <n>
+
+_: shuteye <n>
+_?: shut-eye <n>
+
+_: shutoff <n>
+_V: shut-off <n>
+
+_: shutout <n>
+_-: shut-out
+
+_: sick bay <n>
+_.: sickbay <n>
+_-: sick-bay <n>
+
+_: sickbed <n>
+_-: sick-bed <n>
+
+_: sicklebill <n>
+_V: sickle-bill
+
+_: sickle cell anemia
+_v: sickle-cell anemia <n>
+
+_: sickout <n>
+_V: sick-out
+
+_: sickroom <n>
+_-: sick-room <n>
+
+_: sidearm <n>
+_v: side arm <n>
+
+_: sideband <n>
+_V: side-band
+
+_: sidebar <n>
+_-: side-bar
+
+_: side-by-side
+_v: side by side <aj>
+
+_: sidekick <n>
+_-: side-kick <n>
+
+_: sideline <n>
+_-: side-line <n>
+
+_: side road <n>
+_.: sideroad <n>
+_=: side-road <n>
+
+_: sidesaddle <av>
+_v: side-saddle
+
+_: sidesaddle <n>
+_v: side-saddle
+
+_: sideshow <n>
+_-: side-show <n>
+
+_: sideslip <v>
+_V: side-slip <v>
+
+_: sidesplitting <aj>
+_?: side-splitting
+
+_: sidestroke <n>
+_V: side-stroke
+
+_: sidestroke <v>
+_V: side-stroke
+
+_: sidewheel
+_?: side-wheel
+
+_: sightread
+_?: sight-read <v>
+
+_: sightseeing <n>
+_v: sight-seeing
+
+_: silk screen
+_.: silkscreen <a>
+
+_: silk-screen <m>
+_=: silk screen
+
+_: silkscreen <n>
+_=: silk screen
+
+_: silkscreen <v>
+_=: silk screen
+
+_: silverfish <n>
+_-: silver-fish <n>
+
+_: silverpoint <n>
+_V: silver-point
+
+_: simple-mindedness
+_.: simplemindedness <n>
+
+_: singalong <n>
+_?: sing-along <n>
+
+_: sinkhole <n>
+_-: sink-hole
+
+_: sit-down <n>
+_V: sitdown <n>
+
+_: sit-up <n>
+_v: situp <n>
+
+_: sitz bath <n>
+_V: sitz-bath
+
+_: six-shooter <n>
+_v: sixshooter <n>
+
+_: sketchbook <n>
+_-: sketch-book <n>
+
+_: skewback <n>
+_?: skew-back
+
+_: skin diver <n>
+_v: skin-diver <n>
+
+_: skin diving <n>
+_=: skin-diving
+
+_: skin flick <n>
+_v: skinflick <n>
+
+_: skintight <aj>
+_v: skin-tight <aj>
+
+_: skullcap <n>
+_-: skull-cap <n>
+
+_: sky-blue <aj>
+_=: sky blue
+
+_: sky-blue <n>
+_=: sky blue
+
+_: skydiver <n>
+_v: sky diver
+
+_: skydiving <n>
+_v: sky diving
+
+_: sky wave <n>
+_v: skywave
+
+_: slagheap <n>
+_?: slag heap <n>
+_V: slag-heap <n>
+
+_: slap-bang <av>
+_v: slap bang
+
+_: slapdash <aj>
+_V: slap-dash
+
+_: slapdash <av>
+_V: slap-dash
+
+_: slapdash <n>
+_V: slap-dash
+
+_: slaphappy <aj>
+_?: slap-happy
+
+_: slaughterhouse <n>
+_-: slaughter-house <n>
+
+_: slave driver <n>
+_v: slave-driver <n>
+
+_: slaveholder <n>
+_-: slave-holder
+
+_: slaveholding <aj>
+_V: slave-holding
+
+_: slaveholding <n>
+_V: slave-holding
+
+_: sledgehammer <a>
+_v: sledge hammer
+
+_: sledgehammer <n>
+_v: sledge hammer
+_-: sledge-hammer <n>
+
+_: sledgehammer <v>
+_v: sledge hammer
+
+_: sleepyhead <n>
+_-: sleepy-head <n>
+
+_: sleuthhound <n>
+_?: sleuth-hound <n>
+
+_: slideshow <n>
+_?: slide show <n>
+
+_: slingshot <n>
+_-: sling-shot <n>
+
+_: slipcase <n>
+_V: slip-case
+
+_: slipknot <n>
+_v: slip knot <n>
+_V: slip-knot <n>
+
+_: slip-up <n>
+_v: slipup <n>
+
+_: slowdown <n>
+_-: slow-down <n>
+
+_: slow motion <n>
+_v: slow-motion
+
+_: slugabed <n>
+_?: slug-a-bed
+
+_: slungshot <n>
+_V: slung-shot
+
+_: small-claims court
+_=: small claims court <n>
+
+_: smallclothes
+_V: small-clothes
+
+_: smallsword <n>
+_?: small-sword
+
+_: small-time <aj>
+_v: smalltime
+
+_: small-timer <n>
+_v: smalltimer
+
+_: smart aleck <n>
+_v: smart-aleck <n>
+
+_: smart-arse <n>
+_.: smartarse <n>
+
+_: smart-ass <n>
+_V: smartass <n>
+
+_: smartweed <n>
+_V: smart-weed
+
+_: smarty-pants
+_v: smartypants <n>
+
+_: smashup <n>
+_v: smash-up <n>
+
+_: smokehouse <n>
+_-: smoke-house <n>
+
+_: smokejack <n>
+_V: smoke-jack
+
+_: smoke screen <n>
+_v: smokescreen <n>
+
+_: smokestack <n>
+_-: smoke-stack <n>
+
+_: smoothbore <aj>
+_V: smooth-bore
+
+_: smoothbore <n>
+_V: smooth-bore
+
+_: snailfish <n>
+_V: snail-fish
+
+_: snaillike
+_=: snail-like
+
+_: snake pit <n>
+_V: snakepit <n>
+
+_: snipefish <n>
+_=: snipe-fish
+
+_: snippersnapper <n>
+_=: snipper-snapper
+
+_: snowbird <n>
+_-: snow-bird <n>
+
+_: snowblink <n>
+_V: snow-blink
+
+_: snowbound <aj>
+_-: snow-bound
+
+_: snow-capped <aj>
+_v: snowcapped
+
+_: snowline <n>
+_?: snow line <n>
+
+_: snub-nose
+_V: snubnose
+
+_: soapbark <n>
+_V: soap-bark
+
+_: soap flakes <n>
+_v: soapflakes
+
+_: soapsuds <n>
+_-: soap-suds
+
+_: sofa bed <n>
+_v: sofabed <n>
+
+_: soft-core
+_V: softcore
+
+_: softcover <n>
+_v: soft-cover <n>
+
+_: softheaded <aj>
+_=: soft-headed
+
+_: softhearted <aj>
+_v: soft-hearted
+
+_: soft landing <n>
+_V: softlanding
+
+_: softshell <n>
+_=: soft-shell
+
+_: sold-out <aj>
+_=: sold out
+
+_: soleplate <n>
+_=: sole-plate
+
+_: sol-fa
+_v: solfa <n>
+
+_: sol-fa
+_v: solfa <v>
+
+_: solfaist <n>
+_=: sol-faist
+
+_: someday <av>
+_v: some day
+
+_: songlike <aj>
+_=: song-like
+
+_: son of a bitch <n>
+_.: sonofabitch
+
+_: sonsofbitches
+_?: sons of bitches
+
+_: soreheaded
+_=: sore-headed
+
+_: sort out <v>
+_v: sort-out
+
+_: so-so <aj>
+_v: so so
+
+_: so-so <av>
+_v: so so
+
+_: sound bite <n>
+_v: soundbite <n>
+
+_: soundboard <n>
+_-: sound-board
+
+_: soundbox <n>
+_V: sound-box <n>
+
+_: sound card <n>
+_V: soundcard <n>
+
+_: soundcheck <n>
+_v: sound check <n>
+
+_: soundstage <n>
+_V: sound stage
+
+_: soundtrack <n>
+_v: sound track
+_-: sound-track <n>
+
+_: sound wave <n>
+_=: sound-wave <n>
+_V: soundwave <n>
+
+_: soup spoon <n>
+_v: soupspoon <n>
+
+_: source book <n>
+_v: sourcebook <n>
+_V: source-book
+
+_: sourdough <n>
+_-: sour-dough <n>
+
+_: soursop <n>
+_V: sour-sop
+
+_: southbound <aj>
+_-: south-bound
+
+_: southeast <av>
+_v: south-east <av>
+
+_: southeaster <n>
+_V: south-easter
+
+_: southeasterly <aj>
+_v: south-easterly
+
+_: southeastern <aj>
+_v: south-eastern
+
+_: southeastward <n>
+_V: south-eastward <n>
+
+_: southeastwardly <av>
+_?: south-eastwardly
+
+_: southwest <av>
+_v: south-west <av>
+
+_: southwester <n>
+_V: south-wester <n>
+
+_: southwesterly <aj>
+_v: south-westerly
+
+_: southwestern <aj>
+_-: south-western
+
+_: southwestward <n>
+_V: south-westward <n>
+
+_: southwestwardly <av>
+_?: south-westwardly
+
+_: sou'wester <n>
+_V: sou'-wester <n>
+
+_: sowbread <n>
+_=: sow-bread
+
+_: soybean <n>
+_-: soy bean <n>
+
+_: space-age
+_v: space age <n>
+
+_: spaceband <n>
+_?: space-band
+
+_: spaced out
+_v: spaced-out <aj>
+
+_: spaceflight <n>
+_?: space flight <n>
+
+_: spacesuit <n>
+_v: space suit
+_-: space-suit <n>
+
+_: space-time <n>
+_v: spacetime
+
+_: sparerib <n>
+_?: spare-rib <n>
+
+_: spareribs <n>
+_v: spare ribs
+
+_: spark plug <n>
+_V: spark-plug <n>
+
+_: sparrowgrass <n>
+_?: sparrow-grass
+
+_: sparrowhawk <n>
+_?: sparrow hawk <n>
+_V: sparrow-hawk <n>
+
+_: spatterdock <n>
+_V: spatter-dock
+
+_: speakeasy <n>
+_-: speak-easy <n>
+
+_: speargun <n>
+_?: spear gun
+
+_: speechmaker <n>
+_V: speech-maker
+
+_: speechmaking <n>
+_V: speech-making
+
+_: speedboat <n>
+_-: speed-boat <n>
+
+_: speedboating <n>
+_V: speed-boating
+
+_: speed-dial <m>
+_v: speed dial
+
+_: speedup <n>
+_V: speed-up <n>
+
+_: spellchecker <n>
+_?: spell checker <n>
+
+_: spicebush <n>
+_V: spice-bush
+
+_: spick-and-span <aj>
+_v: spick and span
+
+_: spiderlike <aj>
+_V: spider-like
+
+_: spider web <n>
+_v: spiderweb <n>
+_V: spider-web
+
+_: spiderweb <v>
+_V: spider-web
+
+_: spiderwort <n>
+_V: spider-wort
+
+_: spindlelegs <n>
+_?: spindle-legs
+
+_: spin-off <n>
+_.: spinoff <n>
+
+_: splashboard <n>
+_V: splash-board
+
+_: splashdown <n>
+_v: splash down
+
+_: splayfoot <aj>
+_V: splay-foot
+
+_: splayfoot <n>
+_V: splay-foot
+
+_: splayfooted <aj>
+_v: splay-footed
+
+_: spleenwort <n>
+_V: spleen-wort
+
+_: split screen
+_v: split-screen
+
+_: split second <n>
+_v: split-second
+
+_: spoilfive
+_V: spoil-five
+
+_: spoilsport <n>
+_-: spoil-sport <n>
+
+_: sponge bag <n>
+_v: spongebag <n>
+
+_: sponge cake <n>
+_V: sponge-cake <n>
+_V: spongecake <n>
+
+_: spoon-fed
+_v: spoonfed
+
+_: sport-utility vehicle
+_v: sport utility vehicle <n>
+
+_: springhalt <n>
+_?: spring-halt
+
+_: springhouse <n>
+_V: spring-house
+
+_: spring tide <n>
+_V: springtide <n>
+
+_: springwater <n>
+_V: spring-water
+
+_: spurgall <m>
+_=: spur-gall
+
+_: spyhole <n>
+_V: spy-hole <n>
+
+_: squeaky-clean
+_v: squeaky clean
+
+_: squeezebox <n>
+_V: squeeze-box <n>
+
+_: stable boy <n>
+_.: stableboy <n>
+_V: stable-boy <n>
+
+_: stableman <n>
+_-: stable-man
+
+_: stage fright <n>
+_?: stage-fright
+_v: stagefright <n>
+
+_: stagehand <n>
+_-: stage-hand <n>
+
+_: stairwell <n>
+_-: stair-well <n>
+
+_: stakeout <n>
+_V: stake-out <n>
+
+_: stalking-horse <n>
+_v: stalking horse <n>
+
+_: standby <n>
+_V: stand-by <n>
+
+_: stand down
+_v: standdown <n>
+
+_: standoff <n>
+_v: stand-off <n>
+
+_: standoffish <aj>
+_v: stand-offish
+
+_: standoffishness <n>
+_V: stand-offishness
+
+_: standpatter <n>
+_=: stand-patter
+
+_: standpattism <n>
+_=: stand-pattism
+
+_: standpipe <n>
+_V: stand-pipe <n>
+
+_: stand-up <n>
+_v: standup <n>
+
+_: stardust <n>
+_-: star-dust
+
+_: stargazer <n>
+_-: star-gazer <n>
+
+_: starnose <n>
+_=: star-nose
+
+_: starstruck
+_?: star-struck <aj>
+
+_: start-up <n>
+_v: startup <n>
+
+_: statehouse <n>
+_V: state house <n>
+
+_: stationmaster <n>
+_v: station master <n>
+
+_: steeplebush <n>
+_V: steeple-bush
+
+_: steerageway <n>
+_V: steerage-way
+
+_: stepladder <n>
+_-: step-ladder <n>
+
+_: stepparent <n>
+_V: step-parent <n>
+
+_: stepparenting <n>
+_V: step-parenting
+
+_: stepping-stone <n>
+_.: steppingstone <n>
+_=: stepping stone <n>
+
+_: sternforemost
+_?: stern-foremost
+
+_: sternpost <n>
+_V: stern-post
+
+_: stickpin <n>
+_V: stick pin
+
+_: stickup <n>
+_v: stick-up <n>
+
+_: stillbirth <n>
+_-: still-birth
+
+_: stillborn <aj>
+_-: still-born
+
+_: stillborn <n>
+_V: still-born
+
+_: stillroom <n>
+_V: still-room <n>
+
+_: stingray <n>
+_-: sting-ray <n>
+
+_: stinkball <n>
+_V: stink-ball
+
+_: stinkpot <n>
+_V: stink-pot <n>
+
+_: stinkwood <n>
+_V: stink-wood
+
+_: stockbreeder <n>
+_V: stock-breeder <n>
+
+_: stockbreeding <n>
+_V: stock-breeding
+
+_: stock car <n>
+_V: stockcar <n>
+
+_: stockjobber <n>
+_?: stock-jobber <n>
+
+_: stockjobbery <n>
+_=: stock-jobbery
+
+_: stockjobbing <n>
+_=: stock-jobbing
+
+_: stockpot <n>
+_-: stock-pot <n>
+
+_: stockroom <n>
+_-: stock-room <n>
+
+_: stock-still <aj>
+_V: stockstill
+
+_: stock-still <av>
+_V: stockstill
+
+_: stokehole <n>
+_?: stoke-hole <n>
+
+_: stomachache <n>
+_v: stomach ache <n>
+_-: stomach-ache <n>
+
+_: stonecutter <n>
+_V: stone-cutter
+
+_: stonecutting <n>
+_V: stone-cutting
+
+_: stone-dead <aj>
+_v: stone dead
+
+_: stone-deaf <aj>
+_v: stone deaf
+
+_: stonefly <n>
+_V: stone-fly
+
+_: stonemason <n>
+_-: stone-mason <n>
+
+_: stony-hearted
+_v: stonyhearted <aj>
+
+_: stopcock <n>
+_V: stop-cock <n>
+
+_: stopgap <n>
+_V: stop-gap <n>
+
+_: stop-off <n>
+_v: stopoff <n>
+
+_: stopover <n>
+_-: stop-over <n>
+
+_: stopwatch <n>
+_-: stop-watch <n>
+
+_: store card <n>
+_v: storecard <n>
+
+_: storeship <n>
+_V: store-ship
+
+_: storm cloud <n>
+_=: storm-cloud <n>
+_v: stormcloud <n>
+
+_: storm trooper <n>
+_=: storm-trooper <n>
+_v: stormtrooper <n>
+
+_: storybook <n>
+_-: story-book <n>
+
+_: storyteller <n>
+_-: story-teller <n>
+
+_: storytelling <n>
+_-: story-telling
+
+_: stouthearted <aj>
+_v: stout-hearted
+
+_: stoutheartedly
+_?: stout-heartedly
+
+_: stoutheartedness <n>
+_V: stout-heartedness
+
+_: stovepipe <n>
+_-: stove-pipe <n>
+
+_: straightedge <n>
+_V: straight-edge
+
+_: straight-laced <aj>
+_v: straightlaced <aj>
+
+_: strait-laced <aj>
+_.: straitlaced <aj>
+
+_: straphanger <n>
+_V: strap-hanger <n>
+
+_: stratocumulus <n>
+_V: strato-cumulus
+
+_: strawhat
+_=: straw-hat <n>
+
+_: straw man <n>
+_V: strawman <n>
+
+_: strawworm <n>
+_?: straw-worm
+
+_: streetwalker <n>
+_-: street-walker <n>
+
+_: streetwalking <n>
+_V: street-walking
+
+_: stressed out
+_v: stressed-out
+
+_: stretchmarks
+_v: stretch marks
+
+_: strikebound <aj>
+_V: strike-bound
+
+_: strikebreaker <n>
+_V: strike-breaker <n>
+
+_: strikebreaking <n>
+_V: strike-breaking
+
+_: stringboard <n>
+_?: string-board
+
+_: stringcourse <n>
+_=: string-course
+
+_: stringpiece <n>
+_V: string-piece
+
+_: stringybark <n>
+_=: stringy-bark
+
+_: strip mining <n>
+_v: strip-mining
+
+_: strongbox <n>
+_-: strong-box <n>
+
+_: strong point <n>
+_v: strongpoint <n>
+
+_: strongroom <n>
+_?: strong room
+_V: strong-room <n>
+
+_: strung out
+_v: strung-out <aj>
+
+_: studbook <n>
+_V: stud-book <n>
+
+_: studdingsail <n>
+_?: studding-sail <n>
+
+_: studhorse <n>
+_V: stud-horse <n>
+
+_: stuffed-up
+_v: stuffed up
+
+_: stumpwork <n>
+_=: stump-work
+
+_: stunt man <n>
+_.: stuntman <n>
+
+_: stunt woman <n>
+_.: stuntwoman <n>
+
+_: stylebook <n>
+_V: style-book <n>
+
+_: subaqua
+_?: sub-aqua
+
+_: subhead <n>
+_-: sub-head <n>
+
+_: sublieutenant <n>
+_v: sub lieutenant <n>
+
+_: submachine gun <n>
+_V: submachine-gun <n>
+
+_: subsea
+_V: sub-sea
+
+_: subzero <a>
+_v: sub-zero
+
+_: such and such
+_v: such-and-such
+
+_: sugarcane <n>
+_v: sugar cane <n>
+_-: sugar-cane
+
+_: sugarhouse <n>
+_V: sugar-house
+
+_: sugar loaf <n>
+_.: sugarloaf <n>
+_=: sugar-loaf
+
+_: sugarplum <n>
+_-: sugar-plum <n>
+
+_: suitcase <n>
+_-: suit-case <n>
+
+_: summerhouse <n>
+_?: summer house <n>
+_-: summer-house <n>
+
+_: summertime <n>
+_v: summer time
+
+_: summertree
+_?: summer-tree
+
+_: sunbath <n>
+_V: sun-bath
+
+_: sunbeam <n>
+_-: sun-beam <n>
+
+_: sunbird <n>
+_V: sun-bird
+
+_: sunbonnet <n>
+_-: sun-bonnet <n>
+
+_: sun cream <n>
+_v: suncream <n>
+
+_: sundeck <n>
+_?: sun deck <n>
+
+_: sundew <n>
+_V: sun-dew
+
+_: sundog <n>
+_V: sun-dog
+
+_: sundowner <n>
+_V: sun-downer <n>
+
+_: sun-drenched <aj>
+_V: sundrenched
+
+_: sun-dried <aj>
+_V: sundried <aj>
+
+_: sundrops <n>
+_V: sun-drops
+
+_: sunhat <n>
+_?: sun hat <n>
+
+_: sunlamp <n>
+_v: sun lamp <n>
+_V: sun-lamp <n>
+
+_: sunroof <n>
+_-: sun-roof <n>
+
+_: sunshade <n>
+_-: sun-shade <n>
+
+_: sunup <n>
+_V: sun-up
+
+_: superego <n>
+_V: super-ego
+
+_: supplejack <n>
+_V: supple-jack
+
+_: supraorbital <aj>
+_V: supra-orbital
+
+_: surefooted <aj>
+_?: sure-footed <aj>
+
+_: surefootedly
+_=: sure-footedly
+
+_: surefootedness <n>
+_V: sure-footedness
+
+_: surfbird <n>
+_?: surf-bird
+
+_: surfboard <n>
+_-: surf-board <n>
+
+_: surfboarding <n>
+_V: surf-boarding
+
+_: surfboat <n>
+_V: surf-boat <n>
+
+_: surffish <n>
+_V: surf-fish
+
+_: surgeonfish <n>
+_V: surgeon-fish
+
+_: swallowtail <n>
+_-: swallow-tail <n>
+
+_: swallowwort <n>
+_=: swallow-wort
+
+_: swanskin <n>
+_?: swan-skin
+
+_: swan song <n>
+_v: swan-song <n>
+_v: swansong <n>
+
+_: swayback <n>
+_v: sway-back <n>
+
+_: swaybacked <aj>
+_V: sway-backed
+
+_: swear word <n>
+_v: swearword <n>
+_V: swear-word <n>
+
+_: sweatband <n>
+_-: sweat-band <n>
+
+_: sweatpants <n>
+_v: sweat pants <n>
+
+_: sweatshirt <n>
+_v: sweat shirt
+
+_: sweatshop <n>
+_v: sweat shop
+_-: sweat-shop <n>
+
+_: sweat suit <n>
+_v: sweatsuit <n>
+
+_: sweetbrier <n>
+_V: sweet-brier
+
+_: sweet corn <n>
+_v: sweet-corn
+_v: sweetcorn
+
+_: sweet pea <n>
+_V: sweetpea <n>
+
+_: sweetsop <n>
+_V: sweet-sop
+
+_: sweet william
+_V: sweet-william
+
+_: swellheaded <a>
+_v: swell-headed
+
+_: sweptback <aj>
+_?: swept-back
+
+_: swinepox <n>
+_=: swine-pox
+
+_: swingby <n>
+_=: swing-by
+
+_: swipe card <n>
+_.: swipecard <n>
+
+_: switchover
+_V: switch-over <n>
+
+_: swordbill <n>
+_?: sword-bill
+
+_: swordtail <n>
+_?: sword-tail
+
+_: sylphlike <aj>
+_V: sylph-like
+
+_: tablecloth <n>
+_-: table-cloth <n>
+
+_: tablespoon <n>
+_-: table-spoon <n>
+
+_: tabletop <n>
+_-: table-top <n>
+
+_: tableware <n>
+_-: table-ware
+
+_: tagline <n>
+_?: tag line <n>
+
+_: tailboard <n>
+_V: tail-board <n>
+
+_: tailcoat <n>
+_v: tail coat <n>
+_-: tail-coat <n>
+
+_: tailender <n>
+_=: tail-ender <n>
+
+_: tailgater <n>
+_-: tail-gater <n>
+
+_: taillamp <n>
+_V: tail lamp <n>
+
+_: taillight <n>
+_v: tail light <n>
+_-: tail-light <n>
+
+_: tailorbird <n>
+_V: tailor-bird
+
+_: tailpipe <n>
+_v: tail pipe
+_-: tail-pipe <n>
+
+_: tailrace <n>
+_V: tail-race
+
+_: tailspin <n>
+_-: tail-spin <n>
+
+_: tailwind <n>
+_v: tail wind
+
+_: takedown <n>
+_V: take-down
+
+_: take down <v>
+_v: take-down
+
+_: takeoff <n>
+_v: take-off <n>
+
+_: takeout <aj>
+_V: take-out
+
+_: takeout <n>
+_V: take-out
+
+_: take out <v>
+_v: take-out
+
+_: takeover <n>
+_-: take-over <n>
+
+_: take-up <n>
+_v: takeup <n>
+
+_: talebearer <n>
+_v: tale-bearer <n>
+
+_: talebearing <aj>
+_V: tale-bearing
+
+_: talebearing <n>
+_V: tale-bearing
+
+_: taleteller <n>
+_=: tale-teller <n>
+
+_: tamper-proof
+_v: tamperproof
+
+_: tanbark <n>
+_-: tan-bark
+
+_: tap dance <v>
+_V: tapdance <v>
+
+_: tap dancer <n>
+_v: tap-dancer <n>
+
+_: taphouse <n>
+_?: tap-house <n>
+
+_: tarpaper <n>
+_V: tar-paper
+
+_: task force <n>
+_?: task-force <n>
+_v: taskforce <n>
+
+_: taste bud <n>
+_=: taste-bud <n>
+_V: tastebud <n>
+
+_: tattletale <a>
+_V: tattle-tale
+
+_: tattletale <n>
+_V: tattle-tale
+
+_: tax-exempt <aj>
+_v: tax exempt
+
+_: tax-exempt <n>
+_v: tax exempt
+
+_: taxi stand <n>
+_V: taxistand <n>
+
+_: taxpayer <n>
+_-: tax-payer <n>
+
+_: T cell <n>
+_=: T-cell <n>
+
+_: tea bag <n>
+_v: teabag <n>
+_-: tea-bag <n>
+
+_: teaboard <n>
+_=: tea-board <n>
+
+_: teacake <n>
+_V: tea-cake <n>
+
+_: teahouse <n>
+_V: tea-house <n>
+
+_: teakettle <n>
+_-: tea-kettle <n>
+
+_: teammate <n>
+_-: team-mate <n>
+
+_: teamwork <n>
+_-: team-work
+
+_: teapot <n>
+_-: tea-pot <n>
+
+_: teardrop <n>
+_-: tear-drop <n>
+
+_: teargas <n>
+_?: tear gas <n>
+
+_: tearjerker <n>
+_v: tear-jerker <n>
+
+_: tearjerking
+_=: tear-jerking
+
+_: tearoom <n>
+_v: tea room <n>
+_-: tea-room <n>
+
+_: tearstained
+_=: tear-stained
+
+_: tea shop <n>
+_v: teashop <n>
+_V: tea-shop <n>
+
+_: teataster <n>
+_=: tea-taster
+
+_: teatime <n>
+_V: tea-time
+
+_: teenage <aj>
+_v: teen-age
+
+_: teenaged <aj>
+_V: teen-aged
+
+_: teenybopper <n>
+_?: teeny-bopper <n>
+
+_: teeterboard <n>
+_V: teeter-board
+
+_: te-hee <m>
+_v: tehee <m>
+
+_: tenderhearted <aj>
+_v: tender-hearted
+
+_: tender-heartedly
+_v: tenderheartedly
+
+_: tenderheartedness <n>
+_v: tender-heartedness
+
+_: tenderloin <n>
+_-: tender-loin
+
+_: tenpounder <n>
+_=: ten-pounder <n>
+
+_: tenterhook <n>
+_V: tenter-hook <n>
+
+_: tentmaker <n>
+_V: tent-maker
+
+_: termtime <n>
+_=: term-time
+
+_: terra cotta <n>
+_.: terracotta <n>
+_=: terra-cotta
+
+_: terra firma <n>
+_V: terra-firma
+
+_: terry cloth <n>
+_.: terrycloth <n>
+
+_: test drive <n>
+_v: test-drive <n>
+
+_: tetraethyl lead <n>
+_v: tetraethyllead <n>
+
+_: thank-you <n>
+_=: thank you <n>
+_V: thankyou <n>
+
+_: thermocouple <n>
+_V: thermo-couple <n>
+
+_: thermoelectric <aj>
+_V: thermo-electric
+
+_: thermoelectricity <n>
+_?: thermo-electricity
+
+_: thick-headed
+_.: thickheaded <aj>
+
+_: thickheaded <n>
+_?: thick-headed
+
+_: thighbone <n>
+_v: thigh bone <n>
+_-: thigh-bone <n>
+
+_: third-class
+_=: third class <n>
+
+_: third degree <n>
+_=: third-degree
+
+_: thirdhand <aj>
+_=: third-hand
+
+_: thirdhand <av>
+_=: third-hand
+
+_: thistledown <n>
+_V: thistle-down
+
+_: tholepin <n>
+_?: thole-pin
+
+_: thornbush <n>
+_V: thorn-bush
+
+_: thorough bass <n>
+_.: thoroughbass <n>
+_V: thorough-bass
+
+_: thoroughgoing <aj>
+_V: thorough-going
+
+_: thoroughpaced
+_?: thorough-paced
+
+_: threadworm <n>
+_=: thread-worm
+
+_: throatlatch <n>
+_=: throat-latch
+
+_: throughother
+_=: through-other
+
+_: throughput <n>
+_-: through-put
+
+_: throwaway <n>
+_v: throw-away <n>
+
+_: thumbhole <n>
+_V: thumb-hole <n>
+
+_: thumbnut <n>
+_=: thumb-nut
+
+_: thumbstall <n>
+_?: thumb-stall <n>
+
+_: thumbtack <n>
+_-: thumb-tack <n>
+
+_: thunderclap <n>
+_-: thunder-clap <n>
+
+_: thundercloud <n>
+_-: thunder-cloud <n>
+
+_: thunderpeal <n>
+_?: thunder-peal
+
+_: thundershower <n>
+_-: thunder-shower <n>
+
+_: thunderstone <n>
+_?: thunder-stone
+
+_: thunderstorm <n>
+_-: thunder-storm <n>
+
+_: thunderstroke <n>
+_=: thunder-stroke
+
+_: thunderstruck <aj>
+_-: thunder-struck
+
+_: ticktack <n>
+_?: tick-tack
+
+_: ticktack <v>
+_?: tick-tack
+
+_: tick-tack-toe <n>
+_.: ticktacktoe <n>
+
+_: ticktock <n>
+_v: tick-tock <n>
+
+_: tictac <n>
+_=: tic-tac
+
+_: tictac <v>
+_=: tic-tac
+
+_: tide pool <n>
+_V: tidepool <n>
+
+_: tiderip <n>
+_=: tide-rip
+
+_: tidewaiter <n>
+_?: tide-waiter
+
+_: tidewater <n>
+_-: tide-water
+
+_: tideway <n>
+_V: tide-way
+
+_: tieback <n>
+_v: tie back
+
+_: tiebreak <n>
+_v: tie-break <n>
+
+_: tie clasp
+_V: tieclasp <n>
+
+_: tiepin <n>
+_V: tie-pin <n>
+
+_: tigereye <n>
+_V: tiger-eye
+
+_: tightfisted <aj>
+_v: tight-fisted
+
+_: tight-knit <aj>
+_v: tightknit
+
+_: tight-lipped
+_v: tightlipped <aj>
+
+_: tiltyard <n>
+_V: tilt-yard <n>
+
+_: timberline <n>
+_v: timber line <n>
+_-: timber-line
+
+_: timberman <n>
+_V: timber-man
+
+_: time card <n>
+_v: timecard <n>
+_V: time-card <n>
+
+_: time frame <n>
+_V: timeframe <n>
+
+_: timekeeper <n>
+_-: time-keeper <n>
+
+_: timekeeping <n>
+_V: time-keeping
+
+_: time lag <n>
+_v: time-lag
+
+_: time-out <n>
+_.: timeout <n>
+_=: time out <n>
+
+_: timepleaser <n>
+_?: time-pleaser
+
+_: time-saving
+_V: timesaving
+
+_: timeserver <n>
+_?: time-server <n>
+
+_: time-serving
+_v: timeserving <aj>
+
+_: timeserving <n>
+_?: time-serving
+
+_: timeshare <n>
+_?: time-share
+
+_: time-sharing
+_=: time sharing <n>
+_V: timesharing
+
+_: time sheet <n>
+_V: time-sheet <n>
+_V: timesheet <n>
+
+_: timework <n>
+_V: time-work
+
+_: timeworn <aj>
+_v: time-worn
+
+_: timezone
+_?: time zone <n>
+_v: time-zone <n>
+
+_: tinderbox <n>
+_-: tinder-box <n>
+
+_: tinfoil <n>
+_v: tin foil <n>
+
+_: tinplate <n>
+_?: tin plate <n>
+_V: tin-plate
+
+_: tinpot <aj>
+_?: tin-pot
+
+_: tinpot <n>
+_?: tin-pot
+
+_: tipcart <n>
+_=: tip-cart <n>
+
+_: tipcat <n>
+_?: tip-cat <n>
+
+_: tip-off <n>
+_V: tipoff <n>
+
+_: tirewoman
+_?: tire-woman
+
+_: tit for tat <n>
+_=: tit-for-tat
+
+_: titleholder <n>
+_V: title-holder <n>
+
+_: toadeater <n>
+_?: toad-eater
+
+_: toadfish <n>
+_V: toad-fish
+
+_: toadstone <n>
+_=: toad-stone
+
+_: to and fro <av>
+_v: to-and-fro
+
+_: toehold <n>
+_-: toe-hold <n>
+
+_: toenail <n>
+_-: toe-nail <n>
+
+_: toepiece <n>
+_V: toe-piece
+
+_: tohubohu
+_?: tohu bohu
+
+_: toilworn
+_?: toil-worn
+
+_: to-ing and fro-ing
+_=: toing and froing
+
+_: tollbar <n>
+_=: toll-bar <n>
+
+_: tollbooth <n>
+_v: toll booth
+
+_: toll bridge <n>
+_v: tollbridge <n>
+
+_: tollhouse <n>
+_V: toll-house <n>
+
+_: tomcat <n>
+_-: tom-cat <n>
+
+_: tommyrot <n>
+_?: tommy-rot
+
+_: tonearm <n>
+_v: tone arm <n>
+_-: tone-arm <n>
+
+_: tongue twister <n>
+_=: tongue-twister <n>
+
+_: toolkit <n>
+_?: tool kit <n>
+
+_: toolshed <n>
+_V: tool-shed <n>
+
+_: topcoat <n>
+_-: top-coat <n>
+
+_: top drawer
+_v: top-drawer
+
+_: topdressing <n>
+_v: top dressing <n>
+_V: top-dressing <n>
+
+_: topgallant <n>
+_V: top-gallant <n>
+
+_: topknot <n>
+_V: top-knot <n>
+
+_: topline <n>
+_=: top-line
+
+_: top-notch <aj>
+_v: topnotch <aj>
+
+_: top-secret <aj>
+_v: top secret
+
+_: topsoil <n>
+_-: top-soil
+
+_: topsoil <v>
+_V: top-soil
+
+_: topstone <n>
+_=: top-stone
+
+_: topsy-turvydom <n>
+_v: topsyturvydom
+
+_: torchbearer <n>
+_V: torch-bearer <n>
+
+_: tortfeasor <n>
+_v: tort-feasor <n>
+
+_: tortoiseshell <a>
+_v: tortoise shell
+_v: tortoise-shell
+
+_: tortoiseshell <n>
+_v: tortoise shell
+_v: tortoise-shell
+
+_: toss-up <n>
+_v: tossup <n>
+
+_: touch-and-go <aj>
+_=: touch and go
+
+_: touchback <n>
+_V: touch-back <n>
+
+_: touchdown <n>
+_-: touch-down <n>
+
+_: touchhole <n>
+_V: touch-hole
+
+_: touchline <n>
+_V: touch-line <n>
+
+_: touchmark <n>
+_V: touch-mark
+
+_: touchpad <n>
+_V: touch pad <n>
+
+_: touchpaper <n>
+_V: touch-paper
+
+_: touch screen <n>
+_.: touchscreen <n>
+
+_: touchtone <n>
+_=: touch-tone
+
+_: touch-up
+_V: touchup <n>
+
+_: tow bar <n>
+_v: towbar <n>
+
+_: towhead <n>
+_-: tow-head
+
+_: towheaded <aj>
+_V: tow-headed
+
+_: townhouse <n>
+_v: town house <n>
+
+_: towrope <n>
+_?: tow rope <n>
+
+_: toyboy <n>
+_?: toy boy <n>
+
+_: track and field <n>
+_v: track-and-field
+
+_: tracklaying <n>
+_=: track-laying
+
+_: trackwalker <n>
+_=: track-walker
+
+_: trade name <n>
+_V: tradename <n>
+
+_: trade-off <n>
+_v: tradeoff <n>
+
+_: tragicomedy <n>
+_V: tragi-comedy
+
+_: tragicomic <aj>
+_-: tragi-comic
+
+_: tragicomical <aj>
+_?: tragi-comical
+
+_: tragicomically
+_V: tragi-comically
+
+_: trailblazer <n>
+_-: trail-blazer <n>
+
+_: trailblazing <a>
+_-: trail-blazing
+
+_: trailblazing <n>
+_-: trail-blazing
+
+_: trailless
+_=: trail-less
+
+_: trainband <n>
+_?: train-band
+
+_: trainbearer <n>
+_V: train-bearer <n>
+
+_: trainspotter <n>
+_v: train spotter <n>
+
+_: trainspotting
+_V: train-spotting
+
+_: tramcar <n>
+_V: tram-car <n>
+
+_: tramroad <n>
+_?: tram-road <n>
+
+_: transshape <m>
+_=: trans-shape
+
+_: transsonic
+_?: trans-sonic
+
+_: trapball <n>
+_=: trap-ball
+
+_: traprock <n>
+_V: trap-rock
+
+_: trapshooting <n>
+_V: trap-shooting
+
+_: trash can <n>
+_v: trashcan <n>
+_V: trash-can <n>
+
+_: trawl net <n>
+_.: trawlnet <n>
+_V: trawl-net <n>
+
+_: treasure house <n>
+_v: treasure-house <n>
+
+_: treasure-trove
+_=: treasure trove <n>
+
+_: treehopper <n>
+_V: tree hopper
+
+_: tree house <n>
+_V: tree-house <n>
+_V: treehouse <n>
+
+_: treeline
+_?: tree line <n>
+_-: tree-line
+
+_: trelliswork <n>
+_V: trellis-work
+
+_: trench coat <n>
+_V: trench-coat <n>
+_V: trenchcoat <n>
+
+_: trencherman <n>
+_V: trencher-man
+
+_: trendsetter <n>
+_V: trend-setter <n>
+
+_: trendsetting <aj>
+_v: trend-setting <aj>
+
+_: trestlework <n>
+_?: trestle-work
+
+_: triboelectricity <n>
+_?: tribo-electricity
+
+_: trickle-down
+_V: trickledown
+
+_: trictrac <n>
+_V: tric-trac
+
+_: triphammer <n>
+_?: trip-hammer
+
+_: triweekly <n>
+_?: tri-weekly
+
+_: trolleybus <n>
+_?: trolley bus
+_v: trolley-bus
+
+_: troopship <n>
+_-: troop-ship <n>
+
+_: trothplight <m>
+_?: troth-plight <m>
+
+_: troubleshooter <n>
+_v: trouble-shooter
+
+_: trouble spot <n>
+_v: troublespot
+
+_: truckload <n>
+_-: truck-load <n>
+
+_: trueborn
+_=: true-born
+
+_: truebred
+_=: true-bred
+
+_: truehearted <aj>
+_?: true-hearted
+
+_: trueheartedness <n>
+_=: true-heartedness
+
+_: truelove <n>
+_V: true-love <n>
+
+_: trustbuster <n>
+_V: trust-buster
+
+_: tryout <n>
+_v: try-out <n>
+
+_: tsk tsk
+_v: tsktsk <m>
+
+_: tubeworm <n>
+_=: tube-worm
+
+_: tuckshop <n>
+_=: tuck-shop <n>
+
+_: tufthunter
+_?: tuft-hunter
+
+_: tugboat <n>
+_-: tug-boat <n>
+
+_: tug of war
+_=: tug-of-war <n>
+
+_: tulipwood <n>
+_V: tulip-wood
+
+_: tumblebug <n>
+_?: tumble-bug
+
+_: tumblehome <n>
+_V: tumble home
+
+_: tumbleweed <n>
+_-: tumble-weed
+
+_: tumpline <n>
+_V: tump-line
+
+_: tundish <n>
+_V: tun-dish
+
+_: tune-up <n>
+_v: tuneup <n>
+
+_: turbo-electric
+_.: turboelectric
+
+_: turbogenerator <n>
+_V: turbo-generator
+
+_: turbojet <n>
+_-: turbo-jet <n>
+
+_: turbosupercharger <n>
+_?: turbo-supercharger
+
+_: turnabout <n>
+_-: turn-about <n>
+
+_: turndown <n>
+_V: turn-down <n>
+
+_: turn-off <n>
+_.: turnoff <n>
+
+_: turn-on <n>
+_v: turnon <n>
+
+_: turnout <n>
+_-: turn-out <n>
+
+_: turn-up <n>
+_v: turnup <n>
+
+_: turtledove <n>
+_?: turtle dove <n>
+_V: turtle-dove <n>
+
+_: turtlenecked <a>
+_V: turtle-necked
+
+_: twayblade <n>
+_V: tway-blade
+
+_: twinborn
+_=: twin-born
+
+_: two-handed <aj>
+_v: twohanded
+
+_: two-seater <n>
+_V: twoseater <n>
+
+_: typebar <n>
+_V: type-bar
+
+_: typecase <n>
+_?: type case
+
+_: typeface <n>
+_-: type-face <n>
+
+_: typefounder <n>
+_V: type-founder
+
+_: typefounding <n>
+_V: type-founding
+
+_: typesetting <n>
+_-: type-setting
+
+_: uh-huh
+_v: uh huh
+
+_: uh-oh
+_v: uh oh
+
+_: ultradistance <n>
+_=: ultra-distance
+
+_: ultrahigh <a>
+_V: ultra-high
+
+_: ultramodern <aj>
+_V: ultra-modern
+
+_: ultrarapid
+_=: ultra-rapid
+
+_: unaccounted-for
+_v: unaccounted for
+
+_: uncalled-for <aj>
+_v: uncalled for
+
+_: uncared-for <aj>
+_v: uncared for
+
+_: underage <aj>
+_-: under-age
+
+_: underage <n>
+_V: under-age
+
+_: underemployment <n>
+_-: under-employment
+
+_: underjaw <n>
+_=: under-jaw
+
+_: underpart <n>
+_v: under part
+
+_: underpopulated <aj>
+_-: under-populated
+
+_: underprivileged <aj>
+_-: under-privileged
+
+_: underproduction <n>
+_V: under-production
+
+_: underrepresented <a>
+_V: under-represented
+
+_: underripe
+_V: under-ripe
+
+_: undersecretary <n>
+_-: under-secretary
+
+_: undersheriff <n>
+_V: under-sheriff <n>
+
+_: undersurface <n>
+_V: under-surface
+
+_: undertrick <n>
+_?: under-trick
+
+_: undreamed-of
+_v: undreamed of <aj>
+
+_: undreamt-of
+_v: undreamt of <aj>
+
+_: up-and-down
+_v: up and down <av>
+
+_: up-bow <n>
+_v: upbow <n>
+
+_: upfront <aj>
+_?: up front
+_v: up-front
+
+_: upmarket <aj>
+_V: up-market
+
+_: uppercase <aj>
+_v: upper case
+_v: upper-case
+
+_: uppercase <n>
+_v: upper case
+_v: upper-case
+
+_: upper case
+_.: uppercase <v>
+_v: upper-case
+
+_: upper crust <n>
+_=: upper-crust
+
+_: uptempo <n>
+_?: up-tempo
+
+_: up-to-date <aj>
+_v: up to date <aj>
+
+_: uredostage <n>
+_=: uredo-stage
+
+_: vade mecum <n>
+_v: vade-mecum <n>
+
+_: valet de chambre <n>
+_v: valet-de-chambre
+
+_: value-added tax <n>
+_v: value added tax
+
+_: veggieburger <n>
+_v: veggie burger <n>
+
+_: verd antique <n>
+_v: verd-antique
+
+_: vergeboard
+_?: verge-board
+
+_: verseman <n>
+_=: verse-man
+
+_: vice admiral <n>
+_v: vice-admiral
+
+_: vice-chancellor
+_v: vice chancellor <n>
+
+_: vice-like
+_v: vicelike
+
+_: vice presidency
+_v: vice-presidency <n>
+
+_: vice president <n>
+_v: vice-president <n>
+
+_: viceregal <aj>
+_V: vice-regal
+
+_: vice-regent <n>
+_v: viceregent <n>
+
+_: video recorder <n>
+_V: videorecorder <n>
+
+_: vinedresser <n>
+_V: vine-dresser
+
+_: V-neck <n>
+_v: V neck <n>
+
+_: voice mail <n>
+_v: voice-mail
+_v: voicemail <n>
+
+_: voice-over <n>
+_v: voiceover <n>
+
+_: voiceprint <n>
+_V: voice-print <n>
+
+_: volleyball <n>
+_-: volley-ball
+
+_: V sign <n>
+_v: V-sign <n>
+
+_: wagonload <n>
+_V: wagon-load
+
+_: walkaway <n>
+_v: walk-away <n>
+
+_: walking stick <n>
+_v: walkingstick <n>
+
+_: walkout <n>
+_V: walk-out <n>
+
+_: walkover <n>
+_V: walk-over <n>
+
+_: walk-through <n>
+_v: walkthrough <n>
+
+_: walk-up <n>
+_v: walkup <n>
+
+_: wallboard <n>
+_-: wall-board
+
+_: walleye <n>
+_-: wall-eye <n>
+
+_: walleyed <aj>
+_V: wall-eyed
+
+_: wallless
+_=: wall-less
+
+_: wannabe <a>
+_v: wanna-be
+
+_: wannabe <n>
+_v: wanna-be
+
+_: want ad <n>
+_?: want-ad <n>
+_v: wantad
+
+_: wardmote
+_?: ward-mote
+
+_: warhorse <n>
+_v: war-horse <n>
+
+_: warmed-over
+_v: warmed over
+
+_: warm-hearted
+_v: warmhearted <aj>
+
+_: warm-heartedly
+_V: warmheartedly
+
+_: warm-heartedness
+_.: warmheartedness <n>
+
+_: warm-up <n>
+_v: warm up <n>
+_v: warmup <n>
+
+_: warpaint
+_?: war paint <n>
+_V: war-paint
+
+_: warthog <n>
+_v: wart hog
+_-: wart-hog <n>
+
+_: warworn
+_=: war-worn <aj>
+
+_: washbasin <n>
+_-: wash-basin <n>
+
+_: washboard <n>
+_-: wash-board <n>
+
+_: washbowl <n>
+_V: wash-bowl <n>
+
+_: washcloth <n>
+_-: wash-cloth <n>
+
+_: washday <n>
+_V: wash-day <n>
+
+_: washed-out <aj>
+_v: washed out
+
+_: washed-up <aj>
+_v: washed up
+
+_: washhouse <n>
+_V: wash-house <n>
+
+_: washin
+_V: wash-in
+
+_: washout <n>
+_V: wash-out <n>
+
+_: washstand <n>
+_-: wash-stand <n>
+
+_: washtub <n>
+_-: wash-tub <n>
+
+_: washup <n>
+_=: wash-up
+
+_: wash up <v>
+_v: wash-up
+
+_: wastebasket <n>
+_-: waste-basket <n>
+
+_: wastepaper <n>
+_v: waste paper <n>
+
+_: watchcase <n>
+_V: watch-case
+
+_: watchdog <n>
+_-: watch-dog <n>
+
+_: watchmaking <n>
+_-: watch-making
+
+_: watchout <n>
+_=: watch-out <n>
+
+_: watchtower <n>
+_-: watch-tower <n>
+
+_: waterbed <n>
+_v: water bed <n>
+_-: water-bed <n>
+
+_: waterbird <n>
+_v: water bird <n>
+_-: water-bird <n>
+
+_: waterborne <aj>
+_V: water-borne
+
+_: waterbuck <n>
+_V: water-buck
+
+_: waterbus <n>
+_=: water-bus <n>
+
+_: water cooler <n>
+_V: watercooler <n>
+
+_: watercraft <n>
+_-: water-craft
+
+_: water dog <n>
+_=: water-dog <n>
+_v: waterdog <n>
+
+_: waterfinder <n>
+_=: water-finder
+
+_: waterflood <m>
+_=: water-flood
+
+_: waterfowl <n>
+_-: water-fowl
+
+_: water glass <n>
+_v: waterglass <n>
+_V: water-glass
+
+_: water hen <n>
+_=: water-hen
+_v: waterhen <n>
+
+_: water hole <n>
+_v: waterhole <n>
+_-: water-hole <n>
+
+_: waterjet <n>
+_=: water-jet
+
+_: waterleaf <n>
+_V: water-leaf
+
+_: water lily <n>
+_v: waterlily <n>
+
+_: waterline <n>
+_v: water line <n>
+_-: water-line
+
+_: watermelon <n>
+_-: water-melon <n>
+
+_: watermill <n>
+_?: water mill <n>
+_V: water-mill <n>
+
+_: water park <n>
+_v: waterpark <n>
+
+_: water power
+_v: waterpower <n>
+_V: water-power
+
+_: water-resistant <aj>
+_v: water resistant
+
+_: water-ski <m>
+_V: waterski <m>
+
+_: water-skier <n>
+_=: water skier
+
+_: water-skiing <n>
+_.: waterskiing <n>
+_=: water skiing
+
+_: waterspout <n>
+_-: water-spout <n>
+
+_: waterthrush <n>
+_=: water thrush <n>
+
+_: waterweed <n>
+_V: water-weed
+
+_: water wheel <n>
+_v: waterwheel <n>
+_V: water-wheel <n>
+
+_: water wings <n>
+_=: water-wings
+_V: waterwings
+
+_: waterworn <aj>
+_=: water-worn
+
+_: watt-hour <n>
+_v: watthour <n>
+
+_: wattlebird <n>
+_=: wattle-bird
+
+_: wavefront <n>
+_v: wave front <n>
+
+_: wave number <n>
+_.: wavenumber
+
+_: waxbill <n>
+_V: wax-bill
+
+_: waybill <n>
+_V: way-bill
+
+_: waygoing <n>
+_=: way-going
+
+_: wayleave <n>
+_=: way-leave
+
+_: waypoint <n>
+_V: way point <n>
+
+_: weakhearted
+_=: weak-hearted
+
+_: weakside <n>
+_=: weak side
+
+_: weather-beaten <aj>
+_V: weatherbeaten
+
+_: weatherglass <n>
+_?: weather-glass
+
+_: weather strip <n>
+_.: weatherstrip <n>
+
+_: weather stripping <n>
+_.: weatherstripping <n>
+
+_: weather vane <n>
+_v: weathervane <n>
+_V: weather-vane <n>
+
+_: weatherworn <aj>
+_?: weather-worn
+
+_: weaverbird <n>
+_V: weaver-bird <n>
+
+_: webfoot <n>
+_V: web-foot
+
+_: web-footed <aj>
+_V: webfooted
+
+_: web page <n>
+_v: webpage <n>
+
+_: weekend <n>
+_v: week-end
+
+_: weekend <v>
+_v: week-end
+
+_: wee-wee <v>
+_v: weewee <v>
+
+_: weightlifter <n>
+_v: weight lifter
+_v: weight-lifter <n>
+
+_: weightlifting <n>
+_v: weight lifting
+_V: weight-lifting
+
+_: well-adjusted <aj>
+_v: well adjusted
+
+_: well-advised <aj>
+_v: well advised
+
+_: well-appointed <aj>
+_v: well appointed
+
+_: well-balanced <aj>
+_v: well balanced
+
+_: well-behaved <aj>
+_v: well behaved <aj>
+
+_: well-being <n>
+_V: wellbeing <n>
+
+_: well-born
+_v: wellborn <aj>
+
+_: well-bred <aj>
+_v: well bred
+
+_: well-brought-up
+_v: well brought up
+
+_: well-built
+_v: well built
+
+_: well-connected <aj>
+_v: well connected
+
+_: wellcurb <n>
+_=: well-curb
+
+_: well-defined <aj>
+_v: well defined
+
+_: well-developed
+_v: well developed
+
+_: well-disposed <aj>
+_v: well disposed <aj>
+
+_: well-documented
+_v: well documented
+
+_: welldoer <n>
+_=: well-doer <n>
+
+_: well-done <aj>
+_v: well done
+
+_: well-dressed <aj>
+_v: well dressed
+
+_: well-earned
+_v: well earned
+
+_: well-endowed <aj>
+_v: well endowed
+
+_: well-established
+_=: well established
+
+_: well-fed <aj>
+_v: well fed
+
+_: well-founded <aj>
+_v: well founded
+
+_: well-groomed <aj>
+_v: well groomed
+
+_: well-grounded <aj>
+_v: well grounded
+
+_: wellhead <n>
+_-: well-head <n>
+
+_: well-heeled <aj>
+_v: well heeled
+
+_: wellhole <n>
+_=: well-hole <n>
+
+_: well-informed <aj>
+_v: well informed
+
+_: well-intentioned <aj>
+_v: well intentioned
+
+_: well-kept <aj>
+_v: well kept
+
+_: well-known <aj>
+_v: well known
+
+_: well-mannered <aj>
+_v: well mannered
+
+_: well-matched
+_v: well matched
+
+_: well-meaning <aj>
+_v: well meaning
+
+_: well-meant <aj>
+_v: well meant
+
+_: well-off <aj>
+_v: well off
+
+_: well-oiled
+_v: well oiled
+
+_: well-paid
+_v: well paid
+
+_: well-preserved <aj>
+_v: well preserved
+
+_: well-read <aj>
+_v: well read
+
+_: well-rounded <aj>
+_v: well rounded
+
+_: well-spoken <aj>
+_v: well spoken
+
+_: wellspring <n>
+_-: well-spring <n>
+
+_: well-thought-of <aj>
+_v: well thought of
+
+_: well-thought-out
+_v: well thought out <aj>
+
+_: well-thumbed
+_v: well thumbed
+
+_: well-timed <aj>
+_v: well timed <aj>
+
+_: well-tried <aj>
+_v: well tried
+
+_: well-trodden
+_v: well trodden
+
+_: well-turned <aj>
+_v: well turned
+
+_: well-versed
+_v: well versed
+
+_: well-wisher <n>
+_V: wellwisher <n>
+
+_: well-worn <aj>
+_v: well worn
+
+_: welterweight <n>
+_-: welter-weight <n>
+
+_: wet nurse <n>
+_v: wet-nurse <n>
+
+_: whaleback <n>
+_V: whale-back
+
+_: whaleboat <n>
+_V: whale-boat <n>
+
+_: whaleman <n>
+_V: whale-man
+
+_: what-if
+_v: what if
+
+_: wheat germ <n>
+_v: wheatgerm
+
+_: wheatmeal
+_V: wheat-meal
+
+_: wheatworm <n>
+_?: wheat-worm
+
+_: wheelchair <n>
+_-: wheel-chair <n>
+
+_: wheelhouse <n>
+_-: wheel-house <n>
+
+_: wheyface <n>
+_=: whey-face
+
+_: wheyfaced
+_=: whey-faced
+
+_: whipsnake <n>
+_=: whip-snake <n>
+
+_: whipstitch <n>
+_V: whip-stitch
+
+_: whipstitch <v>
+_V: whip-stitch
+
+_: whipstock <n>
+_V: whip-stock
+
+_: whiptail <n>
+_V: whip-tail
+
+_: whirlabout <n>
+_?: whirl-about
+
+_: whisk broom <n>
+_v: whiskbroom <n>
+
+_: whistle-blower <n>
+_V: whistleblower <n>
+
+_: whistle-blowing
+_V: whistleblowing <n>
+
+_: whistle-stop <n>
+_v: whistle stop <n>
+
+_: whitebeard <n>
+_=: white-beard
+
+_: whiteface <n>
+_V: white-face
+
+_: whitefly <n>
+_V: white-fly
+
+_: whitehead <n>
+_-: white-head
+
+_: whiteout <v>
+_V: white-out <v>
+
+_: white pine <n>
+_v: whitepine
+
+_: white water <n>
+_.: whitewater <n>
+_V: white-water
+
+_: whiz kid <n>
+_v: whizkid <n>
+
+_: whizzbang <n>
+_V: whizz-bang <n>
+
+_: whizz-kid <n>
+_=: whizz kid <n>
+_v: whizzkid <n>
+
+_: whodunit <n>
+_-: who-dun-it <n>
+
+_: wholehearted <aj>
+_v: whole-hearted
+
+_: wholeheartedly <av>
+_v: whole-heartedly
+
+_: wholemeal <aj>
+_v: whole-meal
+
+_: whole-wheat <aj>
+_v: whole wheat
+_v: wholewheat
+
+_: wicketkeeper <n>
+_V: wicket-keeper <n>
+
+_: wide-awake <aj>
+_v: wide awake
+
+_: wide awake
+_.: wideawake <n>
+
+_: widebody <n>
+_=: wide-body <n>
+
+_: widow bird <n>
+_=: widow-bird
+_v: widowbird <n>
+
+_: wifelike <aj>
+_=: wife-like
+
+_: wigmaker <n>
+_V: wig-maker <n>
+
+_: wild card <n>
+_v: wildcard <n>
+
+_: wildcat <n>
+_-: wild-cat <n>
+
+_: wildflower <n>
+_v: wild flower <n>
+
+_: wildfowl <n>
+_-: wild-fowl
+
+_: wildfowler <n>
+_=: wild-fowler <n>
+
+_: wildfowling <n>
+_=: wild-fowling
+
+_: wild goose chase <n>
+_v: wild-goose chase <n>
+
+_: wild oat <n>
+_V: wildoat <n>
+
+_: wildwood <n>
+_V: wild-wood
+
+_: willpower <n>
+_v: will power <n>
+
+_: windbag <n>
+_-: wind-bag <n>
+
+_: windblown <aj>
+_v: wind-blown
+
+_: windbound
+_?: wind-bound
+
+_: windbreak <n>
+_-: wind-break <n>
+
+_: windchill factor
+_=: wind-chill factor
+
+_: windflower <n>
+_V: wind-flower
+
+_: windgall <n>
+_?: wind-gall
+
+_: windhover <n>
+_?: wind-hover
+
+_: window-dress <v>
+_v: windowdress
+
+_: windowpane <n>
+_-: window-pane
+
+_: window-shopper <n>
+_=: window shopper
+
+_: window shopping
+_v: window-shopping
+
+_: windowsill <n>
+_v: window sill
+_-: window-sill <n>
+
+_: wind rose <n>
+_v: windrose <n>
+
+_: windsail <n>
+_?: wind-sail
+
+_: windsock <n>
+_-: wind-sock <n>
+
+_: windsucker <n>
+_=: wind-sucker
+
+_: wind-sucking
+_v: windsucking <n>
+
+_: windswept <aj>
+_v: wind-swept
+
+_: windthrow <n>
+_=: wind throw
+
+_: windtight
+_?: wind-tight
+
+_: windup <n>
+_v: wind-up <n>
+
+_: winebibber <n>
+_?: wine-bibber
+
+_: winebibbing <n>
+_=: wine-bibbing
+
+_: wineglass <n>
+_v: wine glass <n>
+_-: wine-glass <n>
+
+_: winegrower <n>
+_V: wine grower <n>
+
+_: winegrowing <n>
+_V: wine growing
+
+_: winepress <n>
+_V: wine-press <n>
+
+_: winesap <n>
+_V: wine-sap
+
+_: wineskin <n>
+_V: wine-skin <n>
+
+_: winetasting <n>
+_=: wine tasting <n>
+
+_: wingnut <n>
+_?: wing nut <n>
+
+_: wingspread <n>
+_-: wing-spread
+
+_: wingtip <n>
+_v: wing tip <n>
+
+_: winterberry <n>
+_V: winter-berry
+
+_: winterbourne <n>
+_=: winter-bourne
+
+_: wintertide <n>
+_?: winter-tide
+
+_: wiredraw <m>
+_?: wire-draw
+
+_: wirehair <n>
+_v: wire-hair
+
+_: wire-haired <aj>
+_v: wirehaired
+
+_: wirepuller <n>
+_=: wire-puller <n>
+
+_: wirepulling <n>
+_=: wire-pulling
+
+_: wiretapper <n>
+_V: wire-tapper <n>
+
+_: wireway <n>
+_=: wire-way <n>
+
+_: wireworm <n>
+_?: wire-worm
+
+_: wise guy <n>
+_v: wiseguy <n>
+
+_: wisewoman <n>
+_=: wise woman
+
+_: witch hunt <n>
+_v: witch-hunt <n>
+
+_: with-it <aj>
+_v: with it
+
+_: wolffish <n>
+_V: wolf-fish
+
+_: wolfhound <n>
+_-: wolf-hound
+
+_: womanlike <aj>
+_?: woman-like
+
+_: womanlike <n>
+_V: woman-like
+
+_: wonderwork <n>
+_?: wonder-work
+
+_: wonderworker <n>
+_=: wonder-worker <n>
+
+_: wonderworking <aj>
+_=: wonder-working
+
+_: won ton <n>
+_.: wonton <n>
+
+_: woodblock <n>
+_v: wood block <n>
+
+_: woodborer <n>
+_?: wood-borer
+
+_: woodboring
+_=: wood-boring
+
+_: woodcarver <n>
+_V: wood-carver <n>
+
+_: woodcarving <n>
+_-: wood-carving <n>
+
+_: woodchat <n>
+_=: wood-chat
+
+_: woodcutter <n>
+_-: wood-cutter <n>
+
+_: woodcutting <n>
+_V: wood-cutting
+
+_: woodenhead <n>
+_V: wooden-head
+
+_: woodenheaded
+_=: wooden-headed <aj>
+
+_: woodenheadedness <n>
+_V: wooden-headedness
+
+_: woodlark <n>
+_=: wood-lark
+
+_: woodlot <n>
+_v: wood lot
+
+_: woodlouse <n>
+_v: wood louse <n>
+
+_: wood mouse <n>
+_v: woodmouse <n>
+
+_: woodnote <n>
+_?: wood-note
+
+_: woodpile <n>
+_-: wood-pile
+
+_: woodrush <n>
+_V: wood-rush
+
+_: wood thrush <n>
+_V: woodthrush <n>
+
+_: woodwax <n>
+_=: wood-wax
+
+_: woodwaxen <n>
+_?: wood-waxen
+
+_: woodworm <n>
+_V: wood-worm
+
+_: wool fat <n>
+_v: woolfat
+
+_: woolgathering <aj>
+_V: wool-gathering
+
+_: woolgathering <n>
+_V: wool-gathering
+
+_: woolgrower <n>
+_?: wool-grower
+
+_: woolgrowing <n>
+_=: wool-growing
+
+_: word processing <n>
+_V: wordprocessing
+
+_: word processor <n>
+_V: wordprocessor <n>
+
+_: workbag <n>
+_V: work-bag <n>
+
+_: workbasket <n>
+_V: work-basket <n>
+
+_: workday <n>
+_-: work-day <n>
+
+_: workforce <n>
+_?: work force <n>
+
+_: workingman <n>
+_v: working man <n>
+
+_: workingwoman <n>
+_v: working woman
+
+_: workout <n>
+_-: work-out <n>
+
+_: workpeople
+_=: work-people
+
+_: workshy
+_?: work-shy <aj>
+
+_: workstation <n>
+_v: work station
+
+_: work surface <n>
+_v: worksurface <n>
+
+_: workup <n>
+_=: work-up
+
+_: work-up
+_=: work up <v>
+
+_: workweek <n>
+_V: work week
+
+_: workwoman <n>
+_?: work-woman
+
+_: world-beater <n>
+_V: worldbeater <n>
+
+_: worldview <n>
+_v: world view <n>
+
+_: wormcast <n>
+_=: worm-cast <n>
+
+_: worm gear <n>
+_=: worm-gear
+_V: wormgear <n>
+
+_: wormhole <n>
+_-: worm-hole
+
+_: wormseed <n>
+_V: worm-seed
+
+_: worn-out <aj>
+_=: worn out <aj>
+
+_: wristwatch <n>
+_-: wrist-watch <n>
+
+_: write-off <n>
+_V: writeoff <n>
+
+_: write-up <n>
+_V: writeup <n>
+
+_: wrongdoer <n>
+_-: wrong-doer
+
+_: wrongdoing <n>
+_-: wrong-doing
+
+_: wrongheaded <aj>
+_v: wrong-headed
+
+_: wrongheadedly <av>
+_V: wrong-headedly
+
+_: wrongheadedness <n>
+_V: wrong-headedness
+
+_: wrought iron <n>
+_=: wrought-iron
+
+_: wushu <n>
+_V: wu shu
+
+_: wyliecoat <n>
+_=: wylie-coat
+
+_: x-ray <v>
+_v: x ray
+
+_: X-ray <n>
+_v: X ray <n>
+
+_: yardarm <n>
+_-: yard-arm <n>
+
+_: yearbook <n>
+_-: year-book <n>
+
+_: yearend <n>
+_=: year-end <n>
+
+_: yeasayer <n>
+_=: yea-sayer <n>
+
+_: yellowbird <n>
+_?: yellow-bird
+
+_: yellowhammer <n>
+_V: yellow-hammer
+
+_: yellow jacket <n>
+_V: yellowjacket <n>
+
+_: yellowweed
+_?: yellow-weed
+
+_: yellowwood <n>
+_V: yellow-wood
+
+_: yes-man <n>
+_=: yes man
+
+_: yokefellow <n>
+_V: yoke-fellow
+
+_: yokemate <n>
+_V: yoke-mate <n>
+
+_: zebrawood <n>
+_V: zebra-wood
+
+_: zookeeper <n>
+_-: zoo-keeper <n>

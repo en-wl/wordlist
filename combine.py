@@ -102,6 +102,12 @@ with open('data/basic') as f:
     mergeEntries(conn, f, onConflict = 'error')
 finish()
 
+start('data/compounds-auto')
+with open('data/compounds-auto') as f:
+    adjustEntries(conn, f, strict = False, ignoreErrors = True, replaceComments = False, simplifyScowlInfo=False,
+                  groupComment = 'Compound variant levels are a best guess based on freq and other related info.')
+finish()
+
 for fn in adjustFiles:
     start(fn)
     with open(fn) as f:

@@ -688,7 +688,6 @@ entries; for example:
 
     strew <v>: -, (strewn | .: strewed), -, -
 
-
 will adjust the variant information for the past participle form.  The derived
 forms with a `-` will be ignored, so no other adjustments will be made.
 

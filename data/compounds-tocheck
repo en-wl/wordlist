@@ -1,0 +1,32 @@
+
+_?: coat hanger <n>
+_V: coathanger <n>
+
+_?: good night <n>
+_v: goodnight
+_V: good-night
+
+_v: hairdrier <n>
+_V: hair-drier <n>
+
+_?: health care <n>
+_,: healthcare <n>
+
+_?: sell-off <n>
+_v: selloff <n>
+
+_?: soul mate <n>
+_v: soulmate <n>
+
+_?: spell-check
+_v: spellcheck <n_v>
+
+_?: sun-baked
+_v: sunbaked <aj>
+
+_v: sweetbriar <n>
+_V: sweet-briar
+
+_.: trapdoor <n>
+_v: trap door <n>
+_-: trap-door <n>

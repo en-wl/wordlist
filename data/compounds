@@ -1,0 +1,79 @@
+_: barcode <n>
+_V: bar code <n>
+
++ _: camel hair
+_V: camel's hair <n>
+_.: camel-hair
+_v: camelhair <n>
+## When used as a modifier it's often _camel-hair_
+
+_: ceasefire <n>
+_V: cease-fire <n>
+
+_: chatroom <n>
+_V: chat room <n>
+
+_: countdown <n>
+_V: count-down <n>
+
+_: doglike <aj>
+_v: dog-like
+
+_: dot-com <n>
+_.: dotcom <n>
+
+_: driveshaft <n>
+_v: drive shaft <n>
+
+_: email <n_v>
+_v: e-mail <n_v>
+
+_: highfalutin <aj>
+_V: hifalutin <aj>
+_V: highfaluting <aj>
+_V: high-falutin <aj>
+_-: high-faluting
+
+_: hotdog <v>
+_v: hot-dog <v>
+= 70: ...
+
+_: hot dog <n>
+_v: hotdog <n>
+
+_: jujitsu <n>
+_V: ju-jitsu
+_V: jujutsu <n>
+_V: ju-jutsu
+_V: jiujitsu <n>
+_V: jiu-jitsu
+
+A: nonissue <n>
+A? B: non-issue <n>
+## According to most dictionaries nonissue is the correct spelling for
+##   American English; however, in practice (based on data from COCA) it semas
+##   non-issue is used more often.
+
+_: orangutan <n>
+_v: orang-utan <n>
+_V: orangutang <n>
+_V: orang-utang <n>
+
+_: Port of Spain <n>
+_?: Port-of-Spain <n>
+
+_: sweetbrier <n>
+_v: sweetbriar
+_V: sweet-brier
+_V: sweet-briar
+
+_: trapdoor <n>
+_v: trap door <n>
+_-: trap-door <n>
+
+_: wetsuit <n>
+_v: wet suit <n>
+
+_: wheelhorse <n>
+_?: wheel horse <n>
+_V: wheel-horse

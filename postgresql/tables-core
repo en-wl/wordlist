@@ -1,9 +1,3 @@
-poses
-base_poses
-ranks
-variant_levels
-regions
-spellings
 groups
 words
 lemma_variant_info
@@ -13,9 +7,3 @@ scowl_override
 cluster_comments
 group_comments
 lemma_comments
-cluster_map
-pos_classes
-usage_notes
-categories
-tags
-_combined

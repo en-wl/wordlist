@@ -2,13 +2,9 @@
 -- and must remain in sync with official SqLite3 version.  Expected to be
 -- processed with psql
 
-\i 'enums.sql'
-
 --
 -- constant tables
 --
-
-create type pos_category as enum ('', 'special', 'wordpart', 'nonword');
 
 create table poses (
   order_num integer not null unique,

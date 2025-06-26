@@ -2,5 +2,5 @@
 
 SQLITE3=${SQLITE3:-/opt/sqlite3/bin/sqlite3}
 
-$SQLITE3 ../scowl.db < devel/export-enums.sql > enums.sql
+$SQLITE3 -init /dev/null ../scowl.db < devel/export-enums.sql > enums.sql
 

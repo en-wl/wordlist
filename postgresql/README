@@ -1,0 +1,23 @@
+Import or export data to a PostgreSQL database, scripts must be run from this
+directory.
+
+Environment variables used by scripts:
+
+  SQLITE3: sqlite3 command to use
+
+./import.sh <database> [<typeschema>] <schema> [drop]
+
+Import SCOWL data into PostgreSQL.  <database> is the PostgreSQL database.
+<schema> is the schema to import the data into; if the schema doesn't exist it
+will be created; if 'drop' is specified then the schema will be recreated if
+it exists; otherwise, all tables are truncated.  <typeschema> specifies the
+schema for enum types; if the schema doesn't exists it will be created and
+populated.
+
+The env. var. SCOWL_DB can be used to set the sqlite3 db file, otherwise it
+defaults to '../scowl.db'
+
+./export.sh <database> <schema> <sqlite-db-file>
+
+Export SCOWL data from PostgreSQL.
+

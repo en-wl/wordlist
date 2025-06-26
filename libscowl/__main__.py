@@ -11,6 +11,11 @@ def initDB(args):
     conn = libscowl.openDB(args.db, create = True)
     conn.close()
 
+def finalizeDB(args):
+    conn = libscowl.openDB(args.db)
+    libscowl.finalizeDB(conn)
+    conn.close()
+
 def createDB(args):
     conn = libscowl.openDB(args.db, create = True)
     clusters = libscowl.importText(sys.stdin)
@@ -258,6 +263,10 @@ addDbArgument(p)
 p = addParser('init-db',
               help='create an empty database')
 p.set_defaults(func=initDB)
+addDbArgument(p)
+
+p = addParser('finalize-db')
+p.set_defaults(func=finalizeDB)
 addDbArgument(p)
 
 

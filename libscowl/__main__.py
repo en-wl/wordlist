@@ -24,7 +24,7 @@ def createDB(args):
 
 def exportDB(args):
     conn = libscowl.openDB(args.db)
-    clusters = libscowl.importFromDB(conn)
+    clusters = libscowl.importFromDB(conn, dbOrder = args.db_order)
     libscowl.exportAsText(clusters, conn, sys.stdout, showClusters = args.show_clusters)
 
 def searchDB(args):
@@ -166,6 +166,7 @@ addDbArgument(p)
 def addExportArguments(p):
     p.add_argument('--show-clusters', action='store_true', default=False)
 addExportArguments(p)
+p.add_argument('--db-order', action='store_true', default=False)
 
 
 p = addParser('word-list',

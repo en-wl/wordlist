@@ -1113,6 +1113,25 @@ def _createClusters(groups, clusterComments = None):
 
     return clusters
 
+def _createClustersSimple(groups, clusterComments = None):
+    if clusterComments is None:
+        clusterComments = {}
+    clusters = []
+    for grp in groups:
+        cls = Cluster()
+        cls.groups = [grp]
+        cls.comments = []
+        for lemma in grp.lemmas:
+            try:
+                cls.comments.append(clusterComments.pop(clusterKey(lemma)))
+            except KeyError:
+                pass
+        cls.finalize()
+        clusters.append(cls)
+    if clusterComments:
+        _warn('unused cluster comments: {}'.format(', '.join(map(str, clusterComments.keys()))))
+    return clusters
+
 _dir = Path(__file__).parent.resolve()
 
 __all__ = [sym for sym in globals().keys() if not sym.startswith('__')]

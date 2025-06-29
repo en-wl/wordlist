@@ -40,10 +40,14 @@ def openDB(dbfile, create = False, copyFrom = None):
 
     return conn
 
-def importFromDB(conn, *, filterTable = None, filterQuery = None):
+def importFromDB(conn, *, filterTable = None, filterQuery = None, dbOrder = False):
     groups, clusterComments = _importFromDB(conn, filterTable, filterQuery)
     groups = _finalizeGroups(groups, conn)
-    return _createClusters(groups, clusterComments)
+    if dbOrder:
+        groups.sort(key = lambda grp: grp._group_id)
+        return _createClustersSimple(groups, clusterComments)
+    else:
+        return _createClusters(groups, clusterComments)
 
 def _importFromDB(conn, filterTable, filterQuery):
     words = {}

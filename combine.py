@@ -26,6 +26,7 @@ adjustFiles = (
 mergeFiles = (
     ('data/extra', '[extra]'),
     ('data/signature', '[+]'),
+    ('data/coca', '[coca]'),
 )
 
 if len(sys.argv) < 2:

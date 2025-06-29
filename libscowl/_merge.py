@@ -1,6 +1,7 @@
 from ._core import *
 from ._import import *
 from ._db import *
+from ._export import *
 
 def mergeEntries(conn, f = None, *, tag = None, onConflict = 'merge', preview = False):
     groups = []
@@ -23,9 +24,16 @@ def mergeEntries(conn, f = None, *, tag = None, onConflict = 'merge', preview = 
             for o in grp.override.values():
                 for si in o.si:
                     si.tags.add(tag)
-        (next_group_id, next_word_id) = _mergeGroup(conn, grp, next_group_id, next_word_id,
-                                                    onConflict = onConflict)
-        conn.execute("insert into merged_groups values (?)", (grp._group_id,))
+        try:
+            conn.execute("savepoint sp")
+            (next_group_id, next_word_id) = _mergeGroup(conn, grp, next_group_id, next_word_id,
+                                                        onConflict = onConflict)
+            conn.execute("insert into merged_groups values (?)", (grp._group_id,))
+            conn.execute("release sp")
+        except Exception as err:
+            conn.execute("rollback to sp")
+            conn.execute("release sp")
+            raise ValueError(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}")
 
     for comment in clusterComments:
         # fixme
@@ -146,9 +154,8 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict):
 
     for l in grp.lines:
         for pos in l.poses:
-            for tag in l.si.tags:
-                conn.execute("insert or ignore into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
-                             (l.si.level, l.si.category, l.si.region, tag, group_id, pos))
+            conn.executemany("insert or ignore into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
+                             ((si.level, si.category, si.region, tag, group_id, pos) for si in l.si for tag in si.tags))
 
     if grp.commentLines:
         conn.execute("insert into group_comments (group_id, comment) values (?, ?)",

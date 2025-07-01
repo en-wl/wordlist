@@ -3,7 +3,9 @@ from ._import import *
 from ._db import *
 from ._export import *
 
-def mergeEntries(conn, f = None, *, tag = None, onConflict = 'merge', preview = False):
+def mergeEntries(conn, f = None, *, tag = None,
+                 onConflict = 'merge', onVariantConflict = 'replace',
+                 preview = False):
     groups = []
     clusterComments = {}
     _mergeText(sys.stdin if f is None else f, groups, clusterComments)
@@ -11,8 +13,8 @@ def mergeEntries(conn, f = None, *, tag = None, onConflict = 'merge', preview = 
 
     conn.execute("begin")
 
-    next_group_id,  = next(conn.execute("select max(group_id) + 2 from groups"))
-    next_word_id, = next(conn.execute("select max(word_id) + 1 from words"))
+    next_group_id,  = next(conn.execute("select coalesce(max(group_id) + 2, 1) from groups"))
+    next_word_id, = next(conn.execute("select coalesce(max(word_id) + 1, 1) from words"))
 
     conn.execute("create temp table merged_groups (group_id integer primary key)")
 
@@ -27,8 +29,9 @@ def mergeEntries(conn, f = None, *, tag = None, onConflict = 'merge', preview = 
         try:
             conn.execute("savepoint sp")
             (next_group_id, next_word_id) = _mergeGroup(conn, grp, next_group_id, next_word_id,
-                                                        onConflict = onConflict)
-            conn.execute("insert into merged_groups values (?)", (grp._group_id,))
+                                                        onConflict = onConflict,
+                                                        onVariantConflict = onVariantConflict)
+            conn.execute("insert or ignore into merged_groups values (?)", (grp._group_id,))
             conn.execute("release sp")
         except Exception as err:
             conn.execute("rollback to sp")
@@ -49,8 +52,9 @@ def mergeEntries(conn, f = None, *, tag = None, onConflict = 'merge', preview = 
         conn.commit()
 
 
-def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict):
+def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariantConflict):
     assert onConflict in ('merge', 'replace', 'error')
+    assert onVariantConflict in ('replace', 'error')
 
     group_ids = set()
     for lemma in grp.entries:
@@ -60,18 +64,37 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict):
             group_ids.add(id)
     if len(group_ids) > 0 and onConflict == 'error':
         raise ValueError(f"group already exists: {grp.entries[0].lemma} <{grp.base_pos}> {{{grp.defn_note}}}")
-    if len(group_ids) > 1:
-        raise ValueError(f"multiple groups found: {grp.entries[0].lemma} <{grp.base_pos}> {{{grp.defn_note}}}")
 
-    group_id = next(iter(group_ids), None)
     if onConflict == 'replace' and group_id is not None:
-        conn.execute("delete from groups where group_id = ?", (group_id,))
-        group_id = None
+        conn.executemany("delete from groups where group_id = ?", ((group_id,) for group_id in group_ids))
+        group_ids.clear()
 
-    if group_id is None:
+    if not group_ids:
         grp._group_id = next_group_id
         return _exportGroup(conn, grp, next_group_id, next_word_id)
 
+    group_id = (sorted(group_ids))[0]
+    if len(group_ids) > 1:
+        group_ids_str = ','.join(str(_id) for _id in group_ids)
+        cur = conn.execute("select count(distinct pos_class), count(distinct usage_note), count(distinct lemma_rank) "
+                           f"from groups where group_id in ({group_ids_str})")
+        (pos_class_cnt, usage_note_cnt, lemma_rank_cnt) = next(cur)
+        if pos_class_cnt > 1 and grp.pos_class is Default:
+            raise ValueError("can't merge groups: conflicting pos class")
+        if usage_note_cnt > 1 and grp.usage_note is Default:
+            raise ValueError("can't merge groups: conflicting usage note")
+        if lemma_rank_cnt > 1 and grp.lemma_rank is Default:
+            raise ValueError("can't merge groups: conflicting lemma rank")
+        other_group_ids = group_ids - {group_id}
+        conn.executemany("update words set group_id = ? where group_id = ?",
+                         ((group_id, _id) for _id in other_group_ids))
+        conn.executemany("insert or ignore into scowl_data(level,category,region,tag,group_id,pos) "
+                         "select level,category,region,tag,?,pos "
+                         "from scowl_data where group_id = ?",
+                         ((group_id, _id) for _id in other_group_ids))
+        conn.executemany("delete from groups where group_id = ?", ((_id,) for _id in other_group_ids));
+        # fixme: handle group comments
+            
     grp._group_id = group_id
     cur = conn.execute("select pos_class, usage_note, lemma_rank from groups where group_id = ?" , (group_id,))
     (pos_class, usage_note, lemma_rank) = next(cur)
@@ -81,8 +104,8 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict):
                   ifDefault(grp.lemma_rank, lemma_rank),
                   group_id))
 
-    haveLemmaSpelling = next((True for le in grp.entries if le.spellings), False)
-
+    haveLemmaSpellings = False
+    lemmaSpellings = {}
     for le in grp.entries:
         lemma_id = None
         foundLemma = None
@@ -133,12 +156,11 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict):
                                      ((word_id, sp, vl) for sp, vl in we.spellings.items()))
                 word_id += 1
 
-        if foundLemma and haveLemmaSpelling:
-            conn.execute("delete from lemma_variant_info where lemma_id = ?", (lemma_id,))
+        if le.spellings:
+            haveLemmaSpellings = True
+        lemmaSpellings[lemma_id] = le.spellings
 
-        conn.executemany("insert into lemma_variant_info (lemma_id, spelling, variant_level) values (?, ?, ?)",
-                         ((lemma_id, sp, vl) for sp, vl in le.spellings.items()))
-
+        # fixme: be more intelligent about lemma comments
         conn.executemany("insert into lemma_comments (lemma_id, order_num, comment) values (?, ?, ?)",
                          ((lemma_id, i, c) for i, c in enumerate(le.comments)))
 
@@ -151,6 +173,39 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict):
                     conn.execute("insert or ignore into scowl_override "
                                  "select ?, ?, ?, ?, word_id from words where lemma_id = ? and word = ?",
                                  (ov.si.level, ov.si.category, ov.si.region, tag, lemma_id, word))
+
+    if haveLemmaSpellings:
+        existing = {
+            lemma_id: vl for lemma_id, vl
+            in conn.execute("select lemma_id,min(variant_level) "
+                            "from words left join lemma_variant_info using (lemma_id) "
+                            "where group_id = ? and word_id = lemma_id "
+                            "group by lemma_id",
+                            (group_id,))}
+
+        max_vl = max(4, *(vl for lemma_id, sps in lemmaSpellings.items() for sp, vl in sps.items()))
+
+        anyVariantInfo = False
+        fullCoverage = True
+        for lemma_id, vl in existing.items():
+            if vl is None:
+                vl = -1
+            else:
+                anyVariantInfo = True
+            if lemma_id not in lemmaSpellings:
+                fullCoverage = False
+                if vl < max_vl:
+                    raise ValueError("unaccounted for lemma when trying to add lemma variant info")
+
+        if onVariantConflict == 'replace':
+            for lemma_id, sps in lemmaSpellings.items():
+                conn.execute("delete from lemma_variant_info where lemma_id = ?", (lemma_id,))
+                conn.executemany("insert into lemma_variant_info (lemma_id, spelling, variant_level) values (?, ?, ?)",
+                                 ((lemma_id, sp, vl) for sp, vl in sps.items()))
+            if fullCoverage:
+                conn.execute("delete from group_comments where group_id = ?", (group_id,))
+        elif anyVariantInfo:
+            raise ValueError("existing lemma variant info found")
 
     for l in grp.lines:
         for pos in l.poses:

@@ -4,6 +4,7 @@ import argparse
 import libscowl
 import re
 import sys
+import os
 
 spellingCategorySQL = {
     'english':    "spelling = '_' and region = '' and legacy_level = 0",
@@ -37,8 +38,12 @@ spellingMap = {
 for sp in spellingCategorySQL.keys():
     spellingMap[sp] = sp
 
+SCOWL_DB = os.environ.get('SCOWL_DB', '')
+if not SCOWL_DB:
+    SCOWL_DB = 'scowl.db'
+
 p = argparse.ArgumentParser('mk-list')
-p.add_argument('--db', '--dir', '-d', default='scowl.db')
+p.add_argument('--db', '--dir', '-d', default=SCOWL_DB)
 grp = p.add_mutually_exclusive_group()
 grp.add_argument('--with-variants', '-v', type=int, choices = [0,1,2,3])
 grp.add_argument('--variants')

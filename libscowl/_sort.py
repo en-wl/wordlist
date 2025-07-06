@@ -50,13 +50,13 @@ class RoughGroupInfo(SlotsDataClass):
     def sortKey(self):
         return (wordOrderKey(self.headword), self.defn_note, basePosInfo[self.base_pos].order_num)
 
-def sortFileInPlace(fileFormat, *, files, indent = False):
+def sortFileInPlace(*, files, indent = False):
     destFile = Path(files[0]).resolve(strict=True)
     if not destFile.is_file():
         raise OSError(None, 'Not a normal file', str(destFile))
     infh = io.StringIO(destFile.read_text())
     outfh = io.StringIO()
-    sortFile(fileFormat, infh = infh, inFiles = files[1:], outfh = outfh, indent=indent)
+    sortFile(infh = infh, inFiles = files[1:], outfh = outfh, indent=indent)
     inStr = infh.getvalue()
     outStr = outfh.getvalue()
     if inStr == outStr:
@@ -72,9 +72,7 @@ def sortFileInPlace(fileFormat, *, files, indent = False):
             os.remove(fp.name)
         raise
 
-def sortFile(fileFormat, *, infh = None, inFiles = (), outfh = None, indent = False):
-    assert fileFormat in ('adjust', 'merge')
-
+def sortFile(*, infh = None, inFiles = (), outfh = None, indent = False):
     if outfh is None:
         outfh = sys.stdout
     out = StreamWrapper(outfh)
@@ -82,8 +80,24 @@ def sortFile(fileFormat, *, infh = None, inFiles = (), outfh = None, indent = Fa
     groups = []
     commentsOnly = []
     gi = RoughGroupInfo()
+    fileFormat = None
+    header = None
 
     def readFile(fh):
+        nonlocal fileFormat, header
+
+        headerLine = next(fh)
+        hdr = headerLine.split()
+        if len(hdr) < 2 or hdr[0] != '#::':
+            raise ValueError("invalid file format: file must start with a '#::' header line")
+        if hdr[1] not in ('adjust', 'merge'):
+            raise ValueError(f"unrecognized file format: {fileFormat}")
+        if header and header[1] != hdr[1]:
+            raise ValueError(f"can't merge files of a different type")
+        else:
+            fileFormat = hdr[1]
+            header = hdr
+
         for origLine in fh:
             line = origLine.strip()
             if line == '':
@@ -122,6 +136,8 @@ def sortFile(fileFormat, *, infh = None, inFiles = (), outfh = None, indent = Fa
 
     clusters = _createClusters(groups)
 
+    print(*header, file=out)
+    out.write("\n")
     for cls in clusters:
         for grp in cls.groups:
             for line in grp.lines:

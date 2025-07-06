@@ -55,9 +55,9 @@ def merge(args):
 
 def sortFile(args):
     if args.replace:
-        libscowl.sortFileInPlace(args.fileFormat, files = args.files, indent=args.indent)
+        libscowl.sortFileInPlace(files = args.files, indent=args.indent)
     else:
-        libscowl.sortFile(args.fileFormat, inFiles = args.files, indent=args.indent)
+        libscowl.sortFile(inFiles = args.files, indent=args.indent)
 
 def combinePOS(args):
     conn = libscowl.openDB(args.db)
@@ -288,15 +288,12 @@ p = addParser('merge',
               description='''
 Add new entries from stdin to the database.  By default new data is merged
 with existing groups with the same lemma/pos/defn_note.  If --on-conflict is
-'replace' than the data from stdin will replace the existing group.  If --tag
-is used that that tag will be added to all new entries.''')
+'replace' than the data from stdin will replace the existing group.''')
 p.set_defaults(func=merge)
 addDbArgument(p)
 p.add_argument('--preview', action='store_true', default=False, dest='preview')
 #p.add_argument('--ignore-errors', action='store_true', default=False, dest='ignoreErrors')
 p.add_argument('--on-conflict', default = 'merge', dest='onConflict', choices=['merge', 'replace', 'error'])
-p.add_argument('--tag', dest='tag', metavar = '<tag>',
-               help='scowl tag to add to all new entries')
 
 
 p = addParser('sort',
@@ -310,7 +307,6 @@ p.set_defaults(func=sortFile)
 p.add_argument('--indent', action='store_true', default=False, dest='indent')
 p.add_argument('--replace', action='store_true', default=False, dest='replace',
                help='replace the first file with the combined result of all the files')
-p.add_argument('fileFormat', choices=['adjust','merge'])
 p.add_argument('files', metavar='<file>', nargs='*', default=[])
 
 args = parser.parse_args()

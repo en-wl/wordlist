@@ -177,8 +177,8 @@ def splitIntoGroups(f):
     lines.append('')
     
     header = None
-    if len(lines) > 0 and lines[0].startswith('#: '):
-        header = lines[0][2:].lstrip()
+    if len(lines) > 0 and lines[0].startswith('#:: '):
+        header = lines[0][4:].lstrip()
 
     linesByGroup = []
     startIdx = None
@@ -224,7 +224,7 @@ def adjustEntries(conn, f = None, *,
 
     header, lines, linesByGroup = splitIntoGroups(f)
     if header and header != 'adjust':
-        raise ValueError('invalid file format')
+        raise ValueError('unexpected file format')
 
     errors = False
     def warn(msg):

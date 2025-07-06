@@ -24,9 +24,9 @@ adjustFiles = (
     'data/exclude',
 )
 mergeFiles = (
-    ('data/extra', '[extra]'),
-    ('data/signature', '[+]'),
-    ('data/coca', '[coca]'),
+    ('data/extra'),
+    ('data/signature'),
+    ('data/coca'),
 )
 
 if len(sys.argv) < 2:
@@ -34,9 +34,9 @@ if len(sys.argv) < 2:
 
 if sys.argv[1] == 'sort':
     for fn in adjustFiles:
-        sortFileInPlace('adjust', files=[fn])
-    for fn, _ in mergeFiles:
-        sortFileInPlace('merge', files=[fn])
+        sortFileInPlace(files=[fn])
+    for fn in mergeFiles:
+        sortFileInPlace(files=[fn])
     exit(0)
 
 if sys.argv[1] != 'create-db':
@@ -118,10 +118,10 @@ for fn in adjustFiles:
         adjustEntries(conn, f, simplifyScowlInfo=False)
     finish()
 
-for fn, tag in mergeFiles:
+for fn in mergeFiles:
     start(fn)
     with open(fn) as f:
-        mergeEntries(conn, f, tag = tag)
+        mergeEntries(conn, f)
     finish()
 
 if not rawMode:

@@ -3,12 +3,24 @@ from ._import import *
 from ._db import *
 from ._export import *
 
-def mergeEntries(conn, f = None, *, tag = None,
+def mergeEntries(conn, f = None, *,
                  onConflict = 'merge', onVariantConflict = 'replace',
                  preview = False):
+    if f is None:
+        f = sys.stdin
+    tag = None
+    lines = list(f)
+    if len(lines) > 0 and lines[0].startswith('#:: '):
+        header = lines[0][4:].split()
+        if len(header) == 0 or header[0] != 'merge':
+            raise ValueError("unexpected file format")
+        if len(header) > 1:
+            tag = header[1]
+        lines = lines[1:]
+    
     groups = []
     clusterComments = {}
-    _mergeText(sys.stdin if f is None else f, groups, clusterComments)
+    _mergeText(lines, groups, clusterComments)
     groups = _finalizeGroups(groups)
 
     conn.execute("begin")

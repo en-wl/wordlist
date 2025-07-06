@@ -93,7 +93,7 @@ def sortFile(fileFormat, *, infh = None, inFiles = (), outfh = None, indent = Fa
             gi.lines.append(origLine)
 
             if fileFormat == 'adjust':
-                if line.startswith('+ ') or line.startswith('- ') or line.startswith('= ') or line.startswith('~ '):
+                if len(line) >= 2 and line[1] == ' ' and line[0] in ('+', '-', '=', '~', '?'):
                     line = line[2:].lstrip()
 
             if line.startswith('#'):

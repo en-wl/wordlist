@@ -585,11 +585,12 @@ groups.  This included marking new variants.
 
 The format is similar to the main `scowl.txt` format but the parsing and
 processing is different.  Each line is similar to a line in `scowl.txt`
-but is optionally prefixed by one of `+`, `-`, `=`, `~`, or `#` that dictates
+but is optionally prefixed by one of `?`, `+`, `-`, `=`, `~`, or `#` that dictates
 how that line is processed.  The prefix _must_ be followed by a space.  The
 prefixes have the following approximate meanings:
 
     none: match and make adjustments
+    ?: match and make adjustments if found
     +: add
     -: remove
     =: replace
@@ -598,10 +599,11 @@ prefixes have the following approximate meanings:
 
 Unless prefixed with a `+`, a line is first matched with an exiting lemma in
 the database using the word, pos, and defn-note.  If no match is found the
-group will be skipped.  If the line is prefixed with a `-`, than that lemma
-will be removed from the group.  If the line is prefixed with a `~`, than no
-additional actions will be taken, but the information found in the database
-will be used to make adjusted to the scowl info.
+group will be skipped.  To avoid this and instead just skip the line, use `?`.
+If the line is prefixed with a `-`, than that lemma will be removed from the
+group.  If the line is prefixed with a `~`, than no additional actions will be
+taken, but the information found in the database will be used to make adjusted
+to the scowl info.
 
 If a line has no prefix, or is prefixed with a `=`, than after a match is made,
 any other information provided as part of the the lemma info, will change the
@@ -631,9 +633,6 @@ those without a variant prefix.  For example `(hyaenas | V: hyaena)` will
 change the variant info for both _hyaenas_ and _hyaena_ even though _hyaenas_
 doesn't have a variant prefix.
 
-If two lines within the same group match different existing groups, the two
-groups will be merged when the prefix is anything but `~`.
-
 SCOWL info is handled separately and can not be changed in the same line as
 the other information.  A SCOWL line generally has the form:
 
@@ -645,10 +644,17 @@ is added.  If the prefix is a `-` than that specific scowl info is removed.
 If the prefix is a `=` than the scowl info is partly replaced.  In particular
 any scowl info with a size less then the provided size will be removed.
 
-The _adjust_ format can be used to create new groups.  When adding a group
-either a SCOWL info line or a line with `~` prefix must be part of the group.
-When the `~` prefix is used that line will be used to intelligently assign
-SCOWL info for the group.  For example this:
+#### Merging groups
+
+If two lines within the same group match different groups in the database, the
+two groups will be merged when the prefix is anything but `~`.
+
+#### Creating new groups
+
+If no lines that match an existing group are found, a new group will be
+created.  When adding a group either a SCOWL info line or a line with `~`
+prefix must be part of the group.  When the `~` prefix is used that line will
+be used to intelligently assign SCOWL info for the group.  For example this:
 
     ~ rive <v>: -, riven, -, -
     + riven <aj>
@@ -656,6 +662,32 @@ SCOWL info for the group.  For example this:
 will assign `riven` the same SCOWL info as the derived form `riven` for the
 verb `rive` as the word matches.
 
+#### Splitting groups
+
+If a line in a different group within the adjust file matches the same group
+within the database then the group will be split.  For example:
+
+    cohost <m→n>
+
+    cohost <m→v>
+
+will split `cohost` with the `m` pos into a noun and a verb.  As a shortcut
+you can also use `m→n_v` that will expand to `m→n` and `m→v`.  For example:
+
+    cohost <m→n_v>
+
+When splitting a group other changes must be made to the group to prevent
+having the same lemma, pos, and defn-note within more than one group.  To
+prevent this in the simple case, when ever a pos is changed, existing groups
+with the target pos are merged into the same group.  In other words the above
+example is equivalent to:
+
+    ? cohost <n>
+    cohost <m→n>
+
+    ? cohost <v>
+    cohost <m→v>
+  
 #### Examples
 
 The most straight forward use of an _adjust_ file is to add variant info.  For

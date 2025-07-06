@@ -375,12 +375,6 @@ _?: a-weather
 _: aweigh <aj>
 _V: a-weigh
 
-_: awe-stricken
-_V: awestricken <aj>
-
-_: awestruck <aj>
-_v: awe-struck
-
 _: axletree <n>
 _V: axle-tree
 
@@ -5605,12 +5599,6 @@ _-: jimson-weed
 _: job seeker <n>
 _.: jobseeker <n>
 
-_: job-share <m>
-_V: job share
-
-_: jobshare <n>
-_v: job share
-
 _: jog trot <n>
 _=: jog-trot <n>
 _V: jogtrot
@@ -9319,15 +9307,6 @@ _: roller coaster <n>
 _?: roller-coaster <n>
 _v: rollercoaster <n>
 
-_: roller-skate <m>
-_v: rollerskate
-
-_: roller skate <n>
-_v: rollerskate
-
-_: roller skate <v>
-_v: rollerskate
-
 _: rollout <n>
 _V: roll-out <n>
 
@@ -10370,18 +10349,6 @@ _?: sight-read <v>
 
 _: sightseeing <n>
 _v: sight-seeing
-
-_: silk screen
-_.: silkscreen <a>
-
-_: silk-screen <m>
-_=: silk screen
-
-_: silkscreen <n>
-_=: silk screen
-
-_: silkscreen <v>
-_=: silk screen
 
 _: silverfish <n>
 _-: silver-fish <n>

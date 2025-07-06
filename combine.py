@@ -76,7 +76,10 @@ def finish():
     t = None
 
 start("importing from scowl-pre.txt")
-conn = openDB(None)
+if DEBUG_SQL:
+    conn = openDB("/tmp/scowl-pre.db", create=True)
+else:
+    conn = openDB(None)
 with open('data/scowl-pre.txt') as f:
     clusters = importText(f)
 exportToDB(clusters, conn)

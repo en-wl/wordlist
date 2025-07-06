@@ -1,3 +1,8 @@
+_: awestruck <aj>
+_?: awe-struck
+_V: awestricken <aj>
+_V: awe-stricken
+
 _: barcode <n>
 _V: bar code <n>
 
@@ -41,6 +46,9 @@ _v: hot-dog <v>
 _: hot dog <n>
 _v: hotdog <n>
 
+_: jobshare <n>
+_=: job share
+
 _: jujitsu <n>
 _V: ju-jitsu
 _V: jujutsu <n>
@@ -61,6 +69,18 @@ _V: orang-utang <n>
 
 _: Port of Spain <n>
 _?: Port-of-Spain <n>
+
+_: roller-skate <m→v>
+- roller skate <v>
+? rollerskate
++ _v: rollerskate <v>: rollerskated, rollerskating, rollerskates
+
+_: silkscreen <n>
+? silk screen
++ _=: silk screen <n>: silk screens
+
+_: silkscreen <v>
+_=: silk-screen <m→v>
 
 _: sweetbrier <n>
 _v: sweetbriar

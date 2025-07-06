@@ -10,7 +10,9 @@ class LineInfo(SlotsDataClass):
         self.line = line
         self.words = {}
         self.action = action
-    def copy(self, base_pos):
+    def copy(self, base_pos = None):
+        if base_pos is None:
+            base_pos = self.pos
         other = LineInfo(self.line, self.action)
         other.lemma = copy(self.lemma)
         other.pos = base_pos
@@ -25,12 +27,15 @@ class LineInfo(SlotsDataClass):
         other.comments = self.comments
         return other
 
-class ScowlInfoToClear(SlotsDataClass):
+class AdjScowlInfo(SlotsDataClass):
+    pass
+
+class ScowlInfoToClear(AdjScowlInfo):
     __slots__ = ('line', 'si')
     def __init__(self, line):
         self.line = line
 
-class ScowlLineInfo(SlotsDataClass):
+class ScowlLineInfo(AdjScowlInfo):
     __slots__ = ('line', 'action', 'si', 'words', 'expand')
     def __init__(self, line, action):
         self.line = line
@@ -38,7 +43,7 @@ class ScowlLineInfo(SlotsDataClass):
         self.expand = False
         self.words = {}
 
-class ScowlOverrideLine(SlotsDataClass):
+class ScowlOverrideLine(AdjScowlInfo):
     __slots__ = ('line', 'action', 'si', 'words')
     def __init__(self, line, action):
         self.line = line
@@ -97,12 +102,13 @@ def adjustEntries(conn, f = None, *,
         _warn(msg)
 
     gi = None
+    groupLines = []
 
     def registerLine(li, new_pos = None, outer_pos = None):
-        assert li.action in ('adjust', 'add', 'remove', 'replace', 'transfer')
+        assert li.action in ('adjust', 'match', 'add', 'remove', 'replace', 'transfer')
 
         if new_pos is None:
-            if li.action in ('adjust', 'add', 'replace'):
+            if li.action in ('adjust', 'match', 'add', 'replace'):
                 new_pos = li.pos
             elif li.action in ('remove', 'transfer'):
                 new_pos = ''
@@ -116,9 +122,17 @@ def adjustEntries(conn, f = None, *,
             registerLine(li.copy('n'), None, outer_pos)
             registerLine(li.copy('v'), None, outer_pos)
             return
+        if new_pos == 'n_v':
+            registerLine(li.copy(), 'n', outer_pos)
+            registerLine(li.copy(), 'v', outer_pos)
+            return
         if li.pos == 'aj_av':
             registerLine(li.copy('aj'), None, outer_pos)
             registerLine(li.copy('av'), None, outer_pos)
+            return
+        if new_pos == 'aj_av':
+            registerLine(li.copy(), 'aj', outer_pos)
+            registerLine(li.copy(), 'av', outer_pos)
             return
 
         combined_pos = 'n_v' if li.pos in ('n', 'v') else 'aj_av' if li.pos in ('aj', 'av') else None
@@ -142,6 +156,8 @@ def adjustEntries(conn, f = None, *,
             if len(ids) == 0:
                 if not li.pos and gi.pos:
                     registerLine(li.copy(gi.pos), new_pos)
+                    return
+                if li.action == 'match':
                     return
                 raise ValueError(f'could not find match')
             elif len(ids) > 1:
@@ -173,12 +189,45 @@ def adjustEntries(conn, f = None, *,
             raise ValueError(f'mismatch pos: {li.lemma.word}: expected {gi.pos}: got {outer_pos}')
 
     next_group_id = conn.execute("select max(group_id) from groups").fetchone()[0] + 1
+    group_id_counts = {}
 
     def finalizeGroup():
-        nonlocal gi, next_group_id
+        nonlocal gi, next_group_id, groupLines
         if gi is None:
             pass
         elif isinstance(gi, GroupInfo):
+            neededMatchLines = {}
+            for line, li, pos in groupLines:
+                if not isinstance(li, LineInfo):
+                    continue
+                pos = ifNone(pos, li.pos)
+                if li.pos != pos and li.action in ('adjust', 'replace'):
+                    neededMatchLines.setdefault(li.lemma.word, (li, pos))
+                if li.pos == pos:
+                    neededMatchLines[li.lemma.word] = (None, None)
+            for orig, pos in neededMatchLines.values():
+                if orig is None:
+                    continue
+                li = LineInfo(None, 'match')
+                li.lemma = copy(orig.lemma)
+                li.pos = pos
+                li.defn_note = orig.defn_note
+                li.spellings = Spellings()
+                li.comments = []
+                registerLine(li)
+            for line, li, pos in groupLines:
+                try:
+                    if isinstance(li, LineInfo):
+                        registerLine(li, pos)
+                    elif isinstance(li, AdjScowlInfo):
+                        registerBasePos(pos)
+                        gi.adjScowlInfo.append(li)
+                    else:
+                        raise AssertionError
+                except ValueError as err:
+                    gi.errors.append((line, err))
+
+            groupLines = []
             for line, err in gi.errors:
                 warn(f'{line}: {err}: skipping group')
                 return
@@ -195,6 +244,7 @@ def adjustEntries(conn, f = None, *,
                 if sg.id is None:
                     sg.id = next_group_id
                     next_group_id += 1
+                group_id_counts[sg.id] = group_id_counts.get(sg.id, 0) + 1
             groups.append(gi)
         elif isinstance(gi, ClusterComment):
             if gi.action == 'remove':
@@ -222,6 +272,9 @@ def adjustEntries(conn, f = None, *,
             continue
 
         action = 'adjust'
+        if line.startswith('? '):
+            action = 'match'
+            line = line[2:].lstrip()
         if line.startswith('+ '):
             action = 'add'
             line = line[2:].lstrip()
@@ -295,7 +348,8 @@ def adjustEntries(conn, f = None, *,
                     gi.haveDerived = True
                 Line.procWords(li.spellings.keys() if li.spellings else '*',
                                li.lemma, base_pos, wordsStr, li.words)
-                registerLine(li, new_base_pos)
+
+                groupLines.append((line, li, new_base_pos))
 
             else: # have SCOWL info
 
@@ -322,7 +376,6 @@ def adjustEntries(conn, f = None, *,
                 li.si = ScowlInfo.parse(tags)
 
                 if lemma != '...':
-                    registerBasePos(ifNone(m['base_pos'], ''))
                     (lemma_rank, word, entry_rank) = parseLemmaPart(lemma)
                     if entry_rank is not Default:
                         raise ValueError('can not adjust entry rank when providing scowl info')
@@ -360,7 +413,7 @@ def adjustEntries(conn, f = None, *,
                     merge('pos_class', m['pos_class'])
                     merge('lemma_rank', noneIf(lemma_rank, Default))
 
-                gi.adjScowlInfo.append(li)
+                groupLines.append((line, li, ifNone(m['base_pos'], '')))
 
         except ValueError as err:
             gi.errors.append((line, err))
@@ -386,6 +439,9 @@ def adjustEntries(conn, f = None, *,
             comment = groupComment
         for base_pos, sg in gi.subGroups.items():
             conn.execute("savepoint sp")
+            if group_id_counts[sg.id] > 1:
+                sg.id = next_group_id
+                next_group_id += 1
             conn.execute("create temp table lemmas_accounted_for (lemma_id)")
             try:
                 haveLemmaSpelling = False
@@ -433,13 +489,15 @@ def adjustEntries(conn, f = None, *,
 
                         _addMissingSpellings(li.spellings, gi.spellings)
 
-                        if li.action == 'adjust':
+                        if li.action == 'adjust' or li.action == 'match':
                             for pos, wes in li.words.items():
                                 for word_id, word, entry_rank in conn.execute("select word_id, word, entry_rank "
                                                                               "from words where lemma_id = ? and pos = ?",
                                                                               (li.lemma_id, pos)):
                                     we = next((we for we in wes if we.word == word), None)
                                     if we is None:
+                                        if li.action == 'match':
+                                            continue
                                         raise ValueError(f"unaccounted for words with pos '{pos}' within line", )
                                     we._word_id = word_id
                                     if we.entry_rank is not Default and we.entry_rank != entry_rank:
@@ -457,8 +515,8 @@ def adjustEntries(conn, f = None, *,
                                   we._word_id = next_word_id
                                   next_word_id += 1
                                 if we.spellings:
-                                    conn.executemany("insert into new_derived_variant_info values (?, ?, ?, ?, ?)",
-                                                     ((li.lemma_id, pos, we._word_id, sp, vl) for sp, vl in we.spellings.items()))
+                                    conn.executemany("insert into new_derived_variant_info values (?, ?, ?, ?, ?, ?)",
+                                                     ((sg.id, li.lemma_id, pos, we._word_id, sp, vl) for sp, vl in we.spellings.items()))
 
                         # fixme: be more intelligent about this
                         if getattr(li, 'group_id', 0) and replaceComments:
@@ -469,10 +527,10 @@ def adjustEntries(conn, f = None, *,
                             conn.executemany("insert into new_lemma_variant_info (main_group_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
                                              ((sg.id, li.lemma_id, sp, vl) for sp, vl in li.spellings.items()))
                         if li.comments:
-                            conn.executemany("insert into new_lemma_comments (lemma_id, order_num, comment) values (?, ?, ?)",
-                                             ((li.lemma_id, i, c) for (i, c) in enumerate(li.comments)));
+                            conn.executemany("insert into new_lemma_comments (main_group_id, lemma_id, order_num, comment) values (?, ?, ?, ?)",
+                                             ((sg.id, li.lemma_id, i, c) for (i, c) in enumerate(li.comments)));
                         elif replaceComments:
-                            conn.execute("insert or ignore into new_lemma_comments (lemma_id, order_num) values (?, -1)", (li.lemma_id,))
+                            conn.execute("insert or ignore into new_lemma_comments (main_group_id, lemma_id, order_num) values (?, ?, -1)", (sg.id, li.lemma_id,))
                     except ValueError as err:
                         raise ValueError(f"failed to add line: {li.line}: {err}")
                 for s in gi.adjScowlInfo:
@@ -496,7 +554,7 @@ def adjustEntries(conn, f = None, *,
                                          ((si.level, si.category, si.region, tag,
                                            sg.id, word, s.action == 'replace') for si in s.si for tag in si.tags for word in s.words))
 
-                for level, category, region, tag in conn.execute(           
+                for level, category, region, tag in conn.execute(
                         "select level, category, region, tag "
                         "  from scowl_info_to_clear c "
                         "  cross join (select main_group_id, other_group_id as group_id from to_merge) m using (main_group_id) "
@@ -506,8 +564,7 @@ def adjustEntries(conn, f = None, *,
                         "  having count(d.group_id) == 0 ", (sg.id,)):
                     raise ValueError(f"unable to remove scowl info: {level} {category} {region} {tag}")
 
-                # fixme: look into avoiding duplicates
-                conn.execute("insert or replace into new_group_info (main_group_id, base_pos, defn_note, pos_class, usage_note, lemma_rank) values (?, ?, ?, ?, ?, ?)",
+                conn.execute("insert into new_group_info (main_group_id, base_pos, defn_note, pos_class, usage_note, lemma_rank) values (?, ?, ?, ?, ?, ?)",
                              (sg.id, base_pos, gi.defn_note, gi.pos_class, gi.usage_note,
                               None if gi.lemma_rank is None else '' if gi.lemma_rank == '_' else gi.lemma_rank))
                 if comment:
@@ -534,18 +591,13 @@ def adjustEntries(conn, f = None, *,
     if errors and not ignoreErrors:
         raise ValueError('aborting due to previous errors')
 
-    conn.execute("create temp table filtered as "
-                 "select to_merge.* "
-                 "from to_merge "
-                 "join groups a on main_group_id  = a.group_id "
-                 "join groups b on other_group_id = b.group_id where a.base_pos = '' or b.base_pos != ''")
-    res = [*conn.execute("select * from filtered a join filtered b on a.other_group_id = b.other_group_id and a.main_group_id != b.main_group_id")]
-    if res:
-        raise ValueError("duplicates found")
-    conn.execute("drop table filtered")
-
     t = time.monotonic()
     conn.executescript((_dir / 'adjust_proc.sql').read_text())
+
+    res = conn.execute("select lemma, base_pos, defn_note from new_duplicate_lemmas").fetchall()
+    if (res):
+        raise ValueError("duplicate lemmas created: " + '; '.join(f"{lemma} <{base_pos}> {{{defn_note}}}" for lemma, base_pos, defn_note in res))
+
     if simplifyScowlInfo:
         conn.execute("delete from scowl_data"
                      "  where (level,category,region,tag,group_id,pos) "
@@ -553,7 +605,7 @@ def adjustEntries(conn, f = None, *,
     print(f'adjust_proc.sql: {time.monotonic()-t}s')
 
     if preview:
-        clusters = importFromDB(conn, filterQuery = 'select main_group_id from to_merge')
+        clusters = importFromDB(conn, filterQuery = 'select main_group_id from use_info_from')
         exportAsText(clusters, conn, sys.stdout, showExtraInfo = False)
         conn.rollback()
     else:

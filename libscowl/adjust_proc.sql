@@ -10,20 +10,53 @@ begin;
 -- hack it a bit by inserting harmless entries in certain tables.  "cross
 -- join"s are also used in places below to force a good join order
 
-insert into new_entry_info values (0,0,0,'');
+insert into new_entry_info values (0,0, 0, '');
 insert into explicit values (0);
 insert into scowl_info_to_clear values (99, '', '', '', 0);
 
 analyze temp;
+
+--
+-- tables and views used to split entries as needed
+--
+
+create temp table to_split as
+  select other_group_id from to_merge group by other_group_id having count(distinct main_group_id) > 1;
+
+create temp table split_info (
+  main_group_id integer not null,
+  other_group_id integer not null,
+  word_id integer not null,
+  new_word_id integer primary key,
+  lemma text text not null,
+  is_lemma boolean not null
+);
+
+insert into split_info
+select main_group_id, other_group_id, word_id,
+       row_number() over (order by main_group_id,other_group_id,word_id)
+         + max((select max(word_id) from words), coalesce((select max(word_id) from new_words), 0)) as new_word_id,
+       lemma, word_id == lemma_id as is_lemma
+  from to_split
+  cross join to_merge using (other_group_id)
+  cross join entries on other_group_id = group_id;
+  
+create unique index split_info_idx on split_info(main_group_id, word_id);
+
+create temp view split_lemmas as
+  select main_group_id, other_group_id, word_id as lemma_id, new_word_id as new_lemma_id
+  from split_info
+  where is_lemma;
+
+--
+-- tables that need to be created before anything is modified
+--
 
 -- filter table to optimize certain queries
 create temp table group_ids_to_clean_up (group_id integer primary key);
 insert or ignore into group_ids_to_clean_up
   select other_group_id as group_id from to_merge;
 analyze group_ids_to_clean_up;
-
--- these two tables are used to fixup scowl_data, they needs to be created
--- before anything is updated
 
 create temp table extra_scowl_data as
 select other_group_id, a.pos as orig_pos, b.main_group_id, c.pos
@@ -36,6 +69,7 @@ select other_group_id, a.pos as orig_pos, b.main_group_id, c.pos
 insert into extra_scowl_data values (0, '', 0, '');
 analyze extra_scowl_data;
 
+-- used to fixup scowl data
 create temp table adj_entry_ranks as
 select main_group_id, other_group_id, new_pos as pos, n.entry_rank as adj_rank
    from new_entry_info as n
@@ -75,73 +109,123 @@ insert or ignore into groups (group_id, base_pos, defn_note, pos_class, usage_no
   from new_group_info;
 
 --
--- fix up words and lemma_variant_info
+-- 
 --
 
 delete from words where word_id in (select word_id from to_remove);
 
 insert into words select * from new_words;
 
--- words to split into new entries as they will end up in more than one group
-create temp table split_info as
-      select row_number() over (order by main_group_id,base_pos,word) + (select max(word_id) from words) as new_word_lemma_id,
-      w.lemma_id as lemma_id, main_group_id, g.base_pos, word, other_group_id, w.pos as orig_pos
-from to_merge join words as w on other_group_id = w.group_id join groups g on main_group_id = g.group_id
-where w.pos = '?' and g.base_pos != '';
+--
+-- fix up words
+--
 
-delete from words where lemma_id in (select lemma_id from split_info);
-insert into words
-  select new_word_lemma_id, main_group_id, new_word_lemma_id, new_pos, word, ''
-    from split_info left join fix_pos using (base_pos, orig_pos);
+create temp table adj_words_p0 as
+select a.word_id, main_group_id, other_group_id,
+       b.lemma_id as new_lemma_id, a.word, new_pos, coalesce(new_entry_rank, a.entry_rank) as new_entry_rank,
+       c.word_id as found_word_id
+  from to_merge as m
+  cross join groups g on m.main_group_id = g.group_id
+  cross join entries as a on m.other_group_id = a.group_id
+  left join fix_pos as p on g.base_pos = p.base_pos and a.pos = p.orig_pos
+  left join (select word_id, entry_rank as new_entry_rank from new_entry_info) as e using (word_id)
+  -- info needed to merge lemmas  
+  left join (select word_id as lemma_id, group_id, word as lemma from words where word_id = lemma_id) b
+    on b.group_id = main_group_id and a.lemma = b.lemma and main_group_id != other_group_id
+  left join words c
+    on c.group_id = main_group_id and c.lemma_id = b.lemma_id and c.word = a.word and c.pos = new_pos;
 
+delete from words where word_id in (select word_id from adj_words_p0 where new_pos is null or found_word_id is not null);
+
+create temp table adj_words as 
+select word_id, new_word_id,
+       main_group_id,other_group_id,coalesce(a.new_lemma_id,b.new_lemma_id) as new_lemma_id,word,new_pos,new_entry_rank
+  from adj_words_p0 a
+  left join (select main_group_id, other_group_id, a.word_id, a.new_word_id, b.new_word_id as new_lemma_id
+               from split_info a join split_info b using (main_group_id, other_group_id, lemma)
+              where b.is_lemma) b
+    using (main_group_id, other_group_id, word_id)
+  where new_pos is not null and found_word_id is null;
+;
+create index adj_words_idx on adj_words(word_id);
+
+-- copy over existing lemma_variant_info
+insert into new_lemma_variant_info
+select c.main_group_id, l.lemma_id, l.spelling, l.variant_level
+  from to_split a
+  cross join to_merge b using (other_group_id)
+  cross join to_merge c using (main_group_id)
+  cross join lemmas on c.other_group_id = group_id
+  cross join lemma_variant_info l using (lemma_id)
+where not exists (select 1 from new_lemma_variant_info n where c.main_group_id = n.main_group_id);
+
+-- copy over existing lemma comments
+insert into new_lemma_comments
+  select main_group_id, lemma_id, order_num, comment
+    from split_lemmas s
+    cross join lemma_comments l using (lemma_id)
+where not exists (select 1 from new_lemma_comments n where n.main_group_id = s.main_group_id and n.lemma_id = l.lemma_id);
+
+-- copy over existing derived variant info
+-- FIXME: Write me
+
+-- delete unused words
+delete from words where word_id in (select word_id from adj_words where new_word_id is not null);
+
+-- insert words to split
+insert into words (word_id, group_id, lemma_id, pos, word, entry_rank)
+  select new_word_id, main_group_id, new_lemma_id, new_pos, word, new_entry_rank
+    from adj_words where new_word_id is not null;
+
+-- update non-split words
+update words as a
+   set group_id = main_group_id,
+       lemma_id = coalesce(new_lemma_id, lemma_id),
+       pos = new_pos,
+       entry_rank = new_entry_rank
+  from adj_words as b
+ where a.word_id = b.word_id and new_word_id is null;
+
+--
+-- fix up lemma_variant_info
+--
+        
 delete from lemma_variant_info
   where lemma_id in (select lemma_id from new_lemma_variant_info);
 insert into lemma_variant_info
-  select coalesce(new_word_lemma_id,lemma_id) as lemma_id, spelling, variant_level
+  select coalesce(new_lemma_id,lemma_id) as lemma_id, spelling, variant_level
     from new_lemma_variant_info
-    left join split_info using (main_group_id, lemma_id);
-
-drop table split_info;
-
-update words set group_id = main_group_id
-from to_merge
-where words.group_id = to_merge.other_group_id and to_merge.other_group_id != to_merge.main_group_id;
-
-update words as a
-   set pos = new_pos
-  from new_group_info g, fix_pos as b
-  where a.group_id = main_group_id and g.base_pos = b.base_pos and a.pos = b.orig_pos
-    and a.pos != new_pos;
-
-delete from words
-  where word_id in (select word_id
-                      from words a
-                      join new_group_info g on a.group_id = main_group_id
-                      left join fix_pos as b on g.base_pos = b.base_pos and a.pos = b.orig_pos
-                     where new_pos is null);
-
-update words as a set entry_rank = b.entry_rank
-  from new_entry_info b
-  where a.word_id = b.word_id;
-
+    left join split_lemmas using (main_group_id, lemma_id);
+  
 delete from lemma_variant_info
 where lemma_id in (select lemma_id from useless_lemma_variant_entries join group_ids_to_clean_up using (group_id));
 
 --
 -- fix up derived_variant_info
 --
+-- fixme, handle splits...
 
-insert into new_derived_variant_info
-  select v.lemma_id, v.pos, word_id, coalesce(lv.spelling, '_') as spelling, v.variant_level
-  from new_derived_variant_info v left join words w using (word_id) left join lemma_variant_info lv using (lemma_id)
-  where v.spelling = '*';
-delete from new_derived_variant_info
-  where spelling = '*';
+create temp table fixed_derived_variant_info as           
+with
+  adj as (select main_group_id,
+                 coalesce(new_lemma_id, v.lemma_id) as lemma_id,
+                 coalesce(new_pos, v.pos) as pos,
+                 coalesce(new_word_id, v.word_id) as word_id,
+                 spelling,
+                 variant_level
+            from new_derived_variant_info v left join adj_words using (main_group_id, word_id))
+select v.lemma_id, v.pos, v.word_id,
+       coalesce(nullif(v.spelling,'*'),lv.spelling, '_') as spelling,
+       v.variant_level
+from adj v
+left join lemma_variant_info lv on v.spelling = '*' and v.lemma_id = lv.lemma_id;
 
 delete from derived_variant_info
-  where word_id in (select w.word_id from new_derived_variant_info v join words w using (lemma_id, pos));
+  where word_id in (select w.word_id from fixed_derived_variant_info v cross join words w using (lemma_id, pos));
 insert into derived_variant_info
-  select word_id, spelling, variant_level from new_derived_variant_info;
+  select word_id, spelling, variant_level from fixed_derived_variant_info;
+
+drop table fixed_derived_variant_info;
 
 --
 -- fix up scowl_data
@@ -248,8 +332,13 @@ delete from scowl_data as sd
 -- fix up comments
 --
 
-delete from lemma_comments where lemma_id in (select lemma_id from new_lemma_comments);
-insert into lemma_comments select * from new_lemma_comments where comment is not null;
+delete from lemma_comments
+ where lemma_id in (select lemma_id from new_lemma_comments);
+insert into lemma_comments (lemma_id, order_num, comment)
+  select coalesce(new_lemma_id, lemma_id), order_num, comment
+    from new_lemma_comments
+    left join split_lemmas using (main_group_id, lemma_id)
+   where comment is not null;
 
 delete from group_comments where group_id in (select group_id from new_group_comments);
 insert into group_comments select * from new_group_comments where comment is not null;
@@ -264,5 +353,22 @@ delete from groups as g
   where group_id in (select * from group_ids_to_clean_up)
     and not exists (select * from words where group_id = g.group_id);
 
+drop table adj_words;
+drop table adj_words_p0;
+drop view split_lemmas;
+drop table split_info;
+drop table to_split;
+
 drop table adj_entry_ranks;
 drop table extra_scowl_data;
+
+--
+-- check
+--
+
+create temp table new_duplicate_lemmas as
+select lemma, base_pos, defn_note
+from use_info_from
+join lemmas a on a.group_id = main_group_id
+join lemmas b using (lemma, base_pos, defn_note)
+group by lemma, base_pos, defn_note having count(distinct b.group_id) > 1;

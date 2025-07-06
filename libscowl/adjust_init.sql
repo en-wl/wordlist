@@ -44,13 +44,15 @@ create table temp.new_lemma_variant_info (
 ) without rowid;
 
 create table temp.new_lemma_comments (
+  main_group_id integer not null,
   lemma_id integer not null,
   order_num int not null,
   comment text,
-  primary key (lemma_id, order_num)
+  primary key (main_group_id, lemma_id, order_num)
 ) without rowid;
 
 create table temp.new_derived_variant_info (
+  main_group_id integer,
   lemma_id integer,
   pos text,
   word_id integer,

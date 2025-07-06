@@ -63,6 +63,7 @@ class GroupInfo(SlotsDataClass):
     __slots__ = ('id', 'subGroups', 'adjScowlInfo',
                  'pos', 'defn_note', 'pos_class', 'usage_note', 'lemma_rank',
                  'commentLines', 'spellings', 'haveDerived', 'errors')
+
     def __init__(self):
         self.subGroups = {}
         self.adjScowlInfo = []
@@ -76,35 +77,13 @@ class GroupInfo(SlotsDataClass):
         self.haveDerived = False
         self.errors = []
 
-class ClusterComment(SlotsDataClass):
-    __slots__ = ('lines', 'action', 'headword', 'other_words', 'commentLines')
-    def __init__(self, action):
-        assert action in ('replace', 'add', 'remove')
-        self.lines = []
-        self.action = action
-        self.other_words = []
-        self.commentLines = []
-
-def adjustEntries(conn, f = None, *,
-                  preview = False, strict = True, ignoreErrors = False,
-                  simplifyScowlInfo = True,
-                  groupComment = None, replaceComments = True):
-    if f is None:
-        f = sys.stdin
-
-    groups = []
-    clusterComments = []
-
-    errors = False
-    def warn(msg):
-        nonlocal errors
-        errors = True
-        _warn(msg)
-
-    gi = None
-    groupLines = []
-
-    def registerLine(li, new_pos = None, outer_pos = None):
+    def merge(self, attr, v):
+        if v is None: return
+        v0 = getattr(self, attr, None)
+        if v0 is None: setattr(self, attr, v)
+        elif v != v0: raise ValueError(f'conflicting values for {attr} within group')
+        
+    def registerLine(self, conn, li, new_pos = None, outer_pos = None):
         assert li.action in ('adjust', 'match', 'add', 'remove', 'replace', 'transfer')
 
         if new_pos is None:
@@ -119,20 +98,20 @@ def adjustEntries(conn, f = None, *,
             outer_pos = new_pos
 
         if li.pos == 'n_v':
-            registerLine(li.copy('n'), None, outer_pos)
-            registerLine(li.copy('v'), None, outer_pos)
+            self.registerLine(conn, li.copy('n'), None, outer_pos)
+            self.registerLine(conn, li.copy('v'), None, outer_pos)
             return
         if new_pos == 'n_v':
-            registerLine(li.copy(), 'n', outer_pos)
-            registerLine(li.copy(), 'v', outer_pos)
+            self.registerLine(conn, li.copy(), 'n', outer_pos)
+            self.registerLine(conn, li.copy(), 'v', outer_pos)
             return
         if li.pos == 'aj_av':
-            registerLine(li.copy('aj'), None, outer_pos)
-            registerLine(li.copy('av'), None, outer_pos)
+            self.registerLine(conn, li.copy('aj'), None, outer_pos)
+            self.registerLine(conn, li.copy('av'), None, outer_pos)
             return
         if new_pos == 'aj_av':
-            registerLine(li.copy(), 'aj', outer_pos)
-            registerLine(li.copy(), 'av', outer_pos)
+            self.registerLine(conn, li.copy(), 'aj', outer_pos)
+            self.registerLine(conn, li.copy(), 'av', outer_pos)
             return
 
         combined_pos = 'n_v' if li.pos in ('n', 'v') else 'aj_av' if li.pos in ('aj', 'av') else None
@@ -150,12 +129,12 @@ def adjustEntries(conn, f = None, *,
             assert li.pos == new_pos
             if len(ids) > 0:
                 raise ValueError(f"cannot add line: lemma already exists")
-            if new_pos not in gi.subGroups:
-                gi.subGroups[new_pos] = SubGroupInfo(None)
+            if new_pos not in self.subGroups:
+                self.subGroups[new_pos] = SubGroupInfo(None)
         else:
             if len(ids) == 0:
-                if not li.pos and gi.pos:
-                    registerLine(li.copy(gi.pos), new_pos)
+                if not li.pos and self.pos:
+                    self.registerLine(conn, li.copy(self.pos), new_pos)
                     return
                 if li.action == 'match':
                     return
@@ -165,260 +144,297 @@ def adjustEntries(conn, f = None, *,
             li.group_id = ids[0][0]
             li.lemma_id = ids[0][1]
 
-            if not replaceComments:
-                res = [*conn.execute("select * from group_comments where group_id = ?", (li.group_id,))]
-                if res:
-                    raise ValueError(f'conflicting group comments')
+            group_id = None if li.action == 'transfer' else li.group_id
+            if new_pos not in self.subGroups:
+                self.subGroups[new_pos] = SubGroupInfo(group_id)
+            elif self.subGroups[new_pos].id is None:
+                self.subGroups[new_pos].id = group_id
 
-            group_id = None if action == 'transfer' else li.group_id
-            if new_pos not in gi.subGroups:
-                gi.subGroups[new_pos] = SubGroupInfo(group_id)
-            elif gi.subGroups[new_pos].id is None:
-                gi.subGroups[new_pos].id = group_id
-
-        registerBasePos(outer_pos)
+        self.registerBasePos(outer_pos)
 
         if li.spellings is not None:
-            gi.spellings.update(li.spellings)
-        gi.subGroups[new_pos].lines.append(li)
+            self.spellings.update(li.spellings)
 
-    def registerBasePos(outer_pos):
-        if gi.pos == '':
-            gi.pos = outer_pos
-        elif outer_pos != '' and outer_pos != gi.pos:
+        self.subGroups[new_pos].lines.append(li)
+        
+    def registerBasePos(self, outer_pos):
+        if self.pos == '':
+            self.pos = outer_pos
+        elif outer_pos != '' and outer_pos != self.pos:
             raise ValueError(f'mismatch pos: {li.lemma.word}: expected {gi.pos}: got {outer_pos}')
+
+class ClusterComment(SlotsDataClass):
+    __slots__ = ('lines', 'action', 'headword', 'other_words', 'commentLines')
+    def __init__(self, action):
+        assert action in ('replace', 'add', 'remove')
+        self.lines = []
+        self.action = action
+        self.other_words = []
+        self.commentLines = []
+
+def splitIntoGroups(f):
+    lines = [line.strip() for line in f]
+    lines.append('')
+    
+    header = None
+    if len(lines) > 0 and lines[0].startswith('#: '):
+        header = lines[0][2:].lstrip()
+
+    linesByGroup = []
+    startIdx = None
+    for idx, line in enumerate(lines):
+        if header and idx == 0:
+            pass
+        elif line == '':
+            if startIdx is not None:
+                linesByGroup.append((startIdx, idx))
+                startIdx = None
+        elif startIdx is None:
+            startIdx = idx
+        else:
+            pass
+        
+    return (header, lines, linesByGroup)
+
+def getLineAction(line):
+    action = 'adjust'
+    if line.startswith('? '):
+        action = 'match'
+        line = line[2:].lstrip()
+    if line.startswith('+ '):
+        action = 'add'
+        line = line[2:].lstrip()
+    elif line.startswith('- '):
+        action = 'remove'
+        line = line[2:].lstrip()
+    elif line.startswith('= '):
+        action = 'replace'
+        line = line[2:].lstrip()
+    elif line.startswith('~ '):
+        action = 'transfer'
+        line = line[2:].lstrip()
+    return (action, line)
+    
+def adjustEntries(conn, f = None, *,
+                  preview = False, strict = True, ignoreErrors = False,
+                  simplifyScowlInfo = True,
+                  groupComment = None, replaceComments = True):
+    if f is None:
+        f = sys.stdin
+
+    header, lines, linesByGroup = splitIntoGroups(f)
+    if header and header != 'adjust':
+        raise ValueError('invalid file format')
+
+    errors = False
+    def warn(msg):
+        nonlocal errors
+        errors = True
+        _warn(msg)
+
+    groups = []
+    clusterComments = []
+
 
     next_group_id = conn.execute("select max(group_id) from groups").fetchone()[0] + 1
     group_id_counts = {}
 
-    def finalizeGroup():
-        nonlocal gi, next_group_id, groupLines
-        if gi is None:
-            pass
-        elif isinstance(gi, GroupInfo):
-            neededMatchLines = {}
-            for line, li, pos in groupLines:
-                if not isinstance(li, LineInfo):
+    for startIdx, stopIdx in linesByGroup:
+        try:
+            gi = None
+            groupLines = []
+            for line in lines[startIdx:stopIdx]:
+                if line.startswith('# '):
                     continue
-                pos = ifNone(pos, li.pos)
-                if li.pos != pos and li.action in ('adjust', 'replace'):
-                    neededMatchLines.setdefault(li.lemma.word, (li, pos))
-                if li.pos == pos:
-                    neededMatchLines[li.lemma.word] = (None, None)
-            for orig, pos in neededMatchLines.values():
-                if orig is None:
+
+                (action, line) = getLineAction(line)
+
+                if line.startswith('##'):
+                    if gi is None:
+                        if action == 'adjust':
+                            gi = GroupInfo()
+                        else:
+                            gi = ClusterComment(action)
+                    gi.commentLines.append(line)
                     continue
-                li = LineInfo(None, 'match')
-                li.lemma = copy(orig.lemma)
-                li.pos = pos
-                li.defn_note = orig.defn_note
-                li.spellings = Spellings()
-                li.comments = []
-                registerLine(li)
-            for line, li, pos in groupLines:
-                try:
+
+                if gi is None:
+                    gi = GroupInfo()
+                elif not isinstance(gi, GroupInfo):
+                    raise ValueError("bad line")
+
+                m = _matchLine(line)
+                if m is None:
+                    raise ValueError("bad line")
+
+                tags = m['tags']
+                if tags is None: # i.e. no SCOWL info
+
+                    li = LineInfo(line, action)
+
+                    li.lemma = WordEntry()
+                    (lemma_rank, li.lemma.word, li.lemma.entry_rank) = parseLemmaPart(m['lemma'].strip())
+                    if li.lemma.word is None:
+                        raise ValueError("must provide lemma")
+
+                    base_pos = ifNone(m['base_pos'], '')
+                    (base_pos, sep, new_base_pos) = base_pos.partition('→')
+                    if sep:
+                        base_pos = base_pos.rstrip()
+                        new_base_pos = new_base_pos.lstrip()
+                    else:
+                        new_base_pos = None
+                    li.pos = base_pos
+
+                    defn_note = ifNone(m['defn_note'], '')
+                    (defn_note, sep, new_defn_note) = defn_note.partition('→')
+                    if sep:
+                        defn_note = defn_note.rstrip()
+                        new_defn_note = new_defn_note.lstrip()
+                    else:
+                        new_defn_note = None
+                    li.defn_note = defn_note
+
+                    li.spellings = Spellings.parse(m['spellings'])
+                    li.comments = Line.splitComments(m['comments'])
+
+                    gi.merge('defn_note', new_defn_note)
+                    gi.merge('pos_class', m['pos_class'])
+                    gi.merge('usage_note', m['usage_note'])
+                    gi.merge('lemma_rank', noneIf(lemma_rank, Default))
+
+                    wordsStr = ifNone(m['words'],'').strip()
+                    if wordsStr:
+                        gi.haveDerived = True
+                    Line.procWords(li.spellings.keys() if li.spellings else '*',
+                                   li.lemma, base_pos, wordsStr, li.words)
+
+                    groupLines.append((line, li, new_base_pos))
+
+                else: # have SCOWL info
+
+                    if action not in ('add', 'remove', 'replace'):
+                        raise ValueError("scowl info must be prefixed with one of: +, -, or =")
+
+                    lemma = m['lemma'].strip()
+
+                    if action == 'remove':
+                        li = ScowlInfoToClear(line)
+                        if lemma != '...':
+                            raise ValueError('bad line')
+                    elif m['override']:
+                        li = ScowlOverrideLine(line, action)
+                        if lemma == '...':
+                            raise ValueError('bad line')
+                    else:
+                        li = ScowlLineInfo(line, action)
+                        if lemma == '...':
+                            li.expand = True
+                            if m['words'] is not None:
+                                raise ValueError('bad line')
+
+                    li.si = ScowlInfo.parse(tags)
+
+                    if lemma != '...':
+                        (lemma_rank, word, entry_rank) = parseLemmaPart(lemma)
+                        if entry_rank is not Default:
+                            raise ValueError('can not adjust entry rank when providing scowl info')
+
+                        words = [lemma]
+                        wordsStr = ifNone(m['words'], '').strip()
+                        if wordsStr == '...':
+                            li.expand=True
+                            wordsStr = ''
+                        if wordsStr:
+                            for w in wordsStr.split(','):
+                                if w == '-':
+                                    w = None
+                                else:
+                                    (w, entry_rank) = parseWordPart(w.strip())
+                                    if entry_rank is not Default:
+                                        raise ValueError('can not adjust entry rank when providing scowl info')
+                                words.append(w)
+                        if isinstance(li, ScowlLineInfo):
+                            poses = posesFromList(gi.pos, words, lambda w: w and w.endswith("'s"))
+                            for pos, word in zip(poses, words):
+                                if word is None:
+                                    continue
+                                li.words[pos] = word
+                        else:
+                            li.words = words
+
+                        if m['spellings'] is not None:
+                            raise ValueError('can not adjust spelling when providing scowl info')
+                        if m['comments'] is not None:
+                            raise ValueError('can not set lemma comments when providing scowl info')
+
+                        gi.merge('lemma_rank', noneIf(lemma_rank, Default))
+                        gi.merge('defn_note', m['defn_note'])
+                        gi.merge('pos_class', m['pos_class'])
+                        gi.merge('lemma_rank', noneIf(lemma_rank, Default))
+
+                    groupLines.append((line, li, ifNone(m['base_pos'], '')))
+
+            if gi is None:
+                pass
+            elif isinstance(gi, GroupInfo):
+                neededMatchLines = {}
+                for line, li, pos in groupLines:
+                    if not isinstance(li, LineInfo):
+                        continue
+                    pos = ifNone(pos, li.pos)
+                    if li.pos != pos and li.action in ('adjust', 'replace'):
+                        neededMatchLines.setdefault(li.lemma.word, (li, pos))
+                    if li.pos == pos:
+                        neededMatchLines[li.lemma.word] = (None, None)
+                for orig, pos in neededMatchLines.values():
+                    if orig is None:
+                        continue
+                    li = LineInfo(None, 'match')
+                    li.lemma = copy(orig.lemma)
+                    li.pos = pos
+                    li.defn_note = orig.defn_note
+                    li.spellings = Spellings()
+                    li.comments = []
+                    gi.registerLine(conn, li)
+                for line, li, pos in groupLines:
                     if isinstance(li, LineInfo):
-                        registerLine(li, pos)
+                        gi.registerLine(conn, li, pos)
                     elif isinstance(li, AdjScowlInfo):
-                        registerBasePos(pos)
+                        gi.registerBasePos(pos)
                         gi.adjScowlInfo.append(li)
                     else:
                         raise AssertionError
-                except ValueError as err:
-                    gi.errors.append((line, err))
-
-            groupLines = []
-            for line, err in gi.errors:
-                warn(f'{line}: {err}: skipping group')
-                return
-            if not gi.subGroups:
-                warn("empty group")
-                return
-            nopos_sg = gi.subGroups.pop('', None)
-            if nopos_sg and gi.subGroups:
+                groupLines = []
+                for line, err in gi.errors:
+                    warn(f'{line}: {err}: skipping group')
+                    return
+                if not gi.subGroups:
+                    warn("empty group")
+                    return
+                nopos_sg = gi.subGroups.pop('', None)
+                if nopos_sg and gi.subGroups:
+                    for sg in gi.subGroups.values():
+                        sg.lines += nopos_sg.lines
+                elif nopos_sg:
+                    gi.subGroups[''] = nopos_sg
                 for sg in gi.subGroups.values():
-                    sg.lines += nopos_sg.lines
-            elif nopos_sg:
-                gi.subGroups[''] = nopos_sg
-            for sg in gi.subGroups.values():
-                if sg.id is None:
-                    sg.id = next_group_id
-                    next_group_id += 1
-                group_id_counts[sg.id] = group_id_counts.get(sg.id, 0) + 1
-            groups.append(gi)
-        elif isinstance(gi, ClusterComment):
-            if gi.action == 'remove':
-                gi.headword = gi.commentLines[0][3:].lstrip()
+                    if sg.id is None:
+                        sg.id = next_group_id
+                        next_group_id += 1
+                    group_id_counts[sg.id] = group_id_counts.get(sg.id, 0) + 1
+                groups.append(gi)
+            elif isinstance(gi, ClusterComment):
+                if gi.action == 'remove':
+                    gi.headword = gi.commentLines[0][3:].lstrip()
+                else:
+                    raise RuntimeError("not yet implemented")
+                clusterComments.append(gi)
             else:
-                raise RuntimeError("not yet implemented")
-            clusterComments.append(gi)
-        else:
-            raise AssertionError
-
-    def merge(attr, v):
-        if v is None: return
-        v0 = getattr(gi, attr, None)
-        if v0 is None: setattr(gi, attr, v)
-        elif v != v0: raise ValueError(f'conflicting values for {attr} within group')
-
-    for line in f:
-        line = line.strip()
-        if line == '':
-            finalizeGroup()
-            gi = None
-            continue
-
-        if line.startswith('# '):
-            continue
-
-        action = 'adjust'
-        if line.startswith('? '):
-            action = 'match'
-            line = line[2:].lstrip()
-        if line.startswith('+ '):
-            action = 'add'
-            line = line[2:].lstrip()
-        elif line.startswith('- '):
-            action = 'remove'
-            line = line[2:].lstrip()
-        elif line.startswith('= '):
-            action = 'replace'
-            line = line[2:].lstrip()
-        elif line.startswith('~ '):
-            action = 'transfer'
-            line = line[2:].lstrip()
-
-        if line.startswith('##'):
-            if gi is None:
-                if action == 'adjust':
-                    gi = GroupInfo()
-                else:
-                    gi = ClusterComment(action)
-            gi.commentLines.append(line)
-            continue
-
-        if gi is None:
-            gi = GroupInfo()
-        elif not isinstance(gi, GroupInfo):
-            raise ValueError("bad line")
-
-        try:
-            m = _matchLine(line)
-            if m is None:
-                raise ValueError("bad line")
-
-            tags = m['tags']
-            if tags is None: # i.e. no SCOWL info
-
-                li = LineInfo(line, action)
-
-                li.lemma = WordEntry()
-                (lemma_rank, li.lemma.word, li.lemma.entry_rank) = parseLemmaPart(m['lemma'].strip())
-                if li.lemma.word is None:
-                    raise ValueError("must provide lemma")
-
-                base_pos = ifNone(m['base_pos'], '')
-                (base_pos, sep, new_base_pos) = base_pos.partition('→')
-                if sep:
-                    base_pos = base_pos.rstrip()
-                    new_base_pos = new_base_pos.lstrip()
-                else:
-                    new_base_pos = None
-                li.pos = base_pos
-
-                defn_note = ifNone(m['defn_note'], '')
-                (defn_note, sep, new_defn_note) = defn_note.partition('→')
-                if sep:
-                    defn_note = defn_note.rstrip()
-                    new_defn_note = new_defn_note.lstrip()
-                else:
-                    new_defn_note = None
-                li.defn_note = defn_note
-
-                li.spellings = Spellings.parse(m['spellings'])
-                li.comments = Line.splitComments(m['comments'])
-
-                merge('defn_note', new_defn_note)
-                merge('pos_class', m['pos_class'])
-                merge('usage_note', m['usage_note'])
-                merge('lemma_rank', noneIf(lemma_rank, Default))
-
-                wordsStr = ifNone(m['words'],'').strip()
-                if wordsStr:
-                    gi.haveDerived = True
-                Line.procWords(li.spellings.keys() if li.spellings else '*',
-                               li.lemma, base_pos, wordsStr, li.words)
-
-                groupLines.append((line, li, new_base_pos))
-
-            else: # have SCOWL info
-
-                if action not in ('add', 'remove', 'replace'):
-                    raise ValueError("scowl info must be prefixed with one of: +, -, or =")
-
-                lemma = m['lemma'].strip()
-
-                if action == 'remove':
-                    li = ScowlInfoToClear(line)
-                    if lemma != '...':
-                        raise ValueError('bad line')
-                elif m['override']:
-                    li = ScowlOverrideLine(line, action)
-                    if lemma == '...':
-                        raise ValueError('bad line')
-                else:
-                    li = ScowlLineInfo(line, action)
-                    if lemma == '...':
-                        li.expand = True
-                        if m['words'] is not None:
-                            raise ValueError('bad line')
-
-                li.si = ScowlInfo.parse(tags)
-
-                if lemma != '...':
-                    (lemma_rank, word, entry_rank) = parseLemmaPart(lemma)
-                    if entry_rank is not Default:
-                        raise ValueError('can not adjust entry rank when providing scowl info')
-
-                    words = [lemma]
-                    wordsStr = ifNone(m['words'], '').strip()
-                    if wordsStr == '...':
-                        li.expand=True
-                        wordsStr = ''
-                    if wordsStr:
-                        for w in wordsStr.split(','):
-                            if w == '-':
-                                w = None
-                            else:
-                                (w, entry_rank) = parseWordPart(w.strip())
-                                if entry_rank is not Default:
-                                    raise ValueError('can not adjust entry rank when providing scowl info')
-                            words.append(w)
-                    if isinstance(li, ScowlLineInfo):
-                        poses = posesFromList(gi.pos, words, lambda w: w and w.endswith("'s"))
-                        for pos, word in zip(poses, words):
-                            if word is None:
-                                continue
-                            li.words[pos] = word
-                    else:
-                        li.words = words
-
-                    if m['spellings'] is not None:
-                        raise ValueError('can not adjust spelling when providing scowl info')
-                    if m['comments'] is not None:
-                        raise ValueError('can not set lemma comments when providing scowl info')
-
-                    merge('lemma_rank', noneIf(lemma_rank, Default))
-                    merge('defn_note', m['defn_note'])
-                    merge('pos_class', m['pos_class'])
-                    merge('lemma_rank', noneIf(lemma_rank, Default))
-
-                groupLines.append((line, li, ifNone(m['base_pos'], '')))
+                raise AssertionError
 
         except ValueError as err:
-            gi.errors.append((line, err))
-
-    finalizeGroup()
+            warn(f'{line}: {err}: skipping group')
 
     if errors and not ignoreErrors:
         raise ValueError('aborting due to previous errors')

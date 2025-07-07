@@ -9,9 +9,9 @@ begin;
 
 create temp view _scowl as
 select group_id, lemma_id, word_id, base_pos,
-       level as sk1, category as sk2, region as sk3, tag as sk4, -- sk = scowl key
+       size as sk1, category as sk2, region as sk3, tag as sk4, -- sk = scowl key
        coalesce(spelling,'') as vk1, coalesce(lemma_variant_level,-1) as vk2, coalesce(derived_variant_level,-1) as vk3, -- vk = variant key
-       lemma, w.word, pos, lemma_rank as wk1, pos_class as wk2, defn_note as wk3, usage_note as wk4, coalesce(entry_rank,'') as wk5, -- wk = word key
+       lemma, w.word, pos, group_rank as wk1, pos_class as wk2, defn_note as wk3, usage_note as wk4, coalesce(entry_rank,'') as wk5, -- wk = word key
        coalesce(gc.comment, '') as ck1, coalesce(lc.comment, '') as ck2, -- ck = comment key
        false as override
  from (scowl_data
@@ -21,9 +21,9 @@ select group_id, lemma_id, word_id, base_pos,
  left join lemma_comments as lc using (lemma_id)
 union all
 select group_id, lemma_id, word_id, base_pos,
-       level as sk1, category as sk2, region as sk3, tag as sk4, -- sk = scowl key
+       size as sk1, category as sk2, region as sk3, tag as sk4, -- sk = scowl key
        '', -1, -1, -- vk
-       lemma, w.word, pos, lemma_rank as wk1, pos_class as wk2, defn_note as wk3, usage_note as wk4, coalesce(entry_rank,'') as wk5, -- wk = word key
+       lemma, w.word, pos, group_rank as wk1, pos_class as wk2, defn_note as wk3, usage_note as wk4, coalesce(entry_rank,'') as wk5, -- wk = word key
        '','', -- ck
        true as override
  from (scowl_override

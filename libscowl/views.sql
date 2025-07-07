@@ -1,12 +1,12 @@
 begin;
 
 create view lemmas as
-select word_id as lemma_id, group_id, word as lemma, pos as lemma_pos, base_pos, pos_class, defn_note, usage_note, lemma_rank
+select word_id as lemma_id, group_id, word as lemma, pos as lemma_pos, base_pos, pos_class, defn_note, usage_note, group_rank
   from words left join groups g using (group_id) where word_id = lemma_id;
 select * from lemmas limit 0;
 
 create view entries as
-select a.word_id, a.group_id, a.lemma_id, b.word as lemma, b.pos as lemma_pos, base_pos, pos_class, defn_note, usage_note, lemma_rank, a.word, a.pos, a.entry_rank
+select a.word_id, a.group_id, a.lemma_id, b.word as lemma, b.pos as lemma_pos, base_pos, pos_class, defn_note, usage_note, group_rank, a.word, a.pos, a.entry_rank
   from words a left join words b on (a.lemma_id = b.word_id) left join groups g on a.group_id = g.group_id;
 select * from entries limit 0;
 
@@ -41,11 +41,11 @@ create view scowl_data_cleanup as
 select b.*
   from scowl_data as a join scowl_data b using (group_id, pos)
   where (
-         (a.level < b.level and a.category = b.category and a.region = b.region and a.tag = b.tag)
-         or (a.level <= b.level and a.category = '' and b.category = 'hacker' and a.region = b.region)
-         or (a.level <= b.level and a.category = b.category and a.region = b.region and a.tag = '' and b.tag not in ('', '[cs]', '[-]') and b.level <= 35)
-         or (a.level <= b.level and a.category = b.category and a.region = b.region and a.tag = '' and b.tag not in ('', '[cs]', '[+]', '[-]'))
-         --or (a.level < b.level and b.level >= 80 and a.category = b.category and a.region = b.region and a.tag not in ('[cs]', '[name]', '[town]'))
+         (a.size < b.size and a.category = b.category and a.region = b.region and a.tag = b.tag)
+         or (a.size <= b.size and a.category = '' and b.category = 'hacker' and a.region = b.region)
+         or (a.size <= b.size and a.category = b.category and a.region = b.region and a.tag = '' and b.tag not in ('', '[cs]', '[-]') and b.size <= 35)
+         or (a.size <= b.size and a.category = b.category and a.region = b.region and a.tag = '' and b.tag not in ('', '[cs]', '[+]', '[-]'))
+         --or (a.size < b.size and b.size >= 80 and a.category = b.category and a.region = b.region and a.tag not in ('[cs]', '[name]', '[town]'))
         );
 select * from scowl_data_cleanup limit 0;
 

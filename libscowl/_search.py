@@ -40,7 +40,7 @@ def queryString(
         size = int(size)
         if size < 0 or size > 99:
             raise ValueError(size)
-        clauses.append(f"level <= {size}")
+        clauses.append(f"size <= {size}")
 
     if variantLevel is not None:
         try:
@@ -260,7 +260,7 @@ def _filterByLine(conn, simplify, queryArgs, whereClause):
     if leftover:
         raise ValueError(f"invalid values for simplfy: {', '.join(sorted(leftover))}")
 
-    _size_ = queryArgs['size'] if 'size' in simplify else 'level'
+    _size_ = queryArgs['size'] if 'size' in simplify else 'size'
     _category_ = "''" if 'category' in simplify else 'category'
     _region_ = "''" if 'region' in simplify else 'region'
     _tag_ = "''" if 'tag' in simplify or 'tags' in simplify else 'tag'
@@ -307,7 +307,7 @@ def _filterByGroup(conn, whereClause, includeCluster = False):
     conn.execute("insert into words select * from orig.words where group_id in (select group_id from filtered)")
 
     conn.execute("insert into scowl_data select * from orig.scowl_data where group_id in (select group_id from filtered)")
-    conn.execute("insert or ignore into scowl_override select level, category, region, tag, word_id "
+    conn.execute("insert or ignore into scowl_override select size, category, region, tag, word_id "
                  "from orig._scowl_override where group_id in (select group_id from filtered)")
 
     conn.execute("insert into lemma_variant_info "
@@ -316,16 +316,16 @@ def _filterByGroup(conn, whereClause, includeCluster = False):
                  "select v.* from orig.derived_variant_info v join words using (word_id) where group_id in (select group_id from filtered)")
 
 def cleanupScowlData(conn):
-    cleanupWhereClause = ("where a.level <= b.level "
+    cleanupWhereClause = ("where a.size <= b.size "
                           "and (a.category = b.category or a.category = '' and b.category != '') "
                           "and (a.region = b.region or a.region = '' and b.region != '') "
                           "and (a.tag = b.tag or a.tag = '' and b.tag != '') "
                           "and (a.category != b.category or a.region != b.region or a.tag != b.tag) ")
     conn.execute("delete from scowl_data "
-                 "where (level, category, region, tag, group_id, pos) "
+                 "where (size, category, region, tag, group_id, pos) "
                  f"in (select b.* from scowl_data a join scowl_data b using(group_id,pos) {cleanupWhereClause})");
     conn.execute("delete from scowl_override "
-                 "where (level, category, region, tag, word_id) "
+                 "where (size, category, region, tag, word_id) "
                  f"in (select b.* from scowl_override a join scowl_override b using(word_id) {cleanupWhereClause})");
 
 def pruneConstTables(conn):

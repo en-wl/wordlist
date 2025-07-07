@@ -61,7 +61,7 @@ class SubGroupInfo(SlotsDataClass):
 
 class GroupInfo(SlotsDataClass):
     __slots__ = ('id', 'subGroups', 'adjScowlInfo',
-                 'pos', 'defn_note', 'pos_class', 'usage_note', 'lemma_rank',
+                 'pos', 'defn_note', 'pos_class', 'usage_note', 'group_rank',
                  'commentLines', 'spellings', 'haveDerived', 'errors')
 
     def __init__(self):
@@ -71,7 +71,7 @@ class GroupInfo(SlotsDataClass):
         self.defn_note = None
         self.pos_class = None
         self.usage_note = None
-        self.lemma_rank = None
+        self.group_rank = None
         self.commentLines = []
         self.spellings = set()
         self.haveDerived = False
@@ -273,7 +273,7 @@ def adjustEntries(conn, f = None, *,
                     li = LineInfo(line, action)
 
                     li.lemma = WordEntry()
-                    (lemma_rank, li.lemma.word, li.lemma.entry_rank) = parseLemmaPart(m['lemma'].strip())
+                    (group_rank, li.lemma.word, li.lemma.entry_rank) = parseLemmaPart(m['lemma'].strip())
                     if li.lemma.word is None:
                         raise ValueError("must provide lemma")
 
@@ -301,7 +301,7 @@ def adjustEntries(conn, f = None, *,
                     gi.merge('defn_note', new_defn_note)
                     gi.merge('pos_class', m['pos_class'])
                     gi.merge('usage_note', m['usage_note'])
-                    gi.merge('lemma_rank', noneIf(lemma_rank, Default))
+                    gi.merge('group_rank', noneIf(group_rank, Default))
 
                     wordsStr = ifNone(m['words'],'').strip()
                     if wordsStr:
@@ -336,7 +336,7 @@ def adjustEntries(conn, f = None, *,
                     li.si = ScowlInfo.parse(tags)
 
                     if lemma != '...':
-                        (lemma_rank, word, entry_rank) = parseLemmaPart(lemma)
+                        (group_rank, word, entry_rank) = parseLemmaPart(lemma)
                         if entry_rank is not Default:
                             raise ValueError('can not adjust entry rank when providing scowl info')
 
@@ -368,10 +368,10 @@ def adjustEntries(conn, f = None, *,
                         if m['comments'] is not None:
                             raise ValueError('can not set lemma comments when providing scowl info')
 
-                        gi.merge('lemma_rank', noneIf(lemma_rank, Default))
+                        gi.merge('group_rank', noneIf(group_rank, Default))
                         gi.merge('defn_note', m['defn_note'])
                         gi.merge('pos_class', m['pos_class'])
-                        gi.merge('lemma_rank', noneIf(lemma_rank, Default))
+                        gi.merge('group_rank', noneIf(group_rank, Default))
 
                     groupLines.append((line, li, ifNone(m['base_pos'], '')))
 
@@ -552,37 +552,37 @@ def adjustEntries(conn, f = None, *,
                 for s in gi.adjScowlInfo:
                     if isinstance(s, ScowlInfoToClear):
                         conn.executemany("insert or replace into scowl_info_to_clear values (?, ?, ?, ?, ?)",
-                                         ((si.level, si.category, si.region, tag,
+                                         ((si.size, si.category, si.region, tag,
                                            sg.id) for si in s.si for tag in si.tags))
                     if isinstance(s, ScowlLineInfo):
                         # fixme: should likely verify words
                         if s.expand:
                             conn.executemany("insert or replace into new_scowl_data values (?, ?, ?, ?, ?, '*', ?)",
-                                             ((si.level, si.category, si.region, tag,
+                                             ((si.size, si.category, si.region, tag,
                                                sg.id, s.action == 'replace') for si in s.si for tag in si.tags))
                         else:
                             conn.executemany("insert or replace into new_scowl_data values (?, ?, ?, ?, ?, ?, ?)",
-                                             ((si.level, si.category, si.region, tag,
+                                             ((si.size, si.category, si.region, tag,
                                                sg.id, pos, s.action == 'replace') for si in s.si for tag in si.tags for pos in s.word.keys()))
                     elif isinstance(s, ScowlOverrideLine):
                         # fixme: should likely verify words
                         conn.executemany("insert or replace into new_scowl_override values (?, ?, ?, ?, ?, ?, ?)",
-                                         ((si.level, si.category, si.region, tag,
+                                         ((si.size, si.category, si.region, tag,
                                            sg.id, word, s.action == 'replace') for si in s.si for tag in si.tags for word in s.words))
 
-                for level, category, region, tag in conn.execute(
-                        "select level, category, region, tag "
+                for size, category, region, tag in conn.execute(
+                        "select size, category, region, tag "
                         "  from scowl_info_to_clear c "
                         "  cross join (select main_group_id, other_group_id as group_id from to_merge) m using (main_group_id) "
-                        "  left join scowl_data d using (group_id, level, category, region, tag) "
+                        "  left join scowl_data d using (group_id, size, category, region, tag) "
                         "  where main_group_id = ? "
-                        "  group by level, category, region, tag "
+                        "  group by size, category, region, tag "
                         "  having count(d.group_id) == 0 ", (sg.id,)):
-                    raise ValueError(f"unable to remove scowl info: {level} {category} {region} {tag}")
+                    raise ValueError(f"unable to remove scowl info: {size} {category} {region} {tag}")
 
-                conn.execute("insert into new_group_info (main_group_id, base_pos, defn_note, pos_class, usage_note, lemma_rank) values (?, ?, ?, ?, ?, ?)",
+                conn.execute("insert into new_group_info (main_group_id, base_pos, defn_note, pos_class, usage_note, group_rank) values (?, ?, ?, ?, ?, ?)",
                              (sg.id, base_pos, gi.defn_note, gi.pos_class, gi.usage_note,
-                              None if gi.lemma_rank is None else '' if gi.lemma_rank == '_' else gi.lemma_rank))
+                              None if gi.group_rank is None else '' if gi.group_rank == '_' else gi.group_rank))
                 if comment:
                     conn.execute("insert or replace into new_group_comments values (?, ?)", (sg.id, str(comment)))
 
@@ -616,7 +616,7 @@ def adjustEntries(conn, f = None, *,
 
     if simplifyScowlInfo:
         conn.execute("delete from scowl_data"
-                     "  where (level,category,region,tag,group_id,pos) "
+                     "  where (size,category,region,tag,group_id,pos) "
                      "    in (select * from scowl_data_cleanup join group_ids_to_clean_up using (group_id))");
     print(f'adjust_proc.sql: {time.monotonic()-t}s')
 

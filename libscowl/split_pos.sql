@@ -23,7 +23,7 @@ create temp table _groups as
 create unique index _groups_idx on _groups(group_id);
 
 insert into groups
-  select other_id, b_base_pos, pos_class, defn_note, usage_note, lemma_rank
+  select other_id, b_base_pos, pos_class, defn_note, usage_note, group_rank
   from _groups;
 
 update or ignore groups as g 
@@ -82,10 +82,10 @@ insert into words
   select word_id, group_id, lemma_id, pos, word, entry_rank from _new_words;
 
 insert into scowl_data
-  select distinct level,category,region,tag,b.group_id, b.pos from (words a join scowl_data s using (group_id,pos)) join _new_words b on a.word_id = b.orig_word_id;
+  select distinct size,category,region,tag,b.group_id, b.pos from (words a join scowl_data s using (group_id,pos)) join _new_words b on a.word_id = b.orig_word_id;
 
 insert into scowl_override
-  select distinct level,category,region,tag,b.word_id from (words a join scowl_override s using (word_id)) join _new_words b on a.word_id = b.orig_word_id;
+  select distinct size,category,region,tag,b.word_id from (words a join scowl_override s using (word_id)) join _new_words b on a.word_id = b.orig_word_id;
 
 insert into lemma_variant_info
   select b.lemma_id, spelling, variant_level from (words a join lemma_variant_info v using (lemma_id)) join  _new_words b on a.word_id = b.orig_word_id where a.word_id = a.lemma_id;

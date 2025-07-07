@@ -96,16 +96,16 @@ update groups as a
        defn_note = coalesce(b.defn_note, a.defn_note),
        pos_class = coalesce(b.pos_class, a.pos_class),
        usage_note = coalesce(b.usage_note, a.usage_note),
-       lemma_rank = coalesce(b.lemma_rank, a.lemma_rank)
+       group_rank = coalesce(b.group_rank, a.group_rank)
  from new_group_info as b
  where a.group_id = b.main_group_id;
 
-insert or ignore into groups (group_id, base_pos, defn_note, pos_class, usage_note, lemma_rank)
+insert or ignore into groups (group_id, base_pos, defn_note, pos_class, usage_note, group_rank)
   select main_group_id, base_pos,
          coalesce(defn_note,''),
          coalesce(pos_class,''),
          coalesce(usage_note,''),
-         coalesce(lemma_rank,'')
+         coalesce(group_rank,'')
   from new_group_info;
 
 --
@@ -235,8 +235,8 @@ drop table fixed_derived_variant_info;
 --   - analytic <n>: analytics
 --   + _analytics <n>
 -- copy of the scowl info for the word analytics to the new lemma of the same word
-insert or ignore into scowl_data(level, category, region, tag, group_id, pos)
-select sd.level, sd.category, sd.region, sd.tag, main_group_id as group_id, p.new_pos as pos
+insert or ignore into scowl_data(size, category, region, tag, group_id, pos)
+select sd.size, sd.category, sd.region, sd.tag, main_group_id as group_id, p.new_pos as pos
   from extra_scowl_data e
   join scowl_data sd on e.other_group_id = sd.group_id and e.orig_pos = sd.pos
   join new_group_info f using (main_group_id)
@@ -244,15 +244,15 @@ select sd.level, sd.category, sd.region, sd.tag, main_group_id as group_id, p.ne
 
 -- fixup scowl info for new/updated entries
 create temp table adj_scowl_data as
-  select distinct sd.level,category,region,tag,main_group_id as group_id,new_pos as pos, adj_rank
+  select distinct sd.size,category,region,tag,main_group_id as group_id,new_pos as pos, adj_rank
   from scowl_data as sd
     join to_merge tm on sd.group_id = tm.other_group_id
     join new_group_info g using (main_group_id)
     join fix_pos on fix_pos.base_pos = g.base_pos and orig_pos = sd.pos
     left join adj_entry_ranks using (main_group_id, other_group_id, pos);
 delete from scowl_data where (group_id) in (select group_id from adj_scowl_data);
-insert or ignore into scowl_data(level, category, region, tag, group_id, pos)
-  select coalesce(b.level, a.level) as level,
+insert or ignore into scowl_data(size, category, region, tag, group_id, pos)
+  select coalesce(b.size, a.size) as size,
          coalesce(b.category, a.category) as category,
          coalesce(b.region, a.region) as region,
          coalesce(b.tag, a.tag) as tag,
@@ -265,62 +265,62 @@ drop table adj_scowl_data;
 
 -- clear out any requested scowl info and assign any removed entries the same
 -- scowl info as the lemma
-insert or ignore into scowl_data(level,category,region,tag,group_id,pos)
-select sd2.level,sd2.category,sd2.region,sd2.tag,group_id,sd.pos
+insert or ignore into scowl_data(size,category,region,tag,group_id,pos)
+select sd2.size,sd2.category,sd2.region,sd2.tag,group_id,sd.pos
   from scowl_info_to_clear
   join to_merge using (main_group_id)
-  join scowl_data sd using (level, category, region, tag)
+  join scowl_data sd using (size, category, region, tag)
   join words as w using (group_id)
   join scowl_data sd2 using (group_id)
   where other_group_id = sd.group_id
     and w.word_id = w.lemma_id
     and w.pos = sd2.pos;
 delete from scowl_data
-  where (group_id, level, category, region, tag) in
-    (select other_group_id, level, category, region, tag
+  where (group_id, size, category, region, tag) in
+    (select other_group_id, size, category, region, tag
        from scowl_info_to_clear
        join to_merge using (main_group_id));
 
 -- add/update any explicitly provided scowl data
 create temp table old_scowl_data as
-  select other_group_id as group_id, sd.pos, sd.level
-     from (select main_group_id, pos, min(level) as level from new_scowl_data where replace group by main_group_id, pos)  nsd
+  select other_group_id as group_id, sd.pos, sd.size
+     from (select main_group_id, pos, min(size) as size from new_scowl_data where replace group by main_group_id, pos)  nsd
      join to_merge using (main_group_id)
-     join scowl_data sd on sd.group_id = other_group_id and (nsd.pos = '*' or sd.pos = nsd.pos) and sd.level < nsd.level;
+     join scowl_data sd on sd.group_id = other_group_id and (nsd.pos = '*' or sd.pos = nsd.pos) and sd.size < nsd.size;
 delete from scowl_data
-  where (group_id, pos, level) in (select * from old_scowl_data);
-insert or ignore into scowl_data(level,category,region,tag,group_id,pos)
-  select nsd.level,category,region,tag,main_group_id,coalesce(new_pos, nsd.pos)
+  where (group_id, pos, size) in (select * from old_scowl_data);
+insert or ignore into scowl_data(size,category,region,tag,group_id,pos)
+  select nsd.size,category,region,tag,main_group_id,coalesce(new_pos, nsd.pos)
     from new_scowl_data nsd
     cross join new_group_info g using (main_group_id)
     cross join fix_pos p on g.base_pos = p.base_pos and nsd.pos = orig_pos
   where nsd.pos != '*';
-insert or ignore into scowl_data(level,category,region,tag,group_id,pos)
-  select level,category,region,tag,main_group_id,w.pos
+insert or ignore into scowl_data(size,category,region,tag,group_id,pos)
+  select size,category,region,tag,main_group_id,w.pos
     from new_scowl_data nsd
     cross join words w on nsd.main_group_id = w.group_id
     -- note: words has already been updated with the corrected pos, so no need to join with fix_pos
   where nsd.pos = '*'
     and (nsd.tag != '[-]'
          or exists (select * from old_scowl_data osd
-                    where osd.group_id = nsd.main_group_id and osd.pos = w.pos and osd.level <= nsd.level))
+                    where osd.group_id = nsd.main_group_id and osd.pos = w.pos and osd.size <= nsd.size))
 ;
 drop table old_scowl_data;
 
 --add any explicitly provided scowl overrides
 -- fixme?: we might need to be a little more precise.... lemma....
-insert or ignore into scowl_override(level,category,region,tag,word_id)
-  select level,category,region,tag,word_id
+insert or ignore into scowl_override(size,category,region,tag,word_id)
+  select size,category,region,tag,word_id
     from new_scowl_override o
     cross join words w on o.main_group_id = w.group_id and o.word = w.word;
 
 -- if a new word form is added give it the same scowl info as the lemma
 insert into scowl_data
-select b.level, b.category, b.region, b.tag, group_id, w.pos
+select b.size, b.category, b.region, b.tag, group_id, w.pos
   from (select distinct main_group_id as group_id, pos from to_merge join words on main_group_id = group_id) as w
   left join scowl_data as a using (group_id, pos)
   left join scowl_data as b using (group_id)
-  where a.level is null
+  where a.size is null
     and b.pos in (select lemma_pos from base_poses);
 
 -- cleanup

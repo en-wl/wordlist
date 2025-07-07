@@ -60,7 +60,7 @@ create table groups (
   pos_class text not null default '',
   defn_note text not null default '',
   usage_note text not null default '',
-  lemma_rank rank_symbol not null default '' references ranks(rank_symbol)
+  group_rank rank_symbol not null default '' references ranks(rank_symbol)
 );
 
 create table words (
@@ -92,24 +92,24 @@ create table derived_variant_info (
 );
 
 create table scowl_data (
-  level integer not null check(5 <= level and level <= 95),
+  size integer not null check(5 <= size and size <= 95),
   category text not null default '',
   region region not null default '' references regions(region),
   tag text not null default '',
   group_id integer not null references groups(group_id),
   pos pos not null references poses(pos),
   --foreign key (group_id, pos) references words(group_id, pos),
-  primary key (level, region, category, tag, group_id, pos)
+  primary key (size, region, category, tag, group_id, pos)
 );
 create index scowl_data_index on scowl_data(group_id, pos);
 
 create table scowl_override (
-  level integer not null check(5 <= level and level <= 95),
+  size integer not null check(5 <= size and size <= 95),
   category text not null default '',
   region region not null default '' references regions(region),
   tag text not null default '',
   word_id integer not null references words(word_id),
-  primary key (level, region, category, tag, word_id)
+  primary key (size, region, category, tag, word_id)
 );
 create index scowl_override_index on scowl_override(word_id);
 

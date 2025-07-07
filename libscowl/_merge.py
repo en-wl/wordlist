@@ -93,32 +93,32 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
     group_id = (sorted(group_ids))[0]
     if len(group_ids) > 1:
         group_ids_str = ','.join(str(_id) for _id in group_ids)
-        cur = conn.execute("select count(distinct pos_class), count(distinct usage_note), count(distinct lemma_rank) "
+        cur = conn.execute("select count(distinct pos_class), count(distinct usage_note), count(distinct group_rank) "
                            f"from groups where group_id in ({group_ids_str})")
-        (pos_class_cnt, usage_note_cnt, lemma_rank_cnt) = next(cur)
+        (pos_class_cnt, usage_note_cnt, group_rank_cnt) = next(cur)
         if pos_class_cnt > 1 and grp.pos_class is Default:
             raise ValueError("can't merge groups: conflicting pos class")
         if usage_note_cnt > 1 and grp.usage_note is Default:
             raise ValueError("can't merge groups: conflicting usage note")
-        if lemma_rank_cnt > 1 and grp.lemma_rank is Default:
+        if group_rank_cnt > 1 and grp.group_rank is Default:
             raise ValueError("can't merge groups: conflicting lemma rank")
         other_group_ids = group_ids - {group_id}
         conn.executemany("update words set group_id = ? where group_id = ?",
                          ((group_id, _id) for _id in other_group_ids))
-        conn.executemany("insert or ignore into scowl_data(level,category,region,tag,group_id,pos) "
-                         "select level,category,region,tag,?,pos "
+        conn.executemany("insert or ignore into scowl_data(size,category,region,tag,group_id,pos) "
+                         "select size,category,region,tag,?,pos "
                          "from scowl_data where group_id = ?",
                          ((group_id, _id) for _id in other_group_ids))
         conn.executemany("delete from groups where group_id = ?", ((_id,) for _id in other_group_ids));
         # fixme: handle group comments
             
     grp._group_id = group_id
-    cur = conn.execute("select pos_class, usage_note, lemma_rank from groups where group_id = ?" , (group_id,))
-    (pos_class, usage_note, lemma_rank) = next(cur)
-    conn.execute("update groups set pos_class = ?, usage_note = ?, lemma_rank = ? where group_id = ?",
+    cur = conn.execute("select pos_class, usage_note, group_rank from groups where group_id = ?" , (group_id,))
+    (pos_class, usage_note, group_rank) = next(cur)
+    conn.execute("update groups set pos_class = ?, usage_note = ?, group_rank = ? where group_id = ?",
                  (ifDefault(grp.pos_class, pos_class),
                   ifDefault(grp.usage_note, usage_note),
-                  ifDefault(grp.lemma_rank, lemma_rank),
+                  ifDefault(grp.group_rank, group_rank),
                   group_id))
 
     haveLemmaSpellings = False
@@ -184,12 +184,12 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
         ov = grp.override.get(le.lemma, None)
         if ov:
             for tag in ov.si.tags:
-                conn.execute("insert or ignore into scowl_override (level, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
-                             (ov.si.level, ov.si.category, ov.si.region, tag, lemma_id))
+                conn.execute("insert or ignore into scowl_override (size, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
+                             (ov.si.size, ov.si.category, ov.si.region, tag, lemma_id))
                 for word in ov.words:
                     conn.execute("insert or ignore into scowl_override "
                                  "select ?, ?, ?, ?, word_id from words where lemma_id = ? and word = ?",
-                                 (ov.si.level, ov.si.category, ov.si.region, tag, lemma_id, word))
+                                 (ov.si.size, ov.si.category, ov.si.region, tag, lemma_id, word))
 
     if haveLemmaSpellings:
         existing = {
@@ -226,8 +226,8 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
 
     for l in grp.lines:
         for pos in l.poses:
-            conn.executemany("insert or ignore into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
-                             ((si.level, si.category, si.region, tag, group_id, pos) for si in l.si for tag in si.tags))
+            conn.executemany("insert or ignore into scowl_data (size, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
+                             ((si.size, si.category, si.region, tag, group_id, pos) for si in l.si for tag in si.tags))
 
     if grp.commentLines:
         conn.execute("insert into group_comments (group_id, comment) values (?, ?)",

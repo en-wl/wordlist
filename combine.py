@@ -127,15 +127,15 @@ for fn in mergeFiles:
 if not rawMode:
     start("simplify SCOWL info")
     tagsToRemove = "'[12dicts]','[3esl]','[enable]','[ospdadd]','[2dicts]','[nopos]','[names]'"
-    conn.execute("insert into scowl_data (level,category,region,tag,group_id,pos)"
-                 "select level,category,region,'',group_id,pos "
+    conn.execute("insert into scowl_data (size,category,region,tag,group_id,pos)"
+                 "select size,category,region,'',group_id,pos "
                  f"  from scowl_data where tag in ({tagsToRemove}) "
                  "on conflict do nothing")
     conn.execute(f"delete from scowl_data where tag in ({tagsToRemove})")
     
     conn.execute("delete from scowl_data "
-                 "where (level,category,region,tag,group_id,pos) "
-                 "  in (select level,category,region,tag,group_id,pos from scowl_data_cleanup)")
+                 "where (size,category,region,tag,group_id,pos) "
+                 "  in (select size,category,region,tag,group_id,pos from scowl_data_cleanup)")
     finish()
 
     start("combine POS")

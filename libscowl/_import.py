@@ -78,7 +78,7 @@ def roughParse(f = None):
         if m is None:
             raise ValueError(f"bad line: {line}")
         try:
-            (lemma_rank, lemma, entry_rank) = parseLemmaPart(m['lemma'])
+            (group_rank, lemma, entry_rank) = parseLemmaPart(m['lemma'])
             if lemma:
                 base_pos = m['base_pos']
                 pos_class = m['pos_class']

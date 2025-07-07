@@ -67,7 +67,7 @@ create table temp.new_group_info (
   defn_note text,
   pos_class text,
   usage_note text,
-  lemma_rank text
+  group_rank text
 ); 
 
 create table temp.new_entry_info (
@@ -78,34 +78,34 @@ create table temp.new_entry_info (
 );
 
 create table temp.scowl_info_to_clear (
-  level integer,
+  size integer,
   category text default '',
   region text default '',
   tag text default '',
   main_group_id integer,
-  primary key (main_group_id, level, category, region, tag)
+  primary key (main_group_id, size, category, region, tag)
 ) without rowid;
 
 create table temp.new_scowl_data (
-  level integer,
+  size integer,
   category text default '',
   region text default '',
   tag text default '',
   main_group_id integer,
   pos text,
   replace boolean,
-  primary key (main_group_id, pos, level, category, region, tag)
+  primary key (main_group_id, pos, size, category, region, tag)
 ) without rowid;
 
 create table temp.new_scowl_override (
-  level integer,
+  size integer,
   category text default '',
   region text default '',
   tag text default '',
   main_group_id integer,
   word text,
   replace boolean,
-  primary key (main_group_id, word, level, category, region, tag)
+  primary key (main_group_id, word, size, category, region, tag)
 ) without rowid;
 
 create table temp.new_group_comments (

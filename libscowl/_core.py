@@ -157,7 +157,7 @@ def parseWordPart(w):
     return WordPart(m[1], _fixRank(m[2]))
 
 class LemmaPart(NamedTuple):
-    lemma_rank: Any
+    group_rank: Any
     lemma: Any
     entry_rank: Any
 
@@ -165,11 +165,11 @@ def parseLemmaPart(w):
     w = w.strip()
     if w == '-':
         return LemmaPart(None, None, None)
-    lemma_rank = Default
+    group_rank = Default
     if w[0] in '_@!-':
-        lemma_rank = _fixRank(w[0])
+        group_rank = _fixRank(w[0])
         w = w[1:]
-    return LemmaPart(lemma_rank, *parseWordPart(w))
+    return LemmaPart(group_rank, *parseWordPart(w))
 
 def posmap(base_pos, poses):
     poses = set(poses)
@@ -470,7 +470,7 @@ class Group:
         'defn_note', # str
         'usage_note',# str
         'pos_class', # str
-        'lemma_rank',# str
+        'group_rank',# str
         'entries',   # [ LemmaEntry ]
         'lines',     # [ Line ]
         'override',  # { lemma: Override }
@@ -499,7 +499,7 @@ class Group:
     def sortKey(self):
         l = self.lines[0]
         si = l.si[0]
-        return (si.level + (100 if si.region != '' else 0) + (200 if si.category != '' else 0),
+        return (si.size + (100 if si.region != '' else 0) + (200 if si.category != '' else 0),
                 wordOrderKey(self.headword), self.defn_note, basePosInfo[self.base_pos].order_num, self.pos_class)
 
     def finalize(self, expected_spellings):
@@ -624,13 +624,13 @@ class Tags(SlotsDataClass):
 
 class ScowlInfo(SlotsDataClass):
     __slots__ = (
-        'level',    # int
+        'size',    # int
         'category', # str
         'region',   # str
         'tags',     # Tags
     )
-    def __init__(self, level, category = '', region = '', tags = None):
-        self.level = level
+    def __init__(self, size, category = '', region = '', tags = None):
+        self.size = size
         self.category = category
         self.region = region
         if tags is None:
@@ -671,7 +671,7 @@ class ScowlInfo(SlotsDataClass):
         return sil
 
     def print(self, out):
-        out.write(f'{self.level}')
+        out.write(f'{self.size}')
         if self.category != '': out.write(f' {self.category}')
         if self.region != '': out.write(f' {self.region}')
         self.tags.print(out)
@@ -698,7 +698,7 @@ class LineBase(SlotsDataClass):
         usage_note = defaultIf(self.grp.usage_note, '')
 
         if lemma:
-            out.write(f': {self.grp.lemma_rank}{lemma}{entry_rank}')
+            out.write(f': {self.grp.group_rank}{lemma}{entry_rank}')
         else:
             out.write(f': -')
 
@@ -727,10 +727,10 @@ class LineBase(SlotsDataClass):
             l = Override(g, si)
         lemmaStr = m['lemma'].strip()
         lemma = WordEntry()
-        (lemma_rank, lemma.word, lemma.entry_rank) = parseLemmaPart(m['lemma'])
+        (group_rank, lemma.word, lemma.entry_rank) = parseLemmaPart(m['lemma'])
         if lemma.word is None:
             lemma = None
-        g.merge('lemma_rank', lemma_rank, allowDefault = False)
+        g.merge('group_rank', group_rank, allowDefault = False)
         g.merge('base_pos', ifNone(m['base_pos'],''))
         g.merge('pos_class', ifNone(m['pos_class'], Default))
         g.merge('defn_note', ifNone(m['defn_note'], Default))
@@ -783,7 +783,7 @@ class Line(LineBase):
 
     def sortKey(self):
         si = self.si[0]
-        return (si.level, si.category, si.region, basePosInfo[self.grp.base_pos].lemma_pos not in self.poses, sorted(si.tags))
+        return (si.size, si.category, si.region, basePosInfo[self.grp.base_pos].lemma_pos not in self.poses, sorted(si.tags))
 
     def lemmaIncluded(self):
         return basePosInfo[self.grp.base_pos].lemma_pos in self.poses

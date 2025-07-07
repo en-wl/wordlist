@@ -115,7 +115,7 @@ whereClause = ' AND '.join(map(lambda s: f'({s})',
                                filter(lambda s: s != '', [
                                    ' OR '.join(spellingCategorySQL[sp] for sp in sorted(sps)),
                                    categoryClause,
-                                   f'level <= {args.size}'
+                                   f'size <= {args.size}'
                                ])))
 query = f"select word from scowl_v0 where {whereClause}"
 

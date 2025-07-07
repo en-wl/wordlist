@@ -75,7 +75,7 @@ def _importFromDB(conn, filterTable, filterQuery):
         grp.defn_note = r['defn_note']
         grp.usage_note = r['usage_note']
         grp.pos_class = r['pos_class']
-        grp.lemma_rank = r['lemma_rank']
+        grp.group_rank = r['group_rank']
         grp._group_id = r['group_id']
         grp.entries = []
         grp.lines = []
@@ -142,15 +142,15 @@ def _importFromDB(conn, filterTable, filterQuery):
     scowlInfoByGroupPos = defaultdict(lambda: defaultdict(list))
     linesByGroup = defaultdict(lambda: defaultdict(set))
 
-    for r in cur.execute("select group_id, level, category, region, pos, group_concat(tag) as tags "
+    for r in cur.execute("select group_id, size, category, region, pos, group_concat(tag) as tags "
                          "from scowl_data "
                          f"where {groupIdFilter} "
-                         "group by group_id, level, category, region, pos"):
-        level = r['level']
+                         "group by group_id, size, category, region, pos"):
+        size = r['size']
         category = r['category']
         region = r['region']
         tags = sorted(r['tags'].split(','))
-        key = (level, category, region, *tags)
+        key = (size, category, region, *tags)
         scowlInfoByGroupPos[r['group_id']][r['pos']].append(key)
 
     for group_id, byPos in scowlInfoByGroupPos.items():
@@ -161,26 +161,26 @@ def _importFromDB(conn, filterTable, filterQuery):
     for group_id, lines in linesByGroup.items():
         grp = groups[group_id]
         for si, poses in lines.items():
-            grp.lines.append(Line(grp, [ScowlInfo(level, category, region, tags) for (level, category, region, *tags) in si], poses))
+            grp.lines.append(Line(grp, [ScowlInfo(size, category, region, tags) for (size, category, region, *tags) in si], poses))
 
     overrideByGroup = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
-    for r in cur.execute("select group_id, level, category, region, lemma, word, group_concat(tag) as tags "
+    for r in cur.execute("select group_id, size, category, region, lemma, word, group_concat(tag) as tags "
                          "from scowl_override join entries using (word_id) "
                          f"where {wordIdFilter} "
-                         "group by group_id, level, category, region, lemma, word"):
+                         "group by group_id, size, category, region, lemma, word"):
         override = overrideByGroup[r['group_id']]
-        level = r['level']
+        size = r['size']
         category = r['category']
         region = r['region']
         tags = sorted(r['tags'].split(','))
-        key = (level, category, region, *tags)
+        key = (size, category, region, *tags)
         override[key][r['lemma']].append(r['word'])
 
     for group_id, override in overrideByGroup.items():
         grp = groups[group_id]
-        for (level, category, region, *tags), ov in override.items():
+        for (size, category, region, *tags), ov in override.items():
             for lemma, words in ov.items():
-                grp.override[lemma] = Override(grp, [ScowlInfo(level, category, region, tags)], lemma, sorted(w for w in words if w != lemma))
+                grp.override[lemma] = Override(grp, [ScowlInfo(size, category, region, tags)], lemma, sorted(w for w in words if w != lemma))
 
     clusterComments = {}
     for r in cur.execute(f"select * from cluster_comments where {headwordFilter}"):
@@ -273,8 +273,8 @@ def exportToDB(clusters, conn):
     conn.executescript((_dir / 'post.sql').read_text())
 
 def _exportGroup(conn, group, group_id, word_id):
-    conn.execute("insert into groups (group_id, base_pos, pos_class, defn_note, usage_note, lemma_rank) values (?, ?, ?, ?, ?, ?)",
-                 (group_id, group.base_pos, group.pos_class, group.defn_note, group.usage_note, group.lemma_rank))
+    conn.execute("insert into groups (group_id, base_pos, pos_class, defn_note, usage_note, group_rank) values (?, ?, ?, ?, ?, ?)",
+                 (group_id, group.base_pos, group.pos_class, group.defn_note, group.usage_note, group.group_rank))
 
     for le in group.entries:
         lemma_id = word_id
@@ -302,19 +302,19 @@ def _exportGroup(conn, group, group_id, word_id):
         if ov:
             for si in ov.si:
                 for tag in si.tags:
-                    conn.execute("insert into scowl_override (level, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
-                                 (si.level, si.category, si.region, tag, lemma_id))
+                    conn.execute("insert into scowl_override (size, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
+                                 (si.size, si.category, si.region, tag, lemma_id))
                     for word in ov.words:
                         conn.execute("insert into scowl_override "
                                      "select ?, ?, ?, ?, word_id from words where lemma_id = ? and word = ?",
-                                     (si.level, si.category, si.region, tag, lemma_id, word))
+                                     (si.size, si.category, si.region, tag, lemma_id, word))
 
     for l in group.lines:
         for pos in l.poses:
             for si in l.si:
                 for tag in si.tags:
-                    conn.execute("insert or ignore into scowl_data (level, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
-                                 (si.level, si.category, si.region, tag, group_id, pos))
+                    conn.execute("insert or ignore into scowl_data (size, category, region, tag, group_id, pos) values (?, ?, ?, ?, ?, ?)",
+                                 (si.size, si.category, si.region, tag, group_id, pos))
 
     if group.commentLines:
         conn.execute("insert into group_comments (group_id, comment) values (?, ?)",

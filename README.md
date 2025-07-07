@@ -572,9 +572,37 @@ format.  These files should, in general, not need to be modified.
 
 ### Merge file format
 
-_Merge_ files are used when adding new entries.  The format is exactly the
-same as `scowl.txt` except that new data is merged with existing groups when
-there is a match.  See `./scowl merge --help` for more info.
+_Merge_ files are used when adding new entries.  There is limited suport for
+merging groups and adding variant information with the addition of the new
+entries.
+
+Files of this format should start with the line:
+
+    #:: merge [TAG]
+
+where TAG is an optional tag to add to all new entries.  Other than that the
+format is exactly the same as `scowl.txt` except that new data is merged with
+existing groups when there is a match.
+
+Variant information can be provided as part of the new information.  If there
+is a match than the new information will take precedence as long as it doesn't
+create inconsistencies.  If more than one existing groups matches, than the
+two groups will be merged, again as long as it doesn't create inconsistencies.
+Existing group comments are assumed to relate to variant information and will
+be removed if new variant information is provided for all lemma forms within
+the group.
+
+If any inconsistencies are found the merge will be aborted.
+
+Variant level inconsistencies will arise when there are additional forms found
+in the database that are not mentioned; to resolve this, simply provide the
+additional forms.
+
+Inconsistencies can also arise when merging groups if the two groups have
+conflicting information.  To resolve the conflict, assign a new value.  To
+remove the group-annotation use `_`.  To remove the pos-class use `<POS/>`.
+To remove the usage note use `()`.
+
 
 ### Adjust file format
 
@@ -583,7 +611,11 @@ groups.  This included marking new variants.
 
 #### File format
 
-The format is similar to the main `scowl.txt` format but the parsing and
+_Asjust_ files shoud start with the line:
+
+    #:: adjust
+
+After thet, the format is similar to the main `scowl.txt` format but the parsing and
 processing is different.  Each line is similar to a line in `scowl.txt`
 but is optionally prefixed by one of `?`, `+`, `-`, `=`, `~`, or `#` that dictates
 how that line is processed.  The prefix _must_ be followed by a space.  The
@@ -665,14 +697,17 @@ verb `rive` as the word matches.
 #### Splitting groups
 
 If a line in a different group within the adjust file matches the same group
-within the database then the group will be split.  For example:
+within the database, the group will be split.  For example:
 
     cohost <m→n>
 
     cohost <m→v>
 
-will split `cohost` with the `m` pos into a noun and a verb.  As a shortcut
-you can also use `m→n_v` that will expand to `m→n` and `m→v`.  For example:
+will split `cohost` with the `m` pos into a noun and a verb.  As a shortcut,
+when splitting a `m` or `a` pos, you can also use `n_v` and `aj_av` as the
+target pos, which will expand into a `n` and `v` or a `aj` and `av`
+respectively.  For example, to split the above `cohost` group, you could
+instead just write:
 
     cohost <m→n_v>
 

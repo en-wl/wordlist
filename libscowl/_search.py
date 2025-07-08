@@ -138,27 +138,23 @@ def wordFilterRegEx(
         return ''.join([rf"([{charSet}](?:[{charSetMiddle}]*[{charSet}]|))",
                         r'\.?' if dot == 'strip' else ''])
 
-def getWords(conn, *, deaccent = False, useWordFilter = True, nosuggest = None, nosuggestSuffix = '/!', **args):
+def getWords(conn, size, spellings, variantLevel,
+             *, deaccent = False, useWordFilter = True, nosuggest = None, nosuggestSuffix = '/!', **args):
     """Returns a generator of words based on the arguments.
 
     Many arguments can filter by either including or excluding a set of
     values.  If the argument is a sequence then it will included the given
     along with the default value.  To not include the default use the Include
-    class with the the noDefault parater set to True.  To exclude values
-    instead, use the Exclude class.  A value of None means to not filter based
+    class with the the noDefault parameter set to True.  To exclude values
+    instead, use the Exclude class.  If _regions_ is None then it depends on
+    _spellings_.  If any other argument is None it means to not filter based
     on that argument.
 
-    If _size_ is None it defaults to 60.
-    If _spellings_ is None it defaults to ('A',)
-    If _region_ is None it value depends on _spellings_
-    If _variant_level_ is None it defaults to '.'
     """
-    args.setdefault('size', 60)
-    args.setdefault('spellings', ('A',))
-    if 'variantLevel' not in args and 'variantLevels' not in args:
-        args['variantLevel'] = '.'
 
-    queryArgs = {p.name: args.pop(p.name, p.default) for p in signature(queryString).parameters.values()}
+    queryArgs = {**{p.name: args.pop(p.name, p.default) for p in signature(queryString).parameters.values()},
+                 'size': size, 'spellings': spellings, 'variantLevel': variantLevel}
+    print(queryArgs, file=sys.stderr)
     query = ' '.join(queryString(**queryArgs))
     print(query, file=sys.stderr)
 
@@ -209,7 +205,7 @@ from inspect import signature,Signature,Parameter
 
 getWords.__signature__ = Signature([
     *(p for p in signature(getWords).parameters.values() if p.kind == Parameter.POSITIONAL_OR_KEYWORD),
-    *signature(queryString).parameters.values(),
+    *(p for p in signature(queryString).parameters.values() if p.name not in ('size', 'spellings', 'variantLevel')),
     *signature(wordFilterRegEx).parameters.values(),
     *(p for p in signature(getWords).parameters.values() if p.kind == Parameter.KEYWORD_ONLY),
 ])

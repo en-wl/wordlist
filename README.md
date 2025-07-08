@@ -59,7 +59,7 @@ Basic Usage
 In order to use SCOWL the database must first be created from the source files
 in the `data/` directly.  To do so simply type:
 
-  make
+    make
 
 which will create the sqlite3 file `scowl.db` which is all that you need for
 most operations.  If required the flat text file can also be created with `make
@@ -72,49 +72,55 @@ is meant to be run from the root directory of the SCOWL distribution.
 
 To extract wordlists from the database use:
 
-    ./scowl --db scowl.db word-list > wl.txt
+    ./scowl --db scowl.db word-list 60 A 1 > wl.txt
 
 If `--db` option specifies the database file to use.  The option defaults to
 'scowl.db' or the value of the `SCOWL_DB` environment variable if set.
 
-The default options for word-list will create a word-list that corresponds to
-the default dictionary for American English, with the exception that dialectic
-marks (i.e. accents) are preserved.  To remove the marks use the `--deaccent`
+The positional arguments to the `word-list` are the SCOWL size (in this case
+60), spellings to include (in this case `A` for American), and the max variant
+level (in this case 1, which excludes most variants except for special cases
+such as _dox_ and _doxx_).  The exact meaning of all these values are
+described in the _[File Format](#file-format)_ section.
+
+The above command will create a word-list that corresponds to the default
+dictionary for American English, with the exception that dialectic marks
+(i.e. accents) are preserved.  To remove the marks use the `--deaccent`
 option:
 
-    ./scowl word-list scowl.db --deaccent > wl.txt
+    ./scowl word-list 60 A 1 --deaccent > wl.txt
 
 The default word filter strips the trailing dot from abbreviations, to instead
 keep them:
 
-    ./scowl word-list scowl.db --dot True > wl.txt
+    ./scowl word-list 60 A 1 --dot True > wl.txt
 
 To exclude abbreviations altogether (including unmarked ones):
 
-    ./scowl word-list --poses-to-exclude=abbr > wl.txt
+    ./scowl word-list 60 A 1 --poses-to-exclude=abbr > wl.txt
 
 To disable the word filter and include all words:
 
-    ./scowl word-list --no-word-filter > wl.txt
+    ./scowl word-list 60 A 1 --no-word-filter > wl.txt
 
 To create a British word list:
 
-    ./scowl word-list scowl.db --spellings B > wl.txt
+    ./scowl word-list 60 B 1 > wl.txt
 
 To create a British word list that include -ise, -ize, and other variant
 spellings:
 
-    ./scowl word-list scowl.db --spellings B,Z --variant-level '~' > wl.txt
+    ./scowl word-list 60 B,Z 5 > wl.txt
 
 The default word list includes roman numerals and slang words only really used
 by computer programmers such as "grepped".  To exclude these and any other
 special categories of words use:
 
-    ./scowl word-list --categories '' > wl.txt
+    ./scowl word-list 60 A 1 --categories= > wl.txt
 
 To create a larger wordlist:
 
-    ./scowl word-list --size 70 > wl.txt
+    ./scowl word-list 70 A 1 > wl.txt
 
 For additional options use:
 
@@ -447,6 +453,7 @@ there are no `D` tags then `B` implies `D`.
 
 The VARIANT-LEVELs are as follows:
 
+     : 0: non-variant
     .: 1: include
     =: 2: equal
     ?: 3: disagreement

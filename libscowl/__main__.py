@@ -176,11 +176,29 @@ p = addParser('word-list',
 p.set_defaults(func=printWordList)
 addDbArgument(p)
 
-def addQueryArguments(p, defaults):
+def addQueryArguments(p, usePositional):
+    if usePositional:
+        positional = {'size', 'spellings', 'variant-level'}
+    else:
+        positional = {}
     def addArg(*flags, **args):
-        if flags[0] in defaults:
-            args['help'] = f"{args.get('help', '')} (default: {defaults[flags[0]]})"
-        p.add_argument(*flags, **args)
+        name = flags[0][2:]
+        optional = args.pop('optional', False)
+        grp = args.pop('grp', None)
+        if name in positional:
+            p0 = grp if grp else p.add_mutually_exclusive_group(required=True)
+            dest = args.pop('dest', name)
+            metavar = args.pop('metavar')
+            p0.add_argument(dest, *flags[1:],
+                            metavar=f'<{name}>', nargs = '?', default = None,
+                            **args)
+            args.pop('help')
+            p0.add_argument(*flags,
+                           dest=dest, metavar=metavar, help=SUPPRESS,
+                           **args)
+        else:
+            p0 = grp if grp else p
+            p0.add_argument(*flags, **args)
     addArg('--size', type=int, metavar='<int>',
            help='max scowl size')
     addArg('--spellings', type=lst, metavar='<list>',
@@ -188,9 +206,10 @@ def addQueryArguments(p, defaults):
     addArg('--regions', type=lst, metavar='<list>',
            help=f"any of: {', '.join(REGIONS[1:])}")
     variantSymbolsStr = ','.join(symbol if symbol.isalnum() else f"'{symbol}'" for symbol in variantFromSymbol.keys())
+    grp = p.add_mutually_exclusive_group(required=True if usePositional else False)
     addArg('--variant-level', metavar='<char>', choices=[*variantFromSymbol.keys(),*map(str, range(0,10))], dest='variantLevel',
-           help=f"one of: {variantSymbolsStr},0-9")
-    addArg('--variant-levels', action=VariantLevels, dest='variantLevels', metavar='<list>')
+           help=f"one of: {variantSymbolsStr},0-9", optional = True, grp = grp)
+    addArg('--variant-levels', action=VariantLevels, dest='variantLevels', metavar='<list>', grp = grp)
     addArg('--poses', '--wo-poses', action=Lst, dest='poses', metavar='<list>')
     addArg('--pos-classes', '--wo-pos-classes', action=Lst, dest='posClasses', metavar='<list>')
     addArg('--pos-categories', '--wo-pos-categories', action=Lst, dest='posCategories', metavar='<list>',
@@ -217,7 +236,7 @@ def addFilterArguments(p):
 
     p.add_argument('--deaccent', action='store_true')
 
-addQueryArguments(p, {'--size': 60, '--spellings': 'A', '--variant-level': '.'})
+addQueryArguments(p, usePositional = True)
 addFilterArguments(p)
 p.add_argument('--nosuggest', action=NoSuggest, dest='nosuggest', metavar='<list>', const='', nargs='?',
                help=f"any of: vulgar-1,2,3 or offensive-1,2,3; if the flag is specified but no values are given defaults to: vulgar-1&2 and offensive-1&2")
@@ -246,7 +265,7 @@ g.add_argument('--export', action='store_true',
                help='export the results to stdout')
 del g
 addExportArguments(p)
-addQueryArguments(p, {})
+addQueryArguments(p, usePositional = False)
 p.add_argument('--variants-only', action='store_true', dest='variantsOnly')
 p.add_argument('--simplify', type=lst, metavar='<list>', help="any of: size, category, region, tag")
 

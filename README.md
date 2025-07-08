@@ -274,7 +274,9 @@ The sizes have the following approximate meanings:
     50: medium
     60: medium-large (size used for default spell checking dictionary)
     70: large (size used for large spell checking dictionary)
-    80: a valid word
+    80: a valid word in current usage
+    85: a valid word
+    
 
 A TAG is sometimes use to provide information on what source list the word
 came from.
@@ -423,8 +425,12 @@ filter out proper nouns.
 
 The DEFN-NOTE is used to distinguish two different senses of the same lemma.
 
-The USAGE-NOTE is currently used to mark offensive and vulgar words and might
-also be used in the future to mark slang, informal, and non-standard words.
+The USAGE-NOTE is used to mark offensive, vulgar, non-standard and other
+similar words.  At the moment the marking of offensive, vulgar only really
+covers the worst offenders and the marking of non-standard and similar words
+is very incomplete.
+
+to mark slang, informal, and non-standard words.
 
 The SPELLING and REGION codes are as follows:
 

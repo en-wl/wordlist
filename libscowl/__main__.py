@@ -45,13 +45,14 @@ def adjust(args):
 
 def merge(args):
     conn = libscowl.openDB(args.db)
-    kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'func')}
+    kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'func', 'post')}
     preview = kwargs.pop('preview')
     if preview:
         libscowl.mergeEntries(conn, sys.stdin, preview = True, **kwargs)
     else:
         libscowl.mergeEntries(conn, sys.stdin, preview = False, **kwargs)
-        conn.executescript((libscowl._dir / 'post.sql').read_text())
+        if getattr(args, 'post', True):
+            conn.executescript((libscowl._dir / 'post.sql').read_text())
 
 def sortFile(args):
     if args.replace:
@@ -271,16 +272,23 @@ p.set_defaults(func=finalizeDB)
 addDbArgument(p)
 
 
+def addAdjustMergeCommonArgs():
+    addDbArgument(p)
+    p.add_argument('--preview', action='store_true', default=False, dest='preview',
+                   help="preview change entries; database is left unchanged")
+    p.add_argument('--ignore-errors', action='store_true', default=False, dest='ignoreErrors',
+                   help='ignore errors when possible by skipping the group')
+    p.add_argument('--no-cleanup', action='store_false', dest='simplifyScowlInfo',
+                   help="don't simplify scowl info")
+    p.add_argument('--cleanup',  action='store_true', dest='simplifyScowlInfo', help=SUPPRESS)
+    p.add_argument('--no-post', action='store_false', dest='post',
+                   help="don't run post-processing scripts")
+    p.add_argument('--post', action='store_true', dest='post', help=SUPPRESS)
+
 p = addParser('adjust',
               help='add, remove, or adjust entries')
 p.set_defaults(func=adjust)
-addDbArgument(p)
-p.add_argument('--preview', action='store_true', default=False, dest='preview')
-p.add_argument('--ignore-errors', action='store_true', default=False, dest='ignoreErrors',
-               help='ignore errors when possible by skipping the group')
-p.add_argument('--no-cleanup', action='store_false', dest='simplifyScowlInfo',
-               help="simplify scowl info")
-p.add_argument('--cleanup',  action='store_true', dest='simplifyScowlInfo', help=SUPPRESS)
+addAdjustMergeCommonArgs()
 
 
 p = addParser('merge',
@@ -290,10 +298,7 @@ Add new entries from stdin to the database.  By default new data is merged
 with existing groups with the same lemma/pos/defn_note.  If --on-conflict is
 'replace' than the data from stdin will replace the existing group.''')
 p.set_defaults(func=merge)
-addDbArgument(p)
-p.add_argument('--preview', action='store_true', default=False, dest='preview')
-#p.add_argument('--ignore-errors', action='store_true', default=False, dest='ignoreErrors')
-p.add_argument('--on-conflict', default = 'merge', dest='onConflict', choices=['merge', 'replace', 'error'])
+addAdjustMergeCommonArgs()
 
 
 p = addParser('sort',

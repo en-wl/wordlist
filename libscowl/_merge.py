@@ -5,7 +5,12 @@ from ._export import *
 
 def mergeEntries(conn, f = None, *,
                  onConflict = 'merge', onVariantConflict = 'replace',
+                 simplifyScowlInfo = None, ignoreErrors = None,
                  preview = False):
+    if simplifyScowlInfo is True:
+        raise RuntimeError("simplifyScowlInfo unimplemented")
+    if ignoreErrors is True:
+        raise RuntimeError("ignoreErrors unimplemented")
     if f is None:
         f = sys.stdin
     tag = None

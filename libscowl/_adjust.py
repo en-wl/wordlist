@@ -337,16 +337,19 @@ def adjustEntries(conn, f = None, *,
 
                     if lemma != '...':
                         (group_rank, word, entry_rank) = parseLemmaPart(lemma)
-                        if entry_rank is not Default:
+                        if word is not None and entry_rank is not Default:
                             raise ValueError('can not adjust entry rank when providing scowl info')
 
-                        words = [lemma]
+                        base_pos = ifNone(m['base_pos'], '')
+
+                        words = [word]
                         wordsStr = ifNone(m['words'], '').strip()
                         if wordsStr == '...':
                             li.expand=True
                             wordsStr = ''
                         if wordsStr:
                             for w in wordsStr.split(','):
+                                w = w.strip()
                                 if w == '-':
                                     w = None
                                 else:
@@ -355,7 +358,7 @@ def adjustEntries(conn, f = None, *,
                                         raise ValueError('can not adjust entry rank when providing scowl info')
                                 words.append(w)
                         if isinstance(li, ScowlLineInfo):
-                            poses = posesFromList(gi.pos, words, lambda w: w and w.endswith("'s"))
+                            poses = posesFromList(base_pos, words, lambda w: w and w.endswith("'s"))
                             for pos, word in zip(poses, words):
                                 if word is None:
                                     continue
@@ -563,7 +566,7 @@ def adjustEntries(conn, f = None, *,
                         else:
                             conn.executemany("insert or replace into new_scowl_data values (?, ?, ?, ?, ?, ?, ?)",
                                              ((si.size, si.category, si.region, tag,
-                                               sg.id, pos, s.action == 'replace') for si in s.si for tag in si.tags for pos in s.word.keys()))
+                                               sg.id, pos, s.action == 'replace') for si in s.si for tag in si.tags for pos in s.words.keys()))
                     elif isinstance(s, ScowlOverrideLine):
                         # fixme: should likely verify words
                         conn.executemany("insert or replace into new_scowl_override values (?, ?, ?, ?, ?, ?, ?)",

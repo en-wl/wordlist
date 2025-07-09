@@ -1,12 +1,69 @@
 #:: adjust
 
+_: absentminded <aj>
+_?: absent-minded
+
+_: absentmindedly <av>
+_?: absent-mindedly
+
+_: absentmindedness <n>
+_?: absent-mindedness
+
+_: airbag <n>
+_v: air bag <n>
+
+A Bv: air base <n>
+Av B: airbase <n>
+A- B-: air-base <n>
+
+_: air gun <n>
+_.: airgun <n>
+_V: air-gun
+
+_: air letter <n>
+_v: airletter <n>
+
 _: awestruck <aj>
 _?: awe-struck
 _V: awestricken <aj>
 _V: awe-stricken
 
+_: back seat <n>
+_v: backseat <n>
+
+_: ballgame <n>
+_?: ball game <n>
+
+_: bank card <n>
+_v: bankcard <n>
+
 _: barcode <n>
 _V: bar code <n>
+
+_: bestselling
+_?: best-selling <aj>
+
+_: blow job <n>
+_.: blowjob <n>
+
+_: blue jeans <n>
+_v: bluejeans <n>
+
+_: brainwave <n>
+_?: brain wave <n>
+
+breakpoint <n> {→computing}
+
+break point <n>
+
+_: brush-off <n>
+_v: brushoff <n>
+
+_: bubble gum <n>
+_.: bubblegum <n>
+
+_: built-in <aj>
+_v: builtin
 
 + _: camel hair
 _V: camel's hair <n>
@@ -14,14 +71,75 @@ _.: camel-hair
 _v: camelhair <n>
 ## When used as a modifier it's often _camel-hair_
 
+_: catchphrase <n>
+_v: catch phrase <n>
+_V: catch-phrase
+
 _: ceasefire <n>
 _V: cease-fire <n>
 
 _: chatroom <n>
 _V: chat room <n>
 
+_: chicken feed <n>
+_v: chickenfeed <n>
+_V: chicken-feed
+
+_: chickenhearted <aj>
+_?: chicken-hearted
+
+_: chickenpox <n>
+_?: chicken pox
+
+_: clearheaded <aj>
+_?: clear-headed
+
+_: clearheadedly
+_?: clear-headedly
+
+_: clearheadedness <n>
+_?: clear-headedness
+
+_: close-up <n>
+_v: closeup <n>
+
+A B.: coast guard
+B Av: coastguard <n>
+
+_: coat hanger <n>
+_V: coathanger <n>
+
+_: coffee cake <n>
+_v: coffeecake <n>
+
+= _: con man <n>: con men, con man's
++ _v: con-man <n>: con-men, con-man's
+= _v: conman <n>: conmen, conman's
+- con-man
+- con men
+- con-men
+
 _: countdown <n>
 _V: count-down <n>
+
+_: crawl space <n>
+_v: crawlspace <n>
+
+_: day care <n>
+_.: daycare <n>
+_v: day-care
+
+_: de-escalate <v>
+_v: deescalate <v>
+
+_: de-escalation <n>
+_v: deescalation <n>
+
+_: deice <v>
+_?: de-ice <v>
+
+_: deicer <n>
+_?: de-icer <n>
 
 _: doglike <aj>
 _v: dog-like
@@ -29,11 +147,118 @@ _v: dog-like
 _: dot-com <n>
 _.: dotcom <n>
 
+_: dreamworld <n>
+_v: dream world
+_V: dream-world
+
 _: driveshaft <n>
 _v: drive shaft <n>
 
 _: email <n_v>
 _v: e-mail <n_v>
+
+_: eye-opener <n>
+_v: eyeopener <n>
+
+_: fire truck <n>
+_v: firetruck <n>
+
+= _: firstborn <n>: firstborns, firstborn's
+_v: first-born <n>: first-borns_, first-born's
+
+_: flare-up <n>
+_v: flareup <n>
+
+flashcard <n> {→flash cartridge}
+
+flash card <n> {→learning aid}
+
+_: flowchart <n>
+_?: flow chart <n>
+
+_: folk singer <n>
+_.: folksinger <n>
+
+_: folk singing
+_v: folksinging <n>
+
+_: folk song <n>
+_v: folksong <n>
+
+_: follow-up <n>
+_v: followup <n>
+
+_: fortune teller <n>
+_v: fortune-teller <n>
+_v: fortuneteller <n>
+
+_: fortune-telling
+_v: fortunetelling <n>
+
+_: four-poster <n>
+_v: fourposter <n>
+
+_: garbageman <n>
+_?: garbage man <n>
+
+_: godawful
+_?: god-awful <aj>
+
+_: gold mine <n>
+_v: goldmine <n>
+_V: gold-mine <n>
+
+_: goosebumps <n>
+_?: goose bumps
+
+_: grown-up <n>
+_v: grownup <n>
+
+_: hair dryer <n>
++ _V: hair drier <n>: hair driers, hair drier's
+_V: hairdryer <n>
+_V: hairdrier <n>
+
+_: hairspray <n>
+_?: hair spray <n>
+_-: hair-spray <n>
+
+_: halfwit <n>
+_?: half-wit <n>
+
+_: halfwitted
+_?: half-witted <aj>
+
+_: hang-up <n>
+_v: hangup <n>
+
+_: hard hat <n>
+_v: hardhat <n>
+
+_: hard-line <aj>
+_.: hardline <aj>
+
+_: hard-liner <n>
+_.: hardliner <n>
+
+_: hardworking <aj>
+_?: hard-working
+
+_: head count <n>
+_v: headcount <n>
+
+_: healthcare <n>
+_?: health care <n>
+
+_: heatwave <n>
+_?: heat wave <n>
+
+_: heavyhearted <aj>
+_?: heavy-hearted
+
+_: high chair <n>
+_v: highchair <n>
+_V: high-chair <n>
 
 _: highfalutin <aj>
 _V: hifalutin <aj>
@@ -41,12 +266,31 @@ _V: highfaluting <aj>
 _V: high-falutin <aj>
 _-: high-faluting
 
+_: high-handed <aj>
+_v: highhanded <a→aj>
+
+_: high-handedness <n>
+_v: highhandedness <n>
+
+_: high road <n>
+_v: highroad <n>
+
+_: home page <n>
+_.: homepage <n>
+
 _: hotdog <v>
 _v: hot-dog <v>
 = 70: ...
 
 _: hot dog <n>
 _v: hotdog <n>
+
+_: hot plate <n>
+_v: hotplate <n>
+
+_: ice cap <n>
+_.: icecap <n>
+_-: ice-cap <n>
 
 _: jobshare <n>
 _=: job share
@@ -58,24 +302,148 @@ _V: ju-jutsu
 _V: jiujitsu <n>
 _V: jiu-jitsu
 
+_: land mine <n>
+_.: landmine <n>
+_V: land-mine <n>
+
+_: launchpad <n>
+_?: launch pad <n>
+_?: launching pad <n>
+
+_: lawn mower <n>
+_v: lawnmower <n>
+_V: lawn-mower <n>
+
+_: letter bomb <n>
+_=: letter-bomb <n>
+_v: letterbomb <n>
+
+_: lifebelt <n>
+_?: life belt <n>
+
+_: lifebuoy <n>
+_?: life buoy <n>
+_V: life-buoy <n>
+
+_: lightheaded <aj>
+_v: light-headed <aj>
+
+_: lip-read <v>
+_.: lipread <v>
+
+_: lip-reader <n>
+_.: lipreader <n>
+
+_: lip-reading
+_.: lipreading <n>
+_.: lip reading
+
+_: long-standing <aj>
+_.: longstanding <aj>
+
+_: mealymouthed <aj>
+_?: mealy-mouthed <aj>
+
+_: muddleheaded <aj>
+_?: muddle-headed
+
+_: mug shot <n>
+_.: mugshot <n>
+
+_: muleskinner <n>
+_?: mule skinner <n>
+
+_: muskox <n>
+_?: musk ox <n>
+_v: musk-ox
+
+_: nightlight <n>
+_?: night light
+_v: night-light <n>
+
 A: nonissue <n>
 A? B: non-issue <n>
 ## According to most dictionaries nonissue is the correct spelling for
 ##   American English; however, in practice (based on data from COCA) it semas
 ##   non-issue is used more often.
 
+_: nose cone <n>
+_v: nosecone <n>
+
+_: off-site <aj>
+_v: offsite
+
+_: on-site <aj>
+_v: onsite
+
+_: openhearted <aj>
+_?: open-hearted
+
+_: openheartedness <n>
+_?: open-heartedness
+
 _: orangutan <n>
 _v: orang-utan <n>
 _V: orangutang <n>
 _V: orang-utang <n>
 
+_: paper clip <n>
+_.: paperclip <n>
+_V: paper-clip <n>
+
+_: pari-mutuel <n>
+_.: parimutuel <n>
+
+_: pay phone <n>
+_.: payphone <n>
+_V: pay-phone <n>
+
++ _: po'boy <n>
+_v: poor boy <n>
+_V: poorboy <n>
+
+_: point-blank <aj>
+_v: pointblank
+
+_: point-blank <av>
+_v: pointblank
+
+_: pop-up <n>
+_.: popup <n>
+
 _: Port of Spain <n>
 _?: Port-of-Spain <n>
+
+_: pre-owned
+_.: preowned
+
+_: punchline <n>
+_?: punch line <n>
+
+_: ripcord <n>
+_?: rip cord <n>
+_-: rip-cord <n>
+
+_: rip-off <n>
+_.: ripoff <n>
 
 _: roller-skate <m→v>
 - roller skate <v>
 ? rollerskate
 + _v: rollerskate <v>: rollerskated, rollerskating, rollerskates
+
+_: screen saver <n>
+_.: screensaver <n>
+_V: screen-saver <n>
+
+_: sell-off <n>
+_.: selloff <n>
+
+_: send-off <n>
+_.: sendoff <n>
+
+_: show-off <n>
+_.: showoff <n>
 
 _: silkscreen <n>
 ? silk screen
@@ -84,18 +452,124 @@ _: silkscreen <n>
 _: silkscreen <v>
 _=: silk-screen <m→v>
 
+_: six-shooter <n>
+_V: sixshooter <n>
+
+_: smarty-pants
+_v: smartypants <n>
+
+_: smoke screen <n>
+_v: smokescreen <n>
+
+_: soulmate <n>
+_?: soul mate <n>
+
+_: sound bite <n>
+_v: soundbite <n>
+
+_: space-time <n>
+_.: spacetime
+
+_: spellcheck <n>
+_?: spell-check
+
+_: spellcheck <v>
+_?: spell-check
+
+_: spiderweb <n>
+_V: spider-web
+
+_: start-up <n>
+_.: startup <n>
+
+_: swan song <n>
+_v: swan-song <n>
+_v: swansong <n>
+
+_: swear word <n>
+_v: swearword <n>
+_V: swear-word <n>
+
+_: sweatsuit <n>
+_?: sweat suit <n>
+
 _: sweetbrier <n>
 _v: sweetbriar
 _V: sweet-brier
 _V: sweet-briar
 
+_: sweet corn <n>
+_.: sweetcorn
+_v: sweet-corn
+
+_: tea bag <n>
+_v: teabag <n>
+_-: tea-bag <n>
+
+_: top-notch <aj>
+_v: topnotch <aj>
+
+_: toss-up <n>
+_.: tossup <n>
+
 _: trapdoor <n>
 _v: trap door <n>
 _-: trap-door <n>
 
+_: trash can <n>
+_v: trashcan <n>
+_V: trash-can <n>
+
+_: tune-up <n>
+_.: tuneup <n>
+
+_: voicemail <n>
+_v: voice mail <n>
+_v: voice-mail
+
+_: warmhearted <aj>
+_v: warm-hearted
+
+_: warmheartedly
+_v: warm-heartedly
+
+_: warmheartedness <n>
+_v: warm-heartedness
+
+_: waterhole <n>
+_?: water hole <n>
+_-: water-hole <n>
+
+_: water lily <n>
+_v: waterlily <n>
+
+_: water wheel <n>
+_v: waterwheel <n>
+_V: water-wheel <n>
+
 _: wetsuit <n>
 _v: wet suit <n>
+
+_: wheat germ <n>
+_v: wheatgerm
 
 _: wheelhorse <n>
 _?: wheel horse <n>
 _V: wheel-horse
+
+_: whiz kid <n>
+_v: whizkid <n>
+
+_: wholewheat
+_?: whole wheat
+_v: whole-wheat <aj>
+
+wildcard <n> {→symbol}
+
+wild card <n>
+
+_: wise guy <n>
+_.: wiseguy <n>
+
+_: wise woman
+_.: wisewoman <n>

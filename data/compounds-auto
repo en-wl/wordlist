@@ -13,15 +13,6 @@ _V: above-ground
 _: above-mentioned <aj>
 _V: abovementioned
 
-_: absent-minded
-_v: absentminded <aj>
-
-_: absent-mindedly
-_.: absentmindedly <av>
-
-_: absent-mindedness
-_.: absentmindedness <n>
-
 _: acoustoelectric
 _=: acousto-electric
 
@@ -67,13 +58,6 @@ _v: afterschool
 _: aftertax
 _=: after-tax
 
-_: air bag <n>
-_v: airbag <n>
-
-_: air base <n>
-_v: airbase <n>
-_-: air-base <n>
-
 _: airbed <n>
 _?: air bed <n>
 
@@ -95,9 +79,6 @@ _V: air-gun
 
 _: air hole <n>
 _v: airhole <n>
-
-_: air letter <n>
-_v: airletter <n>
 
 _: air lock <n>
 _.: airlock <n>
@@ -127,9 +108,6 @@ _v: air speed
 _: airstrike <n>
 _v: air strike <n>
 _-: air-strike <n>
-
-_: air time
-_v: airtime <n>
 
 _: air-traffic control
 _v: air traffic control
@@ -424,9 +402,6 @@ _V: back-lighting
 _: backload <m>
 _=: back-load <m>
 
-_: back seat <n>
-_v: backseat <n>
-
 _: back-seat driver
 _v: backseat driver <n>
 
@@ -460,9 +435,6 @@ _v: ball cock <n>
 _: ballflower <n>
 _?: ball-flower
 
-_: ball game <n>
-_v: ballgame <n>
-
 _: ballgirl <n>
 _?: ball girl <n>
 
@@ -493,13 +465,6 @@ _?: bang-tail
 
 _: bankbook <n>
 _-: bank-book <n>
-
-_: bank card <n>
-_v: bankcard <n>
-
-_: banknote <n>
-_v: bank note <n>
-_-: bank-note <n>
 
 _: bantamweight <n>
 _-: bantam-weight
@@ -684,9 +649,6 @@ _V: bent-grass <n>
 _: bestseller <n>
 _?: best-seller
 _v: best seller <n>
-
-_: best-selling <aj>
-_v: bestselling
 
 _: beta-carotene <n>
 _v: betacarotene
@@ -881,9 +843,6 @@ _v: blow-hard
 _: blowhole <n>
 _v: blow-hole
 
-_: blow job <n>
-_v: blowjob <n>
-
 _: blowout <n>
 _-: blow-out <n>
 
@@ -905,9 +864,6 @@ _v: bluegum <n>
 
 _: blue jay <n>
 _v: bluejay <n>
-
-_: blue jeans <n>
-_v: bluejeans <n>
 
 _: bluepoint <n>
 _?: blue point <n>
@@ -1079,9 +1035,6 @@ _v: brainstem <n>
 _: brainteaser <n>
 _v: brain-teaser <n>
 
-_: brain wave <n>
-_v: brainwave <n>
-
 _: brakesman
 _?: brakes-man
 
@@ -1129,9 +1082,6 @@ _-: break-front
 
 _: breakout <n>
 _-: break-out <n>
-
-_: break point <n>
-_v: breakpoint <n>
 
 _: breakup <n>
 _v: break-up <n>
@@ -1202,14 +1152,8 @@ _.: brownnoser <n>
 _: brushfire <n>
 _V: brush-fire
 
-_: brush-off <n>
-_v: brushoff <n>
-
 _: brushup <n>
 _=: brush-up <n>
-
-_: bubble gum <n>
-_v: bubblegum <n>
 
 _: bubbleheaded
 _V: bubble-headed
@@ -1231,9 +1175,6 @@ _v: buffalofish <n>
 
 _: buildup <n>
 _v: build-up <n>
-
-_: built-in <aj>
-_v: builtin
 
 _: bullbaiting <n>
 _=: bull-baiting
@@ -1598,10 +1539,6 @@ _?: cast-off <n>
 _: catchall <n>
 _?: catch-all <n>
 
-_: catch phrase <n>
-_v: catchphrase <n>
-_V: catch-phrase
-
 _: catch-up
 _V: catchup <n>
 
@@ -1736,16 +1673,6 @@ _v: chi-chi
 _: chickabiddy
 _?: chick-a-biddy <n>
 
-_: chicken feed <n>
-_v: chickenfeed <n>
-_V: chicken-feed
-
-_: chicken-hearted
-_v: chickenhearted <aj>
-
-_: chicken pox
-_v: chickenpox <n>
-
 _: chickpea <n>
 _v: chick pea
 _v: chick-pea <n>
@@ -1851,15 +1778,6 @@ _V: clay-bank
 _: cleanup <n>
 _v: clean-up <n>
 
-_: clear-headed
-_v: clearheaded <aj>
-
-_: clearheadedly
-_=: clear-headedly
-
-_: clear-headedness
-_.: clearheadedness <n>
-
 _: clearinghouse <n>
 _v: clearing house <n>
 
@@ -1910,9 +1828,6 @@ _?: close-mouthed
 
 _: close-stool
 _.: closestool <n>
-
-_: close-up <n>
-_v: closeup <n>
 
 _: clothesbasket
 _V: clothes-basket <n>
@@ -1972,9 +1887,6 @@ _=: coal-miner
 
 _: coalsack <n>
 _=: coal-sack <n>
-
-_: coast guard
-_v: coastguard <n>
 
 _: coatdress <n>
 _V: coat-dress
@@ -2054,9 +1966,6 @@ _V: co-extension
 
 _: coextensive <aj>
 _V: co-extensive
-
-_: coffee cake <n>
-_v: coffeecake <n>
 
 _: coffeehouse <n>
 _v: coffee house <n>
@@ -2138,13 +2047,6 @@ _-: companion-way <n>
 
 _: concertmaster <n>
 _-: concert-master
-
-_: con man <n>
-_v: con-man
-_v: conman <n>
-
-_: con men
-_=: con-men
 
 _: container ship <n>
 _v: containership <n>
@@ -2497,9 +2399,6 @@ _V: cranefly <n>
 _: crash landing <n>
 _v: crash-landing <n>
 
-_: crawl space <n>
-_v: crawlspace <n>
-
 _: cream puff <n>
 _V: creampuff <n>
 
@@ -2705,10 +2604,6 @@ _-: day-bed
 _: daybook <n>
 _V: day-book <n>
 
-_: day care <n>
-_v: day-care
-_v: daycare <n>
-
 _: dayfly <n>
 _?: day-fly
 
@@ -2831,18 +2726,6 @@ _v: deep six
 
 _: deerhound <n>
 _V: deer-hound
-
-_: deescalate <v>
-_?: de-escalate <v>
-
-_: de-escalation <n>
-_v: deescalation <n>
-
-_: de-ice <v>
-_v: deice <v>
-
-_: deicer <n>
-_?: de-icer <n>
 
 _: deliveryman <n>
 _-: delivery-man
@@ -3140,10 +3023,6 @@ _V: draw-tube
 _: dreamtime <n>
 _=: dream time
 
-_: dream world
-_v: dreamworld <n>
-_V: dream-world
-
 _: dress up <v>
 _v: dress-up
 
@@ -3224,9 +3103,6 @@ _V: duck-tail
 
 _: dumbcane <n>
 _=: dumb-cane
-
-_: dum-dum
-_v: dumdum <n>
 
 _: dungheap <n>
 _=: dung-heap <n>
@@ -3430,9 +3306,6 @@ _V: eye-beam
 
 _: eyehole <n>
 _V: eye-hole <n>
-
-_: eye-opener <n>
-_v: eyeopener <n>
 
 _: eyeopening <a>
 _?: eye-opening
@@ -3731,9 +3604,6 @@ _-: fire-storm
 _: firethorn <n>
 _=: fire thorn <n>
 
-_: fire truck <n>
-_v: firetruck <n>
-
 _: firewarden
 _?: fire-warden
 
@@ -3798,9 +3668,6 @@ _v: fivespot <n>
 _: flameout <n>
 _v: flame-out <n>
 
-_: flare-up <n>
-_v: flareup <n>
-
 _: flashback <n>
 _-: flash-back <n>
 
@@ -3810,9 +3677,6 @@ _V: flash-board
 _: flashbulb <n>
 _v: flash bulb <n>
 _-: flash-bulb <n>
-
-_: flash card <n>
-_v: flashcard <n>
 
 _: flashgun <n>
 _V: flash-gun <n>
@@ -3901,9 +3765,6 @@ _V: floodtide <n>
 _: floor show <n>
 _v: floorshow <n>
 
-_: flow chart <n>
-_v: flowchart <n>
-
 _: flowerbed <n>
 _?: flower bed <n>
 _V: flower-bed <n>
@@ -3947,20 +3808,8 @@ _?: fog-dog
 _: foldout <n>
 _v: fold-out
 
-_: folk singer <n>
-_v: folksinger <n>
-
-_: folksinging <n>
-_?: folk singing
-
-_: folk song <n>
-_v: folksong <n>
-
 _: folktale <n>
 _=: folk tale <n>
-
-_: follow-up <n>
-_v: followup <n>
 
 _: foot brake <n>
 _v: footbrake <n>
@@ -4028,13 +3877,6 @@ _?: form-fitting
 _: forte-piano <n>
 _.: fortepiano <n>
 
-_: fortune teller <n>
-_v: fortune-teller <n>
-_v: fortuneteller <n>
-
-_: fortune-telling
-_v: fortunetelling <n>
-
 _: foulbrood <n>
 _V: foul-brood
 
@@ -4046,9 +3888,6 @@ _v: four flush <n>
 
 _: four-flusher <n>
 _v: fourflusher
-
-_: four-poster <n>
-_v: fourposter <n>
 
 _: foursquare <aj>
 _v: four-square
@@ -4243,9 +4082,6 @@ _V: gall-nut <n>
 _: gallstone <n>
 _-: gall-stone <n>
 
-_: garbage man <n>
-_v: garbageman <n>
-
 _: gasbag <n>
 _-: gas-bag <n>
 
@@ -4374,9 +4210,6 @@ _V: goal-tending
 _: goatfish <n>
 _V: goat-fish
 
-_: god-awful <aj>
-_v: godawful
-
 _: godforsaken <aj>
 _V: god-forsaken
 
@@ -4404,10 +4237,6 @@ _-: golden-rod <n>
 _: goldenseal <n>
 _V: golden-seal
 
-_: gold mine <n>
-_v: goldmine <n>
-_V: gold-mine <n>
-
 _: gold plate <v>
 _v: gold-plate <v>
 
@@ -4428,9 +4257,6 @@ _v: good will <n>
 
 _: goody-two-shoes
 _v: goody two-shoes
-
-_: goose bumps
-_v: goosebumps <n>
 
 _: goosefish <n>
 _V: goose-fish
@@ -4557,9 +4383,6 @@ _v: ground swell <n>
 _: groundwater <n>
 _v: ground water <n>
 _-: ground-water
-
-_: grown-up <n>
-_v: grownup <n>
 
 _: grubstake <n>
 _-: grub-stake
@@ -4701,10 +4524,6 @@ _v: hair-splitting
 _: hairsplitting <n>
 _v: hair-splitting
 
-_: hair spray <n>
-_v: hairspray <n>
-_-: hair-spray <n>
-
 _: hairtail <n>
 _V: hair-tail
 
@@ -4762,12 +4581,6 @@ _v: half time
 
 _: halftrack <n>
 _=: half-track <n>
-
-_: half-wit <n>
-_v: halfwit <n>
-
-_: half-witted <aj>
-_v: halfwitted
 
 _: halterneck <n>
 _v: halter-neck
@@ -4832,9 +4645,6 @@ _v: hang-glider <n>
 _: hang gliding <n>
 _v: hang-gliding
 
-_: hang-up <n>
-_v: hangup <n>
-
 _: hara-kiri <n>
 _V: harakiri <n>
 
@@ -4859,9 +4669,6 @@ _=: hard-fisted
 _: hardhanded
 _=: hard-handed
 
-_: hard hat <n>
-_v: hardhat <n>
-
 _: hardheaded <aj>
 _v: hard-headed
 
@@ -4873,12 +4680,6 @@ _V: hard-heartedly
 
 _: hardheartedness <n>
 _?: hard-heartedness
-
-_: hard-line <aj>
-_v: hardline <aj>
-
-_: hard-liner <n>
-_v: hardliner <n>
 
 _: hardmouthed
 _=: hard-mouthed
@@ -4900,9 +4701,6 @@ _V: hardshell
 
 _: hard-wired
 _v: hardwired
-
-_: hard-working
-_v: hardworking <aj>
 
 _: harebrained <aj>
 _v: hare-brained
@@ -4928,9 +4726,6 @@ _=: hazel hen
 
 _: headcheese <n>
 _V: head-cheese
-
-_: head count <n>
-_v: headcount <n>
 
 _: headdress <n>
 _-: head-dress <n>
@@ -4973,12 +4768,6 @@ _-: heart-throb <n>
 
 _: heartwarming <aj>
 _v: heart-warming
-
-_: heat wave <n>
-_v: heatwave <n>
-
-_: heavy-hearted
-_v: heavyhearted <aj>
 
 _: heavyset <aj>
 _v: heavy-set
@@ -5070,10 +4859,6 @@ _v: high-born
 _: highbred
 _V: high-bred
 
-_: high chair <n>
-_v: highchair <n>
-_V: high-chair <n>
-
 _: highfalutin <aj>
 _V: high-falutin
 
@@ -5088,9 +4873,6 @@ _v: highflyer <n>
 
 _: high-flying
 _v: highflying <aj>
-
-_: high-handedness <n>
-_v: highhandedness <n>
 
 _: high life <n>
 _V: highlife <n>
@@ -5110,9 +4892,6 @@ _v: high rise
 _: high-rise <n>
 _v: high rise
 _v: highrise <n>
-
-_: high road <n>
-_v: highroad <n>
 
 _: high spot <n>
 _v: highspot <n>
@@ -5219,9 +4998,6 @@ _v: home-grown
 
 _: homemade <aj>
 _v: home-made
-
-_: home page <n>
-_v: homepage <n>
 
 _: homeroom <n>
 _v: home room <n>
@@ -5339,9 +5115,6 @@ _.: hotline <n>
 _: hotlink <n>
 _v: hot link <n>
 
-_: hot plate <n>
-_v: hotplate <n>
-
 _: hot-press
 _v: hotpress <m>
 
@@ -5439,10 +5212,6 @@ _V: ice-breaker <n>
 
 _: icebreaking
 _?: ice-breaking
-
-_: ice cap <n>
-_v: icecap <n>
-_-: ice-cap <n>
 
 _: ice-cream cone <n>
 _=: ice cream cone
@@ -5809,10 +5578,6 @@ _V: land-lubberly
 _: landmass <n>
 _?: land mass <n>
 
-_: land mine <n>
-_v: landmine <n>
-_V: land-mine <n>
-
 _: landowning <a>
 _V: land-owning
 
@@ -5871,9 +5636,6 @@ _: laughingstock <n>
 _v: laughing stock <n>
 _-: laughing-stock <n>
 
-_: launch pad <n>
-_v: launchpad <n>
-
 _: lava-lava
 _.: lavalava <n>
 
@@ -5885,10 +5647,6 @@ _-: law-breaker <n>
 
 _: lawbreaking <n>
 _V: law-breaking <n>
-
-_: lawn mower <n>
-_v: lawnmower <n>
-_V: lawn-mower <n>
 
 _: layoff <n>
 _v: lay-off <n>
@@ -5957,10 +5715,6 @@ _-: let-down <n>
 _: let out <v>
 _v: let-out
 
-_: letter bomb <n>
-_=: letter-bomb <n>
-_v: letterbomb <n>
-
 _: letterbox <n>
 _v: letter box <n>
 
@@ -5973,15 +5727,8 @@ _?: level-headed <aj>
 _: levelheadedness <n>
 _?: level-headedness
 
-_: life belt <n>
-_v: lifebelt <n>
-
 _: lifeblood <n>
 _-: life-blood
-
-_: life buoy <n>
-_v: lifebuoy <n>
-_V: life-buoy <n>
 
 _: life jacket <n>
 _V: life-jacket <n>
@@ -6022,9 +5769,6 @@ _v: light-faced
 
 _: lightfoot
 _=: light-foot
-
-_: light-headed <aj>
-_v: lightheaded <aj>
 
 _: lightheadedly
 _V: light-headedly <av>
@@ -6071,16 +5815,6 @@ _=: lion-like
 
 _: lip gloss <n>
 _V: lipgloss <n>
-
-_: lip-read <v>
-_v: lipread <v>
-
-_: lipreader <n>
-_?: lip-reader <n>
-
-_: lipreading <n>
-_?: lip reading
-_?: lip-reading
 
 _: lip synch <n>
 _v: lipsynch
@@ -6169,9 +5903,6 @@ _?: long-sighted
 
 _: longsightedness <n>
 _=: long-sightedness
-
-_: long-standing <aj>
-_v: longstanding <aj>
 
 _: longtime <aj>
 _v: long-time <aj>
@@ -6392,9 +6123,6 @@ _V: meal-worm
 
 _: mealybug <n>
 _-: mealy-bug <n>
-
-_: mealy-mouthed <aj>
-_v: mealymouthed <aj>
 
 _: meanspirited <aj>
 _=: mean-spirited
@@ -6746,9 +6474,6 @@ _?: muck-worm
 _: mudbath <n>
 _=: mud-bath <n>
 
-_: muddle-headed
-_v: muddleheaded <aj>
-
 _: mudfish <n>
 _V: mud-fish
 
@@ -6776,12 +6501,6 @@ _V: mud-slinger <n>
 
 _: mudslinging <n>
 _V: mud-slinging
-
-_: mug shot <n>
-_v: mugshot <n>
-
-_: mule skinner <n>
-_v: muleskinner <n>
 
 _: multiauthor
 _=: multi-author
@@ -6818,10 +6537,6 @@ _-: muscle-man
 
 _: muskmelon <n>
 _-: musk-melon
-
-_: musk ox <n>
-_v: musk-ox
-_v: muskox <n>
 
 _: muttonhead <n>
 _V: mutton-head <n>
@@ -6981,10 +6696,6 @@ _V: night-hawk <n>
 
 _: nightlife <n>
 _v: night life <n>
-
-_: night light
-_v: night-light <n>
-_v: nightlight <n>
 
 _: nightrider <n>
 _?: night-rider
@@ -7489,9 +7200,6 @@ _?: nose-band <n>
 _: nosebleed <n>
 _-: nose-bleed <n>
 
-_: nose cone <n>
-_v: nosecone <n>
-
 _: nosedive <n>
 _v: nose dive <n>
 
@@ -7506,12 +7214,6 @@ _V: nose-wheel <n>
 
 _: noticeboard <n>
 _V: notice-board <n>
-
-_: no way
-_v: noway <a>
-
-_: no way
-_v: noway <n>
 
 _: nucleoprotein <n>
 _?: nucleo-protein
@@ -7576,9 +7278,6 @@ _=: off-screen
 
 _: off-season <n>
 _v: off season <n>
-
-_: off-site <aj>
-_v: offsite
 
 _: offstage <aj>
 _V: off-stage
@@ -7659,9 +7358,6 @@ _V: on-line <aj>
 _: onscreen <a>
 _?: on-screen
 
-_: on-site <aj>
-_v: onsite
-
 _: onstream
 _=: on-stream
 
@@ -7673,12 +7369,6 @@ _?: open-handed
 
 _: openhandedness <n>
 _V: open-handedness
-
-_: open-hearted
-_v: openhearted <aj>
-
-_: openheartedness <n>
-_=: open-heartedness
 
 _: open-mouthed
 _v: openmouthed <aj>
@@ -7871,10 +7561,6 @@ _V: panty-waist <n>
 _: paperboy <n>
 _v: paper boy <n>
 
-_: paper clip <n>
-_v: paperclip <n>
-_V: paper-clip <n>
-
 _: papergirl <n>
 _?: paper girl <n>
 
@@ -7896,9 +7582,6 @@ _V: paper-making
 
 _: paperweight <n>
 _-: paper-weight <n>
-
-_: pari-mutuel <n>
-_v: parimutuel <n>
 
 _: parrotfish <n>
 _V: parrot-fish
@@ -7971,10 +7654,6 @@ _-: pay-out
 
 _: pay out <v>
 _v: pay-out
-
-_: pay phone <n>
-_v: payphone <n>
-_V: pay-phone <n>
 
 _: payroll <n>
 _-: pay-roll <n>
@@ -8070,12 +7749,6 @@ _V: peppershaker <n>
 
 _: pepper tree <n>
 _v: peppertree <n>
-
-_: percent <a>
-_v: per cent
-
-_: percent <n>
-_v: per cent
 
 _: pewholder <n>
 _=: pew-holder
@@ -8322,12 +7995,6 @@ _: pocketknife <n>
 _v: pocket knife <n>
 _-: pocket-knife <n>
 
-_: point-blank <aj>
-_v: pointblank
-
-_: point-blank <av>
-_v: pointblank
-
 _: point man <n>
 _V: pointman <n>
 
@@ -8348,9 +8015,6 @@ _V: poolhall <n>
 
 _: pooper scooper
 _=: pooper-scooper <n>
-
-_: poor boy <n>
-_v: poorboy <n>
 
 _: poor-mouth <m>
 _v: poormouth
@@ -8754,9 +8418,6 @@ _V: punchbowl <n>
 
 _: punch card <n>
 _V: punchcard <n>
-
-_: punch line <n>
-_v: punchline <n>
 
 _: pureblood <aj>
 _=: pure-blood
@@ -9228,13 +8889,6 @@ _V: ring-tail
 
 _: ringtaw <n>
 _=: ring-taw
-
-_: rip cord <n>
-_v: ripcord <n>
-_-: rip-cord <n>
-
-_: rip-off <n>
-_v: ripoff <n>
 
 _: ripsaw <n>
 _-: rip-saw <n>
@@ -9736,10 +9390,6 @@ _: screen-printing
 _v: screenprinting
 _V: screen printing
 
-_: screen saver <n>
-_v: screensaver <n>
-_V: screen-saver <n>
-
 _: screenwriter <n>
 _-: screen-writer <n>
 
@@ -10013,9 +9663,6 @@ _V: semi-weekly
 _: semiweekly <n>
 _V: semi-weekly
 
-_: send-off <n>
-_v: sendoff <n>
-
 _: send-up <n>
 _V: sendup <n>
 
@@ -10254,9 +9901,6 @@ _: showjumping <n>
 _v: show jumping
 _v: show-jumping
 
-_: show-off <n>
-_v: showoff <n>
-
 _: showstopper <n>
 _v: show-stopper <n>
 _V: show stopper <n>
@@ -10373,9 +10017,6 @@ _v: situp <n>
 
 _: sitz bath <n>
 _V: sitz-bath
-
-_: six-shooter <n>
-_v: sixshooter <n>
 
 _: sketchbook <n>
 _-: sketch-book <n>
@@ -10518,9 +10159,6 @@ _V: smartass <n>
 _: smartweed <n>
 _V: smart-weed
 
-_: smarty-pants
-_v: smartypants <n>
-
 _: smashup <n>
 _v: smash-up <n>
 
@@ -10529,9 +10167,6 @@ _-: smoke-house <n>
 
 _: smokejack <n>
 _V: smoke-jack
-
-_: smoke screen <n>
-_v: smokescreen <n>
 
 _: smokestack <n>
 _-: smoke-stack <n>
@@ -10644,9 +10279,6 @@ _v: so so
 _: so-so <av>
 _v: so so
 
-_: sound bite <n>
-_v: soundbite <n>
-
 _: soundboard <n>
 _-: sound-board
 
@@ -10747,9 +10379,6 @@ _: spacesuit <n>
 _v: space suit
 _-: space-suit <n>
 
-_: space-time <n>
-_v: spacetime
-
 _: sparerib <n>
 _?: spare-rib <n>
 
@@ -10793,9 +10422,6 @@ _v: speed dial
 _: speedup <n>
 _V: speed-up <n>
 
-_: spellchecker <n>
-_?: spell checker <n>
-
 _: spicebush <n>
 _V: spice-bush
 
@@ -10804,13 +10430,6 @@ _v: spick and span
 
 _: spiderlike <aj>
 _V: spider-like
-
-_: spider web <n>
-_v: spiderweb <n>
-_V: spider-web
-
-_: spiderweb <v>
-_V: spider-web
 
 _: spiderwort <n>
 _V: spider-wort
@@ -10949,9 +10568,6 @@ _=: star-nose
 
 _: starstruck
 _?: star-struck <aj>
-
-_: start-up <n>
-_v: startup <n>
 
 _: statehouse <n>
 _V: state house <n>
@@ -11364,19 +10980,11 @@ _=: swallow-wort
 _: swanskin <n>
 _?: swan-skin
 
-_: swan song <n>
-_v: swan-song <n>
-_v: swansong <n>
-
 _: swayback <n>
 _v: sway-back <n>
 
 _: swaybacked <aj>
 _V: sway-backed
-
-_: swear word <n>
-_v: swearword <n>
-_V: swear-word <n>
 
 _: sweatband <n>
 _-: sweat-band <n>
@@ -11391,15 +10999,8 @@ _: sweatshop <n>
 _v: sweat shop
 _-: sweat-shop <n>
 
-_: sweat suit <n>
-_v: sweatsuit <n>
-
 _: sweetbrier <n>
 _V: sweet-brier
-
-_: sweet corn <n>
-_v: sweet-corn
-_v: sweetcorn
 
 _: sweet pea <n>
 _V: sweetpea <n>
@@ -11570,10 +11171,6 @@ _-: tax-payer <n>
 
 _: T cell <n>
 _=: T-cell <n>
-
-_: tea bag <n>
-_v: teabag <n>
-_-: tea-bag <n>
 
 _: teaboard <n>
 _=: tea-board <n>
@@ -12022,9 +11619,6 @@ _V: top-knot <n>
 _: topline <n>
 _=: top-line
 
-_: top-notch <aj>
-_v: topnotch <aj>
-
 _: top-secret <aj>
 _v: top secret
 
@@ -12053,9 +11647,6 @@ _v: tortoise-shell
 _: tortoiseshell <n>
 _v: tortoise shell
 _v: tortoise-shell
-
-_: toss-up <n>
-_v: tossup <n>
 
 _: touch-and-go <aj>
 _=: touch and go
@@ -12179,10 +11770,6 @@ _V: trap-rock
 
 _: trapshooting <n>
 _V: trap-shooting
-
-_: trash can <n>
-_v: trashcan <n>
-_V: trash-can <n>
 
 _: trawl net <n>
 _.: trawlnet <n>
@@ -12314,9 +11901,6 @@ _V: tump-line
 
 _: tundish <n>
 _V: tun-dish
-
-_: tune-up <n>
-_v: tuneup <n>
 
 _: turbo-electric
 _.: turboelectric
@@ -12548,10 +12132,6 @@ _V: vine-dresser
 _: V-neck <n>
 _v: V neck <n>
 
-_: voice mail <n>
-_v: voice-mail
-_v: voicemail <n>
-
 _: voice-over <n>
 _v: voiceover <n>
 
@@ -12615,15 +12195,6 @@ _v: war-horse <n>
 
 _: warmed-over
 _v: warmed over
-
-_: warm-hearted
-_v: warmhearted <aj>
-
-_: warm-heartedly
-_V: warmheartedly
-
-_: warm-heartedness
-_.: warmheartedness <n>
 
 _: warm-up <n>
 _v: warm up <n>
@@ -12747,18 +12318,11 @@ _: water hen <n>
 _=: water-hen
 _v: waterhen <n>
 
-_: water hole <n>
-_v: waterhole <n>
-_-: water-hole <n>
-
 _: waterjet <n>
 _=: water-jet
 
 _: waterleaf <n>
 _V: water-leaf
-
-_: water lily <n>
-_v: waterlily <n>
 
 _: waterline <n>
 _v: water line <n>
@@ -12799,10 +12363,6 @@ _=: water thrush <n>
 
 _: waterweed <n>
 _V: water-weed
-
-_: water wheel <n>
-_v: waterwheel <n>
-_V: water-wheel <n>
 
 _: water wings <n>
 _=: water-wings
@@ -13075,9 +12635,6 @@ _V: whale-man
 _: what-if
 _v: what if
 
-_: wheat germ <n>
-_v: wheatgerm
-
 _: wheatmeal
 _V: wheat-meal
 
@@ -13148,9 +12705,6 @@ _: white water <n>
 _.: whitewater <n>
 _V: white-water
 
-_: whiz kid <n>
-_v: whizkid <n>
-
 _: whizzbang <n>
 _V: whizz-bang <n>
 
@@ -13169,10 +12723,6 @@ _v: whole-heartedly
 
 _: wholemeal <aj>
 _v: whole-meal
-
-_: whole-wheat <aj>
-_v: whole wheat
-_v: wholewheat
 
 _: wicketkeeper <n>
 _V: wicket-keeper <n>
@@ -13195,9 +12745,6 @@ _=: wife-like
 
 _: wigmaker <n>
 _V: wig-maker <n>
-
-_: wild card <n>
-_v: wildcard <n>
 
 _: wildcat <n>
 _-: wild-cat <n>
@@ -13362,12 +12909,6 @@ _=: wire-way <n>
 
 _: wireworm <n>
 _?: wire-worm
-
-_: wise guy <n>
-_v: wiseguy <n>
-
-_: wisewoman <n>
-_=: wise woman
 
 _: witch hunt <n>
 _v: witch-hunt <n>

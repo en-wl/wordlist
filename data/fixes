@@ -3,6 +3,8 @@
 - analytic <n>: analytics
 + _analytics <n>
 
+angelfish <n>: (angelfish | angelfishes*)
+
 - anyway <n>
 
 A B: anyway <av>
@@ -115,6 +117,10 @@ leaguer <m→n_v>
 
 = A C: math <n>
 = B: maths <n>
+
+= A Bv: percent <n>: percent
+- per cent
++ B AV: per cent <n>: per cent
 
 person <n>: (people | V: persons), person's, (people's | V: persons')
 + 60: +: person <n>: persons

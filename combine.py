@@ -17,25 +17,26 @@ import libscowl
 from libscowl import *
 from libscowl import _importFromDB, _finalizeGroups, _createClusters, _mergeText
 
-adjustFiles = (
-    'data/compounds',
-    'data/variants',
-    'data/fixes',
-    'data/exclude',
-)
 mergeFiles = (
     ('data/extra'),
     ('data/signature'),
     ('data/coca'),
 )
 
+adjustFiles = (
+    'data/compounds',
+    'data/variants',
+    'data/fixes',
+    'data/exclude',
+)
+
 if len(sys.argv) < 2:
     usage()
 
 if sys.argv[1] == 'sort':
-    for fn in adjustFiles:
-        sortFileInPlace(files=[fn])
     for fn in mergeFiles:
+        sortFileInPlace(files=[fn])
+    for fn in adjustFiles:
         sortFileInPlace(files=[fn])
     exit(0)
 
@@ -112,16 +113,16 @@ with open('data/compounds-auto') as f:
                   groupComment = 'Compound variant levels are a best guess based on freq and other related info.')
 finish()
 
-for fn in adjustFiles:
-    start(fn)
-    with open(fn) as f:
-        adjustEntries(conn, f, simplifyScowlInfo=False)
-    finish()
-
 for fn in mergeFiles:
     start(fn)
     with open(fn) as f:
         mergeEntries(conn, f)
+    finish()
+
+for fn in adjustFiles:
+    start(fn)
+    with open(fn) as f:
+        adjustEntries(conn, f, simplifyScowlInfo=False)
     finish()
 
 if not rawMode:

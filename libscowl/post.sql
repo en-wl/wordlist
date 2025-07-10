@@ -12,9 +12,6 @@ insert into categories select distinct category from _scowl_combined order by ca
 delete from tags;
 insert into tags select distinct tag from _scowl_combined order by category;
 
-delete from variant_info;
-insert into variant_info select * from variant_info_view;
-
 delete from duplicate_derived;
 insert into duplicate_derived select * from duplicate_derived_view;
 

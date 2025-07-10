@@ -8,28 +8,18 @@ select size, category, region, tag, null, null, word_id
 from scowl_override;
 select * from _scowl_combined limit 0;
 
--- notes on scowl_ view:
---   - left join everywhere to prevent SQLite from reordering the join in most cases
---     - in particular, without a left join doing "select distinct word from scowl_ where ..." will cause
---       SQLite to scan the words table even if most of the entries in words will not be used
---     - but not cross join (as the documentation suggestions) as that will prevent reordering in all cases,
---       for example when doing "select * from scowl_ where word = ?";
---   - variant_info is a materialized view as SQLite will materialize the view in all cases adding a fixed amount of
---     overhead, even to simple queries such as "select * from scowl_ where word = ?"
-
 create view _scowl_main as
 select group_id, lemma_id, word_id,
        size, category, region, tag, pos, base_pos, pos_category, pos_class, usage_note,
-       coalesce(spelling,'_') as spelling, coalesce(variant_level,0) as variant_level, coalesce(legacy_level,0) as legacy_level,
+       spelling, variant_level as variant_level, legacy_level,
        lemma_variant_level, derived_variant_level,
        word,
        group_rank, entry_rank
   from scowl_data
-  left join words using (group_id, pos)
+  join words_w_variant_info using (group_id, pos)
+  left join variant_levels using (variant_level)
   left join groups using (group_id)
   left join base_poses using (base_pos)
-  left join variant_info using (word_id)
-  left join variant_levels using (variant_level)
 ;
 create view _scowl_override as
 select group_id, lemma_id, word_id,
@@ -39,10 +29,10 @@ select group_id, lemma_id, word_id,
        word,
        group_rank, entry_rank
   from scowl_override
-  left join words using (word_id)
+  join words using (word_id)
+  join (select spelling from spellings) as s on spelling = '_'
   left join groups using (group_id)
   left join base_poses using (base_pos)
-  left join (select spelling from spellings) as s on spelling = '_'
 ;
 
 create view scowl_ as

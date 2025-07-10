@@ -185,15 +185,6 @@ create table duplicate_derived (
   primary key (group_id, word)
 ) without rowid;
 
-create table variant_info (
-  word_id integer not null,
-  spelling text not null,
-  variant_level smallint not null,
-  lemma_variant_level,
-  derived_variant_level,
-  primary key (word_id, spelling)
-) without rowid;
-
 --
 -- internal tables
 --

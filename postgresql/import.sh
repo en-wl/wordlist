@@ -78,7 +78,6 @@ set search_path=$SCHEMA,$TYPESCHEMA;
   create schema if not exists $SCHEMA;
   \i schema.sql
   \i views.sql
-  alter view variant_info_view rename to variant_info;
   \i scowl.sql
   alter view duplicate_derived_view rename to duplicate_derived;
 \else

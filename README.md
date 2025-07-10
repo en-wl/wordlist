@@ -545,15 +545,8 @@ SCOWL contains all the information in VarCon but the resulting file format
 does not lead to easy translation.  The underlying database does.
 
 Within the database any words with the same `group_id` and `pos` are
-considered variants of each other.  To get information on the variants
-join the `words` table with `variant_info` using `word_id`.  For example:
-
-    select group_id, pos, spelling, variant_level, word from words join variant_info using (word_id)
-
-Note that there are still some variants that are unmarked and will be excluded
-as they are not in `variant_info`.  If these unmarked variants are important,
-there are different ways to extract that from the database.  How this is done
-will be left as an exercise to the reader.
+considered variants of each other.  You can access variant information via the
+`words_w_variant_info` view.
 
 
 Modifying

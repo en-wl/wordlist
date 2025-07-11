@@ -16,6 +16,9 @@ A.: ax <n_v>
 ##   and they wrote an article on why _axe_ is preferred.  Some other American
 ##   dictionaries still preferred _ax_, however.
 
+A B: briar <n>
+AV BV: brier <n>
+
 _: Curaçao <n/place>
 _-: Curacao <n/place>
 
@@ -44,7 +47,14 @@ A C: kindergartner <n>
 AV B: kindergartener <n>
 A- B-: kindergärtner <n>
 
+A Bv: lambaste <v>
+Av B: lambast <v>
+
 misspell <v>: (A B: misspelled | AV B.: misspelt), -, -
+
+A B C: peddler <n>
+AV B. Cv: pedlar <n>
+A@ B@ C@: pedler <n>
 
 persona <n>: (personae | .: personas), persona's, (personae's | .: personas')
 
@@ -68,6 +78,14 @@ Bv: reprogramme <v>: reprogrammed, reprogramming, reprograms
 _: Réunion <n/place>
 _-: Reunion <n/place>
 
+A B: Salvadoran <n>: Salvadorans_, Salvadoran's
+AV Bv: Salvadorean <n>: Salvadoreans_, Salvadorean's
+AV Bv: Salvadorian <n>: Salvadorians_, Salvadorian's
+
+A B: Salvadoran <aj>
+AV Bv: Salvadorean <aj>
++ AV Bv: Salvadorian <aj>
+
 scampi <n>: (scampi | -: scampies | -: scampis)
 
 _: soigné <aj>
@@ -85,6 +103,8 @@ _V: souffle <a→aj>
 spec <n_v>: (specced | v: spec'd | -: specked), (speccing | v: spec'ing | -: specking), specs
 
 strew <v>: -, (strewn | .: strewed), -, -
+
+taxon <n>: (taxa | V: taxons_), taxon's, (taxa's | V: taxons'_)
 
 A B. C: unbeknownst <aj_av>
 Av B Cv: unbeknown <aj_av>

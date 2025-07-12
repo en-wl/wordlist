@@ -144,11 +144,12 @@ Searching the Database
 
 To search for an entry in scowl use:
 
-    ./scowl search [--db scowl.db] [--by-cluster] WORD [WORD ...]
+    ./scowl search [--db scowl.db] [--by-cluster] [--exact] WORD [WORD ...]
 
 where WORD is one or more words to search.  By default search will return the
 groups with any of the supplied words.  To instead return the entire cluster
-use `--by-cluster`.  Note that the search is case sensitive.
+use `--by-cluster`.  The search by default is fuzzy, to instead search for the
+exact word use `--exact`.
 
 
 Filtering the Database
@@ -797,7 +798,7 @@ script.  If you used `mk-list` in SCOWLv1 is should still produce the same
 results, but please sanity check the output by comparing the results to the
 the last version of SCOWLv1.  If you created word lists by combining files in
 the `final/` directory your scripts will need to be rewritten.  Please use the
-`word-list` command of the `scowl` script to get the wordslists you want.
+`word-list` command of the `scowl` script to get the word lists you want.
 
 If you are using the `word-list` command please note that the variant levels
 has changed.  The original 0 level is now levels 0-1, the original 1 variant

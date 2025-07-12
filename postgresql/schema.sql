@@ -138,6 +138,12 @@ create table lemma_comments (
 -- these tables are populated when exporting but not used when importing
 --
 
+create table fuzzy (
+  word text not null primary key,
+  word_key text not null
+);
+create index fuzzy_idx on fuzzy(word_key);
+
 create table cluster_map (
   group_id integer primary key,
   cluster_id integer not null

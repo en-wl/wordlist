@@ -529,8 +529,8 @@ def adjustEntries(conn, f = None, *,
                             addMissingSpellings(wes, gi.spellings)
                             for we in wes:
                                 if not hasattr(we, '_word_id'):
-                                  conn.execute("insert into new_words (word_id, main_group_id, lemma_id, pos, word, entry_rank) values (?, ?, ?, ?, ?, ?)",
-                                               (next_word_id, sg.id, li.lemma_id, pos, we.word, we.entry_rank))
+                                  conn.execute("insert into new_words (word_id, main_group_id, lemma_id, pos, word, word_key, entry_rank) values (?, ?, ?, ?, ?, ?, ?)",
+                                               (next_word_id, sg.id, li.lemma_id, pos, we.word, clusterKey(we.word).decode('ascii'), we.entry_rank))
                                   we._word_id = next_word_id
                                   next_word_id += 1
                                 if we.spellings:
@@ -624,7 +624,9 @@ def adjustEntries(conn, f = None, *,
     print(f'adjust_proc.sql: {time.monotonic()-t}s')
 
     if preview:
-        clusters = importFromDB(conn, filterQuery = 'select main_group_id from use_info_from')
+        clusters = importFromDB(conn, filterQuery =
+                                "with l as (select * from words join fuzzy using (word) where lemma_id = word_id) "
+                                "  select b.group_id from use_info_from cross join l as a on main_group_id = a.group_id cross join l as b using (word_key) ")
         exportAsText(clusters, conn, sys.stdout, showExtraInfo = False)
         conn.rollback()
     else:

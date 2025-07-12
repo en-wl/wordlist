@@ -19,7 +19,7 @@ select a.group_id, a.pos,
        dv.variant_level as derived_variant_level
   from words a
   left join lemma_variant_info lv using (lemma_id)
-  left join derived_variant_info dv using (word_id)
+  left join derived_variant_info dv using (word_id)     
   where dv.variant_level is null
      or coalesce(lv.spelling, '_') = dv.spelling
      or coalesce(lv.spelling, '_') = '_'

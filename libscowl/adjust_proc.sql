@@ -114,7 +114,11 @@ insert or ignore into groups (group_id, base_pos, defn_note, pos_class, usage_no
 
 delete from words where word_id in (select word_id from to_remove);
 
-insert into words select * from new_words;
+insert into words (word_id, group_id, lemma_id, pos, word, entry_rank)
+  select word_id, main_group_id, lemma_id, pos, word, entry_rank from new_words;
+
+insert or ignore into fuzzy (word, word_key)
+  select word, word_key from new_words;
 
 --
 -- fix up words

@@ -60,7 +60,9 @@ def mergeEntries(conn, f = None, *,
         pass
 
     if preview:
-        clusters = importFromDB(conn, filterTable = 'merged_groups')
+        clusters = importFromDB(conn, filterQuery =
+                                "with l as (select * from words join fuzzy using (word) where lemma_id = word_id) "
+                                "  select b.group_id from merged_groups m cross join l as a on m.group_id = a.group_id cross join l as b using (word_key) ")
         exportAsText(clusters, conn, sys.stdout, showExtraInfo = False)
         conn.rollback()
     else:
@@ -155,6 +157,7 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
                         lemma_id = word_id
                     conn.execute("insert into words (word_id, group_id, lemma_id, pos, word, entry_rank) values (?, ?, ?, ?, ?, ?)",
                                  (word_id, group_id, lemma_id, pos, we.word, we.entry_rank))
+                    conn.execute("insert or ignore into fuzzy (word, word_key) values (?, ?) ", (we.word, clusterKey(we.word).decode('ascii')))
                 else:
                     if lemma_id is None:
                         lemma_id = word_id

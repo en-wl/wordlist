@@ -30,8 +30,9 @@ create table temp.new_words (
   word_id integer primary key,
   main_group_id integer not null,
   lemma_id integer not null,
-  pos text not null,
-  word text not null,
+  pos text text not null,
+  word text text not null,
+  word_key text not null,
   entry_rank text default ''
 );
 

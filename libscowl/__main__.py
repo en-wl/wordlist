@@ -249,6 +249,7 @@ p = addParser('search',
 p.set_defaults(func=searchDB)
 addDbArgument(p)
 p.add_argument('--by-cluster', action='store_true', default=False, dest='byCluster')
+p.add_argument('--exact', action='store_true', default=False)
 p.add_argument('words', nargs='+', metavar='<word>',
                help="word to search for")
 

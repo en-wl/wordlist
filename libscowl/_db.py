@@ -196,10 +196,15 @@ def _importFromDB(conn, filterTable, filterQuery):
 
     return (groups.values(), clusterComments)
 
-def searchDB(conn, words, byCluster):
+def searchDB(conn, words, byCluster, exact = False):
     conn.execute("create temp table group_id_filter (group_id integer primary key)")
-    for w in words:
-        conn.execute("insert or ignore into group_id_filter select group_id from words where word = ?", (w,))
+    if exact:
+        for w in words:
+            conn.execute("insert or ignore into group_id_filter select group_id from words where word = ?", (w,))
+    else:
+        for w in words:
+            w = clusterKey(w).decode('ascii')
+            conn.execute("insert or ignore into group_id_filter select group_id from words join fuzzy using (word) where word_key = ?", (w,))
     conn.execute("analyze group_id_filter")
     if byCluster:
         conn.execute("insert or ignore into group_id_filter "
@@ -220,23 +225,24 @@ class BasicGroupInfo(SlotsDataClass):
     def sortKey(self):
         return self.group_id
 
+def updateFuzzy(conn):
+    for word, in conn.execute("select distinct word from words where word not in (select word from fuzzy)"):
+        conn.execute("insert into fuzzy(word, word_key) values (?, ?)", (word, clusterKey(word).decode('ascii')))
+    conn.execute("analyze fuzzy")
+
 def createClusterMap(conn):
-    groups = []
-    for group_id, in conn.execute("select group_id from groups"):
-        lemmas = []
-        for word, in conn.execute("select word from words where group_id = ? and word_id = lemma_id order by word_id", (group_id,)):
-            lemmas.append(word)
-        if lemmas:
-            groups.append(BasicGroupInfo(lemmas, group_id))
-    clusters = _createClusters(groups)
-    conn.execute("delete from cluster_map")
-    for cls in clusters:
-        cluster_id = cls.groups[0].group_id
-        for grp in cls.groups:
-            conn.execute("insert into cluster_map (group_id, cluster_id) values (?, ?)", (grp.group_id, cluster_id))
+    conn.execute("delete from cluster_map");
+    conn.execute("create temp table closure (x integer not null, y integer not null, primary key(x, y)) without rowid")
+    cur = conn.execute("insert or ignore into closure with "
+                       "  by_key as (select distinct group_id, word_key from words left join fuzzy using (word) where word_id = lemma_id) "
+                       "select a.group_id, b.group_id from by_key a join by_key b using (word_key) ");
+    while (cur.rowcount > 0):
+        cur.execute("insert or ignore into closure select a.x, b.y from closure a join closure b on a.y = b.x")
+    conn.execute("insert into cluster_map (group_id, cluster_id) select x, min(y) from closure group by x")
     conn.execute("analyze cluster_map")
 
 def finalizeDB(conn):
+    updateFuzzy(conn)
     createClusterMap(conn)
     conn.commit()
     conn.executescript((_dir / 'post.sql').read_text())
@@ -269,6 +275,8 @@ def exportToDB(clusters, conn):
 
     conn.execute("analyze")
     conn.commit()
+
+    updateFuzzy(conn)
 
     conn.executescript((_dir / 'post.sql').read_text())
 

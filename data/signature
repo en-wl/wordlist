@@ -1,5 +1,8 @@
 #:: merge [+]
 
+50: _: commenter <n>: commenters, commenter's
+50: _V: commentor <n>: commentors, commentor's
+
 50: _: dox <v>: doxed, doxing, doxes
 50: _.: doxx <v>: doxxed, doxxing, doxxes
 

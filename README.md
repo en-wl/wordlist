@@ -549,6 +549,24 @@ Within the database any words with the same `group_id` and `pos` are
 considered variants of each other.  You can access variant information via the
 `words_w_variant_info` view.
 
+For example to convert the word _color_ from the American to the British
+spelling you could use this query:
+
+    select distinct b.word
+      from words_w_variant_info as a
+      join words_w_variant_info as b using (group_id, pos)
+    where a.spelling in ('_','A') and a.variant_level <= 6
+      and b.spelling in ('_','B') and b.variant_level <= 1 and a.word='color';
+
+which, in this case, will return _colour_ as the only result.  This query will
+match up to the variant level of 6 (_acceptable_ or `V`) for the American
+spelling but only up to level 1 (_include_ or `.`) for the British.  In some
+cases there may be multiple matches; for example, if the word was _program_,
+the query will return both _program_ and _programme_ as the correct spelling
+depends on context: it's _program_ is the case of _computer program_ but
+_programme_ in most other contexts.  If the word is the same in both dialects
+the query will return the same word.
+
 
 Modifying
 ---------

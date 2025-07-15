@@ -274,7 +274,7 @@ p.add_argument('--simplify', type=lst, metavar='<list>', help="any of: size, cat
 p = addParser('combine-pos',
               help='combine n/v and aj/av groups when possible')
 p.set_defaults(func=combinePOS)
-
+addDbArgument(p)
 
 p = addParser('split-pos',
               help='split groups with combined pos')

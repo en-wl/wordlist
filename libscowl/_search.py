@@ -238,7 +238,10 @@ def _filterDB(filterType, conn, orig, *, simplify = (), **args):
     conn.execute("insert into group_comments select * from orig.group_comments where group_id in (select group_id from groups)")
     conn.execute("insert into lemma_comments select * from orig.lemma_comments where lemma_id in (select lemma_id from words)")
 
-    conn.execute("insert into cluster_map select * from orig.cluster_map")
+    conn.execute("insert into fuzzy select * from orig.fuzzy where word in (select word from words)")
+    conn.execute("insert into cluster_map select * from orig.cluster_map where group_id in (select group_id from groups)")
+
+    conn.execute("insert into _combined select * from orig._combined where group_id in (select group_id from groups)")
 
     conn.execute("insert into _variables values(?, ?)", ('filter_type', filterType))
     conn.execute("insert into _variables values(?, ?)", ('filter_where_clause', whereClause))
@@ -338,7 +341,7 @@ def filterDB(orig, new, filterType, **args):
     _filterDB(filterType, conn, orig, **args)
     conn.commit()
     if filterType == 'by-line' and conn.execute("select true from orig.groups where base_pos in ('n_v','aj_av') limit 1").fetchone():
-        combinePOS(conn)
+        conn.executescript((_dir / 'combine_pos.sql').read_text())
 
     conn.executescript((_dir / 'post.sql').read_text())
     return conn

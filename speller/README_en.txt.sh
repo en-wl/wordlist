@@ -64,7 +64,7 @@ The en_GB and large dictionaries are made available on an experimental
 basis.  If you find them useful please send me a quick email at
 kevina@gnu.org.
 
-If none of these dictionaries suite you (for example, maybe you want
+If none of these dictionaries suit you (for example, maybe you want
 the normal dictionary that also includes common variants) additional
 dictionaries can be generated at http://app.aspell.net/create or by
 modifying speller/make-hunspell-dict in SCOWL.  Please do let me know

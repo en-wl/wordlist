@@ -4,8 +4,8 @@ Spell Checking Oriented Word Lists Version 2 (SCOWLv2)
 SCOWL (Spell Checker Oriented Word Lists) and Friends is a database of
 information on English words useful for creating high-quality word lists
 suitable for use in spell checkers of most dialects of English. The database
-primary contains information on how common a word is, differences in spelling
-between the dialects if English, spelling variant information, and (basic)
+primarily contains information on how common a word is, differences in spelling
+between the dialects of English, spelling variant information, and (basic)
 part-of-speech and inflection information.
 
 The original SCOWL (SCOWLv1) was a compilation of the information in the
@@ -18,12 +18,12 @@ SQLite3 database.  In order to keep the file size manageable and to avoid noise
 entries the minimum SCOWL size is now 35 and the 95 size is not included.
 
 Unlike SCOWLv1, SCOWLv2 includes the proper spelling of abbreviations that
-included the trailing dot.  It also includes words that were excluded from
+include the trailing dot.  It also includes words that were excluded from
 SCOWLv1 such as hyphenated and open (i.e. with space) compound words, and
 words with special symbols in them.
 
 SCOWL is derived from many sources under a BSD compatible license. The
-combined work is freely available under a MIT-like license.  See the file
+combined work is freely available under an MIT-like license.  See the file
 Copyright for details.
 
 SCOWLv2 is still a work in progress.  The default size (60) has been vetted
@@ -31,7 +31,7 @@ for errors, and the larger size (70) should also be usable as a spellchecker
 dictionary.  The processing of the source data is completely different so the
 resulting wordlists are not the same.  Most of the changes I regard as
 corrections for improper handling of derived forms or variants in SCOWLv1.
-The handling of possessive forms have been completely redone based partly on
+The handling of possessive forms has been completely redone based partly on
 the noun category assigned by WordNet.  For American English any new changes
 to non-possessive forms of words included in speller dictionary have been
 accounted for and noted in the file `misc/comp-60.txt`.
@@ -49,7 +49,7 @@ SCOWLv2 requires Python 3 and SQLite.  It currently requires Python 3.7 and
 SQLite 3.33.0.  Newer versions should work, older versions may work but are
 not supported.
 
-A Unix like environment is also required for now.
+A Unix-like environment is also required for now.
 
 
 Basic Usage
@@ -65,7 +65,7 @@ most operations.  If required the flat text file can also be created with `make
 scowl.txt`.
 
 To work with SCOWL use the `scowl` script provided in the root directory.
-This script is a very thin wrapper around the `libscowl` python module.  The
+This script is a very thin wrapper around the `libscowl` Python module.  The
 module is not available on PyPI, but instead included with SCOWL.  This script
 is meant to be run from the root directory of the SCOWL distribution.
 
@@ -83,7 +83,7 @@ such as _dox_ and _doxx_).  The exact meaning of all these values are
 described in the _[File Format](#file-format)_ section.
 
 The above command will create a word-list that corresponds to the default
-dictionary for American English, with the exception that dialectic marks
+dictionary for American English, with the exception that diacritictal marks
 (i.e. accents) are preserved.  To remove the marks use the `--deaccent`
 option:
 
@@ -106,12 +106,12 @@ To create a British word list:
 
     ./scowl word-list 60 B 1 > wl.txt
 
-To create a British word list that include -ise, -ize, and other variant
+To create a British word list that includes -ise, -ize, and other variant
 spellings:
 
     ./scowl word-list 60 B,Z 5 > wl.txt
 
-The default word list includes roman numerals and slang words only really used
+The default word list includes Roman numerals and slang words only really used
 by computer programmers such as "grepped".  To exclude these and any other
 special categories of words use:
 
@@ -127,7 +127,7 @@ For additional options use:
 
 Using the SQLite3 database directly is also supported.  Most of the database
 is defined in the files `schema.sql`, `views.sql` and `scowl.sql` in the
-`libscowl/` directory.  The main entry point for extrating word lists is the
+`libscowl/` directory.  The main entry point for extracting word lists is the
 `scowl_v0` query.
 
 As SCOWLv2 is still in an alpha/testing phase the command line utility and
@@ -135,7 +135,7 @@ schema is subject to change.  At some point the command line interface will
 stabilize.  The schema may still be subject to change but a new `scowl_v1`
 view will be provided that is guaranteed to always provide the same results.
 New columns may be added, but not in a way that will break existing queries.
-If is is necessary to break existing queries a new view will be provided.
+If it is necessary to break existing queries a new view will be provided.
 
 
 Searching the Database
@@ -147,7 +147,7 @@ To search for an entry in scowl use:
 
 where WORD is one or more words to search.  By default search will return the
 groups with any of the supplied words.  To instead return the entire cluster
-use `--by-cluster`.  The search by default is fuzzy, to instead search for the
+use `--by-cluster`.  The search by default is fuzzy. To instead search for the
 exact word use `--exact`.
 
 
@@ -194,10 +194,10 @@ Using the libscowl package directly
 -----------------------------------
 
 As previously mentioned the `scowl` script is a very thin wrapper around the
-`libscowl` package.  As such, you can instead use `python3 -m libscowl`
-instead of going through the script.  Use of the python module directly
+`libscowl` package.  As such, you can use `python3 -m libscowl`
+instead of going through the script.  Use of the Python module directly
 instead of through the command line interface is also supported to some
-extent.  Calling the high level functions as it done in the `__main__.py` is
+extent.  Calling the high-level functions as is done in the `__main__.py` is
 supported, but the API may stil change.  Direct use of the internal data
 structures, however, is not supported.
 
@@ -305,7 +305,7 @@ this information, the information at the end of the file takes precedence.
 
 The LEMMA is the base form of the word.
 
-The part of speeches (POS) or as follows:
+The parts of speech (POS) are as follows:
 
     n: noun
     v: verb
@@ -501,9 +501,9 @@ The `†` is added by the database export code to indicate that the spelling of
 the derived form is also used for a separate unrelated lemma.
 
 The `-` is used to mark a significantly less common form of a word.  `~` is
-used to mark plurals nouns that are generally not used, for one reason or
+used to mark plural nouns that are generally not used, for one reason or
 another, except in very specific circumstances.  `!` is used for forms of a
-word that are nearly non-existent.  `@` is used to mark archaic forms a word.
+word that are nearly non-existent.  `@` is used to mark archaic forms of a word.
 
 
 Database structure
@@ -562,7 +562,7 @@ match up to the variant level of 6 (_acceptable_ or `V`) for the American
 spelling but only up to level 1 (_include_ or `.`) for the British.  In some
 cases there may be multiple matches; for example, if the word was _program_,
 the query will return both _program_ and _programme_ as the correct spelling
-depends on context: it's _program_ is the case of _computer program_ but
+depends on context: it's _program_ in the case of _computer program_ but
 _programme_ in most other contexts.  If the word is the same in both dialects
 the query will return the same word.
 
@@ -571,7 +571,7 @@ Modifying
 ---------
 
 For the foreseeable future `scowl.txt` will be generated by combining
-`scowl-pre.txt` will the other files in the `data/` directory using the
+`scowl-pre.txt` with the other files in the `data/` directory using the
 `combine.py` perl script.
 
 To add new entries to SCOWL you should generally add the info to `data/extra`.
@@ -580,9 +580,9 @@ some way, for example a neologism, then the word can be added to
 `data/signature` instead to have the `[+]` tag applied.  Both these files are
 in the _merge_ format.
 
-To make corrections or add variants information use one of `data/fixes`,
+To make corrections or add variant information use one of `data/fixes`,
 `data/variants`, or `data/compounds`.  The first should be used for making
-corrections, the seond for adding variant information, and the last for adding
+corrections, the second for adding variant information, and the last for adding
 variant information strictly related to the preferred form of compound words.
 These files are in the _adjust_ format.
 
@@ -591,7 +591,7 @@ in the _adjust_ format however it should only use a subset of the format.  The
 SCOWL size given should be the minimal SCOWL size that the word should be
 included and the tag '[-]' must be used.
 
-There are other files are used by the `combine.py` that are in a special
+There are other files which are used by the `combine.py` script that are in a special
 format.  These files should, in general, not need to be modified.
 
 ### Merge file format
@@ -609,8 +609,8 @@ format is exactly the same as `scowl.txt` except that new data is merged with
 existing groups when there is a match.
 
 Variant information can be provided as part of the new information.  If there
-is a match than the new information will take precedence as long as it doesn't
-create inconsistencies.  If more than one existing groups matches, than the
+is a match then the new information will take precedence as long as it doesn't
+create inconsistencies.  If more than one existing group matches, then the
 two groups will be merged, again as long as it doesn't create inconsistencies.
 Existing group comments are assumed to relate to variant information and will
 be removed if new variant information is provided for all lemma forms within
@@ -619,7 +619,7 @@ the group.
 If any inconsistencies are found the merge will be aborted.
 
 Variant level inconsistencies will arise when there are additional forms found
-in the database that are not mentioned; to resolve this, simply provide the
+in the database that are not mentioned. To resolve this, simply provide the
 additional forms.
 
 Inconsistencies can also arise when merging groups if the two groups have
@@ -639,7 +639,7 @@ _Adjust_ files shoud start with the line:
 
     #:: adjust
 
-After thet, the format is similar to the main `scowl.txt` format but the parsing and
+After that, the format is similar to the main `scowl.txt` format but the parsing and
 processing is different.  Each line is similar to a line in `scowl.txt`
 but is optionally prefixed by one of `?`, `+`, `-`, `=`, `~`, or `#` that dictates
 how that line is processed.  The prefix _must_ be followed by a space.  The
@@ -656,34 +656,34 @@ prefixes have the following approximate meanings:
 Unless prefixed with a `+`, a line is first matched with an exiting lemma in
 the database using the word, pos, and defn-note.  If no match is found the
 group will be skipped.  To avoid this and instead just skip the line, use `?`.
-If the line is prefixed with a `-`, than that lemma will be removed from the
-group.  If the line is prefixed with a `~`, than no additional actions will be
-taken, but the information found in the database will be used to make adjusted
+If the line is prefixed with a `-`, then that lemma will be removed from the
+group.  If the line is prefixed with a `~`, then no additional actions will be
+taken, but the information found in the database will be used to make adjustments
 to the scowl info.
 
-If a line has no prefix, or is prefixed with a `=`, than after a match is made,
+If a line has no prefix, or is prefixed with a `=`, then after a match is made,
 any other information provided as part of the the lemma info, will change the
 existing information in the database.  If a piece of information is blank,
-than it will be reset to the default or removed; however, if it is missing
-than no change will be made.  For example, a pos of `<n/>` will will remove
-the pos-class for the group but a pos of `<n>` will not.  A underscore `_` can
+then it will be reset to the default or removed; however, if it is missing
+then no change will be made.  For example, a pos of `<n/>` will remove
+the pos-class for the group but a pos of `<n>` will not.  An underscore `_` can
 be used as an annotation to replace a group or entry rank with the default.
 The pos and defn-note can also change if the `→` (U+2192) is used as part of
 the pos or defn-note.  For example:
 
     dialog <n→wp> {dialog box}
 
-will change the pos from a noun to a word-part.  If have a compose key
+will change the pos from a noun to a word-part.  If you have a compose key
 configured on Linux you can type `→` with
 <kbd>Compose</kbd><kbd>-</kbd><kbd>&gt;</kbd>.  You can also just copy and
 paste as you shouldn't need to type `→` very often.
 
-If the line has no prefix, than any derived forms provided will be matched by
+If the line has no prefix, then any derived forms provided will be matched by
 the word and pos and any forms with a single dash (`-`) will be ignored.  If
-the line has a prefix of `=`, than any derived info will instead replace the
-existing ones for that lemmas.
+the line has a prefix of `=`, then any derived info will instead replace the
+existing ones for that lemma.
 
-If any variant info is given for a lemma or a derived form, than the variant
+If any variant info is given for a lemma or a derived form, then the variant
 information for all relevant lemmas or forms will be replaced, including
 those without a variant prefix.  For example `(hyaenas | V: hyaena)` will
 change the variant info for both _hyaenas_ and _hyaena_ even though _hyaenas_
@@ -696,8 +696,8 @@ the other information.  A SCOWL line generally has the form:
 
 Where the `...` is a literal.  If any SCOWL info is given the line must be
 prefixed with one of `+`, `-`, or `=`.  If the prefix is a `+` that scowl info
-is added.  If the prefix is a `-` than that specific scowl info is removed.
-If the prefix is a `=` than the scowl info is partly replaced.  In particular
+is added.  If the prefix is a `-` then that specific scowl info is removed.
+If the prefix is a `=` then the scowl info is partly replaced.  In particular
 any scowl info with a size less then the provided size will be removed.
 
 #### Merging groups
@@ -728,8 +728,8 @@ within the database, the group will be split.  For example:
     cohost <m→v>
 
 will split `cohost` with the `m` pos into a noun and a verb.  As a shortcut,
-when splitting a `m` or `a` pos, you can also use `n_v` and `aj_av` as the
-target pos, which will expand into a `n` and `v` or a `aj` and `av`
+when splitting an `m` or `a` pos, you can also use `n_v` and `aj_av` as the
+target pos, which will expand into an `n` and `v` or an `aj` and `av`
 respectively.  For example, to split the above `cohost` group, you could
 instead just write:
 
@@ -737,7 +737,7 @@ instead just write:
 
 When splitting a group other changes must be made to the group to prevent
 having the same lemma, pos, and defn-note within more than one group.  To
-prevent this in the simple case, when ever a pos is changed, existing groups
+prevent this in the simple case, whenever a pos is changed, existing groups
 with the target pos are merged into the same group.  In other words the above
 example is equivalent to:
 
@@ -749,7 +749,7 @@ example is equivalent to:
   
 #### Examples
 
-The most straight forward use of an _adjust_ file is to add variant info.  For
+The most straightforward use of an _adjust_ file is to add variant info.  For
 example:
 
     A C: kindergartner <n>
@@ -782,7 +782,7 @@ entries; for example:
 will adjust the variant information for the past participle form.  The derived
 forms with a `-` will be ignored, so no other adjustments will be made.
 
-The word _thru_ is somewhat of a special case.  In is acceptable to use _thru_
+The word _thru_ is somewhat of a special case.  It is acceptable to use _thru_
 as part of the word _drive-thru_, but generally not considered a proper
 spelling of _through_.  It is also different enough in spelling that it
 unlikely that the two forms will get confused so I want to let the word _thru_
@@ -811,22 +811,22 @@ Compatibility with SCOWLv1
 
 SCOWLv2 is a complete overhaul of SCOWL and nearly everything changed.
 However, there is limited backward compatibility support via the `mk-list`
-script.  If you used `mk-list` in SCOWLv1 is should still produce the same
+script.  If you used `mk-list` in SCOWLv1 it should still produce the same
 results, but please sanity check the output by comparing the results to the
 the last version of SCOWLv1.  If you created word lists by combining files in
 the `final/` directory your scripts will need to be rewritten.  Please use the
 `word-list` command of the `scowl` script to get the word lists you want.
 
 If you are using the `word-list` command please note that the variant levels
-has changed.  The original 0 level is now levels 0-1, the original 1 variant
+have changed.  The original 0 level is now levels 0-1, the original 1 variant
 level is now 2-4, level 2 is now 5-6, level 3 is now 7-8, and level 4 is 9.
-This mapping is also available in the `varinats_levels` table in the database.
+This mapping is also available in the `variants_levels` table in the database.
 
 
 Creating Hunspell and Aspell Dictionaries
 -----------------------------------------
 
 The `speller/` directory of SCOWLv1 has been ported over.  Creating the Aspell
-and Hunspell dictionaries should work the same as they did with SCOWLv1, but
+and Hunspell dictionaries should work the same as it did with SCOWLv1, but
 again please sanity check the results.  Official dictionaries will continue to
 be created.

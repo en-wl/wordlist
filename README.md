@@ -26,16 +26,15 @@ SCOWL is derived from many sources under a BSD compatible license. The
 combined work is freely available under a MIT-like license.  See the file
 Copyright for details.
 
-SCOWLv2 is still a work in progress.  The 60 size should as of 2024-08-23
-contain about the same set of words as SCOWLv1.  The processing of the source
-data is completely different so the resulting wordlists are not the same.
-Most of the changes I regard as corrections for improper handling of derived
-forms or variants in SCOWLv1.  The handling of possessive forms have been
-completely redone based partly on the noun category assigned by WordNet.  For
-American English any new changes to non-possessive forms of words included in
-speller dictionary have been accounted for and noted in the file
-`misc/comp-60.txt`.  The 70 size should also be about the same but no attempt
-has been made to verify this as of yet.
+SCOWLv2 is still a work in progress.  The default size (60) has been vetted
+for errors, and the larger size (70) should also be usable as a spellchecker
+dictionary.  The processing of the source data is completely different so the
+resulting wordlists are not the same.  Most of the changes I regard as
+corrections for improper handling of derived forms or variants in SCOWLv1.
+The handling of possessive forms have been completely redone based partly on
+the noun category assigned by WordNet.  For American English any new changes
+to non-possessive forms of words included in speller dictionary have been
+accounted for and noted in the file `misc/comp-60.txt`.
 
 SCOWLv2 is generated from the the same sources that SCOWLv1 uses but via a far
 more complicated, and unreleased, process.  The results of this process is in
@@ -215,11 +214,11 @@ Most everything is stored in a single file (`scowl.txt`) with the following form
                [CLUSTER-COMMENT] ...
 
     GROUP := LINE ...
-             GROUP-COMMENT
+             [GROUP-COMMENT]
              '\n'
 
     LINE := SCOWL_INFO ': '
-            ([VARIANT-INFO ' ' ... | OVERRIDE) ': ']
+            [(VARIANT-INFO ' ' ... | OVERRIDE) ': ']
             LEMMA_INFO
             [': ' ENTRY ', ' ...]
             ['#!' WARNING] ...
@@ -283,15 +282,14 @@ The sizes have the following approximate meanings:
     70: large (size used for large spell checking dictionary)
     80: a valid word in current usage
     85: a valid word
-    
 
-A TAG is sometimes use to provide information on what source list the word
+A TAG is sometimes used to provide information on what source list the word
 came from.
 
 The source for the majority of words is from lists that Alan Beale has a large
 part in creating, which provides a level of consistency.  These lists are then
 supplemented from a number of signature lists.  Most of these words are
-unmarked.  Finally, some additional sources where used that Alan had no part
+unmarked.  Finally, some additional sources were used that Alan had no part
 in and are often of British origin, words from these lists are tagged as the
 fact they are from an alternative source provides useful information.
 
@@ -303,7 +301,7 @@ the export code and ignored when parsing.
 
 The '#:' lines at the end of the file contain dumps of various information
 from the database.  If there is any disagreement between the documentation and
-this information, the information at the end the file takes precedence.
+this information, the information at the end of the file takes precedence.
 
 The LEMMA is the base form of the word.
 
@@ -330,8 +328,8 @@ The part of speeches (POS) or as follows:
     n_v: noun and verb
     aj_av: adjective and adverb
 
-The `m` and `a` are special POS'es that should not used for new entries.  The
-`m` is assigned when all the word forms for a verb where found in a word
+The `m` and `a` are special POS'es that should not be used for new entries.
+The `m` is assigned when all the word forms for a verb were found in a word
 list, but no POS info was found for that word.  It is probably a verb and
 could also be a noun.  Similarly, The `a` means it could be an adjective or
 adverb.
@@ -432,14 +430,12 @@ filter out proper nouns.
 
 The DEFN-NOTE is used to distinguish two different senses of the same lemma.
 
-The USAGE-NOTE is used to mark offensive, vulgar, non-standard and other
-similar words.  At the moment the marking of offensive, vulgar only really
-covers the worst offenders and the marking of non-standard and similar words
-is very incomplete.
+The USAGE-NOTE is used to mark offensive, vulgar, slang, informal, non-standard
+and other similar words.  At the moment the marking of offensive, vulgar only
+really covers the worst offenders and the marking of non-standard and similar
+words is very incomplete.
 
-to mark slang, informal, and non-standard words.
-
-The SPELLING and REGION codes are as follows:
+The SPELLING codes and REGION tags are as follows:
 
     A: US: American
     B: GB: British "ise" spelling
@@ -448,9 +444,12 @@ The SPELLING and REGION codes are as follows:
     D: AU: Australian
     _:     Other (Never used with any of the above).
 
-If there are no tags with the `Z` spelling category within a group then `B`
-implies `Z`.  Similarly if there are no `C` tags then `Z` implies `C`.  If
-there are no `D` tags then `B` implies `D`.
+A SPELLING code classifies alternative spellings of the same word. A REGION
+tag labels entries that are specific to a particular region.
+
+Within a group, if there are no lines with the `Z` SPELLING code then `B`
+implies `Z`; similarly if `C` is missing then `Z` implies `C`, and if `D` is
+missing then `B` implies `D`.
 
 The VARIANT-LEVELs are as follows:
 
@@ -465,25 +464,25 @@ The VARIANT-LEVELs are as follows:
     @: 8: archaic
     x: 9: invalid
 
-The `v` indicator is used for most words marked as variants in the dictionary.
-However, some variants will be demoted to a `V`.  For example, if the variant
-is marked as "also" by Merriam-Webster, or if only some dictionaries
-acknowledge the existence of the variant.  `-` is used when the variant is
-generally not listed is the dictionary but there is some evidence of its
-usage.  The `@` is used for an archaic spelling of the word.  The `x` is used
-when the spelling is generally considered a misspelling, and is only included
-for completeness.
+`v` is used for common variants where there is clear agreement on the
+preferred form and the variant is reasonably frequent.  `V` is used for less
+common but still clearly acceptable variants; typical cases are variants
+marked as “also” in Merriam-Webster, or spellings that are only recognized by
+some major dictionaries.  `-` is used when the variant is generally not listed
+in standard dictionaries, but there is some evidence of real-world usage.  `@`
+is used for archaic spellings of the word.  `x` is used for outright
+misspellings that are only included for completeness.
 
-The `.`, `=`, and `?` are special cases for when there is little agreement on
-the preferred form.  The `.` is used when both forms are considered equal and
-should be included in the default word list; it is generally used when the
-spellings is different enough that is unlikely one will be confused with the
-other.  The `=` means they are still equal but only the non-variant should be
-included by default.  The `?` is used when there is some disagreement but
-there one form is generally preferred over the other.
+The `.`, `=`, and `?` indicators are special cases for when there is no single
+clearly preferred form.  `.` is used when both forms are considered
+equal and should be included in the default word list; it is generally used
+when the spellings are different enough that it is unlikely one will be
+confused with the other.  `=` means they are still equal but only the form
+without a variant marker should be included by default.  `?` is used when
+there is some disagreement but one form is generally preferred over the other.
 
-The `~` indicator means the word is a variant but no information is available
-on the level, it should not be used for new entries.
+The `~` indicator is used for legacy data when no information is available on
+the level.
 
 An annotation is one of the following:
 
@@ -636,7 +635,7 @@ groups.  This included marking new variants.
 
 #### File format
 
-_Asjust_ files shoud start with the line:
+_Adjust_ files shoud start with the line:
 
     #:: adjust
 

@@ -22,16 +22,28 @@ def createDB(args):
     libscowl.exportToDB(clusters, conn)
     conn.close()
 
+def _exportDB(conn, args):
+    clusters = libscowl.importFromDB(conn, dbOrder = args.db_order)
+    libscowl.exportAsText(clusters, conn, sys.stdout,
+                          showExtraInfo = not args.no_extra_info,
+                          showClusters = args.show_clusters)
+exportArguments = ('show_clusters', 'no_extra_info', 'db_order')
+def addExportArguments(p):
+    p.add_argument('--show-clusters', action='store_true', default=False)
+    p.add_argument('--no-extra-info', action='store_true', default=False)
+    p.add_argument('--db-order', action='store_true', default=False)
+
 def exportDB(args):
     conn = libscowl.openDB(args.db)
-    clusters = libscowl.importFromDB(conn, dbOrder = args.db_order)
-    libscowl.exportAsText(clusters, conn, sys.stdout, showClusters = args.show_clusters)
+    _exportDB(conn, args)
 
 def searchDB(args):
     conn = libscowl.openDB(args.db)
     kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'func')}
     clusters = libscowl.searchDB(conn, **kwargs)
-    libscowl.exportAsText(clusters, conn, sys.stdout, showExtraInfo = False, showClusters = kwargs.get('byCluster', False))
+    libscowl.exportAsText(clusters, conn, sys.stdout,
+                          showExtraInfo = False,
+                          showClusters = kwargs.get('byCluster', False))
 
 def adjust(args):
     conn = libscowl.openDB(args.db)
@@ -79,11 +91,11 @@ def printWordList(args):
         prev = w
 
 def filterDB(args):
-    kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'target', 'export', 'func', 'show_clusters')}
+    kwargs = {k: v for k,v in args.__dict__.items() if k not in {'db', 'target', 'export', 'func',
+                                                                 *exportArguments}}
     conn = libscowl.filterDB(orig=args.db, new=getattr(args, 'target', None),  **kwargs)
-    if getattr(args, 'export', False):
-        clusters = libscowl.importFromDB(conn)
-        libscowl.exportAsText(clusters, conn, sys.stdout, showClusters = getattr(args, 'show_clusters', False))
+    if args.export:
+        _exportDB(conn, args)
     conn.close()
 
 def lst(arg):
@@ -164,10 +176,7 @@ p = addParser('export',
               help='export the database to stdout')
 p.set_defaults(func=exportDB)
 addDbArgument(p)
-def addExportArguments(p):
-    p.add_argument('--show-clusters', action='store_true', default=False)
 addExportArguments(p)
-p.add_argument('--db-order', action='store_true', default=False)
 
 
 p = addParser('word-list',
@@ -262,7 +271,7 @@ p.add_argument('filterType', choices=('by-line', 'by-group', 'by-cluster'))
 g = p.add_mutually_exclusive_group(required=True)
 g.add_argument('--target', metavar='<file>',
                help='store the resulting database in <file>')
-g.add_argument('--export', action='store_true',
+g.add_argument('--export', action='store_true', default=False,
                help='export the results to stdout')
 del g
 addExportArguments(p)

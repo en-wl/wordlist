@@ -9,8 +9,6 @@ def mergeEntries(conn, f = None, *,
                  preview = False):
     if simplifyScowlInfo is True:
         raise RuntimeError("simplifyScowlInfo unimplemented")
-    if ignoreErrors is True:
-        raise RuntimeError("ignoreErrors unimplemented")
     if f is None:
         f = sys.stdin
     tag = None
@@ -27,6 +25,7 @@ def mergeEntries(conn, f = None, *,
     clusterComments = {}
     _mergeText(lines, groups, clusterComments)
     groups = _finalizeGroups(groups)
+    failedCnt = 0;
 
     conn.execute("begin")
 
@@ -50,14 +49,18 @@ def mergeEntries(conn, f = None, *,
                                                         onVariantConflict = onVariantConflict)
             conn.execute("insert or ignore into merged_groups values (?)", (grp._group_id,))
             conn.execute("release sp")
-        except Exception as err:
+        except ValueError as err:
             conn.execute("rollback to sp")
             conn.execute("release sp")
-            raise ValueError(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}")
+            _warn(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}: {err}");
+            failedCnt += 1
 
     for comment in clusterComments:
         # fixme
         pass
+
+    if failedCnt > 0 and not ignoreErrors:
+        raise ValueError(f"failed to add {failedCnt}/{len(groups)} groups")
 
     if preview:
         clusters = importFromDB(conn, filterQuery =

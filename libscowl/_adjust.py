@@ -223,8 +223,15 @@ def adjustEntries(conn, f = None, *,
         f = sys.stdin
 
     header, lines, linesByGroup = splitIntoGroups(f)
-    if header and header != 'adjust':
-        raise ValueError('unexpected file format')
+    if header:
+        header = lines[0][4:].split()
+        if len(header) == 0 or header[0] != 'adjust':
+            raise ValueError("unexpected file format")
+        for flag in header[1:]:
+            if flag == ':keep-comments':
+                replaceComments = False
+            else:
+                raise ValueError("unknown flag found in header: {flag}")
 
     errors = False
     def warn(msg):

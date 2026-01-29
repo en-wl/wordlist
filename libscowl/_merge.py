@@ -19,8 +19,14 @@ def mergeEntries(conn, f = None, *,
             raise ValueError("unexpected file format")
         if len(header) > 1:
             tag = header[1]
+        for flag in header[2:]:
+            if flag == ':skip-on-variant-conflict':
+                onVariantConflict = 'skip'
+            else:
+                raise ValueError("unknown flag found in header: {flag}")
+
         lines = lines[1:]
-    
+
     groups = []
     clusterComments = {}
     _mergeText(lines, groups, clusterComments)
@@ -76,7 +82,7 @@ def mergeEntries(conn, f = None, *,
 
 def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariantConflict):
     assert onConflict in ('merge', 'replace', 'error')
-    assert onVariantConflict in ('replace', 'error')
+    assert onVariantConflict in ('skip', 'replace', 'error')
 
     group_ids = set()
     for lemma in grp.entries:
@@ -116,7 +122,7 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
                          ((group_id, _id) for _id in other_group_ids))
         conn.executemany("delete from groups where group_id = ?", ((_id,) for _id in other_group_ids));
         # fixme: handle group comments
-            
+
     grp._group_id = group_id
     cur = conn.execute("select pos_class, usage_note, group_rank from groups where group_id = ?" , (group_id,))
     (pos_class, usage_note, group_rank) = next(cur)
@@ -227,6 +233,8 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
                                  ((lemma_id, sp, vl) for sp, vl in sps.items()))
             if fullCoverage:
                 conn.execute("delete from group_comments where group_id = ?", (group_id,))
+        elif onVariantConflict == 'skip':
+            pass
         elif anyVariantInfo:
             raise ValueError("existing lemma variant info found")
 

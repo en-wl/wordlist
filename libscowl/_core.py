@@ -739,7 +739,7 @@ class LineBase(SlotsDataClass):
         return l
 
 _lineRegex = re.compile(r'(?: (?P<tags>[0-9]+ [^:#]*):\s* |)'
-                        r'(?: (?P<override>\+)\s*:\s* | (?P<spellings>[A-Za-z_][^:<>{}#]*) (\{(?P<num> [0-9])\}\s*|):\s* |)'
+                        r'(?: (?P<override>\+)\s*:\s* | (?P<spellings>[A-Za-z_][^:<>{}#]*) (\{(?P<num> [0-9]+)\}\s*|):\s* |)'
                         r'(?P<lemma>[^:<>{}#()]+)'
                         r'(?: <(?P<base_pos>[^/]*) (?:/(?P<pos_class>.*)|)>\s* |)'
                         r'(?: {(?P<defn_note>.+)}\s* |)'

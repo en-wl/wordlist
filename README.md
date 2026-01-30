@@ -218,7 +218,7 @@ Most everything is stored in a single file (`scowl.txt`) with the following form
              '\n'
 
     LINE := SCOWL_INFO ': '
-            [(VARIANT-INFO ' ' ... | OVERRIDE) ': ']
+            [(VARIANT-INFO ' ' ... ['{' NUMBER '}'] | OVERRIDE) ': ']
             LEMMA_INFO
             [': ' ENTRY ', ' ...]
             ['#!' WARNING] ...
@@ -483,6 +483,10 @@ there is some disagreement but one form is generally preferred over the other.
 
 The `~` indicator is used for legacy data when no information is available on
 the level.
+
+When multiple lemmas with the same variant level need to coexist within the
+same group, an optional number can be added after the variant info using curly
+braces (e.g., `_V {1}`, `_V {2}`).
 
 An annotation is one of the following:
 

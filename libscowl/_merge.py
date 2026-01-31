@@ -101,6 +101,12 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
         grp._group_id = next_group_id
         return _exportGroup(conn, grp, next_group_id, next_word_id)
 
+    if len(group_ids) > 1 and grp.group_rank is Default:
+        group_ids_str = ','.join(str(_id) for _id in group_ids)
+        new_group_ids = set(id for (id,) in conn.execute(f"select group_id from groups where group_id in ({group_ids_str}) and group_rank = ''"))
+        if new_group_ids:
+            group_ids = new_group_ids
+
     group_id = (sorted(group_ids))[0]
     if len(group_ids) > 1:
         group_ids_str = ','.join(str(_id) for _id in group_ids)

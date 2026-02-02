@@ -198,7 +198,7 @@ As previously mentioned the `scowl` script is a very thin wrapper around the
 instead of going through the script.  Use of the Python module directly
 instead of through the command line interface is also supported to some
 extent.  Calling the high-level functions as is done in the `__main__.py` is
-supported, but the API may stil change.  Direct use of the internal data
+supported, but the API may still change.  Direct use of the internal data
 structures, however, is not supported.
 
 
@@ -596,7 +596,7 @@ format.  These files should, in general, not need to be modified.
 
 ### Merge file format
 
-_Merge_ files are used when adding new entries.  There is limited suport for
+_Merge_ files are used when adding new entries.  There is limited support for
 merging groups and adding variant information with the addition of the new
 entries.
 
@@ -635,7 +635,7 @@ groups.  This included marking new variants.
 
 #### File format
 
-_Adjust_ files shoud start with the line:
+_Adjust_ files should start with the line:
 
     #:: adjust
 

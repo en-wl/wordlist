@@ -257,7 +257,7 @@ def _filterByLine(conn, simplify, queryArgs, whereClause):
         simplify.discard('size')
     leftover = simplify - {'size', 'category', 'region', 'tag', 'tags'}
     if leftover:
-        raise ValueError(f"invalid values for simplfy: {', '.join(sorted(leftover))}")
+        raise ValueError(f"invalid values for simplify: {', '.join(sorted(leftover))}")
 
     _size_ = queryArgs['size'] if 'size' in simplify else 'size'
     _category_ = "''" if 'category' in simplify else 'category'

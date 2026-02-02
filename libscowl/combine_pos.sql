@@ -1,7 +1,7 @@
 --
 -- combine n/v into n_v and aj/av into aj_av
 --
--- foreign keys are exepcted to be enabled, otherwise there may be some orphan
+-- foreign keys are expected to be enabled, otherwise there may be some orphan
 -- records
 -- 
 

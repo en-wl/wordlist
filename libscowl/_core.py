@@ -41,7 +41,7 @@ def ifNone(a, b):
 def noneIf(a, b):
     return None if a == b else a
 
-# Default is a speical value to indicate that a value has not been provided in
+# Default is a special value to indicate that a value has not been provided in
 # the text input.
 class DefaultType:
     __slots__ = ()

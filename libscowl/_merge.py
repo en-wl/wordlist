@@ -7,6 +7,37 @@ def mergeEntries(conn, f = None, *,
                  onConflict = 'merge', onVariantConflict = 'replace',
                  simplifyScowlInfo = None, ignoreErrors = None,
                  preview = False):
+    """
+    Merge entries in SCOWL text format into an existing database.
+
+    This is essentially an "incremental import": it parses the same text format
+    that libscowl exports, then inserts new groups/words or merges them into
+    existing rows.
+
+    Supported header (first line):
+      #:: merge [<tag>] [:skip-on-variant-conflict]
+
+    - <tag> (optional) is added to every ScowlInfo tag set in the incoming file
+      (both group lines and overrides) before merging.
+    - :skip-on-variant-conflict makes onVariantConflict behave like 'skip' for
+      this file, regardless of the function argument.
+
+    Conflict handling:
+    - onConflict:
+        'merge'   -> merge into a matching groups (and may merge multiple matches together)
+        'replace' -> delete any matching groups, then insert as new
+        'error'   -> fail if any matching group already exists
+    - onVariantConflict: controls what to do if lemma variant info already
+      exists for a group (see _mergeGroup for details).
+
+    Transactions:
+    - Runs inside a single transaction, with a SAVEPOINT per group so that one
+      bad group doesn't abort the whole merge.
+    - If preview=True, prints the affected clusters and rolls back the whole
+      transaction.
+    - If preview=False, commits but clears cluster_map (caller should rebuild it
+      via createClusterMap/finalizeDB).
+    """
     if simplifyScowlInfo is True:
         raise RuntimeError("simplifyScowlInfo unimplemented")
     if f is None:
@@ -23,7 +54,7 @@ def mergeEntries(conn, f = None, *,
             if flag == ':skip-on-variant-conflict':
                 onVariantConflict = 'skip'
             else:
-                raise ValueError("unknown flag found in header: {flag}")
+                raise ValueError(f"unknown flag found in header: {flag}")
 
         lines = lines[1:]
 
@@ -35,9 +66,14 @@ def mergeEntries(conn, f = None, *,
 
     conn.execute("begin")
 
+    # group_id allocation: _exportGroup increments by 2 for some "combined POS"
+    # groups (n_v, aj_av) so we advance by 2 to stay on the same parity and to
+    # keep room for those paired ids.
     next_group_id,  = next(conn.execute("select coalesce(max(group_id) + 2, 1) from groups"))
     next_word_id, = next(conn.execute("select coalesce(max(word_id) + 1, 1) from words"))
 
+    # Used for preview mode: track which group_ids were inserted/merged so we
+    # can find all clusters that became connected to them.
     conn.execute("create temp table merged_groups (group_id integer primary key)")
 
     for grp in groups:
@@ -55,7 +91,7 @@ def mergeEntries(conn, f = None, *,
                                                         onVariantConflict = onVariantConflict)
             conn.execute("insert or ignore into merged_groups values (?)", (grp._group_id,))
             conn.execute("release sp")
-        except ValueError as err:
+        except Exception as err:
             conn.execute("rollback to sp")
             conn.execute("release sp")
             _warn(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}: {err}");
@@ -69,6 +105,9 @@ def mergeEntries(conn, f = None, *,
         raise ValueError(f"failed to add {failedCnt}/{len(groups)} groups")
 
     if preview:
+        # Show the clusters that would be affected. We start from the merged
+        # groups, grab their lemma words (via fuzzy -> word_key), then include
+        # every other group that shares those word_keys.
         clusters = importFromDB(conn, filterQuery =
                                 "with l as (select * from words join fuzzy using (word) where lemma_id = word_id) "
                                 "  select b.group_id from merged_groups m cross join l as a on m.group_id = a.group_id cross join l as b using (word_key) ")
@@ -81,44 +120,75 @@ def mergeEntries(conn, f = None, *,
 
 
 def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariantConflict):
+    """
+    Merge a single parsed Group into the DB.
+
+    Matching logic:
+    - We look up existing groups by matching each incoming lemma against the
+      `lemmas` view on (lemma text, base_pos, defn_note). This is intentionally
+      *loose* (it ignores pos_class, usage_note, and group_rank).
+    - The main reason multiple group_id values can match is that the incoming
+      group can contain multiple lemmas (spellings/variants) that already exist
+      in different groups. When you add variant info that ties those lemmas
+      together (e.g., open vs closed compound forms), the merge needs to
+      collapse the existing groups into one combined group.
+    - A single lemma can also match multiple existing groups because the match
+      key ignores pos_class/usage_note/group_rank. If the merge file didn't
+      specify a group-rank prefix (grp.group_rank is Default), we first prefer
+      matches whose stored group_rank is '' (the default) if any exist.
+    - If more than one group_id still matches, we merge those groups into one
+      as long as their existing pos_class/usage_note/group_rank are compatible.
+    """
     assert onConflict in ('merge', 'replace', 'error')
     assert onVariantConflict in ('skip', 'replace', 'error')
 
+    #
+    # Check for matching groups
+    #
+
+    # select candidate groups
     group_ids = set()
     for lemma in grp.entries:
         for (id,) in conn.execute("select group_id from lemmas "
                                   "where lemma = ? and base_pos = ? and defn_note = ?",
                                   (lemma.lemma, grp.base_pos, grp.defn_note)):
             group_ids.add(id)
-    if len(group_ids) > 0 and onConflict == 'error':
-        raise ValueError(f"group already exists: {grp.entries[0].lemma} <{grp.base_pos}> {{{grp.defn_note}}}")
 
-    if onConflict == 'replace' and group_id is not None:
+    # if replace, than just remove existing groups
+    if group_ids and onConflict == 'replace':
         conn.executemany("delete from groups where group_id = ?", ((group_id,) for group_id in group_ids))
         group_ids.clear()
 
+    # nothing to merge so just create a new group and return
     if not group_ids:
         grp._group_id = next_group_id
         return _exportGroup(conn, grp, next_group_id, next_word_id)
 
+    if onConflict == 'error':
+        raise ValueError(f"group already exists: {grp.entries[0].lemma} <{grp.base_pos}> {{{grp.defn_note}}}")
+
+    # narrow group selection
     if len(group_ids) > 1 and grp.group_rank is Default:
         group_ids_str = ','.join(str(_id) for _id in group_ids)
         new_group_ids = set(id for (id,) in conn.execute(f"select group_id from groups where group_id in ({group_ids_str}) and group_rank = ''"))
         if new_group_ids:
             group_ids = new_group_ids
-
     group_id = (sorted(group_ids))[0]
+
     if len(group_ids) > 1:
+        # check for conflicts
         group_ids_str = ','.join(str(_id) for _id in group_ids)
         cur = conn.execute("select count(distinct pos_class), count(distinct usage_note), count(distinct group_rank) "
                            f"from groups where group_id in ({group_ids_str})")
         (pos_class_cnt, usage_note_cnt, group_rank_cnt) = next(cur)
-        if pos_class_cnt > 1 and grp.pos_class is Default:
+        if pos_class_cnt > 1:
             raise ValueError("can't merge groups: conflicting pos class")
-        if usage_note_cnt > 1 and grp.usage_note is Default:
+        if usage_note_cnt > 1:
             raise ValueError("can't merge groups: conflicting usage note")
-        if group_rank_cnt > 1 and grp.group_rank is Default:
+        if group_rank_cnt > 1:
             raise ValueError("can't merge groups: conflicting lemma rank")
+
+        # otherwise merge groups
         other_group_ids = group_ids - {group_id}
         conn.executemany("update words set group_id = ? where group_id = ?",
                          ((group_id, _id) for _id in other_group_ids))
@@ -128,6 +198,10 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
                          ((group_id, _id) for _id in other_group_ids))
         conn.executemany("delete from groups where group_id = ?", ((_id,) for _id in other_group_ids));
         # fixme: handle group comments
+
+    #
+    # Merge new info into existing group
+    #
 
     grp._group_id = group_id
     cur = conn.execute("select pos_class, usage_note, group_rank from groups where group_id = ?" , (group_id,))
@@ -146,14 +220,16 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
 
         for pos in posmap(grp.base_pos, le.words.keys()):
             wes = le.words.get(pos, [])
-            haveDerivedSpelling = next((True for we in wes if we.spellings is not None), False)
-
-            for we in wes:
-                if we.spellings is not None:
-                    haveDerivedSpelling = True
+            # If any word entry for this (lemma,pos) specifies spellings, we
+            # treat the incoming derived_variant_info as authoritative and
+            # remove any existing derived_variant_info rows for the matched
+            # words (so we don't accumulate stale spellings).
+            haveDerivedSpelling = any(we.spellings is not None for we in wes)
 
             for we in wes:
                 if lemma_id is None:
+                    # For a lemma, the first matching word we see is treated as
+                    # the lemma row (word_id == lemma_id).
                     word_id, = next(conn.execute("select word_id from words where group_id = ? and word = ? and pos = ? and word_id = lemma_id",
                                                  (group_id, we.word, pos)),
                                     (None,))
@@ -181,6 +257,10 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
                     if haveDerivedSpelling:
                         conn.execute("delete from derived_variant_info where word_id = ?", (word_id,))
 
+                # derived_variant_info:
+                # - If '' is present, it means "apply this variant_level to all
+                #   of the lemma's spellings" (or '_' if lemma spellings are
+                #   unknown).
                 if we.spellings is not None and '' in we.spellings:
                     variant_level = we.spellings['']
                     spellings = le.spellings.keys() if le.spellings else ['_']
@@ -189,7 +269,6 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
                 elif we.spellings is not None:
                     conn.executemany("insert into derived_variant_info (word_id, spelling, variant_level) values (?, ?, ?)",
                                      ((word_id, sp, vl) for sp, vl in we.spellings.items()))
-                word_id += 1
 
         if le.spellings:
             haveLemmaSpellings = True
@@ -201,15 +280,22 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
 
         ov = grp.override.get(le.lemma, None)
         if ov:
-            for tag in ov.si.tags:
-                conn.execute("insert or ignore into scowl_override (size, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
-                             (ov.si.size, ov.si.category, ov.si.region, tag, lemma_id))
-                for word in ov.words:
-                    conn.execute("insert or ignore into scowl_override "
-                                 "select ?, ?, ?, ?, word_id from words where lemma_id = ? and word = ?",
-                                 (ov.si.size, ov.si.category, ov.si.region, tag, lemma_id, word))
+            # Override scowl_data for the lemma word, plus any explicitly listed
+            # word forms that belong to that lemma.
+            for si in ov.si:
+                for tag in si.tags:
+                    conn.execute("insert or ignore into scowl_override (size, category, region, tag, word_id) values (?, ?, ?, ?, ?)",
+                                 (si.size, si.category, si.region, tag, lemma_id))
+                    for word in ov.words:
+                        conn.execute("insert or ignore into scowl_override "
+                                     "select ?, ?, ?, ?, word_id from words where lemma_id = ? and word = ?",
+                                     (si.size, si.category, si.region, tag, lemma_id, word))
 
     if haveLemmaSpellings:
+        # lemma_variant_info:
+        # Existing DB rows represent the "preferred" spellings/variant levels
+        # for a lemma itself (not derived forms). We only update these if the
+        # incoming group provides spellings for at least one lemma.
         existing = {
             lemma_id: vl for lemma_id, vl
             in conn.execute("select lemma_id,min(variant_level) "
@@ -218,6 +304,10 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
                             "group by lemma_id",
                             (group_id,))}
 
+        # max_vl is the strictness level for the "unaccounted lemma" check
+        # below: we treat the merge file as defining variant info up to this
+        # level (at least 4/"common"), so omitting an existing lemma that would
+        # be valid within that range is an error.
         max_vl = max(4, *(vl for lemma_id, sps in lemmaSpellings.items() for sp, vl in sps.items()))
 
         anyVariantInfo = False
@@ -238,6 +328,9 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
                 conn.executemany("insert into lemma_variant_info (lemma_id, spelling, variant_level) values (?, ?, ?)",
                                  ((lemma_id, sp, vl) for sp, vl in sps.items()))
             if fullCoverage:
+                # If the incoming spellings cover every lemma in the group,
+                # group_comments tend to be redundant/stale (they often record
+                # the spellings that we just replaced).
                 conn.execute("delete from group_comments where group_id = ?", (group_id,))
         elif onVariantConflict == 'skip':
             pass
@@ -251,6 +344,6 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
 
     if grp.commentLines:
         conn.execute("insert into group_comments (group_id, comment) values (?, ?)",
-                     (group_id, str(group.commentLines)))
+                     (group_id, str(grp.commentLines)))
 
     return (next_group_id, next_word_id)

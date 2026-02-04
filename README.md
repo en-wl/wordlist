@@ -598,6 +598,7 @@ included and the tag '[-]' must be used.
 There are other files which are used by the `combine.py` script that are in a special
 format.  These files should, in general, not need to be modified.
 
+
 ### Merge file format
 
 _Merge_ files are used when adding new entries.  There is limited suport for
@@ -625,11 +626,6 @@ If any inconsistencies are found the merge will be aborted.
 Variant level inconsistencies will arise when there are additional forms found
 in the database that are not mentioned. To resolve this, simply provide the
 additional forms.
-
-Inconsistencies can also arise when merging groups if the two groups have
-conflicting information.  To resolve the conflict, assign a new value.  To
-remove the group-annotation use `_`.  To remove the pos-class use `<POS/>`.
-To remove the usage note use `()`.
 
 
 ### Adjust file format

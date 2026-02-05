@@ -4,7 +4,6 @@ from ._db import *
 from ._export import *
 
 def mergeEntries(conn, f = None, *,
-                 onConflict = 'merge', onVariantConflict = 'replace',
                  simplifyScowlInfo = None, ignoreErrors = None,
                  preview = False):
     """
@@ -12,23 +11,10 @@ def mergeEntries(conn, f = None, *,
 
     This is essentially an "incremental import": it parses the same text format
     that libscowl exports, then inserts new groups/words or merges them into
-    existing rows.
+    existing groups.
 
     Supported header (first line):
-      #:: merge [<tag>] [:skip-on-variant-conflict]
-
-    - <tag> (optional) is added to every ScowlInfo tag set in the incoming file
-      (both group lines and overrides) before merging.
-    - :skip-on-variant-conflict makes onVariantConflict behave like 'skip' for
-      this file, regardless of the function argument.
-
-    Conflict handling:
-    - onConflict:
-        'merge'   -> merge into a matching groups (and may merge multiple matches together)
-        'replace' -> delete any matching groups, then insert as new
-        'error'   -> fail if any matching group already exists
-    - onVariantConflict: controls what to do if lemma variant info already
-      exists for a group (see _mergeGroup for details).
+      #:: merge [<tag>] [FLAGS]
 
     Transactions:
     - Runs inside a single transaction, with a SAVEPOINT per group so that one
@@ -42,17 +28,25 @@ def mergeEntries(conn, f = None, *,
         raise RuntimeError("simplifyScowlInfo unimplemented")
     if f is None:
         f = sys.stdin
+    onConflict = 'merge'
+    onVariantConflict = 'replace'
     tag = None
     lines = list(f)
     if len(lines) > 0 and lines[0].startswith('#:: '):
         header = lines[0][4:].split()
         if len(header) == 0 or header[0] != 'merge':
             raise ValueError("unexpected file format")
-        if len(header) > 1:
-            tag = header[1]
-        for flag in header[2:]:
-            if flag == ':skip-on-variant-conflict':
+        for flag in header[1:]:
+            if flag[0] == '[':
+                tag = flag
+            elif flag == ':skip-on-variant-conflict':
                 onVariantConflict = 'skip'
+            elif flag == 'error-on-variant-conflict':
+                onVariantConflict = 'error'
+            elif flag == ':replace-on-conflict':
+                onConflict = 'replace'
+            elif flag == ':error-on-conflict':
+                onConflict = 'error'
             else:
                 raise ValueError(f"unknown flag found in header: {flag}")
 
@@ -91,7 +85,7 @@ def mergeEntries(conn, f = None, *,
                                                         onVariantConflict = onVariantConflict)
             conn.execute("insert or ignore into merged_groups values (?)", (grp._group_id,))
             conn.execute("release sp")
-        except Exception as err:
+        except ValueError as err:
             conn.execute("rollback to sp")
             conn.execute("release sp")
             _warn(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}: {err}");

@@ -104,7 +104,7 @@ with open('data/basic') as f:
                  "where (group_id) in (select group_id from lemmas where lemma in ('so', 'sol'))")
 conn.commit()
 with open('data/basic') as f:
-    mergeEntries(conn, f, onConflict = 'error')
+    mergeEntries(conn, f)
 finish()
 
 start('data/compounds-auto')

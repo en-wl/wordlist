@@ -607,19 +607,33 @@ entries.
 
 Files of this format should start with the line:
 
-    #:: merge [TAG]
+    #:: merge [TAG] [FLAGS]
 
-where TAG is an optional tag to add to all new entries.  Other than that the
-format is exactly the same as `scowl.txt` except that new data is merged with
-existing groups when there is a match.
+where TAG is an optional tag to add to all new entries.  FLAGS is any of:
 
-Variant information can be provided as part of the new information.  If there
-is a match then the new information will take precedence as long as it doesn't
-create inconsistencies.  If more than one existing group matches, then the
-two groups will be merged, again as long as it doesn't create inconsistencies.
-Existing group comments are assumed to relate to variant information and will
-be removed if new variant information is provided for all lemma forms within
-the group.
+    :replace-on-conflic
+    :error-on-conflic
+    :skip-on-variant-conflict
+    :error-on-variant-conflict
+
+and control the conflict resolution behaviour, without any flags groups are
+merged and variant information is replaced.
+
+After the header line, the format is exactly the same as `scowl.txt` except
+that new data is merged with existing groups when there is a match.
+
+Variant information can be provided as part of the new information.  By
+default, if there is a match then the new information will take precedence as
+long as it doesn't create inconsistencies.  If `:skip-on-variant-conflict` is
+given than the existing variant information will take precedence.
+
+By default, if more than one existing group matches, then the two groups will
+be merged as long as it doesn't create inconsistencies.  Existing group
+comments are assumed to relate to variant information and will be removed if
+new variant information is provided for all lemma forms within the group.
+
+If `:replace-on-conflic` is given than the entire group will be replaced with
+the new information.  Use this flag with caution.
 
 If any inconsistencies are found the merge will be aborted.
 

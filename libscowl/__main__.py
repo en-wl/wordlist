@@ -321,11 +321,7 @@ addAdjustMergeCommonArgs()
 
 
 p = addParser('merge',
-              help='add new entries',
-              description='''
-Add new entries from stdin to the database.  By default new data is merged
-with existing groups with the same lemma/pos/defn_note.  If --on-conflict is
-'replace' than the data from stdin will replace the existing group.''')
+              help='add or merge entries')
 p.set_defaults(func=merge)
 addAdjustMergeCommonArgs()
 

@@ -6,8 +6,8 @@ begin;
 --   set to "True"
 
 create table temp.use_info_from (
-  main_group_id integer,
-  other_group_id integer,
+  main_group_id integer, -- destitution group id
+  other_group_id integer, -- source group_id
   also_merge boolean not null default true,
   primary key (main_group_id, other_group_id)
 ) without rowid;
@@ -53,12 +53,12 @@ create table temp.new_lemma_comments (
 ) without rowid;
 
 create table temp.new_derived_variant_info (
-  main_group_id integer,
+  main_group_id integer not null,
   lemma_id integer,
   pos text,
-  word_id integer,
-  spelling text,
-  variant_level smallint,
+  word_id integer not null,
+  spelling text not null,
+  variant_level smallint not null,
   primary key (word_id, spelling)
 ) without rowid;
 

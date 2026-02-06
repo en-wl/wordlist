@@ -462,7 +462,7 @@ def adjustEntries(conn, f = None, *,
         if gi.commentLines:
             comment = GroupComment.parse(*gi.commentLines)
         elif groupComment:
-            comment = groupComment
+            comment = GroupComment(groupComment)
         for base_pos, sg in gi.subGroups.items():
             conn.execute("savepoint sp")
             if group_id_counts[sg.id] > 1:
@@ -544,10 +544,6 @@ def adjustEntries(conn, f = None, *,
                                     conn.executemany("insert into new_derived_variant_info values (?, ?, ?, ?, ?, ?)",
                                                      ((sg.id, li.lemma_id, pos, we._word_id, sp, vl) for sp, vl in we.spellings.items()))
 
-                        # fixme: be more intelligent about this
-                        if getattr(li, 'group_id', 0) and replaceComments:
-                            conn.execute("insert or ignore into new_group_comments values (?, null)", (li.group_id,))
-
                         if li.spellings:
                             haveLemmaSpelling = True
                             conn.executemany("insert into new_lemma_variant_info (main_group_id, lemma_id, spelling, variant_level) values (?, ?, ?, ?)",
@@ -559,6 +555,7 @@ def adjustEntries(conn, f = None, *,
                             conn.execute("insert or ignore into new_lemma_comments (main_group_id, lemma_id, order_num) values (?, ?, -1)", (sg.id, li.lemma_id,))
                     except ValueError as err:
                         raise ValueError(f"failed to add line: {li.line}: {err}")
+
                 for s in gi.adjScowlInfo:
                     if isinstance(s, ScowlInfoToClear):
                         conn.executemany("insert or replace into scowl_info_to_clear values (?, ?, ?, ?, ?)",
@@ -593,8 +590,13 @@ def adjustEntries(conn, f = None, *,
                 conn.execute("insert into new_group_info (main_group_id, base_pos, defn_note, pos_class, usage_note, group_rank) values (?, ?, ?, ?, ?, ?)",
                              (sg.id, base_pos, gi.defn_note, gi.pos_class, gi.usage_note,
                               None if gi.group_rank is None else '' if gi.group_rank == '_' else gi.group_rank))
-                if comment:
+
+                if comment and comment.lines == ['']:
+                   conn.execute("insert or replace into new_group_comments values (?, NULL)", (sg.id,))
+                elif comment:
                     conn.execute("insert or replace into new_group_comments values (?, ?)", (sg.id, str(comment)))
+                elif haveLemmaSpelling and replaceComments:
+                    conn.execute("insert or ignore into new_group_comments values (?, NULL)", (sg.id,))
 
                 unaccountedFor = [
                     *conn.execute("select word from words join to_merge on group_id = other_group_id "

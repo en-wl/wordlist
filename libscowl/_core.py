@@ -987,7 +987,7 @@ class GroupComment(SlotsDataClass):
         if text is None:
             self.lines = []
         else:
-            self.lines = text.splitlines()
+            self.lines = [line.rstrip() for line in text.splitlines()]
 
     def __str__(self):
         return '\n'.join(self.lines)
@@ -1003,7 +1003,7 @@ class GroupComment(SlotsDataClass):
     def parse(cls, *lines):
         c = cls()
         for l in lines:
-            l = re.sub(r'^## ?','', l)
+            l = re.sub(r'^## ?','', l).rstrip()
             c.lines.append(l)
         return c
 

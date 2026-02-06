@@ -24,8 +24,8 @@ create temp table to_split as
   select other_group_id from to_merge group by other_group_id having count(distinct main_group_id) > 1;
 
 create temp table split_info (
-  main_group_id integer not null,
-  other_group_id integer not null,
+  main_group_id integer not null, -- destitution group id
+  other_group_id integer not null, -- source group_id
   word_id integer not null,
   new_word_id integer primary key,
   lemma text text not null,
@@ -170,8 +170,25 @@ insert into new_lemma_comments
     cross join lemma_comments l using (lemma_id)
 where not exists (select 1 from new_lemma_comments n where n.main_group_id = s.main_group_id and n.lemma_id = l.lemma_id);
 
+-- copy over existing group comments
+insert into new_group_comments (group_id, comment)
+select main_group_id, gc.comment
+  from to_merge
+  cross join group_comments gc on gc.group_id = other_group_id
+where not exists (select 1 from new_group_comments n where n.group_id = main_group_id)
+group by main_group_id
+having count(distinct gc.comment) == 1;
+
 -- copy over existing derived variant info
 -- FIXME: Write me
+
+-- copy over existing group comments
+insert or ignore into new_group_comments (group_id, comment)
+select main_group_id, gc.comment
+  from to_merge
+  cross join group_comments gc on gc.group_id = other_group_id
+group by main_group_id
+having count(distinct gc.comment) == 1;
 
 -- delete unused words
 delete from words where word_id in (select word_id from adj_words where new_word_id is not null);

@@ -9,7 +9,7 @@ import sys
 from contextlib import suppress
 
 def usage():
-    sys.stderr.write(f"usage: {sys.argv[0]} (create-db [--raw] [<db file>]) | sort\n")
+    sys.stderr.write(f"usage: {sys.argv[0]} (create-db [--raw|--dont-combine-pos] [<db file>]) | sort\n")
     exit(1)
 
 sys.path.insert(0, '.')
@@ -18,9 +18,9 @@ from libscowl import *
 from libscowl import _importFromDB, _finalizeGroups, _createClusters, _mergeText
 
 mergeFiles = (
-    ('data/extra'),
-    ('data/signature'),
-    ('data/coca'),
+    'data/extra',
+    'data/signature',
+    'data/coca',
 )
 
 adjustFiles = (
@@ -46,9 +46,17 @@ if sys.argv[1] != 'create-db':
 idx = 2
 
 rawMode = False
+dontCombinePOS = False
 if len(sys.argv) > idx and sys.argv[idx] == '--raw':
     rawMode = True
+    dontCombinePOS = True
     idx += 1
+
+if len(sys.argv) > idx and sys.argv[idx] == '--dont-combine-pos':
+    dontCombinePOS = True
+    idx += 1
+if os.environ.get('SCOWL_OPTS', '') == 'dont-combine-pos':
+    dontCombinePOS = True
 
 dbfile = ''
 if len(sys.argv) > idx:
@@ -60,7 +68,6 @@ if not dbfile:
     dbfile = os.environ.get('SCOWL_DB', '')
 if not dbfile:
     dbfile = 'scowl.db'
-    
 
 t = None
 def start(msg):
@@ -139,6 +146,7 @@ if not rawMode:
                  "  in (select size,category,region,tag,group_id,pos from scowl_data_cleanup)")
     finish()
 
+if not dontCombinePOS:
     start("combine POS")
     combinePOS(conn)
     finish()
@@ -148,4 +156,3 @@ finalizeDB(conn)
 final = openDB(dbfile, copyFrom=conn)
 final.close()
 finish()
-

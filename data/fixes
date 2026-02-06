@@ -75,12 +75,6 @@ bing <m→n>
 
 chez <→pp>
 
-cochair <m→n_v>
-
-cofound <m→v>
-
-cohost <m→n_v>
-
 = constructivism <n>: constructivisms~, constructivism's
 = 80: - <n>: constructivisms, -
 
@@ -107,16 +101,12 @@ hyaena <n>: (hyaenas | V: hyaena)
 
 = intaglio <v>: intaglioed, intaglioing, intaglioes
 
-intercut <m→v>
-
 job-share <m→v>
 
 layperson <n>: (laypeople | V: laypersons), layperson's, (laypeople's | V: laypersons')
 + 60: +: layperson <n>: laypersons
 
 - lbs. <abbr>
-
-leaguer <m→n_v>
 
 = A C: math <n>
 = B: maths <n>

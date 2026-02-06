@@ -1,4 +1,4 @@
-#:: merge [coca]
+#:: merge [coca] :adjust-pos
 
 60: _: aboveground <aj>
 60: _?: above ground <aj>

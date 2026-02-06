@@ -1,11 +1,15 @@
+from collections import defaultdict
+import io
+
 from ._core import *
 from ._import import *
 from ._db import *
 from ._export import *
+from ._adjust import adjustEntries
 
 def mergeEntries(conn, f = None, *,
                  simplifyScowlInfo = None, ignoreErrors = None,
-                 preview = False):
+                 adjustPOS = 'default', preview = False):
     """
     Merge entries in SCOWL text format into an existing database.
 
@@ -30,6 +34,7 @@ def mergeEntries(conn, f = None, *,
         f = sys.stdin
     onConflict = 'merge'
     onVariantConflict = 'replace'
+    doAdjustPos = False
     tag = None
     lines = list(f)
     if len(lines) > 0 and lines[0].startswith('#:: '):
@@ -47,111 +52,214 @@ def mergeEntries(conn, f = None, *,
                 onConflict = 'replace'
             elif flag == ':error-on-conflict':
                 onConflict = 'error'
+            elif flag == ':adjust-pos':
+                doAdjustPos = True
             else:
                 raise ValueError(f"unknown flag found in header: {flag}")
-
         lines = lines[1:]
 
+    adjustOnly = False
+    _adjustPosPreview = 'no'
+    if adjustPOS == 'default':
+        pass
+    elif adjustPOS == 'skip':
+        doAdjustPos = False
+    elif adjustPOS == 'only':
+        adjustOnly = True
+    elif adjustPOS == 'script':
+        adjustOnly = True
+        _adjustPosPreview = 'script'
+    elif adjustPOS == 'preview':
+        adjustOnly = True
+        _adjustPosPreview = 'result'
+    else:
+        raise ValueError("adjustPOS must be one of: default, skip, only, script, or preview")
+
+    if doAdjustPos and preview:
+        raise ValueError("can not preview when also adjusting POS")
+
+    # parse input
     groups = []
     clusterComments = {}
     _mergeText(lines, groups, clusterComments)
     groups = _finalizeGroups(groups)
     failedCnt = 0;
 
-    conn.execute("begin")
+    try:
+        # do initial matchup
+        _matchGroups(conn, groups)
 
-    # group_id allocation: _exportGroup increments by 2 for some "combined POS"
-    # groups (n_v, aj_av) so we advance by 2 to stay on the same parity and to
-    # keep room for those paired ids.
-    next_group_id,  = next(conn.execute("select coalesce(max(group_id) + 2, 1) from groups"))
-    next_word_id, = next(conn.execute("select coalesce(max(word_id) + 1, 1) from words"))
+        # adjust POS if required
+        if doAdjustPos:
+            _adjustPos(conn, groups, preview=_adjustPosPreview)
+        if adjustOnly:
+            return False
+        if doAdjustPos:
+            # redo matchup after adjusting POS
+            conn.executescript((_dir / 'merge_match.sql').read_text())
 
-    # Used for preview mode: track which group_ids were inserted/merged so we
-    # can find all clusters that became connected to them.
-    conn.execute("create temp table merged_groups (group_id integer primary key)")
+        conn.execute("begin")
 
-    for grp in groups:
-        if tag is not None:
-            for l in grp.lines:
-                for si in l.si:
-                    si.tags.add(tag)
-            for o in grp.override.values():
-                for si in o.si:
-                    si.tags.add(tag)
-        try:
-            conn.execute("savepoint sp")
-            (next_group_id, next_word_id) = _mergeGroup(conn, grp, next_group_id, next_word_id,
-                                                        onConflict = onConflict,
-                                                        onVariantConflict = onVariantConflict)
-            conn.execute("insert or ignore into merged_groups values (?)", (grp._group_id,))
-            conn.execute("release sp")
-        except ValueError as err:
-            conn.execute("rollback to sp")
-            conn.execute("release sp")
-            _warn(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}: {err}");
-            failedCnt += 1
+        # group_id allocation: _exportGroup increments by 2 for some "combined POS"
+        # groups (n_v, aj_av) so we advance by 2 to stay on the same parity and to
+        # keep room for those paired ids.
+        next_group_id,  = next(conn.execute("select coalesce(max(group_id) + 2, 1) from groups"))
+        next_word_id, = next(conn.execute("select coalesce(max(word_id) + 1, 1) from words"))
 
-    for comment in clusterComments:
-        # fixme
-        pass
+        # Used for preview mode: track which group_ids were inserted/merged so we
+        # can find all clusters that became connected to them.
+        conn.execute("create temp table merged_groups (group_id integer primary key)")
 
-    if failedCnt > 0 and not ignoreErrors:
-        raise ValueError(f"failed to add {failedCnt}/{len(groups)} groups")
+        for idx, grp in enumerate(groups):
+            if tag is not None:
+                for l in grp.lines:
+                    for si in l.si:
+                        si.tags.add(tag)
+                for o in grp.override.values():
+                    for si in o.si:
+                        si.tags.add(tag)
+            try:
+                conn.execute("savepoint sp")
+                (next_group_id, next_word_id) = _mergeGroup(conn, grp, idx, next_group_id, next_word_id,
+                                                            onConflict = onConflict,
+                                                            onVariantConflict = onVariantConflict)
+                conn.execute("insert or ignore into merged_groups values (?)", (grp._group_id,))
+                conn.execute("release sp")
+            except ValueError as err:
+                conn.execute("rollback to sp")
+                conn.execute("release sp")
+                #raise
+                _warn(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}: {err}");
+                failedCnt += 1
 
-    if preview:
-        # Show the clusters that would be affected. We start from the merged
-        # groups, grab their lemma words (via fuzzy -> word_key), then include
-        # every other group that shares those word_keys.
-        clusters = importFromDB(conn, filterQuery =
-                                "with l as (select * from words join fuzzy using (word) where lemma_id = word_id) "
-                                "  select b.group_id from merged_groups m cross join l as a on m.group_id = a.group_id cross join l as b using (word_key) ")
-        exportAsText(clusters, conn, sys.stdout, showExtraInfo = False)
+        for comment in clusterComments:
+            # fixme
+            pass
+
+        if failedCnt > 0 and not ignoreErrors:
+            raise ValueError(f"failed to add {failedCnt}/{len(groups)} groups")
+
+        if preview:
+            # Show the clusters that would be affected. We start from the merged
+            # groups, grab their lemma words (via fuzzy -> word_key), then include
+            # every other group that shares those word_keys.
+            clusters = importFromDB(conn, filterQuery =
+                                    "with l as (select * from words join fuzzy using (word) where lemma_id = word_id) "
+                                    "  select b.group_id from merged_groups m cross join l as a on m.group_id = a.group_id cross join l as b using (word_key) ")
+            exportAsText(clusters, conn, sys.stdout, showExtraInfo = False)
+            return False
+        else:
+            conn.execute("drop table merged_groups")
+            conn.execute("delete from cluster_map")
+            conn.commit()
+            return True
+
+    finally:
         conn.rollback()
+        if not DEBUG_SQL:
+            conn.executescript((_dir / 'merge_cleanup.sql').read_text())
+
+def _matchGroups(conn, grps):
+    if DEBUG_SQL:
+        conn.executescript((_dir / 'merge_cleanup.sql').read_text())
+        conn.executescript((_dir / 'merge_init.sql').read_text().replace("temp.", "main."))
     else:
-        conn.execute("drop table merged_groups")
-        conn.execute("delete from cluster_map")
-        conn.commit()
+        conn.executescript((_dir / 'merge_init.sql').read_text())
+        
+    conn.execute("begin")
+    for idx, grp in enumerate(grps):
+        conn.execute("insert into new_groups (idx, base_pos, defn_note) values (?,?,?) ",
+                     (idx, grp.base_pos, ifDefault(grp.defn_note, None)))
+        for lemma in grp.entries:
+            conn.execute("insert into new_lemmas (idx, lemma) values (?,?) ",
+                         (idx, lemma.lemma))
+    conn.commit()
 
+    conn.executescript((_dir / 'merge_match.sql').read_text())
 
-def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariantConflict):
-    """
-    Merge a single parsed Group into the DB.
+def _adjustPos(conn, grps, preview = 'no'):
+    assert preview in ('no', 'script', 'result')
+    # lemma, other_pos => [base_pos]
+    pos_adjs = defaultdict(list)
+    rows = conn.execute("""
+      with
+        candidates as (
+          select distinct group_id, base_pos as orig_pos, base_pos as new_pos, 0 as num
+            from (new_groups join new_lemmas using (idx)) 
+            join lemmas using (lemma, base_pos)
+          union all
+          select distinct group_id, a.other_pos as orig_pos, a.base_pos as new_pos, 1 as num
+            from (new_groups join new_lemmas using (idx) join overlapping_pos using (base_pos)) as a
+            join lemmas b on a.lemma = b.lemma and a.other_pos = b.base_pos
+          union all
+          select distinct group_id, b.base_pos, a.base_pos, 2 as num
+            from (new_groups join new_lemmas using (idx)) as a
+            join lemmas b on a.lemma = b.lemma and a.base_pos != '' and b.base_pos = ''),
+        with_rank as (
+          select *,
+                 rank() over (partition by group_id, new_pos order by num) as rnk
+            from candidates)
+      select lemma, orig_pos, new_pos
+        from with_rank
+        join lemmas using (group_id)
+        left join lemma_variant_info using (lemma_id)
+        where rnk = 1 and num > 0 and coalesce(spelling, '_') in ('A', '_') and coalesce(variant_level, 0) == 0
+        order by lemma, orig_pos, new_pos;
+    """)
+    for lemma, orig_pos, new_pos in rows:
+        pos_adjs[(lemma, orig_pos)].append(new_pos)
 
-    Matching logic:
-    - We look up existing groups by matching each incoming lemma against the
-      `lemmas` view on (lemma text, base_pos, defn_note). This is intentionally
-      *loose* (it ignores pos_class, usage_note, and group_rank).
-    - The main reason multiple group_id values can match is that the incoming
-      group can contain multiple lemmas (spellings/variants) that already exist
-      in different groups. When you add variant info that ties those lemmas
-      together (e.g., open vs closed compound forms), the merge needs to
-      collapse the existing groups into one combined group.
-    - A single lemma can also match multiple existing groups because the match
-      key ignores pos_class/usage_note/group_rank. If the merge file didn't
-      specify a group-rank prefix (grp.group_rank is Default), we first prefer
-      matches whose stored group_rank is '' (the default) if any exist.
-    - If more than one group_id still matches, we merge those groups into one
-      as long as their existing pos_class/usage_note/group_rank are compatible.
-    """
+    invalid = []
+    lines = ['#:: adjust :keep-comments']
+    for (lemma, orig_pos), new_poses in pos_adjs.items():
+        if orig_pos not in ('m', 'a', ''):
+            continue
+
+        if orig_pos == 'm' and 'v' not in new_poses:
+            #min_size, = next(conn.execute("select min(size) as min_size  "
+            #                              "from lemmas join scowl_data using (group_id) "
+            #                              "where base_pos = 'm' and pos not in ('m0', 'ms') "
+            #                              "and lemma=? ", (lemma,)))
+            new_poses.append('v')
+                                
+        for new_pos in new_poses:
+            lines.append(f"{lemma} <{orig_pos}→{new_pos}/>")
+
+    adjustInput = '\n\n'.join(lines)
+
+    if len(adjustInput) == 1:
+        return
+
+    if (preview == 'script'):
+        print(adjustInput)
+        return
+
+    adjustEntries(conn, io.StringIO(adjustInput), preview = (preview != 'no'))
+
+def _mergeGroup(conn, grp, idx, next_group_id, next_word_id, *, onConflict, onVariantConflict):
+
     assert onConflict in ('merge', 'replace', 'error')
     assert onVariantConflict in ('skip', 'replace', 'error')
 
     #
-    # Check for matching groups
+    # Check for matching or conflicting groups
     #
 
-    # select candidate groups
-    group_ids = set()
-    for lemma in grp.entries:
-        for (id,) in conn.execute("select group_id from lemmas "
-                                  "where lemma = ? and base_pos = ? and defn_note = ?",
-                                  (lemma.lemma, grp.base_pos, grp.defn_note)):
-            group_ids.add(id)
+    row = next(conn.execute("select lemma, base_pos, other_pos from pos_conflicts where idx = ?", (idx,)), None)
+    if row:
+        raise ValueError("can't merge group: "
+                         f"existing pos <{row['other_pos']}> conflicts with <{row['base_pos']}> "
+                         f"for lemma: {row['lemma']}")
 
-    # if replace, than just remove existing groups
-    if group_ids and onConflict == 'replace':
-        conn.executemany("delete from groups where group_id = ?", ((group_id,) for group_id in group_ids))
-        group_ids.clear()
+    if onConflict == 'replace':
+        conn.executemany("delete from groups "
+                         "where group_id in (select group_id from matched where idx = ?)",
+                         (idx,))
+        group_ids = set()
+    else:
+        rows = conn.execute("select group_id from matched where idx = ? and keep",
+                            (idx,))
+        group_ids = set(id for id, in rows)
 
     # nothing to merge so just create a new group and return
     if not group_ids:
@@ -161,28 +269,20 @@ def _mergeGroup(conn, grp, next_group_id, next_word_id, *, onConflict, onVariant
     if onConflict == 'error':
         raise ValueError(f"group already exists: {grp.entries[0].lemma} <{grp.base_pos}> {{{grp.defn_note}}}")
 
-    # narrow group selection
-    if len(group_ids) > 1 and grp.group_rank is Default:
-        group_ids_str = ','.join(str(_id) for _id in group_ids)
-        new_group_ids = set(id for (id,) in conn.execute(f"select group_id from groups where group_id in ({group_ids_str}) and group_rank = ''"))
-        if new_group_ids:
-            group_ids = new_group_ids
-    group_id = (sorted(group_ids))[0]
-
-    if len(group_ids) > 1:
-        # check for conflicts
-        group_ids_str = ','.join(str(_id) for _id in group_ids)
-        cur = conn.execute("select count(distinct pos_class), count(distinct usage_note), count(distinct group_rank) "
-                           f"from groups where group_id in ({group_ids_str})")
-        (pos_class_cnt, usage_note_cnt, group_rank_cnt) = next(cur)
-        if pos_class_cnt > 1:
+    # check for conflicts
+    row = next(conn.execute("select * from conflicts where idx = ?", (idx,)), None)
+    if row:
+        if row['pos_class']:
             raise ValueError("can't merge groups: conflicting pos class")
-        if usage_note_cnt > 1:
+        if row['usage_note']:
             raise ValueError("can't merge groups: conflicting usage note")
-        if group_rank_cnt > 1:
-            raise ValueError("can't merge groups: conflicting lemma rank")
+        if row['group_rank']:
+            raise ValueError("can't merge groups: conflicting group rank")
 
-        # otherwise merge groups
+    group_id = min(group_ids)
+
+    # merge groups if needed
+    if len(group_ids) > 1:
         other_group_ids = group_ids - {group_id}
         conn.executemany("update words set group_id = ? where group_id = ?",
                          ((group_id, _id) for _id in other_group_ids))

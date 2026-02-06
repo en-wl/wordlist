@@ -35,6 +35,7 @@ def openDB(dbfile, create = False, copyFrom = None):
         conn.executescript((_dir / 'schema.sql').read_text())
         conn.executescript((_dir / 'constdata.sql').read_text())
         conn.executescript((_dir / 'fix_pos.sql').read_text())
+        conn.executescript((_dir / 'overlapping_pos.sql').read_text())
         conn.executescript((_dir / 'views.sql').read_text())
         conn.executescript((_dir / 'scowl.sql').read_text())
 

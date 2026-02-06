@@ -37,6 +37,13 @@ create table fix_pos (
   primary key (base_pos, orig_pos)
 ) without rowid;
 
+-- populated via overlapping_pos.sql
+create table overlapping_pos (
+  base_pos not null references base_poses(base_pos),
+  other_pos not null references base_poses(base_pos),
+  primary key (base_pos, other_pos)
+) without rowid;
+
 create table ranks (
   order_num integer not null unique,
   rank_symbol text not null primary key,

@@ -611,16 +611,19 @@ Files of this format should start with the line:
 
 where TAG is an optional tag to add to all new entries.  FLAGS is any of:
 
-    :replace-on-conflic
-    :error-on-conflic
+    :replace-on-conflict
+    :error-on-conflict
     :skip-on-variant-conflict
     :error-on-variant-conflict
+    :adjust-pos
 
-and control the conflict resolution behaviour, without any flags groups are
-merged and variant information is replaced.
+Without any flags groups are merged, variant information is replaced, and
+`:adjust-pos` is not enabled.
 
 After the header line, the format is exactly the same as `scowl.txt` except
 that new data is merged with existing groups when there is a match.
+
+#### Variant processing and conflict handling
 
 Variant information can be provided as part of the new information.  By
 default, if there is a match then the new information will take precedence as
@@ -632,7 +635,7 @@ be merged as long as it doesn't create inconsistencies.  Existing group
 comments are assumed to relate to variant information and will be removed if
 new variant information is provided for all lemma forms within the group.
 
-If `:replace-on-conflic` is given than the entire group will be replaced with
+If `:replace-on-conflict` is given than the entire group will be replaced with
 the new information.  Use this flag with caution.
 
 If any inconsistencies are found the merge will be aborted.
@@ -640,6 +643,22 @@ If any inconsistencies are found the merge will be aborted.
 Variant level inconsistencies will arise when there are additional forms found
 in the database that are not mentioned. To resolve this, simply provide the
 additional forms.
+
+#### POS processing
+
+It is an error to add entries if an existing entry with an overlapping POS is
+already present.  This mostly applies to the `<m>` and `<a>` POS tags.  For
+example, adding a `<n>` form of a word when an entry with the `<m>` POS
+already exists is an error.  To fix this, the `<m>` entry needs to be split
+into a separate `<n>` and `<v>`.
+
+If the `:adjust-pos` flag is given, a pass is first done to split or adjust
+existing entries so that the POS better matches the new entries.  This will
+adjust both overlapping POSes, and also entries without a POS.  The
+transformation is performed in an independent transaction, so the merge can
+fail while the POS changes remain.  If this happens, you can generally just
+rerun the merge command and the POS changes will be skipped as there is
+nothing to do.
 
 
 ### Adjust file format

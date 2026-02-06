@@ -58,13 +58,9 @@ def adjust(args):
 def merge(args):
     conn = libscowl.openDB(args.db)
     kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'func', 'post')}
-    preview = kwargs.pop('preview')
-    if preview:
-        libscowl.mergeEntries(conn, sys.stdin, preview = True, **kwargs)
-    else:
-        libscowl.mergeEntries(conn, sys.stdin, preview = False, **kwargs)
-        if getattr(args, 'post', True):
-            conn.executescript((libscowl._dir / 'post.sql').read_text())
+    ok = libscowl.mergeEntries(conn, sys.stdin, **kwargs)
+    if ok and getattr(args, 'post', True):
+        conn.executescript((libscowl._dir / 'post.sql').read_text())
 
 def sortFile(args):
     if args.replace:
@@ -319,11 +315,14 @@ p = addParser('adjust',
 p.set_defaults(func=adjust)
 addAdjustMergeCommonArgs()
 
-
 p = addParser('merge',
               help='add or merge entries')
 p.set_defaults(func=merge)
 addAdjustMergeCommonArgs()
+p.add_argument('--adj-pos', dest='adjustPOS',
+               choices=('default', 'skip', 'only', 'script', 'preview'))
+p.add_argument('--adjust-pos', dest='adjustPOS', help=SUPPRESS,
+               choices=('default', 'skip', 'only', 'script', 'preview'))
 
 
 p = addParser('sort',

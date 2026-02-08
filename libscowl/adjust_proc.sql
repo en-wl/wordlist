@@ -202,7 +202,14 @@ where lemma_id in (select lemma_id from useless_lemma_variant_entries join group
 --
 -- fix up derived_variant_info
 --
--- fixme, handle splits...
+
+-- copy over existing derived_variant_info
+insert into new_derived_variant_info (main_group_id, word_id, spelling, variant_level)
+select main_group_id, new_word_id, spelling, variant_level
+  from split_info a
+  cross join derived_variant_info v using (word_id)
+where exists (select 1 from words n where n.word_id = new_word_id)
+  and not exists (select 1 from new_derived_variant_info n where n.word_id = new_word_id);
 
 -- remove unused entries
 delete from derived_variant_info

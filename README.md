@@ -3,7 +3,7 @@ Spell Checking Oriented Word Lists Version 2 (SCOWLv2)
 
 SCOWL (Spell Checker Oriented Word Lists) and Friends is a database of
 information on English words useful for creating high-quality word lists
-suitable for use in spell checkers of most dialects of English. The database
+suitable for use in spell checkers of most dialects of English.  The database
 primarily contains information on how common a word is, differences in spelling
 between the dialects of English, spelling variant information, and (basic)
 part-of-speech and inflection information.
@@ -22,7 +22,7 @@ include the trailing dot.  It also includes words that were excluded from
 SCOWLv1 such as hyphenated and open (i.e. with space) compound words, and
 words with special symbols in them.
 
-SCOWL is derived from many sources under a BSD compatible license. The
+SCOWL is derived from many sources under a BSD compatible license.  The
 combined work is freely available under an MIT-like license.  See the file
 Copyright for details.
 
@@ -36,8 +36,8 @@ the noun category assigned by WordNet.  For American English any new changes
 to non-possessive forms of words included in speller dictionary have been
 accounted for and noted in the file `misc/comp-60.txt`.
 
-SCOWLv2 is generated from the the same sources that SCOWLv1 uses but via a far
-more complicated, and unreleased, process.  The results of this process is in
+SCOWLv2 is generated from the same sources that SCOWLv1 uses but via a far
+more complicated, and unreleased, process.  The results of this process are in
 the file `scowl-pre.txt`.  That file is then combined with other files to
 create the final version `scowl.txt` and the sqlite3 database `scowl.db`.
 
@@ -83,7 +83,7 @@ such as _dox_ and _doxx_).  The exact meaning of all these values are
 described in the _[File Format](#file-format)_ section.
 
 The above command will create a word-list that corresponds to the default
-dictionary for American English, with the exception that diacritictal marks
+dictionary for American English, with the exception that diacritical marks
 (i.e. accents) are preserved.  To remove the marks use the `--deaccent`
 option:
 
@@ -147,7 +147,7 @@ To search for an entry in scowl use:
 
 where WORD is one or more words to search.  By default search will return the
 groups with any of the supplied words.  To instead return the entire cluster
-use `--by-cluster`.  The search by default is fuzzy. To instead search for the
+use `--by-cluster`.  The search by default is fuzzy.  To instead search for the
 exact word use `--exact`.
 
 
@@ -198,7 +198,7 @@ As previously mentioned the `scowl` script is a very thin wrapper around the
 instead of going through the script.  Use of the Python module directly
 instead of through the command line interface is also supported to some
 extent.  Calling the high-level functions as is done in the `__main__.py` is
-supported, but the API may stil change.  Direct use of the internal data
+supported, but the API may still change.  Direct use of the internal data
 structures, however, is not supported.
 
 
@@ -328,13 +328,13 @@ The parts of speech (POS) are as follows:
     n_v: noun and verb
     aj_av: adjective and adverb
 
-The `m` and `a` are special POS'es that should not be used for new entries.
+The `m` and `a` are special POS tags that should not be used for new entries.
 The `m` is assigned when all the word forms for a verb were found in a word
 list, but no POS info was found for that word.  It is probably a verb and
 could also be a noun.  Similarly, The `a` means it could be an adjective or
 adverb.
 
-The `n_v` and `aj_av` are special combined POS'es.
+The `n_v` and `aj_av` are special combined POS tags.
 
 Within a line the derived forms of a word are in a specific order.  A single
 dash (`-`) is used if a particular word form is missing.  The order is one of:
@@ -444,7 +444,7 @@ The SPELLING codes and REGION tags are as follows:
     D: AU: Australian
     _:     Other (Never used with any of the above).
 
-A SPELLING code classifies alternative spellings of the same word. A REGION
+A SPELLING code classifies alternative spellings of the same word.  A REGION
 tag labels entries that are specific to a particular region.
 
 Within a group, if there are no lines with the `Z` SPELLING code then `B`
@@ -467,7 +467,7 @@ The VARIANT-LEVELs are as follows:
 `v` is used for common variants where there is clear agreement on the
 preferred form and the variant is reasonably frequent.  `V` is used for less
 common but still clearly acceptable variants; typical cases are variants
-marked as “also” in Merriam-Webster, or spellings that are only recognized by
+marked as "also" in Merriam-Webster, or spellings that are only recognized by
 some major dictionaries.  `-` is used when the variant is generally not listed
 in standard dictionaries, but there is some evidence of real-world usage.  `@`
 is used for archaic spellings of the word.  `x` is used for outright
@@ -601,7 +601,7 @@ format.  These files should, in general, not need to be modified.
 
 ### Merge file format
 
-_Merge_ files are used when adding new entries.  There is limited suport for
+_Merge_ files are used when adding new entries.  There is limited support for
 merging groups and adding variant information with the addition of the new
 entries.
 
@@ -641,7 +641,7 @@ the new information.  Use this flag with caution.
 If any inconsistencies are found the merge will be aborted.
 
 Variant level inconsistencies will arise when there are additional forms found
-in the database that are not mentioned. To resolve this, simply provide the
+in the database that are not mentioned.  To resolve this, simply provide the
 additional forms.
 
 #### POS processing
@@ -668,7 +668,7 @@ groups.  This included marking new variants.
 
 #### File format
 
-_Adjust_ files shoud start with the line:
+_Adjust_ files should start with the line:
 
     #:: adjust
 
@@ -686,7 +686,7 @@ prefixes have the following approximate meanings:
     ~: transfer
     #: a comment (i.e. ignored)
 
-Unless prefixed with a `+`, a line is first matched with an exiting lemma in
+Unless prefixed with a `+`, a line is first matched with an existing lemma in
 the database using the word, pos, and defn-note.  If no match is found the
 group will be skipped.  To avoid this and instead just skip the line, use `?`.
 If the line is prefixed with a `-`, then that lemma will be removed from the
@@ -817,7 +817,7 @@ forms with a `-` will be ignored, so no other adjustments will be made.
 
 The word _thru_ is somewhat of a special case.  It is acceptable to use _thru_
 as part of the word _drive-thru_, but generally not considered a proper
-spelling of _through_.  It is also different enough in spelling that it
+spelling of _through_.  It is also different enough in spelling that it is
 unlikely that the two forms will get confused so I want to let the word _thru_
 in but only at SCOWL sizes 70 or higher.  I also want to add an entry for
 _thru_ when part of _drive-thru_ but tag it for _US_ only.  The following

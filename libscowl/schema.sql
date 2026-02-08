@@ -9,7 +9,7 @@ begin;
 create table poses (
   order_num integer not null unique,
   pos text not null primary key,
-  base_pos text not null references base_poses(base_pos) deferrable initially deferred,
+  base_pos text not null references base_poses(base_pos),
   descr text,
   note text,
   extra_info text
@@ -85,7 +85,7 @@ create table groups (
 
 create table words (
   word_id integer primary key,
-  group_id integer not null references groups(group_id) on delete cascade,
+  group_id integer not null references groups(group_id),
   lemma_id integer not null references words(word_id),
   pos text not null references poses(pos),
   word text not null,
@@ -98,14 +98,14 @@ create index words_word on words (word);
 create index words_idx on words (group_id, pos);
 
 create table lemma_variant_info (
-  lemma_id integer not null references words(word_id) on delete cascade,
+  lemma_id integer not null references words(word_id),
   spelling text not null references spellings(spelling),
   variant_level smallint not null default 0 references variant_levels(variant_level),
   primary key (lemma_id, spelling)
 ) without rowid;
 
 create table derived_variant_info (
-  word_id integer not null references words(word_id) on delete cascade,
+  word_id integer not null references words(word_id),
   spelling text not null default '_' references spellings(spelling),
   variant_level smallint not null references variant_levels(variant_level),
   primary key (word_id, spelling)
@@ -116,7 +116,7 @@ create table scowl_data (
   category text not null default '',
   region text not null default '' references regions(region),
   tag text not null default '',
-  group_id integer not null references groups(group_id) on delete cascade,
+  group_id integer not null references groups(group_id),
   pos text not null references poses(pos),
   --foreign key (group_id, pos) references words(group_id, pos),
   primary key (size, region, category, tag, group_id, pos)
@@ -140,13 +140,13 @@ create table cluster_comments (
 ) without rowid;
 
 create table group_comments (
-  group_id integer not null references groups(group_id) on delete cascade,
+  group_id integer not null references groups(group_id),
   comment text not null,
   primary key (group_id)
 );
 
 create table lemma_comments (
-  lemma_id integer not null references words(word_id) on delete cascade,
+  lemma_id integer not null references words(word_id),
   order_num int not null,
   comment text,
   primary key (lemma_id, order_num)

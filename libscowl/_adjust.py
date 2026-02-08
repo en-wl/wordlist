@@ -82,7 +82,7 @@ class GroupInfo(SlotsDataClass):
         v0 = getattr(self, attr, None)
         if v0 is None: setattr(self, attr, v)
         elif v != v0: raise ValueError(f'conflicting values for {attr} within group')
-        
+
     def registerLine(self, conn, li, new_pos = None, outer_pos = None):
         assert li.action in ('adjust', 'match', 'add', 'remove', 'replace', 'transfer')
 
@@ -156,7 +156,7 @@ class GroupInfo(SlotsDataClass):
             self.spellings.update(li.spellings)
 
         self.subGroups[new_pos].lines.append(li)
-        
+
     def registerBasePos(self, outer_pos):
         if self.pos == '':
             self.pos = outer_pos
@@ -175,7 +175,7 @@ class ClusterComment(SlotsDataClass):
 def splitIntoGroups(f):
     lines = [line.strip() for line in f]
     lines.append('')
-    
+
     header = None
     if len(lines) > 0 and lines[0].startswith('#:: '):
         header = lines[0][4:].lstrip()
@@ -193,7 +193,7 @@ def splitIntoGroups(f):
             startIdx = idx
         else:
             pass
-        
+
     return (header, lines, linesByGroup)
 
 def getLineAction(line):
@@ -214,7 +214,7 @@ def getLineAction(line):
         action = 'transfer'
         line = line[2:].lstrip()
     return (action, line)
-    
+
 def adjustEntries(conn, f = None, *,
                   preview = False, strict = True, ignoreErrors = False,
                   simplifyScowlInfo = True,
@@ -645,4 +645,3 @@ def adjustEntries(conn, f = None, *,
     if not DEBUG_SQL:
         conn.executescript((_dir / 'adjust_cleanup.sql').read_text())
         conn.commit()
-

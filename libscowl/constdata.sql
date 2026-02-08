@@ -1,4 +1,5 @@
 BEGIN;
+PRAGMA defer_foreign_keys = ON;
 INSERT INTO poses VALUES(1,'?','','unknown',NULL,NULL);
 INSERT INTO poses VALUES(27,'a0','a','adjective/adverb','aj0 or av0',NULL);
 INSERT INTO poses VALUES(28,'a1','a','adjective/adverb: comparative (-er)','aj1 or av1',NULL);

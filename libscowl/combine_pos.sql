@@ -84,6 +84,15 @@ update or ignore words
   set group_id = (select a_group_id from _match where b_group_id = group_id),
       lemma_id = (select a_lemma_id from _match where b_lemma_id = lemma_id);
 
+delete from lemma_variant_info
+  where (lemma_id) in (select b_word_id from _match);
+
+delete from lemma_comments
+  where (lemma_id) in (select b_word_id from _match);
+
+delete from derived_variant_info
+  where (word_id) in (select b_word_id from _match);
+
 delete from words
   where (word_id) in (select b_word_id from _match);
 
@@ -107,6 +116,9 @@ update scowl_data
 
 update or ignore scowl_data as w
   set group_id = (select a_group_id from _match where b_group_id = group_id);
+
+delete from group_comments
+  where group_id not in (select group_id from words);
 
 delete from groups
   where group_id not in (select group_id from words);

@@ -95,6 +95,7 @@ finish()
 del clusters
 
 start("importing data/basic")
+conn.execute("create temp table groups_to_del (group_id integer primary key);")
 with open('data/basic') as f:
     for d in roughParse(f):
         if d.base_pos in ('d', 'pn'):
@@ -105,10 +106,11 @@ with open('data/basic') as f:
             poses = "'n','a','av','aj'"
         else:
             poses = f"'{d.base_pos}',''";
-        conn.execute("delete from groups "
-                     f"where (group_id) in (select group_id from entries where word = ? and base_pos in ({poses}))", (d.word,))
-    conn.execute("delete from groups "
-                 "where (group_id) in (select group_id from lemmas where lemma in ('so', 'sol'))")
+        conn.execute("insert or ignore into groups_to_del "
+                     f"select group_id from entries where word = ? and base_pos in ({poses})", (d.word,))
+    conn.execute(f"insert or ignore into groups_to_del "
+                 "select group_id from lemmas where lemma in ('so', 'sol')")
+removeEntries(conn)
 conn.commit()
 with open('data/basic') as f:
     mergeEntries(conn, f)

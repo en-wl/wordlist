@@ -226,6 +226,56 @@ class BasicGroupInfo(SlotsDataClass):
     def sortKey(self):
         return self.group_id
 
+def removeEntries(conn):
+    """
+    Delete any groups (and all associated entries) in temp.group_to_del and/or
+    words in temp.words_to_del.  Will delete both tables once done."
+
+    """
+    conn.execute("create table if not exists temp.groups_to_del (group_id integer not null)")
+    conn.execute("create table if not exists temp.words_to_del (word_id integer not null)")
+
+    haveGroupsToDel = conn.execute(f"select 1 from groups_to_del limit 1").fetchone() is not None
+    haveWordsToDel = conn.execute(f"select 1 from words_to_del limit 1").fetchone() is not None
+    # note: haveWordsToDel does not include deleted words as a result of deleting groups
+
+    if haveWordsToDel:
+        raise NotImplementedError
+        #conn.execute("create table temp.candidate_group_ids (group_id integer primary key)")
+        #conn.execute("insert or ignore into candidate_group_ids select word_id from words_to_del cross join words using (word_id)")
+        #conn.execute("analyze candidate_group_ids")
+
+    if haveGroupsToDel:
+        conn.execute("insert or ignore into words_to_del select word_id from groups_to_del cross join words using (group_id)")
+
+    conn.execute("analyze words_to_del")
+    if haveGroupsToDel or haveWordsToDel:
+        conn.execute("delete from lemma_comments where lemma_id in (select word_id from words_to_del)")
+        conn.execute("delete from lemma_variant_info where lemma_id in (select word_id from words_to_del)")
+        conn.execute("delete from derived_variant_info where word_id in (select word_id from words_to_del)")
+        conn.execute("delete from scowl_override where word_id in (select word_id from words_to_del)")
+        conn.execute("delete from words where word_id in (select word_id from words_to_del)")
+
+    # if haveWordsToDel:
+    #     # fixme, add stale groups to groups_to_del if any
+    #     # set haveGroupsToDel if any found
+    #     # use candidate_group_ids
+    #     pass
+
+    conn.execute("analyze groups_to_del")
+    if haveGroupsToDel:
+        conn.execute("delete from scowl_data where group_id in (select group_id from groups_to_del)")
+        conn.execute("delete from group_comments where group_id in (select group_id from groups_to_del)")
+        conn.execute("delete from groups where group_id in (select group_id from groups_to_del)")
+
+    # if haveWordToDel:
+    #     # fixme, delete reaming stale scowl data, that is (group_id, pos) does not point to anything
+    #     # use candidate_group_ids
+    #     conn.execute("drop table temp.candidate_group_ids")
+
+    conn.execute("drop table temp.words_to_del")
+    conn.execute("drop table temp.groups_to_del")
+
 def updateFuzzy(conn):
     for word, in conn.execute("select distinct word from words where word not in (select word from fuzzy)"):
         conn.execute("insert into fuzzy(word, word_key) values (?, ?)", (word, clusterKey(word).decode('ascii')))

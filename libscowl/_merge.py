@@ -106,6 +106,12 @@ def mergeEntries(conn, f = None, *,
         next_group_id,  = next(conn.execute("select coalesce(max(group_id) + 2, 1) from groups"))
         next_word_id, = next(conn.execute("select coalesce(max(word_id) + 1, 1) from words"))
 
+        conn.execute("create temp table groups_to_del (group_id integer primary key)")
+        if onConflict == 'replace':
+            conn.execute("insert or ignore into groups_to_del "
+                         "select group_id from matched")
+            removeEntries(conn)
+
         # Used for preview mode: track which group_ids were inserted/merged so we
         # can find all clusters that became connected to them.
         conn.execute("create temp table merged_groups (group_id integer primary key)")
@@ -138,6 +144,8 @@ def mergeEntries(conn, f = None, *,
 
         if failedCnt > 0 and not ignoreErrors:
             raise ValueError(f"failed to add {failedCnt}/{len(groups)} groups")
+
+        removeEntries(conn)
 
         if preview:
             # Show the clusters that would be affected. We start from the merged
@@ -251,22 +259,16 @@ def _mergeGroup(conn, grp, idx, next_group_id, next_word_id, *, onConflict, onVa
                          f"existing pos <{row['other_pos']}> conflicts with <{row['base_pos']}> "
                          f"for lemma: {row['lemma']}")
 
-    if onConflict == 'replace':
-        conn.executemany("delete from groups "
-                         "where group_id in (select group_id from matched where idx = ?)",
-                         (idx,))
-        group_ids = set()
-    else:
-        rows = conn.execute("select group_id from matched where idx = ? and keep",
-                            (idx,))
-        group_ids = set(id for id, in rows)
+    rows = conn.execute("select group_id from matched where idx = ? and keep",
+                        (idx,))
+    group_ids = set(id for id, in rows)
 
     # nothing to merge so just create a new group and return
     if not group_ids:
         grp._group_id = next_group_id
         return _exportGroup(conn, grp, next_group_id, next_word_id)
 
-    if onConflict == 'error':
+    if onConflict != 'merge': # 'replace' should already be handled
         raise ValueError(f"group already exists: {grp.entries[0].lemma} <{grp.base_pos}> {{{grp.defn_note}}}")
 
     # check for conflicts
@@ -290,7 +292,7 @@ def _mergeGroup(conn, grp, idx, next_group_id, next_word_id, *, onConflict, onVa
                          "select size,category,region,tag,?,pos "
                          "from scowl_data where group_id = ?",
                          ((group_id, _id) for _id in other_group_ids))
-        conn.executemany("delete from groups where group_id = ?", ((_id,) for _id in other_group_ids));
+        conn.executemany("insert into groups_to_del values (?)", ((_id,) for _id in other_group_ids));
         # fixme: handle group comments
 
     #

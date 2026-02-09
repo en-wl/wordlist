@@ -331,7 +331,7 @@ def exportToDB(clusters, conn):
 
     conn.executescript((_dir / 'post.sql').read_text())
 
-def _exportGroup(conn, group, group_id, word_id):
+def _exportGroup(conn, group, group_id, word_id, *, updateFuzzy = False):
     conn.execute("insert into groups (group_id, base_pos, pos_class, defn_note, usage_note, group_rank) values (?, ?, ?, ?, ?, ?)",
                  (group_id, group.base_pos, group.pos_class, group.defn_note, group.usage_note, group.group_rank))
 
@@ -341,6 +341,8 @@ def _exportGroup(conn, group, group_id, word_id):
             for we in le.words.get(pos, []):
                 conn.execute("insert into words (word_id, group_id, lemma_id, pos, word, entry_rank) values (?, ?, ?, ?, ?, ?)",
                              (word_id, group_id, lemma_id, pos, we.word, we.entry_rank))
+                if updateFuzzy:
+                    conn.execute("insert or ignore into fuzzy (word, word_key) values (?, ?) ", (we.word, clusterKey(we.word).decode('ascii')))
                 if we.spellings is not None and '' in we.spellings:
                     variant_level = we.spellings['']
                     spellings = le.spellings.keys() if le.spellings else ['_']

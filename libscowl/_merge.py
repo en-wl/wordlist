@@ -266,7 +266,7 @@ def _mergeGroup(conn, grp, idx, next_group_id, next_word_id, *, onConflict, onVa
     # nothing to merge so just create a new group and return
     if not group_ids:
         grp._group_id = next_group_id
-        return _exportGroup(conn, grp, next_group_id, next_word_id)
+        return _exportGroup(conn, grp, next_group_id, next_word_id, updateFuzzy=True)
 
     if onConflict != 'merge': # 'replace' should already be handled
         raise ValueError(f"group already exists: {grp.entries[0].lemma} <{grp.base_pos}> {{{grp.defn_note}}}")

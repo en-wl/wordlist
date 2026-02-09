@@ -1,11 +1,14 @@
-#:: merge [+]
+#:: merge [+] :adjust-pos
 
+# Issue #335
 50: _: commenter <n>: commenters, commenter's
 50: _V: commentor <n>: commentors, commentor's
 
+# Issue #303
 50: _: dox <v>: doxed, doxing, doxes
 50: _.: doxx <v>: doxxed, doxxing, doxxes
 
+# Issue #303
 50: _: doxing <n>: doxings
 50: _.: doxxing <n>: doxxings
 
@@ -13,4 +16,5 @@
 
 50: influencer <n>: influencers, influencer's
 
+# Issue #363
 50: metaverse <n>: metaverses, metaverse's

@@ -1,4 +1,4 @@
-#:: merge [extra]
+#:: merge [extra] :adjust-pos
 
 60: financials <pl>
 

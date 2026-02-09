@@ -148,6 +148,10 @@ spokesperson <n>: (spokespeople | V: spokespersons), spokesperson's, (spokespeop
   _: tiercel <n>: tiercels, tiercel's
 + _-: tassell <n>: tassells, tassell's
 
+# Issue #425
+A Z: weaponize <v>: weaponized, weaponizing, weaponizes
+B: weaponise <m→v>: weaponised, weaponising, weaponises
+
 = wiz <n> {:2}: wizzes, wiz's
 
 - ## hyena

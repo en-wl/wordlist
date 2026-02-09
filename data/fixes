@@ -1,5 +1,21 @@
 #:: adjust
 
+# Issue #378
+A B: aesthetic <n>
+Av: esthetic <n>
+
+# Issue #378
+A B: aesthetic <aj>
+Av: esthetic <aj>
+
+# Issue #378
+A B: aesthetically <av>
+Av: esthetically <av>
+
+# Issue #378
+A B: aesthetics <n>
+Av: esthetics <n>
+
 - analytic <n>: analytics
 + _analytics <n>
 

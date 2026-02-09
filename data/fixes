@@ -154,4 +154,10 @@ B: weaponise <m→v>: weaponised, weaponising, weaponises
 
 = wiz <n> {:2}: wizzes, wiz's
 
+# Issue #430
+A Bv C: yogurt <n>: yogurts, yogurt's
+B CV: yoghurt <n>: yoghurts, yoghurt's
+B-: yoghourt <n>: yoghourts, yoghourt's
+Cv: yogourt <n>: yogourts, yogourt's
+
 - ## hyena

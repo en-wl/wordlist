@@ -103,6 +103,10 @@ hyaena <n>: (hyaenas | V: hyaena)
 
 job-share <m→v>
 
+# Issue #345
++ _: Kyiv <n/place>: Kyiv's
+_v: Kiev <n/place>: Kiev's
+
 layperson <n>: (laypeople | V: laypersons), layperson's, (laypeople's | V: laypersons')
 + 60: +: layperson <n>: laypersons
 

@@ -112,6 +112,10 @@ layperson <n>: (laypeople | V: laypersons), layperson's, (laypeople's | V: laype
 
 - lbs. <abbr>
 
+# Issue #328
++ _: Mastercard <n/name>: Mastercard's
+_v: MasterCard <n/name>: MasterCard's
+
 = A C: math <n>
 = B: maths <n>
 

@@ -45,7 +45,7 @@ def _mergeText(f, groups, clusterComments):
             if lineStr.startswith('##'):
                 commentLines.append(lineStr)
                 continue
-            elif lineStr.startswith('#!') or lineStr.startswith('#:'):
+            elif lineStr.startswith(('# ', '#!', '#:')):
                 continue
 
         if l is None:

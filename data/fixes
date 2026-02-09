@@ -95,6 +95,11 @@ A B: drive-through <n>: drive-throughs
 
 = edema <n>: edemas~, edema's
 
+# Issue #449
+A Z: euthanize <v>: euthanized, euthanizing, euthanizes
++ B Dv: euthanise <v>: euthanised, euthanising, euthanises
++ D: euthanase <v>: euthanased, euthanasing, euthanases
+
 hyaena <n>: (hyaenas | V: hyaena)
 
 = intaglio <n>: (intaglios | ~: intagli)

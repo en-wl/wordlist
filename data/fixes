@@ -137,6 +137,14 @@ A Bv: percent <a→av>
 person <n>: (people | V: persons), person's, (people's | V: persons')
 + 60: +: person <n>: persons
 
+# Issue #302
+A B- CV: preexist <v>: preexisted, preexisting, preexists
+AV B C: pre-exist <m→v>: pre-existed_, pre-existing_, pre-exists_
+
+# Issue #302
+A B- CV: preexisting <aj>
+AV B C: pre-existing <aj>
+
 = sauté <n_v>: (sautéed | ~: sautéd), sautéing, sautés
 = _V: saute <n_v>: (sauteed | ~: sauted), sauteing, sautes
 

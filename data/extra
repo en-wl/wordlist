@@ -9,6 +9,14 @@
 # Issue #438
 60: cosplayer <n>: cosplayers, cosplayer's
 
+# Issue #436
+60: _: coworking <n>
+60: _V: co-working <n>
+
+# Issue #436
+60: _: coworking <aj>
+60: _V: co-working <aj>
+
 # Issue #438
 60: fandom <n>: fandoms, fandom's
 
@@ -37,6 +45,10 @@
 # Issue #441
 60: Instagrammer <n>: Instagrammers, Instagrammer's
 
+# Issue #436
+70: _: listserver <n>: listservers
+70: _=: list server <n>: list servers
+
 # Issue #437
 60: _: livestream <n>: livestreams, livestream's
 60: _v: live stream <n>: live streams, live stream's
@@ -50,6 +62,12 @@
 # Issue #437
 60: _: LOL <abbr>
 60: _V: lol <abbr>
+
+# Issue #436
+60: lowball <n>: lowballs
+
+# Issue #436
+60: lowball <v>: lowballed, lowballing, lowballs
 
 # Issue #441
 60: _: macro-influencer <n>: macro-influencers, macro-influencer's
@@ -87,6 +105,14 @@
 # Issue #441
 60: podcaster <n>: podcasters, podcaster's
 
+# Issue #436
+60: _: stand-up <n>: stand-ups
+60: _V: standup <n>: standups
+
+# Issue #436
+60: _: stand-up <aj>
+60: _V: standup <aj>
+
 # Issue #438
 60: _: staycation <n>: staycations, staycation's
 60: _-: stay-cation <n>: stay-cations, stay-cation's
@@ -122,6 +148,10 @@
 60: A. B. {1}: WiFi <n>
 60: Av BV {2}: wifi <n>
 60: AV Bv {3}: wi-fi <n>
+
+# Issue #436
+60: _: workspace <n>: workspaces, workspace's
+60: _V: work space <n>: work spaces, work space's
 
 # Issue #441
 60: YouTube <n>: YouTube's

@@ -87,6 +87,14 @@ wake <v>: (A B: woke | AV B@: waked), (A B: woken | A. B@: waked | AV: woke), wa
 
 bacteria <n>: bacterias!
 
+_: biblical <aj>
++ _V: Biblical <aj>
+
+- Biblical <n/upper>
+
+_: biblically <→av/>
+_V: Biblically <→av/>
+
 bing <m→n>
 
 chez <→pp>

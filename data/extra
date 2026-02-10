@@ -496,7 +496,7 @@
 60: TikToker <n>: TikTokers, TikToker's
 
 # Issue #270
-70: trabecula <n>: (trabeculae_ | _V: trabeculas_)
+70: trabecula <n>: (trabeculae | _V: trabeculas)
 
 # Issue #266
 60: tradable <aj>

@@ -35,6 +35,7 @@ def mergeEntries(conn, f = None, *,
     onConflict = 'merge'
     onVariantConflict = 'replace'
     doAdjustPos = False
+    clearEntryRank = True
     tag = None
     lines = list(f)
     if len(lines) > 0 and lines[0].startswith('#:: '):
@@ -54,6 +55,9 @@ def mergeEntries(conn, f = None, *,
                 onConflict = 'error'
             elif flag == ':adjust-pos':
                 doAdjustPos = True
+            elif flag == ':keep-entry-rank':
+                # experiential, name may change
+                clearEntryRank = False
             else:
                 raise ValueError(f"unknown flag found in header: {flag}")
         lines = lines[1:]
@@ -128,7 +132,8 @@ def mergeEntries(conn, f = None, *,
                 conn.execute("savepoint sp")
                 (next_group_id, next_word_id) = _mergeGroup(conn, grp, idx, next_group_id, next_word_id,
                                                             onConflict = onConflict,
-                                                            onVariantConflict = onVariantConflict)
+                                                            onVariantConflict = onVariantConflict,
+                                                            clearEntryRank = clearEntryRank)
                 conn.execute("insert or ignore into merged_groups values (?)", (grp._group_id,))
                 conn.execute("release sp")
             except ValueError as err:
@@ -244,7 +249,8 @@ def _adjustPos(conn, grps, preview = 'no'):
 
     adjustEntries(conn, io.StringIO(adjustInput), preview = (preview != 'no'))
 
-def _mergeGroup(conn, grp, idx, next_group_id, next_word_id, *, onConflict, onVariantConflict):
+def _mergeGroup(conn, grp, idx, next_group_id, next_word_id,
+                *, onConflict, onVariantConflict, clearEntryRank):
 
     assert onConflict in ('merge', 'replace', 'error')
     assert onVariantConflict in ('skip', 'replace', 'error')
@@ -349,7 +355,7 @@ def _mergeGroup(conn, grp, idx, next_group_id, next_word_id, *, onConflict, onVa
                 else:
                     if lemma_id is None:
                         lemma_id = word_id
-                    if we.entry_rank != '':
+                    if clearEntryRank or we.entry_rank is not Default:
                         conn.execute("update words set entry_rank = ? where word_id = ?", (we.entry_rank, word_id,))
                     if haveDerivedSpelling:
                         conn.execute("delete from derived_variant_info where word_id = ?", (word_id,))

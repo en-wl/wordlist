@@ -12,6 +12,9 @@
 50: _: doxing <n>: doxings
 50: _.: doxxing <n>: doxxings
 
+# Issue #437
+60: emoji <n>: (emojis | V: emoji*), emoji's
+
 50: gaslight <v>: (gaslighted | .: gaslit), gaslighting, gaslights
 
 50: influencer <n>: influencers, influencer's

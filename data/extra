@@ -5,4 +5,48 @@
 
 60: financials <pl>
 
+# Issue #437
+60: _: gameplay <n>: -, gameplay's
+60: _V: game play <n>: -, game play's
+
+# Issue #437
+60: _: livestream <n>: livestreams, livestream's
+60: _v: live stream <n>: live streams, live stream's
+60: _V: live-stream <n>: live-streams, live-stream's
+
+# Issue #437
+60: _: livestream <v>: livestreamed, livestreaming, livestreams
+60: _v: live stream <v>: live streamed, live streaming, live streams
+60: _V: live-stream <v>: live-streamed, live-streaming, live-streams
+
+# Issue #437
+60: _: LOL <abbr>
+60: _V: lol <abbr>
+
 60: microbiome <n>: microbiomes, microbiome's
+
+# Issue #437
+60: microblog <n>: microblogs, microblog's
+
+# Issue #437
+60: microblog <v>: microblogged, microblogging, microblogs
+
+# Issue #437
+60: _: videoconference <n>: videoconferences, videoconference's
+60: _v: video conference <n>: video conferences, video conference's
+60: _V: video-conference <n>: video-conferences, video-conference's
+
+# Issue #437
+60: vlog <n>: vlogs, vlog's
+
+# Issue #437
+60: vlog <v>: vlogged, vlogging, vlogs
+
+# Issue #437
+60: vlogger <n>: vloggers, vlogger's
+
+# Issue #437
+60: A B: Wi-Fi <n>
+60: A. B. {1}: WiFi <n>
+60: Av BV {2}: wifi <n>
+60: AV Bv {3}: wi-fi <n>

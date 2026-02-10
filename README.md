@@ -660,6 +660,20 @@ fail while the POS changes remain.  If this happens, you can generally just
 rerun the merge command and the POS changes will be skipped as there is
 nothing to do.
 
+#### Comment handling
+
+When merging, existing group comments are treated as notes about lemma
+variants and may be dropped to avoid keeping stale commentary.  In particular:
+
+- If multiple existing groups are merged together, existing group comments are
+  cleared.
+- If the merge input provides complete lemma variant information for the
+  group (so the existing lemma variant info is replaced), the existing group
+  comment is cleared.
+
+If the merge input includes a new group comment, it replaces the existing one.
+
+New cluster comments replace existing ones under the same headword.
 
 ### Adjust file format
 

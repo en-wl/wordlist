@@ -138,9 +138,9 @@ def mergeEntries(conn, f = None, *,
                 _warn(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}: {err}");
                 failedCnt += 1
 
-        for comment in clusterComments:
-            # fixme
-            pass
+        for c in clusterComments.values():
+            conn.execute("insert or replace into cluster_comments (headword, other_words, comment) values (?, ?, ?)",
+                         (c.word, c.other_words, c.comment))
 
         if failedCnt > 0 and not ignoreErrors:
             raise ValueError(f"failed to add {failedCnt}/{len(groups)} groups")
@@ -292,8 +292,9 @@ def _mergeGroup(conn, grp, idx, next_group_id, next_word_id, *, onConflict, onVa
                          "select size,category,region,tag,?,pos "
                          "from scowl_data where group_id = ?",
                          ((group_id, _id) for _id in other_group_ids))
-        conn.executemany("insert into groups_to_del values (?)", ((_id,) for _id in other_group_ids));
-        # fixme: handle group comments
+        conn.executemany("insert into groups_to_del values (?)", ((_id,) for _id in other_group_ids))
+        # clear existing comments for now
+        conn.execute("delete from group_comments where group_id = ?", (group_id,))
 
     #
     # Merge new info into existing group
@@ -439,7 +440,7 @@ def _mergeGroup(conn, grp, idx, next_group_id, next_word_id, *, onConflict, onVa
                              ((si.size, si.category, si.region, tag, group_id, pos) for si in l.si for tag in si.tags))
 
     if grp.commentLines:
-        conn.execute("insert into group_comments (group_id, comment) values (?, ?)",
+        conn.execute("insert or replace into group_comments (group_id, comment) values (?, ?)",
                      (group_id, str(grp.commentLines)))
 
     return (next_group_id, next_word_id)

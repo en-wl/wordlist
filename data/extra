@@ -3,8 +3,14 @@
 # Issue #344
 60: Aotearoa <n/place>: Aotearoa's
 
+# Issue #316
+70: bohrium <n>: bohriums, bohrium's
+
 # Issue #438
 60: bromance <n>: bromances, bromance's
+
+# Issue #316
+70: copernicium <n>: coperniciums, copernicium's
 
 # Issue #438
 60: cosplayer <n>: cosplayers, cosplayer's
@@ -16,6 +22,12 @@
 # Issue #436
 60: _: coworking <aj>
 60: _V: co-working <aj>
+
+# Issue #316
+70: darmstadtium <n>: darmstadtiums, darmstadtium's
+
+# Issue #316
+70: dubnium <n>: dubniums, dubnium's
 
 # Issue #438
 60: fandom <n>: fandoms, fandom's
@@ -32,9 +44,15 @@
 
 60: financials <pl>
 
+# Issue #316
+70: flerovium <n>: fleroviums, flerovium's
+
 # Issue #437
 60: _: gameplay <n>: -, gameplay's
 60: _V: game play <n>: -, game play's
+
+# Issue #316
+70: hassium <n>: hassiums, hassium's
 
 # Issue #435
 60: _: homeschool <n>: homeschools
@@ -62,6 +80,9 @@
 # Issue #436
 70: _: listserver <n>: listservers
 70: _=: list server <n>: list servers
+
+# Issue #316
+70: livermorium <n>: livermoriums, livermorium's
 
 # Issue #437
 60: _: livestream <n>: livestreams, livestream's
@@ -91,6 +112,9 @@
 60: _: mega-influencer <n>: mega-influencers, mega-influencer's
 60: _v: megainfluencer <n>: megainfluencers, megainfluencer's
 
+# Issue #316
+70: meitnerium <n>: meitneriums, meitnerium's
+
 60: microbiome <n>: microbiomes, microbiome's
 
 # Issue #437
@@ -106,12 +130,18 @@
 # Issue #189
 60: mitzvah <n>: (mitzvot | _.: mitzvahs | _@: mitzvoth)
 
+# Issue #316
+70: moscovium <n>: moscoviums, moscovium's
+
 # Issue #440
 60: multitask <v>: multitasked, multitasking, multitasks
 
 # Issue #441
 60: _: nano-influencer <n>: nano-influencers, nano-influencer's
 60: _v: nanoinfluencer <n>: nanoinfluencers, nanoinfluencer's
+
+# Issue #316
+70: nihonium <n>: nihoniums, nihonium's
 
 # Issue #438
 60: _: off-screen <aj>
@@ -122,8 +152,17 @@
 60: _V {1}: offscreen <av>
 60: _V {2}: off screen <av>
 
+# Issue #316
+70: oganesson <n>: oganessons, oganesson's
+
 # Issue #441
 60: podcaster <n>: podcasters, podcaster's
+
+# Issue #316
+70: roentgenium <n>: roentgeniums, roentgenium's
+
+# Issue #316
+70: seaborgium <n>: seaborgiums, seaborgium's
 
 # Issue #436
 60: _: stand-up <n>: stand-ups
@@ -139,6 +178,9 @@
 
 # Issue #441
 60: tastemaker <n>: tastemakers, tastemaker's
+
+# Issue #316
+70: tennessine <n>: tennessines, tennessine's
 
 # Issue #441
 60: TikTok <n>: TikTok's

@@ -12,6 +12,9 @@
 # Issue #265
 70: astable <aj>
 
+# Issue #266
+60: auditable <aj>
+
 # Issue #367
 60: biblically <av>
 
@@ -32,6 +35,9 @@
 
 # Issue #357
 70: biopharmaceutical <aj>
+
+# Issue #266
+60: blacksmithing <n>
 
 # Issue #316
 70: bohrium <n>: bohriums, bohrium's
@@ -69,6 +75,9 @@
 # Issue #265
 60: _: coevolve <v>: coevolved, coevolving, coevolves
 60: _V: co-evolve <v>: co-evolved, co-evolving, co-evolves
+
+# Issue #266
+60: commenter <n>: commenters
 
 # Issue #265
 70: contactor <n>: contactors, contactor's
@@ -136,11 +145,17 @@
 # Issue #265
 80: electropneumatics <n>
 
+# Issue #266
+70: epicycle <n>: epicycles
+
 # Issue #265
 70: equipotential <n>: equipotentials
 
 # Issue #265
 70: equipotential <aj>
+
+# Issue #266
+60: ethicist <n>: ethicists
 
 # Issue #438
 60: fandom <n>: fandoms, fandom's
@@ -204,6 +219,9 @@
 
 # Issue #336
 60: impactful <aj>
+
+# Issue #266
+70: inductor <n>: inductors
 
 # Issue #441
 60: Instagram <n>: Instagram's
@@ -356,6 +374,9 @@
 60: BV ZV {1}: preprogramme <v>: (preprogrammed | V: preprogramed), (preprogramming | V: preprograming), preprogrammes
 60: BV ZV {2}: pre-programme <v>: (pre-programmed | V: pre-programed), (pre-programming | V: pre-programing), pre-programmes
 
+# Issue #266
+70: prosecutable <aj>
+
 # Issue #265
 80: ratiometer <n>: ratiometers, ratiometer's
 
@@ -364,6 +385,9 @@
 
 # Issue #265
 60: reinstallation <n>: reinstallations
+
+# Issue #266
+60: responder <n>: responders
 
 # Issue #336
 70: A C Z: revictimization <n>: revictimizations
@@ -374,6 +398,12 @@
 
 # Issue #316
 70: seaborgium <n>: seaborgiums, seaborgium's
+
+# Issue #266
+70: solvability <n>
+
+# Issue #266
+60: splitter <n>: splitters
 
 # Issue #436
 60: _: stand-up <n>: stand-ups
@@ -386,6 +416,12 @@
 # Issue #438
 60: _: staycation <n>: staycations, staycation's
 60: _-: stay-cation <n>: stay-cations, stay-cation's
+
+# Issue #266
+70: subtractive <aj>
+
+# Issue #266
+70: surveil <v>: surveilled, surveilling, surveils
 
 # Issue #441
 60: tastemaker <n>: tastemakers, tastemaker's
@@ -405,17 +441,29 @@
 # Issue #270
 70: trabecula <n>: (trabeculae_ | _V: trabeculas_)
 
+# Issue #266
+60: tradable <aj>
+
+# Issue #266
+60: transactional <aj>
+
 # Issue #265
 70: transaxle <n>: transaxles, transaxle's
 
 # Issue #270
 70: transaxle <n>: transaxles
 
+# Issue #266
+60: tunable <aj>
+
 # Issue #270
 60: uninterruptible <aj>
 
 # Issue #270
 80: unminable <aj>
+
+# Issue #266
+70: verifier <n>: verifiers
 
 # Issue #265
 60: vertex <n>: vertices, vertex's

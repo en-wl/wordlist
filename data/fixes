@@ -71,6 +71,10 @@ rive <v>: -, (riven | V: rived), -, -
 ~ rive <v>: -, riven, -, -
 + riven <aj>
 
+# Issue #266 (surveil is now extra not signature)
+surveil <v>
+- 70 [+]: ...
+
 A B: through <aj_av>
 AV B-: thru <aj_av>
 + 70: +: thru <aj_av>

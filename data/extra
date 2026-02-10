@@ -18,6 +18,19 @@
 # Issue #438
 60: bromance <n>: bromances, bromance's
 
+# Issue #412
+70: A C BV: chip-seal <aj>
+70: AV CV B D: chipseal <aj>
+70: A- C- B-: chip seal <aj>
+
+# Issue #412
+70: A C BV: chip seal <n>: chip seals
+70: AV CV B D: chipseal <n>: chipseals
+
+# Issue #412
+70: A C BV: chip seal <v>: chip sealed, chip sealing, chip seals
+70: AV CV B D: chipseal <v>: chipsealed, chipsealing, chipseals
+
 # Issue #317
 60 : _: cleantech <n>
 60 : _V: clean-tech <n>
@@ -264,3 +277,11 @@
 
 # Issue #441
 60: YouTuber <n>: YouTubers, YouTuber's
+
+# Issue #412
+## chip seal (chipseal):
+## In US and Canadian civil engineering, the two-word "chip seal"
+## is standard for nouns and verbs, while the hyphenated form is
+## preferred for adjectives. Conversely, the one-word "chipseal"
+## is the standard in Australia and New Zealand and preferred in
+## the UK.

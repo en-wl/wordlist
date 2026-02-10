@@ -9,6 +9,15 @@
 60: _: gameplay <n>: -, gameplay's
 60: _V: game play <n>: -, game play's
 
+# Issue #441
+60: Instagram <n>: Instagram's
+
+# Issue #441
+60: Instagram <v>: Instagrammed, Instagramming, Instagrams
+
+# Issue #441
+60: Instagrammer <n>: Instagrammers, Instagrammer's
+
 # Issue #437
 60: _: livestream <n>: livestreams, livestream's
 60: _v: live stream <n>: live streams, live stream's
@@ -23,6 +32,14 @@
 60: _: LOL <abbr>
 60: _V: lol <abbr>
 
+# Issue #441
+60: _: macro-influencer <n>: macro-influencers, macro-influencer's
+60: _v: macroinfluencer <n>: macroinfluencers, macroinfluencer's
+
+# Issue #441
+60: _: mega-influencer <n>: mega-influencers, mega-influencer's
+60: _v: megainfluencer <n>: megainfluencers, megainfluencer's
+
 60: microbiome <n>: microbiomes, microbiome's
 
 # Issue #437
@@ -30,6 +47,29 @@
 
 # Issue #437
 60: microblog <v>: microblogged, microblogging, microblogs
+
+# Issue #441
+60: _: micro-influencer <n>: micro-influencers, micro-influencer's
+60: _v: microinfluencer <n>: microinfluencers, microinfluencer's
+
+# Issue #441
+60: _: nano-influencer <n>: nano-influencers, nano-influencer's
+60: _v: nanoinfluencer <n>: nanoinfluencers, nanoinfluencer's
+
+# Issue #441
+60: podcaster <n>: podcasters, podcaster's
+
+# Issue #441
+60: tastemaker <n>: tastemakers, tastemaker's
+
+# Issue #441
+60: TikTok <n>: TikTok's
+
+# Issue #441
+60: TikTok <v>: TikToked, TikToking, TikToks
+
+# Issue #441
+60: TikToker <n>: TikTokers, TikToker's
 
 # Issue #437
 60: _: videoconference <n>: videoconferences, videoconference's
@@ -50,3 +90,12 @@
 60: A. B. {1}: WiFi <n>
 60: Av BV {2}: wifi <n>
 60: AV Bv {3}: wi-fi <n>
+
+# Issue #441
+60: YouTube <n>: YouTube's
+
+# Issue #441
+60: YouTube <v>: YouTubed, YouTubing, YouTubes
+
+# Issue #441
+60: YouTuber <n>: YouTubers, YouTuber's

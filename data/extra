@@ -3,11 +3,27 @@
 # Issue #344
 60: Aotearoa <n/place>: Aotearoa's
 
+# Issue #367
+60: biblically <av>
+
+# Issue #357
+70: biopharmaceutical <n>: biopharmaceuticals
+
+# Issue #357
+70: biopharmaceutical <aj>
+
 # Issue #316
 70: bohrium <n>: bohriums, bohrium's
 
 # Issue #438
 60: bromance <n>: bromances, bromance's
+
+# Issue #317
+60 : _: cleantech <n>
+60 : _V: clean-tech <n>
+
+# Issue #337
+70: clickstream <n>: clickstreams
 
 # Issue #316
 70: copernicium <n>: coperniciums, copernicium's
@@ -28,6 +44,16 @@
 
 # Issue #316
 70: dubnium <n>: dubniums, dubnium's
+
+# Issue #341
+70: Egyptological <aj>
+
+# Issue #341
+60: Egyptologist <n>: Egyptologists, Egyptologist's
+
+# Issue #341
+60: Egyptology <n>
+80: - <n>: Egyptologies~
 
 # Issue #438
 60: fandom <n>: fandoms, fandom's
@@ -67,6 +93,9 @@
 60: _: homeschooler <n>: homeschoolers, homeschooler's
 60: _v: home-schooler <n>: home-schoolers, home-schooler's
 60: _V: home schooler <n>: home schoolers, home schooler's
+
+# Issue #336
+60: impactful <aj>
 
 # Issue #441
 60: Instagram <n>: Instagram's
@@ -155,8 +184,16 @@
 # Issue #316
 70: oganesson <n>: oganessons, oganesson's
 
+# Issue #351
+60: A Z: personalization <n>: personalizations
+60: B: personalisation <n>: personalisations
+
 # Issue #441
 60: podcaster <n>: podcasters, podcaster's
+
+# Issue #336
+70: A C Z: revictimization <n>: revictimizations
+70: B D: revictimisation <n>: revictimisations
 
 # Issue #316
 70: roentgenium <n>: roentgeniums, roentgenium's
@@ -204,6 +241,10 @@
 
 # Issue #437
 60: vlogger <n>: vloggers, vlogger's
+
+# Issue #337
+60: wheatgrass <n>
+70: - <n>: wheatgrasses-
 
 # Issue #437
 60: A B: Wi-Fi <n>

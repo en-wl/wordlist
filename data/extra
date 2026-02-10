@@ -1,13 +1,31 @@
 #:: merge [extra] :adjust-pos
 
+# Issue #265
+70: abiotic <aj>
+
 # Issue #339
 60 GB: Anthea <n/person>: Anthea's
 
 # Issue #344
 60: Aotearoa <n/place>: Aotearoa's
 
+# Issue #265
+70: astable <aj>
+
 # Issue #367
 60: biblically <av>
+
+# Issue #265
+70: bioenergetics <n>
+
+# Issue #265
+60: biofuel <n>: biofuels, biofuel's
+
+# Issue #265
+70: biogeography <n>
+
+# Issue #265
+70: biomagnification <n>
 
 # Issue #357
 70: biopharmaceutical <n>: biopharmaceuticals
@@ -17,6 +35,9 @@
 
 # Issue #316
 70: bohrium <n>: bohriums, bohrium's
+
+# Issue #265
+80: breakerless <aj>
 
 # Issue #438
 60: bromance <n>: bromances, bromance's
@@ -41,6 +62,17 @@
 # Issue #337
 70: clickstream <n>: clickstreams
 
+# Issue #265
+60: _: coevolution <n>: coevolutions, coevolution's
+60: _V: co-evolution <n>: co-evolutions, co-evolution's
+
+# Issue #265
+60: _: coevolve <v>: coevolved, coevolving, coevolves
+60: _V: co-evolve <v>: co-evolved, co-evolving, co-evolves
+
+# Issue #265
+70: contactor <n>: contactors, contactor's
+
 # Issue #316
 70: copernicium <n>: coperniciums, copernicium's
 
@@ -58,8 +90,32 @@
 # Issue #316
 70: darmstadtium <n>: darmstadtiums, darmstadtium's
 
+# Issue #265
+70: decalcify <v>: decalcified, decalcifying, decalcifies
+
+# Issue #265
+60: decomposer <n>: decomposers, decomposer's
+
+# Issue #270
+60: decomposer <n>: decomposers, decomposer's
+
+# Issue #265
+70: demultiplexer <n>: demultiplexers, demultiplexer's
+
+# Issue #265
+70: desolder <v>: desoldered, desoldering, desolders
+
+# Issue #270
+70: desulfurization <n>
+
+# Issue #265
+80: distributorless <aj>
+
 # Issue #316
 70: dubnium <n>: dubniums, dubnium's
+
+# Issue #265
+70: dynamometer <n>: dynamometers, dynamometer's
 
 # Issue #341
 70: Egyptological <aj>
@@ -70,6 +126,21 @@
 # Issue #341
 60: Egyptology <n>
 80: - <n>: Egyptologies~
+
+# Issue #265
+70: electrochemistry <n>
+
+# Issue #265
+70: electropneumatic <aj>
+
+# Issue #265
+80: electropneumatics <n>
+
+# Issue #265
+70: equipotential <n>: equipotentials
+
+# Issue #265
+70: equipotential <aj>
 
 # Issue #438
 60: fandom <n>: fandoms, fandom's
@@ -89,12 +160,21 @@
 # Issue #316
 70: flerovium <n>: fleroviums, flerovium's
 
+# Issue #265
+60: freeware <n>
+
 # Issue #437
 60: _: gameplay <n>: -, gameplay's
 60: _V: game play <n>: -, game play's
 
 # Issue #316
 70: hassium <n>: hassiums, hassium's
+
+# Issue #265
+70: HGV <abbr>
+
+# Issue #265
+70: HMI <abbr>
 
 # Issue #435
 60: _: homeschool <n>: homeschools
@@ -110,6 +190,18 @@
 60: _v: home-schooler <n>: home-schoolers, home-schooler's
 60: _V: home schooler <n>: home schoolers, home schooler's
 
+# Issue #270
+70: homolog <n>: homologs
+
+# Issue #265
+60: HVAC <abbr>
+
+# Issue #265
+60: hydropower <n>
+
+# Issue #270
+70: hypermetropia <n>
+
 # Issue #336
 60: impactful <aj>
 
@@ -121,6 +213,18 @@
 
 # Issue #441
 60: Instagrammer <n>: Instagrammers, Instagrammer's
+
+# Issue #265
+70: integumentary <aj>
+
+# Issue #265
+60: intranet <n>: intranets, intranet's
+
+# Issue #270
+60: liftgate <n>: liftgates
+
+# Issue #270
+70: liquidus <n>
 
 # Issue #436
 70: _: listserver <n>: listservers
@@ -149,9 +253,18 @@
 # Issue #436
 60: lowball <v>: lowballed, lowballing, lowballs
 
+# Issue #270
+70: luteinizing hormone <n>: luteinizing hormones
+
 # Issue #441
 60: _: macro-influencer <n>: macro-influencers, macro-influencer's
 60: _v: macroinfluencer <n>: macroinfluencers, macroinfluencer's
+
+# Issue #265
+80: magnetomotive <aj>
+
+# Issue #265
+70: mechatronics <n>
 
 # Issue #441
 60: _: mega-influencer <n>: mega-influencers, mega-influencer's
@@ -159,6 +272,12 @@
 
 # Issue #316
 70: meitnerium <n>: meitneriums, meitnerium's
+
+# Issue #265
+70: melanism <n>
+
+# Issue #265
+60: metalloid <n>: metalloids
 
 60: microbiome <n>: microbiomes, microbiome's
 
@@ -168,9 +287,18 @@
 # Issue #437
 60: microblog <v>: microblogged, microblogging, microblogs
 
+# Issue #265
+60: microcontroller <n>: microcontrollers, microcontroller's
+
 # Issue #441
 60: _: micro-influencer <n>: micro-influencers, micro-influencer's
 60: _v: microinfluencer <n>: microinfluencers, microinfluencer's
+
+# Issue #265
+70: microstructure <n>: microstructures, microstructure's
+
+# Issue #270
+70: microswitch <n>: microswitches
 
 # Issue #189
 60: mitzvah <n>: (mitzvot | _.: mitzvahs | _@: mitzvoth)
@@ -180,6 +308,9 @@
 
 # Issue #440
 60: multitask <v>: multitasked, multitasking, multitasks
+
+# Issue #265
+70: multivibrator <n>: multivibrators, multivibrator's
 
 # Issue #441
 60: _: nano-influencer <n>: nano-influencers, nano-influencer's
@@ -200,12 +331,39 @@
 # Issue #316
 70: oganesson <n>: oganessons, oganesson's
 
+# Issue #265
+70: optocoupler <n>: optocouplers, optocoupler's
+
 # Issue #351
 60: A Z: personalization <n>: personalizations
 60: B: personalisation <n>: personalisations
 
+# Issue #265
+70: phasor <n>: phasors
+
+# Issue #270
+70: plasmolysis <n>
+
+# Issue #270
+70: plasmolyze <v>: plasmolyzed, plasmolyzing, plasmolyzes
+
 # Issue #441
 60: podcaster <n>: podcasters, podcaster's
+
+# Issue #265
+60: A B C D Z: preprogram <v>: (preprogrammed | V: preprogramed), (preprogramming | V: preprograming), preprograms
+60: Av Bv Cv Dv Zv: pre-program <v>: (pre-programmed | V: pre-programed), (pre-programming | V: pre-programing), pre-programs
+60: BV ZV {1}: preprogramme <v>: (preprogrammed | V: preprogramed), (preprogramming | V: preprograming), preprogrammes
+60: BV ZV {2}: pre-programme <v>: (pre-programmed | V: pre-programed), (pre-programming | V: pre-programing), pre-programmes
+
+# Issue #265
+80: ratiometer <n>: ratiometers, ratiometer's
+
+# Issue #265
+70: reactance <n>: reactances
+
+# Issue #265
+60: reinstallation <n>: reinstallations
 
 # Issue #336
 70: A C Z: revictimization <n>: revictimizations
@@ -244,6 +402,24 @@
 # Issue #441
 60: TikToker <n>: TikTokers, TikToker's
 
+# Issue #270
+70: trabecula <n>: (trabeculae_ | _V: trabeculas_)
+
+# Issue #265
+70: transaxle <n>: transaxles, transaxle's
+
+# Issue #270
+70: transaxle <n>: transaxles
+
+# Issue #270
+60: uninterruptible <aj>
+
+# Issue #270
+80: unminable <aj>
+
+# Issue #265
+60: vertex <n>: vertices, vertex's
+
 # Issue #437
 60: _: videoconference <n>: videoconferences, videoconference's
 60: _v: video conference <n>: video conferences, video conference's
@@ -267,6 +443,9 @@
 60: A. B. {1}: WiFi <n>
 60: Av BV {2}: wifi <n>
 60: AV Bv {3}: wi-fi <n>
+
+# Issue #265
+70: WordPad <n>: WordPad's
 
 # Issue #436
 60: _: workspace <n>: workspaces, workspace's

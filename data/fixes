@@ -57,6 +57,9 @@ _v: luvvy <n> {:1}: luvvies
 = 99: ...
 + 60 GB: ...
 
+reactance <n>
+- 60 [extra]: ...
+
 + _: résumé <n>: résumés
   _v: resume <n>: resumes
 + _V: resumé <n>: resumés
@@ -78,6 +81,9 @@ AV B-: thru <pp>
 
 + thru <we> # drive-thru
 = 50 US: ...
+
+trabecula <n>
+- 60 [extra]: ...
 
 wake <v>: (A B: woke | AV B@: waked), (A B: woken | A. B@: waked | AV: woke), waking, wakes
 - 50 [+]: ...

@@ -9,6 +9,12 @@
 # Issue #344
 60: Aotearoa <n/place>: Aotearoa's
 
+# Issue #281
+70: archosaur <n>: archosaurs
+
+# Issue #281
+70: Archosauria <n>
+
 # Issue #265
 70: astable <aj>
 
@@ -38,6 +44,15 @@
 
 # Issue #266
 60: blacksmithing <n>
+
+# Issue #281
+80: bloodedness <n>
+
+# Issue #281
+60: blueshift <n>: blueshifts
+
+# Issue #281
+60: blueshift <v>: blueshifted, blueshifts, blueshifting
 
 # Issue #316
 70: bohrium <n>: bohriums, bohrium's
@@ -96,6 +111,9 @@
 60: _: coworking <aj>
 60: _V: co-working <aj>
 
+# Issue #281
+60: crocodilian <n>: crocodilians
+
 # Issue #316
 70: darmstadtium <n>: darmstadtiums, darmstadtium's
 
@@ -145,6 +163,9 @@
 # Issue #265
 80: electropneumatics <n>
 
+# Issue #281
+70: endothermy <n>
+
 # Issue #266
 70: epicycle <n>: epicycles
 
@@ -184,6 +205,9 @@
 
 # Issue #316
 70: hassium <n>: hassiums, hassium's
+
+# Issue #281
+60: hatchling <n>: hatchlings
 
 # Issue #265
 70: HGV <abbr>
@@ -308,6 +332,9 @@
 # Issue #265
 60: microcontroller <n>: microcontrollers, microcontroller's
 
+# Issue #281
+70: microfossil <n>: microfossils
+
 # Issue #441
 60: _: micro-influencer <n>: micro-influencers, micro-influencer's
 60: _v: microinfluencer <n>: microinfluencers, microinfluencer's
@@ -324,6 +351,9 @@
 # Issue #316
 70: moscovium <n>: moscoviums, moscovium's
 
+# Issue #281
+70: mudstone <n>: mudstones
+
 # Issue #440
 60: multitask <v>: multitasked, multitasking, multitasks
 
@@ -336,6 +366,12 @@
 
 # Issue #316
 70: nihonium <n>: nihoniums, nihonium's
+
+# Issue #281
+70: nonavian <n>: nonavians
+
+# Issue #281
+70: nonavian <aj>
 
 # Issue #438
 60: _: off-screen <aj>
@@ -351,6 +387,9 @@
 
 # Issue #265
 70: optocoupler <n>: optocouplers, optocoupler's
+
+# Issue #281
+80: palynomorph <n>: palynomorphs
 
 # Issue #351
 60: A Z: personalization <n>: personalizations
@@ -377,11 +416,26 @@
 # Issue #266
 70: prosecutable <aj>
 
+# Issue #281
+70: proteobacterium <n>: proteobacteria
+
+# Issue #281
+80: protovertebra <n>: protovertebrae
+
+# Issue #281
+70: pterosaur <n>: pterosaurs
+
 # Issue #265
 80: ratiometer <n>: ratiometers, ratiometer's
 
 # Issue #265
 70: reactance <n>: reactances
+
+# Issue #281
+60: redshift <n>: redshifts
+
+# Issue #281
+60: redshift <v>: redshifted, redshifts, redshifting
 
 # Issue #265
 60: reinstallation <n>: reinstallations
@@ -428,6 +482,9 @@
 
 # Issue #316
 70: tennessine <n>: tennessines, tennessine's
+
+# Issue #281
+80: tholin <n>: tholins
 
 # Issue #441
 60: TikTok <n>: TikTok's

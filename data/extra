@@ -3,6 +3,25 @@
 # Issue #344
 60: Aotearoa <n/place>: Aotearoa's
 
+# Issue #438
+60: bromance <n>: bromances, bromance's
+
+# Issue #438
+60: cosplayer <n>: cosplayers, cosplayer's
+
+# Issue #438
+60: fandom <n>: fandoms, fandom's
+
+# Issue #438
+60: _: fanfic <n>: fanfics, fanfic's
+60: _V: fan fic <n>: fan fics, fan fic's
+60: _-: fan-fic <n>: fan-fics, fan-fic's
+
+# Issue #438
+60: _: fan fiction <n>: fan fiction's
+60: _v: fanfiction <n>: fanfiction's
+60: _-: fan-fiction <n>: fan-fiction's
+
 60: financials <pl>
 
 # Issue #437
@@ -56,8 +75,21 @@
 60: _: nano-influencer <n>: nano-influencers, nano-influencer's
 60: _v: nanoinfluencer <n>: nanoinfluencers, nanoinfluencer's
 
+# Issue #438
+60: _: off-screen <aj>
+60: _V: offscreen <aj>
+
+# Issue #438
+60: _: off-screen <av>
+60: _V {1}: offscreen <av>
+60: _V {2}: off screen <av>
+
 # Issue #441
 60: podcaster <n>: podcasters, podcaster's
+
+# Issue #438
+60: _: staycation <n>: staycations, staycation's
+60: _-: stay-cation <n>: stay-cations, stay-cation's
 
 # Issue #441
 60: tastemaker <n>: tastemakers, tastemaker's

@@ -36,6 +36,20 @@
 60: _: gameplay <n>: -, gameplay's
 60: _V: game play <n>: -, game play's
 
+# Issue #435
+60: _: homeschool <n>: homeschools
+60: _V: home school <n>: home schools
+
+# Issue #435
+60: _: homeschool <v>: homeschooled, homeschooling, homeschools
+60: _v: home-school <v>: home-schooled, home-schooling, home-schools
+60: _V: home school <v>: home schooled, home schooling, home schools
+
+# Issue #435
+60: _: homeschooler <n>: homeschoolers, homeschooler's
+60: _v: home-schooler <n>: home-schoolers, home-schooler's
+60: _V: home schooler <n>: home schoolers, home schooler's
+
 # Issue #441
 60: Instagram <n>: Instagram's
 
@@ -88,6 +102,9 @@
 # Issue #441
 60: _: micro-influencer <n>: micro-influencers, micro-influencer's
 60: _v: microinfluencer <n>: microinfluencers, microinfluencer's
+
+# Issue #440
+60: multitask <v>: multitasked, multitasking, multitasks
 
 # Issue #441
 60: _: nano-influencer <n>: nano-influencers, nano-influencer's

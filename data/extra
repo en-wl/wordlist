@@ -103,6 +103,9 @@
 60: _: micro-influencer <n>: micro-influencers, micro-influencer's
 60: _v: microinfluencer <n>: microinfluencers, microinfluencer's
 
+# Issue #189
+60: mitzvah <n>: (mitzvot | _.: mitzvahs | _@: mitzvoth)
+
 # Issue #440
 60: multitask <v>: multitasked, multitasking, multitasks
 

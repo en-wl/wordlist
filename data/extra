@@ -356,6 +356,10 @@
 # Issue #265
 60: hydropower <n>
 
+# Issue #267
+70: A Z: hyperbolize <v>: hyperbolized, hyperbolizing, hyperbolizes
+70: B: hyperbolise <v>: hyperbolised, hyperbolising, hyperbolises
+
 # Issue #270
 70: hypermetropia <n>
 
@@ -364,6 +368,9 @@
 
 # Issue #417
 70: hyposensitivity <n>
+
+# Issue #313
+60: ideation <n>: ideations
 
 # Issue #336
 60: impactful <aj>
@@ -770,6 +777,9 @@
 
 # Issue #270
 60: uninterruptible <aj>
+
+# Issue #332
+60: unintuitive <aj>
 
 # Issue #445
 70: Uniswap <n/name>: Uniswap's

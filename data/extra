@@ -69,6 +69,9 @@
 # Issue #391
 60: centric <aj>
 
+# Issue #445
+70: Chainlink <n/name>: Chainlink's
+
 # Issue #412
 70: A C BV: chip-seal <aj>
 70: AV CV B D: chipseal <aj>
@@ -189,6 +192,9 @@
 # Issue #281
 70: endothermy <n>
 
+# Issue #445
+70: ENS <abbr>
+
 # Issue #266
 70: epicycle <n>: epicycles
 
@@ -232,6 +238,9 @@
 
 # Issue #294
 60: glyph <n>: glyphs
+
+# Issue #445
+80: hardfork <n>: hardforks, hardfork's
 
 # Issue #316
 70: hassium <n>: hassiums, hassium's
@@ -292,6 +301,9 @@
 # Issue #265
 60: intranet <n>: intranets, intranet's
 
+# Issue #445
+70: IPFS <abbr>
+
 # Issue #270
 60: liftgate <n>: liftgates
 
@@ -335,6 +347,9 @@
 # Issue #265
 80: magnetomotive <aj>
 
+# Issue #445
+70: mainnet <n>: mainnets
+
 # Issue #265
 70: mechatronics <n>
 
@@ -350,6 +365,9 @@
 
 # Issue #265
 60: metalloid <n>: metalloids
+
+# Issue #445
+70: MetaMask <n>: MetaMask's
 
 60: microbiome <n>: microbiomes, microbiome's
 
@@ -403,6 +421,10 @@
 # Issue #281
 70: nonavian <aj>
 
+# Issue #445
+70: _: off-chain <aj>
+70: _v: offchain <aj>
+
 # Issue #438
 60: _: off-screen <aj>
 60: _V: offscreen <aj>
@@ -414,6 +436,13 @@
 
 # Issue #316
 70: oganesson <n>: oganessons, oganesson's
+
+# Issue #445
+70: _: on-chain <aj>
+70: _v: onchain <aj>
+
+# Issue #445
+70: OpenSea <n/name>: OpenSea's
 
 # Issue #265
 70: optocoupler <n>: optocouplers, optocoupler's
@@ -540,6 +569,9 @@
 # Issue #316
 70: tennessine <n>: tennessines, tennessine's
 
+# Issue #445
+70: testnet <n>: testnets
+
 # Issue #281
 80: tholin <n>: tholins
 
@@ -551,6 +583,14 @@
 
 # Issue #441
 60: TikToker <n>: TikTokers, TikToker's
+
+# Issue #445
+60: A Z: tokenization <n>
+60: B: tokenisation <n>
+
+# Issue #445
+60: A Z: tokenize <v>: tokenizes, tokenized, tokenizing
+60: B: tokenise <v>: tokenises, tokenised, tokenising
 
 # Issue #270
 70: trabecula <n>: (trabeculae | _V: trabeculas)
@@ -575,6 +615,9 @@
 
 # Issue #270
 60: uninterruptible <aj>
+
+# Issue #445
+70: Uniswap <n/name>: Uniswap's
 
 # Issue #270
 80: unminable <aj>

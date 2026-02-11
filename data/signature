@@ -1,8 +1,18 @@
 #:: merge [+] :adjust-pos
 
+# Issue #445
+60: Coinbase <n/name>: Coinbase's
+
 # Issue #335
 50: _: commenter <n>: commenters, commenter's
 50: _V: commentor <n>: commentors, commentor's
+
+# Issue #445
+70: _: dApp <n>: dApps, dApp's
+70: _V: dapp <n>: dapps, dapp's
+
+# Issue #445
+60: DeFi <abbr>
 
 # Issue #303
 50: _: dox <v>: doxed, doxing, doxes
@@ -14,6 +24,12 @@
 
 # Issue #437
 60: emoji <n>: (emojis | V: emoji*), emoji's
+
+# Issue #445
+60: ETH <abbr>
+
+# Issue #445
+60: Ethereum <n/name>: Ethereum's
 
 50: gaslight <v>: (gaslighted | .: gaslit), gaslighting, gaslights
 
@@ -35,6 +51,9 @@
 # Issue #440
 60: microplastic <aj>
 
+# Issue #445
+60: NFT <n/abbr>: NFTs, NFT's
+
 # Issue #439
 60: A Bv: nonbinary <aj>
 60: AV B: non-binary <aj>
@@ -44,3 +63,9 @@
 
 # Issue #439
 60: pansexual <aj>
+
+# Issue #445
+60: stablecoin <n>: stablecoins, stablecoin's
+
+# Issue #445
+60: Web3 <n>

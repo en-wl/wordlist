@@ -118,14 +118,14 @@ insert or ignore into groups (group_id, base_pos, defn_note, pos_class, usage_no
 delete from words where word_id in (select word_id from to_remove);
 
 insert into words (word_id, group_id, lemma_id, pos, word, entry_rank)
-  select word_id, main_group_id, lemma_id, pos, word, entry_rank from new_words;
+  select word_id, main_group_id, lemma_id, pos, word, coalesce(entry_rank,'') from new_words;
 
 insert or ignore into fuzzy (word, word_key)
   select word, word_key from new_words;
 
 create temp table adj_words_p0 as
 select a.word_id, main_group_id, other_group_id,
-       b.lemma_id as new_lemma_id, a.word, new_pos, coalesce(new_entry_rank, a.entry_rank) as new_entry_rank,
+       b.lemma_id as new_lemma_id, a.word, new_pos, new_entry_rank as adj_entry_rank, a.entry_rank as orig_entry_rank,
        c.word_id as found_word_id
   from to_merge as m
   cross join groups g on m.main_group_id = g.group_id
@@ -140,7 +140,7 @@ select a.word_id, main_group_id, other_group_id,
 
 create temp table adj_words as
 select word_id, new_word_id,
-       main_group_id,other_group_id,coalesce(a.new_lemma_id,b.new_lemma_id) as new_lemma_id,word,new_pos,new_entry_rank
+       main_group_id,other_group_id,coalesce(a.new_lemma_id,b.new_lemma_id) as new_lemma_id,word,new_pos,adj_entry_rank,orig_entry_rank
   from adj_words_p0 a
   left join (select main_group_id, other_group_id, a.word_id, a.new_word_id, b.new_word_id as new_lemma_id
                from split_info a join split_info b using (main_group_id, other_group_id, lemma)
@@ -160,7 +160,7 @@ drop table temp.to_remove_also;
 
 -- insert words to split
 insert into words (word_id, group_id, lemma_id, pos, word, entry_rank)
-  select new_word_id, main_group_id, new_lemma_id, new_pos, word, new_entry_rank
+  select new_word_id, main_group_id, new_lemma_id, new_pos, word, coalesce(adj_entry_rank,orig_entry_rank)
     from adj_words where new_word_id is not null;
 
 -- update non-split words
@@ -168,9 +168,26 @@ update words as a
    set group_id = main_group_id,
        lemma_id = coalesce(new_lemma_id, lemma_id),
        pos = new_pos,
-       entry_rank = new_entry_rank
+       entry_rank = coalesce(adj_entry_rank,orig_entry_rank)
   from adj_words as b
  where a.word_id = b.word_id and new_word_id is null;
+
+-- propagate entry ranks across spelling variants
+with
+  adj_ranks as (
+    select group_id, pos, a.entry_rank
+      from (select main_group_id as group_id, pos, entry_rank from new_words where entry_rank is not null
+            union all
+            select main_group_id, new_pos, adj_entry_rank from adj_words) as a
+      cross join words w using (group_id, pos)
+      group by group_id, pos
+      having count(distinct a.entry_rank) == 1
+         and count(distinct w.entry_rank) > 1
+         and count(*) filter (where a.entry_rank == '*') == 0
+         and count(*) filter (where w.entry_rank == '*') == 0)
+update words as a set entry_rank = b.entry_rank
+  from adj_ranks b
+  where a.group_id = b.group_id and a.pos = b.pos;
 
 --
 -- fix up lemma_variant_info

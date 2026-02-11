@@ -509,24 +509,22 @@ def adjustEntries(conn, f = None, *,
                             we = li.lemma
                             word_id = li.lemma_id
                             we._word_id = word_id
-                            entry_rank, = next(conn.execute("select entry_rank from words where word_id = ?", (word_id,)))
-                            if ifDefault(we.entry_rank,'') != entry_rank:
+                            if we.entry_rank is not Default:
                                 conn.execute("insert into new_entry_info values (?, ?, ?, ?)", (word_id, sg.id, group_id, we.entry_rank))
 
                         _addMissingSpellings(li.spellings, gi.spellings)
 
                         if li.action == 'adjust' or li.action == 'match':
                             for pos, wes in li.words.items():
-                                for word_id, word, entry_rank in conn.execute("select word_id, word, entry_rank "
-                                                                              "from words where lemma_id = ? and pos = ?",
-                                                                              (li.lemma_id, pos)):
+                                for word_id, word in conn.execute("select word_id, word from words where lemma_id = ? and pos = ?",
+                                                                  (li.lemma_id, pos)):
                                     we = next((we for we in wes if we.word == word), None)
                                     if we is None:
                                         if li.action == 'match':
                                             continue
                                         raise ValueError(f"unaccounted for words with pos '{pos}' within line", )
                                     we._word_id = word_id
-                                    if we.entry_rank is not Default and we.entry_rank != entry_rank:
+                                    if we.entry_rank is not Default:
                                         conn.execute("insert into new_entry_info values (?, ?, ?, ?)", (word_id, sg.id, group_id, we.entry_rank))
 
                         if li.action in ('add'):
@@ -537,7 +535,8 @@ def adjustEntries(conn, f = None, *,
                             for we in wes:
                                 if not hasattr(we, '_word_id'):
                                   conn.execute("insert into new_words (word_id, main_group_id, lemma_id, pos, word, word_key, entry_rank) values (?, ?, ?, ?, ?, ?, ?)",
-                                               (next_word_id, sg.id, li.lemma_id, pos, we.word, clusterKey(we.word).decode('ascii'), we.entry_rank))
+                                               (next_word_id, sg.id, li.lemma_id, pos, we.word, clusterKey(we.word).decode('ascii'),
+                                                ifDefault(we.entry_rank,None)))
                                   we._word_id = next_word_id
                                   next_word_id += 1
                                 if we.spellings:

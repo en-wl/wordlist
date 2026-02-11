@@ -33,7 +33,7 @@ create table temp.new_words (
   pos text text not null,
   word text text not null,
   word_key text not null,
-  entry_rank text default ''
+  entry_rank text
 );
 
 create table temp.new_lemma_variant_info (
@@ -75,7 +75,7 @@ create table temp.new_entry_info (
   word_id integer primary key,
   main_group_id integer not null,
   other_group_id integer not null,
-  entry_rank text
+  entry_rank text not null
 );
 
 create table temp.scowl_info_to_clear (

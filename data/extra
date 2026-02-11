@@ -234,6 +234,9 @@
 # Issue #265
 80: electropneumatics <n>
 
+# Issue #348
+60: empanada <n>: empanadas
+
 # Issue #281
 70: endothermy <n>
 
@@ -583,6 +586,9 @@
 
 # Issue #321
 80: QazVac <n/name>: QazVac's
+
+# Issue #368
+60: ramen <n>
 
 # Issue #380
 70: A Z: rasterization <n>

@@ -1,5 +1,14 @@
 #:: merge [+] :adjust-pos
 
+# Issue #417
+60: allistic <n>: allistics, allistic's
+
+# Issue #417
+60: allistic <aj>
+
+# Issue #417
+60: AuDHD <abbr>
+
 # Issue #445
 60: Coinbase <n/name>: Coinbase's
 
@@ -51,6 +60,21 @@
 # Issue #440
 60: microplastic <aj>
 
+# Issue #417
+60: neurodivergent <aj>
+
+# Issue #417
+60: neurodiverse <aj>
+
+# Issue #417
+60: neurodiversity <n>
+
+# Issue #417
+60: neurotypical <n>: neurotypicals, neurotypical's
+
+# Issue #417
+60: neurotypical <aj>
+
 # Issue #445
 60: NFT <n/abbr>: NFTs, NFT's
 
@@ -66,6 +90,15 @@
 
 # Issue #445
 60: stablecoin <n>: stablecoins, stablecoin's
+
+# Issue #417
+60: stim <n>: stims, stim's
+
+# Issue #417
+60: stim <v>: stimmed, stimming, stims
+
+# Issue #417
+60: stimming <n>
 
 # Issue #445
 60: Web3 <n>

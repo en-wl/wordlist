@@ -3,6 +3,12 @@
 # Issue #265
 70: abiotic <aj>
 
+# Issue #417
+60: ADHD <abbr>
+
+# Issue #417
+70: allism <n>
+
 # Issue #339
 60 GB: Anthea <n/person>: Anthea's
 
@@ -170,6 +176,15 @@
 # Issue #265
 70: dynamometer <n>: dynamometers, dynamometer's
 
+# Issue #417
+70: dyscalculia <n>
+
+# Issue #417
+70: dyspraxia <n>
+
+# Issue #417
+60: dysregulation <n>
+
 # Issue #341
 70: Egyptological <aj>
 
@@ -279,6 +294,12 @@
 
 # Issue #270
 70: hypermetropia <n>
+
+# Issue #417
+70: hyposensitive <aj>
+
+# Issue #417
+70: hyposensitivity <n>
 
 # Issue #336
 60: impactful <aj>
@@ -411,6 +432,12 @@
 # Issue #441
 60: _: nano-influencer <n>: nano-influencers, nano-influencer's
 60: _v: nanoinfluencer <n>: nanoinfluencers, nanoinfluencer's
+
+# Issue #417
+70: neurodevelopment <n>
+
+# Issue #417
+70: neurodevelopmental <aj>
 
 # Issue #316
 70: nihonium <n>: nihoniums, nihonium's

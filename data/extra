@@ -129,6 +129,14 @@
 # Issue #265
 70: demultiplexer <n>: demultiplexers, demultiplexer's
 
+# Issue #384
+60: A Z: deserialization <n>: deserializations
+60: B: deserialisation <n>: deserialisations
+
+# Issue #384
+60: A Z: deserialize <v>: deserialized, deserializing, deserializes
+60: B: deserialise <v>: deserialised, deserialising, deserialises
+
 # Issue #265
 70: desolder <v>: desoldered, desoldering, desolders
 
@@ -174,6 +182,10 @@
 
 # Issue #265
 70: equipotential <aj>
+
+# Issue #375
+60: A C: esthetician <n>: estheticians, esthetician's
+60: Av B C?: aesthetician <n>: aestheticians, aesthetician's
 
 # Issue #266
 60: ethicist <n>: ethicists
@@ -391,6 +403,10 @@
 # Issue #281
 80: palynomorph <n>: palynomorphs
 
+# Issue #386
+70: A Z: parameterization <n>: parameterizations
+70: B: parameterisation <n>: parameterisations
+
 # Issue #351
 60: A Z: personalization <n>: personalizations
 60: B: personalisation <n>: personalisations
@@ -425,6 +441,14 @@
 # Issue #281
 70: pterosaur <n>: pterosaurs
 
+# Issue #380
+70: A Z: rasterization <n>
+70: B: rasterisation <n>
+
+# Issue #380
+70: A Z: rasterize <v>: rasterized, rasterizing, rasterizes
+70: B: rasterise <v>: rasterised, rasterising, rasterises
+
 # Issue #265
 80: ratiometer <n>: ratiometers, ratiometer's
 
@@ -437,6 +461,10 @@
 # Issue #281
 60: redshift <v>: redshifted, redshifts, redshifting
 
+# Issue #387
+60: A Z: reinitialize <v>: reinitialized, reinitializing, reinitializes
+60: B: reinitialise <v>: reinitialised, reinitialising, reinitialises
+
 # Issue #265
 60: reinstallation <n>: reinstallations
 
@@ -447,8 +475,16 @@
 70: A C Z: revictimization <n>: revictimizations
 70: B D: revictimisation <n>: revictimisations
 
+# Issue #382
+60: _: rewritable <aj>
+60: _V: rewriteable <aj>
+
 # Issue #316
 70: roentgenium <n>: roentgeniums, roentgenium's
+
+# Issue #381
+60: A Z: sanitization <n>: sanitizations
+60: B: sanitisation <n>: sanitisations
 
 # Issue #316
 70: seaborgium <n>: seaborgiums, seaborgium's
@@ -519,6 +555,10 @@
 # Issue #270
 80: unminable <aj>
 
+# Issue #388
+60: A Z: unsynchronized <aj>
+60: B: unsynchronised <aj>
+
 # Issue #266
 70: verifier <n>: verifiers
 
@@ -555,6 +595,10 @@
 # Issue #436
 60: _: workspace <n>: workspaces, workspace's
 60: _V: work space <n>: work spaces, work space's
+
+# Issue #382
+60: _: writable <aj>
+60: _V: writeable <aj>
 
 # Issue #441
 60: YouTube <n>: YouTube's

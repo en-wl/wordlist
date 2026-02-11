@@ -109,6 +109,10 @@ bing <m→n>
 
 chez <→pp>
 
+# Issue #376
+colorization <n>: colorizations_
++ 60 [extra]: - <n>: colorizations
+
 = constructivism <n>: constructivisms~, constructivism's
 = 80: - <n>: constructivisms, -
 
@@ -133,6 +137,10 @@ A B: drive-through <n>: drive-throughs
 A Z: euthanize <v>: euthanized, euthanizing, euthanizes
 + B Dv: euthanise <v>: euthanised, euthanising, euthanises
 + D: euthanase <v>: euthanased, euthanasing, euthanases
+
+# Issue #379
+A C: hemorrhagic <aj>
+B: haemorrhagic <aj>
 
 hyaena <n>: (hyaenas | V: hyaena)
 

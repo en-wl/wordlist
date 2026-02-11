@@ -27,6 +27,9 @@
 # Issue #265
 70: astable <aj>
 
+# Issue #321
+60: AstraZeneca <n/name>: AstraZeneca's
+
 # Issue #266
 60: auditable <aj>
 
@@ -44,6 +47,9 @@
 
 # Issue #265
 70: biomagnification <n>
+
+# Issue #321
+60: BioNTech <n/name>: BioNTech's
 
 # Issue #357
 70: biopharmaceutical <n>: biopharmaceuticals
@@ -71,6 +77,9 @@
 
 # Issue #438
 60: bromance <n>: bromances, bromance's
+
+# Issue #321
+70: CanSino <n/name>: CanSino's
 
 # Issue #391
 60: centric <aj>
@@ -106,6 +115,9 @@
 60: _: coevolve <v>: coevolved, coevolving, coevolves
 60: _V: co-evolve <v>: co-evolved, co-evolving, co-evolves
 
+# Issue #321
+80: Comirnaty <n/name>: Comirnaty's
+
 # Issue #266
 60: commenter <n>: commenters
 
@@ -117,6 +129,9 @@
 
 # Issue #438
 60: cosplayer <n>: cosplayers, cosplayer's
+
+# Issue #321
+80: Covifenz <n/name>: Covifenz's
 
 # Issue #436
 60: _: coworking <n>
@@ -325,6 +340,12 @@
 # Issue #445
 70: IPFS <abbr>
 
+# Issue #321
+60: Janssen <n/name>: Janssen's
+
+# Issue #321
+80: Jcovden <n/name>: Jcovden's
+
 # Issue #270
 60: liftgate <n>: liftgates
 
@@ -374,6 +395,9 @@
 # Issue #265
 70: mechatronics <n>
 
+# Issue #321
+80: Medicago <n/name>: Medicago's
+
 # Issue #441
 60: _: mega-influencer <n>: mega-influencers, mega-influencer's
 60: _v: megainfluencer <n>: megainfluencers, megainfluencer's
@@ -417,6 +441,9 @@
 # Issue #189
 60: mitzvah <n>: (mitzvot | _.: mitzvahs | _@: mitzvoth)
 
+# Issue #321
+60: Moderna <n/name>: Moderna's
+
 # Issue #316
 70: moscovium <n>: moscoviums, moscovium's
 
@@ -447,6 +474,12 @@
 
 # Issue #281
 70: nonavian <aj>
+
+# Issue #321
+70: Novavax <n/name>: Novavax's
+
+# Issue #321
+80: Nuvaxovid <n/name>: Nuvaxovid's
 
 # Issue #445
 70: _: off-chain <aj>
@@ -485,6 +518,9 @@
 60: A Z: personalization <n>: personalizations
 60: B: personalisation <n>: personalisations
 
+# Issue #321
+60: Pfizer <n/name>: Pfizer's
+
 # Issue #265
 70: phasor <n>: phasors
 
@@ -514,6 +550,9 @@
 
 # Issue #281
 70: pterosaur <n>: pterosaurs
+
+# Issue #321
+80: QazVac <n/name>: QazVac's
 
 # Issue #380
 70: A Z: rasterization <n>
@@ -566,8 +605,17 @@
 # Issue #316
 70: seaborgium <n>: seaborgiums, seaborgium's
 
+# Issue #321
+70: Sinopharm <n/name>: Sinopharm's
+
+# Issue #321
+70: Sinovac <n/name>: Sinovac's
+
 # Issue #266
 70: solvability <n>
+
+# Issue #321
+80: Spikevax <n/name>: Spikevax's
 
 # Issue #266
 60: splitter <n>: splitters
@@ -652,6 +700,12 @@
 # Issue #388
 60: A Z: unsynchronized <aj>
 60: B: unsynchronised <aj>
+
+# Issue #321
+80: Valneva <n/name>: Valneva's
+
+# Issue #321
+80: Vaxzevria <n/name>: Vaxzevria's
 
 # Issue #266
 70: verifier <n>: verifiers

@@ -15,6 +15,9 @@
 # Issue #281
 70: Archosauria <n>
 
+# Issue #392
+60: artisanal <aj>
+
 # Issue #265
 70: astable <aj>
 
@@ -62,6 +65,9 @@
 
 # Issue #438
 60: bromance <n>: bromances, bromance's
+
+# Issue #391
+60: centric <aj>
 
 # Issue #412
 70: A C BV: chip-seal <aj>
@@ -126,6 +132,9 @@
 # Issue #270
 60: decomposer <n>: decomposers, decomposer's
 
+# Issue #319
+60: demonym <n>: demonyms
+
 # Issue #265
 70: demultiplexer <n>: demultiplexers, demultiplexer's
 
@@ -148,6 +157,9 @@
 
 # Issue #316
 70: dubnium <n>: dubniums, dubnium's
+
+# Issue #326
+60: duplicative <aj>
 
 # Issue #265
 70: dynamometer <n>: dynamometers, dynamometer's
@@ -214,6 +226,9 @@
 # Issue #437
 60: _: gameplay <n>: -, gameplay's
 60: _V: game play <n>: -, game play's
+
+# Issue #294
+60: glyph <n>: glyphs
 
 # Issue #316
 70: hassium <n>: hassiums, hassium's
@@ -468,6 +483,9 @@
 # Issue #265
 60: reinstallation <n>: reinstallations
 
+# Issue #397
+60: reportable <aj>
+
 # Issue #266
 60: responder <n>: responders
 
@@ -545,6 +563,9 @@
 
 # Issue #270
 70: transaxle <n>: transaxles
+
+# Issue #370
+60: transformative <aj>
 
 # Issue #266
 60: tunable <aj>

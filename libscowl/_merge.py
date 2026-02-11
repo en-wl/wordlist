@@ -181,8 +181,8 @@ def _matchGroups(conn, grps):
         
     conn.execute("begin")
     for idx, grp in enumerate(grps):
-        conn.execute("insert into new_groups (idx, base_pos, defn_note) values (?,?,?) ",
-                     (idx, grp.base_pos, ifDefault(grp.defn_note, None)))
+        conn.execute("insert into new_groups (idx, base_pos, defn_note, pos_class) values (?,?,?,?) ",
+                     (idx, grp.base_pos, ifDefault(grp.defn_note, None), ifDefault(grp.pos_class, None)))
         for lemma in grp.entries:
             conn.execute("insert into new_lemmas (idx, lemma) values (?,?) ",
                          (idx, lemma.lemma))

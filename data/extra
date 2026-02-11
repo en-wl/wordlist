@@ -36,6 +36,15 @@
 # Issue #266
 60: auditable <aj>
 
+# Issue #424
+60: automation <n>: automations
+
+# Issue #315
+60: backtrace <n>: backtraces
+
+# Issue #315
+70: backtrace <v>: backtraced, backtracing, backtraces
+
 # Issue #367
 60: biblically <av>
 
@@ -170,6 +179,22 @@
 
 # Issue #270
 60: decomposer <n>: decomposers, decomposer's
+
+# Issue #450
+70: dedupe <n>: dedupes
+70: _-: de-dupe <n>: de-dupes
+
+# Issue #450
+70: dedupe <v>: deduped, deduping, dedupes
+70: _-: de-dupe <v>: de-duped, de-duping, de-dupes
+
+# Issue #450
+60: deduplicate <v>: deduplicated, deduplicating, deduplicates
+60: _V: de-duplicate <v>: de-duplicated, de-duplicating, de-duplicates
+
+# Issue #450
+60: deduplication <n>: deduplications
+60: _V: de-duplication <n>: de-duplications
 
 # Issue #319
 60: demonym <n>: demonyms
@@ -641,6 +666,9 @@
 60: A Z: sanitization <n>: sanitizations
 60: B: sanitisation <n>: sanitisations
 
+# Issue #347
+60: scalable <aj>
+
 # Issue #316
 70: seaborgium <n>: seaborgiums, seaborgium's
 
@@ -791,6 +819,10 @@
 60: A. B. {1}: WiFi <n>
 60: Av BV {2}: wifi <n>
 60: AV Bv {3}: wi-fi <n>
+
+# Issue #424
+60: _: wordlist <n>: wordlists
+60: _?: word list <n>: word lists
 
 # Issue #265
 70: WordPad <n>: WordPad's

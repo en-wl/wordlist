@@ -30,6 +30,9 @@
 # Issue #321
 60: AstraZeneca <n/name>: AstraZeneca's
 
+# Issue #454
+60: AUD <abbr>
+
 # Issue #266
 60: auditable <aj>
 
@@ -78,6 +81,9 @@
 # Issue #438
 60: bromance <n>: bromances, bromance's
 
+# Issue #454
+60: CAD <abbr>
+
 # Issue #321
 70: CanSino <n/name>: CanSino's
 
@@ -86,6 +92,9 @@
 
 # Issue #445
 70: Chainlink <n/name>: Chainlink's
+
+# Issue #454
+70: CHF <abbr>
 
 # Issue #412
 70: A C BV: chip-seal <aj>
@@ -106,6 +115,9 @@
 
 # Issue #337
 70: clickstream <n>: clickstreams
+
+# Issue #454
+70: CNY <abbr>
 
 # Issue #265
 60: _: coevolution <n>: coevolutions, coevolution's
@@ -182,6 +194,9 @@
 # Issue #265
 80: distributorless <aj>
 
+# Issue #454
+70: DKK <abbr>
+
 # Issue #316
 70: dubnium <n>: dubniums, dubnium's
 
@@ -241,6 +256,9 @@
 # Issue #266
 60: ethicist <n>: ethicists
 
+# Issue #454
+60: EUR <abbr>
+
 # Issue #438
 60: fandom <n>: fandoms, fandom's
 
@@ -265,6 +283,9 @@
 # Issue #437
 60: _: gameplay <n>: -, gameplay's
 60: _V: game play <n>: -, game play's
+
+# Issue #454
+60: GBP <abbr>
 
 # Issue #294
 60: glyph <n>: glyphs
@@ -345,6 +366,9 @@
 
 # Issue #321
 80: Jcovden <n/name>: Jcovden's
+
+# Issue #454
+70: JPY <abbr>
 
 # Issue #270
 60: liftgate <n>: liftgates
@@ -469,6 +493,9 @@
 # Issue #316
 70: nihonium <n>: nihoniums, nihonium's
 
+# Issue #454
+70: NOK <abbr>
+
 # Issue #281
 70: nonavian <n>: nonavians
 
@@ -480,6 +507,9 @@
 
 # Issue #321
 80: Nuvaxovid <n/name>: Nuvaxovid's
+
+# Issue #454
+70: NZD <abbr>
 
 # Issue #445
 70: _: off-chain <aj>
@@ -605,6 +635,9 @@
 # Issue #316
 70: seaborgium <n>: seaborgiums, seaborgium's
 
+# Issue #454
+70: SEK <abbr>
+
 # Issue #321
 70: Sinopharm <n/name>: Sinopharm's
 
@@ -700,6 +733,9 @@
 # Issue #388
 60: A Z: unsynchronized <aj>
 60: B: unsynchronised <aj>
+
+# Issue #454
+60: USD <abbr>
 
 # Issue #321
 80: Valneva <n/name>: Valneva's

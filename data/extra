@@ -496,6 +496,9 @@
 # Issue #316
 70: nihonium <n>: nihoniums, nihonium's
 
+# Issue #395
+60: nitride <n>: nitrides
+
 # Issue #454
 70: NOK <abbr>
 
@@ -698,6 +701,10 @@
 # Issue #441
 60: TikToker <n>: TikTokers, TikToker's
 
+# Issue #451
+60: _: tokamak <n>: tokamaks, tokamak's
+60: _V: tokomak <n>: tokomaks, tokomak's
+
 # Issue #445
 60: A Z: tokenization <n>
 60: B: tokenisation <n>
@@ -705,6 +712,12 @@
 # Issue #445
 60: A Z: tokenize <v>: tokenizes, tokenized, tokenizing
 60: B: tokenise <v>: tokenises, tokenised, tokenising
+
+# Issue #426
+70: toroid <n>: toroids, toroid's
+
+# Issue #426
+70: toroidal <aj>
 
 # Issue #270
 70: trabecula <n>: (trabeculae | _V: trabeculas)

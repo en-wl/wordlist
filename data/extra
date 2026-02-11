@@ -168,6 +168,12 @@
 # Issue #269
 60: Crohn's <n>
 
+# Issue #322
+70: cytometer <n>: cytometers
+
+# Issue #322
+70: cytometry <n>: cytometries
+
 # Issue #316
 70: darmstadtium <n>: darmstadtiums, darmstadtium's
 
@@ -249,6 +255,9 @@
 # Issue #341
 60: Egyptology <n>
 80: - <n>: Egyptologies~
+
+# Issue #322
+60: electrochemical <aj>
 
 # Issue #265
 70: electrochemistry <n>
@@ -392,6 +401,12 @@
 
 # Issue #265
 60: intranet <n>: intranets, intranet's
+
+# Issue #322
+70: in vivo <aj>
+
+# Issue #322
+70: in vivo <av>
 
 # Issue #445
 70: IPFS <abbr>
@@ -616,6 +631,9 @@
 # Issue #281
 80: protovertebra <n>: protovertebrae
 
+# Issue #330
+60: psilocybin <n>
+
 # Issue #281
 70: pterosaur <n>: pterosaurs
 
@@ -665,6 +683,12 @@
 # Issue #382
 60: _: rewritable <aj>
 60: _V: rewriteable <aj>
+
+# Issue #419
+60: rheumatologist <n>: rheumatologists, rheumatologist's
+
+# Issue #419
+60: rheumatology <n>
 
 # Issue #316
 70: roentgenium <n>: roentgeniums, roentgenium's

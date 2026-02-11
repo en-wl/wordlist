@@ -122,8 +122,14 @@
 60 : _: cleantech <n>
 60 : _V: clean-tech <n>
 
+# Issue #458
+60: CLI <n/abbr>: CLIs, CLI's
+
 # Issue #337
 70: clickstream <n>: clickstreams
+
+# Issue #323
+60: CMOS <n/abbr>: CMOSes, CMOS's
 
 # Issue #454
 70: CNY <abbr>
@@ -455,6 +461,9 @@
 
 # Issue #270
 70: luteinizing hormone <n>: luteinizing hormones
+
+# Issue #366
+60: macOS <n/name>: macOS's
 
 # Issue #441
 60: _: macro-influencer <n>: macro-influencers, macro-influencer's
@@ -795,6 +804,9 @@
 
 # Issue #370
 60: transformative <aj>
+
+# Issue #458
+60: TUI <n/abbr>: TUIs, TUI's
 
 # Issue #266
 60: tunable <aj>

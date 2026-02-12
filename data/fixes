@@ -46,6 +46,12 @@ bot <n>:
 - 50 hacker: ...
 + 50 [+]: ...
 
+inasmuch <→wp>
++ 50: ...
+
+insofar <av→wp>
++ 50: ...
+
 + lovey <wp> # lovey-dovey
 = 60: ...
 
@@ -147,6 +153,10 @@ A C: hemorrhagic <aj>
 B: haemorrhagic <aj>
 
 hyaena <n>: (hyaenas | V: hyaena)
+
+inasmuch as <→c>
+
+insofar as <→c>
 
 = intaglio <n>: (intaglios | ~: intagli)
 

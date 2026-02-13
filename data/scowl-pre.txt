@@ -42710,12 +42710,12 @@
 35 [] [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: black <aj>
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <aj>: blacker, blackest
 
+50 [census] 70 [5desk] [moby] 80 [upper]: Black <n/surname>
+50 [census] 70 [5desk] [moby]: - <n/surname>: Black's
+
 65 [12dicts] [3esl] 70 [5desk] [moby] 80 [upper]: - <n/upper>: Blacks-
 70 [12dicts] [3esl] [5desk] [moby] 80 [upper]: Black <n/upper>
 70 [12dicts] [3esl] [5desk] [moby]: - <n/upper>: Black's
-
-70 [5desk] [census] [moby] 80 [upper]: Black <n/surname>
-70 [5desk] [census] [moby]: - <n/surname>: Black's
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: blackamoor <n>: blackamoors
 
@@ -73436,10 +73436,10 @@
 
 70 [moby] 85 [ukacd]: Christ's-thorn <n/upper?>
 
-70 [5desk] 80 [enable]: christy <n>: christies-
+50 [census] 70 [5desk] [moby] 80 [upper] 85 [ukacd]: Christy <n/person>
+50 [census] 70 [5desk] [moby]: - <n/person>: Christy's
 
-70 [5desk] [census] [moby] 80 [upper] 85 [ukacd]: Christy <n/person>
-70 [5desk] [census] [moby]: - <n/person>: Christy's
+70 [5desk] 80 [enable]: christy <n>: christies-
 
 70 [5desk] [moby] 80 [upper] 85 [ukacd]: Christy <n/upper?>: Christies-
 70 [5desk] [moby]: - <n/upper?>: Christy's
@@ -91468,8 +91468,8 @@
 35 [ukfreq] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: cortex <n>
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <n>: (cortices | ~: cortexes)
 
-70 [5desk] [census] [name] 85 [ukacd]: Cortez <n/surname>
-70 [5desk] [census] [name]: - <n/surname>: Cortez's
+50 [census] [name] 70 [5desk] 85 [ukacd]: Cortez <n/surname>
+50 [census] [name] 70 [5desk]: - <n/surname>: Cortez's
 
 70 [12dicts] [5desk] [name] 85 [ukacd]: Cortez <n/upper>
 70 [12dicts] [5desk] [name]: - <n/upper>: Cortez's
@@ -112539,8 +112539,8 @@
 
 85 [ukacd]: diaxon <n>: diaxons
 
-70 [5desk] [census] [moby] [name] 85 [ukacd]: Diaz <n/surname>
-70 [5desk] [census] [moby] [name]: - <n/surname>: Diaz's
+50 [census] [name] 70 [5desk] [moby] 85 [ukacd]: Diaz <n/surname>
+50 [census] [name] 70 [5desk] [moby]: - <n/surname>: Diaz's
 
 80 [moby]: -Diaz <n/place>
 
@@ -347151,8 +347151,8 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: rebec <n>: rebecs
 
-70 [5desk] [census] [moby] [name] 85 [ukacd]: Rebecca <n/person>
-70 [5desk] [census] [moby] [name]: - <n/person>: Rebecca's
+50 [census] [name] 70 [5desk] [moby] 85 [ukacd]: Rebecca <n/person>
+50 [census] [name] 70 [5desk] [moby]: - <n/person>: Rebecca's
 
 70 [12dicts] [5desk] [moby] [name] 85 [ukacd]: Rebecca <n/upper>
 70 [12dicts] [5desk] [moby] [name]: - <n/upper>: Rebecca's
@@ -372909,8 +372909,8 @@
 
 80 [moby]: Scottville <n/place>
 
-70 [5desk] [census] [name] 80 [upper] 85 [ukacd]: Scotty <n/person>
-70 [5desk] [census] [name]: - <n/person>: Scotty's
+50 [census] [name] 70 [5desk] 80 [upper] 85 [ukacd]: Scotty <n/person>
+50 [census] [name] 70 [5desk]: - <n/person>: Scotty's
 
 70 [5desk] [name] 80 [upper] 85 [ukacd]: Scotty <n/upper>
 70 [5desk] 80 [upper] 85 [ukacd]: - <n/upper>: Scotties-
@@ -471794,10 +471794,10 @@
 
 40 [3esl] 50 [12dicts] [name] 70 [3of6] [5desk] [moby] 80 [upper]: Welsh <aj/demonym>
 
-70 [5desk] [moby] [name] 80 [upper]: Welch </upper>
+50 [census] [name] 70 [5desk] [moby] 80 [upper]: Welch <n/surname>
+50 [census] [name] 70 [5desk] [moby]: - <n/surname>: Welch's
 
-70 [5desk] [census] [moby] [name] 80 [upper]: Welch <n/surname>
-70 [5desk] [census] [moby] [name]: - <n/surname>: Welch's
+70 [5desk] [moby] [name] 80 [upper]: Welch </upper>
 
 60 [12dicts] 70 [moby]: Welsh corgi <n/upper>: Welsh corgi's
 

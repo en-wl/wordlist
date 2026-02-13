@@ -224,11 +224,18 @@
 60: deduplication <n>: deduplications
 60: _V: de-duplication <n>: de-duplications
 
+# Issue #474
+70: _: deferrable <aj>
+70: _-: deferable <aj>
+
 # Issue #319
 60: demonym <n>: demonyms
 
 # Issue #265
 70: demultiplexer <n>: demultiplexers, demultiplexer's
+
+# Issue #308
+60: deplatform <v>: deplatformed, deplatforming, deplatforms
 
 # Issue #384
 60: A Z: deserialization <n>: deserializations
@@ -712,6 +719,9 @@
 
 # Issue #397
 60: reportable <aj>
+
+# Issue #474
+60: repurpose <v>: repurposed, repurposing, repurposes
 
 # Issue #266
 60: responder <n>: responders

@@ -103,6 +103,14 @@
 # Issue #438
 60: bromance <n>: bromances, bromance's
 
+# Issue #453
+60: _: bugfix <n>: bugfixes
+60: _V: bug-fix <n>: bug-fixes
+
+# Issue #453
+60: _: bugfix <aj>
+60: _V: bug-fix <aj>
+
 # Issue #454
 60: CAD <abbr>
 
@@ -149,6 +157,10 @@
 
 # Issue #454
 70: CNY <abbr>
+
+# Issue #455
+60: _: codebase <n>: codebases, codebase's
+60: _v: code base <n>: code bases, code base's
 
 # Issue #265
 60: _: coevolution <n>: coevolutions, coevolution's
@@ -346,6 +358,9 @@
 # Issue #316
 70: flerovium <n>: fleroviums, flerovium's
 
+# Issue #414
+70: folksonomy <n>: folksonomies
+
 # Issue #265
 60: freeware <n>
 
@@ -355,6 +370,9 @@
 
 # Issue #454
 60: GBP <abbr>
+
+# Issue #473
+70: geodata <n>
 
 # Issue #294
 60: glyph <n>: glyphs
@@ -529,6 +547,9 @@
 # Issue #265
 70: melanism <n>
 
+# Issue #473
+70: mergeable <aj>
+
 # Issue #265
 60: metalloid <n>: metalloids
 
@@ -558,6 +579,14 @@
 
 # Issue #270
 70: microswitch <n>: microswitches
+
+# Issue #413
+60: _: misclick <n>: misclicks
+60: _V: mis-click <n>: mis-clicks
+
+# Issue #413
+60: _: misclick <v>: misclicked, misclicking, misclicks
+60: _V: mis-click <v>: mis-clicked, mis-clicking, mis-clicks
 
 # Issue #189
 60: mitzvah <n>: (mitzvot | _.: mitzvahs | _@: mitzvoth)
@@ -602,6 +631,10 @@
 # Issue #281
 70: nonavian <aj>
 
+# Issue #459
+70: non-refoulement <n>
+70: _V: nonrefoulement <n>
+
 # Issue #321
 70: Novavax <n/name>: Novavax's
 
@@ -643,6 +676,9 @@
 # Issue #386
 70: A Z: parameterization <n>: parameterizations
 70: B: parameterisation <n>: parameterisations
+
+# Issue #461
+60: parklet <n>: parklets, parklet's
 
 # Issue #351
 60: A Z: personalization <n>: personalizations
@@ -709,6 +745,9 @@
 
 # Issue #281
 60: redshift <v>: redshifted, redshifts, redshifting
+
+# Issue #459
+70: refoulement <n>: refoulements
 
 # Issue #387
 60: A Z: reinitialize <v>: reinitialized, reinitializing, reinitializes
@@ -783,11 +822,17 @@
 60: _: staycation <n>: staycations, staycation's
 60: _-: stay-cation <n>: stay-cations, stay-cation's
 
+# Issue #473
+60: stupa <n>: stupas, stupa's
+
 # Issue #266
 70: subtractive <aj>
 
 # Issue #266
 70: surveil <v>: surveilled, surveilling, surveils
+
+# Issue #473
+60: sysadmin <n>: sysadmins, sysadmin's
 
 # Issue #441
 60: tastemaker <n>: tastemakers, tastemaker's
@@ -846,11 +891,20 @@
 # Issue #370
 60: transformative <aj>
 
+# Issue #473
+60: _triage <n>: triages
+
+# Issue #473
+60: _triage <v>: triaged, triaging, triages
+
 # Issue #458
 60: TUI <n/abbr>: TUIs, TUI's
 
 # Issue #266
 60: tunable <aj>
+
+# Issue #365
+70: unhewn <aj>
 
 # Issue #270
 60: uninterruptible <aj>
@@ -896,6 +950,9 @@
 
 # Issue #437
 60: vlogger <n>: vloggers, vlogger's
+
+# Issue #460
+60: voxel <n>: voxels, voxel's
 
 # Issue #337
 60: wheatgrass <n>

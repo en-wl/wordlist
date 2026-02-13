@@ -136,7 +136,7 @@ for fn in mergeFiles:
 
 if not rawMode:
     start("simplify SCOWL info")
-    tagsToRemove = "'[12dicts]','[3esl]','[enable]','[ospdadd]','[2dicts]','[nopos]','[names]'"
+    tagsToRemove = "'[12dicts]','[3esl]','[enable]','[ospdadd]','[2dicts]','[nopos]','[census]'"
     conn.execute("insert into scowl_data (size,category,region,tag,group_id,pos)"
                  "select size,category,region,'',group_id,pos "
                  f"  from scowl_data where tag in ({tagsToRemove}) "

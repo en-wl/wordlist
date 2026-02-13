@@ -43,6 +43,12 @@
 # Issue #266
 60: auditable <aj>
 
+# Issue #409
+60: autocorrect <n>: autocorrects, autocorrect's
+
+# Issue #409
+60: autocorrect <v>: autocorrected, autocorrecting, autocorrects
+
 # Issue #424
 60: automation <n>: automations
 
@@ -312,6 +318,9 @@
 # Issue #454
 60: EUR <abbr>
 
+# Issue #409
+60: expectedly <av>
+
 # Issue #438
 60: fandom <n>: fandoms, fandom's
 
@@ -342,6 +351,14 @@
 
 # Issue #294
 60: glyph <n>: glyphs
+
+# Issue #349
+60: A: grayscale <n>: grayscales
+60: B C D: greyscale <n>: greyscales
+
+# Issue #349
+60: A: grayscale <aj>
+60: B C D: greyscale <aj>
 
 # Issue #445
 80: hardfork <n>: hardforks, hardfork's

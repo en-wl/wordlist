@@ -24,6 +24,13 @@
 # Issue #392
 60: artisanal <aj>
 
+# Issue #476
+60: Ashkenazi <n/>: (Ashkenazim | V: Ashkenazis), Ashkenazi's, (Ashkenazim's | V: Ashkenazis')
+
+# Issue #476
+60: _: Ashkenazi <aj/>
+60: _V: Ashkenazic <aj/>
+
 # Issue #265
 70: astable <aj>
 
@@ -95,6 +102,9 @@
 
 # Issue #321
 70: CanSino <n/name>: CanSino's
+
+# Issue #354
+70: Caryn <n/person>: Caryn's
 
 # Issue #391
 60: centric <aj>

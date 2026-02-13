@@ -5591,7 +5591,9 @@
 
 80 [enable]: aerily
 
-70 [moby] 80 [enable] 85 [ukacd]: !aero <pre>
+70 [moby] 80 [enable] 85 [ukacd]: aero
+
+70 [moby] 85 [ukacd]: !aero <pre>
 
 80 [2dicts]: aeroballistic <n>: aeroballistics
 
@@ -8436,11 +8438,13 @@
 
 50 [12dicts] 70 [3of6] [moby]: AL <n/upper>
 
-70 [moby] 85 [stale]: al <suf>
+70 [moby]: al <suf>
 
 80 [moby]: al. <abbr>
 
 80 [moby]: A.L. <abbr>
+
+85 [stale]: al
 
 50 [12dicts]: Ala. <n/upper>
 
@@ -14078,6 +14082,8 @@
 85 [ukacd]: anbury <n>: anburies
 
 70 [moby] 85 [ukacd]: ance <suf>
+
+85 [ukacd]: ance
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: ancestor <n>: ancestors
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: ancestor's
@@ -23480,6 +23486,8 @@
 70 [moby] 85 [ukacd]: ary <suf>
 
 80 [moby]: Ary <n/place>
+
+85 [ukacd]: ary
 
 50 [12dicts] [name] 70 [3of6] [5desk] [moby] 80 [upper] 85 [ukacd]: Aryan <n/upper>
 50 [12dicts] 70 [3of6] [5desk] [moby] 80 [upper] 85 [ukacd]: - <n/upper>: Aryans
@@ -49365,9 +49373,7 @@
 
 60 [12dicts]: BPOE </abbr?>
 
-60 [12dicts] 70 [3of6]: -bps <abbr>
-
-80 [lcacr]: bps <n>
+60 [12dicts] 70 [3of6] 80 [lcacr]: -bps <abbr>
 
 50 [12dicts] 70 [moby]: Br <n/upper>
 
@@ -67742,6 +67748,8 @@
 
 70 [moby]: c.h. <abbr>
 
+85 [ukacd]: !ch
+
 85 [ukacd]: cha <n>: chas
 
 70 [moby] 80 [2dicts] 85 [ukacd]: chabazite <n>
@@ -81089,6 +81097,8 @@
 60 [12dicts] 70 [moby] 85 [ukacd]: _: coll. <abbr>
 60 [12dicts] 70 [moby] 85 [ukacd]: _~: coll <abbr>
 
+85 [ukacd]: !coll
+
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: collaborate <v>
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <v>: collaborated, -, collaborates
 35 [12dicts] 40 [3esl] 50 [ukfreq] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <v>: -, collaborating, -
@@ -94359,9 +94369,9 @@
 50 [12dicts] 70 [3of6] [5desk] 80 [ucacr]: CPU <n/upper>
 50 [12dicts] 70 [3of6] [5desk]: - <n/upper>: CPUs, CPU's
 
-80 [lcacr]: cpu
+80 [lcacr]: cpu <abbr>
 
-80 [lcacr]: cpus
+80 [lcacr]: cpus <abbr>
 
 70 [moby] 80 [ucacr]: CQ </abbr?>
 
@@ -103730,7 +103740,9 @@
 
 50 [12dicts] 70 [3of6]: DE <n/upper>
 
-70 [moby] 80 [enable]: !de <pre>
+70 [moby] 80 [enable]: de
+
+70 [moby]: !de <pre>
 
 60 [12dicts]: DEA <n/upper>: DEA's
 
@@ -112998,6 +113010,8 @@
 60 [12dicts] 70 [moby] 85 [ukacd]: _: dict. <abbr>
 60 [12dicts] 70 [moby] 85 [ukacd]: _~: dict <abbr>
 
+85 [ukacd]: !dict
+
 50 [name] 60 [12dicts] 70 [3of6] [5desk] [moby] 80 [upper]: Dictaphone <n/trademark>
 50 [name] 60 [12dicts] 70 [3of6] [5desk] [moby]: - <n/trademark>: Dictaphone's
 60 [12dicts] 70 [3of6] [5desk] [moby] 80 [upper]: - <n/trademark>: Dictaphones
@@ -119365,7 +119379,7 @@
 
 70 [moby]: D.J. <abbr>
 
-80 [lcacr]: dj
+80 [lcacr]: dj <abbr>
 
 70 [5desk] [moby] [name] 85 [ukacd]: Djakarta <n/upper>
 70 [5desk] [moby] [name]: - <n/upper>: Djakarta's
@@ -119394,7 +119408,7 @@
 
 70 [3of6]: DJs </upper?>
 
-80 [lcacr]: djs
+80 [lcacr]: djs <abbr>
 
 80 [moby]: dk. <abbr>
 
@@ -126928,6 +126942,8 @@
 
 70 [moby]: Ea <n/upper>: Ea's
 
+85 [ukacd]: !ea
+
 80 [ospdadd]: eaceworm <n>: eaceworms
 
 35 [] [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: each <aj>
@@ -129055,6 +129071,8 @@
 70 [moby]: E.E. <abbr>
 
 80 [moby]: e.e. <abbr>
+
+85 [ukacd]: ee
 
 50 [12dicts] 70 [moby]: EEC <n/upper>: EEC's
 
@@ -138459,11 +138477,13 @@
 
 60 [12dicts] 70 [3of6] [moby]: Es <n/upper>
 
-70 [moby] 85 [stale] [ukacd]: es <suf>
+70 [moby] 85 [ukacd]: es <suf>
 
 70 [3of6]: E's </upper?>
 
 80: Es <x>
+
+85 [stale] [ukacd]: es
 
 50 [name] 60 [12dicts] 70 [5desk] [moby] 85 [ukacd]: Esau <n/upper>
 50 [name] 60 [12dicts] 70 [5desk] [moby]: - <n/upper>: Esau's
@@ -139033,6 +139053,8 @@
 70 [moby] 85 [ukacd]: !est <suf>
 
 70 [3of6]: -est. </abbr?>
+
+85 [ukacd]: !est
 
 35 [] [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: establish <v>
 35 [12dicts] [ukfreq] 40 [3esl] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <v>: established, -, -
@@ -161840,13 +161862,19 @@
 
 70 [5desk] 80 [ucacr]: FTP <v/upper>: FTPed-, FTPing-, FTPs-
 
-50 hacker 80 [lcacr]: ftp <n>: ftps
+80 [lcacr]: -ftp <abbr>
 
-80 [lcacr]: ftped
+50 hacker: ftp <n>: ftps
+
+80 [lcacr]: ftped <abbr>
 
 50 hacker: ftpers
 
-50 hacker 80 [lcacr]: ftping
+80 [lcacr]: -ftping <abbr>
+
+50 hacker: ftping
+
+80 [lcacr]: ftps <abbr>
 
 70 [5desk]: Fuad </upper?>
 
@@ -163400,6 +163428,8 @@
 60 [12dicts]: FY </abbr?>
 
 70 [moby] 85 [ukacd]: fy <suf>
+
+85 [ukacd]: fy
 
 80 [enable]: fyce <n>: fyces
 
@@ -222168,11 +222198,13 @@
 
 40 [3esl] 60 [12dicts] 70 [moby]: Jun. <abbr>
 
-60 [12dicts] 80 [enable]: jun <abbr>
+60 [12dicts]: jun <abbr>
 
 60 [12dicts]: Jun </upper?>
 
 70 [3of6]: -Jun. </abbr?>
+
+80 [enable]: -jun
 
 85 [ukacd]: Juncaceae <n/upper>
 
@@ -231346,7 +231378,9 @@
 
 50 [name] [names] 70 [moby]: Lang <n/person>: Lang's
 
-70 [moby] 80 [enable] 85 [ukacd]: lang <abbr>
+70 [moby] 80 [enable] 85 [ukacd]: -lang
+
+70 [moby] 85 [ukacd]: lang <abbr>
 
 70 [moby]: lang. <abbr>
 
@@ -256932,6 +256966,8 @@
 
 70 [moby] 85 [ukacd]: ment <suf>
 
+85 [ukacd]: ment
+
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: mental <aj>
 
 60 [12dicts] 70 [3of6] [moby] 85 [ukacd]: mental age <n>
@@ -258239,7 +258275,9 @@
 
 70 [moby]: Meta <n/place>
 
-50 hacker 70 [moby] 80 [enable]: meta <pre>
+50 hacker 80 [enable]: meta
+
+50 hacker 70 [moby]: meta <pre>
 
 85 [ukacd]: metabasis <n>: metabases
 
@@ -290549,7 +290587,7 @@
 
 60 [12dicts] 70 [3of6] 80 [ucacr]: OJ </abbr?>
 
-80 [lcacr]: oj
+80 [lcacr]: oj <abbr>
 
 80 [moby]: Ojai <n/place>
 
@@ -290565,7 +290603,7 @@
 
 85 [ukacd]: ojime
 
-80 [lcacr]: ojs
+80 [lcacr]: ojs <abbr>
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [ucacr] 85 [ukacd]: A B C=: OK <n>: OKs # fixme: pos_class originally "upper"
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [ucacr] 85 [ukacd]: A. B. C: okay <n>: okays
@@ -308101,7 +308139,7 @@
 
 50 [12dicts] 70 [3of6] [5desk] 80 [ucacr]: PDQ </abbr?>
 
-80 [lcacr]: -pdq
+80 [lcacr]: pdq <abbr>
 
 60 [12dicts]: PDT </abbr?>
 
@@ -326616,8 +326654,10 @@
 70 [moby] 80 [enable] 85 [ukacd]: posology <n>
 70 [moby] 80 [enable]: - <n>: posologies
 
-50 [12dicts] 60 [brif] 70 [3of6] [moby] 85 [ukacd]: _: poss. <abbr>
-50 [12dicts] 60 [brif] 70 [3of6] [moby] 85 [ukacd]: _~: poss <abbr>
+50 [12dicts] 70 [moby] 85 [ukacd]: _: poss. <abbr>
+50 [12dicts] 70 [moby] 85 [ukacd]: _~: poss <abbr>
+
+60 [brif] 70 [3of6] 85 [ukacd]: -poss
 
 70 [3of6]: -poss. </abbr?>
 
@@ -328928,6 +328968,8 @@
 60 [12dicts]: PRC <n/upper>: PRC's
 
 70 [moby] 85 [ukacd]: pre <pre>
+
+85 [ukacd]: pre
 
 85 [ukacd]: preace
 
@@ -346753,7 +346795,7 @@
 60 [12dicts] 70 [3of6] [5desk]: - <n/abbr?>: RBI's
 65 [12dicts] 70 [5desk] 80 [ucacr]: - <n/abbr?>: RBIs-
 
-80 [lcacr]: rbi <n>
+80 [lcacr]: -rbi <abbr>
 
 85 [ukacd]: RBMK reactor </upper?>
 
@@ -374812,8 +374854,11 @@
 
 50 [12dicts] 70 [moby]: Se <n/upper>
 
-70 [3of6] 85 [stale] [ukacd]: A: se <abbr>
-70 [3of6] 85 [stale] [ukacd]: B: sae <abbr>
+70 [3of6] 85 [ukacd]: A: se <abbr>
+70 [3of6] 85 [ukacd]: B: sae <abbr>
+
+85 [stale] [ukacd]: B: !sae
+#! missing spellings: A
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: sea <n>: seas
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: sea's
@@ -402014,6 +402059,8 @@
 
 80 [moby]: st. <abbr>
 
+85 [ukacd]: !st
+
 60 [12dicts]: Sta. <abbr>
 
 80 [moby]: Staatsburg <n/place>
@@ -418378,8 +418425,10 @@
 
 80 [moby]: Symsonia <n/place>
 
-60 [12dicts] 85 [stale]: _: syn. <abbr>
-60 [12dicts] 85 [stale]: _~: syn <abbr>
+60 [12dicts]: _: syn. <abbr>
+60 [12dicts]: _~: syn <abbr>
+
+85 [stale]: !syn
 
 85 [ukacd]: synadelphite
 
@@ -432752,9 +432801,9 @@
 
 60 [12dicts] 70 [5desk] [moby] 80 [ucacr]: TKO <n/upper>
 
-80 [lcacr]: -tko
+80 [lcacr]: tko <abbr>
 
-80 [lcacr]: tkos
+80 [lcacr]: tkos <abbr>
 
 60 [12dicts] 70 [moby]: Tl <n/upper>
 
@@ -436946,8 +436995,10 @@
 80 [enable] 85 [ukacd]: tranquilness <n>
 80 [enable]: - <n>: tranquilnesses
 
-50 [+] [12dicts] 70 [moby] 80 [enable]: _: trans. <abbr>
-50 [+] [12dicts] 70 [moby] 80 [enable]: _~: trans <abbr>
+50 [+] 80 [enable]: trans
+
+50 [12dicts] 70 [moby]: _: trans. <abbr>
+50 [12dicts] 70 [moby]: _~: trans <abbr>
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: transact <v>: transacted, transacting, transacts
 
@@ -444436,6 +444487,8 @@
 
 60 [12dicts]: Twp. <abbr>
 
+85 [ukacd]: !twp
+
 60 [12dicts]: TWX </abbr?>
 
 85 [stale] [ukacd]: twyer <n>: twyers
@@ -446107,11 +446160,13 @@
 
 60 [12dicts]: U.N. <abbr>
 
-70 [moby] 80 [enable] 85 [ukacd]: !un <pre>
+70 [moby] 85 [ukacd]: !un <pre>
 
 70 [3of6]: -U.N. </abbr?>
 
 70 [3of6]: 'un
+
+80 [enable] 85 [ukacd]: un
 
 70 [5desk] 80 [moby] 85 [ukacd]: Una <n/place>
 
@@ -463188,7 +463243,7 @@
 60 [extra] 70 [moby] 85 [ukacd]: vert <v>
 70 [moby] 85 [ukacd]: - <v>: verted-, verting-, verts-
 
-60 [extra] 70 [moby] 85 [ukacd]: vert <abbr>
+70 [moby] 85 [ukacd]: vert <abbr>
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: vertebra <n>: (vertebrae | ~: vertebras)
 
@@ -466093,9 +466148,11 @@
 
 50 [12dicts] 70 [3of6]: viz. <av/abbr?>
 
-60 [brif] 85 [ukacd]: viz <abbr>
+60 [brif] 85 [ukacd]: -viz
 
 80 [moby]: -viz. <abbr>
+
+85 [ukacd]: viz <abbr>
 
 85 [ukacd]: vizament
 
@@ -471060,13 +471117,13 @@
 60 [12dicts] 70 [3of6] 80 [ucacr]: WC <n/upper>
 60 [12dicts] 70 [3of6]: - <n/upper>: WCs
 
-80 [lcacr]: wc
+80 [lcacr]: wc <abbr>
 
 80 [moby]: w.c. <abbr>
 
 80 [moby]: -W.C. <abbr>
 
-80 [lcacr]: wcs
+80 [lcacr]: wcs <abbr>
 
 80 [moby]: W.C.T.U. <abbr>
 

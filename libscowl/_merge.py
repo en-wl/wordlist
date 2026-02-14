@@ -234,8 +234,7 @@ def _adjustPos(conn, grps, preview = 'no'):
             #                              "and lemma=? ", (lemma,)))
             new_poses.append('v')
                                 
-        for new_pos in new_poses:
-            lines.append(f"{lemma} <{orig_pos}→{new_pos}/>")
+        lines.extend(f"{lemma} <{orig_pos}→{new_pos}/>" for new_pos in new_poses)
 
     adjustInput = '\n\n'.join(lines)
 

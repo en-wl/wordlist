@@ -211,7 +211,7 @@ def addQueryArguments(p, usePositional):
            help=f"any of: {', '.join(REGIONS[1:])}")
     variantSymbolsStr = ','.join(symbol if symbol.isalnum() else f"'{symbol}'" for symbol in variantFromSymbol.keys())
     grp = p.add_mutually_exclusive_group(required=True if usePositional else False)
-    addArg('--variant-level', metavar='<char>', choices=[*variantFromSymbol.keys(),*map(str, range(0,10))], dest='variantLevel',
+    addArg('--variant-level', metavar='<char>', choices=[*variantFromSymbol.keys(),*map(str, range(10))], dest='variantLevel',
            help=f"one of: {variantSymbolsStr},0-9", optional = True, grp = grp)
     addArg('--variant-levels', action=VariantLevels, dest='variantLevels', metavar='<list>', grp = grp)
     addArg('--poses', '--wo-poses', action=Lst, dest='poses', metavar='<list>')

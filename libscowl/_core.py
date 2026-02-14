@@ -402,8 +402,7 @@ class Spellings(dict):
         for idx, sp in enumerate(_spellings):
             vl = self.get(sp, None)
             if vl is None: continue
-            res.append(idx)
-            res.append(vl)
+            res.extend((idx, vl))
         return res
 
 class Cluster:

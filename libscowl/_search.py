@@ -50,7 +50,7 @@ def queryString(
         clauses.append(f"variant_level <= {vl}")
 
     if variantLevels is not None:
-        if not (variantLevel is None):
+        if variantLevel is not None:
             raise ValueError('both variantLevel and variantLevels can not be defined at the same time')
         clauses.append(f"variant_level in ({','.join(str(int(v)) for v in sorted(variantLevels))})")
 

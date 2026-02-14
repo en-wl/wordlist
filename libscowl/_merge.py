@@ -398,13 +398,11 @@ def _mergeGroup(conn, grp, idx, next_group_id, next_word_id,
         # Existing DB rows represent the "preferred" spellings/variant levels
         # for a lemma itself (not derived forms). We only update these if the
         # incoming group provides spellings for at least one lemma.
-        existing = {
-            lemma_id: vl for lemma_id, vl
-            in conn.execute("select lemma_id,min(variant_level) "
-                            "from words left join lemma_variant_info using (lemma_id) "
-                            "where group_id = ? and word_id = lemma_id "
-                            "group by lemma_id",
-                            (group_id,))}
+        existing = dict(conn.execute("select lemma_id,min(variant_level) "
+                                     "from words left join lemma_variant_info using (lemma_id) "
+                                     "where group_id = ? and word_id = lemma_id "
+                                     "group by lemma_id",
+                                     (group_id,)))
 
         # max_vl is the strictness level for the "unaccounted lemma" check
         # below: we treat the merge file as defining variant info up to this

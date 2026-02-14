@@ -184,8 +184,7 @@ def getWords(conn, size, spellings, variantLevel,
         choices = ','.join(f"'{c}'" for c in nosuggest)
         nosuggestQuery = f"select word from words join groups using (group_id) where usage_note in ({choices})"
         print(nosuggestQuery, file=sys.stderr)
-        for w, in conn.execute(nosuggestQuery):
-            nosuggestWords.add(w)
+        nosuggestWords.update(w for w, in conn.execute(nosuggestQuery))
 
     for w, in conn.execute(query):
         orig = w

@@ -235,8 +235,8 @@ def removeEntries(conn):
     conn.execute("create table if not exists temp.groups_to_del (group_id integer not null)")
     conn.execute("create table if not exists temp.words_to_del (word_id integer not null)")
 
-    haveGroupsToDel = conn.execute(f"select 1 from groups_to_del limit 1").fetchone() is not None
-    haveWordsToDel = conn.execute(f"select 1 from words_to_del limit 1").fetchone() is not None
+    haveGroupsToDel = conn.execute("select 1 from groups_to_del limit 1").fetchone() is not None
+    haveWordsToDel = conn.execute("select 1 from words_to_del limit 1").fetchone() is not None
     # note: haveWordsToDel does not include deleted words as a result of deleting groups
 
     if haveWordsToDel:

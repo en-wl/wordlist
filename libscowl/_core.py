@@ -262,7 +262,7 @@ def posmap(base_pos, poses):
     elif len(poses) <= 1:
         new_poses = [basePosInfo[base_pos].lemma_pos]
     else:
-        raise ValueError(f'posmap: unrecognized pattern')
+        raise ValueError('posmap: unrecognized pattern')
     leftover = poses - set(new_poses)
     if leftover:
         raise ValueError(f'posmap: leftover forms: {leftover}')
@@ -697,7 +697,7 @@ class LineBase(SlotsDataClass):
         if lemma:
             out.write(f': {self.grp.group_rank}{lemma}{entry_rank}')
         else:
-            out.write(f': -')
+            out.write(': -')
 
         if base_pos is Default and pos_class is Default:
             pass
@@ -920,7 +920,7 @@ class Override(LineBase):
     def print(self, out = None):
         for si in self.si:
             si.print(out)
-        out.write(f': +')
+        out.write(': +')
         self._lemmaPart(out, self.lemma)
         if self.words:
             out.write(': ')
@@ -955,7 +955,7 @@ class ClusterComment(SlotsDataClass):
         if self.other_words:
             out.write(f' ({self.other_words}):')
         else:
-            out.write(f':')
+            out.write(':')
         out.write('\n')
         for line in self.comment.splitlines():
             out.write(f'## {line}\n')

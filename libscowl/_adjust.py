@@ -128,7 +128,7 @@ class GroupInfo(SlotsDataClass):
         if li.action == 'add':
             assert li.pos == new_pos
             if len(ids) > 0:
-                raise ValueError(f"cannot add line: lemma already exists")
+                raise ValueError("cannot add line: lemma already exists")
             if new_pos not in self.subGroups:
                 self.subGroups[new_pos] = SubGroupInfo(None)
         else:
@@ -138,9 +138,9 @@ class GroupInfo(SlotsDataClass):
                     return
                 if li.action == 'match':
                     return
-                raise ValueError(f'could not find match')
+                raise ValueError('could not find match')
             elif len(ids) > 1:
-                raise ValueError(f'multiple matches found')
+                raise ValueError('multiple matches found')
             li.group_id = ids[0][0]
             li.lemma_id = ids[0][1]
 

@@ -145,7 +145,7 @@ if progName == '__main__.py':
     progName = 'libscowl'
 parser = argparse.ArgumentParser(progName)
 parser.add_argument('--db', metavar='<file>', default=SCOWL_DB,
-                    help=f"database file to use (default scowl.db); also SCOWL_DB")
+                    help="database file to use (default scowl.db); also SCOWL_DB")
 
 subparsers = parser.add_subparsers(metavar='<command>')
 
@@ -159,7 +159,7 @@ def addParser(title, **args):
 
 def addDbArgument(p):
     p.add_argument('--db', metavar='<file>',
-                   help=f"database file to use (default scowl.db); also SCOWL_DB")
+                   help="database file to use (default scowl.db); also SCOWL_DB")
 
 p = addParser('import',
               help='create the database from stdin')
@@ -243,9 +243,9 @@ def addFilterArguments(p):
 addQueryArguments(p, usePositional = True)
 addFilterArguments(p)
 p.add_argument('--nosuggest', action=NoSuggest, dest='nosuggest', metavar='<list>', const='', nargs='?',
-               help=f"any of: vulgar-1,2,3 or offensive-1,2,3; if the flag is specified but no values are given defaults to: vulgar-1&2 and offensive-1&2")
+               help="any of: vulgar-1,2,3 or offensive-1,2,3; if the flag is specified but no values are given defaults to: vulgar-1&2 and offensive-1&2")
 p.add_argument('--nosuggest-suffix', type=str, dest='nosuggestSuffix', metavar='<str>',
-               help=f"default: /!")
+               help="default: /!")
 
 
 p = addParser('search',

@@ -65,7 +65,7 @@ def exportAsText(clusters, conn = None, out = None, *, trimSpellings = True, sho
         out.write('#: Spelling/Region Codes:\n')
         for spelling, region, descr in conn.execute("select spelling, region, spelling_descr from spellings where spelling != '_' order by order_num"):
             out.write(f"#:   {spelling}: {region}: {descr}\n")
-        out.write(f"#:   _:     Other\n")
+        out.write("#:   _:     Other\n")
         out.write('#:\n')
         out.write('#: Variant Levels:\n')
         for symbol, num, descr in conn.execute("select variant_symbol, variant_level, variant_descr from variant_levels where variant_symbol != '' order by variant_level"):

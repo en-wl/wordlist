@@ -103,7 +103,7 @@ with open('data/basic') as f:
             poses = f"'{d.base_pos}',''"
         conn.execute("insert or ignore into groups_to_del "
                      f"select group_id from entries where word = ? and base_pos in ({poses})", (d.word,))
-    conn.execute(f"insert or ignore into groups_to_del "
+    conn.execute("insert or ignore into groups_to_del "
                  "select group_id from lemmas where lemma in ('so', 'sol')")
 removeEntries(conn)
 conn.commit()

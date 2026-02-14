@@ -92,9 +92,7 @@ _wordRegex = rf"[{_orderAlpha}0-9.&'/](?:[{_orderAlpha}0-9.&'/ -]*[{_orderAlpha}
 
 # note: any character not in _order is not allowed to be part of a word
 
-_deaccentMap = {}
-for k, v in zip(_accented, _deaccented):
-    _deaccentMap[k] = v
+_deaccentMap = dict(zip(_accented, _deaccented))
 
 _sortOrder = bytearray(256)
 for i, c in enumerate(_order.encode('iso-8859-1')):

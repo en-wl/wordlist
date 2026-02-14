@@ -549,7 +549,7 @@ def adjustEntries(conn, f = None, *,
                                              ((sg.id, li.lemma_id, sp, vl) for sp, vl in li.spellings.items()))
                         if li.comments:
                             conn.executemany("insert into new_lemma_comments (main_group_id, lemma_id, order_num, comment) values (?, ?, ?, ?)",
-                                             ((sg.id, li.lemma_id, i, c) for (i, c) in enumerate(li.comments)));
+                                             ((sg.id, li.lemma_id, i, c) for (i, c) in enumerate(li.comments)))
                         elif replaceComments:
                             conn.execute("insert or ignore into new_lemma_comments (main_group_id, lemma_id, order_num) values (?, ?, -1)", (sg.id, li.lemma_id,))
                     except ValueError as err:
@@ -628,7 +628,7 @@ def adjustEntries(conn, f = None, *,
     if simplifyScowlInfo:
         conn.execute("delete from scowl_data"
                      "  where (size,category,region,tag,group_id,pos) "
-                     "    in (select * from scowl_data_cleanup join group_ids_to_clean_up using (group_id))");
+                     "    in (select * from scowl_data_cleanup join group_ids_to_clean_up using (group_id))")
     print(f'adjust_proc.sql: {time.monotonic()-t}s')
 
     if preview:

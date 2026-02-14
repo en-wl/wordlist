@@ -87,7 +87,7 @@ def mergeEntries(conn, f = None, *,
     clusterComments = {}
     _mergeText(lines, groups, clusterComments)
     groups = _finalizeGroups(groups)
-    failedCnt = 0;
+    failedCnt = 0
 
     try:
         # do initial matchup
@@ -140,7 +140,7 @@ def mergeEntries(conn, f = None, *,
                 conn.execute("rollback to sp")
                 conn.execute("release sp")
                 #raise
-                _warn(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}: {err}");
+                _warn(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}: {err}")
                 failedCnt += 1
 
         for c in clusterComments.values():

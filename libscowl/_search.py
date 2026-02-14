@@ -178,7 +178,7 @@ def getWords(conn, size, spellings, variantLevel,
         else:
             nosuggest = {'vulgar-1', 'vulgar-2', 'offensive-1', 'offensive-2'}
         possibleValues = {'vulgar-1', 'vulgar-2', 'vulgar-3', 'offensive-1', 'offensive-2', 'offensive-3'}
-        leftover = nosuggest - possibleValues;
+        leftover = nosuggest - possibleValues
         if leftover:
             raise ValueError(leftover) # fixme
         choices = ','.join(f"'{c}'" for c in nosuggest)
@@ -220,7 +220,7 @@ def _filterDB(filterType, conn, orig, *, simplify = (), **args):
     if args:
         raise TypeError("unexpected args: {}".format(', '.join(args.keys())))
 
-    conn.execute('attach database ? as orig', (orig,));
+    conn.execute('attach database ? as orig', (orig,))
 
     if filterType == 'by-line':
         simplify = set(simplify)
@@ -322,10 +322,10 @@ def cleanupScowlData(conn):
                           "and (a.category != b.category or a.region != b.region or a.tag != b.tag) ")
     conn.execute("delete from scowl_data "
                  "where (size, category, region, tag, group_id, pos) "
-                 f"in (select b.* from scowl_data a join scowl_data b using(group_id,pos) {cleanupWhereClause})");
+                 f"in (select b.* from scowl_data a join scowl_data b using(group_id,pos) {cleanupWhereClause})")
     conn.execute("delete from scowl_override "
                  "where (size, category, region, tag, word_id) "
-                 f"in (select b.* from scowl_override a join scowl_override b using(word_id) {cleanupWhereClause})");
+                 f"in (select b.* from scowl_override a join scowl_override b using(word_id) {cleanupWhereClause})")
 
 def pruneConstTables(conn):
     conn.execute('create temp table used_variant_info as '

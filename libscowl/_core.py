@@ -519,7 +519,7 @@ class Group:
         self.problems = []
         if tally and len(tally) != len(expected_spellings):
             missing = [sp for sp in expected_spellings if sp not in tally]
-            self.problems.append(f"missing spellings: {' '.join(missing)}");
+            self.problems.append(f"missing spellings: {' '.join(missing)}")
 
         self.lines.sort(key = Line.sortKey)
 
@@ -772,7 +772,7 @@ def _splitWords(wordsStr, lemmaSpellingsKeys = ('_',)):
 class Line(LineBase):
     __slots__ = (
         'poses',    # { <pos> } -- i.e. set of poses
-    );
+    )
 
     def __init__(self, grp, si, poses = None):
         super().__init__(grp, si)
@@ -922,7 +922,7 @@ class Override(LineBase):
 
     def print(self, out = None):
         for si in self.si:
-            si.print(out);
+            si.print(out)
         out.write(f': +')
         self._lemmaPart(out, self.lemma)
         if self.words:
@@ -958,7 +958,7 @@ class ClusterComment(SlotsDataClass):
         if self.other_words:
             out.write(f' ({self.other_words}):')
         else:
-            out.write(f':');
+            out.write(f':')
         out.write('\n')
         for line in self.comment.splitlines():
             out.write(f'## {line}\n')

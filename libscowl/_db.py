@@ -22,9 +22,9 @@ def openDB(dbfile, create = False, copyFrom = None):
     conn = sqlite3.connect(dbfile, isolation_level = 'DEFERRED')
 
     conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA foreign_keys = ON");
-    conn.execute("PRAGMA synchronous = OFF");
-    conn.execute("PRAGMA temp_store = MEMORY");
+    conn.execute("PRAGMA foreign_keys = ON")
+    conn.execute("PRAGMA synchronous = OFF")
+    conn.execute("PRAGMA temp_store = MEMORY")
 
     if isinstance(copyFrom, str):
         with openDB(copyFrom) as conn0:
@@ -85,7 +85,7 @@ def _importFromDB(conn, filterTable, filterQuery):
         groups[r['group_id']] = grp
 
     for r in cur.execute(f"select * from group_comments where {groupIdFilter}"):
-        groups[r['group_id']].commentLines = GroupComment(r['comment']);
+        groups[r['group_id']].commentLines = GroupComment(r['comment'])
 
     wordsById = {}
     lemmasById = {}
@@ -282,11 +282,11 @@ def updateFuzzy(conn):
     conn.execute("analyze fuzzy")
 
 def createClusterMap(conn):
-    conn.execute("delete from cluster_map");
+    conn.execute("delete from cluster_map")
     conn.execute("create temp table closure (x integer not null, y integer not null, primary key(x, y)) without rowid")
     cur = conn.execute("insert or ignore into closure with "
                        "  by_key as (select distinct group_id, word_key from words left join fuzzy using (word) where word_id = lemma_id) "
-                       "select a.group_id, b.group_id from by_key a join by_key b using (word_key) ");
+                       "select a.group_id, b.group_id from by_key a join by_key b using (word_key) ")
     while (cur.rowcount > 0):
         cur.execute("insert or ignore into closure select a.x, b.y from closure a join closure b on a.y = b.x")
     conn.execute("insert into cluster_map (group_id, cluster_id) select x, min(y) from closure group by x")

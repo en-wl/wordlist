@@ -187,7 +187,7 @@ def addQueryArguments(p, usePositional):
         positional = {}
     def addArg(*flags, **args):
         name = flags[0][2:]
-        optional = args.pop('optional', False)
+        _optional = args.pop('optional', False)
         grp = args.pop('grp', None)
         if name in positional:
             p0 = grp if grp else p.add_mutually_exclusive_group(required=True)

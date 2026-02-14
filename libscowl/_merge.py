@@ -222,7 +222,6 @@ def _adjustPos(conn, grps, preview = 'no'):
     for lemma, orig_pos, new_pos in rows:
         pos_adjs[(lemma, orig_pos)].append(new_pos)
 
-    invalid = []
     lines = ['#:: adjust :keep-comments']
     for (lemma, orig_pos), new_poses in pos_adjs.items():
         if orig_pos not in ('m', 'a', ''):

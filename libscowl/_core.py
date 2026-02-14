@@ -722,7 +722,6 @@ class LineBase(SlotsDataClass):
             l = Line(g, si)
         else:
             l = Override(g, si)
-        lemmaStr = m['lemma'].strip()
         lemma = WordEntry()
         (group_rank, lemma.word, lemma.entry_rank) = parseLemmaPart(m['lemma'])
         if lemma.word is None:

@@ -126,7 +126,7 @@ class NoSuggest(argparse.Action):
         if values == '':
             lst = ()
         else:
-            lst = set(v.strip() for v in values.split(','))
+            lst = {v.strip() for v in values.split(',')}
         setattr(namespace, self.dest, lst)
 
 def strOrBool(arg):

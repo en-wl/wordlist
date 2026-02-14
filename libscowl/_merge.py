@@ -266,7 +266,7 @@ def _mergeGroup(conn, grp, idx, next_group_id, next_word_id,
 
     rows = conn.execute("select group_id from matched where idx = ? and keep",
                         (idx,))
-    group_ids = set(id for id, in rows)
+    group_ids = {id for id, in rows}
 
     # nothing to merge so just create a new group and return
     if not group_ids:

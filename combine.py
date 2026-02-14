@@ -2,20 +2,15 @@
 
 import time
 import os
-import shutil
-import io
 import sys
 
-from contextlib import suppress
 
 def usage():
     sys.stderr.write(f"usage: {sys.argv[0]} (create-db [--raw|--dont-combine-pos] [<db file>]) | sort\n")
     exit(1)
 
 sys.path.insert(0, '.')
-import libscowl
 from libscowl import *
-from libscowl import _importFromDB, _finalizeGroups, _createClusters, _mergeText
 
 mergeFiles = (
     'data/extra',

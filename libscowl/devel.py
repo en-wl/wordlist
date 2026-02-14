@@ -74,7 +74,6 @@ def exportConstData(out=None):
     if out is None:
         out = sys.stdout
 
-    from pprint import pprint
 
     out.write(_moduleHeader)
 

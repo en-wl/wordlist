@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 
-import time
-import os
-import shutil
-import io
 import sys
 import re
 

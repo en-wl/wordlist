@@ -1,14 +1,11 @@
-from collections import namedtuple, defaultdict
+from collections import defaultdict
 from itertools import groupby, chain
-from types import SimpleNamespace
 from typing import NamedTuple,Any
 from pathlib import Path
 from operator import methodcaller
-from copy import copy, deepcopy
 import sys
 import os
 import sqlite3
-import json
 import re
 
 # †

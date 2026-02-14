@@ -2,7 +2,6 @@ import os
 import sys
 import argparse
 from argparse import SUPPRESS,RawDescriptionHelpFormatter
-from pathlib import Path
 
 import libscowl
 from libscowl import variantFromSymbol, SPELLINGS, REGIONS, POS_CATEGORIES, Include, Exclude

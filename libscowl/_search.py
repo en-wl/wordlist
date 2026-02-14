@@ -200,7 +200,6 @@ def getWords(conn, size, spellings, variantLevel,
             w = f"{w}{nosuggestSuffix}"
         yield w
 
-import inspect
 from inspect import signature,Signature,Parameter
 
 getWords.__signature__ = Signature([

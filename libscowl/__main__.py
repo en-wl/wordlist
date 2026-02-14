@@ -190,7 +190,7 @@ def addQueryArguments(p, usePositional):
         _optional = args.pop('optional', False)
         grp = args.pop('grp', None)
         if name in positional:
-            p0 = grp if grp else p.add_mutually_exclusive_group(required=True)
+            p0 = grp or p.add_mutually_exclusive_group(required=True)
             dest = args.pop('dest', name)
             metavar = args.pop('metavar')
             p0.add_argument(dest, *flags[1:],
@@ -201,7 +201,7 @@ def addQueryArguments(p, usePositional):
                            dest=dest, metavar=metavar, help=SUPPRESS,
                            **args)
         else:
-            p0 = grp if grp else p
+            p0 = grp or p
             p0.add_argument(*flags, **args)
     addArg('--size', type=int, metavar='<int>',
            help='max scowl size')

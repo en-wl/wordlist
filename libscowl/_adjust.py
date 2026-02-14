@@ -191,8 +191,6 @@ def splitIntoGroups(f):
                 startIdx = None
         elif startIdx is None:
             startIdx = idx
-        else:
-            pass
 
     return (header, lines, linesByGroup)
 

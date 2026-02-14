@@ -62,15 +62,11 @@ class DefaultType:
             return True
         return NotImplemented
     def __le__(self, other):
-        if isinstance(other, DefaultType):
-            return True
-        elif isinstance(other, str):
+        if isinstance(other, (DefaultType, str)):
             return True
         return NotImplemented
     def __gt__(self, other):
-        if isinstance(other, DefaultType):
-            return False
-        elif isinstance(other, str):
+        if isinstance(other, (DefaultType, str)):
             return False
         return NotImplemented
     def __ge__(self, other):

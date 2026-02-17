@@ -101,7 +101,7 @@ class Lst(argparse.Action):
     def __call__(self, parser, namespace, values, option_string):
         lst = [v.strip() for v in values.split(',')]
         cls = Exclude if option_string.startswith('--wo-') else Include
-        noDefault = True if 'no-default' in lst else False
+        noDefault = 'no-default' in lst
         lst = cls(*(v for v in lst if v != 'no-default'), noDefault = noDefault)
         setattr(namespace, self.dest, lst)
 
@@ -127,7 +127,7 @@ class NoSuggest(argparse.Action):
         if values == '':
             lst = ()
         else:
-            lst = set(v.strip() for v in values.split(','))
+            lst = {v.strip() for v in values.split(',')}
         setattr(namespace, self.dest, lst)
 
 def strOrBool(arg):
@@ -146,7 +146,7 @@ if progName == '__main__.py':
     progName = 'libscowl'
 parser = argparse.ArgumentParser(progName)
 parser.add_argument('--db', metavar='<file>', default=SCOWL_DB,
-                    help=f"database file to use (default scowl.db); also SCOWL_DB")
+                    help="database file to use (default scowl.db); also SCOWL_DB")
 
 subparsers = parser.add_subparsers(metavar='<command>')
 
@@ -160,7 +160,7 @@ def addParser(title, **args):
 
 def addDbArgument(p):
     p.add_argument('--db', metavar='<file>',
-                   help=f"database file to use (default scowl.db); also SCOWL_DB")
+                   help="database file to use (default scowl.db); also SCOWL_DB")
 
 p = addParser('import',
               help='create the database from stdin')
@@ -191,7 +191,7 @@ def addQueryArguments(p, usePositional):
         optional = args.pop('optional', False)
         grp = args.pop('grp', None)
         if name in positional:
-            p0 = grp if grp else p.add_mutually_exclusive_group(required=True)
+            p0 = grp or p.add_mutually_exclusive_group(required=True)
             dest = args.pop('dest', name)
             metavar = args.pop('metavar')
             p0.add_argument(dest, *flags[1:],
@@ -202,7 +202,7 @@ def addQueryArguments(p, usePositional):
                            dest=dest, metavar=metavar, help=SUPPRESS,
                            **args)
         else:
-            p0 = grp if grp else p
+            p0 = grp or p
             p0.add_argument(*flags, **args)
     addArg('--size', type=int, metavar='<int>',
            help='max scowl size')
@@ -211,7 +211,7 @@ def addQueryArguments(p, usePositional):
     addArg('--regions', type=lst, metavar='<list>',
            help=f"any of: {', '.join(REGIONS[1:])}")
     variantSymbolsStr = ','.join(symbol if symbol.isalnum() else f"'{symbol}'" for symbol in variantFromSymbol.keys())
-    grp = p.add_mutually_exclusive_group(required=True if usePositional else False)
+    grp = p.add_mutually_exclusive_group(required=bool(usePositional))
     addArg('--variant-level', metavar='<char>', choices=[*variantFromSymbol.keys(),*map(str, range(0,10))], dest='variantLevel',
            help=f"one of: {variantSymbolsStr},0-9", optional = True, grp = grp)
     addArg('--variant-levels', action=VariantLevels, dest='variantLevels', metavar='<list>', grp = grp)
@@ -244,9 +244,9 @@ def addFilterArguments(p):
 addQueryArguments(p, usePositional = True)
 addFilterArguments(p)
 p.add_argument('--nosuggest', action=NoSuggest, dest='nosuggest', metavar='<list>', const='', nargs='?',
-               help=f"any of: vulgar-1,2,3 or offensive-1,2,3; if the flag is specified but no values are given defaults to: vulgar-1&2 and offensive-1&2")
+               help="any of: vulgar-1,2,3 or offensive-1,2,3; if the flag is specified but no values are given defaults to: vulgar-1&2 and offensive-1&2")
 p.add_argument('--nosuggest-suffix', type=str, dest='nosuggestSuffix', metavar='<str>',
-               help=f"default: /!")
+               help="default: /!")
 
 
 p = addParser('search',

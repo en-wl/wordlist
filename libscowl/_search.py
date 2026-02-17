@@ -50,7 +50,7 @@ def queryString(
         clauses.append(f"variant_level <= {vl}")
 
     if variantLevels is not None:
-        if not (variantLevel is None):
+        if variantLevel is not None:
             raise ValueError('both variantLevel and variantLevels can not be defined at the same time')
         clauses.append(f"variant_level in ({','.join(str(int(v)) for v in sorted(variantLevels))})")
 
@@ -178,14 +178,13 @@ def getWords(conn, size, spellings, variantLevel,
         else:
             nosuggest = {'vulgar-1', 'vulgar-2', 'offensive-1', 'offensive-2'}
         possibleValues = {'vulgar-1', 'vulgar-2', 'vulgar-3', 'offensive-1', 'offensive-2', 'offensive-3'}
-        leftover = nosuggest - possibleValues;
+        leftover = nosuggest - possibleValues
         if leftover:
             raise ValueError(leftover) # fixme
         choices = ','.join(f"'{c}'" for c in nosuggest)
         nosuggestQuery = f"select word from words join groups using (group_id) where usage_note in ({choices})"
         print(nosuggestQuery, file=sys.stderr)
-        for w, in conn.execute(nosuggestQuery):
-            nosuggestWords.add(w)
+        nosuggestWords.update(w for w, in conn.execute(nosuggestQuery))
 
     for w, in conn.execute(query):
         orig = w
@@ -220,7 +219,7 @@ def _filterDB(filterType, conn, orig, *, simplify = (), **args):
     if args:
         raise TypeError("unexpected args: {}".format(', '.join(args.keys())))
 
-    conn.execute('attach database ? as orig', (orig,));
+    conn.execute('attach database ? as orig', (orig,))
 
     if filterType == 'by-line':
         simplify = set(simplify)
@@ -322,10 +321,10 @@ def cleanupScowlData(conn):
                           "and (a.category != b.category or a.region != b.region or a.tag != b.tag) ")
     conn.execute("delete from scowl_data "
                  "where (size, category, region, tag, group_id, pos) "
-                 f"in (select b.* from scowl_data a join scowl_data b using(group_id,pos) {cleanupWhereClause})");
+                 f"in (select b.* from scowl_data a join scowl_data b using(group_id,pos) {cleanupWhereClause})")
     conn.execute("delete from scowl_override "
                  "where (size, category, region, tag, word_id) "
-                 f"in (select b.* from scowl_override a join scowl_override b using(word_id) {cleanupWhereClause})");
+                 f"in (select b.* from scowl_override a join scowl_override b using(word_id) {cleanupWhereClause})")
 
 def pruneConstTables(conn):
     conn.execute('create temp table used_variant_info as '

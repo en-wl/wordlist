@@ -93,7 +93,7 @@ def sortFile(*, infh = None, inFiles = (), outfh = None, indent = False):
         if hdr[1] not in ('adjust', 'merge'):
             raise ValueError(f"unrecognized file format: {fileFormat}")
         if header and header[1] != hdr[1]:
-            raise ValueError(f"can't merge files of a different type")
+            raise ValueError("can't merge files of a different type")
         else:
             fileFormat = hdr[1]
             header = hdr

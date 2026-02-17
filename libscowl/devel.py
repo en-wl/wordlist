@@ -47,9 +47,9 @@ def populateConstDataFromDB(conn):
         )
 
     global SPELLINGS, REGIONS, POS_CATEGORIES
-    SPELLINGS = tuple(sp for (sp,) in conn.execute("select spelling from spellings order by order_num"));
-    REGIONS = tuple(rgn for (rgn,) in conn.execute("select region from regions order by order_num"));
-    POS_CATEGORIES = tuple(c for (c,) in conn.execute("select distinct pos_category from base_poses order by pos_category"));
+    SPELLINGS = tuple(sp for (sp,) in conn.execute("select spelling from spellings order by order_num"))
+    REGIONS = tuple(rgn for (rgn,) in conn.execute("select region from regions order by order_num"))
+    POS_CATEGORIES = tuple(c for (c,) in conn.execute("select distinct pos_category from base_poses order by pos_category"))
 
 _moduleHeader = """
 # generated file, must be kept in sync with constdata.sql

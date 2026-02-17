@@ -87,7 +87,7 @@ def mergeEntries(conn, f = None, *,
     clusterComments = {}
     _mergeText(lines, groups, clusterComments)
     groups = _finalizeGroups(groups)
-    failedCnt = 0;
+    failedCnt = 0
 
     try:
         # do initial matchup
@@ -140,7 +140,7 @@ def mergeEntries(conn, f = None, *,
                 conn.execute("rollback to sp")
                 conn.execute("release sp")
                 #raise
-                _warn(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}: {err}");
+                _warn(f"failed to add group: {grp.headword} <{grp.base_pos}> {{{grp.defn_note}}}: {err}")
                 failedCnt += 1
 
         for c in clusterComments.values():
@@ -235,8 +235,7 @@ def _adjustPos(conn, grps, preview = 'no'):
             #                              "and lemma=? ", (lemma,)))
             new_poses.append('v')
                                 
-        for new_pos in new_poses:
-            lines.append(f"{lemma} <{orig_pos}→{new_pos}/>")
+        lines.extend(f"{lemma} <{orig_pos}→{new_pos}/>" for new_pos in new_poses)
 
     adjustInput = '\n\n'.join(lines)
 
@@ -267,7 +266,7 @@ def _mergeGroup(conn, grp, idx, next_group_id, next_word_id,
 
     rows = conn.execute("select group_id from matched where idx = ? and keep",
                         (idx,))
-    group_ids = set(id for id, in rows)
+    group_ids = {id for id, in rows}
 
     # nothing to merge so just create a new group and return
     if not group_ids:
@@ -399,13 +398,11 @@ def _mergeGroup(conn, grp, idx, next_group_id, next_word_id,
         # Existing DB rows represent the "preferred" spellings/variant levels
         # for a lemma itself (not derived forms). We only update these if the
         # incoming group provides spellings for at least one lemma.
-        existing = {
-            lemma_id: vl for lemma_id, vl
-            in conn.execute("select lemma_id,min(variant_level) "
-                            "from words left join lemma_variant_info using (lemma_id) "
-                            "where group_id = ? and word_id = lemma_id "
-                            "group by lemma_id",
-                            (group_id,))}
+        existing = dict(conn.execute("select lemma_id,min(variant_level) "
+                                     "from words left join lemma_variant_info using (lemma_id) "
+                                     "where group_id = ? and word_id = lemma_id "
+                                     "group by lemma_id",
+                                     (group_id,)))
 
         # max_vl is the strictness level for the "unaccounted lemma" check
         # below: we treat the merge file as defining variant info up to this

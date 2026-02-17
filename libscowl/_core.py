@@ -65,15 +65,11 @@ class DefaultType:
             return True
         return NotImplemented
     def __le__(self, other):
-        if isinstance(other, DefaultType):
-            return True
-        elif isinstance(other, str):
+        if isinstance(other, (DefaultType, str)):
             return True
         return NotImplemented
     def __gt__(self, other):
-        if isinstance(other, DefaultType):
-            return False
-        elif isinstance(other, str):
+        if isinstance(other, (DefaultType, str)):
             return False
         return NotImplemented
     def __ge__(self, other):
@@ -99,9 +95,7 @@ _wordRegex = rf"[{_orderAlpha}0-9.&'/](?:[{_orderAlpha}0-9.&'/ -]*[{_orderAlpha}
 
 # note: any character not in _order is not allowed to be part of a word
 
-_deaccentMap = {}
-for k, v in zip(_accented, _deaccented):
-    _deaccentMap[k] = v
+_deaccentMap = dict(zip(_accented, _deaccented))
 
 _sortOrder = bytearray(256)
 for i, c in enumerate(_order.encode('iso-8859-1')):
@@ -265,7 +259,7 @@ def posmap(base_pos, poses):
     elif len(poses) <= 1:
         new_poses = [basePosInfo[base_pos].lemma_pos]
     else:
-        raise ValueError(f'posmap: unrecognized pattern')
+        raise ValueError('posmap: unrecognized pattern')
     leftover = poses - set(new_poses)
     if leftover:
         raise ValueError(f'posmap: leftover forms: {leftover}')
@@ -519,7 +513,7 @@ class Group:
         self.problems = []
         if tally and len(tally) != len(expected_spellings):
             missing = [sp for sp in expected_spellings if sp not in tally]
-            self.problems.append(f"missing spellings: {' '.join(missing)}");
+            self.problems.append(f"missing spellings: {' '.join(missing)}")
 
         self.lines.sort(key = Line.sortKey)
 
@@ -700,7 +694,7 @@ class LineBase(SlotsDataClass):
         if lemma:
             out.write(f': {self.grp.group_rank}{lemma}{entry_rank}')
         else:
-            out.write(f': -')
+            out.write(': -')
 
         if base_pos is Default and pos_class is Default:
             pass
@@ -772,7 +766,7 @@ def _splitWords(wordsStr, lemmaSpellingsKeys = ('_',)):
 class Line(LineBase):
     __slots__ = (
         'poses',    # { <pos> } -- i.e. set of poses
-    );
+    )
 
     def __init__(self, grp, si, poses = None):
         super().__init__(grp, si)
@@ -922,8 +916,8 @@ class Override(LineBase):
 
     def print(self, out = None):
         for si in self.si:
-            si.print(out);
-        out.write(f': +')
+            si.print(out)
+        out.write(': +')
         self._lemmaPart(out, self.lemma)
         if self.words:
             out.write(': ')
@@ -958,7 +952,7 @@ class ClusterComment(SlotsDataClass):
         if self.other_words:
             out.write(f' ({self.other_words}):')
         else:
-            out.write(f':');
+            out.write(':')
         out.write('\n')
         for line in self.comment.splitlines():
             out.write(f'## {line}\n')

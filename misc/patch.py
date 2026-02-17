@@ -77,7 +77,7 @@ while True:
             good.append((toRemove,toAdd))
 
         except KeyError:
-            if clusters.issuperset(map(lambda c: '\n'.join(c), toAdd)):
+            if clusters.issuperset('\n'.join(c) for c in toAdd):
                 skipped += 1
             else:
                 stderr.write(f'unable to find cluster>>>\n{cluster}\n<<<skipping hunk\n')

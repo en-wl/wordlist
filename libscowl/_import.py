@@ -85,7 +85,7 @@ def roughParse(f = None):
                 yield BasicInfo(base_pos, pos_class, lemma, True)
 
             words = _splitWords(m['words'])
-        except:
+        except Exception:
             raise ValueError(f"bad line: {line}")
 
         for ws in words:

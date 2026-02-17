@@ -128,7 +128,7 @@ class GroupInfo(SlotsDataClass):
         if li.action == 'add':
             assert li.pos == new_pos
             if len(ids) > 0:
-                raise ValueError(f"cannot add line: lemma already exists")
+                raise ValueError("cannot add line: lemma already exists")
             if new_pos not in self.subGroups:
                 self.subGroups[new_pos] = SubGroupInfo(None)
         else:
@@ -138,9 +138,9 @@ class GroupInfo(SlotsDataClass):
                     return
                 if li.action == 'match':
                     return
-                raise ValueError(f'could not find match')
+                raise ValueError('could not find match')
             elif len(ids) > 1:
-                raise ValueError(f'multiple matches found')
+                raise ValueError('multiple matches found')
             li.group_id = ids[0][0]
             li.lemma_id = ids[0][1]
 
@@ -191,8 +191,6 @@ def splitIntoGroups(f):
                 startIdx = None
         elif startIdx is None:
             startIdx = idx
-        else:
-            pass
 
     return (header, lines, linesByGroup)
 
@@ -231,7 +229,7 @@ def adjustEntries(conn, f = None, *,
             if flag == ':keep-comments':
                 replaceComments = False
             else:
-                raise ValueError("unknown flag found in header: {flag}")
+                raise ValueError(f"unknown flag found in header: {flag}")
 
     errors = False
     def warn(msg):
@@ -494,7 +492,7 @@ def adjustEntries(conn, f = None, *,
                                         word_id, = next(conn.execute("select word_id from words where lemma_id = ? and pos = ? and word = ?",
                                                                      (li.lemma_id, pos, we.word)))
                                     except StopIteration:
-                                        raise ValueError("uanble to find match for {we.word} with pos '{pos}'")
+                                        raise ValueError(f"uanble to find match for {we.word} with pos '{pos}'")
                                     if li.action == 'remove':
                                         conn.execute("insert into to_remove(word_id) values (?)", (word_id,))
                                     conn.execute("insert into explicit(word_id) values (?)", (word_id,))
@@ -549,7 +547,7 @@ def adjustEntries(conn, f = None, *,
                                              ((sg.id, li.lemma_id, sp, vl) for sp, vl in li.spellings.items()))
                         if li.comments:
                             conn.executemany("insert into new_lemma_comments (main_group_id, lemma_id, order_num, comment) values (?, ?, ?, ?)",
-                                             ((sg.id, li.lemma_id, i, c) for (i, c) in enumerate(li.comments)));
+                                             ((sg.id, li.lemma_id, i, c) for (i, c) in enumerate(li.comments)))
                         elif replaceComments:
                             conn.execute("insert or ignore into new_lemma_comments (main_group_id, lemma_id, order_num) values (?, ?, -1)", (sg.id, li.lemma_id,))
                     except ValueError as err:
@@ -628,7 +626,7 @@ def adjustEntries(conn, f = None, *,
     if simplifyScowlInfo:
         conn.execute("delete from scowl_data"
                      "  where (size,category,region,tag,group_id,pos) "
-                     "    in (select * from scowl_data_cleanup join group_ids_to_clean_up using (group_id))");
+                     "    in (select * from scowl_data_cleanup join group_ids_to_clean_up using (group_id))")
     print(f'adjust_proc.sql: {time.monotonic()-t}s')
 
     if preview:

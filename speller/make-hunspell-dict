@@ -43,7 +43,11 @@ doit() {
   wc -l < $1.2 | tr -d '[:blank:]' > $1.dic
   cat $1.2 | sort | iconv -f iso-8859-1 -t utf-8 >> $1.dic
 
-  cp $SPELLER/en.aff $1.aff
+  echo "# Affix file for $1 Hunspell Dictionary." > $1.aff
+  echo '#' >> $1.aff
+  PREFIX='# ' sh $SCOWL/speller/HEADER.sh >> $1.aff
+  echo >> $1.aff
+  cat $SPELLER/en.aff >> $1.aff
   
   if [ "$SCOWL_VERSION" ]; then
     fn="$1-$SCOWL_VERSION"
@@ -51,7 +55,7 @@ doit() {
     fn="$1"
   fi
 
-  WHAT="$1 Hunspell Dictionary" sh $SPELLER/README_en.txt.sh > README_$1.txt
+  sh $SPELLER/README_en.txt.sh $1 > README_$1.txt
   if [ -z "$3" ]; then
     echo "Wordlist Command: $2" >> README_$1.txt
   else

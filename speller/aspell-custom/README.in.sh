@@ -85,4 +85,3 @@ let the Aspell maintainer, Kevin Atkinson, know at kevina@gnu.org.
 Any additional documentation that came with the original word list can
 be found in the doc/ directory.
 EOF
-

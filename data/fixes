@@ -183,6 +183,25 @@ _v: MasterCard <n/name>: MasterCard's
 = A Cv: meager <aj>: meagerer-, meagerest-
 = AV B C: meagre <aj>: meagrer-, meagrest-
 
+_: naive <n>: naives
++ _v: naïve <n>: naïves
+
+_: naive <aj>: naiver, naivest
++ _v: naïve <aj>: naïver, naïvest
+
+_: naively <av>
++ _v: naïvely <av>
+
+_: naiveness <n>: naivenesses
++ _v: naïveness <n>: naïvenesses
+
+_: naivete <n>: naivetes
++ _v: naïveté <n>: naïvetés
+_V: naiveté <n>: naivetés
+
+_: naivety <n>: naiveties
++ _v: naïvety <n>: naïveties
+
 = A Bv: percent <n>: percent
 - per cent
 + B AV: per cent <n>: per cent
@@ -192,6 +211,9 @@ A Bv: percent <a→av>
 
 person <n>: (people | V: persons), person's, (people's | V: persons')
 + 60: +: person <n>: persons
+
+_: piñata <n>
+_v: pinata <n>
 
 # Issue #302
 A B- CV: preexist <v>: preexisted, preexisting, preexists

@@ -588,7 +588,7 @@ def adjustEntries(conn, f = None, *,
 
                         _addMissingSpellings(li.spellings, gi.spellings)
 
-                        if li.action == 'adjust' or li.action == 'match':
+                        if li.action in ('adjust', 'match'):
                             for pos, wes in li.words.items():
                                 for word_id, word in conn.execute("select word_id, word from words where lemma_id = ? and pos = ?",
                                                                   (li.lemma_id, pos)):

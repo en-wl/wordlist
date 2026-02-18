@@ -35,8 +35,10 @@ spellingMap = {
     'en-ca': 'canadian',
     'en-au': 'australian'
 }
-for sp in spellingCategorySQL.keys():
-    spellingMap[sp] = sp
+spellingMap.extend(
+    (sp, sp)
+    for sp in spellingCategorySQL.keys()
+)
 
 SCOWL_DB = os.environ.get('SCOWL_DB', '')
 if not SCOWL_DB:

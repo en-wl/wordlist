@@ -68,7 +68,7 @@ sps = {spellingMap[sp] for sp in args.spelling_categories}
 if 'british?' in sps:
     if 0 in variant_levels:
         print('error: must specify en_GB-ise or en_GB-ize', file=sys.stderr)
-        exit(2)
+        sys.exit(2)
     sps.remove('british?')
     sps.add('british')
 orig_sps = set(sps)

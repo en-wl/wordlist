@@ -111,12 +111,13 @@ if 'special' in sps:
 else:
     categoryClause = "category = ''"
 
-whereClause = ' AND '.join(map(lambda s: f'({s})', 
-                               filter(lambda s: s != '', [
-                                   ' OR '.join(spellingCategorySQL[sp] for sp in sorted(sps)),
-                                   categoryClause,
-                                   f'size <= {args.size}'
-                               ])))
+whereClause = ' AND '.join(f'({s})'
+                           for s in (
+                                ' OR '.join(spellingCategorySQL[sp] for sp in sorted(sps)),
+                                categoryClause,
+                                f'size <= {args.size}',
+                           )
+                           if s != '')
 query = f"select word from scowl_v0 where {whereClause}"
 
 #print(sorted(sps))

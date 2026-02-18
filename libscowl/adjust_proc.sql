@@ -90,6 +90,14 @@ union
 insert into adj_entry_ranks values(0,0,'','');
 analyze adj_entry_ranks;
 
+create temp table default_entry_rank as
+select main_group_id,pos,entry_rank as default_entry_rank
+  from words w join to_merge on group_id = other_group_id
+  group by main_group_id,pos
+  having count(distinct entry_rank)==1;
+insert into default_entry_rank values (0,'?','');
+analyze default_entry_rank;
+
 --
 -- fix up groups
 --
@@ -118,7 +126,9 @@ insert or ignore into groups (group_id, base_pos, defn_note, pos_class, usage_no
 delete from words where word_id in (select word_id from to_remove);
 
 insert into words (word_id, group_id, lemma_id, pos, word, entry_rank)
-  select word_id, main_group_id, lemma_id, pos, word, coalesce(entry_rank,'') from new_words;
+  select word_id, main_group_id, lemma_id, pos, word, coalesce(entry_rank,default_entry_rank,'')
+    from new_words
+    left join default_entry_rank using (main_group_id, pos);
 
 insert or ignore into fuzzy (word, word_key)
   select word, word_key from new_words;
@@ -175,7 +185,7 @@ update words as a
 -- propagate entry ranks across spelling variants
 with
   adj_ranks as (
-    select group_id, pos, a.entry_rank
+    select group_id, pos, min(a.entry_rank) filter (where a.entry_rank is not null) as entry_rank
       from (select main_group_id as group_id, pos, entry_rank from new_words where entry_rank is not null
             union all
             select main_group_id, new_pos, adj_entry_rank from adj_words) as a
@@ -415,6 +425,7 @@ drop view split_lemmas;
 drop table split_info;
 drop table to_split;
 
+drop table default_entry_rank;
 drop table adj_entry_ranks;
 drop table extra_scowl_data;
 

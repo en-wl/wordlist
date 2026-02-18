@@ -279513,19 +279513,19 @@
 
 85 [ukacd]: -nigger <v> (offensive-1): niggered, niggering, niggers
 
-85 [ukacd]: niggerdom
+85 [ukacd]: niggerdom (offensive-1)
 
-70 [moby]: niggerhead
+70 [moby]: niggerhead (offensive-1)
 
-85 [ukacd]: nigger-head
+85 [ukacd]: nigger-head (offensive-1)
 
-85 [ukacd]: niggerish
+85 [ukacd]: niggerish (offensive-1)
 
-85 [ukacd]: niggerism <n>: niggerisms
+85 [ukacd]: niggerism <n> (offensive-1): niggerisms
 
-85 [ukacd]: niggerling <n>: niggerlings
+85 [ukacd]: niggerling <n> (offensive-1): niggerlings
 
-85 [ukacd]: niggery
+85 [ukacd]: niggery (offensive-1)
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: niggle <n>: niggles
 

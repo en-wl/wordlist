@@ -1,5 +1,8 @@
 #:: merge [+] :adjust-pos
 
+# Issue #472
+60: AGI <n/abbr>: AGI's
+
 # Issue #417
 60: allistic <n>: allistics, allistic's
 
@@ -8,6 +11,9 @@
 
 # Issue #417
 60: AuDHD <abbr>
+
+# Issue #472
+60: ChatGPT <n/name>: ChatGPT's
 
 # Issue #445
 60: Coinbase <n/name>: Coinbase's
@@ -42,8 +48,14 @@
 
 50: gaslight <v>: (gaslighted | .: gaslit), gaslighting, gaslights
 
+# Issue #472
+60: GPT <n/abbr>: GPTs, GPT's
+
 # Issue #441
 50: influencer <n>: influencers, influencer's
+
+# Issue #472
+60: LLM <n/abbr>: LLMs, LLM's
 
 # Issue #439
 60: mansplain <v>: mansplained, mansplaining, mansplains

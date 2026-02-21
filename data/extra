@@ -12,6 +12,9 @@
 # Issue #339
 60 GB: Anthea <n/person>: Anthea's
 
+# Issue #472
+60: Anthropic <n/name>: Anthropic's
+
 # Issue #344
 60: Aotearoa <n/place>: Aotearoa's
 
@@ -208,6 +211,9 @@
 # Issue #322
 70: cytometry <n>: cytometries
 
+# Issue #472
+70: DALL-E <n/name>: DALL-E's
+
 # Issue #316
 70: darmstadtium <n>: darmstadtiums, darmstadtium's
 
@@ -235,6 +241,9 @@
 # Issue #450
 60: deduplication <n>: deduplications
 60: _V: de-duplication <n>: de-duplications
+
+# Issue #472
+60: DeepMind <n/name>: DeepMind's
 
 # Issue #474
 70: _: deferrable <aj>
@@ -309,6 +318,9 @@
 # Issue #265
 80: electropneumatics <n>
 
+# Issue #472
+70: embedding <n>: embeddings, embedding's
+
 # Issue #348
 60: empanada <n>: empanadas
 
@@ -370,6 +382,9 @@
 
 # Issue #454
 60: GBP <abbr>
+
+# Issue #472
+70: GenAI <n/abbr>: GenAI's
 
 # Issue #473
 70: geodata <n>
@@ -505,9 +520,15 @@
 60: _v: live stream <v>: live streamed, live streaming, live streams
 60: _V: live-stream <v>: live-streamed, live-streaming, live-streams
 
+# Issue #472
+70: LLMOps <abbr>
+
 # Issue #437
 60: _: LOL <abbr>
 60: _V: lol <abbr>
+
+# Issue #472
+70: LoRA <n/abbr>: LoRA's
 
 # Issue #436
 60: lowball <n>: lowballs
@@ -580,6 +601,9 @@
 # Issue #270
 70: microswitch <n>: microswitches
 
+# Issue #472
+70: Midjourney <n/name>: Midjourney's
+
 # Issue #413
 60: _: misclick <n>: misclicks
 60: _V: mis-click <n>: mis-clicks
@@ -588,8 +612,14 @@
 60: _: misclick <v>: misclicked, misclicking, misclicks
 60: _V: mis-click <v>: mis-clicked, mis-clicking, mis-clicks
 
+# Issue #472
+70: Mistral <n/name>: Mistral's
+
 # Issue #189
 60: mitzvah <n>: (mitzvot | _.: mitzvahs | _@: mitzvoth)
+
+# Issue #472
+70: MLOps <abbr>
 
 # Issue #321
 60: Moderna <n/name>: Moderna's
@@ -599,6 +629,9 @@
 
 # Issue #281
 70: mudstone <n>: mudstones
+
+# Issue #472
+60: multimodal <aj>
 
 # Issue #440
 60: multitask <v>: multitasked, multitasking, multitasks
@@ -622,6 +655,9 @@
 # Issue #395
 60: nitride <n>: nitrides
 
+# Issue #472
+60: NLP <n/abbr>: NLP's
+
 # Issue #454
 70: NOK <abbr>
 
@@ -640,6 +676,9 @@
 
 # Issue #321
 80: Nuvaxovid <n/name>: Nuvaxovid's
+
+# Issue #472
+60: Nvidia <n/name>: Nvidia's
 
 # Issue #454
 70: NZD <abbr>
@@ -663,6 +702,9 @@
 # Issue #445
 70: _: on-chain <aj>
 70: _v: onchain <aj>
+
+# Issue #472
+60: OpenAI <n/name>: OpenAI's
 
 # Issue #445
 70: OpenSea <n/name>: OpenSea's
@@ -720,8 +762,14 @@
 # Issue #281
 70: pterosaur <n>: pterosaurs
 
+# Issue #472
+70: PyTorch <n/name>: PyTorch's
+
 # Issue #321
 80: QazVac <n/name>: QazVac's
+
+# Issue #472
+70: RAG <n/abbr>: RAGs, RAG's
 
 # Issue #368
 60: ramen <n>
@@ -778,6 +826,9 @@
 
 # Issue #419
 60: rheumatology <n>
+
+# Issue #472
+70: RLHF <n/abbr>: RLHF's
 
 # Issue #316
 70: roentgenium <n>: roentgeniums, roentgenium's
@@ -840,6 +891,9 @@
 # Issue #316
 70: tennessine <n>: tennessines, tennessine's
 
+# Issue #472
+70: TensorFlow <n/name>: TensorFlow's
+
 # Issue #445
 70: testnet <n>: testnets
 
@@ -866,6 +920,10 @@
 # Issue #445
 60: A Z: tokenize <v>: tokenizes, tokenized, tokenizing
 60: B: tokenise <v>: tokenises, tokenised, tokenising
+
+# Issue #472
+70: A Z: tokenizer <n>: tokenizers, tokenizer's
+70: B: tokeniser <n>: tokenisers, tokeniser's
 
 # Issue #426
 70: toroid <n>: toroids, toroid's

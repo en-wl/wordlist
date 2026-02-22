@@ -1024,9 +1024,8 @@ class WordEntry(SlotsDataClass):
         if spellingsStr is None:
             if self.spellings:
                 parts.append(self.spellings.str())
-        else:
-            if spellingsStr != '':
-                parts.append(spellingsStr)
+        elif spellingsStr != '':
+            parts.append(spellingsStr)
         duplicate = '†' if self.duplicate else ''
         parts.append(f"{self.word}{self.entry_rank}{duplicate}")
         return ': '.join(parts)

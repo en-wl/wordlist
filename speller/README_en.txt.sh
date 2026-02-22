@@ -31,16 +31,24 @@ misspelled or invalid words; and (2) contain uncommon, yet valid, words that
 might cause problems as they are likely to be misspellings of more common
 words (for example, "ort" and "calender").
 
-The American, Canadian, and Australian dictionaries are considered the official
-version for Hunspell.  The British ones are considered an alternative version.
-The official ones are maintained by Marco A.G.Pinto at
+The American, Canadian, and Australian dictionaries are considered the
+official version for Hunspell.  The British ones are considered an 
+alternative version.  The official ones are maintained by Marco A.G.Pinto at
 https://proofingtoolgui.org.
 
 For additional information, including information on how to contribute, see
 https://wordlist.aspell.net/dicts/.
 
+IMPORTANT CHANGES INTRODUCED ON 2026-02-22:
 
-IMPORTANT CHANGES INTRODUCED In 2016.11.20:
+The Unicode "’" (U+2019) character was added to WORDCHARS so that Hunspell can
+recognize words with the apostrophe.  Based on testing, this should allow
+Hunspell to recognize both "can't" and "can’t".  The ASCII single quote at the
+end of the word won't be considered part of the word, but the Unicode
+character will.  This means "'color'" is okay, but "‘color’" will get flagged
+when Hunspell does the tokenization.
+
+IMPORTANT CHANGES INTRODUCED IN 2016.11.20:
 
 New Australian dictionaries thanks to the work of Benjamin Titze
 (btitze@protonmail.ch).

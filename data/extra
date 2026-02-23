@@ -817,6 +817,9 @@
 70: A C Z: revictimization <n>: revictimizations
 70: B D: revictimisation <n>: revictimisations
 
+# Issue #485
+60: rewild <v>: rewilded, rewilding, rewilds
+
 # Issue #382
 60: _: rewritable <aj>
 60: _V: rewriteable <aj>
@@ -960,6 +963,9 @@
 
 # Issue #266
 60: tunable <aj>
+
+# Issue #483
+60: unapplied <aj>
 
 # Issue #365
 70: unhewn <aj>

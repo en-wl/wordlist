@@ -21,6 +21,7 @@ mergeFiles = (
     'data/extra',
     'data/signature',
     'data/coca',
+    'data/coca_llm',
 )
 
 adjustFiles = (

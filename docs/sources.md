@@ -234,10 +234,28 @@ Populated places included at various levels, currently from three lists from
 
 #### [coca]
 
-Manually revised, high frequency words found in the Corpus of Contemporary
+Hand-chosen, high-frequency lemmas found in the Corpus of Contemporary
 American English (COCA).  This data comes from frequency lists generated from
-3-gram data purchased in 2011 and within the terms of the NDA signed.
+3-gram data purchased in 2011 and is within the terms of the NDA signed.
 <https://www.english-corpora.org/coca/>.
+
+#### [coca-llm]
+
+Lemmas found in the Corpus of Contemporary American English (COCA).  These
+words come from the same frequency lists as those with the `[coca]` tag.
+However, all lemmas with a frequency of at least 0.05 words per million (wpm)
+were considered with the help of LLMs.
+
+More specifically, several LLMs were asked to evaluate the lemmas using a
+prompt similar to the one used to evaluate GitHub issues.  Lemmas were
+considered if a majority of the LLMs agreed that the lemma belonged in the 60
+size level.  Of those considered, lemmas already present in SCOWL at the 70
+level were promoted after applying additional filters.  Lemmas from the 80
+level were also promoted to the 60 level if the frequency was at least 0.2
+wpm.
+
+Note that the frequency count is the combined frequency for all possible
+inflections of the lemma for a given part-of-speech.
 
 ## Other sources
 

@@ -29,6 +29,8 @@
 
 60: anabolic <aj>
 
+60: animatronic <aj>
+
 60: anthropogenic <aj>
 
 60: antiauthoritarian <aj>
@@ -59,6 +61,8 @@
 60: arcana <n>
 
 60: archrival <n>: archrivals
+
+60: archrival <aj>
 
 60: armoire <n>: armoires, armoire's
 
@@ -101,6 +105,8 @@
 
 60: backlight <n>: backlights
 
+60: backlit <aj>
+
 60: backsplash <n>: backsplashes
 
 60: backstab <v>: backstabbed, backstabbing, backstabs
@@ -116,6 +122,8 @@
 60: bald-headed <aj>
 
 60: baller <n>: ballers
+
+60: bandmate <n>: bandmates
 
 60: bartend <v>: bartended, bartending, bartends
 
@@ -173,6 +181,8 @@
 
 60: biodiesel <n>
 
+60: bioengineered <aj>
+
 60: biofuel <n>: biofuels
 
 60: biohazard <n>: biohazards
@@ -187,7 +197,11 @@
 
 60: biometrics <n>
 
+60: bioterrorist <n>
+
 60: biotic <aj>
+
+60: bioweapon <n>: bioweapons
 
 60: birdcall <n>: birdcalls
 
@@ -218,6 +232,8 @@
 60: bluesman <n>: bluesmen
 
 60: bobber <n>: bobbers
+
+60: bobblehead <n>: bobbleheads
 
 60: boing <n>: boings
 
@@ -267,11 +283,16 @@
 
 60: cantina <n>: cantinas
 
+60: _: captcha <n>: captchas
+60: _v: CAPTCHA <n>: CAPTCHAs
+
 60: carabiner <n>: carabiners
 
 60: carbonara <n>
 
 60: caretaking <n>
+
+60: carnitas <n>
 
 60: carpaccio <n>: carpaccios
 
@@ -296,6 +317,8 @@
 60: chador <n>: chadors
 
 60: chai <n>
+
+60: chairback <n>: chairbacks
 
 60: chakra <n>: chakras
 
@@ -340,6 +363,8 @@
 60: cityscape <n>: cityscapes
 
 60: clamshell <n>: clamshells
+
+60: cliffside <n>: cliffsides
 
 60: closer <n>: closers, closer's
 
@@ -418,6 +443,8 @@
 
 60: crosshair <n>: crosshairs
 
+60: crostini <n>: crostini
+
 60: crustless <aj>
 
 60: crypto <n>
@@ -432,7 +459,15 @@
 
 60: curveball <n>: curveballs
 
+60: customizable <aj>
+
+60: cyberattack <n>: cyberattacks
+
 60: cybercrime <n>
+
+60: cybersecurity <n>
+
+60: cyberterrorism <n>
 
 60: daikon <n>
 
@@ -440,15 +475,21 @@
 
 60: darkish <aj>
 
+60: darndest <aj>
+
 60: daylily <n>: daylilies
 
 60: daypack <n>: daypacks
+
+60: daytripper <n>: daytrippers
 
 60: deadlift <n>: deadlifts
 
 60: dealmaker <n>: dealmakers
 
 60: dealmaking <n>
+
+60: dealmaking <aj>
 
 60: debugger <n>: debuggers
 
@@ -488,6 +529,8 @@
 
 60: disempower <v>: disempowered, disempowering, disempowers
 
+60: dishwashing <aj>
+
 60: disinvite <v>: disinvited, disinviting, disinvites
 
 60: disruptor <n>: disruptors
@@ -516,6 +559,8 @@
 
 60: drawdown <n>: drawdowns
 
+60: dreadlocked <aj>
+
 60: dreamscape <n>: dreamscapes
 
 60: dreidel <n>: dreidels
@@ -535,6 +580,8 @@
 60: duffle <n>: duffles
 
 60: dumb <v>: dumbed, dumbing, dumbs
+
+60: dumbass <n>
 
 60: durian <n>: durians
 
@@ -600,6 +647,8 @@
 
 60: favela <n>: favelas
 
+60: fearmongering <n>
+
 60: feistiness <n>
 
 60: feminization <n>
@@ -608,6 +657,8 @@
 
 60: fetishize <v>: fetishized, fetishizing, fetishizes
 
+60: fibromyalgia <n>
+
 60: filmgoer <n>: filmgoers
 
 60: filmmaking <n>
@@ -615,6 +666,8 @@
 60: filmography <n>: filmographies
 
 60: fingerless <aj>
+
+60: firepit <n>
 
 60: fishlike <aj>
 
@@ -633,6 +686,10 @@
 60: folate <n>
 
 60: foldable <aj>
+
+60: fortysomething <aj>
+
+60: frameless <aj>
 
 60: frictionless <aj>
 
@@ -655,6 +712,8 @@
 60: gatekeeping <aj>
 
 60: gawker <n>: gawkers
+
+60: gearhead <n>: gearheads
 
 60: gelato <n>
 
@@ -710,6 +769,8 @@
 
 60: handprint <n>: handprints
 
+60: handwashing <n>
+
 60: harissa <n>
 
 60: Hasidic <aj>
@@ -734,9 +795,15 @@
 
 60: highflier <n>: highfliers
 
+60: hitmaker <n>: hitmakers
+
 60: hobbit <n>: hobbits
 
+60: hoisin <wp>
+
 60: hollandaise <n>
+
+60: holodeck <n>: holodecks
 
 60: homebound <aj>
 
@@ -770,6 +837,8 @@
 
 60: hydropower <n>
 
+60: hypersonic <aj>
+
 60: hyperspace <n>
 
 60: icemaker <n>: icemakers
@@ -787,6 +856,8 @@
 60: improv <v>
 
 60: incentivize <v>: incentivized, incentivizing, incentivizes
+
+60: inclusivity <n>
 
 60: incongruent <aj>
 
@@ -812,6 +883,8 @@
 
 60: ironworker <n>: ironworkers
 
+60: jackalope <n>: jackalopes
+
 60: jackfruit <n>
 
 60: jammer <n>: jammers
@@ -819,6 +892,10 @@
 60: jammies <n>
 
 60: jicama <n>
+
+60: jihadi <n>: jihadis
+
+60: jihadi <aj>
 
 60: jillion <n>: jillions
 
@@ -830,9 +907,13 @@
 
 60: jokester <n>: jokesters
 
+60: journaling <n>
+
 60: juju <n>: jujus
 
 60: juke <v>: juked, juking, jukes
+
+60: juried <aj>
 
 60: kahuna <n>
 
@@ -843,6 +924,8 @@
 60: kendo <n>
 
 60: ketamine <n>
+
+60: keychain <n>: keychains
 
 60: keyless <aj>
 
@@ -855,6 +938,8 @@
 60: klezmer <n>
 
 60: knuckleball <n>
+
+60: kryptonite <n>
 
 60: lakeshore <n>: lakeshores
 
@@ -888,6 +973,8 @@
 
 60: life form <n>: life forms
 
+60: lightsaber <n>: lightsabers
+
 60: liminal <aj>
 
 60: loch <n>: lochs, loch's
@@ -895,6 +982,8 @@
 60: lockbox <n>: lockboxes
 
 60: lockdown <n>: lockdowns
+
+60: lovestruck <aj>
 
 60: lowball <n>
 
@@ -954,11 +1043,15 @@
 
 60: metrics <n>
 
+60: metrosexual <aj>
+
 60: microbrew <n>: microbrews
 
 60: microclimate <n>: microclimates
 
 60: microgram <n>: micrograms
+
+60: middleware <n>
 
 60: midlevel <n>
 
@@ -984,13 +1077,19 @@
 
 60: mistranslation <n>: mistranslations
 
+60: mixtape <n>: mixtapes
+
 60: Moderna <n>
 
 60: modus <n>: modi
 
+60: mojito <n>: mojitos
+
 60: mojo <n>
 
 60: moldable <aj>
+
+60: monkeypox <n>
 
 60: monoculture <n>: monocultures
 
@@ -1000,15 +1099,21 @@
 
 60: moonrise <n>
 
+60: motorsport <n>: motorsports
+
 60: moviegoing <n>
 
 60: moviemaker <n>: moviemakers
 
 60: moviemaking <n>
 
+60: moviemaking <aj>
+
 60: mudflow <n>: mudflows
 
 60: mudhole <n>: mudholes
+
+60: multibillion <aj>
 
 60: multiculturalist <n>: multiculturalists
 
@@ -1022,7 +1127,13 @@
 
 60: multitalented <aj>
 
+60: multitasker <n>: multitaskers
+
+60: museumgoers <n>
+
 60: nanobot <n>: nanobots
+
+60: nanotech <n>: nanotech's
 
 60: naptime <n>: naptimes
 
@@ -1071,6 +1182,8 @@
 
 60: nonconsensual <aj>
 
+60: nondisabled <aj>
+
 60: nonfinancial <aj>
 
 60: nonindigenous <aj>
@@ -1079,15 +1192,21 @@
 
 60: nonmonogamous <aj>
 
+60: nonrecyclable <aj>
+
 60: nontrivial <aj>
 
 60: nori <n>: noris
+
+60: norovirus <n>
 
 60: numbingly <av>
 
 60: offside <n>
 
 60: old style <n>
+
+60: onesie <n>: onesies
 
 60: oolong <n>
 
@@ -1096,6 +1215,8 @@
 60: orca <n>: orcas
 
 60: orthogonal <aj>
+
+60: othering <n>
 
 60: outcompete <v>
 
@@ -1135,6 +1256,8 @@
 
 60: panini <n>
 
+60: panko <n>
+
 60: partygoer <n>: partygoers
 
 60: pashmina <n>: pashminas
@@ -1152,6 +1275,10 @@
 60: perp <n>: perps
 
 60: personalization <n>
+
+60: pharma <n>
+
+60: phaser <n>: phasers
 
 60: photorealistic <aj>
 
@@ -1181,6 +1308,8 @@
 
 60: poblano <n>: poblanos
 
+60: polyamorous <aj>
+
 60: ponytailed <aj>
 
 60: portabella <n>: portabellas
@@ -1201,15 +1330,27 @@
 
 60: praxis <n>
 
+60: preapproved <aj>
+
 60: preassembled <aj>
 
 60: prebiotic <aj>
 
+60: predefined <aj>
+
 60: preindustrial <aj>
+
+60: preloaded <aj>
 
 60: premade <aj>
 
+60: preplanned <aj>
+
+60: preprogrammed <aj>
+
 60: pressroom <n>
+
+60: prewashed <aj>
 
 60: printmaker <n>: printmakers
 
@@ -1221,8 +1362,6 @@
 
 60: prototype <v>: prototyped, prototyping, prototypes
 
-60: prototyping <n>
-
 60: pseudoscientific <aj>
 
 60: publishable <aj>
@@ -1231,6 +1370,8 @@
 
 60: pushback <n>
 
+60: puttanesca <n>
+
 60: puzzlingly <av>
 
 60: quant <n>: quants
@@ -1238,6 +1379,8 @@
 60: quarterfinalist <n>: quarterfinalists
 
 60: qubit <n>: qubits
+
+60: racialized <aj>
 
 60: railcar <n>: railcars
 
@@ -1281,6 +1424,8 @@
 
 60: reframe <v>: reframed, reframing, reframes
 
+60: refried <aj>
+
 60: regional <n>: regionals
 
 60: rehydrate <v>: rehydrated, rehydrating, rehydrates
@@ -1290,6 +1435,8 @@
 60: remodeler <n>: remodelers
 
 60: reoffend <v>
+
+60: replicant <n>: replicants
 
 60: repo <n>: repos
 
@@ -1304,6 +1451,8 @@
 60: retinol <n>: retinols
 
 60: retitle <v>: retitled, retitling, retitles
+
+60: rewilding <n>
 
 60: ribeye <n>: ribeyes
 
@@ -1328,6 +1477,8 @@
 60: rotational <aj>
 
 60: roti <n>: rotis
+
+60: rotini <n>
 
 60: sanitization <n>
 
@@ -1385,6 +1536,8 @@
 
 60: slugfest <n>: slugfests
 
+60: smackdown <n>
+
 60: snigger <v>: sniggered, sniggering, sniggers
 
 60: snow-capped <aj>
@@ -1418,6 +1571,8 @@
 
 60: stereotypically <av>
 
+60: stevia <n>
+
 60: stimulator <n>: stimulators
 
 60: storyline <n>: storylines
@@ -1446,6 +1601,8 @@
 
 60: subwoofer <n>: subwoofers
 
+60: sucralose <n>
+
 60: sunlike <aj>
 
 60: sunroom <n>: sunrooms
@@ -1459,6 +1616,8 @@
 60: superfood <n>: superfoods
 
 60: supergroup <n>
+
+60: superheated <aj>
 
 60: supermajority <n>: supermajorities
 
@@ -1479,6 +1638,8 @@
 60: _: tamperproof <aj>
 60: _~: tamper-proof <aj>
 
+60: tankini <n>: tankini
+
 60: taqueria <n>: taquerias
 
 60: tartlet <n>: tartlets
@@ -1495,6 +1656,10 @@
 
 60: telemedicine <n>
 
+60: telenovela <n>: telenovelas
+
+60: telework <n>
+
 60: tempeh <n>
 
 60: terraform <v>: terraformed, terraforming, terraforms
@@ -1504,6 +1669,8 @@
 60: testable <aj>
 
 60: thirtysomething <n>: thirtysomethings
+
+60: thirtysomething <aj>
 
 60: thornbush <n>: thornbushes
 
@@ -1532,6 +1699,8 @@
 
 60: townhome <n>: townhomes
 
+60: toymaker <n>: toymakers
+
 60: tradable <aj>
 
 60: trade show <n>
@@ -1546,9 +1715,13 @@
 
 60: trippy <aj>
 
+60: troublemaking <aj>
+
 60: tweeze <v>: tweezed, tweezing, tweezes
 
 60: tweezer <n>
+
+60: twentysomething <aj>
 
 60: udon <n>
 
@@ -1582,11 +1755,15 @@
 
 60: undeliverable <aj>
 
+60: undercooked <aj>
+
 60: undercount <v>: undercounted, undercounting, undercounts
 
 60: underdressed <aj>
 
 60: underfunding <n>
+
+60: underinsured <aj>
 
 60: underperform <v>: underperformed, underperforming, underperforms
 
@@ -1595,6 +1772,8 @@
 60: underpowered <aj>
 
 60: underprepared <aj>
+
+60: underpriced <aj>
 
 60: underqualified <aj>
 
@@ -1616,11 +1795,15 @@
 
 60: unexploded <aj>
 
+60: unfixable <aj>
+
 60: unfussy <aj>
 
 60: unglamorous <aj>
 
 60: unmanaged <aj>
+
+60: unmoored <aj>
 
 60: unranked <aj>
 
@@ -1641,6 +1824,8 @@
 60: unsubsidized <aj>
 
 60: unsubtle <aj>
+
+60: unsupportive <aj>
 
 60: unsurprised <aj>
 
@@ -1705,6 +1890,8 @@
 
 60: waypoint <n>: waypoints
 
+60: weaponization <n>
+
 60: wheatgrass <n>
 
 60: whoopie <n>
@@ -1717,19 +1904,29 @@
 
 60: winemaking <n>
 
+60: winemaking <aj>
+
 60: wingman <n>: wingmen
 
 60: winless <aj>
+
+60: wirelessly <av>
 
 60: wiseass <n>
 
 60: witchy <aj>
 
+60: woodshop <n>
+
 60: workaholism <n>
 
 60: workaround <n>: workarounds
 
+60: workgroup <n>: workgroups
+
 60: wormlike <aj>
+
+60: yada <wp>
 
 60: yakuza <n>
 

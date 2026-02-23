@@ -252,6 +252,7 @@ considered if a majority of the LLMs agreed that the lemma belonged in the 60
 size level.  Of those considered, lemmas already present in SCOWL at the 70
 level were promoted after applying additional filters.  Lemmas from the 80
 level were also promoted to the 60 level if the frequency was around 0.1 wpm.
+The rest were manually reviewed for addition.
 
 Note that the frequency count is the combined frequency for all possible
 inflections of the lemma for a given part-of-speech.

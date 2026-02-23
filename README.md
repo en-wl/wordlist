@@ -315,6 +315,8 @@ fact they are from an alternative source provides useful information.
 
 Words from a few special lists are also tagged.
 
+For a complete list of tags see [docs/sources.md](docs/sources.md).
+
 #### LEMMA
 
 The LEMMA is the base form of the word.
@@ -478,10 +480,32 @@ The DEFN-NOTE is used to distinguish two different senses of the same lemma.
 
 #### USAGE-NOTE
 
-The USAGE-NOTE is used to mark offensive, vulgar, slang, informal, non-standard
-and other similar words.  At the moment the marking of offensive, vulgar only
-really covers the worst offenders and the marking of non-standard and similar
-words is very incomplete.
+The USAGE-NOTE is used to mark offensive, vulgar, slang, informal,
+non-standard, and other similar words.  At the moment the marking of offensive,
+vulgar words only covers the worst offenders and the marking of non-standard
+and similar words is very incomplete.
+
+The current usage notes for offensive and vulgar words are:
+
+  * `offensive-1`: extremely offensive racial slurs which
+    should generally not be used
+  * `offensive-2`: offensive racial slurs which should, also, in general,
+     not be used but don't have the stigma in modern society as those in
+     `offensive-1`
+  * `vulgar-1`: vulgar or swear words which should generally not be said
+    around children
+  * `vulgar-3`: words which are considered vulgar, offensive, or taboo by some
+    dictionaries, but are not nearly as strong as those in `vulgar-1`,
+    and generally not considered swear words today.
+
+`offensive|vulgar-1|2` are marked as NOSUGGEST in Hunspell dictionaries to
+keep them from being suggested when a word is misspelled.
+
+The other usage notes in use are:
+
+  * `colloquial`
+  * `informal`
+  * `nonstandard`
 
 #### SPELLING and REGION
 
@@ -684,13 +708,11 @@ default, if there is a match then the new information will take precedence as
 long as it doesn't create inconsistencies.  If `:skip-on-variant-conflict` is
 given than the existing variant information will take precedence.
 
-By default, if more than one existing group matches, then the two groups will
-be merged as long as it doesn't create inconsistencies.  Existing group
-comments are assumed to relate to variant information and will be removed if
-new variant information is provided for all lemma forms within the group.
+If `:replace-on-conflict` is given than any matching groups will be replaced
+instead of trying to merge the information.  Use this flag with caution.
 
-If `:replace-on-conflict` is given than the entire group will be replaced with
-the new information.  Use this flag with caution.
+If more than one existing group matches, then the two groups will be merged as
+long as it doesn't create inconsistencies.
 
 If any inconsistencies are found the merge will be aborted.
 
@@ -912,9 +934,8 @@ Compatibility with SCOWLv1
 
 SCOWLv2 is a complete overhaul of SCOWL and nearly everything changed.
 However, there is limited backward compatibility support via the `mk-list`
-script.  If you used `mk-list` in SCOWLv1 it should still produce the same
-results, but please sanity check the output by comparing the results to the
-the last version of SCOWLv1.  If you created word lists by combining files in
+script.  If you used `mk-list` in SCOWLv1, it will produce the same
+results.  If you created word lists by combining files in
 the `final/` directory your scripts will need to be rewritten.  Please use the
 `word-list` command of the `scowl` script to get the word lists you want.
 
@@ -928,6 +949,5 @@ Creating Hunspell and Aspell Dictionaries
 -----------------------------------------
 
 The `speller/` directory of SCOWLv1 has been ported over.  Creating the Aspell
-and Hunspell dictionaries should work the same as it did with SCOWLv1, but
-again please sanity check the results.  Official dictionaries will continue to
-be created.
+and Hunspell dictionaries should work the same as it did with SCOWLv1.
+

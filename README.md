@@ -34,7 +34,7 @@ corrections for improper handling of derived forms or variants in SCOWLv1.
 The handling of possessive forms has been completely redone based partly on
 the noun category assigned by WordNet.  For American English any new changes
 to non-possessive forms of words included in speller dictionary have been
-accounted for and noted in the file `misc/comp-60.txt`.
+accounted for and noted in the file [`docs/comp-60.txt`](docs/comp-60.txt).
 
 SCOWLv2 is generated from the same sources that SCOWLv1 uses but via a far
 more complicated, and unreleased, process.  The results of this process are in

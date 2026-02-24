@@ -291,7 +291,7 @@ A GROUP represents one sense of a word.  Groups are separated by empty lines.
 
 #### SIZE
 
-SIZE is the SCOWL size with larger numbers meaning less common words.
+SIZE is the SCOWL size, with larger numbers meaning less common words.
 The sizes have the following approximate meanings:
 
     35: small
@@ -300,6 +300,22 @@ The sizes have the following approximate meanings:
     70: large (size used for large spell checking dictionary)
     80: a valid word in current usage
     85: a valid word
+
+Size 35 is the recommended small size, 50 the medium and 70 the large.  Sizes
+70 and below contain words found in most dictionaries, while size 80
+contains all the strange and unusual words people like to use in word games
+such as Scrabble (TM).  While a lot of the words in size 80 are not used
+very often, they are all generally considered valid words in the English
+language.  Words in the 85 size are also considered valid, but may no longer
+be used in modern English.
+
+For spell checking I recommend using size 60.  This size is the largest size
+that I am fairly confident does not contain any misspellings or invalid words.
+In addition, an effort is made to exclude valid yet problematic words (such as
+"calender") from the 60 size that are likely to be a misspelling of a more
+common word.  The 70 size is reasonable for those wanting a larger list, and
+don't mind a few errors.  The 80 or larger sizes are not reasonable for spell
+checking.
 
 #### TAG
 

@@ -4,12 +4,14 @@ $GIT_VER
 Original Word List By:
   Kevin Atkinson <kevina at gnu org>
 Copyright Terms: Copyrighted (see the file Copyright for the exact terms)
-Wordlist URL: http://wordlist.aspell.net/
+Wordlist URL: https://wordlist.aspell.net/
 
-Created with http://app.aspell.net/create with the following paramaters:
+Created with https://app.aspell.net/create with the following paramaters:
 `cat "$PARMS_FILE"`
 
-This is a Custom English dictionary for Aspell.  It requires Aspell 
+EOF
+cat <<'EOF'
+This is a custom English dictionary for Aspell.  It requires Aspell
 version 0.60 or better.
 
 If Aspell is installed and aspell and prezip-bin are all
@@ -26,10 +28,9 @@ Which should output something like:
 if it did not something likely went wrong.
 
 As this is a custom dictionary it is meant to coexist with the
-existing English dictionary.  If the configure script detects 
-
-and as such the language data files will
-not be installed unless the configure script detectes
+existing English dictionary.  If the configure script detects that
+the English dictionary is already installed the language data files
+will not be installed.
 
 After that build the package with:
   make

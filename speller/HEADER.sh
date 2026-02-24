@@ -2,15 +2,15 @@ println() {
     echo "$PREFIX$1"
 }
 
-if [ "$SCOWL_VERSION" ] && [ -e $SCOWL/../.git ] > /dev/null; then
+if [ "$SCOWL_VERSION" ] && [ -e $SCOWL/.git ] > /dev/null; then
   println "Version $SCOWL_VERSION"
-  println "`git -C $SCOWL/speller log --pretty=format:'%cd [%h]' -n 1 -- .. `"
+  println "`git -C $SCOWL log --pretty=format:'%cd [%h]' -n 1 -- . `"
   println
-elif [ -e $SCOWL/../.git ] > /dev/null; then
-  println "`git -C $SCOWL/speller log --pretty=format:'%cd [%h]' -n 1 -- .. `"
+elif [ -e $SCOWL/.git ] > /dev/null; then
+  println "`git -C $SCOWL log --pretty=format:'%cd [%h]' -n 1 -- . `"
   println
-elif [ -e $SCOWL/VERSION ]; then
-  println "Generated from SCOWL Version `cat $SCOWL/VERSION`"
+elif [ "$SCOWL_VERSION" ]; then
+  println "Generated from SCOWL Version $SCOWL_VERSION"
   println "`date`"
   println
 else

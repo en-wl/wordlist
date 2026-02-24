@@ -1,3 +1,6 @@
+SHELL := /bin/bash
+
+.PHONY: all aspell hunspell clean dist-clean
 
 all: 
 	@echo "Please use hunspell or aspell as target"
@@ -13,11 +16,14 @@ aspell: .aspell
 hunspell: .hunspell
 
 clean: to-clean
-	rm -rf hunspell/ *.zip
-	cat to-clean | xargs rm -f
+	(shopt -s nullglob; echo $$(cat to-clean); rm -f $$(cat to-clean))
+
+dist-clean: clean
+	rm -rf hunspell/
+	rm -f aspell6-en-*.tar.bz2
 
 to-clean: .gitignore
-	echo `cat .gitignore | grep -v '^#'` | tr ' ' '\n' | grep -v hunspell/ | grep -v \.zip > to-clean
+	sed -e '/^#/d' -e 's/^\///' -e '/^hunspell\//d' -e '/^aspell6-en/d'  .gitignore > to-clean
 
 %: %.cc
 	g++ -O $*.cc -o $*

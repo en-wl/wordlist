@@ -1,6 +1,10 @@
 : ${SCOWL:=..}
 
-echo "$1 Hunspell Dictionary"
+if [ "$1" = "" ]; then
+    echo "English Hunspell Dictionaries"
+else
+    echo "$1 Hunspell Dictionary"
+fi
 sh "$SCOWL/speller/HEADER.sh"
 
 cat <<EOF
@@ -74,9 +78,9 @@ are not really considered swear words in today's society.
 
 COPYRIGHT, SOURCES, and CREDITS:
 
-The English dictionaries come directly from SCOWL size $LEVEL
-and is thus under the same copyright of SCOWL.  The affix file is
-a heavily modified version of the original english.aff file which was
+The English dictionaries come directly from SCOWL and is thus under
+the same copyright terms as SCOWL.  The affix file is a heavily
+modified version of the original english.aff file, which was
 released as part of Geoff Kuenning's Ispell and as such is covered by
 his BSD license.
 

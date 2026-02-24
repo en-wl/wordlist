@@ -20,11 +20,9 @@ else
   SCOWL_VERSION=unknown
 fi
 export SCOWL_VERSION
+export SCOWL=..
 
 mk-list() { ../mk-list -d ../scowl.db "$@"; }
-
-# may be slightly faster
-#mk-list() { ../mk-list -f -d final "$@" | (cd final; xargs cat) | sort -u; }
 
 echo base
 
@@ -89,7 +87,17 @@ rm -f *.wl.* *.twl *.wl{0,1} *.vwl
 cp -p *.wl aspell/
 #cp -p ../README aspell/doc/SCOWL-README
 sh aspell/info.sh > aspell/info
-sh aspell/Copyright.sh > aspell/Copyright
-#cat ../Copyright >> aspell/Copyright
+cat <<EOF > aspell/Copyright
+The English dictionary for Aspell comes directly from SCOWL (up to level 60,
+using the speller/make-aspell-dict script, https://wordlist.aspell.net/) and
+is thus under the same copyright terms as SCOWL.  The affix file is based on
+the Ispell one, which is under the same copyright terms as Ispell.
 
-
+EOF
+sh ./Copyright.sh >> aspell/Copyright
+cd aspell/
+echo "tarball"
+./proc
+./configure > config.log
+make dist > build.log 2>&1
+mv aspell6-en-"$SCOWL_VERSION"-0.tar.bz2 ..

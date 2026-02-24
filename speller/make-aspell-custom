@@ -12,11 +12,16 @@ cp -a $SCOWL/speller/aspell-custom aspell6-en-custom
 cd aspell6-en-custom
 . README.in.sh > README
 rm README.in.sh
-sh $SCOWL/speller/Copyright.sh > Copyright
+cat <<EOF > Copyright
+The custom English dictionary for Aspell comes directly from SCOWL and is thus
+under the same copyright terms as SCOWL.  The affix file is based on the
+Ispell one, which is under the same copyright terms as Ispell.
+
+EOF
+sh $SCOWL/speller/Copyright.sh >> Copyright
 mkdir lang
 cp -a $SCOWL/speller/aspell/{en.dat,en_affix.dat,en_phonet.dat} lang/
 mkdir doc
-cp -a $SCOWL/README.md doc/SCOWL-README.md
 
 cat > en-custom.wl
 

@@ -12,10 +12,9 @@ version $SCOWL_VERSION-0
 source-version $SCOWL_VERSION
 complete true
 accurate true
-url http://wordlist.aspell.net/
-#doc-encoding iso-8859-1
+url https://wordlist.aspell.net/
 alt-encoding iso-8859-1 iso
-readme-extra extra.txt iso-8859-1
+readme-extra extra.txt utf-8
 
 alias en_US american
 alias en_GB british

@@ -3,6 +3,7 @@
 ASPELL=aspell
 HUNSPELL=hunspell
 : ${SCOWL:=..}
+export SCOWL
 SPELLER="$SCOWL/speller"
 : ${UNIX2DOS:=unix2dos}
 SQLITE=sqlite3
@@ -21,8 +22,8 @@ mk-list() { $SCOWL/mk-list -d $SCOWL/scowl.db "$@"; }
 prep() {
   echo prep
 
-  $SQLITE -init /dev/null -readonly $SCOWL/scowl.db \
-    "select distinct word from groups cross join words using(group_id) where usage_note in ('offensive-1', 'offensive-2', 'vulgar-1', 'vulgur-2') order by word" > nosug
+  $SQLITE -init /dev/null -batch -readonly $SCOWL/scowl.db \
+    "select distinct word from groups cross join words using(group_id) where usage_note in ('offensive-1', 'offensive-2', 'vulgar-1', 'vulgur-2') order by word" > nosug 
 }
 
 doit() {
@@ -63,7 +64,7 @@ doit() {
   fi
 
   rm -f hunspell-$fn.zip
-  zip -9 hunspell-$fn.zip README_$1.txt $1.dic $1.aff
+  zip -q -9 hunspell-$fn.zip README_$1.txt $1.dic $1.aff
 
   if [ -z "$3" ]; then
     mkdir -p hunspell
@@ -80,7 +81,7 @@ doit() {
 This zip file contains the words found in the corresponding Hunspell
 dictionary.  See the file README_$1.txt.
 EOF
-    zip -9 hunspell/wordlist-$fn.zip README.txt README_$1.txt $1.txt
+    zip -q -9 hunspell/wordlist-$fn.zip README.txt README_$1.txt $1.txt
   fi
 }
 

@@ -1,7 +1,7 @@
 sed -n '/^===/q;p' $SCOWL/Copyright
 sed -n '/^=== AU$/,/^===/{/^===/d;p}' $SCOWL/Copyright | sed '1{/^$/d}'
 
-cat <<EOF
+cat <<'EOF'
 Affix file Copyright:
 
   Copyright 1993, Geoff Kuenning, Granada Hills, CA

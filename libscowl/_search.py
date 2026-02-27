@@ -91,6 +91,14 @@ def queryString(
         for p in poses:
             raise ValueError(p)
         if basePoses:
+            if 'n_v' in basePoses:
+                basePoses |= {'n', 'v'}
+            elif 'n' in basePoses or 'v' in basePoses:
+                basePoses.add('n_v')
+            if 'aj_av' in basePoses:
+                basePoses |= {'aj', 'av'}
+            elif 'aj' in basePoses or 'av' in basePoses:
+                basePoses.add('aj_av')
             addSetQueryClause('base_pos', lambda _: True, None, basePoses)
         if wordPoses:
             addSetQueryClause('pos', lambda _: True, None, wordPoses)

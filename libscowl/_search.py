@@ -344,3 +344,35 @@ def filterDB(orig, new, filterType, **args):
 
     conn.executescript((_dir / 'post.sql').read_text())
     return conn
+
+def searchDB(conn, words, byCluster, exact = False, **args):
+    queryArgs = {p.name: args.pop(p.name, p.default) for p in signature(queryString).parameters.values()}
+    whereClause = queryString(**queryArgs).where
+
+    conn.execute("create temp table filtered (word_id integer primary key, group_id integer not null)")
+    if exact:
+        for w in words:
+            conn.execute("insert or ignore into filtered select word_id, group_id from words where word = ?", (w,))
+    else:
+        for w in words:
+            w = clusterKey(w).decode('ascii')
+            conn.execute("insert or ignore into filtered select word_id, group_id from words join fuzzy using (word) where word_key = ?", (w,))
+
+    conn.execute("create temp table group_id_filter (group_id integer not null)")
+    if whereClause == 'where true':
+        conn.execute("insert or ignore into group_id_filter select group_id from filtered")
+    else:
+        print(whereClause, file=sys.stderr)
+        conn.execute("analyze filtered")
+        conn.execute(f"insert or ignore into group_id_filter select group_id from filtered join scowl_ using (group_id, word_id) {whereClause}")
+    conn.execute("drop table filtered")
+    conn.execute("analyze group_id_filter")
+
+    if byCluster:
+        conn.execute("insert or ignore into group_id_filter "
+                     "select b.group_id from group_id_filter join cluster_map a using (group_id) join cluster_map b using (cluster_id)")
+        conn.execute("analyze group_id_filter")
+
+    clusters = importFromDB(conn, filterTable = "group_id_filter")
+    conn.execute("drop table group_id_filter")
+    return clusters

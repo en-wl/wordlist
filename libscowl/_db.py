@@ -197,24 +197,6 @@ def _importFromDB(conn, filterTable, filterQuery):
 
     return (groups.values(), clusterComments)
 
-def searchDB(conn, words, byCluster, exact = False):
-    conn.execute("create temp table group_id_filter (group_id integer primary key)")
-    if exact:
-        for w in words:
-            conn.execute("insert or ignore into group_id_filter select group_id from words where word = ?", (w,))
-    else:
-        for w in words:
-            w = clusterKey(w).decode('ascii')
-            conn.execute("insert or ignore into group_id_filter select group_id from words join fuzzy using (word) where word_key = ?", (w,))
-    conn.execute("analyze group_id_filter")
-    if byCluster:
-        conn.execute("insert or ignore into group_id_filter "
-                     "select b.group_id from group_id_filter join cluster_map a using (group_id) join cluster_map b using (cluster_id)")
-        conn.execute("analyze group_id_filter")
-    clusters = importFromDB(conn, filterTable = "group_id_filter")
-    conn.execute("drop table group_id_filter")
-    return clusters
-
 class BasicGroupInfo(SlotsDataClass):
     __slots__ = ('lemmas', 'group_id')
     def __init__(self, lemmas, group_id):

@@ -39,8 +39,14 @@ def exportDB(args):
 
 def searchDB(args):
     conn = libscowl.openDB(args.db)
-    kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'func')}
-    clusters = libscowl.searchDB(conn, **kwargs)
+    kwargs = {k: v for k,v in args.__dict__.items() if k not in ('db', 'func', 'words', 'stdin')}
+    words = getattr(args, 'words', [])
+    if args.stdin:
+        for line in sys.stdin:
+            line = line.strip()
+            if not line: continue
+            words.append(line)
+    clusters = libscowl.searchDB(conn, words=words, **kwargs)
     libscowl.exportAsText(clusters, conn, sys.stdout,
                           showExtraInfo = False,
                           showClusters = kwargs.get('byCluster', False))
@@ -255,9 +261,10 @@ p.set_defaults(func=searchDB)
 addDbArgument(p)
 p.add_argument('--by-cluster', action='store_true', default=False, dest='byCluster')
 p.add_argument('--exact', action='store_true', default=False)
-p.add_argument('words', nargs='+', metavar='<word>',
+addQueryArguments(p, usePositional = False)
+p.add_argument('--stdin', action='store_true', default=False)
+p.add_argument('words', nargs='*', metavar='<word>',
                help="word to search for")
-
 
 p = addParser('filter',
               help='filter database')

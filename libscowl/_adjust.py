@@ -311,7 +311,8 @@ def adjustEntries(conn, f = None, *,
                     if wordsStr:
                         gi.haveDerived = True
                     Line.procWords(li.spellings.keys() if li.spellings else '*',
-                                   li.lemma, base_pos, wordsStr, li.words)
+                                   li.lemma, base_pos, wordsStr, li.words,
+                                   allowAsterisk = True)
 
                     groupLines.append((line, li, new_base_pos))
 
@@ -483,6 +484,12 @@ def adjustEntries(conn, f = None, *,
                                          " on conflict (main_group_id, other_group_id) do update set also_merge = true where not excluded.also_merge",
                                          (sg.id, group_id))
 
+                        keepPoses = set()
+                        for pos, wes in li.words.items():
+                            if wes and wes[0].word.startswith('*'):
+                                keepPoses.add(pos)
+                                wes.clear()
+
                         if li.action == 'remove' or li.action == 'transfer':
                             for pos, wes in li.words.items():
                                 for we in wes:
@@ -500,8 +507,11 @@ def adjustEntries(conn, f = None, *,
                             continue
 
                         if li.action == 'replace':
+                            keepPosesStr = ','.join(f"'{pos}'" for pos in keepPoses)
+                            posFilter = f"and pos not in ({keepPosesStr})" if keepPoses else ''
+
                             conn.execute("insert into to_remove (word_id) select word_id from words "
-                                         "where lemma_id = ? and lemma_id != word_id", (li.lemma_id,))
+                                         f"where lemma_id = ? and lemma_id != word_id {posFilter}", (li.lemma_id,))
                             we = li.lemma
                             word_id = li.lemma_id
                             we._word_id = word_id

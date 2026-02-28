@@ -818,9 +818,12 @@ configured on Linux you can type `→` with
 paste as you shouldn't need to type `→` very often.
 
 If the line has no prefix, then any derived forms provided will be matched by
-the word and pos and any forms with a single dash (`-`) will be ignored.  If
-the line has a prefix of `=`, then any derived info will instead replace the
-existing ones for that lemma.
+the word and POS and any forms with a single dash (`-`) will be ignored.
+
+If the line has a prefix of `=`, then any derived info will instead replace
+the existing ones for that lemma.  Using a dash in this case will cause the
+derived forms for that POS place to removed.  To copy over existing derived
+info an asterisk (`*`) can be used instead.
 
 If any variant info is given for a lemma or a derived form, then the variant
 information for all relevant lemmas or forms will be replaced, including

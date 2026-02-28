@@ -746,7 +746,7 @@ def _matchLine(line):
     m = _lineRegex.fullmatch(line)
     return m
 
-def _splitWords(wordsStr, lemmaSpellingsKeys = ('_',)):
+def _splitWords(wordsStr, lemmaSpellingsKeys = ('_',), allowAsterisk = False):
     words = []
     if wordsStr is None or wordsStr == '':
         wordStrs = []
@@ -758,7 +758,7 @@ def _splitWords(wordsStr, lemmaSpellingsKeys = ('_',)):
         if m_:
             wes = [we for we in (WordEntry.parse(w_.strip(), lemmaSpellingsKeys) for w_ in m_[1].split('|')) if we is not None]
         else:
-            we = WordEntry.parse(w)
+            we = WordEntry.parse(w, None, allowAsterisk)
             wes = [] if we is None else [we]
         words.append(wes)
     return words
@@ -875,12 +875,12 @@ class Line(LineBase):
             le.comments.extend(Line.splitComments(m['comments']))
 
     @staticmethod
-    def procWords(lemmaSpellingsKeys, lemma, base_pos, wordsStr, wordsByPos):
+    def procWords(lemmaSpellingsKeys, lemma, base_pos, wordsStr, wordsByPos, allowAsterisk = False):
         if lemma is None:
             words = [[]]
         else:
             words = [[lemma]]
-        words += _splitWords(wordsStr, lemmaSpellingsKeys)
+        words += _splitWords(wordsStr, lemmaSpellingsKeys, allowAsterisk)
         poses = posesFromList(base_pos, words, lambda w: w[0].word.endswith("'s"))
         assert(len(words) == len(poses))
         addedPoses = []
@@ -1009,8 +1009,12 @@ class WordEntry(SlotsDataClass):
         'duplicate',      # bool
         '_word_id',
     )
-    def __init__(self):
+    def __init__(self, word = None, entry_rank = Default):
         self.spellings = None
+        if word is not None:
+            self.word = word
+            self.entry_rank = entry_rank
+            self.duplicate = False
     def __str__(self):
         return self.str()
     def sortKey(self):
@@ -1027,9 +1031,11 @@ class WordEntry(SlotsDataClass):
         parts.append(f"{self.word}{self.entry_rank}{duplicate}")
         return ': '.join(parts)
     @staticmethod
-    def parse(wstr, lemmaSpellingsKeys = None):
+    def parse(wstr, lemmaSpellingsKeys = None, allowAsterisk = False):
         if wstr == '-':
             return None
+        if allowAsterisk and wstr in ("*", "*'", "*'s"):
+            return WordEntry(wstr)
         m = re.fullmatch(r'((.*):\s*|)(.+)', wstr)
         if m is None:
             raise ValueError(f'invalid word entry: {wstr}')

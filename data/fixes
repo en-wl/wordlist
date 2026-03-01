@@ -45,67 +45,6 @@ _: _arse <v> (vulgar-3)
 = 99: ...
 + 50 GB: ...
 
-bot <n>:
-- 50 hacker: ...
-+ 50 [+]: ...
-
-inasmuch <→wp>
-+ 50: ...
-
-insofar <av→wp>
-+ 50: ...
-
-+ lovey <wp> # lovey-dovey
-= 60: ...
-
-lovey <n> {:2→}: loveys
-- luvvie <n> {:2}
-= 99: ...
-+ 60 GB: ...
-
-_: luvvie <n> {:1→}: luvvies
-_v: luvvy <n> {:1}: luvvies
-= 99: ...
-+ 60 GB: ...
-
-reactance <n>
-- 60 [extra]: ...
-
-+ _: résumé <n>: résumés
-  _v: resume <n>: resumes
-+ _V: resumé <n>: resumés
-= 50 [extra]: ...
-
-rive <v>: -, (riven | V: rived), -, -
-- 50 [12dicts]: ...
-
-~ rive <v>: -, riven, -, -
-+ riven <aj>
-
-# Issue #266 (surveil is now extra not signature)
-surveil <v>
-- 70 [+]: ...
-
-A B: through <aj_av>
-AV B-: thru <aj_av>
-+ 70: +: thru <aj_av>
-
-A B: through <pp>
-AV B-: thru <pp>
-+ 70: +: thru <pp>
-
-+ thru <we> # drive-thru
-= 50 US: ...
-
-trabecula <n>
-- 60 [extra]: ...
-
-wake <v>: (A B: woke | AV B@: waked), (A B: woken | A. B@: waked | AV: woke), waking, wakes
-- 50 [+]: ...
-
-+ woke <aj>: woker, wokest
-= 50 [+]: ...
-
 bacteria <n>: bacterias!
 
 _: biblical <aj>
@@ -117,6 +56,10 @@ _: biblically <→av/>
 _V: Biblically <→av/>
 
 bing <m→n>
+
+bot <n>:
+- 50 hacker: ...
++ 50 [+]: ...
 
 CAD <n→abbr/>
 
@@ -157,7 +100,13 @@ B: haemorrhagic <aj>
 
 hyaena <n>: (hyaenas | V: hyaena)
 
+inasmuch <→wp>
++ 50: ...
+
 inasmuch as <→c>
+
+insofar <av→wp>
++ 50: ...
 
 insofar as <→c>
 
@@ -175,6 +124,19 @@ layperson <n>: (laypeople | V: laypersons), layperson's, (laypeople's | V: laype
 + 60: +: layperson <n>: laypersons
 
 - lbs. <abbr>
+
++ lovey <wp> # lovey-dovey
+= 60: ...
+
+lovey <n> {:2→}: loveys
+- luvvie <n> {:2}
+= 99: ...
++ 60 GB: ...
+
+_: luvvie <n> {:1→}: luvvies
+_v: luvvy <n> {:1}: luvvies
+= 99: ...
++ 60 GB: ...
 
 # Issue #328
 + _: Mastercard <n/name>: Mastercard's
@@ -226,7 +188,21 @@ AV B C: pre-exist <m→v>: pre-existed_, pre-existing_, pre-exists_
 A B- CV: preexisting <aj>
 AV B C: pre-existing <aj>
 
+reactance <n>
+- 60 [extra]: ...
+
++ _: résumé <n>: résumés
+  _v: resume <n>: resumes
++ _V: resumé <n>: resumés
+= 50 [extra]: ...
+
 rheumatology <n>: rheumatologies~
+
+rive <v>: -, (riven | V: rived), -, -
+- 50 [12dicts]: ...
+
+~ rive <v>: -, riven, -, -
++ riven <aj>
 
 = sauté <n_v>: (sautéed | ~: sautéd), sautéing, sautés
 = _V: saute <n_v>: (sauteed | ~: sauted), sauteing, sautes
@@ -239,10 +215,31 @@ rheumatology <n>: rheumatologies~
 spokesperson <n>: (spokespeople | V: spokespersons), spokesperson's, (spokespeople's | V: spokespersons')
 + 60: +: spokesperson <n>: spokespersons
 
+# Issue #266 (surveil is now extra not signature)
+surveil <v>
+- 70 [+]: ...
+
 - tassell <m>
 
   _: tiercel <n>: tiercels, tiercel's
 + _-: tassell <n>: tassells, tassell's
+
+A B: through <aj_av>
+AV B-: thru <aj_av>
++ 70: +: thru <aj_av>
+
+A B: through <pp>
+AV B-: thru <pp>
++ 70: +: thru <pp>
+
++ thru <we> # drive-thru
+= 50 US: ...
+
+trabecula <n>
+- 60 [extra]: ...
+
+wake <v>: (A B: woke | AV B@: waked), (A B: woken | A. B@: waked | AV: woke), waking, wakes
+- 50 [+]: ...
 
 # Issue #425
 A Z: weaponize <v>: weaponized, weaponizing, weaponizes
@@ -252,6 +249,9 @@ _: Wi-Fi <→n/>
 _.: WiFi <n/>
 
 = wiz <n> {:2}: wizzes, wiz's
+
++ woke <aj>: woker, wokest
+= 50 [+]: ...
 
 # Issue #430
 A Bv C: yogurt <n>: yogurts, yogurt's

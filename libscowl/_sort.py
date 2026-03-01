@@ -24,7 +24,7 @@ class RoughGroupInfo(SlotsDataClass):
             lemma = parseLemmaPart(m['lemma'].strip()).lemma
         except ValueError:
             raise ValueError(f"bad line: {line}")
-        if lemma:
+        if lemma and lemma != '...':
             self.lemmas.add(lemma)
 
         if self.headword is None:

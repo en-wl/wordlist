@@ -89,11 +89,45 @@ if DEBUG_SQL:
     conn = openDB("/tmp/scowl-pre.db", create=True)
 else:
     conn = openDB(None)
-with open('data/scowl-pre.txt') as f:
-    clusters = importText(f)
-exportToDB(clusters, conn)
+
+CACHE_DIR = os.environ.get('SCOWL_CACHE', '')
+if CACHE_DIR:
+    CACHE_DIR = Path(CACHE_DIR)
+else:
+    CACHE_DIR = None
+
+src = Path('data/scowl-pre.txt')
+if CACHE_DIR:
+    cached_txt = CACHE_DIR / 'scowl-pre.txt'
+    cached_db = CACHE_DIR / 'scowl-pre.db'
+    changed = True
+    if cached_txt.exists() and cached_db.exists():
+        changed = src.read_bytes() != cached_txt.read_bytes()
+    if changed:
+        CACHE_DIR.mkdir(exist_ok=True)
+        try:
+            cached_db.unlink()
+        except FileNotFoundError:
+            pass
+        with open(src) as f:
+            clusters = importText(f)
+        with openDB(cached_db, create=True) as c:
+            exportToDB(clusters, c)
+            c.backup(conn)
+        del clusters
+        shutil.copy2(src, cached_txt)
+        sys.stderr.write(f"\nwriting to cache ({CACHE_DIR})\n")
+    else:
+        sys.stderr.write(f"\nreading from cache ({CACHE_DIR})\n")
+        with openDB(cached_db) as c:
+            c.backup(conn)
+else:
+    with open(src) as f:
+        clusters = importText(f)
+    exportToDB(clusters, conn)
+    del clusters
 finish()
-del clusters
+del src
 
 start("importing data/basic")
 conn.execute("create temp table groups_to_del (group_id integer primary key);")

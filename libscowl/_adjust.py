@@ -248,7 +248,7 @@ def adjustEntries(conn, f = None, *,
             gi = None
             groupLines = []
             for line in lines[startIdx:stopIdx]:
-                if line.startswith('# '):
+                if line.startswith('# ') or line == '#':
                     continue
 
                 (action, line) = getLineAction(line)
@@ -510,7 +510,7 @@ def adjustEntries(conn, f = None, *,
                             keepPosesStr = ','.join(f"'{pos}'" for pos in keepPoses)
                             posFilter = f"and pos not in ({keepPosesStr})" if keepPoses else ''
 
-                            conn.execute("insert into to_remove (word_id) select word_id from words "
+                            conn.execute("insert or ignore into to_remove (word_id) select word_id from words "
                                          f"where lemma_id = ? and lemma_id != word_id {posFilter}", (li.lemma_id,))
                             we = li.lemma
                             word_id = li.lemma_id
@@ -539,6 +539,7 @@ def adjustEntries(conn, f = None, *,
                         for pos, wes in li.words.items():
                             addMissingSpellings(wes, gi.spellings)
                             for we in wes:
+                                #print(f"{sg.id} {li.lemma_id}: {we._word_id} {we.word}")
                                 if not hasattr(we, '_word_id'):
                                   conn.execute("insert into new_words (word_id, main_group_id, lemma_id, pos, word, word_key, entry_rank) values (?, ?, ?, ?, ?, ?, ?)",
                                                (next_word_id, sg.id, li.lemma_id, pos, we.word, clusterKey(we.word).decode('ascii'),

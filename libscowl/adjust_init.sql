@@ -59,7 +59,7 @@ create table temp.new_derived_variant_info (
   word_id integer not null,
   spelling text not null,
   variant_level smallint not null,
-  primary key (word_id, spelling)
+  primary key (word_id, main_group_id, spelling)
 ) without rowid;
 
 create table temp.new_group_info (

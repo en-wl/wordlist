@@ -126,9 +126,10 @@ insert or ignore into groups (group_id, base_pos, defn_note, pos_class, usage_no
 delete from words where word_id in (select word_id from to_remove);
 
 insert into words (word_id, group_id, lemma_id, pos, word, entry_rank)
-  select word_id, main_group_id, lemma_id, pos, word, coalesce(entry_rank,default_entry_rank,'')
+  select word_id, main_group_id, coalesce(new_lemma_id, lemma_id), pos, word, coalesce(entry_rank,default_entry_rank,'')
     from new_words
-    left join default_entry_rank using (main_group_id, pos);
+    left join default_entry_rank using (main_group_id, pos)
+    left join split_lemmas using (main_group_id, lemma_id);
 
 insert or ignore into fuzzy (word, word_key)
   select word, word_key from new_words;
@@ -230,20 +231,8 @@ where lemma_id in (select lemma_id from useless_lemma_variant_entries join group
 -- fix up derived_variant_info
 --
 
--- copy over existing derived_variant_info
-insert into new_derived_variant_info (main_group_id, word_id, spelling, variant_level)
-select main_group_id, new_word_id, spelling, variant_level
-  from split_info a
-  cross join derived_variant_info v using (word_id)
-where exists (select 1 from words n where n.word_id = new_word_id)
-  and not exists (select 1 from new_derived_variant_info n where n.word_id = new_word_id);
-
--- remove unused entries
-delete from derived_variant_info
-  where word_id in (select word_id from to_remove);
-
--- fix up derived_variant_info
-create temp table fixed_derived_variant_info as
+-- view for derived_variant_info with new ids
+create temp view fixed_derived_variant_info as
 with
   adj as (select main_group_id,
                  coalesce(new_lemma_id, v.lemma_id) as lemma_id,
@@ -258,6 +247,18 @@ select v.lemma_id, v.pos, v.word_id,
 from adj v
 left join lemma_variant_info lv on v.spelling = '*' and v.lemma_id = lv.lemma_id;
 
+-- copy over existing derived_variant_info
+insert into new_derived_variant_info (main_group_id, word_id, spelling, variant_level)
+select main_group_id, new_word_id, spelling, variant_level
+  from split_info a
+  cross join derived_variant_info v using (word_id)
+where exists (select 1 from words n where n.word_id = new_word_id)
+  and not exists (select 1 from fixed_derived_variant_info n where n.word_id = new_word_id);
+
+-- remove unused entries
+delete from derived_variant_info
+  where word_id in (select word_id from to_remove);
+
 -- update derived_variant_info
 delete from derived_variant_info
   where word_id in (select w.word_id from fixed_derived_variant_info v cross join words w using (lemma_id, pos));
@@ -265,7 +266,7 @@ insert into derived_variant_info
   select word_id, spelling, variant_level from fixed_derived_variant_info;
 
 -- cleanup
-drop table fixed_derived_variant_info;
+drop view fixed_derived_variant_info;
 
 --
 -- fix up scowl_data

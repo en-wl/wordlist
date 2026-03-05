@@ -62,7 +62,7 @@ class SubGroupInfo(SlotsDataClass):
 class GroupInfo(SlotsDataClass):
     __slots__ = ('id', 'subGroups', 'adjScowlInfo',
                  'pos', 'defn_note', 'pos_class', 'usage_note', 'group_rank',
-                 'commentLines', 'spellings', 'haveDerived', 'errors')
+                 'commentLines', 'spellings', 'haveDerived')
 
     def __init__(self):
         self.subGroups = {}
@@ -75,7 +75,6 @@ class GroupInfo(SlotsDataClass):
         self.commentLines = []
         self.spellings = set()
         self.haveDerived = False
-        self.errors = []
 
     def merge(self, attr, v):
         if v is None: return
@@ -414,12 +413,11 @@ def adjustEntries(conn, f = None, *,
                     else:
                         raise AssertionError
                 groupLines = []
-                for line, err in gi.errors:
-                    warn(f'{line}: {err}: skipping group')
-                    return
                 if not gi.subGroups:
-                    warn("empty group")
-                    return
+                    # fixme: should likely just skip the group
+                    #_warn(f'{line}: skipping empty group')
+                    #continue
+                    raise ValueError("empty group")
                 nopos_sg = gi.subGroups.pop('', None)
                 if nopos_sg and gi.subGroups:
                     for sg in gi.subGroups.values():

@@ -125,6 +125,9 @@ layperson <n>: (laypeople | V: laypersons), layperson's, (laypeople's | V: laype
 
 - lbs. <abbr>
 
+A B C D: licensed <aj>
++ Bv: licenced <aj>
+
 + lovey <wp> # lovey-dovey
 = 60: ...
 
@@ -179,6 +182,20 @@ person <n>: (people | V: persons), person's, (people's | V: persons')
 
 _: piñata <n>
 _v: pinata <n>
+
+practic <m→n>
+
+A B C: practice <n>
+AV Cv: practise <n>
+
+A Cv: practice <v>
+AV B C: practise <v>
+
+A Cv: practiced <aj>
++ AV B C: practised <aj>
+
+A Cv: practicing <→aj>
+AV B C: practising <→aj>
 
 # Issue #302
 A B- CV: preexist <v>: preexisted, preexisting, preexists

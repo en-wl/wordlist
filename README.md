@@ -1,12 +1,12 @@
-Spell Checking Oriented Word Lists Version 2 (SCOWLv2)
-======================================================
+English Speller Database (also known as SCOWLv2)
+================================================
 
 SCOWL (Spell Checker Oriented Word Lists) and Friends is a database of
-information on English words useful for creating high-quality word lists
-suitable for use in spell checkers of most dialects of English.  The database
-primarily contains information on how common a word is, differences in spelling
-between the dialects of English, spelling variant information, and (basic)
-part-of-speech and inflection information.
+information on English words useful for creating high-quality speller
+dictionaries and wordlists for most dialects of English.  The database
+primarily contains information on how common a word is, differences in
+spelling between the dialects of English, spelling variant information, and
+(basic) part-of-speech and inflection information.
 
 The original SCOWL (SCOWLv1) was a compilation of the information in the
 database into a set of simple word lists that can be combined to create
@@ -474,7 +474,7 @@ the current choices are:
     demonym: [experiential] person or people related to a place
     trademark: [experiential] registered trademark
 
-    abbr: an abbreviation that takes on inflected forms such as as FAQs
+    abbr: an abbreviation that takes on inflected forms such as FAQs
 
     number: one, two, etc., used with <n> POS
     ordinal: first, second, etc., used with <n> POS

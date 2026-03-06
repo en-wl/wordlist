@@ -1,0 +1,126 @@
+#:: adjust
+
+= awake <v>: (awoke | V: awaked), (awoken | -: awoke), *, *
+
+= backslide <v>: backslid, (backslid | v: backslidden), *, *
+
+~ backslide <v>: -, backslidden, -, -
++ backslidden <aj>
+
+= bear <v>: bore, borne, *, *
+
+= bear <v> {→birth}: bore, born, *, *
+
+= beat <v>: beat, (beaten | v: beat), *, *
+
+= beget <v>: (begot | @: begat), (begotten | -: begot), *, *
+
+= bestrew <v>: bestrewed, (bestrewn | v: bestrewed), *, *
+
+= bestride <v>: (bestrode | @: bestrid), (bestridden | @: bestrid), *, *
+
+= chide <v>: (chided | V: chid), (chided | V: chid | @: chidden), *, *
+
+= clip <v> {cut}: clipped, (clipped | @: clipt), *, *
+
+= disprove <v>: disproved, (disproved | .: disproven), *, *
+
+= drink <v>: drank, (drunk | -: drank), *, *
+
+= forbid <v>: (forbade | @: forbad | V: forbid), (forbidden | V: forbid), *, *
+
+= gnaw <v>: gnawed, (gnawed | @: gnawn), *, *
+
+= grave <v>: graved, (@: graven | graved), *, *
+
+  graven <aj>
++ 60 [extra]: ...
+
+= hew <v>: hewed, (?: hewed | hewn), *, *
+
+= hide <v>: hid, (hidden | -: hid), *, *
+
+= interweave <v>: (interwove | -: interweaved), (interwoven | -: interweaved), *, *
+
+= jigsaw <v>: jigsawed, (jigsawed | -: jigsawn), *, *
+
+= lade <v>: laded, *, *
+
+~ lade <v>: -, laden, -, -
+  laden <aj>
+
+= landslide <v>: landslid, (landslid | -: landslidden), *, *
+
+= melt <v>: melted, *, *
+
+= misshape <v>: misshaped, *, *
+
+  misshapen <aj>
++ 60 [extra]: ...
+
+  molten <aj>
++ 60 [extra]: ...
+
+= mow <v>: mowed, (mowed | v: mown), *, *
+
+  mown <aj>
++ 60 [extra]: ...
+
++ overladen <aj>
++ 60 [extra]: ...
+
+= overload <v>: overloaded, (overloaded | V: overladen), *, *
+
+= preshrink <v>: (preshrank | .: preshrunk), (preshrunk | -: preshrunken), *, *
+
+= resow <v>: resowed, (resown | V: resowed), *, *
+
+= reweave <v>: (rewove | V: reweaved), (rewoven | V: reweaved), *, *
+
+= ripsaw <v>: ripsawed, (ripsawed | -: ripsawn), *, *
+
+= saw <v>: sawed, (A BV C: sawed | AV B Cv: sawn), *, *
+
+~ saw <v>: -, sawed, -, -
++ A: sawed <aj>
++ B C: sawn <aj>
+
+= sew <v>: sewed, (sewn | v: sewed), *, *
+
+= shear <v>: sheared, (sheared | shorn*), *, *
+
+= shoe <v>: (shod | V: shoed), (shod | @: shodden | V: shoed), *, *
+
+= show <v>: showed, (shown | V: showed), *, *
+
+= shrink <v>: shrank, shrunk, *, *
+
+~ shrink <v>: -, shrunken, -, -
+  shrunken <aj>
+
+= shrive <v>: (shrived | V: shrove), (shriven | v: shrived), *, *
+
+= sink <v>: sank, sunk, *, *
+
+= smite <v>: smote, (smitten | @: smit | V: smote), *, *
+
+= sow <v>: sowed, (sown | sowed*), *, *
+
+= strike <v>: struck, *, *
+
+= strike <v> {→delete}: struck, stricken, *, *
+
+= strive <v>: (A Bv C.: strived | A. B C: strove), (A Bv C.: strived | A. B C: striven), *, *
+
+  sunken <aj>
++ 60 [extra]: ...
+
+= thrive <v>: (thrived | V: throve), (thrived | V: thriven), *, *
+
+= tread <v>: trod, trodden, *, *
+
+= tread <v> {→tread water}: threaded, *, *
+
+= whipsaw <v>: whipsawed, (whipsawed | -: whipsawn), *, *
+
+= write <v>: wrote, (written | @: writ), *, *

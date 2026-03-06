@@ -28,6 +28,7 @@ adjustFiles = (
     'data/compounds',
     'data/variants',
     'data/fixes',
+    'data/vn_fixes',
     'data/exclude',
 )
 

@@ -101,27 +101,38 @@ src = Path('data/scowl-pre.txt')
 if CACHE_DIR:
     cached_txt = CACHE_DIR / 'scowl-pre.txt'
     cached_db = CACHE_DIR / 'scowl-pre.db'
-    changed = True
-    if cached_txt.exists() and cached_db.exists():
-        changed = src.read_bytes() != cached_txt.read_bytes()
+    empty_db = CACHE_DIR / 'scowl-empty.db'
+    empty_db_new = empty_db.with_suffix('.new')
+
+    CACHE_DIR.mkdir(exist_ok=True)
+
+    with libscowl.openDB(empty_db_new, create = True):
+        pass
+
+    try:
+        changed = (empty_db.read_bytes() != empty_db_new.read_bytes() 
+                   or src.read_bytes() != cached_txt.read_bytes())
+    except FileNotFoundError:
+        changed = True
+
     if changed:
-        CACHE_DIR.mkdir(exist_ok=True)
-        try:
-            cached_db.unlink()
-        except FileNotFoundError:
-            pass
         with open(src) as f:
             clusters = importText(f)
-        with openDB(cached_db, create=True) as c:
+        shutil.copyfile(empty_db_new, cached_db)
+        with openDB(cached_db) as c:
             exportToDB(clusters, c)
             c.backup(conn)
         del clusters
-        shutil.copy2(src, cached_txt)
-        sys.stderr.write(f"\nwriting to cache ({CACHE_DIR})\n")
+        shutil.copyfile(src, cached_txt)
+        shutil.copyfile(empty_db_new, empty_db)
+        sys.stderr.write(f"\nwrote to cache ({CACHE_DIR})\n")
     else:
         sys.stderr.write(f"\nreading from cache ({CACHE_DIR})\n")
         with openDB(cached_db) as c:
             c.backup(conn)
+
+    os.remove(empty_db_new)
+
 else:
     with open(src) as f:
         clusters = importText(f)

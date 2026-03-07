@@ -36,8 +36,8 @@ select b.*
   where (
          (a.size < b.size and a.category = b.category and a.region = b.region and a.tag = b.tag)
          or (a.size <= b.size and a.category = '' and b.category = 'hacker' and a.region = b.region)
-         or (a.size <= b.size and a.category = b.category and a.region = b.region and a.tag = '' and b.tag not in ('', '[cs]', '[-]') and b.size <= 35)
-         or (a.size <= b.size and a.category = b.category and a.region = b.region and a.tag = '' and b.tag not in ('', '[cs]', '[+]', '[-]'))
+         or (a.size <= b.size and a.category = b.category and a.region in ('', b.region) and a.tag = '' and b.tag not in ('', '[cs]', '[-]') and b.size <= 35)
+         or (a.size <= b.size and a.category = b.category and a.region in ('', b.region) and a.tag = '' and b.tag not in ('', '[cs]', '[+]', '[-]'))
          --or (a.size < b.size and b.size >= 80 and a.category = b.category and a.region = b.region and a.tag not in ('[cs]', '[name]', '[town]'))
         );
 select * from scowl_data_cleanup limit 0;

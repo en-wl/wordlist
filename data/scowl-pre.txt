@@ -33277,8 +33277,6 @@
 
 70 [moby] 80 [enable]: basidiomycete <n>: basidiomycetes
 
-85 [ukacd]: Basidiomycetes <n/upper?>
-
 80 [enable] 85 [ukacd]: basidiomycetous <aj>
 
 70 [moby] 80 [enable] 85 [ukacd]: basidiospore <n>: basidiospores
@@ -58611,8 +58609,6 @@
 
 85 [ukacd]: cannach <n>: cannachs
 
-70 [moby]: Cannae <n/upper?>
-
 40 [3esl] 50 [12dicts] 70 [5desk] [moby]: canned <aj>
 
 80 [enable] 85 [ukacd]: cannel <n>
@@ -58973,8 +58969,6 @@
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <n>: canticles
 
 70 [moby] 85 [ukacd]: Canticle of Canticles <n/upper?>
-
-70 [5desk]: Canticles <n/upper?>
 
 85 [ukacd]: cantico <m>: canticoed, canticoing, canticos
 
@@ -111641,8 +111635,6 @@
 70 [3of6] 85 [ukacd]: dip switch <n>: dip switches
 
 80 [enable]: dipt
-
-85 [ukacd]: Diptera <n/upper?>
 
 70 [moby] 80 [enable] 85 [ukacd]: dipteral
 
@@ -210167,8 +210159,6 @@
 60 [extra] 70 [5desk] 80 [enable] 85 [ukacd]: A C Dv: ischemic <aj>
 60 [extra] 70 [5desk] 80 [enable] 85 [ukacd]: B D: ischaemic <aj>
 
-70 [moby]: Ischia <n/upper?>
-
 80 [2dicts] 85 [ukacd]: ischiadic
 
 80 [enable] 85 [ukacd]: ischial
@@ -212644,8 +212634,6 @@
 85 [ukacd]: B: jasperise <m>: jasperised, jasperising, jasperises
 
 85 [ukacd]: jasperous
-
-70 [moby]: Jaspers <n/upper?>: Jaspers's
 
 80 [enable] 85 [ukacd]: jasperware <n>
 80 [enable]: - <n>: jasperwares
@@ -226684,8 +226672,6 @@
 
 85 [ukacd]: Lawrie </upper?>
 
-80 [upper]: Laws <n/upper?>
-
 50 [census] [name] 80 [upper] 85 [ukacd]: Lawson <n/surname>
 50 [census] [name]: - <n/surname>: Lawson's
 
@@ -234543,9 +234529,6 @@
 70 [moby] 80 [enable]: B D: - <n>: logorrhoeas
 
 80 [enable]: logorrheic
-
-70 [moby] 80 [upper]: Logos <n/upper?>
-70 [moby]: - <n/upper?>: Logos's
 
 85 [ukacd]: logothete <n>: logothetes
 
@@ -258458,8 +258441,6 @@
 
 85 [ukacd]: mollitious
 
-85 [ukacd]: Mollusca <n/upper?>
-
 60 [12dicts] 70 [5desk] 80 [enable] 85 [ukacd]: A B: molluscan <n>
 60 [12dicts] 70 [5desk] 80 [enable] 85 [ukacd]: Av: molluskan <n>
 70 [12dicts] [5desk] 80 [2dicts]: A B: - <n>: molluscans
@@ -281100,8 +281081,6 @@
 
 80 [enable]: octanol <n>: octanols
 
-70 [5desk] [moby] 85 [ukacd]: Octans <n/upper?>
-
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: octant <n>: octants
 
 70 [5desk] 80 [enable] 85 [ukacd]: octantal
@@ -285189,8 +285168,6 @@
 
 50 [name]: Oprah <n/name?>: Oprah's
 
-70 [moby]: Ops <n/upper?>: Ops's
-
 70 [3of6]: op shop <n>: op shops
 
 85 [ukacd]: opsimath <n>: opsimaths
@@ -287200,8 +287177,6 @@
 70 [moby] 80 [enable]: - <n>: oscines
 
 70 [moby] 80 [enable] 85 [ukacd]: oscine <aj>
-
-85 [ukacd]: Oscines <n/upper?>
 
 85 [stale] [ukacd]: oscinine
 
@@ -323430,8 +323405,6 @@
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: primate's
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <n>: primates
 
-80 [upper]: Primates <n/upper?>
-
 70 [moby] 80 [enable] 85 [ukacd]: primateship <n>: primateships
 
 70 [5desk] 80 [enable] 85 [ukacd]: primatial
@@ -344470,8 +344443,6 @@
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <n>: reptiles
 
 85 [ukacd]: -reptile <a>
-
-85 [ukacd]: Reptilia <n/upper?>
 
 40 [3esl] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: reptilian <n>
 40 [3esl] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: reptilian's
@@ -369336,8 +369307,6 @@
 
 85 [ukacd]: sessionally
 
-70 [moby]: Sessions <n/upper?>: Sessions's
-
 85 [stale] [ukacd]: sesspool <n>: sesspools
 
 70 [moby] 80 [enable] 85 [ukacd]: sesterce <n>: sesterces
@@ -387512,9 +387481,6 @@
 
 70 [moby] 80 [enable]: spier <m>: spiered, spiering, spiers
 
-70 [moby]: A: Spiers <n/upper?>: Spiers's
-70 [moby]: B: Spires <n/upper?>: Spires's
-
 60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: spiff <n>
 60 [brif] 70 [3of6] 80 [enable]: - <n>: spiffs
 
@@ -388953,8 +388919,6 @@
 
 80 [enable] 85 [ukacd]: sporotrichosis <n>
 80 [enable]: - <n>: sporotrichoses
-
-85 [ukacd]: Sporozoa <n/upper?>
 
 80 [enable] 85 [ukacd]: sporozoan <n>
 80 [enable]: - <n>: sporozoans
@@ -422973,8 +422937,6 @@
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: tourniquet <n>: tourniquets
 
 85 [ukacd]: tournure <n>: tournures
-
-70 [5desk] [moby]: Tours <n/upper?>
 
 70 [3of6] 85 [ukacd]: tours de force
 

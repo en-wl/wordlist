@@ -153,15 +153,19 @@ Words found in _2dicts_ (words confirmed by 2 dictionaries) and _ospdadd_
 
 These tags are not included by default in the final database.
 
-#### [lcacr], [ucacr], [plurals], [upper]
+#### [lcacr], [ucacr], [upper]
 
 Additional words from the ENABLE2K supplement files.  These are all included at
 the 80 size level.  The lists are:
 
   * _lcacr_: lower-case acronyms
   * _ucacr_: upper-case acronyms
-  * _plurals_: additional plurals
   * _upper_: upper-case words (not proper names)
+
+#### [plurals]
+
+Additional plurals from the ENABLE2K supplement files.  Included at the 85
+size level.
 
 #### [stale]
 
@@ -171,8 +175,8 @@ level.
 
 #### [ukacd]
 
-Words from the "UK Advanced Cryptics Dictionary" by J Ross Beresford and
-included at the 85 size level.
+Words from the "UK Advanced Cryptics Dictionary" by J Ross Beresford.
+Included at the 85 size level.
 
 The "UK Advanced Cryptics Dictionary" is under the following copyright:
 
@@ -212,7 +216,7 @@ software development and computer science contexts.
 
 Proper names, currently from two lists from `r/special` in SCOWLv1.
 
-  * __names.from_alan_beale__: A list of names (version 5.2) sent to me by Alan Beale <biljir@pobox.com>:
+  * __names.from_alan_beale__: A list of names (version 5.2) sent to me by Alan Beale:
     > I have a large list of proper names, whose origins are in the
     > linux-words proper names, but which both removes a lot of (what I
     > considered to be) junk entries, and adds a lot of names of various

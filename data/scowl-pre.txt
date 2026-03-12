@@ -1951,7 +1951,7 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: acciaccatura <n>: acciaccaturas
 
-80 [enable] [plurals]: acciaccature
+80 [enable] 85 [plurals]: acciaccature
 
 70 [moby] 80 [enable] 85 [ukacd]: accidence <n>
 70 [moby] 80 [enable]: - <n>: accidences
@@ -2530,7 +2530,7 @@
 85 [stale]: acetoxyl <n>: acetoxyls
 
 70 [moby] 80 [enable]: acetum <n>
-70 [moby] 80 [ospdadd] [plurals]: - <n>: acetums
+70 [moby] 80 [ospdadd] 85 [plurals]: - <n>: acetums
 
 60 [extra] 70 [moby] 80 [enable] 85 [ukacd]: acetyl <n>
 70 [moby] 80 [enable]: - <n>: acetyls-
@@ -3196,7 +3196,7 @@
 80 [enable] 85 [ukacd]: acromial
 
 70 [moby] 80 [enable] 85 [ukacd]: acromion <n> #! unmarked variants: acromia, acromions
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (acromia | acromions)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (acromia | acromions)
 
 80 [ospdadd]: acron <n>: acrons
 
@@ -4428,8 +4428,8 @@
 
 85 [ukacd]: administratorship
 
-80 [enable] 85 [ukacd]: administratrix <n> #! unmarked variants: administratrices, administratrixes
-80 [enable] [plurals] 85 [ukacd]: - <n>: (administratrices | administratrixes)
+80 [enable] 85 [ukacd]: administratrix <n> # fixme: administratrixes: check if variant
+80 [enable] 85 [plurals] [ukacd]: - <n>: (administratrices | -: administratrixes!)
 
 70 [5desk] 80 [enable]: admirability <n>: admirabilities
 
@@ -6663,7 +6663,7 @@
 
 70 [5desk] 80 [enable]: aggie <n>: aggies
 
-80 [plurals]: aggiornamenti
+85 [plurals]: aggiornamenti
 
 70 [moby] 80 [enable] 85 [ukacd]: aggiornamento <n>
 70 [moby] 80 [enable]: - <n>: aggiornamentos
@@ -9587,7 +9587,7 @@
 
 80 [enable]: aliyot
 
-80 [enable] [plurals]: aliyoth
+80 [enable] 85 [plurals]: aliyoth
 
 85 [ukacd]: alizari <n>: alizaris
 
@@ -10153,7 +10153,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: allodial
 
 70 [moby] 80 [enable] 85 [ukacd]: allodium <n>
-70 [moby] 80 [ospdadd] [plurals] 85 [ukacd]: - <n>: allodiums
+70 [moby] 80 [ospdadd] 85 [plurals] [ukacd]: - <n>: allodiums
 
 70 [3of6] 85 [ukacd]: all of a sudden <av>
 
@@ -10599,7 +10599,7 @@
 70 [moby]: Alnico <n/upper?>
 
 80 [enable]: alnico <n> #! unmarked variants: alnicoes, alnicos
-80 [enable] [plurals]: - <n>: (alnicoes | alnicos)
+80 [enable] 85 [plurals]: - <n>: (alnicoes | alnicos)
 
 50 [name]: Alnilam <n/name?>: Alnilam's
 
@@ -10616,7 +10616,7 @@
 85 [stale] [ukacd]: alodial
 
 70 [moby] 80 [enable] 85 [ukacd]: alodium <n>
-70 [moby] 80 [ospdadd] [plurals] 85 [ukacd]: - <n>: alodiums
+70 [moby] 80 [ospdadd] 85 [plurals] [ukacd]: - <n>: alodiums
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: aloe <n>: aloes
 
@@ -10820,8 +10820,8 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: alphorn <n>: alphorns
 
-70 [moby] 80 [enable]: alphosis <n> #! unmarked variants: alphoses, alphosises
-70 [moby] 80 [enable] [plurals]: - <n>: (alphoses | alphosises)
+70 [moby] 80 [enable]: alphosis <n> # fixme: alphoses: check if variant
+70 [moby] 80 [enable] 85 [plurals]: - <n>: (alphosises | -: alphoses!)
 
 85 [stale]: alphyl <n>: alphyls
 
@@ -12793,7 +12793,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: amphisbaena <n>: amphisbaenas
 70 [moby]: - <n>: amphisbaena's
 
-80 [enable] [plurals]: amphisbaenae
+80 [enable] 85 [plurals]: amphisbaenae
 
 80 [enable] 85 [ukacd]: amphisbaenic
 
@@ -13900,7 +13900,7 @@
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: andante <av>
 
-80 [plurals]: andantini
+85 [plurals]: andantini
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: andantino <aj>
 
@@ -14276,8 +14276,8 @@
 
 80 [2dicts] [enable] [ospdadd] 85 [ukacd]: A Dv: anestrus <n>
 80 [2dicts] [enable] [ospdadd] 85 [ukacd]: B D: anoestrus <n>
-80 [2dicts] [enable] [plurals]: A Dv: - <n>: anestruses
-80 [2dicts] [enable] [plurals]: B D: - <n>: anoestruses
+80 [2dicts] [enable] 85 [plurals]: A Dv: - <n>: anestruses
+80 [2dicts] [enable] 85 [plurals]: B D: - <n>: anoestruses
 
 80 [moby]: Aneta <n/place>
 
@@ -15881,7 +15881,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: antefix <n>: antefixes
 
 80 [enable] 85 [ukacd]: antefixa <n>
-80 [enable] [plurals]: - <n>: antefixae
+80 [enable] 85 [plurals]: - <n>: antefixae
 
 80 [2dicts] 85 [ukacd]: antefixal
 
@@ -17257,7 +17257,7 @@
 50 [name]: Antipas <n/name?>: Antipas's
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: antipasto <n>
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (antipastos | ?: antipasti)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (antipastos | ?: antipasti)
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: antipathetic <aj>
 
@@ -18817,7 +18817,7 @@
 80 [enable]: apomixes
 
 70 [moby] 80 [enable] 85 [ukacd]: apomixis <n>
-70 [moby] 80 [ospdadd] [plurals]: - <n>: apomixises
+70 [moby] 80 [ospdadd] 85 [plurals]: - <n>: apomixises
 
 85 [ukacd]: apomorphia
 
@@ -19398,7 +19398,7 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: appoggiatura <n>: appoggiaturas
 
-80 [plurals]: appoggiature
+85 [plurals]: appoggiature
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: appoint <v>
 35 [12dicts] 40 [3esl] 50 [ukfreq] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <v>: appointed, appointing, appoints
@@ -20506,7 +20506,7 @@
 70 [5desk] 80 [upper]: - <n/upper?>: Arcadies
 
 70 [5desk] 80 [3of6] [enable] 85 [ukacd]: arcana <n>
-70 [5desk] 80 [ospdadd] [plurals]: - <n>: arcanas
+70 [5desk] 80 [ospdadd] 85 [plurals]: - <n>: arcanas
 
 35 [ukfreq] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: arcane <aj>
 
@@ -20705,7 +20705,7 @@
 
 70 [3of6] 85 [ukacd]: arch-enemy <n>: arch-enemies
 
-80 [enable] [plurals]: archentera
+80 [enable] 85 [plurals]: archentera
 
 80 [2dicts]: archenteric
 
@@ -21797,7 +21797,7 @@
 80 [enable] 85 [ukacd]: armamentaria
 
 80 [enable] 85 [ukacd]: armamentarium <n>
-80 [enable] [plurals] 85 [ukacd]: - <n>: armamentariums
+80 [enable] 85 [plurals] [ukacd]: - <n>: armamentariums
 
 40 [3esl] 50 [12dicts] 70 [5desk]: armaments
 
@@ -22203,7 +22203,7 @@
 80 [enable] 85 [ukacd]: arrantly
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: arras <n>
-60 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (arrases | ~: arras)
+60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (arrases | ~: arras)
 
 80 [enable] 85 [ukacd]: arrased
 
@@ -23543,7 +23543,7 @@
 70 [moby] 80 [enable]: - <n>: asparagines
 
 35 [12dicts] 40 [3esl] 50 [ukfreq] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: asparagus <n>
-80 [12dicts] [2dicts] [3esl] [3of6] [5desk] [enable] [moby] [plurals] 85 [ukacd]: - <n>: (asparaguses~ | ~: asparagus~)
+80 [12dicts] [2dicts] [3esl] [3of6] [5desk] [enable] [moby] 85 [plurals] [ukacd]: - <n>: (asparaguses~ | ~: asparagus~)
 
 80 [enable]: asparkle
 
@@ -29046,7 +29046,7 @@
 50 [name] 70 [5desk]: - <n/upper>: Bacchanalia's
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: bacchanalia <n>
-60 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (bacchanalia | ~: bacchanalias)
+60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (bacchanalia | ~: bacchanalias)
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: bacchanalian <n>
 50 [12dicts] 70 [5desk] 80 [enable] 85 [ukacd]: - <n>: bacchanalians
@@ -32713,7 +32713,7 @@
 35 AU [extra] 80 [enable] 85 [ukacd]: barramundi <n>: barramundis
 35 AU [extra]: - <n>: barramundi's
 
-80 [enable] [plurals]: barramundies
+80 [enable] 85 [plurals]: barramundies
 
 70 [moby] 80 [enable] 85 [ukacd]: barranca <n>
 70 [moby] 80 [enable]: - <n>: barrancas
@@ -32810,8 +32810,8 @@
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: barricade <v>: barricaded, barricading, barricades
 
-80 [enable] 85 [ukacd]: barricado <v>: barricadoed, barricadoing, - #! unmarked variants: barricadoes, barricados
-80 [enable] [plurals] 85 [ukacd]: - <v>: -, -, (barricadoes | barricados)
+80 [enable] 85 [ukacd]: barricado <v>: barricadoed, barricadoing, - # fixme: barricados: check if variant
+80 [enable] 85 [plurals] [ukacd]: - <v>: -, -, (barricadoes | -: barricados)
 
 85 [ukacd]: barrico <n>: (barricoes | barricos) #! unmarked variants: barricoes, barricos
 
@@ -35340,7 +35340,7 @@
 
 80 [enable]: bedsonia <n>: bedsonias
 
-80 [enable] [plurals]: bedsoniae
+80 [enable] 85 [plurals]: bedsoniae
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: bedsore <n>: bedsores
 
@@ -38640,7 +38640,7 @@
 80 [enable]: biali <n>: bialis
 
 70 [moby] 80 [enable]: bialy <n>
-70 [moby] 80 [enable] [plurals]: - <n>: bialies
+70 [moby] 80 [enable] 85 [plurals]: - <n>: bialies
 
 80 [enable]: bialys
 
@@ -45736,7 +45736,7 @@
 60 [extra] 70 [5desk]: - <n>: bonobo's
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: bonsai <n>
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (bonsai | -: bonsais)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (bonsai | -: bonsais)
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: bonsai <a>
 
@@ -50966,7 +50966,7 @@
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: brontosaurus <n>
 50 [12dicts] 60 [brif] 70 [3of6] [5desk]: - <n>: -, brontosaurus's, (brontosauruses' | ~: brontosauri's)
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: (brontosauruses | ~: brontosauri)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: (brontosauruses | ~: brontosauri)
 
 80 [moby]: Bronwood <n/place>
 
@@ -52159,7 +52159,7 @@
 80 [moby]: -Buckner <n/place>
 
 70 [moby] 80 [enable] 85 [ukacd]: bucko <n> #! unmarked variants: buckoes, buckos
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (buckoes | buckos)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (buckoes | buckos)
 
 70 [moby] 80 [enable] 85 [ukacd]: buckra <n>: buckras
 
@@ -53233,15 +53233,15 @@
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: _v: bunko <n> # fixme: bunkoes: check if variant
 60 [12dicts] 70 [5desk] [moby]: _: - <n>: bunco's
 60 [12dicts] 70 [5desk] [moby]: _v: - <n>: bunko's
-60 [12dicts] 65 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: _: - <n>: (buncos | -: buncoes-)
-60 [12dicts] 65 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: _v: - <n>: (bunkos | -: bunkoes-)
+60 [12dicts] 65 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: _: - <n>: (buncos | -: buncoes-)
+60 [12dicts] 65 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: _v: - <n>: (bunkos | -: bunkoes-)
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: _: bunco <v> # fixme: buncoes: check if variant
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: _v: bunko <v> # fixme: bunkoes: check if variant; lemma_rank originally "-"
 60 [12dicts] 70 [5desk] [moby] 80 [enable]: _: - <v>: buncoed, buncoing, -
 60 [12dicts] 70 [5desk] [moby] 80 [enable]: _v: - <v>: bunkoed, bunkoing, -
-60 [12dicts] 65 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: _: - <v>: -, -, (buncos | -: buncoes-)
-60 [12dicts] 65 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: _v: - <v>: -, -, (bunkos | -: bunkoes-)
+60 [12dicts] 65 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: _: - <v>: -, -, (buncos | -: buncoes-)
+60 [12dicts] 65 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: _v: - <v>: -, -, (bunkos | -: bunkoes-)
 
 70 [moby] 80 [enable] 85 [ukacd]: bund <n>: bunds
 
@@ -54532,7 +54532,7 @@
 70 [5desk] [moby]: Bute </upper?>
 
 80 [enable] 85 [ukacd]: bute <n>
-80 [enable] [plurals]: - <n>: butes
+80 [enable] 85 [plurals]: - <n>: butes
 
 85 [ukacd]: Butea <n/upper?>
 
@@ -54709,11 +54709,11 @@
 80 [ospdadd]: butthole <n>: buttholes
 
 80 [enable]: buttinski <n>
-80 [2dicts] [plurals]: - <n>: buttinskis
+80 [2dicts] 85 [plurals]: - <n>: buttinskis
 
 80 [enable]: buttinsky <n>: buttinskies
 
-80 [plurals]: buttinskys
+85 [plurals]: buttinskys
 
 70 [moby]: butt joint <n>
 
@@ -55984,7 +55984,7 @@
 
 60 [brif] 70 [3of6] 85 [ukacd]: cafetiere <n>: cafetieres
 
-80 [enable] [plurals]: cafetoria
+80 [enable] 85 [plurals]: cafetoria
 
 80 [enable]: cafetorium <n>: cafetoriums
 
@@ -57041,7 +57041,7 @@
 85 [ukacd]: calmy
 
 80 [enable]: calo <n>
-80 [enable] [plurals]: - <n>: calos
+80 [enable] 85 [plurals]: - <n>: calos
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: calomel <n>
 70 [5desk] [moby] 80 [enable]: - <n>: calomels
@@ -57149,7 +57149,7 @@
 70 [moby] 80 [enable]: - <n>: calvarias
 
 80 [enable]: calvarium <n>
-80 [enable] [plurals]: - <n>: calvariums
+80 [enable] 85 [plurals]: - <n>: calvariums
 
 50 [name] 60 [12dicts] 70 [5desk] [moby] 80 [upper] 85 [ukacd]: Calvary <n/upper>
 50 [name] 60 [12dicts] 70 [5desk] [moby]: - <n/upper>: Calvary's
@@ -57249,7 +57249,7 @@
 
 70 [5desk] 80 [3of6] [enable] 85 [ukacd]: calzone <n>: calzones
 
-80 [ospdadd] [plurals] 85 [ukacd]: calzoni
+80 [ospdadd] 85 [plurals] [ukacd]: calzoni
 
 35 [ukfreq] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: cam <n>
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: cam's
@@ -58501,7 +58501,7 @@
 85 [ukacd]: Cannock </upper?>
 
 70 [5desk] 80 [enable]: cannoli <n>
-70 [5desk] 80 [enable] [plurals]: - <n>: cannolis
+70 [5desk] 80 [enable] 85 [plurals]: - <n>: cannolis
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: cannon <n>: (cannons | ~: cannon)
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: cannon's
@@ -58577,7 +58577,7 @@
 50 [12dicts] 60 [brif] 70 [3of6] [5desk]: - <n>: canoeist's
 
 60 [12dicts] 70 [5desk] 80 [enable]: canola <n>
-80 [12dicts] [5desk] [enable] [plurals]: - <n>: canolas~
+80 [12dicts] [5desk] [enable] 85 [plurals]: - <n>: canolas~
 
 60 [12dicts]: canola oil <n>
 
@@ -62368,7 +62368,7 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: castrato <n> #! unmarked variants: castrati, castratos, castrati's, castratos'
 70 [moby]: - <n>: -, castrato's, (castrati's | castratos')
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (castrati | castratos)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (castrati | castratos)
 
 70 [5desk] 80 [enable]: castrator <n>: castrators
 
@@ -64449,7 +64449,7 @@
 80 [moby]: Cementon <n/place>
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: cementum <n>
-80 [12dicts] [5desk] [enable] [moby] [plurals]: - <n>: (cementa~ | ?: cementums~)
+80 [12dicts] [5desk] [enable] [moby] 85 [plurals]: - <n>: (cementa~ | ?: cementums~)
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: cemetery <n>: cemeteries
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: cemetery's
@@ -65549,7 +65549,7 @@
 85 [ukacd]: cestoidean <n>: cestoideans
 
 80 [enable] 85 [ukacd]: cestos <n>
-80 [ospdadd] [plurals]: - <n>: cestoses
+80 [ospdadd] 85 [plurals]: - <n>: cestoses
 
 85 [ukacd]: Cestracion </upper?>
 
@@ -66659,11 +66659,11 @@
 
 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: chapati <n>: chapatis
 
-80 [enable] [plurals]: chapaties
+80 [enable] 85 [plurals]: chapaties
 
 60 [brif] 70 [3of6] [moby] 80 [enable] 85 [ukacd]: chapatti <n>: chapattis
 
-80 [enable] [plurals]: chapatties
+80 [enable] 85 [plurals]: chapatties
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: chapbook <n>: chapbooks
 
@@ -67898,7 +67898,7 @@
 
 80 [moby]: Checotah <n/place>
 
-80 [enable] [plurals]: chedarim
+80 [enable] 85 [plurals]: chedarim
 
 40 [3esl] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] 80 [enable]: cheddar <n>
 80 [12dicts] [3esl] [3of6] [5desk] [enable]: - <n>: cheddars~
@@ -69331,9 +69331,9 @@
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: A C: - <n>: chili's
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: AV B: - <n>: chilli's
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: AV Cv: - <n>: chile's
-35 [12dicts] 40 [3esl] 60 [brif] 65 [12dicts] 70 [3of6] [5desk] [moby] 80 [3of6] [enable] [plurals] 85 [ukacd]: A C: - <n>: (A C: chilies | AV: chilis)
-35 [12dicts] 40 [3esl] 60 [brif] 65 [12dicts] 70 [3of6] [5desk] [moby] 80 [3of6] [enable] [plurals] 85 [ukacd]: AV B: - <n>: (chillies | -: chillis-)
-35 [12dicts] 40 [3esl] 60 [brif] 65 [12dicts] 70 [3of6] [5desk] [moby] 80 [3of6] [enable] [plurals] 85 [ukacd]: AV Cv: - <n>: chiles
+35 [12dicts] 40 [3esl] 60 [brif] 65 [12dicts] 70 [3of6] [5desk] [moby] 80 [3of6] [enable] 85 [plurals] [ukacd]: A C: - <n>: (A C: chilies | AV: chilis)
+35 [12dicts] 40 [3esl] 60 [brif] 65 [12dicts] 70 [3of6] [5desk] [moby] 80 [3of6] [enable] 85 [plurals] [ukacd]: AV B: - <n>: (chillies | -: chillis-)
+35 [12dicts] 40 [3esl] 60 [brif] 65 [12dicts] 70 [3of6] [5desk] [moby] 80 [3of6] [enable] 85 [plurals] [ukacd]: AV Cv: - <n>: chiles
 
 50 [12dicts] [name] 70 [5desk] [moby]: Chile <n/place>: Chile's
 
@@ -70003,7 +70003,7 @@
 70 [5desk] [moby] 85 [ukacd]: Chita </upper?>
 
 80 [enable] 85 [ukacd]: chital <n>
-80 [enable] [plurals] 85 [ukacd]: - <n>: chitals
+80 [enable] 85 [plurals] [ukacd]: - <n>: chitals
 
 70 [moby] 85 [ukacd]: chitarrone
 
@@ -70122,7 +70122,7 @@
 
 60 [12dicts] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: chlamydia <n>
 60 [12dicts] 70 [3of6] [5desk]: - <n>: chlamydia's
-60 [12dicts] 70 [5desk] 80 [2dicts] [enable] [plurals]: - <n>: (chlamydiae | ?: chlamydias)
+60 [12dicts] 70 [5desk] 80 [2dicts] [enable] 85 [plurals]: - <n>: (chlamydiae | ?: chlamydias)
 60 [12dicts] 70 [5desk]: - <n>: -, -, (chlamydiae's | ?: chlamydias')
 
 80 [enable] 85 [ukacd]: chlamydial <aj>
@@ -70136,7 +70136,7 @@
 85 [ukacd]: chloanthite
 
 80 [enable] 85 [ukacd]: chloasma <n>
-80 [ospdadd] [plurals]: - <n>: chloasmas
+80 [ospdadd] 85 [plurals]: - <n>: chloasmas
 
 80 [enable]: chloasmata
 
@@ -72063,7 +72063,7 @@
 
 85 [ukacd]: chylify <m>: chylified, chylifying, chylifies
 
-80 [plurals]: chylomicra
+85 [plurals]: chylomicra
 
 80 [enable] 85 [ukacd]: chylomicron <n>: chylomicrons
 
@@ -75656,9 +75656,9 @@
 
 80 [enable] 85 [ukacd]: clostridial
 
-70 [moby] 80 [enable] 85 [ukacd]: clostridium <n> #! unmarked variants: clostridia, clostridiums, clostridia's, clostridiums'
-70 [moby]: - <n>: -, clostridium's, (clostridia's | clostridiums')
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (clostridia | clostridiums)
+70 [moby] 80 [enable] 85 [ukacd]: clostridium <n> # fixme: clostridiums: check if variant
+70 [moby]: - <n>: -, clostridium's, (clostridia's | -: clostridiums')
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (clostridia | -: clostridiums)
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: closure <n>: closures
 
@@ -79084,7 +79084,7 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: colobus <n>
 70 [moby]: - <n>: colobus's
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: colobuses
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: colobuses
 
 85 [ukacd]: Colocasia <n/upper?>
 
@@ -82248,7 +82248,7 @@
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 85 [ukacd]: concertina <v>: concertinaed, concertinaing, concertinas
 
-80 [enable] [plurals]: concertini
+80 [enable] 85 [plurals]: concertini
 
 80 [2dicts]: concertinist <n>: concertinists
 
@@ -82747,7 +82747,7 @@
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: condominium <n>
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: -, condominium's, (condominiums' | -: condominia's)
-35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (condominiums | -: condominia)
+35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (condominiums | -: condominia)
 
 80 [moby]: Condon <n/place>
 
@@ -85674,7 +85674,7 @@
 
 80 [enable] 85 [ukacd]: contralateral <aj>
 
-80 [3of6] [plurals] 85 [ukacd]: contralti
+80 [3of6] 85 [plurals] [ukacd]: contralti
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: contralto <n>: contraltos
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: contralto's
@@ -87563,7 +87563,7 @@
 80 [enable]: coremium <n>: coremia
 
 70 [moby] 80 [enable] 85 [ukacd]: coreopsis <n>
-70 [moby] 80 [2dicts] [plurals]: - <n>: coreopsises
+70 [moby] 80 [2dicts] 85 [plurals]: - <n>: coreopsises
 
 80 [enable]: corepressor <n>: corepressors
 
@@ -87797,7 +87797,7 @@
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: cornea <n>: corneas
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: cornea's
 
-80 [enable] [plurals]: corneae
+80 [enable] 85 [plurals]: corneae
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: corneal <aj>
 
@@ -88283,7 +88283,7 @@
 
 35 [ukfreq] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: corpus <n> {texts}
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby]: - <n> {texts}: -, corpus's, (corpora's | ~: corpuses')
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n> {texts}: (corpora | ~: corpuses)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n> {texts}: (corpora | ~: corpuses)
 
 70 [moby] 85 [ukacd]: corpus callosum <n>
 
@@ -89291,7 +89291,7 @@
 80 [enable]: - <v>: coted, coting, -
 
 80 [enable] 85 [ukacd]: coteau <n> #! unmarked variants: coteaus, coteaux
-80 [enable] [plurals] 85 [ukacd]: - <n>: (coteaus | coteaux)
+80 [enable] 85 [plurals] [ukacd]: - <n>: (coteaus | coteaux)
 
 80 [moby]: Coteau <n/place>
 
@@ -92646,7 +92646,7 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: creodont <n>: creodonts
 
-80 [enable] [plurals]: creodonta
+80 [enable] 85 [plurals]: creodonta
 
 80 [moby]: Creola <n/place>
 
@@ -95507,7 +95507,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: culet <n>: culets
 
 70 [moby] 80 [enable] 85 [ukacd]: culex <n> #! unmarked variants: culexes, culices
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (culexes | culices)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (culexes | culices)
 
 85 [ukacd]: Culham </upper?>
 
@@ -97472,7 +97472,7 @@
 
 60 [12dicts] 80 [enable] 85 [ukacd]: cyclops <n> {giant}
 60 [12dicts]: - <n> {giant}: cyclops's
-60 [12dicts] 80 [enable] [plurals] 85 [ukacd]: - <n> {giant}: cyclopes
+60 [12dicts] 80 [enable] 85 [plurals] [ukacd]: - <n> {giant}: cyclopes
 
 85 [ukacd]: cyclopses
 
@@ -97753,7 +97753,7 @@
 
 70 [5desk] 80 [upper] 85 [ukacd]: Cypriote <aj/upper?>
 
-80 [enable] [plurals] 85 [ukacd]: cypripedia <n>
+80 [enable] 85 [plurals] [ukacd]: cypripedia <n>
 
 70 [moby] 80 [enable] 85 [ukacd]: cypripedium <n>
 70 [moby] 80 [enable]: - <n>: cypripediums
@@ -98056,7 +98056,7 @@
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: AV Bv: - <n>: tzar's
 
 70 [moby] 80 [enable] 85 [ukacd]: czardas <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: czardases
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: czardases
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: _: czardom <n>
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: _V {1}: tsardom <n>
@@ -98355,7 +98355,7 @@
 50 [12dicts] 50 hacker 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: daemon's
 50 [12dicts] [ukfreq] 50 hacker 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <n>: daemons
 
-80 [enable] [plurals]: daemones
+80 [enable] 85 [plurals]: daemones
 
 60 [12dicts] 70 [5desk] 80 [enable] 85 [ukacd]: daemonic <a>
 
@@ -99242,7 +99242,7 @@
 40 [3esl] 50 [12dicts] [name] 70 [3of6] [5desk] [moby] 80 [upper] 85 [ukacd]: Danish <aj/demonym>
 
 60 [12dicts] 70 [5desk] 80 [3of6] [enable]: danish <n>
-60 [12dicts] 70 [5desk] 80 [3of6] [enable] [ospdadd] [plurals]: - <n>: (danishes | ~: danish)
+60 [12dicts] 70 [5desk] 80 [3of6] [enable] [ospdadd] 85 [plurals]: - <n>: (danishes | ~: danish)
 
 70 [moby] 85 [ukacd]: Danish blue <n/upper?>
 
@@ -102220,7 +102220,7 @@
 80 [2dicts]: decrescence <n>: decrescences
 
 50 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: decrescendo <n>
-50 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (decrescendos | ~: decrescendi)
+50 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (decrescendos | ~: decrescendi)
 
 50 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: decrescendo <aj>
 
@@ -105248,7 +105248,7 @@
 80 [enable] 85 [ukacd]: dentalia
 
 70 [moby] 80 [enable] 85 [ukacd]: dentalium <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: dentaliums
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: dentaliums
 
 60 [12dicts] 70 [5desk] 80 [enable]: dentally <a>
 
@@ -109303,7 +109303,7 @@
 
 85 [ukacd]: dicky-bird <n>: dicky-birds
 
-80 [enable] [plurals]: dickys
+80 [enable] 85 [plurals]: dickys
 
 80 [2dicts] 85 [ukacd]: diclinism <n>
 80 [2dicts]: - <n>: diclinisms
@@ -109596,7 +109596,7 @@
 80 [enable]: diencephalic
 
 70 [moby] 80 [enable] 85 [ukacd]: diencephalon <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: diencephalons
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: diencephalons
 
 80 [enable] 85 [ukacd]: A: diene <n>: dienes
 80 [enable] 85 [ukacd]: B: diaene <n>
@@ -110146,7 +110146,7 @@
 
 85 [ukacd]: digynous
 
-80 [plurals]: dihedra
+85 [plurals]: dihedra
 
 70 [moby] 80 [enable] 85 [ukacd]: dihedral <n>: dihedrals
 
@@ -110516,7 +110516,7 @@
 70 [5desk]: diminuendi
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: diminuendo <n>
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (diminuendos | ?: diminuendoes)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (diminuendos | ?: diminuendoes)
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: diminuendo <aj>
 
@@ -116713,7 +116713,7 @@
 
 60 [12dicts] [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: dominatrix <n>
 60 [12dicts] [brif] 70 [3of6] [5desk]: - <n>: dominatrix's
-60 [12dicts] [brif] 70 [3of6] [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: (dominatrices | ~: dominatrixes)
+60 [12dicts] [brif] 70 [3of6] [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: (dominatrices | ~: dominatrixes)
 
 85 [stale]: A: domine <n>: domines
 85 [stale]: B: dominae <n>
@@ -120091,18 +120091,18 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: droshky <n>: droshkies
 
-80 [enable] [plurals]: droshkys
+80 [enable] 85 [plurals]: droshkys
 
 80 [enable] 85 [ukacd]: drosky <n>: droskies
 
-80 [enable] [plurals]: droskys
+80 [enable] 85 [plurals]: droskys
 
 85 [ukacd]: drosometer <n>: drosometers
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: drosophila <n>: drosophilas
 70 [5desk] [moby]: - <n>: drosophila's
 
-80 [enable] [plurals]: drosophilae
+80 [enable] 85 [plurals]: drosophilae
 
 35 [ukfreq] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: dross <n>
 80 [12dicts] [5desk] [enable] [moby]: - <n>: drosses~
@@ -122437,7 +122437,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: dyne <n>: dynes
 
 80 [enable]: dynein <n>
-80 [enable] [plurals]: - <n>: dyneins
+80 [enable] 85 [plurals]: - <n>: dyneins
 
 70 [moby] 80 [upper]: Dynel <n/upper?>: Dynels
 
@@ -123705,8 +123705,8 @@
 
 80 [ospdadd]: ecesic
 
-70 [moby] 80 [enable]: ecesis <n> #! unmarked variants: eceses, ecesises
-70 [moby] 80 [enable] [plurals]: - <n>: (eceses | ecesises)
+70 [moby] 80 [enable]: ecesis <n> # fixme: eceses: check if variant
+70 [moby] 80 [enable] 85 [plurals]: - <n>: (ecesises | -: eceses)
 
 60 [12dicts] 70 [3of6] [moby]: ECG <n/upper>: ECGs
 
@@ -124316,7 +124316,7 @@
 50 [census] [name] 70 [5desk]: - <n/person>: Ed's
 
 50 hacker 60 [12dicts] 80 [enable]: ed <n>
-50 hacker 80 [12dicts] [enable] [plurals]: - <n>: (ed~ | ?: eds~)
+50 hacker 80 [12dicts] [enable] 85 [plurals]: - <n>: (ed~ | ?: eds~)
 
 50 hacker 70 [moby]: ed <suf>
 
@@ -125030,7 +125030,7 @@
 70 [5desk] 80 [2dicts] 85 [ukacd]: effluvial
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: effluvium <n>
-60 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (effluvia | ~: effluviums)
+60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (effluvia | ~: effluviums)
 
 60 [extra] 70 [moby] 80 [enable] 85 [ukacd]: efflux <n>
 70 [moby] 80 [enable] 85 [ukacd]: - <n>: effluxes-
@@ -127971,7 +127971,7 @@
 60 [12dicts] 70 [5desk] 80 [enable]: emerita <a>
 
 80 [enable]: -emerita <n> # fixme: emeritas: check if variant
-80 [enable] [plurals]: - <n>: (emeritae | -: emeritas-)
+80 [enable] 85 [plurals]: - <n>: (emeritae | -: emeritas-)
 
 40 [3esl] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: emeritus <aj>
 
@@ -128878,8 +128878,8 @@
 
 80 [enable]: encephalomyocarditis <n>: encephalomyocarditises
 
-70 [5desk] [moby] 80 [enable] 85 [ukacd]: encephalon <n> #! unmarked variants: encephala, encephalons
-70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (encephala | encephalons)
+70 [5desk] [moby] 80 [enable] 85 [ukacd]: encephalon <n> # fixme: encephalons: check if variant
+70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (encephala | -: encephalons)
 
 80 [enable]: encephalopathic
 
@@ -128931,7 +128931,7 @@
 80 [enable]: enchiridia
 
 70 [moby] 80 [enable] 85 [ukacd]: enchiridion <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: enchiridions
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: enchiridions
 
 70 [moby] 85 [ukacd]: enchondroma <n>: enchondromas
 
@@ -129490,8 +129490,8 @@
 
 80 [enable]: endomitotic
 
-80 [enable] 85 [ukacd]: endomixis <n> #! unmarked variants: endomixes, endomixises
-80 [enable] [plurals] 85 [ukacd]: - <n>: (endomixes | endomixises)
+80 [enable] 85 [ukacd]: endomixis <n> # fixme: endomixes: check if variant
+80 [enable] 85 [plurals] [ukacd]: - <n>: (endomixises | -: endomixes!)
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: endomorph <n>: endomorphs
 70 [5desk] [moby]: - <n>: endomorph's
@@ -130505,9 +130505,9 @@
 50 [name] 70 [5desk] [moby] 85 [ukacd]: Enos <n/name?>
 50 [name] 70 [5desk] [moby]: - <n/name?>: Enos's
 
-70 [moby] 80 [enable] 85 [ukacd]: enosis <n> #! unmarked variants: enoses, enosises
+70 [moby] 80 [enable] 85 [ukacd]: enosis <n> # fixme: enoses: check if variant
 70 [moby]: - <n>: enosis's
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (enoses | enosises)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (enosises | -: enoses)
 
 35 [] [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: enough <n>
 80 [12dicts] [3esl] [5desk] [enable] [moby] 85 [ukacd]: - <n>: enoughs~
@@ -131364,7 +131364,7 @@
 85 [ukacd]: enurement
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: enuresis <n>
-80 [12dicts] [5desk] [enable] [moby] [plurals]: - <n>: (enureses~ | ~: enuresises~)
+80 [12dicts] [5desk] [enable] [moby] 85 [plurals]: - <n>: (enureses~ | ~: enuresises~)
 
 70 [5desk] 80 [enable] 85 [ukacd]: enuretic <n>: enuretics
 
@@ -132172,7 +132172,7 @@
 
 70 [moby] 80 [enable]: epileptoid
 
-80 [plurals]: epilimnia
+85 [plurals]: epilimnia
 
 70 [moby] 80 [enable] 85 [ukacd]: epilimnion <n>: epilimnions
 
@@ -132232,7 +132232,7 @@
 
 85 [ukacd]: epineural
 
-80 [enable] [plurals]: epineuria
+80 [enable] 85 [plurals]: epineuria
 
 80 [2dicts]: epineurial
 
@@ -132275,8 +132275,8 @@
 
 80 [enable]: epiphenomenally
 
-70 [moby] 80 [enable] 85 [ukacd]: epiphenomenon <n> #! unmarked variants: epiphenomena, epiphenomenons
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (epiphenomena | epiphenomenons)
+70 [moby] 80 [enable] 85 [ukacd]: epiphenomenon <n> # fixme: epiphenomenons: check if variant
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (epiphenomena | -: epiphenomenons)
 
 85 [ukacd]: epiphonema <n>: epiphonemas
 
@@ -132530,7 +132530,7 @@
 80 [enable] 85 [ukacd]: epitheliomatous
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: epithelium <n>
-65 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (epithelia- | ~: epitheliums-)
+65 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (epithelia- | ~: epitheliums-)
 
 80 [enable]: epithelization <n>: epithelizations
 
@@ -134211,8 +134211,8 @@
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: A C Dv: esophagus <n> #! missing non-variants: esophagi, esophaguses
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: B D: oesophagus <n>
-35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: A C Dv: - <n>: (A C Dv: esophagi | Av Cv: esophaguses)
-35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: B D: - <n>: (B D: oesophagi | Bv: oesophaguses)
+35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: A C Dv: - <n>: (A C Dv: esophagi | Av Cv: esophaguses)
+35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: B D: - <n>: (B D: oesophagi | Bv: oesophaguses)
 
 80 [moby]: Esopus <n/place>
 
@@ -137584,7 +137584,7 @@
 80 [ospdadd]: exed
 
 70 [moby] 80 [enable] 85 [ukacd]: exedra <n> #! unmarked variants: exedrae, exedras
-70 [moby] 80 [enable] [ospdadd] [plurals] 85 [ukacd]: - <n>: (exedrae | exedras)
+70 [moby] 80 [enable] [ospdadd] 85 [plurals] [ukacd]: - <n>: (exedrae | exedras)
 
 50 [12dicts] [ukfreq] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: exegesis <n>
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <n>: exegeses
@@ -140910,8 +140910,8 @@
 60 [brif] 70 [3of6] [5desk] [brif] [moby] 80 [enable] 85 [ukacd]: _V: felafel <n>
 60 [brif] 70 [3of6] [5desk] [brif] [moby]: _: - <n>: falafel's
 60 [brif] 70 [3of6] [5desk] [brif] [moby]: _V: - <n>: felafel's
-60 [brif] 70 [5desk] [moby] 80 [3of6] [ospdadd] [plurals] 85 [ukacd]: _: - <n>: falafels
-60 [brif] 70 [5desk] [moby] 80 [3of6] [ospdadd] [plurals] 85 [ukacd]: _V: - <n>: felafels
+60 [brif] 70 [5desk] [moby] 80 [3of6] [ospdadd] 85 [plurals] [ukacd]: _: - <n>: falafels
+60 [brif] 70 [5desk] [moby] 80 [3of6] [ospdadd] 85 [plurals] [ukacd]: _V: - <n>: felafels
 
 85 [ukacd]: falaj
 
@@ -141985,7 +141985,7 @@
 
 60 [12dicts] [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: farrago <n>
 60 [12dicts] [brif] 70 [3of6] [5desk] [moby]: - <n>: farrago's
-60 [12dicts] [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (farragoes | ~: farragos)
+60 [12dicts] [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (farragoes | ~: farragos)
 
 50 [name] 60 [12dicts] 70 [5desk]: Farragut <n/upper>: Farragut's
 
@@ -144822,7 +144822,7 @@
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] 80 [enable]: - <n>: fiancées
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] 80 [enable]: _~: - <n>: fiancees
 
-80 [enable] [plurals] 85 [ukacd]: fianchetti
+80 [enable] 85 [plurals] [ukacd]: fianchetti
 
 80 [enable] 85 [ukacd]: fianchetto <m>: fianchettoed, fianchettoing, (fianchettos | -: fianchettoes!) # fixme: fianchettoes: check if variant
 
@@ -145940,7 +145940,7 @@
 85 [ukacd]: filoselle <n>: filoselles
 
 70 [5desk] [moby] 80 [enable]: fils <n>
-70 [5desk] [moby] 80 [enable] [plurals]: - <n>: filses
+70 [5desk] [moby] 80 [enable] 85 [plurals]: - <n>: filses
 
 35 [12dicts] [ukfreq] 40 [3esl] 50 hacker 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: filter <n>: filters
 35 [12dicts] 40 [3esl] 50 hacker 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: filter's
@@ -147973,7 +147973,7 @@
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: flank <v>: flanked, flanking, flanks
 
 80 [enable]: flanken <n>
-80 [enable] [plurals]: - <n>: flankens
+80 [enable] 85 [plurals]: - <n>: flankens
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: flanker <n>: flankers
 60 [12dicts] 70 [5desk] [moby]: - <n>: flanker's
@@ -153072,7 +153072,7 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: forworn
 
-80 [ospdadd] [plurals] 85 [ukacd]: forzandi
+80 [ospdadd] 85 [plurals] [ukacd]: forzandi
 
 70 [moby] 80 [enable] 85 [ukacd]: forzando <n>: forzandos
 
@@ -154090,7 +154090,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: frangipane <n>: frangipanes
 
 70 [moby] 80 [enable] 85 [ukacd]: frangipani <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: frangipanis
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: frangipanis
 
 80 [enable]: frangipanni <n>
 
@@ -155309,7 +155309,7 @@
 85 [ukacd]: fricadel <n>: fricadels
 
 70 [moby] 80 [enable] 85 [ukacd]: fricandeau <n> #! unmarked variants: fricandeaus, fricandeaux
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (fricandeaus | fricandeaux)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (fricandeaus | fricandeaux)
 
 85 [stale]: fricando <n>: fricandoes
 
@@ -159332,7 +159332,7 @@
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <n>: gammas
 
 70 [moby] 80 [enable] 85 [ukacd]: gammadion <n> #! unmarked variants: gammadia, gammadions
-70 [moby] 80 [enable] [ospdadd] [plurals] 85 [ukacd]: - <n>: (gammadia | gammadions)
+70 [moby] 80 [enable] [ospdadd] 85 [plurals] [ukacd]: - <n>: (gammadia | gammadions)
 
 60 [12dicts] 70 [3of6] [moby] 85 [ukacd]: gamma globulin <n>
 
@@ -160571,7 +160571,7 @@
 85 [ukacd]: !gate <suf>
 
 60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: gateau <n> # fixme: gateaus: check if variant
-60 [brif] 70 [3of6] 80 [3of6] [enable] [plurals] 85 [ukacd]: - <n>: (gateaux | -: gateaus-)
+60 [brif] 70 [3of6] 80 [3of6] [enable] 85 [plurals] [ukacd]: - <n>: (gateaux | -: gateaus-)
 
 60 [12dicts] [brif] 70 [3of6] [5desk] 80 [2dicts] 85 [ukacd]: gatecrash <v>: gatecrashed, gatecrashing, gatecrashes
 
@@ -161259,7 +161259,7 @@
 80 [enable]: gelate <m>: gelated, gelating, gelates
 
 80 [enable] 85 [ukacd]: gelati <n>
-80 [ospdadd] [plurals]: - <n>: gelatis
+80 [ospdadd] 85 [plurals]: - <n>: gelatis
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: A B: gelatin <n>
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: AV Bv: gelatine <n>
@@ -161368,7 +161368,7 @@
 
 70 [moby] 80 [enable]: gemeinschaft <n>: gemeinschafts
 
-80 [enable] [plurals]: gemeinschaften
+80 [enable] 85 [plurals]: gemeinschaften
 
 85 [ukacd]: gemel <n>: gemels
 
@@ -162927,7 +162927,7 @@
 
 70 [moby] 80 [enable]: gesellschaft <n>: gesellschafts
 
-80 [enable] [plurals]: gesellschaften
+80 [enable] 85 [plurals]: gesellschaften
 
 80 [enable] 85 [ukacd]: gesneria <n>
 85 [ukacd]: - <n>: gesnerias
@@ -164128,8 +164128,8 @@
 50 [12dicts] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: _V: gingko <n>
 50 [12dicts] 70 [3of6] [5desk] [moby]: _: - <n>: ginkgo's
 50 [12dicts] 70 [3of6] [5desk] [moby]: _V: - <n>: gingko's
-50 [12dicts] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: _: - <n>: (ginkgoes | v: ginkgos)
-50 [12dicts] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: _V: - <n>: (gingkoes | ~: gingkos)
+50 [12dicts] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: _: - <n>: (ginkgoes | v: ginkgos)
+50 [12dicts] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: _V: - <n>: (gingkoes | ~: gingkos)
 
 85 [ukacd]: Ginkgoales <n/upper?>
 
@@ -166422,7 +166422,7 @@
 35 [] [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: go <aj>
 
 35 [] [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: go <n> {game}
-65 [12dicts] [3esl] 70 [5desk] [moby] 80 [enable] [plurals]: - <n> {game}: gos-
+65 [12dicts] [3esl] 70 [5desk] [moby] 80 [enable] 85 [plurals]: - <n> {game}: gos-
 
 35 [] [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: go <n> {try}: goes
 
@@ -167538,7 +167538,7 @@
 80 [enable]: - <n>: goniometries
 
 70 [moby] 80 [enable] 85 [ukacd]: gonion <n>
-70 [moby] 80 [ospdadd] [plurals]: - <n>: gonions
+70 [moby] 80 [ospdadd] 85 [plurals]: - <n>: gonions
 
 80 [enable] 85 [ukacd]: - <n>: gonia
 85 [stale]: gonium <n>
@@ -174742,7 +174742,7 @@
 50 [name]: Hafiz <n/name?>: Hafiz's
 
 70 [moby] 80 [enable] 85 [ukacd]: hafiz <n>
-70 [moby] 80 [ospdadd] [plurals]: - <n>: hafizes
+70 [moby] 80 [ospdadd] 85 [plurals]: - <n>: hafizes
 
 50 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: hafnium <n>
 80 [12dicts] [5desk] [enable] [moby]: - <n>: hafniums~
@@ -174765,7 +174765,7 @@
 
 80 [enable]: haftorah <n>: haftorahs
 
-80 [ospdadd] [plurals]: haftoros
+80 [ospdadd] 85 [plurals]: haftoros
 
 80 [enable]: haftorot
 
@@ -174970,7 +174970,7 @@
 70 [5desk]: Haikou </upper?>
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: haiku <n>
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (haiku | -: haikus)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (haiku | -: haikus)
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: hail <n>
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <n>: hails
@@ -175273,7 +175273,7 @@
 
 80 [enable]: halachot
 
-80 [enable] [plurals]: halachoth
+80 [enable] 85 [plurals]: halachoth
 
 70 [moby] 80 [upper] 85 [ukacd]: Halakah <n/upper?>
 70 [moby] 80 [upper]: - <n/upper?>: Halakahs-
@@ -175995,7 +175995,7 @@
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: hamadryad <n>: hamadryads
 70 [5desk] [moby]: - <n>: hamadryad's
 
-70 [5desk] 80 [enable] [plurals] 85 [ukacd]: hamadryades
+70 [5desk] 80 [enable] 85 [plurals] [ukacd]: hamadryades
 
 80 [2dicts] 85 [ukacd]: hamadryas <n>: hamadryases
 
@@ -180976,7 +180976,7 @@
 70 [moby]: - <n>: heller's
 
 80 [enable]: helleri <n>
-80 [enable] [plurals]: - <n>: helleris
+80 [enable] 85 [plurals]: - <n>: helleris
 
 80 [moby]: Hellertown <n/place>
 
@@ -182306,7 +182306,7 @@
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: herbarium <n>
 70 [5desk] [moby]: - <n>: herbarium's
-70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: herbariums
+70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: herbariums
 
 50 [name] 70 [moby]: Herbart <n/name?>: Herbart's
 
@@ -183303,7 +183303,7 @@
 
 70 [moby] 80 [2dicts]: heterogynous
 
-80 [enable] [plurals]: heterokarya
+80 [enable] 85 [plurals]: heterokarya
 
 80 [enable]: heterokaryon <n>: heterokaryons
 
@@ -192278,8 +192278,8 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: hydromechanics
 
-70 [moby] 80 [enable] 85 [ukacd]: hydromedusa <n> #! unmarked variants: hydromedusae, hydromedusas
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (hydromedusae | hydromedusas)
+70 [moby] 80 [enable] 85 [ukacd]: hydromedusa <n> # fixme: hydromedusas: check if variant
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (hydromedusae | -: hydromedusas!)
 
 85 [ukacd]: hydromedusan
 
@@ -193873,7 +193873,7 @@
 80 [2dicts]: hypolimnial
 
 70 [moby] 80 [enable] 85 [ukacd]: hypolimnion <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: hypolimnions
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: hypolimnions
 
 85 [ukacd]: hypolydian
 
@@ -197155,7 +197155,7 @@
 35 [12dicts] 40 [3esl] 70 [5desk] [moby] 80 [enable]: - <n>: impatiences
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: impatiens <n>
-80 [12dicts] [5desk] [enable] [moby] [plurals] 85 [ukacd]: - <n>: (impatiens~ | ~: impatienses~)
+80 [12dicts] [5desk] [enable] [moby] 85 [plurals] [ukacd]: - <n>: (impatiens~ | ~: impatienses~)
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: impatient <aj>
 
@@ -202816,7 +202816,7 @@
 50 [12dicts] 70 [5desk] 80 [enable] 85 [ukacd]: inimitably <av>
 
 70 [moby] 80 [enable] 85 [ukacd]: inion <n> #! unmarked variants: inia, inions
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (inia | inions)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (inia | inions)
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: iniquitous <aj>
 
@@ -215664,7 +215664,7 @@
 70 [5desk]: Kadar </upper?>
 
 60 [12dicts] 70 [5desk] 80 [enable]: kaddish <n>
-60 [12dicts] 70 [5desk] 80 [enable] [plurals]: - <n>: kaddishes
+60 [12dicts] 70 [5desk] 80 [enable] 85 [plurals]: - <n>: kaddishes
 
 80 [enable]: kaddishim
 
@@ -216773,7 +216773,7 @@
 80 [enable]: kazachki
 
 70 [moby] 80 [enable]: kazachok <n>
-70 [moby] 80 [ospdadd] [plurals]: - <n>: kazachoks
+70 [moby] 80 [ospdadd] 85 [plurals]: - <n>: kazachoks
 
 70 [moby] 80 [upper] 85 [ukacd]: Kazak <n/upper?>: Kazaks-
 70 [moby]: - <n/upper?>: Kazak's
@@ -217398,8 +217398,8 @@
 
 60 US [town] 80 [moby]: Kenosha <n/place>: Kenosha's
 
-70 [moby] 80 [enable] 85 [ukacd]: kenosis <n> #! unmarked variants: kenoses, kenosises
-70 [moby] 80 [enable] [plurals]: - <n>: (kenoses | kenosises)
+70 [moby] 80 [enable] 85 [ukacd]: kenosis <n> # fixme: kenoses: check if variant
+70 [moby] 80 [enable] 85 [plurals]: - <n>: (kenosises | -: kenoses)
 
 80 [enable] 85 [ukacd]: kenotic
 
@@ -217616,7 +217616,7 @@
 70 [5desk] [moby] 80 [upper]: Kerman <n/place>: Kermans
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: kermes <n>
-70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: kermeses
+70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: kermeses
 
 85 [ukacd]: kermesite
 
@@ -217712,7 +217712,7 @@
 85 [ukacd]: kerve <m>: kerved, kerving, kerves
 
 80 [enable] 85 [ukacd]: kerygma <n>
-80 [enable] [plurals]: - <n>: kerygmas
+80 [enable] 85 [plurals]: - <n>: kerygmas
 
 80 [enable]: kerygmata
 
@@ -218365,7 +218365,7 @@
 
 80 [enable] 85 [ukacd]: kiddush <n>: kiddushes
 
-80 [enable] [plurals]: kiddushim
+80 [enable] 85 [plurals]: kiddushim
 
 85 [ukacd]: kiddywink <n>: kiddywinks
 
@@ -218653,7 +218653,7 @@
 85 [ukacd]: kilogray <n>: kilograys
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: kilohertz <n>
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (kilohertz | ~: kilohertzes)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (kilohertz | ~: kilohertzes)
 
 60 [+] 80 [enable] 85 [ukacd]: kilojoule <n>
 60 [+] 80 [enable]: - <n>: kilojoules
@@ -219778,7 +219778,7 @@
 85 [ukacd]: Kletterschuhe </upper?>
 
 80 [enable] 85 [ukacd]: klezmer <n>
-80 [enable] [plurals]: - <n>: klezmers
+80 [enable] 85 [plurals]: - <n>: klezmers
 
 80 [enable] 85 [ukacd]: klezmorim
 
@@ -220537,7 +220537,7 @@
 70 [5desk] [moby] 85 [ukacd]: Koblenz </upper?>
 
 70 [5desk] 80 [enable]: kobo <n>
-70 [5desk] 80 [enable] [plurals]: - <n>: kobos
+70 [5desk] 80 [enable] 85 [plurals]: - <n>: kobos
 
 70 [moby] 80 [enable] 85 [ukacd]: kobold <n>: kobolds
 
@@ -220599,7 +220599,7 @@
 50 [12dicts] 65 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: - <n>: (kohlrabies | -: kohlrabis-)
 
 80 [enable] 85 [ukacd]: koi <n>
-80 [enable] [plurals]: - <n>: kois
+80 [enable] 85 [plurals]: - <n>: kois
 
 70 [moby] 80 [enable]: koine <n>: koines
 
@@ -220628,7 +220628,7 @@
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: kola <n>: kolas
 
-80 [enable] [plurals]: kolache <n>
+80 [enable] 85 [plurals]: kolache <n>
 80 [ospdadd]: - <n>: kolaches
 
 80 [enable]: kolacky
@@ -221311,7 +221311,7 @@
 85 [ukacd]: kuchcha
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable]: kuchen <n>
-60 [12dicts] 70 [5desk] [moby] 80 [enable] [ospdadd] [plurals]: - <n>: (kuchen | ?: kuchens)
+60 [12dicts] 70 [5desk] [moby] 80 [enable] [ospdadd] 85 [plurals]: - <n>: (kuchen | ?: kuchens)
 
 70 [5desk] 80 [enable]: kudo <n>
 70 [5desk] 80 [enable] 85 [ukacd]: - <n>: kudos
@@ -221509,7 +221509,7 @@
 80 [moby]: Kurtistown <n/place>
 
 70 [moby] 80 [enable] 85 [ukacd]: kurtosis <n> #! unmarked variants: kurtoses, kurtosises
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (kurtoses | kurtosises)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (kurtoses | kurtosises)
 
 80 [moby]: Kurtz <n/place>
 
@@ -221594,7 +221594,7 @@
 70 [moby] 80 [upper]: Kwa <n/upper?>
 
 70 [5desk] 80 [enable] 85 [ukacd]: kwacha <n>
-70 [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: kwachas
+70 [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: kwachas
 
 70 [5desk]: Kwajalein <n/upper?>
 
@@ -221684,7 +221684,7 @@
 85 [ukacd]: kylin <n>: kylins
 
 70 [moby] 80 [enable] 85 [ukacd]: kylix <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: kylices
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: kylices
 
 70 [moby] 85 [ukacd]: - <n>: (- | Bv: kyloes) #! missing non-variants: kyloes
 85 [ukacd]: kyloe <n>
@@ -229095,7 +229095,7 @@
 60 US [town]: Lexington Park <n/place>: Lexington Park's
 
 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: lexis <n>
-70 [5desk] [moby] 80 [enable] [plurals]: - <n>: lexises-
+70 [5desk] [moby] 80 [enable] 85 [plurals]: - <n>: lexises-
 
 70 [moby] 85 [ukacd]: lex loci
 
@@ -233151,7 +233151,7 @@
 80 [moby]: Lochgelly <n/place>
 
 70 [moby] 80 [enable] 85 [ukacd]: lochia <n>
-70 [moby] 80 [ospdadd] [plurals]: - <n>: lochias
+70 [moby] 80 [ospdadd] 85 [plurals]: - <n>: lochias
 
 80 [enable] 85 [ukacd]: lochial
 
@@ -238793,7 +238793,7 @@
 
 60 [12dicts] [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: mafioso <n>
 60 [12dicts] [brif] 70 [3of6] [5desk]: - <n>: -, mafioso's, (mafiosi's | ~: mafiosos')
-60 [12dicts] [brif] 70 [3of6] [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: (mafiosi | ~: mafiosos)
+60 [12dicts] [brif] 70 [3of6] [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: (mafiosi | ~: mafiosos)
 
 85 [ukacd]: ma foi
 
@@ -239349,7 +239349,7 @@
 65 [12dicts] 70 [5desk] [moby] 80 [upper]: - <n/upper>: Mahicans-
 
 80 [3of6] [enable]: mahimahi <n>
-80 [3of6] [enable] [plurals]: - <n>: mahimahis
+80 [3of6] [enable] 85 [plurals]: - <n>: mahimahis
 
 85 [ukacd]: mahi-mahi
 
@@ -241600,7 +241600,7 @@
 70 [5desk] [moby] 80 [upper]: B: - <n/upper?>: Manichaeisms-
 
 70 [5desk] [moby] 80 [enable]: manicotti <n>
-70 [5desk] [moby] 80 [2dicts] [plurals]: - <n>: manicottis
+70 [5desk] [moby] 80 [2dicts] 85 [plurals]: - <n>: manicottis
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: manicure <n>: manicures
 
@@ -247354,7 +247354,7 @@
 85 [ukacd]: megaherbivore <n>: megaherbivores
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: megahertz <n>
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: (megahertz | ~: megahertzes)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: (megahertz | ~: megahertzes)
 
 80 [enable]: megahit <n>: megahits
 
@@ -247520,7 +247520,7 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: megillah <n>: megillahs
 
-80 [enable] [plurals] 85 [ukacd]: megilloth
+80 [enable] 85 [plurals] [ukacd]: megilloth
 
 70 [moby] 80 [enable] 85 [ukacd]: megilp <n>: megilps
 
@@ -249476,7 +249476,7 @@
 70 [5desk] 80 [enable] 85 [ukacd]: mesencephalic
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: mesencephalon <n>
-70 [5desk] [moby] 80 [2dicts] [plurals] 85 [ukacd]: - <n>: mesencephalons
+70 [5desk] [moby] 80 [2dicts] 85 [plurals] [ukacd]: - <n>: mesencephalons
 
 80 [enable]: mesenchymal
 
@@ -250352,7 +250352,7 @@
 80 [enable]: metencephalic
 
 70 [moby] 80 [enable]: metencephalon <n>
-70 [moby] 80 [enable] [plurals]: - <n>: metencephalons
+70 [moby] 80 [enable] 85 [plurals]: - <n>: metencephalons
 
 35 [12dicts] 40 [3esl] 50 [ukfreq] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: meteor <n>
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: meteor's
@@ -251540,8 +251540,8 @@
 
 80 [2dicts]: microfilamentous
 
-80 [enable] 85 [ukacd]: microfilaria <n> #! unmarked variants: microfilariae, microfilarias
-80 [enable] [plurals]: - <n>: (microfilariae | microfilarias)
+80 [enable] 85 [ukacd]: microfilaria <n> # fixme: microfilarias: check if variant
+80 [enable] 85 [plurals]: - <n>: (microfilariae | -: microfilarias!)
 
 80 [enable]: microfilarial
 
@@ -252426,7 +252426,7 @@
 
 80 [enable]: midrashim
 
-80 [enable] [plurals]: midrashot
+80 [enable] 85 [plurals]: midrashot
 
 80 [enable]: midrashoth
 
@@ -252698,9 +252698,9 @@
 
 70 [5desk] 80 [enable]: mikveh <n>: mikvehs
 
-70 [5desk] 80 [enable] [plurals]: mikvos
+70 [5desk] 80 [enable] 85 [plurals]: mikvos
 
-70 [5desk] 80 [enable] [plurals]: mikvot
+70 [5desk] 80 [enable] 85 [plurals]: mikvot
 
 70 [5desk] 80 [enable]: mikvoth
 
@@ -253267,7 +253267,7 @@
 
 85 [stale]: millimho <n>: millimhos
 
-80 [plurals]: millimicra
+85 [plurals]: millimicra
 
 70 [moby] 80 [enable]: millimicron <n>: millimicrons
 
@@ -253527,7 +253527,7 @@
 70 [5desk]: - <n>: mimer's
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: mimesis <n>
-70 [5desk] [moby] 80 [enable] [plurals]: - <n>: mimeses
+70 [5desk] [moby] 80 [enable] 85 [plurals]: - <n>: mimeses
 
 80 [enable]: mimesises
 
@@ -262122,7 +262122,7 @@
 70 [moby] 80 [2dicts]: mucoviscidosis <n>: mucoviscidoses
 
 70 [moby] 80 [enable] 85 [ukacd]: mucro <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: mucros
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: mucros
 
 70 [moby] 80 [enable] 85 [ukacd]: mucronate
 
@@ -262394,7 +262394,7 @@
 
 60 [brif] 70 [3of6] [moby] 80 [enable] 85 [ukacd]: muggins <n>
 60 [brif] 70 [3of6] [moby]: - <n>: muggins's
-70 [moby] 80 [ospdadd] [plurals] 85 [ukacd]: - <n>: mugginses-
+70 [moby] 80 [ospdadd] 85 [plurals] [ukacd]: - <n>: mugginses-
 
 85 [ukacd]: muggish
 
@@ -264244,7 +264244,7 @@
 
 50 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: muskellunge <n>
 50 [12dicts] 70 [5desk] [moby]: - <n>: muskellunge's
-50 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (muskellunge | muskellunges*)
+50 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (muskellunge | muskellunges*)
 
 80 [2dicts]: muskelunge <n>: muskelunges
 
@@ -264912,7 +264912,7 @@
 80 [enable]: myelencephalic
 
 70 [moby] 80 [enable]: myelencephalon <n>
-70 [moby] 80 [enable] [plurals]: - <n>: myelencephalons
+70 [moby] 80 [enable] 85 [plurals]: - <n>: myelencephalons
 
 70 [5desk] 80 [enable] 85 [ukacd]: myelin <n>
 70 [5desk] 80 [enable]: - <n>: myelins
@@ -265236,7 +265236,7 @@
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: myrmidon <n>: myrmidons
 60 [12dicts] 70 [5desk] [moby]: - <n>: myrmidon's
 
-80 [ospdadd] [plurals]: myrmidones
+80 [ospdadd] 85 [plurals]: myrmidones
 
 85 [ukacd]: myrmidonian
 
@@ -265859,7 +265859,7 @@
 50 [name]: - <n/name?>: Nair's
 
 70 [5desk] 80 [enable] 85 [ukacd]: naira <n>
-70 [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: nairas
+70 [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: nairas
 
 85 [ukacd]: Nairnshire </upper?>
 
@@ -266078,7 +266078,7 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: nancy <n>: nancies
 
-80 [enable] [plurals]: nancys
+80 [enable] 85 [plurals]: nancys
 
 80 [upper]: NAND </abbr?>
 
@@ -268633,7 +268633,7 @@
 80 [moby]: Nemours <n/place>
 
 80 [enable] 85 [ukacd]: nene <n>
-80 [enable] [plurals] 85 [ukacd]: - <n>: nenes
+80 [enable] 85 [plurals] [ukacd]: - <n>: nenes
 
 80 [upper]: Nenets <n/upper?>
 
@@ -269046,7 +269046,7 @@
 85 [ukacd]: nephritical
 
 50 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: nephritis <n>
-80 [12dicts] [5desk] [enable] [moby] [plurals]: - <n>: (nephritides~ | ~: nephritises~)
+80 [12dicts] [5desk] [enable] [moby] 85 [plurals]: - <n>: (nephritides~ | ~: nephritises~)
 
 80 [moby]: nephro <pre>
 
@@ -269141,7 +269141,7 @@
 80 [enable] 85 [ukacd]: nereides
 
 80 [enable]: nereis <n>
-80 [enable] [plurals]: - <n>: nereises
+80 [enable] 85 [plurals]: - <n>: nereises
 
 70 [moby]: Nereus <n/upper?>: Nereus's
 
@@ -269690,7 +269690,7 @@
 
 80 [enable] 85 [ukacd]: neurohypophysis <n>: neurohypophyses
 
-80 [plurals]: neurohypophysises
+85 [plurals]: neurohypophysises
 
 85 [stale]: neuroid
 
@@ -272208,7 +272208,7 @@
 
 70 [moby] 80 [2dicts] 85 [ukacd]: noctiluca <n> #! unmarked variants: noctilucae, noctilucas, noctilucae's, noctilucas'
 70 [moby]: - <n>: -, noctiluca's, (noctilucae's | noctilucas')
-70 [moby] 80 [2dicts] [plurals] 85 [ukacd]: - <n>: (noctilucae | noctilucas)
+70 [moby] 80 [2dicts] 85 [plurals] [ukacd]: - <n>: (noctilucae | noctilucas)
 
 85 [ukacd]: noctilucence
 
@@ -272342,8 +272342,8 @@
 
 50 [census]: Noemi <n/person>: Noemi's
 
-70 [moby] 80 [enable] 85 [ukacd]: noesis <n> #! unmarked variants: noeses, noesises
-70 [moby] 80 [enable] [plurals]: - <n>: (noeses | noesises)
+70 [moby] 80 [enable] 85 [ukacd]: noesis <n> # fixme: noeses: check if variant
+70 [moby] 80 [enable] 85 [plurals]: - <n>: (noesises | -: noeses)
 
 85 [ukacd]: Noetian </upper?>
 
@@ -277067,11 +277067,11 @@
 80 [2dicts] 85 [ukacd]: notoriousness <n>
 80 [2dicts]: - <n>: notoriousnesses
 
-80 [enable] [plurals]: notornes
+80 [enable] 85 [plurals]: notornes
 
 70 [moby] 80 [enable] 85 [ukacd]: notornis <n>
 70 [moby]: - <n>: notornis's
-70 [moby] 80 [ospdadd] [plurals] 85 [ukacd]: - <n>: notornises
+70 [moby] 80 [ospdadd] 85 [plurals] [ukacd]: - <n>: notornises
 
 85 [ukacd]: Notoryctes </upper?>
 
@@ -282458,7 +282458,7 @@
 85 [ukacd]: omnibenevolent
 
 35 [ukfreq] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: omnibus <n>
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (omnibuses | ~: omnibusses)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (omnibuses | ~: omnibusses)
 
 35 [ukfreq] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: omnibus <aj>
 
@@ -282579,7 +282579,7 @@
 85 [ukacd]: omphalomancy
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: omphalos <n>
-70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: omphaloses
+70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: omphaloses
 
 80 [enable]: omphaloskepsis <n>: omphaloskepses
 
@@ -284187,7 +284187,7 @@
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk]: - <n>: oppressor's
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: - <n>: oppressors
 
-80 [plurals]: opprobria
+85 [plurals]: opprobria
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: opprobrious <aj>
 
@@ -285534,7 +285534,7 @@
 50 [12dicts] 70 [5desk] [moby] 80 [3of6] [enable]: - <aj>: ornerier, orneriest
 
 70 [moby] 80 [enable] 85 [ukacd]: ornis <n>
-70 [moby] 80 [ospdadd] [plurals] 85 [ukacd]: - <n>: ornises
+70 [moby] 80 [ospdadd] 85 [plurals] [ukacd]: - <n>: ornises
 
 80 [enable]: ornithes
 
@@ -286452,7 +286452,7 @@
 
 80 [moby]: Osteen <n/place>
 
-80 [enable] [plurals]: osteites
+80 [enable] 85 [plurals]: osteites
 
 80 [enable]: osteitic
 
@@ -286617,7 +286617,7 @@
 
 85 [ukacd]: ostiate
 
-80 [enable] [plurals]: ostinati
+80 [enable] 85 [plurals]: ostinati
 
 80 [enable] 85 [ukacd]: ostinato <n>: ostinatos
 
@@ -287013,7 +287013,7 @@
 40 [3esl] 60 [12dicts] 70 [3of6]: ought to
 
 70 [5desk] 80 [enable]: ouguiya <n>
-70 [5desk] 80 [enable] [plurals]: - <n>: ouguiyas
+70 [5desk] 80 [enable] 85 [plurals]: - <n>: ouguiyas
 
 50 [name] 60 [12dicts] 70 [5desk] [moby] 80 [upper]: Ouija <n/upper>
 50 [name] 60 [12dicts] 70 [5desk] [moby]: - <n/upper>: Ouija's
@@ -291168,7 +291168,7 @@
 80 [2dicts]: oxymetazoline <n>: oxymetazolines
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: oxymoron <n>
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (oxymora | ~: oxymorons)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (oxymora | ~: oxymorons)
 
 70 [5desk] 80 [enable] 85 [ukacd]: oxymoronic
 
@@ -292717,8 +292717,8 @@
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: B D: palaestra <n>
 70 [5desk] [moby]: A Dv: - <n>: palestra's
 70 [5desk] [moby]: B D: - <n>: palaestra's
-70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: A Dv: - <n>: palestras
-70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: B D: - <n>: palaestras
+70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: A Dv: - <n>: palestras
+70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: B D: - <n>: palaestras
 
 70 [5desk] 80 [enable] 85 [ukacd]: A Dv: palestrae
 70 [5desk] 80 [enable] 85 [ukacd]: B D: palaestrae
@@ -293137,7 +293137,7 @@
 80 [2dicts]: palpatory <aj>
 
 80 [enable]: palpebra <n>
-80 [enable] [plurals]: - <n>: palpebras
+80 [enable] 85 [plurals]: - <n>: palpebras
 
 80 [enable]: palpebrae
 
@@ -293426,7 +293426,7 @@
 
 85 [ukacd]: pancosmism
 
-80 [enable] [plurals]: pancratia
+80 [enable] 85 [plurals]: pancratia
 
 85 [ukacd]: pancratian
 
@@ -293632,7 +293632,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: panettone <n>
 70 [moby] 80 [enable]: - <n>: panettones
 
-80 [enable] [plurals] 85 [ukacd]: panettoni
+80 [enable] 85 [plurals] [ukacd]: panettoni
 
 70 [moby] 80 [enable]: panfish <n>
 
@@ -293809,7 +293809,7 @@
 80 [enable]: - <n>: panmixias
 
 80 [enable] 85 [ukacd]: panmixis <n>
-80 [ospdadd] [plurals]: - <n>: panmixises
+80 [ospdadd] 85 [plurals]: - <n>: panmixises
 
 50 [name]: Panmunjom <n/name?>: Panmunjom's
 
@@ -294727,7 +294727,7 @@
 85 [ukacd]: paradoctor <n>: paradoctors
 
 80 [enable] 85 [ukacd]: parador <n> #! unmarked variants: paradores, paradors
-80 [enable] [plurals] 85 [ukacd]: - <n>: (paradores | paradors)
+80 [enable] 85 [plurals] [ukacd]: - <n>: (paradores | paradors)
 
 70 [moby] 80 [enable] 85 [ukacd]: parados <n>
 70 [moby] 80 [enable]: - <n>: paradoses
@@ -294764,7 +294764,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: paradrop <m>: -, -, paradrops
 70 [moby] 80 [enable]: - <m>: paradropped, paradropping, -
 
-80 [enable] [plurals]: parae
+80 [enable] 85 [plurals]: parae
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: paraffin <n>
 80 [12dicts] [3esl] [5desk] [enable] [moby]: - <n>: paraffins~
@@ -295352,11 +295352,11 @@
 80 [enable]: parasexuality <n>: parasexualities
 
 80 [enable]: parashah <n>
-80 [enable] [plurals]: - <n>: parashahs
+80 [enable] 85 [plurals]: - <n>: parashahs
 
 80 [enable]: parashioth
 
-80 [enable] [plurals]: parashot
+80 [enable] 85 [plurals]: parashot
 
 80 [enable]: parashoth
 
@@ -297359,7 +297359,7 @@
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: pastorale <n>: pastorales
 
-70 [5desk] 80 [enable] [plurals]: pastorali
+70 [5desk] 80 [enable] 85 [plurals]: pastorali
 
 70 [5desk] 80 [3of6] [enable] 85 [ukacd]: pastoralism <n>
 70 [5desk] 80 [enable]: - <n>: pastoralisms
@@ -300406,7 +300406,7 @@
 80 [enable]: - <n>: penicillinases
 
 70 [moby] 80 [enable]: penicillium <n>
-70 [moby] 80 [enable] [plurals]: - <n>: penicilliums
+70 [moby] 80 [enable] 85 [plurals]: - <n>: penicilliums
 
 85 [ukacd]: penie
 
@@ -302042,7 +302042,7 @@
 80 [enable]: perihelial
 
 50 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: perihelion <n>
-50 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (perihelia | ~: perihelions)
+50 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (perihelia | ~: perihelions)
 
 85 [ukacd]: perihepatic
 
@@ -305889,7 +305889,7 @@
 70 [moby] 85 [ukacd]: phosphorous acid <n>
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: phosphorus <n>
-80 [12dicts] [3esl] [5desk] [enable] [moby] [plurals]: - <n>: (phosphoruses~ | ~: phosphori~)
+80 [12dicts] [3esl] [5desk] [enable] [moby] 85 [plurals]: - <n>: (phosphoruses~ | ~: phosphori~)
 
 80 [enable]: phosphoryl <n>: phosphoryls
 
@@ -306844,7 +306844,7 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: phylloxera <n>: phylloxeras
 
-80 [enable] [plurals]: phylloxerae
+80 [enable] 85 [plurals]: phylloxerae
 
 80 [2dicts] 85 [ukacd]: phylogenesis <n>
 80 [2dicts]: - <n>: phylogeneses
@@ -308915,7 +308915,7 @@
 85 [ukacd]: pingler <n>: pinglers
 
 80 [enable] 85 [ukacd]: pingo <n> #! unmarked variants: pingoes, pingos
-80 [enable] [plurals] 85 [ukacd]: - <n>: (pingoes | pingos)
+80 [enable] 85 [plurals] [ukacd]: - <n>: (pingoes | pingos)
 
 40 [3esl] 50 [12dicts] 70 [3of6] 85 [ukacd]: ping-pong
 
@@ -310886,7 +310886,7 @@
 80 [moby]: plasmo <pre>
 
 80 [enable] 85 [ukacd]: plasmodesm <n>
-80 [enable] [plurals] 85 [ukacd]: - <n>: plasmodesms
+80 [enable] 85 [plurals] [ukacd]: - <n>: plasmodesms
 
 80 [enable] 85 [ukacd]: plasmodesma <n>: (plasmodesmas | plasmodesmata) #! unmarked variants: plasmodesmas, plasmodesmata
 
@@ -313006,7 +313006,7 @@
 80 [2dicts] 85 [ukacd]: pococuranteism <n>
 80 [2dicts]: - <n>: pococuranteisms
 
-80 [plurals]: pococuranti
+85 [plurals]: pococuranti
 
 80 [enable] 85 [ukacd]: pococurantism <n>
 80 [enable]: - <n>: pococurantisms
@@ -314230,7 +314230,7 @@
 85 [ukacd]: polverine
 
 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: poly <n> # fixme: polies: check if variant
-60 [brif] 70 [3of6] [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: (polys | -: polies-)
+60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: (polys | -: polies-)
 
 70 [moby] 85 [ukacd]: !poly <pre>
 
@@ -316193,7 +316193,7 @@
 70 [moby] 85 [ukacd]: portal vein <n>: portal veins
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: portamento <n> # fixme: portamentos: check if variant
-70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (portamenti | -: portamentos)
+70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (portamenti | -: portamentos)
 
 80 [enable] 85 [ukacd]: portance <n>
 80 [enable]: - <n>: portances
@@ -321533,8 +321533,8 @@
 
 80 [2dicts] 85 [ukacd]: A: presternum <n> #! unmarked variants: presterna, presternums
 80 [2dicts] 85 [ukacd]: B: praesternum <n>
-80 [2dicts] [plurals] 85 [ukacd]: A: - <n>: (presterna | presternums)
-80 [2dicts] [plurals] 85 [ukacd]: B: - <n>
+80 [2dicts] 85 [plurals] [ukacd]: A: - <n>: (presterna | presternums)
+80 [2dicts] 85 [plurals] [ukacd]: B: - <n>
 
 70 [5desk]: prestidigitate
 
@@ -322049,7 +322049,7 @@
 85 [ukacd]: preyful
 
 80 [enable]: prez <n>
-80 [ospdadd] [plurals]: - <n>: prezzes
+80 [ospdadd] 85 [plurals]: - <n>: prezzes
 
 80 [enable]: prezes
 
@@ -324538,7 +324538,7 @@
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: proneness <n>
 80 [12dicts] [5desk] [enable]: - <n>: pronenesses~
 
-80 [enable] [plurals]: pronephra
+80 [enable] 85 [plurals]: pronephra
 
 80 [enable] 85 [ukacd]: pronephric
 
@@ -325088,7 +325088,7 @@
 85 [ukacd]: B: propylitise <m>: propylitised, propylitising, propylitises
 
 80 [enable] 85 [ukacd]: propylon <n> #! unmarked variants: propyla, propylons
-80 [enable] [ospdadd] [plurals] 85 [ukacd]: - <n>: (propyla | propylons)
+80 [enable] [ospdadd] 85 [plurals] [ukacd]: - <n>: (propyla | propylons)
 
 40 [3esl] 50 [12dicts] 70 [3of6] [moby] 85 [ukacd]: pro rata <av>
 
@@ -325144,7 +325144,7 @@
 80 [enable] 85 [ukacd]: prosauropod <n>: prosauropods
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: proscenium <n>
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (prosceniums | ~: proscenia)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (prosceniums | ~: proscenia)
 
 60 [12dicts] 85 [ukacd]: proscenium arch <n>
 
@@ -325234,7 +325234,7 @@
 80 [enable] 85 [ukacd]: prosencephalic
 
 80 [enable] 85 [ukacd]: prosencephalon <n>
-80 [2dicts] [plurals] 85 [ukacd]: - <n>: prosencephalons
+80 [2dicts] 85 [plurals] [ukacd]: - <n>: prosencephalons
 
 70 [moby] 80 [2dicts] 85 [ukacd]: prosenchyma <n>: prosenchymas
 
@@ -325304,7 +325304,7 @@
 
 80 [enable]: prosomal
 
-80 [enable] [plurals]: prosomata
+80 [enable] 85 [plurals]: prosomata
 
 85 [ukacd]: prosopagnosia
 
@@ -325959,7 +325959,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: protozoology <n>
 70 [moby] 80 [enable]: - <n>: protozoologies
 
-50 [12dicts] 60 [brif] 65 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (protozoa | -: protozoons-) # fixme: protozoons: check if variant
+50 [12dicts] 60 [brif] 65 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (protozoa | -: protozoons-) # fixme: protozoons: check if variant
 50 [12dicts] 60 [12dicts] [brif] 65 [12dicts] 70 [5desk] [moby]: - <n>: -, -, (protozoa's | -: protozoons'-)
 70 [12dicts] [5desk] [brif] [moby] 80 [enable] 85 [ukacd]: protozoon <n>
 70 [12dicts] [5desk] [brif] [moby]: - <n>: protozoon's
@@ -328067,7 +328067,7 @@
 70 [5desk] [moby] 80 [enable]: pul <n>: puls
 
 70 [5desk] 80 [enable] 85 [ukacd]: pula <n>
-70 [5desk] 80 [ospdadd] [plurals]: - <n>: pulas
+70 [5desk] 80 [ospdadd] 85 [plurals]: - <n>: pulas
 
 50 [name] 60 [12dicts] 70 [5desk] 80 [upper]: Pulaski <n/upper>
 50 [name] 60 [12dicts] 70 [5desk]: - <n/upper>: Pulaski's
@@ -330292,8 +330292,8 @@
 
 85 [ukacd]: pyroscope <n>: pyroscopes
 
-70 [moby] 80 [enable] 85 [ukacd]: pyrosis <n> #! unmarked variants: pyroses, pyrosises
-70 [moby] 80 [enable] [plurals]: - <n>: (pyroses | pyrosises)
+70 [moby] 80 [enable] 85 [ukacd]: pyrosis <n> # fixme: pyroses: check if variant
+70 [moby] 80 [enable] 85 [plurals]: - <n>: (pyrosises | -: pyroses)
 
 85 [ukacd]: Pyrosoma </upper?>
 
@@ -330572,7 +330572,7 @@
 80 [enable] 85 [ukacd]: qindar <n>: qindars
 
 70 [5desk] 80 [enable]: qindarka <n>
-70 [5desk] 80 [enable] [plurals]: - <n>: qindarkas
+70 [5desk] 80 [enable] 85 [plurals]: - <n>: qindarkas
 
 50 [name] 60 [12dicts] 70 [5desk]: Qingdao <n/name?>: Qingdao's
 
@@ -330863,7 +330863,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: quadrivial
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: quadrivium <n> #! unmarked variants: quadrivia, quadriviums
-65 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals]: - <n>: (quadrivia- | quadriviums-)
+65 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals]: - <n>: (quadrivia- | quadriviums-)
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: quadroon <n>: quadroons
 70 [5desk] [moby]: - <n>: quadroon's
@@ -331376,7 +331376,7 @@
 70 [moby]: quarter sessions <n>: quarter sessions's
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: quarterstaff <n>
-60 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (quarterstaves | ~: quarterstaffs)
+60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (quarterstaves | ~: quarterstaffs)
 
 70 [moby] 85 [ukacd]: quarter tone <n>: quarter tones
 
@@ -334933,7 +334933,7 @@
 
 80 [enable] 85 [ukacd]: ranula <n>: ranulas
 
-80 [enable] [plurals]: ranulae
+80 [enable] 85 [plurals]: ranulae
 
 80 [ospdadd]: ranular
 
@@ -335044,7 +335044,7 @@
 80 [12dicts] [5desk] [enable] [moby] 85 [ukacd]: - <n>: rapines~
 
 80 [enable]: rapini <n>
-80 [enable] [plurals]: - <n>: rapinis
+80 [enable] 85 [plurals]: - <n>: rapinis
 
 35 [ukfreq] 40 [3esl] 50 [12dicts] 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: rapist <n>: rapists
 40 [3esl] 50 [12dicts] 60 [brif] 70 [3of6] [5desk]: - <n>: rapist's
@@ -335068,7 +335068,7 @@
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: rapper's
 
 80 [enable]: rappini <n>
-80 [enable] [plurals]: - <n>: rappinis
+80 [enable] 85 [plurals]: - <n>: rappinis
 
 85 [ukacd]: Rappist </upper?>
 
@@ -336415,7 +336415,7 @@
 35 [12dicts] 40 [3esl] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: - <av>: realer, realest
 
 35 [] [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: real <n> {Brazilian money}
-35 [12dicts] 40 [3esl] 70 [5desk] [moby] 80 [enable] [ospdadd] [plurals] 85 [ukacd]: - <n> {Brazilian money}: (reals | -: reais | -: reales | -: reis)
+35 [12dicts] 40 [3esl] 70 [5desk] [moby] 80 [enable] [ospdadd] 85 [plurals] [ukacd]: - <n> {Brazilian money}: (reals | -: reais | -: reales | -: reis)
 
 35 [] [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: real <n> {Spanish money}
 35 [12dicts] 40 [3esl] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: - <n> {Spanish money}: (reals | ~: reales)
@@ -346652,7 +346652,7 @@
 80 [enable] 85 [ukacd]: rhinencephalic
 
 70 [moby] 80 [enable] 85 [ukacd]: rhinencephalon <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: rhinencephalons
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: rhinencephalons
 
 85 [ukacd]: Rhineodon </upper?>
 
@@ -346924,7 +346924,7 @@
 80 [enable]: rhombencephala
 
 70 [moby] 80 [enable] 85 [ukacd]: rhombencephalon <n>
-70 [moby] 80 [2dicts] [plurals]: - <n>: rhombencephalons
+70 [moby] 80 [2dicts] 85 [plurals]: - <n>: rhombencephalons
 
 85 [ukacd]: rhombenporphyr
 
@@ -348127,7 +348127,7 @@
 80 [moby]: Rileyville <n/place>
 
 70 [moby] 80 [enable] 85 [ukacd]: rilievo <n> #! unmarked variants: rilievi, rilievos
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (rilievi | rilievos)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (rilievi | rilievos)
 
 50 [name] 70 [5desk] [moby] 85 [ukacd]: Rilke <n/name?>
 50 [name] 70 [5desk] [moby]: - <n/name?>: Rilke's
@@ -348686,7 +348686,9 @@
 
 80 [moby]: Rison <n/place>
 
-80 [plurals]: risorgimenti
+80 [upper]: Risorgimenti </upper?>
+
+85 [plurals]: risorgimenti
 
 50 [name] 70 [moby] 80 [upper]: Risorgimento <n/upper>
 50 [name] 70 [moby]: - <n/upper>: Risorgimento's
@@ -352247,7 +352249,7 @@
 80 [enable]: rubasse <n>: rubasses
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: rubato <n>
-60 [12dicts] 70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (rubatos | ~: rubati)
+60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (rubatos | ~: rubati)
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: rubato <a>
 
@@ -352701,7 +352703,7 @@
 80 [moby]: Ruffsdale <n/place>
 
 70 [5desk] 80 [enable] 85 [ukacd]: rufiyaa <n>
-70 [5desk] 80 [ospdadd] [plurals] 85 [ukacd]: - <n>: rufiyaas
+70 [5desk] 80 [ospdadd] 85 [plurals] [ukacd]: - <n>: rufiyaas
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: rufous
 
@@ -355825,7 +355827,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: saltant <n>
 85 [ukacd]: - <n>: saltants!
 
-80 [enable] [plurals] 85 [ukacd]: saltarelli
+80 [enable] 85 [plurals] [ukacd]: saltarelli
 
 70 [moby] 80 [enable] 85 [ukacd]: saltarello <n>: saltarellos
 
@@ -357168,7 +357170,7 @@
 
 80 [enable]: santims <n>
 
-80 [enable] [plurals]: santimu
+80 [enable] 85 [plurals]: santimu
 
 80 [enable] 85 [ukacd]: santir <n>: santirs
 
@@ -357977,7 +357979,7 @@
 80 [ospdadd]: sastra <n>: sastras
 
 70 [moby] 80 [enable] 85 [ukacd]: sastruga <n>
-70 [moby] 80 [ospdadd] [plurals]: - <n>: sastrugas
+70 [moby] 80 [ospdadd] 85 [plurals]: - <n>: sastrugas
 
 80 [enable] 85 [ukacd]: sastrugi
 
@@ -359482,7 +359484,7 @@
 
 85 [ukacd]: scarabaean <n>
 
-80 [enable] [plurals] 85 [ukacd]: scarabaei
+80 [enable] 85 [plurals] [ukacd]: scarabaei
 
 70 [moby] 80 [2dicts] 85 [ukacd]: scarabaeid <n>: scarabaeids
 70 [moby]: - <n>: scarabaeid's
@@ -360057,7 +360059,7 @@
 
 80 [moby]: Schertz <n/place>
 
-80 [plurals] 85 [ukacd]: scherzandi
+85 [plurals] [ukacd]: scherzandi
 
 70 [moby] 80 [enable] 85 [ukacd]: scherzando <n>: scherzandos
 
@@ -360458,7 +360460,7 @@
 70 [5desk] [moby]: - <n>: schnorrer's
 
 60 [12dicts] 70 [5desk] 80 [enable]: schnoz <n> # fixme: schnozzes: check if variant
-60 [12dicts] 65 [12dicts] 70 [5desk] 80 [enable] [plurals]: - <n>: (schnozes | -: schnozzes-)
+60 [12dicts] 65 [12dicts] 70 [5desk] 80 [enable] 85 [plurals]: - <n>: (schnozes | -: schnozzes-)
 
 85 [stale]: schnozz
 
@@ -360709,7 +360711,7 @@
 85 [stale] [ukacd]: schuit <n>: schuits
 
 80 [enable] 85 [ukacd]: schul <n>
-80 [ospdadd] [plurals] 85 [ukacd]: - <n>: schuls
+80 [ospdadd] 85 [plurals] [ukacd]: - <n>: schuls
 
 80 [moby]: Schulenburg <n/place>
 
@@ -361091,7 +361093,7 @@
 80 [enable] 85 [ukacd]: scleroid
 
 70 [moby] 80 [enable] 85 [ukacd]: scleroma <n> #! unmarked variants: scleromas, scleromata
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (scleromas | scleromata)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (scleromas | scleromata)
 
 85 [ukacd]: scleromalacia
 
@@ -362292,7 +362294,7 @@
 85 [ukacd]: scriptorial
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: scriptorium <n> #! unmarked variants: scriptoria, scriptoriums
-70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (scriptoria | scriptoriums)
+70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (scriptoria | scriptoriums)
 
 85 [ukacd]: scriptory
 
@@ -372227,7 +372229,7 @@
 85 [ukacd]: shraddha <n>: shraddhas
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: shrapnel <n>
-80 [12dicts] [3esl] [5desk] [moby] [ospdadd] [plurals] 85 [ukacd]: - <n>: shrapnels~
+80 [12dicts] [3esl] [5desk] [moby] [ospdadd] 85 [plurals] [ukacd]: - <n>: shrapnels~
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: shred <n>: shreds
 
@@ -373931,7 +373933,7 @@
 80 [enable] 85 [ukacd]: silicotic <n>: silicotics
 
 80 [enable] 85 [ukacd]: silicula <n>
-80 [enable] [plurals] 85 [ukacd]: - <n>: siliculas
+80 [enable] 85 [plurals] [ukacd]: - <n>: siliculas
 
 80 [enable] [ospdadd] 85 [ukacd]: A: silicule <n>
 80 [enable] [ospdadd] 85 [ukacd]: B: siliculae <n>
@@ -373941,7 +373943,7 @@
 70 [moby] 85 [ukacd]: siliculose
 
 70 [moby] 80 [enable] 85 [ukacd]: siliqua <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: siliquas
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: siliquas
 
 80 [2dicts]: siliquaceous
 
@@ -374722,7 +374724,7 @@
 65 [12dicts] [3esl] 70 [5desk] [moby]: - <aj>: sinewier-, sinewiest-
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: sinfonia <n>
-70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: sinfonias
+70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: sinfonias
 
 80 [enable]: sinfonie
 
@@ -381605,7 +381607,7 @@
 85 [stale]: soleret <n>: solerets
 
 80 [enable] 85 [ukacd]: soleus <n>
-80 [enable] [plurals] 85 [ukacd]: - <n>: soleuses
+80 [enable] 85 [plurals] [ukacd]: - <n>: soleuses
 
 70 [3of6] [moby] 85 [ukacd]: sol-fa
 
@@ -381725,7 +381727,7 @@
 85 [ukacd]: solidungulous
 
 60 [12dicts] 70 [5desk] [moby] 80 [enable] 85 [ukacd]: solidus <n> # fixme: soliduses: check if variant
-60 [12dicts] 65 [12dicts] 70 [5desk] [moby] 80 [enable] [ospdadd] [plurals] 85 [ukacd]: - <n>: (solidi | -: soliduses-)
+60 [12dicts] 65 [12dicts] 70 [5desk] [moby] 80 [enable] [ospdadd] 85 [plurals] [ukacd]: - <n>: (solidi | -: soliduses-)
 
 70 [moby] 85 [ukacd]: solifidian <n>: solifidians
 
@@ -383137,7 +383139,7 @@
 
 85 [ukacd]: sossing <n>: sossings
 
-80 [enable] [plurals]: sostenuti
+80 [enable] 85 [plurals]: sostenuti
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: sostenuto <n>
 70 [5desk] [moby] 80 [enable]: - <n>: sostenutos
@@ -384192,7 +384194,7 @@
 85 [ukacd]: spaer <n>: spaers
 
 70 [moby] 80 [enable]: spaetzle <n>
-70 [moby] 80 [enable] [plurals]: - <n>: spaetzles
+70 [moby] 80 [enable] 85 [plurals]: - <n>: spaetzles
 
 85 [ukacd]: spaewife <n>: spaewives
 
@@ -384767,7 +384769,7 @@
 85 [ukacd]: spatule <n>: spatules
 
 80 [enable]: spatzle <n>
-80 [enable] [plurals]: - <n>: spatzles
+80 [enable] 85 [plurals]: - <n>: spatzles
 
 85 [ukacd]: spauld <n>: spaulds
 
@@ -388820,7 +388822,7 @@
 80 [enable] 85 [ukacd]: - <a>: squelchier!, squelchiest!
 
 70 [moby] 80 [enable] 85 [ukacd]: squeteague <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: squeteagues
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: squeteagues
 
 60 [12dicts] [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: squib <n>: squibs
 
@@ -391411,7 +391413,7 @@
 
 60 [12dicts] 70 [3of6] [5desk] 80 [enable]: stegosaurus <n>
 60 [12dicts] 70 [3of6] [5desk]: - <n>: -, stegosaurus's, (stegosauruses' | ?: stegosauri's)
-60 [12dicts] 70 [3of6] [5desk] 80 [enable] [plurals]: - <n>: (stegosauruses | ?: stegosauri)
+60 [12dicts] 70 [3of6] [5desk] 80 [enable] 85 [plurals]: - <n>: (stegosauruses | ?: stegosauri)
 
 80 [moby]: Stehekin <n/place>
 
@@ -394575,7 +394577,7 @@
 85 [ukacd]: strapontin <n>: strapontins
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: strappado <n> #! unmarked variants: strappadoes, strappados
-70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (strappadoes | strappados)
+70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (strappadoes | strappados)
 
 85 [ukacd]: !strappado <v>: strappadoed, strappadoing, strappados
 
@@ -395739,7 +395741,7 @@
 80 [2dicts]: strophuli
 
 80 [2dicts]: strophulus <n>
-80 [2dicts] [plurals]: - <n>: strophuluses
+80 [2dicts] 85 [plurals]: - <n>: strophuluses
 
 80 [enable]: stropper <n>: stroppers
 
@@ -397574,8 +397576,8 @@
 
 85 [ukacd]: submatrix
 
-80 [2dicts]: submaxilla <n> #! unmarked variants: submaxillae, submaxillas
-80 [2dicts] [plurals]: - <n>: (submaxillae | submaxillas)
+80 [2dicts]: submaxilla <n> # fixme: submaxillas: check if variant
+80 [2dicts] 85 [plurals]: - <n>: (submaxillae | -: submaxillas)
 
 70 [moby] 80 [enable] 85 [ukacd]: submaxillary <n>
 70 [moby] 80 [enable]: - <n>: submaxillaries
@@ -398278,7 +398280,7 @@
 70 [5desk] [moby] 80 [2dicts]: - <n>: substratospheres
 
 50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: substratum <n>
-50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (substrata | ~: substratums)
+50 [12dicts] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (substrata | ~: substratums)
 
 85 [ukacd]: substruct <m>: substructed, substructing, substructs
 
@@ -398780,7 +398782,7 @@
 85 [ukacd]: succous
 
 80 [enable] 85 [ukacd]: succuba <n>
-80 [enable] [plurals] 85 [ukacd]: - <n>: succubas
+80 [enable] 85 [plurals] [ukacd]: - <n>: succubas
 
 80 [enable] 85 [ukacd]: A: succube
 80 [enable] 85 [ukacd]: B: succubae
@@ -401291,7 +401293,7 @@
 80 [enable]: superpersonal
 
 80 [enable]: superphenomenon <n> #! unmarked variants: superphenomena, superphenomenons
-80 [enable] [plurals]: - <n>: (superphenomena | superphenomenons)
+80 [enable] 85 [plurals]: - <n>: (superphenomena | superphenomenons)
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: superphosphate <n>: superphosphates
 
@@ -401530,7 +401532,7 @@
 60 [12dicts] [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: superstore <n>: superstores
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: superstratum <n> #! unmarked variants: superstrata, superstratums
-70 [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (superstrata | superstratums)
+70 [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (superstrata | superstratums)
 
 70 [5desk] 80 [enable]: superstrength <n>: superstrengths
 
@@ -402315,7 +402317,7 @@
 70 [moby]: - <n>: suricate's
 
 80 [enable]: surimi <n>
-80 [ospdadd] [plurals]: - <n>: surimis
+80 [ospdadd] 85 [plurals]: - <n>: surimis
 
 70 [12dicts] [5desk] [moby] [name] 85 [ukacd]: Surinam <n/upper>
 70 [12dicts] [5desk] [moby] [name]: - <n/upper>: Surinam's
@@ -405277,8 +405279,8 @@
 60 [12dicts] [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: synergy <n>
 60 [12dicts] 70 [3of6] [5desk] [moby] 80 [enable]: - <n>: synergies
 
-80 [enable] 85 [ukacd]: synesis <n> #! unmarked variants: syneses, synesises
-80 [enable] [plurals]: - <n>: (syneses | synesises)
+80 [enable] 85 [ukacd]: synesis <n> # fixme: syneses: check if variant
+80 [enable] 85 [plurals]: - <n>: (synesises | -: syneses!)
 
 70 [moby] 80 [enable] 85 [ukacd]: A Dv: synesthesia <n>: synesthesias
 70 [moby] 80 [enable] 85 [ukacd]: B D: synaesthesia <n>: synaesthesias
@@ -405327,7 +405329,7 @@
 80 [enable] 85 [ukacd]: synizesis <n>
 80 [enable]: - <n>: synizeses
 
-80 [enable] [plurals]: synkarya
+80 [enable] 85 [plurals]: synkarya
 
 80 [enable] 85 [ukacd]: synkaryon <n>
 80 [enable]: - <n>: synkaryons
@@ -406796,7 +406798,7 @@
 
 70 [5desk] 80 [enable] 85 [ukacd]: taka <n>
 70 [5desk]: - <n>: taka's
-70 [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: takas
+70 [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: takas
 
 80 [enable] 85 [ukacd]: takable
 
@@ -407160,17 +407162,17 @@
 70 [moby]: - <n/upper?>: Tallis's
 
 80 [enable]: tallis <n>
-80 [enable] [plurals]: - <n>: tallises
+80 [enable] 85 [plurals]: - <n>: tallises
 
 60 [12dicts] 70 [5desk] 80 [enable] 85 [ukacd]: tallish <aj>
 
 80 [enable]: tallisim
 
 80 [enable]: tallit <n>
-80 [ospdadd] [plurals]: - <n>: tallits
+80 [ospdadd] 85 [plurals]: - <n>: tallits
 
 70 [moby] 80 [enable] 85 [ukacd]: tallith <n>
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: talliths
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: talliths
 
 80 [enable]: tallithes
 
@@ -407607,7 +407609,7 @@
 85 [ukacd]: tandemwise
 
 80 [enable] 85 [ukacd]: tandoor <n>
-80 [enable] [plurals] 85 [ukacd]: - <n>: tandoors
+80 [enable] 85 [plurals] [ukacd]: - <n>: tandoors
 
 60 [12dicts] [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: tandoori <n>
 80 [12dicts] [5desk] [enable] 85 [ukacd]: - <n>: tandooris~
@@ -409987,7 +409989,7 @@
 70 [moby] 80 [enable] 85 [ukacd]: tectrix <n>: tectrices
 
 80 [enable] 85 [ukacd]: tectum <n>
-80 [enable] [plurals]: - <n>: tectums
+80 [enable] 85 [plurals]: - <n>: tectums
 
 50 [name] 60 [12dicts] 70 [5desk] [moby]: Tecumseh <n/upper>: Tecumseh's
 
@@ -410525,7 +410527,7 @@
 80 [enable] 85 [ukacd]: telencephalic
 
 70 [moby] 80 [enable] 85 [ukacd]: telencephalon <n>
-70 [moby] 80 [enable] [plurals]: - <n>: telencephalons
+70 [moby] 80 [enable] 85 [plurals]: - <n>: telencephalons
 
 80 [enable] 85 [ukacd]: teleologic
 
@@ -410978,7 +410980,7 @@
 80 [2dicts] 85 [ukacd]: telophasic
 
 80 [enable] 85 [ukacd]: telos <n>
-80 [enable] [plurals] 85 [ukacd]: - <n>: teloses
+80 [enable] 85 [plurals] [ukacd]: - <n>: teloses
 
 80 [enable]: telotaxis <n>: telotaxes
 
@@ -411552,8 +411554,8 @@
 70 [moby] 80 [enable] 85 [ukacd]: B: taeniasis <n>
 70 [moby]: A: - <n>: teniasis's
 70 [moby]: B: - <n>: taeniasis's
-70 [moby] 80 [enable] [plurals]: A: - <n>: teniases
-70 [moby] 80 [enable] [plurals]: B: - <n>: taeniases
+70 [moby] 80 [enable] 85 [plurals]: A: - <n>: teniases
+70 [moby] 80 [enable] 85 [plurals]: B: - <n>: taeniases
 
 80 [moby]: Tenino <n/place>
 
@@ -412691,7 +412693,7 @@
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: tessitura <n>: tessituras
 
-80 [enable] [plurals]: tessiture
+80 [enable] 85 [plurals]: tessiture
 
 35 [] [12dicts] [ukfreq] 40 [3esl] 50 hacker 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: test <n>
 35 [] [12dicts] 40 [3esl] 50 hacker 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: test's
@@ -412735,7 +412737,7 @@
 
 60 [12dicts] 70 [5desk] 80 [enable] 85 [ukacd]: testatrix <n>
 60 [12dicts] 70 [5desk]: - <n>: testatrix's
-60 [12dicts] 70 [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: (testatrices | -: testatrixes)
+60 [12dicts] 70 [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: (testatrices | -: testatrixes)
 
 85 [ukacd]: testatum <n>: testatums
 
@@ -413860,7 +413862,7 @@
 70 [5desk] 80 [upper] 85 [ukacd]: Theban <aj/upper?>
 
 70 [5desk] 80 [enable]: thebe <n>
-70 [5desk] 80 [enable] [plurals]: - <n>: thebes
+70 [5desk] 80 [enable] 85 [plurals]: - <n>: thebes
 
 50 [name] 60 [12dicts] 70 [5desk] [moby] 85 [ukacd]: Thebes <n/upper>
 50 [name] 60 [12dicts] 70 [5desk] [moby]: - <n/upper>: Thebes's
@@ -419071,7 +419073,7 @@
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: - <v>: toed, toeing, toes
 
 70 [5desk] 80 [enable] 85 [ukacd]: toea <n>
-70 [5desk] 80 [enable] [plurals]: - <n>: toeas
+70 [5desk] 80 [enable] 85 [plurals]: - <n>: toeas
 
 60 [12dicts] [brif] 70 [3of6] 80 [enable] 85 [ukacd]: toecap <n>: toecaps
 
@@ -419607,8 +419609,8 @@
 
 50 [census]: Tomas <n/person>: Tomas's
 
-80 [enable] 85 [ukacd]: tomatillo <n> #! unmarked variants: tomatilloes, tomatillos
-80 [enable] [plurals] 85 [ukacd]: - <n>: (tomatilloes | tomatillos)
+80 [enable] 85 [ukacd]: tomatillo <n> # fixme: tomatilloes: check if variant
+80 [enable] 85 [plurals] [ukacd]: - <n>: (tomatillos | -: tomatilloes)
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: tomato <n>: tomatoes
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: tomato's
@@ -420812,7 +420814,7 @@
 70 [5desk] 80 [ospdadd]: torquey
 
 70 [moby] 80 [enable] 85 [ukacd]: torr <n>
-70 [moby] 80 [ospdadd] [plurals] 85 [ukacd]: - <n>: torrs
+70 [moby] 80 [ospdadd] 85 [plurals] [ukacd]: - <n>: torrs
 
 50 [name] 60 [12dicts] 70 [5desk] [moby]: Torrance <n/name?>: Torrance's
 
@@ -426202,7 +426204,7 @@
 80 [enable] 85 [ukacd]: triskele <n>: triskeles
 
 70 [moby] 80 [enable] 85 [ukacd]: triskelion <n> #! unmarked variants: triskelia, triskelions
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (triskelia | triskelions)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (triskelia | triskelions)
 
 85 [ukacd]: Trismegistus </upper?>
 
@@ -427757,7 +427759,7 @@
 85 [ukacd]: tsigane <n>: tsiganes
 
 80 [enable]: tsimmes <n>
-80 [enable] [plurals]: - <n>: tsimmeses
+80 [enable] 85 [plurals]: - <n>: tsimmeses
 
 50 [name] 70 [moby] 80 [upper]: Tsimshian <n/upper>
 50 [name] 70 [moby]: - <n/upper>: Tsimshian's
@@ -429314,7 +429316,7 @@
 
 85 [stale] [ukacd]: tusser <n>: tussers
 
-80 [enable] [plurals]: tusses
+80 [enable] 85 [plurals]: tusses
 
 70 [moby] 80 [enable] 85 [ukacd]: tussis <n>
 70 [moby] 80 [enable]: - <n>: tussises
@@ -430659,7 +430661,7 @@
 85 [ukacd]: tzigany <n>: tziganies
 
 80 [enable] 85 [ukacd]: tzimmes <n>
-80 [enable] [plurals]: - <n>: tzimmeses
+80 [enable] 85 [plurals]: - <n>: tzimmeses
 
 80 [enable]: tzitzis <n>
 80 [ospdadd]: - <n>: tzitzes
@@ -431091,7 +431093,7 @@
 85 [ukacd]: ulotrichy
 
 80 [enable]: ulpan <n>
-80 [enable] [plurals]: - <n>: ulpans
+80 [enable] 85 [plurals]: - <n>: ulpans
 
 80 [enable]: ulpanim
 
@@ -444000,7 +444002,7 @@
 
 85 [ukacd]: Uredinales <n/upper?>
 
-80 [enable] [plurals] 85 [ukacd]: - <n>: uredines
+80 [enable] 85 [plurals] [ukacd]: - <n>: uredines
 85 [ukacd]: uredine <n>
 
 85 [ukacd]: Uredineae </upper?>
@@ -444540,7 +444542,7 @@
 
 80 [enable] 85 [ukacd]: usnea <n>: usneas
 
-80 [enable] [plurals]: usneae
+80 [enable] 85 [plurals]: usneae
 
 50 [12dicts]: USO </abbr?>
 
@@ -446209,7 +446211,7 @@
 70 [moby]: _~: vargueno <n>: varguenos # need-accent
 
 70 [moby] 80 [enable]: varia <n>
-70 [moby] 80 [ospdadd] [plurals]: - <n>: varias
+70 [moby] 80 [ospdadd] 85 [plurals]: - <n>: varias
 
 40 [3esl] 50 [12dicts] [ukfreq] 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: variability <n>
 80 [12dicts] [3esl] [5desk] [enable]: - <n>: variabilities~
@@ -449060,7 +449062,7 @@
 
 80 [enable]: vibrion <n>: vibrions
 
-80 [enable] [plurals]: vibriones
+80 [enable] 85 [plurals]: vibriones
 
 80 [enable]: vibrionic <aj>
 
@@ -449566,7 +449568,7 @@
 60 [extra] 70 [moby] 80 [enable] 85 [ukacd]: viewable <aj>
 
 80 [enable]: viewdata <n>
-80 [enable] [plurals]: - <n>: viewdatas
+80 [enable] 85 [plurals]: - <n>: viewdatas
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: viewer <n>: viewers
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: - <n>: viewer's
@@ -450184,7 +450186,7 @@
 60 [12dicts] 70 [5desk] [moby]: - <n>: violoncellist's
 
 50 [12dicts] 70 [3of6] [5desk] [moby] 80 [enable] 85 [ukacd]: violoncello <n>
-50 [12dicts] 70 [3of6] [5desk] [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: violoncellos
+50 [12dicts] 70 [3of6] [5desk] [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: violoncellos
 
 70 [moby] 80 [enable] 85 [ukacd]: violone <n>: violones
 
@@ -450971,7 +450973,7 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: vitellus <n> #! unmarked variants: vitelli, vitelluses, vitelli's, vitelluses'
 70 [moby]: - <n>: -, vitellus's, (vitelli's | vitelluses')
-70 [moby] 80 [enable] [plurals] 85 [ukacd]: - <n>: (vitelli | vitelluses)
+70 [moby] 80 [enable] 85 [plurals] [ukacd]: - <n>: (vitelli | vitelluses)
 
 85 [stale]: vitesse <n>: vitesses
 
@@ -452738,7 +452740,7 @@
 80 [12dicts] [5desk] [enable]: - <n>: wackinesses~
 
 60 [12dicts] [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: wacko <n>
-60 [12dicts] 70 [3of6] [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: (wackos | ~: wackoes)
+60 [12dicts] 70 [3of6] [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: (wackos | ~: wackoes)
 60 [12dicts] [brif] 70 [3of6] [5desk]: - <n>: wacko's
 
 60 [12dicts] [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: wacko <a>
@@ -457564,7 +457566,7 @@
 85 [ukacd]: Wendic </upper?>
 
 70 [5desk] 80 [enable] 85 [ukacd]: wendigo <n> #! unmarked variants: wendigoes, wendigos
-70 [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: (wendigoes | wendigos)
+70 [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: (wendigoes | wendigos)
 
 70 [moby] 80 [upper] 85 [ukacd]: Wendish </upper?>
 
@@ -459586,9 +459588,9 @@
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: A BV C: - <n> {:2}: whiz's
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: Av B Cv: - <n> {:2}: whizz's
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5desk] [moby]: AV Bv Cv: - <n> {:2}: wiz's
-35 [12dicts] 40 [3esl] 60 [12dicts] [brif] 70 [12dicts] [3esl] [3of6] [5desk] [brif] [moby] 80 [enable] [plurals] 85 [ukacd]: A BV C: - <n> {:2}: whizzes
-35 [12dicts] 40 [3esl] 60 [12dicts] [brif] 70 [12dicts] [3esl] [3of6] [5desk] [brif] [moby] 80 [enable] [plurals] 85 [ukacd]: Av B Cv: - <n> {:2}: whizzes
-35 [12dicts] 40 [3esl] 60 [12dicts] [brif] 70 [12dicts] [3esl] [3of6] [5desk] [brif] [moby] 80 [enable] [plurals] 85 [ukacd]: AV Bv Cv: - <n> {:2}: (_?: wizes | AV Bv Cv: wizzes)
+35 [12dicts] 40 [3esl] 60 [12dicts] [brif] 70 [12dicts] [3esl] [3of6] [5desk] [brif] [moby] 80 [enable] 85 [plurals] [ukacd]: A BV C: - <n> {:2}: whizzes
+35 [12dicts] 40 [3esl] 60 [12dicts] [brif] 70 [12dicts] [3esl] [3of6] [5desk] [brif] [moby] 80 [enable] 85 [plurals] [ukacd]: Av B Cv: - <n> {:2}: whizzes
+35 [12dicts] 40 [3esl] 60 [12dicts] [brif] 70 [12dicts] [3esl] [3of6] [5desk] [brif] [moby] 80 [enable] 85 [plurals] [ukacd]: AV Bv Cv: - <n> {:2}: (_?: wizes | AV Bv Cv: wizzes)
 
 60 [12dicts] 80 [enable] 85 [ukacd]: A B: wiz <n> {wizard}
 60 [12dicts]: A B: - <n> {wizard}: wiz's
@@ -460984,7 +460986,7 @@
 85 [ukacd]: Windies </upper?>
 
 70 [5desk] 80 [enable] 85 [ukacd]: windigo <n> #! unmarked variants: windigoes, windigos
-70 [5desk] 80 [enable] [plurals] 85 [ukacd]: - <n>: (windigoes | windigos)
+70 [5desk] 80 [enable] 85 [plurals] [ukacd]: - <n>: (windigoes | windigos)
 
 60 [12dicts] 70 [5desk] 80 [enable] 85 [ukacd]: windily <av>
 
@@ -461984,7 +461986,7 @@
 80 [enable] 85 [ukacd]: - <v>: -, -, -, witting, wot, wost-, (wit- | ?: wite-), -
 
 80 [enable] 85 [ukacd]: witan <n>
-80 [ospdadd] [plurals]: - <n>: witans
+80 [ospdadd] 85 [plurals]: - <n>: witans
 
 80 [ospdadd] 85 [ukacd]: witblits <n>
 80 [ospdadd]: - <n>: witblitses
@@ -464608,7 +464610,7 @@
 
 60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [ukacd]: wunderkind <n>
 60 [brif] 70 [3of6] [5desk]: - <n>: wunderkind's
-60 [brif] 70 [3of6] [5desk] 80 [enable] [plurals]: - <n>: wunderkinds
+60 [brif] 70 [3of6] [5desk] 80 [enable] 85 [plurals]: - <n>: wunderkinds
 
 70 [5desk] 80 [3of6] [enable] 85 [ukacd]: wunderkinder
 
@@ -465483,7 +465485,7 @@
 85 [stale] [ukacd]: xystos
 
 80 [enable] 85 [ukacd]: xystus <n> #! unmarked variants: xysti, xystuses
-80 [enable] [plurals] 85 [ukacd]: - <n>: (xysti | xystuses)
+80 [enable] 85 [plurals] [ukacd]: - <n>: (xysti | xystuses)
 
 80 [ucacr]: XYZ </abbr?>
 
@@ -467731,7 +467733,7 @@
 80 [ospdadd]: zas
 
 80 [enable] 85 [ukacd]: zastruga <n>
-80 [ospdadd] [plurals]: - <n>: zastrugas
+80 [ospdadd] 85 [plurals]: - <n>: zastrugas
 
 80 [enable] 85 [ukacd]: zastrugi
 
@@ -468506,7 +468508,7 @@
 80 [enable]: zoarial
 
 80 [enable] 85 [ukacd]: zoarium <n>
-80 [enable] [plurals] 85 [ukacd]: - <n>: zoariums
+80 [enable] 85 [plurals] [ukacd]: - <n>: zoariums
 
 85 [ukacd]: zobo <n>: zobos
 
@@ -469122,7 +469124,7 @@
 
 50 [name]: Zubeneschamali <n/name?>: Zubeneschamali's
 
-80 [2dicts] [plurals]: zucchetti
+80 [2dicts] 85 [plurals]: zucchetti
 
 70 [5desk] [moby] 80 [enable] 85 [ukacd]: zucchetto <n>: zucchettos
 

@@ -35,7 +35,6 @@ AV: anyways <av>
 = appliqué <n>: appliqués
 = _V: applique <n>: appliques
 
-- appliqued
 - appliquéd
 - appliquéing
 + appliqué <v>: appliquéd, appliquéing, appliqués
@@ -97,6 +96,9 @@ A Z: euthanize <v>: euthanized, euthanizing, euthanizes
 # Issue #379
 A C: hemorrhagic <aj>
 B: haemorrhagic <aj>
+
+_: HTTP <abbr>
+_-: http <abbr>
 
 hyaena <n>: (hyaenas | V: hyaena)
 
@@ -170,6 +172,11 @@ _V: naiveté <n>: naivetés
 _: naivety <n>: naiveties
 + _v: naïvety <n>: naïveties
 
+= nonplus <v>: (nonplussed | V: nonplused), (nonplussing | V: nonplusing), (nonpluses | v: nonplusses)
+
+_: nonplussed <aj>
+_V: nonplused <aj>
+
 = A Bv: percent <n>: percent
 - per cent
 + B AV: per cent <n>: per cent
@@ -195,7 +202,7 @@ A Cv: practiced <aj>
 + AV B C: practised <aj>
 
 A Cv: practicing <→aj>
-AV B C: practising <→aj>
++ AV B C: practising <aj>
 
 # Issue #302
 A B- CV: preexist <v>: preexisted, preexisting, preexists

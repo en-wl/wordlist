@@ -3,6 +3,7 @@ from ._db import *
 from ._export import *
 
 import time
+import traceback
 
 class LineInfo(SlotsDataClass):
     __slots__ = ('line', 'action', 'lemma', 'pos', 'defn_note', 'group_id', 'lemma_id', 'spellings', 'words', 'comments')
@@ -442,6 +443,11 @@ def adjustEntries(conn, f = None, *,
 
         except ValueError as err:
             warn(f'{line}: {err}: skipping group')
+
+        except Exception as err:
+            traceback.print_exc()
+            warn(f'{line}: skipping group due to exception')
+
 
     if errors and not ignoreErrors:
         raise ValueError('aborting due to previous errors')

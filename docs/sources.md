@@ -82,10 +82,10 @@ This tag is not included by default in the final database.
 Words from Alan Beale's 2of4brif list found in his 12dicts package.
 Included at the 60 size level.
 
-#### [5desk]
+#### [5d+2a]
 
-Lemmas from Alan Beale's 5desk list (now called 5d+4a) found in his 12dicts
-package.  Included at the 70 size level.
+Lemmas from Alan Beale's 5d+2a list found in his 12dicts package.  Included at
+the 70 size level.
 
 #### [3of6]
 

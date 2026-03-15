@@ -12,8 +12,7 @@ def openDB(dbfile, create = False, copyFrom = None):
         create = True
     elif os.path.exists(dbfile):
         if create is True:
-            raise FileExistsError(dbfile)
-        create = False
+            os.remove(dbfile)
     else: # file doesn't exist
         if create is False:
             raise FileNotFoundError(dbfile)

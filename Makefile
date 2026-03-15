@@ -4,7 +4,6 @@ all: scowl.db
 
 .DELETE_ON_ERROR:
 scowl.db: ./combine.py
-	rm -f scowl.db
 	./combine.py create-db scowl.db
 
 .DELETE_ON_ERROR:

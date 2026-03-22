@@ -205,7 +205,7 @@ structures, however, is not supported.
 File Format
 -----------
 
-### Grammer
+### Grammar
 
 Most everything is stored in a single file (`scowl.txt`) with the following format:
 
@@ -278,7 +278,7 @@ The '#:' lines at the end of the file contain dumps of various information
 from the database.  If there is any disagreement between the documentation and
 this information, the information at the end of the file takes precedence.
 
-### Grammer Elements
+### Grammar Elements
 
 #### CLUSTER
 

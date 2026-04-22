@@ -9,15 +9,15 @@ begin;
 
 create temp view _scowl as
 select group_id, lemma_id, word_id, base_pos,
-       size as sk1, category as sk2, region as sk3, tag as sk4, -- sk = scowl key
+       coalesce(size, 99) as sk1, coalesce(category, '') as sk2, coalesce(region, '') as sk3, coalesce(tag, '') as sk4, -- sk = scowl key
        coalesce(spelling,'') as vk1, coalesce(lemma_variant_level,-1) as vk2, coalesce(derived_variant_level,-1) as vk3, -- vk = variant key
        lemma, word, pos, group_rank as wk1, pos_class as wk2, defn_note as wk3, usage_note as wk4, coalesce(entry_rank,'') as wk5, -- wk = word key
        coalesce(gc.comment, '') as ck1, coalesce(lc.comment, '') as ck2, -- ck = comment key
        false as override
- from scowl_data
- join words_w_variant_info using (group_id, pos)
+ from words_w_variant_info
  join groups using (group_id)
  join (select word_id as lemma_id, word as lemma from words) using (lemma_id)
+ left join scowl_data using (group_id, pos)
  left join group_comments as gc using (group_id)
  left join lemma_comments as lc using (lemma_id)
 union all

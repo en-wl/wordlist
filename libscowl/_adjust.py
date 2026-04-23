@@ -83,35 +83,38 @@ class GroupInfo(SlotsDataClass):
         if v0 is None: setattr(self, attr, v)
         elif v != v0: raise ValueError(f'conflicting values for {attr} within group')
 
-    def registerLine(self, conn, li, new_pos = None, outer_pos = None):
-        assert li.action in ('adjust', 'match', 'add', 'remove', 'replace', 'transfer')
-
+    @staticmethod
+    def resolveLine(li, new_pos):
+        """Return (new_pos, keys) for a LineInfo / (new_pos) pair.
+        """
         if new_pos is None:
             if li.action in ('adjust', 'match', 'add', 'replace'):
                 new_pos = li.pos
             elif li.action in ('remove', 'transfer'):
                 new_pos = ''
             else:
-                raise AssertError
+                raise AssertionError
+        if li.pos == 'n_v' or new_pos == 'n_v':
+            keys = ('n', 'v')
+        elif li.pos == 'aj_av' or new_pos == 'aj_av':
+            keys = ('aj', 'av')
+        else:
+            keys = (new_pos,)
+        return new_pos, keys
 
-        if outer_pos is None:
-            outer_pos = new_pos
+    def registerLine(self, conn, li, new_pos = None):
+        assert li.action in ('adjust', 'match', 'add', 'remove', 'replace', 'transfer')
 
-        if li.pos == 'n_v':
-            self.registerLine(conn, li.copy('n'), None, outer_pos)
-            self.registerLine(conn, li.copy('v'), None, outer_pos)
-            return
-        if new_pos == 'n_v':
-            self.registerLine(conn, li.copy(), 'n', outer_pos)
-            self.registerLine(conn, li.copy(), 'v', outer_pos)
-            return
-        if li.pos == 'aj_av':
-            self.registerLine(conn, li.copy('aj'), None, outer_pos)
-            self.registerLine(conn, li.copy('av'), None, outer_pos)
-            return
-        if new_pos == 'aj_av':
-            self.registerLine(conn, li.copy(), 'aj', outer_pos)
-            self.registerLine(conn, li.copy(), 'av', outer_pos)
+        new_pos, keys = self.resolveLine(li, new_pos)
+
+        if len(keys) > 1:
+            # inherent split: recurse once per target key
+            if li.pos in ('n_v', 'aj_av'):
+                for k in keys:
+                    self.registerLine(conn, li.copy(k))
+            else:
+                for k in keys:
+                    self.registerLine(conn, li.copy(), k)
             return
 
         combined_pos = 'n_v' if li.pos in ('n', 'v') else 'aj_av' if li.pos in ('aj', 'av') else None
@@ -129,8 +132,6 @@ class GroupInfo(SlotsDataClass):
             assert li.pos == new_pos
             if len(ids) > 0:
                 raise ValueError("cannot add line: lemma already exists")
-            if new_pos not in self.subGroups:
-                self.subGroups[new_pos] = SubGroupInfo(None)
         else:
             if len(ids) == 0:
                 if not li.pos and self.pos:
@@ -145,23 +146,13 @@ class GroupInfo(SlotsDataClass):
             li.lemma_id = ids[0][1]
 
             group_id = None if li.action == 'transfer' else li.group_id
-            if new_pos not in self.subGroups:
-                self.subGroups[new_pos] = SubGroupInfo(group_id)
-            elif self.subGroups[new_pos].id is None:
+            if self.subGroups[new_pos].id is None:
                 self.subGroups[new_pos].id = group_id
-
-        self.registerBasePos(outer_pos)
 
         if li.spellings is not None:
             self.spellings.update(li.spellings)
 
         self.subGroups[new_pos].lines.append(li)
-
-    def registerBasePos(self, outer_pos):
-        if self.pos == '':
-            self.pos = outer_pos
-        elif outer_pos != '' and outer_pos != self.pos:
-            raise ValueError(f'mismatch pos: {li.lemma.word}: expected {gi.pos}: got {outer_pos}')
 
 class ClusterComment(SlotsDataClass):
     __slots__ = ('lines', 'action', 'headword', 'other_words', 'commentLines')
@@ -387,11 +378,25 @@ def adjustEntries(conn, f = None, *,
             if gi is None:
                 pass
             elif isinstance(gi, GroupInfo):
+                # prepare subgroups and unify pos
+                for line, li, new_pos in groupLines:
+                  if isinstance(li, LineInfo):
+                      new_pos, keys = gi.resolveLine(li, new_pos)
+                      for k in keys:
+                          gi.subGroups.setdefault(k, SubGroupInfo(None))
+                  elif not isinstance(li, AdjScowlInfo):
+                      raise AssertionError
+                  if new_pos:
+                      if gi.pos == '':
+                          gi.pos = new_pos
+                      elif new_pos != gi.pos:
+                          raise ValueError(f'mismatch pos: expected {gi.pos}: got {new_pos}')
+                # create synthetic match lines if needed
                 neededMatchLines = {}
-                for line, li, pos in groupLines:
+                for line, li, new_pos in groupLines:
                     if not isinstance(li, LineInfo):
                         continue
-                    pos = ifNone(pos, li.pos)
+                    pos = ifNone(new_pos, li.pos)
                     if li.pos != pos and li.action in ('adjust', 'replace'):
                         neededMatchLines.setdefault(li.lemma.word, (li, pos))
                     if li.pos == pos:
@@ -410,11 +415,12 @@ def adjustEntries(conn, f = None, *,
                     if isinstance(li, LineInfo):
                         gi.registerLine(conn, li, pos)
                     elif isinstance(li, AdjScowlInfo):
-                        gi.registerBasePos(pos)
                         gi.adjScowlInfo.append(li)
                     else:
                         raise AssertionError
                 groupLines = []
+                # prune empty subgroups
+                gi.subGroups = {k: sg for k, sg in gi.subGroups.items() if sg.lines}
                 if not gi.subGroups:
                     # fixme: should likely just skip the group
                     #_warn(f'{line}: skipping empty group')

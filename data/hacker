@@ -1,46 +1,40 @@
 #:: merge (hacker)
 
-50: abbrev <n>: abbrevs
+50: abbrev <n/abbr>: abbrevs
 
-50: - <n>: accumulators
-99: accumulator <n>
+50: accumulator <n>: accumulators
 
-50: -Ada <n/upper?>: Adas
+50: admin <n>: admins-
 
-50: -admin <n>: admins-
+50: AFAIK <abbr>
 
-50: -AFAIK <n/abbr?>
+50: AI <n/abbr>: AIs
 
-50: AI <n/upper>: AIs-
-
-50: -alt <n>: alts
+50: alt <n>
 
 50: ANSI <n/abbr>: ANSIs
 
-50: - <n/upper>: ASCIIs-
-99: ASCII <n/upper>
+50: ASCII <n/abbr>: ASCIIs-
 
-50: -atomic <n>
+50: atomic <n>
 
-50: -backgammon <v>
+50: backgammon <v>
 
-50: - <n>: bandwidths-
-99: bandwidth <n>
+50: bandwidth <n>
 
 50: barney <n>: barneys
 
-50: - <n/upper>: BASICs-
-99: BASIC <n/upper>
+50: BASIC <n/upper>: BASICs-
 
-50: -BBS <n/abbr>: BBSes
+50: BBS <n/abbr>: BBSes
 
 50: biff <v>: biffed, biffing, biffs
 
-50: BITNET <n/abbr?>
+50: BITNET <n/name>
 
-50: !blammo <m>
+50: blammo <m>
 
-50: blat <v>: -, -, blats
+50: blat <n>: blats
 
 50: bletch
 
@@ -56,8 +50,7 @@
 
 50: boink <v>: boinked, boinking, boinks
 
-50: - <n/surname>: Borgs-
-99: Borg <n/surname>
+50: Borg <n/name>: Borgs-
 
 50: _: bot. <abbr>
 50: _~: bot <abbr>
@@ -66,32 +59,25 @@
 
 50: boxen
 
-50: BSD <n/abbr?>: BSDs
+50: BSD <n/name>: BSDs
 
-50: - <v>: burbled, burbling, burbles
-99: burble <v>
+50: burble <v>: burbled, burbling, burbles
 
-50: C <x>
+50: canonical <n>
 
-50: -canonical <n>
-
-50: -cat <v>: catted, catting, cats
+50: cat <v>: catted, catting, cats
 
 50: chad <n>: chads
 
 50: chomper <n>: chompers
 
-50: - <n>: chromes~
-99: chrome <n>
-
-50: - <n/upper>: COBOLs-
-99: COBOL <n/upper>
+50: COBOL <n/upper>: COBOLs-
 
 50: compo <n>: compos
 
 50: confuser <n>: confusers
 
-50: -cons <v>: consed, consing, conses
+50: cons <v>: consed, consing, conses
 
 50: copyleft <n>
 
@@ -101,21 +87,17 @@
 
 50: crayola <n>: crayolas
 
-50: - <n>: creationisms~
-99: creationism <n>
+50: creationism <n>
 
 50: crippleware <n>
 
-50: !cruft <v>: crufted, -, crufts
+50: cruft <v>: crufted, -, crufts
 
 50: crufty <n>
 
-50: Cs <x>
+50: cubing <m>
 
-50: !cubing <m>
-
-50: - <n>: cyberspaces~
-99: cyberspace <n>
+50: cyberspace <n>: cyberspaces~
 
 50: dd
 
@@ -125,13 +107,7 @@
 
 50: dds
 
-50: - <n/upper>: DDTs-
-99: DDT <n/upper>
-
-50: !DEC <m/abbr?>: DECed, -, DECs
-
-50: - <n>: decays~
-99: decay <n>
+50: DEC <n/name>: DECs
 
 50: deckle <n>: deckles
 
@@ -139,26 +115,21 @@
 
 50: deliminator <n>
 
-50: !delint <v>: delinted, delinting, -
+50: delint <v>: delinted, delinting, -
 
-50: - <v>: demented, -, -
-99: dement <v>
+50: demented <aj>
 
-50: -demo <v>: demoed, demoing, -
+50: demo <n>: demos
 
-50: demos <n>
+50: demo <v>: demoed, demoing, demos
 
-50: -diff <v>: diffed, diffing, diffs
+50: diff <v>: diffed, diffing, diffs
 
-50: - <n/person>: Dilberts-
-99: Dilbert <n/person>
+50: Dilbert <n/person>: Dilberts-
 
-50: -dink <a>: dinker, -
+50: dink <a>: dinker, -
 
 50: dirtball <n>: dirtballs
-
-50: - <n>: documentations~
-99: documentation <n>
 
 50: dodgy <aj>: dodgier, dodgiest
 
@@ -172,36 +143,26 @@
 
 50: drugged <aj>
 
-50: ed <n>: (ed~ | ?: eds~)
-
-50: ed <suf>
-
-50: -elvish <n>
+50: elvish <n>
 
 50: emoticon <n>: emoticons
 
-50: - <n>: epsilons
-99: epsilon <n>
+50: epsilon <n>: epsilons
 
-50: - <n/name?>: Erises-
-99: Eris <n/name?>
+50: Eris <n/name?>: Erises-
 
 50: erotics <n>
 
 50: excl <n/abbr>
 
-50: !exec <v>
+50: exec <v>
 
 50: fairings <n>
 
-50: - <n/upper?>: FAQs
-99: FAQ <n/upper?>
+50: FAQ <n/abbr>: FAQs
 
 50: A Z: faradize <v>: faradized, faradizing, -
 50: B: faradise <v>: faradised, faradising, -
-
-50: - <n>: farmings~
-99: farming <n>
 
 50: flamage <n>
 
@@ -209,27 +170,19 @@
 
 50: flippy <n>: flippies
 
-50: _: flytrap <n>: flytraps
-50: _V: fly-trap <n>: fly-traps
-## Compound variant levels are a best guess based on freq and other related info.
+50: flytrap <n>: flytraps
 
-50: - <n/upper>: FMs-
-99: FM <n/upper>
+50: FM <abbr>
 
 50: foo <n>
 
 50: foobar <n>
 
-50: frag <v>: -, -, frags
+50: frag <n>: frags
 
-50: - <aj>: fragiler-, fragilest-
-99: fragile <aj>
+50: frag <v>: fragged, fragging, frags
 
 50: freeware <n>
-
-50: frogging <n>: froggings
-
-50: !frogging <v>: -, -, froggings
 
 50: ftp <n/abbr>: ftps
 
@@ -237,13 +190,11 @@
 
 50: ftping
 
-50: -FUD <n/abbr>: FUDs
+50: FUD <n/abbr>: FUDs
 
 50: fum <n>: fums
 
 50: fuzzball <n>: fuzzballs
-
-50: G <x>
 
 50: gen <n>: gens
 
@@ -251,23 +202,19 @@
 
 50: gillion <n>: gillions
 
-50: -glitch <v>: glitched, glitching, glitches
+50: glitch <v>: glitched, glitching, glitches
 
-50: -glob <v>
+50: glob <v>: globbed, globbing, globs
 
-50: - <v>: globed, globing, -
-99: -globe <v>
-
-50: - <aj>: gnarlier, gnarliest
-99: gnarly <aj>
+50: gnarly <aj>: gnarlier, gnarliest
 
 50: gonk <n>: gonks
 
 50: gonzo <aj>
 
-50: gorp <n>: gorps~
+50: gorp <n>
 
-50: -gotcha <n>: gotchas
+50: gotcha <n>: gotchas
 
 50: grep <v>: grepped, grepping, greps
 
@@ -277,55 +224,41 @@
 
 50: grue <n>: grues
 
-50: - <n>: grunges~
-99: grunge <n>
+50: grunge <n>
 
 50: Guido <n/person>
 
-50: h <x>
-
 50: hackish <n>
 
-50: _: hairball <n>: hairballs
-50: _-: hair-ball <n>: hair-balls
-## Compound variant levels are a best guess based on freq and other related info.
+50: hairball <n>: hairballs
 
-50: - <n>: handshakings
-99: handshaking <n>
+50: handshaking <n>: handshakings
 
-50: - <v>: hardwired, -, -
-99: hardwire <v>
+50: _: hardwired <aj>
+50: _?: hard-wired <aj>
 
-50: _: hard-wired <aj>
-50: _v: hardwired <aj>
-## Compound variant levels are a best guess based on freq and other related info.
-
-50: -hexadecimal <n>: hexadecimals
+50: hexadecimal <n>: hexadecimals
 
 50: hing <n>: hings
 
-50: - <n>: hoardings
-99: hoarding <n>
+50: hoarding <n>: hoardings
 
-50: - <n>: hobbits
-99: hobbit <n>
+50: hobbit <n>: hobbits
 
 50: _: hotlink <n>: hotlinks
 50: _v: hot link <n>: hot links
-## Compound variant levels are a best guess based on freq and other related info.
 
-50: - <n>: hyperspaces
-99: hyperspace <n>
+50: hyperspace <n>: hyperspaces
 
-50: -idempotent <n>
+50: idempotent <n>
 
 50: idempotent <aj>
 
-50: IMHO </abbr?>
+50: IMHO <abbr>
 
-50: -inc <v>: inced, incing, incs
+50: inc <v>: inced, incing, incs
 
-50: -Internet <n/name>: Internets
+50: Internet <n/name>: Internets
 
 50: intro <n>: intros
 
@@ -335,30 +268,22 @@
 
 50: jaggies <n>
 
-50: - <n>: jellos~
-99: jello <n>
-
-50: K <x>
+50: jello <n>
 
 50: kahuna <n>: kahunas
 
-50: - <n>: kens~
-99: ken <n>
+50: ken <n>: kens
 
-50: -kludge <v>: kludged, kludging, kludges
+50: kludge <v>: kludged, kludging, kludges
 
 50: kluge <n>: kluges
 
-50: -kluge <v>: kluged, -, kluges
+50: kluge <v>: kluged, -, kluges
+80: kluge <v>: -, kludgeing, -
 
-50: - <n/surname>: Knuths-
-99: Knuth <n/surname>
+50: Knuth <n/surname>: Knuths-
 
 50: koan <n>: koans
-
-50: Ks </upper?>
-
-50: Ks <x>
 
 50: lamer <n>: lamers
 
@@ -366,47 +291,35 @@
 
 50: laundromat <n>: laundromats
 
-50: _: letter bomb <n>: letter bombs
-50: _=: letter-bomb <n>: letter-bombs
-50: _v: letterbomb <n>: letterbombs
+50: letterbomb <n>: letterbombs
 
 50: lexer <n>: lexers
 
-50: -lint <v>: linted, linting, lints
+50: lint <v>: linted, linting, lints
 
-50: - <n/upper>: Linuxes-
-99: Linux <n/upper>
+50: Linux <n/upper>: Linuxes-
 
 50: liveware <n>
 
 50: lurker <n>: lurkers
 
-50: M <x>
-
 50: machinable <aj>
 
 50: macrology <n>: macrologies
-
-50: - <n>: magics~
-99: magic <n>
 
 50: mailbomb <n>: mailbombs
 
 50: mailbomb <v>: mailbombed, mailbombing, mailbombs
 
-50: - <n>: managements~
-99: management <n>
-
 50: manged <n>
 
 50: mangler <n>: manglers
 
-50: - <n/place>: Marses
-99: Mars <n/place>
+50: Mars <n/place>: Marses
 
 50: martian <n>: martians
 
-50: MEGO <n/abbr?>: MEGOs
+50: MEGO <n/abbr>: MEGOs
 
 50: meta
 
@@ -420,34 +333,27 @@
 
 50: misfeature <n>: misfeatures
 
-50: !misfeature <v>: -, -, misfeatures
+50: mod <n>: mods
 
-50: -mod <v>: modded, modding, mods
+50: mod <v>: modded, modding, mod
 
 50: modulo <n>
 
 50: Multics <n/name>
 
-50: multitask <v>: -, -, multitasks
+50: multitask <v>: multitasked, multitasking, multitasks
 
 50: munchkin <n>: munchkins
 
-50: -mundane <n>: mundanes
+50: mundane <n>: mundanes
 
-50: - <v>: munged, munging, -
-99: munge <v>
-
-50: - <n>: musics~
-99: music <n>
-
-50: N <x>
+50: munge <v>: munged, munging, munges
 
 50: nagware <n>
 
 50: nanobot <n>: nanobots
 
-50: - <n>: nanotechnologies~
-99: nanotechnology <n>
+50: nanotechnology <n>: nanotechnologies~
 
 50: neophilia <n>
 
@@ -461,31 +367,25 @@
 
 50: nickle <n>: nickles
 
-50: _: nonlinear <aj>
-50: _v: non-linear <aj>
-## Compound variant levels are a best guess based on freq and other related info.
+50: nonlinear <aj>
 
 50: notwork <n>: notworks
 
 50: numbers <n>
 
-50: !nybble <v>
+50: nybble <v>
 
 50: op <n>: ops
 
-50: -op <abbr>
-
-50: - <n>: optimisms~
-99: optimism <n>
+50: op <abbr>
 
 50: OS <n/upper>: OSes-
 
-50: !overclock <v>: overclocked, overclocking, -
+50: overclock <v>: overclocked, overclocking, -
 
 50: PARC <n/name>: PARCs
 
-50: - <n/upper>: Pascals-
-99: Pascal <n/upper>
+50: Pascal <n/upper>: Pascals-
 
 50: pastie <a>
 
@@ -493,13 +393,11 @@
 
 50: PD <n/abbr>
 
-50: - <n/name?>: Pentiums-
-99: Pentium <n/name?>
+50: Pentium <n/name?>: Pentiums-
 
-50: - <n/name?>: Perls-
-99: Perl <n/name?>
+50: Perl <n/name?>: Perls-
 
-50: !pessimal <m>
+50: pessimal <m>
 
 50: phage <n>: phages
 
@@ -507,34 +405,21 @@
 
 50: plonk <v>: plonked, plonking, plonks
 
-50: - <n>: plumbings~
-99: plumbing <n>
+50: PM <v>: PMed, PMing, PMs
 
-50: -PM <v/abbr?>: PMed, PMing, PMs
+50: posting <n>: postings
 
-50: - <n>: postings
-99: posting <n>
+50: pseudo <n>: pseudos
 
-50: A B: - <n>: programmings~
-50: Av: - <n>: programings~
-99: A B: programming <n>
-99: Av: programing <n>
-
-50: -pseudo <n>: pseudos
-
-50: -ques <n>
+50: ques <n>
 
 50: quine <n>: quines
 
-50: QWERTY </abbr?>
+50: QWERTY <n/abbr>
 
-50: -random <n>: randoms
+50: randomness <n>
 
-50: - <n>: randomnesses~
-99: randomness <n>
-
-50: - <n>: recursions
-99: recursion <n>
+50: recursion <n>
 
 50: regexp <n>: regexps
 
@@ -542,77 +427,53 @@
 
 50: replicator <n>: replicators
 
-50: -RFC <n/abbr>: RFCs
+50: RFC <n/abbr>: RFCs
 
-50: -roach <v>: roached, roaching, roaches
+50: roach <v>: roached, roaching, roaches
 
-50: !RTFM <v/abbr?>
+50: RTFM <abbr>
 
 50: runic <aj>
 
 50: samizdat <n>: samizdats
 
-50: !scag <v>: scagged, -, scags
+50: scag <v>: scagged, -, scags
 
-50: !scrog <v>
+50: scrog <v>
 
 50: segfault <n>: segfaults
 
 50: shareware <n>
 
-50: _: showstopper <n>: showstoppers
-50: _v: show-stopper <n>
-50: _V: show stopper <n>: show stoppers
-## Compound variant levels are a best guess based on freq and other related info.
+50: showstopper <n>: showstoppers
 
-50: - <n>: silicons~
-99: silicon <n>
+50: silicon <n>: silicons
 
 50: skulker <n>: skulkers
-
-50: - <n>: slacks~
-99: slack <n>
-
-50: - <n>: slops~
-99: slop <n>
 
 50: smiley <n>: (smileys | ~: smilies)
 
 50: smurf <n>: smurfs
 
-50: -snail <v>: snailed, snailing, -
+50: snail <v>: snailed, snailing, -
 
 50: snarf <v>: snarfed, snarfing, snarfs
 
 50: snark <n>: snarks
 
-50: -SO <n/abbr>: SOs
-
-50: - <n/upper>: SOSes-
-99: SOS <n/upper>
-
 50: stdio <n>
 
 50: studly <aj>: studlier, studliest
-
-50: Sun <n/upper>: Suns-
 
 50: sunspots <n>
 
 50: superuser <n>: superusers
 
-50: -swizzle <v>: swizzled, swizzling, swizzles
-
-50: A B: - <n>: syncs~
-50: AV Bv: - <n>: (synchs~ | -: synches~)
-99: A B: sync <n>
-99: AV Bv: synch <n>
+50: swizzle <v>: swizzled, swizzling, swizzles
 
 50: sysadmin <n>: sysadmins
 
 50: sysop <n>: sysops
-
-50: T <x>
 
 50: tarball <n>: tarballs
 
@@ -620,38 +481,33 @@
 
 50: TELNET <n>
 
-50: TeX <n/upper?>: TeXes
+50: TeX <n/name>
 
 50: thunk <n>: thunks
 
-50: !toad <v>
+50: toad <v>
 
 50: touristic <aj>
 
-50: !tron <v>
+50: tron <v>
 
-50: - <n>: ttys
-99: tty <n>
+50: tty <n>: ttys
 
 50: twink <n>: twinks
 
-50: !twink <v>: -, -, twinks
-
-50: uninteresting <n>
+50: twink <n>: twink
 
 50: Unix <n/name>: Unixes
 
 50: up <pre>
 
-50: - <v>: uploaded, uploading, uploads
-99: upload <v>
+50: upload <v>: uploaded, uploading, uploads
 
 50: upping <n>
 
-50: URL <n/upper?>: URLs
+50: URL <n/abbr>: URLs
 
-50: - <n/name?>: Usenets-
-99: Usenet <n/name?>
+50: Usenet <n/name>: Usenets-
 
 50: A Cv: vaporware <n>
 50: B C: vapourware <n>
@@ -660,14 +516,13 @@
 
 50: VAX <n/name>: VAXes
 
-50: - <n>: verbiages~
-99: verbiage <n>
+50: verbiage <n>
 
 50: videotex <n>
 
 50: wabbit <n>: wabbits
 
-50: waldo <n>: (waldoes | waldos)
+50: waldo <n>: (waldos | v: waldoes)
 
 50: wank <v>: wanked, wanking, wanks
 
@@ -693,10 +548,9 @@
 
 50: wiggles <n>
 
-50: - <n/upper>: Winchesters-
-99: Winchester <n/upper>
+50: Winchester <n/upper>: Winchesters-
 
-50: -wired <n>: wireds
+50: wired <n>: wireds
 
 50: wizardly <aj>
 
@@ -706,21 +560,15 @@
 
 50: workaround <n>: workarounds
 
-50: _: wormhole <n>
-50: _-: worm-hole <n>
-## Compound variant levels are a best guess based on freq and other related info.
+50: wormhole <n>
 
-50: X <x>
+50: xor <c>
 
-50: Xes </upper?>
-
-50: xor
-
-50: !xref <v>: -, -, xrefs
+50: xref <n>: xrefs
 
 50: xterm <n>: xterm's
 
-50: !zen <m>: zenned, -, zens
+50: zen <v>: zenned, zenning, zens
 
 50: zeroth <aj>
 

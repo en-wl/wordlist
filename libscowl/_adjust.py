@@ -378,6 +378,54 @@ def adjustEntries(conn, f = None, *,
             if gi is None:
                 pass
             elif isinstance(gi, GroupInfo):
+                if not strict:
+                    # allow <>/<m>/<a> to match more specific POSes, but keep group uniform
+                    needAdj = False
+                    adjLines = []
+                    needed_pos = None
+                    for line, li, new_pos in groupLines:
+                        if not isinstance(li, LineInfo) or new_pos is not None:
+                            adjLines = None
+                            needed_pos = None
+                            break
+                        def match_uncertain(*pos):
+                            nonlocal needed_pos, li
+                            if li.pos != pos[0]:
+                                return False
+                            if len(pos) == 3:
+                                matched = {p for p, in conn.execute(
+                                    "select distinct base_pos from lemmas "
+                                    "where lemma = ? and base_pos in (?, ?, ?) and defn_note = ?",
+                                    (li.lemma.word, *pos, li.defn_note))}
+                            elif pos[0] == '':
+                                matched = {p for p, in conn.execute(
+                                    "select distinct base_pos from lemmas "
+                                    "where lemma = ? and defn_note = ?",
+                                    (li.lemma.word, li.defn_note))}
+                            else:
+                                raise AssertionError
+                            if not matched or pos[0] in matched:
+                                return False
+                            if len(matched) == 1:
+                                adj_pos = next(iter(matched))
+                            elif len(pos) == 3 and matched == {pos[1], pos[2]}:
+                                adj_pos = f"{pos[1]}_{pos[2]}"
+                            else:
+                                raise ValueError(f"ambiguous match for <pos[0]>: {matched}")
+                            li = li.copy(adj_pos)
+                            if needed_pos is None:
+                                needed_pos = adj_pos
+                            elif li.pos != needed_pos:
+                                raise ValueError(f"inconsistent resolved POSes within group: {needed_pos} vs {adj_pos}")
+                            return True
+                        needAdj = (match_uncertain('m', 'n', 'v') 
+                                   or match_uncertain('a', 'aj', 'av')
+                                   or match_uncertain('')
+                                   or needAdj)
+                        adjLines.append((line, li))
+                    if needAdj and adjLines:
+                        groupLines = [(line, li, needed_pos) for line, li in adjLines]
+                    
                 # prepare subgroups and unify pos
                 for line, li, new_pos in groupLines:
                   if isinstance(li, LineInfo):
@@ -391,7 +439,8 @@ def adjustEntries(conn, f = None, *,
                           gi.pos = new_pos
                       elif new_pos != gi.pos:
                           raise ValueError(f'mismatch pos: expected {gi.pos}: got {new_pos}')
-                # create synthetic match lines if needed
+
+                # create synthetic match lines when needed
                 neededMatchLines = {}
                 for line, li, new_pos in groupLines:
                     if not isinstance(li, LineInfo):
@@ -418,6 +467,7 @@ def adjustEntries(conn, f = None, *,
                         gi.adjScowlInfo.append(li)
                     else:
                         raise AssertionError
+
                 groupLines = []
                 # prune empty subgroups
                 gi.subGroups = {k: sg for k, sg in gi.subGroups.items() if sg.lines}
@@ -616,12 +666,13 @@ def adjustEntries(conn, f = None, *,
                 elif haveLemmaSpelling and replaceComments:
                     conn.execute("insert or ignore into new_group_comments values (?, NULL)", (sg.id,))
 
-                unaccountedFor = [
-                    *conn.execute("select word from words join to_merge on group_id = other_group_id "
-                                  "where main_group_id = ? and word_id = lemma_id and word_id not in (select * from lemmas_accounted_for)",
-                                  (sg.id,))] if haveLemmaSpelling and strict else None
-                if unaccountedFor:
-                    raise ValueError(f"unaccounted lemmas: {', '.join(word for word, in unaccountedFor)}")
+                if haveLemmaSpelling and strict:
+                    unaccountedFor = [
+                        *conn.execute("select word from words join to_merge on group_id = other_group_id "
+                                      "where main_group_id = ? and word_id = lemma_id and word_id not in (select * from lemmas_accounted_for)",
+                                      (sg.id,))]
+                    if unaccountedFor:
+                        raise ValueError(f"unaccounted lemmas: {', '.join(word for word, in unaccountedFor)}")
 
                 conn.execute("drop table lemmas_accounted_for")
             except ValueError as err:

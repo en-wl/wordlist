@@ -18,7 +18,7 @@ def mergeEntries(conn, f = None, *,
     existing groups.
 
     Supported header (first line):
-      #:: merge [<tag>] [FLAGS]
+      #:: merge [<tag>|<category>] [FLAGS]
 
     Transactions:
     - Runs inside a single transaction, with a SAVEPOINT per group so that one
@@ -43,7 +43,9 @@ def mergeEntries(conn, f = None, *,
         if len(header) == 0 or header[0] != 'merge':
             raise ValueError("unexpected file format")
         for flag in header[1:]:
-            if flag[0] == '[':
+            if flag[0] == '[' and flag[-1] == ']':
+                tag = flag
+            elif flag[0] == '(' and flag[-1] == ')':
                 tag = flag
             elif flag == ':skip-on-variant-conflict':
                 onVariantConflict = 'skip'
@@ -121,13 +123,21 @@ def mergeEntries(conn, f = None, *,
         conn.execute("create temp table merged_groups (group_id integer primary key)")
 
         for idx, grp in enumerate(groups):
-            if tag is not None:
+            if tag and tag[0] == '[':
                 for l in grp.lines:
                     for si in l.si:
                         si.tags.add(tag)
                 for o in grp.override.values():
                     for si in o.si:
                         si.tags.add(tag)
+            elif tag and tag[0] == '(':
+                category = tag[1:-1]
+                for l in grp.lines:
+                    for si in l.si:
+                        si.category = category
+                for o in grp.override.values():
+                    for si in o.si:
+                        si.category = category
             try:
                 conn.execute("savepoint sp")
                 (next_group_id, next_word_id) = _mergeGroup(conn, grp, idx, next_group_id, next_word_id,

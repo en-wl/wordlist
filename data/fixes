@@ -90,7 +90,7 @@ A B: drive-through <n>: drive-throughs
 
 # Issue #449
 A Z: euthanize <v>: euthanized, euthanizing, euthanizes
-+ B Dv: euthanise <v>: euthanised, euthanising, euthanises
+B Dv: euthanise <v>: euthanised, euthanising, euthanises
 + D: euthanase <v>: euthanased, euthanasing, euthanases
 
 # Issue #379

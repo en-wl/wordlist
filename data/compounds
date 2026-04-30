@@ -94,7 +94,7 @@ _?: chicken pox
 _: clearheaded <aj>
 _?: clear-headed
 
-_: clearheadedly
+_: clearheadedly <av>
 _?: clear-headedly
 
 _: clearheadedness <n>
@@ -415,7 +415,7 @@ _: Port of Spain <n>
 _?: Port-of-Spain <n>
 
 _: pre-owned
-_.: preowned
+_.: preowned <aj>
 
 _: punchline <n>
 _?: punch line <n>
@@ -530,7 +530,7 @@ _v: voice-mail
 _: warmhearted <aj>
 _v: warm-hearted
 
-_: warmheartedly
+_: warmheartedly <av>
 _v: warm-heartedly
 
 _: warmheartedness <n>

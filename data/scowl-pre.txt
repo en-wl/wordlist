@@ -22919,8 +22919,6 @@
 
 85 [ukacd]: assertory <aj>
 
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: asses <m>: assessed, assessing, assesses
-
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: assess <v>: assessed, assessing, -
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: - <v>: -, -, assesses
 
@@ -36419,8 +36417,6 @@
 
 60 [12dicts] 70 [5d+2a] [moby] 80 [enable] 85 [ukacd]: bestrew <v>: bestrewed, (bestrewed | ~: bestrewn), bestrewing, bestrews
 
-70 [5d+2a]: !bestrid <m>
-
 85 [ukacd]: bestridable <aj>
 
 50 [12dicts] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: bestride <v>: (bestrode | ~: bestrid), (bestridden | ~: bestrid), bestriding, bestrides
@@ -45598,8 +45594,6 @@
 
 50 AU [town]: Bowral <n/place>: Bowral's
 
-85 [ukacd]: !bows <m>: bowsed, bowsing, bowses
-
 70 [moby] 80 [enable] 85 [ukacd]: bowse <v>: bowsed, bowsing, bowses
 
 70 [5d+2a] 85 [ukacd]: bowser <n>
@@ -46699,6 +46693,9 @@
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: - <n>: brasses, brass's
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: brass <aj>
+
+80 [enable] 85 [ukacd]: -brass <v>: -, -, brasses
+80 [enable]: - <v>: brassed, brassing, -
 
 85 [stale]: brassage <n>: brassages
 
@@ -49236,8 +49233,6 @@
 80 [enable] 85 [ukacd]: browny <aj>: brownier, browniest
 
 80 [enable]: browridge <n>: browridges
-
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: brows <m>: browsed, browsing, browses
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: browse <n>
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: - <n>: browses, browse's
@@ -71242,8 +71237,6 @@
 
 60 [12dicts] 85 [ukacd]: clean room <n>
 
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: cleans <m>: cleansed, cleansing, cleanses
-
 85 [ukacd]: cleansable <aj>
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: cleanse <v>: cleansed, cleansing, cleanses
@@ -83426,8 +83419,6 @@
 
 85 [ukacd]: coprozoic <aj>
 
-85 [ukacd]: !cops <m>: copsed, copsing, copses
-
 50 [12dicts] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: copse <n>: copses, copse's
 
 85 [ukacd]: !copse <v>: copsed, copsing, copses
@@ -92400,8 +92391,6 @@
 70 [moby]: curry sauce <n>
 
 80 [moby]: Curryville <n/place>
-
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: curs <m>: cursed, cursing, curses
 
 85 [ukacd]: cursal <aj>
 
@@ -113864,8 +113853,6 @@
 
 80 [moby]: Dows <n/place>
 
-85 [ukacd]: !dows <m>: dowsed, dowsing, dowses
-
 70 [moby] 80 [enable]: dowsabel <n>: dowsabels
 
 50 [12dicts] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: dowse <v>: dowsed, dowsing, dowses
@@ -127866,8 +127853,6 @@
 
 60 [12dicts] 70 [5d+2a] 80 [enable] 85 [ukacd]: eradicator <n>: eradicators, eradicator's
 
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: eras <m>
-
 80 [enable]: erasability <n>: erasabilities
 
 60 [12dicts] 70 [5d+2a] 80 [enable] 85 [ukacd]: erasable <aj>
@@ -133267,8 +133252,6 @@
 80 [12dicts] [3esl] [5d+2a] [enable] [moby] 85 [ukacd]: - <n>: exportations~
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] 80 [enable] 85 [ukacd]: exporter <n>: exporters, exporter's
-
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: expos <m>
 
 85 [ukacd]: exposable <aj>
 
@@ -140478,8 +140461,6 @@
 
 50 [12dicts] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: finery <n>
 80 [12dicts] [5d+2a] [enable] [moby] 85 [ukacd]: - <n>: fineries~
-
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: fines <m>: finessed, finessing, finesses
 
 70 [moby] 85 [ukacd]: fines herbes <n>
 
@@ -171811,6 +171792,8 @@
 
 70 [moby] 80 [enable] 85 [ukacd]: hawse <n>: hawses
 
+80 [ospdadd] 85 [ukacd]: -hawse <v>: hawsed, hawsing, hawses
+
 70 [moby] 80 [enable] 85 [ukacd]: hawsehole <n>
 70 [moby] 80 [enable]: - <n>: hawseholes
 
@@ -172490,6 +172473,8 @@
 70 [moby]: hearsay evidence <n>
 
 35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: hearse <n>: hearses
+
+80 [enable] 85 [ukacd]: -hearse <v>: hearsed, hearsing, hearses
 
 50 [name] 60 [12dicts] 70 [5d+2a] [moby] 85 [ukacd]: Hearst <n/upper>: Hearst's
 
@@ -215666,8 +215651,6 @@
 
 80 [moby]: Lapryor <n/place>
 
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: laps <m>: lapsed, lapsing, lapses
-
 80 [enable] 85 [ukacd]: lapsable <aj>
 
 80 [upper]: Lapsang <n/name>
@@ -217776,8 +217759,6 @@
 50 [name] 70 [5d+2a]: Leary <n/name?>: Leary's
 
 80 [enable] 85 [ukacd]: leary <aj>: learier, leariest
-
-85 [ukacd]: !leas <m>: leased, leasing, leases
 
 80 [enable] 85 [ukacd]: leasable <aj>
 
@@ -225368,8 +225349,6 @@
 
 85 [ukacd]: loord <n>: loords
 
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: loos <m>: loosed, loosing, looses
-
 60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: loos <a>: looser, loosest
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: loose <v>: -, loosing, -
@@ -226530,8 +226509,6 @@
 60 [12dicts] 70 [3of6] 85 [ukacd]: low-rise <aj>
 
 70 [moby] 85 [ukacd]: Lowry <n/upper?>: Lowry's
-
-85 [ukacd]: !lows <m>: lowsed, lowsing, lowses
 
 85 [stale] [ukacd]: lowse <v>
 85 [ukacd]: - <v>: lowsed, lowsing, lowses
@@ -299447,8 +299424,6 @@
 
 85 [ukacd]: pleaing
 
-35 [ukfreq] 60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: pleas <m>: pleased, pleasing, pleases
-
 70 [moby] 80 [enable] 85 [ukacd]: pleasance <n>: pleasances
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: pleasant <aj>
@@ -304353,8 +304328,6 @@
 40 [3esl] 50 [12dicts] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: posse <n>: posses, posse's
 
 70 [moby] 85 [ukacd]: posse comitatus <n>: posse comitatus's
-
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: posses <m>: possessed, possessing, possesses
 
 35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: possess <v>: possessed, possessing, possesses
 
@@ -384210,8 +384183,8 @@
 50 [12dicts] 60 [brif] 70 [3of6] [5d+2a] 80 [enable] 85 [ukacd]: sudsy <aj>
 50 [12dicts] 70 [5d+2a] 80 [3of6] [enable] 85 [ukacd]: - <aj>: sudsier, sudsiest
 
-35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: sue <v>
-35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: - <v>: sued, suing, sues
+35 [12dicts] [ukfreq] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: sue <v>: sued, -, -
+35 [12dicts] 40 [3esl] 60 [brif] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: - <v>: -, suing, sues
 
 50 [census] [name] 70 [5d+2a] [moby]: Sue <n/person>: Sue's
 
@@ -394524,8 +394497,6 @@
 50 [12dicts] 70 [3of6] [5d+2a] [moby] 80 [enable] 85 [ukacd]: teary <aj>
 50 [12dicts] 70 [5d+2a] [moby] 80 [3of6] [enable] 85 [ukacd]: - <aj>: tearier, teariest
 
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: teas <m>: teased, teasing, teases
-
 80 [ospdadd]: teasable <aj>
 
 50 [name]: Teasdale <n/name?>: Teasdale's
@@ -396454,9 +396425,6 @@
 85 [ukacd]: ten-pounder <n>: ten-pounders
 
 70 [moby] 80 [enable] 85 [ukacd]: tenrec <n>: tenrecs, tenrec's
-
-35 [ukfreq] 60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: tens <m>: -, -, tenses
-60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: - <m>: tensed, tensing, -
 
 60 [brif] 70 [3of6] 80 [enable] 85 [ukacd]: tens <a>: tenser, tensest
 

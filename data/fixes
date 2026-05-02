@@ -58,7 +58,13 @@ bing <m→n>
 
 CAD <n→abbr/>
 
+_V: candie <m→n> {→unit}
++ _: candy <n> {unit}: candies
+
 chez <→pp>
+
+_: chiz <m→v>
+_v: chizz <v>
 
 # Issue #376
 colorization <n>: colorizations_
@@ -66,6 +72,30 @@ colorization <n>: colorizations_
 
 = constructivism <n>: constructivisms~, constructivism's
 = 80: - <n>: constructivisms, -
+
+- cosie <v>
+
+- cozie <m>
+
+A C: cozy <n>
+B Cv: cosy <n>
+A@ B@: cosey <n>
+A@: cozey <n>
+
+A C: cozy <v>
+B Cv: cosy <v>
+
+A C: cozy <aj>
+B Cv: cosy <aj>
+= A@ B@: cosey <aj>: cosier, cosiest
+= A@ B@: cosie <aj>: cosier, cosiest
+A@: cozey <aj>
+A@: cozie <aj>
+
+_: déclassé <n→aj>
+_v: declasse <m→aj>
+_V: declassee <n→aj>
+_V: déclassée <n→aj>
 
 dialog <n→wp> {dialog box}
 dialogue <n→wp> {dialog box}
@@ -86,6 +116,21 @@ A B: drive-through <n>: drive-throughs
 A Z: euthanize <v>: euthanized, euthanizing, euthanizes
 B Dv: euthanise <v>: euthanised, euthanising, euthanises
 + D: euthanase <v>: euthanased, euthanasing, euthanases
+
+A B: fantasy <n_v>
+AV BV: phantasy <n_v>
+A- B-: fantasie <m→n_v>
+
+~ gratiné <v>
++ _: gratiné <aj>
++ _V: gratine <aj>
++ _v: gratinée <aj>
++ _V: gratinee <aj>
+
+= _: gratinée <m→v>: gratinéed, gratinéeing, gratinées
+  _v: gratinee <m→v>
+  _-: gratine <v>
+  _-: gratiné <v>
 
 # Issue #379
 A C: hemorrhagic <aj>
@@ -147,6 +192,9 @@ _v: MasterCard <n/name>: MasterCard's
 = A Cv: meager <aj>: meagerer-, meagerest-
 = AV B C: meagre <aj>: meagrer-, meagrest-
 
+_: midwife <n>
+_x: midwive <m→n>
+
 _: naive <n>: naives
 + _v: naïve <n>: naïves
 
@@ -206,6 +254,27 @@ AV B C: pre-exist <m→v>: pre-existed_, pre-existing_, pre-exists_
 A B- CV: preexisting <aj>
 AV B C: pre-existing <aj>
 
+A B: prize <n_v> {reward→}
+B-: pryse <v→n_v>
+B-: prys <m→n_v>
+
+A B: prize <aj> {reward→}
+B-: pryse <v→aj>
+B-: prys <m→aj>
+
+- prize <n> {otherwise}
+- prise <n> {otherwise}
+
+- prize <aj> {otherwise}
+- prise <aj> {otherwise}
+
+A BV C: prize <v> {otherwise→pry}
+B: prise <v> {otherwise}
+
+_: puttee <n> {→cloth strip}
+_V: puttie <m→n> {→cloth strip}
++ _V: putty <n> {cloth strip}: putties
+
 reactance <n>
 - 60 [extra]: ...
 
@@ -256,6 +325,15 @@ AV B-: thru <pp>
 trabecula <n>
 - 60 [extra]: ...
 
+# fixme: this is probably better fixed at the scowl-pre.txt level
+~ tres <m>
++ tres <abbr>
+
+# fixme: this is probably better fixed at the scowl-pre.txt level
+_: !très <m→av>
+_V: !tres <m→av>
+= 85 [ukacd]: ...
+
 wake <v>: (A B: woke | AV B@: waked), (A B: woken | A. B@: waked | AV: woke), waking, wakes
 - 50 [+]: ...
 
@@ -278,3 +356,5 @@ B-: yoghourt <n>: yoghourts, yoghourt's
 Cv: yogourt <n>: yogourts, yogourt's
 
 - ## hyena
+
+- ## fantasy

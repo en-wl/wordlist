@@ -51,6 +51,12 @@
 # Issue #437
 60: emoji <n>: (emojis | V: emoji*), emoji's
 
+# Issue #492
+60: enshittification <n> (vulgar-2)
+
+# Issue #492
+60: enshittify <v> (vulgar-2): enshittified, enshittifying, enshittifies
+
 # Issue #445
 60: ETH <abbr>
 

@@ -1,33 +1,40 @@
-English Speller Database (also known as SCOWLv2)
-================================================
+English Speller Database (ESDB)
+===============================
 
-SCOWL (Spell Checker Oriented Word Lists) and Friends is a database of
-information on English words useful for creating high-quality speller
-dictionaries and wordlists for most dialects of English.  The database
-primarily contains information on how common a word is, differences in
-spelling between the dialects of English, spelling variant information, and
-(basic) part-of-speech and inflection information.
+The English Speller Database (ESDB) is a database of information on English
+words useful for creating high-quality speller dictionaries and wordlists for
+most dialects of English.  The database primarily contains information on how
+common a word is, differences in spelling between the dialects of English,
+spelling variant information, (basic) part-of-speech, and inflection
+information.
 
-The original SCOWL (SCOWLv1) was a compilation of the information in the
+The project was originally called SCOWL (Spell Checker Originated Word Lists)
+and Friends.  The "and Friends" part referred to the other components that
+made up SCOWL including VarCon, AGID, and the various wordlists used to create
+the final result.  The reason for the name change is documented in
+[#465](https://github.com/en-wl/wordlist/discussions/465).
+
+The original version (SCOWLv1) was a compilation of the information in the
 database into a set of simple word lists that can be combined to create
 speller dictionaries of various sizes and dialects (American, British (both
 -ise and -ize), Canadian and Australian).
 
-SCOWLv2 instead combines all that information into a single text file and
-SQLite3 database.  In order to keep the file size manageable and to avoid noise
-entries the minimum SCOWL size is now 35 and the 95 size is not included.
+The new version (ESDB) instead combines all that information into a single
+text file and SQLite3 database.  In order to keep the file size manageable and
+to avoid noise entries the minimum ESDB size is now 35 and the 95 size is not
+included.
 
-Unlike SCOWLv1, SCOWLv2 includes the proper spelling of abbreviations that
-include the trailing dot.  It also includes words that were excluded from
-SCOWLv1 such as hyphenated and open (i.e. with space) compound words, and
-words with special symbols in them.
+Unlike the original version, the new version includes the proper spelling of
+abbreviations that include the trailing dot.  It also includes words that were
+excluded from the original version such as hyphenated and open (i.e. with
+space) compound words, and words with special symbols in them.
 
-SCOWL is derived from many sources under a BSD compatible license.  The
+ESDB is derived from many sources under a BSD compatible license.  The
 combined work is freely available under an MIT-like license.  See the file
 Copyright for details.
 
-SCOWLv2 is still a work in progress.  The default size (60) has been vetted
-for errors, and the larger size (70) should also be usable as a spellchecker
+ESDB is still a work in progress.  The default size (60) has been vetted for
+errors, and the larger size (70) should also be usable as a spellchecker
 dictionary.  The processing of the source data is completely different so the
 resulting wordlists are not the same.  Most of the changes I regard as
 corrections for improper handling of derived forms or variants in SCOWLv1.
@@ -36,16 +43,17 @@ the noun category assigned by WordNet.  For American English any new changes
 to non-possessive forms of words included in speller dictionary have been
 accounted for and noted in the file [`docs/comp-60.txt`](docs/comp-60.txt).
 
-SCOWLv2 is generated from the same sources that SCOWLv1 uses but via a far
-more complicated, and unreleased, process.  The results of this process are in
-the file `scowl-pre.txt`.  That file is then combined with other files to
-create the final version `scowl.txt` and the sqlite3 database `scowl.db`.
+The new version is generated from the same sources that the original uses but
+via a far more complicated, and unreleased, process.  The results of this
+process are in the file `scowl-pre.txt`.  That file is then combined with
+other files to create the final version `scowl.txt` and the sqlite3 database
+`scowl.db`.
 
 
 Requirements
 ------------
 
-SCOWLv2 requires Python 3 and SQLite.  It currently requires Python 3.7 and
+ESDB requires Python 3 and SQLite.  It currently requires Python 3.7 and
 SQLite 3.33.0.  Newer versions should work, older versions may work but are
 not supported.
 
@@ -55,7 +63,11 @@ A Unix-like environment is also required for now.
 Basic Usage
 -----------
 
-In order to use SCOWL the database must first be created from the source files
+Until very recently the name SCOWL (and sometimes SCOWLv2) was still used for
+the database.  For this reason all internal commands still use the original
+name for now.
+
+In order to use ESDB the database must first be created from the source files
 in the `data/` directly.  To do so simply type:
 
     make
@@ -64,10 +76,11 @@ which will create the sqlite3 file `scowl.db` which is all that you need for
 most operations.  If required the flat text file can also be created with `make
 scowl.txt`.
 
-To work with SCOWL use the `scowl` script provided in the root directory.
-This script is a very thin wrapper around the `libscowl` Python module.  The
-module is not available on PyPI, but instead included with SCOWL.  This script
-is meant to be run from the root directory of the SCOWL distribution.
+To work with the database use the `scowl` script provided in the root
+directory.  This script is a very thin wrapper around the `libscowl` Python
+module.  The module is not available on PyPI, but instead included with the
+database.  This script is meant to be run from the root directory of the ESDB
+distribution.
 
 To extract wordlists from the database use:
 
@@ -76,7 +89,7 @@ To extract wordlists from the database use:
 If `--db` option specifies the database file to use.  The option defaults to
 'scowl.db' or the value of the `SCOWL_DB` environment variable if set.
 
-The positional arguments to the `word-list` are the SCOWL size (in this case
+The positional arguments to the `word-list` are the ESDB size (in this case
 60), spellings to include (in this case `A` for American), and the max variant
 level (in this case 1, which excludes most variants except for special cases
 such as _dox_ and _doxx_).  The exact meaning of all these values are
@@ -130,9 +143,9 @@ is defined in the files `schema.sql`, `views.sql` and `scowl.sql` in the
 `libscowl/` directory.  The main entry point for extracting word lists is the
 `scowl_v0` query.
 
-As SCOWLv2 is still in an alpha/testing phase the command line utility and
-schema is subject to change.  At some point the command line interface will
-stabilize.  The schema may still be subject to change but a new `scowl_v1`
+As ESDB is still in an alpha/testing phase the command line utility and schema
+is subject to change.  At some point the command line interface will
+stabilize.  The schema may still be subject to change but a new `esdb_v1`
 view will be provided that is guaranteed to always provide the same results.
 New columns may be added, but not in a way that will break existing queries.
 If it is necessary to break existing queries a new view will be provided.
@@ -291,7 +304,7 @@ A GROUP represents one sense of a word.  Groups are separated by empty lines.
 
 #### SIZE
 
-SIZE is the SCOWL size, with larger numbers meaning less common words.
+SIZE is the ESDB size, with larger numbers meaning less common words.
 The sizes have the following approximate meanings:
 
     35: small
@@ -639,7 +652,7 @@ Both these commands modify the database in place and are reversible.
 Variant Translation
 -------------------
 
-SCOWL contains all the information in VarCon but the resulting file format
+The database contains all the information in VarCon but the resulting file format
 does not lead to easy translation.  The underlying database does.
 
 Within the database any words with the same `group_id` and `pos` are
@@ -672,9 +685,9 @@ For the foreseeable future `scowl.txt` will be generated by combining
 `scowl-pre.txt` with the other files in the `data/` directory using the
 `combine.py` Python script.
 
-To add new entries to SCOWL you should generally add the info to `data/extra`.
-Words added to this file will get the `[extra]` tag.  If a word is special in
-some way, for example a neologism, then the word can be added to
+To add new entries to the database you should generally add the info to
+`data/extra`.  Words added to this file will get the `[extra]` tag.  If a word
+is special in some way, for example a neologism, then the word can be added to
 `data/signature` instead to have the `[+]` tag applied.  Both these files are
 in the _merge_ format.
 
@@ -684,9 +697,9 @@ corrections, the second for adding variant information, and the last for adding
 variant information strictly related to the preferred form of compound words.
 These files are in the _adjust_ format.
 
-To bump a word to a higher SCOWL size use `data/exclude`.  This file is also
+To bump a word to a higher ESDB size use `data/exclude`.  This file is also
 in the _adjust_ format however it should only use a subset of the format.  The
-SCOWL size given should be the minimal SCOWL size that the word should be
+size given should be the minimal size that the word should be
 included and the tag '[-]' must be used.
 
 There are other files which are used by the `combine.py` script that are in a special
@@ -951,7 +964,7 @@ carry over to scowl.txt.
 Compatibility with SCOWLv1
 --------------------------
 
-SCOWLv2 is a complete overhaul of SCOWL and nearly everything changed.
+ESDB is a complete overhaul of SCOWLv1 and nearly everything changed.
 However, there is limited backward compatibility support via the `mk-list`
 script.  If you used `mk-list` in SCOWLv1, it will produce the same
 results.  If you created word lists by combining files in

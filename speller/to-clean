@@ -8,6 +8,7 @@
 *.zip
 .aspell
 .hunspell
+.libreoffice
 README_en_*.txt
 deaccent
 en_*.aff

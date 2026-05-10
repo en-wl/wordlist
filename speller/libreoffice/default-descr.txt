@@ -1,0 +1,1 @@
+Official version of American (en-US), Canadian (en-CA), and Australian (en-AU) spell-checker dictionaries based on the English Speller Database (ESDB).  Also provides alternative British versions (en-GB, en-GB-oxendict).

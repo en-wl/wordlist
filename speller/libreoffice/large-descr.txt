@@ -1,0 +1,2 @@
+Larger version of American (en-US), Canadian (en-CA), and Australian (en-AU) spell-checker dictionaries based on the English Speller Database (ESDB).
+

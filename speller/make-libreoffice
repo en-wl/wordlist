@@ -1,0 +1,136 @@
+#!/usr/bin/env python3
+
+import shutil
+import sys
+import os
+import zipfile
+from pathlib import Path
+
+def description_xml(out, *, id, version, name):
+    out.write(f"""<?xml version="1.0" encoding="UTF-8"?>
+<description xmlns="http://openoffice.org/extensions/description/2006"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <identifier value="net.aspell.wordlist.{id}"/>
+  <version value="{version}"/>
+
+  <display-name>
+    <name lang="en">{name}</name>
+  </display-name>
+
+  <publisher>
+    <name xlink:href="https://wordlist.aspell.net/">Kevin Atkinson</name>
+  </publisher>
+
+</description>
+""")
+
+def dict_xcu(out, locale, target):
+    out.write(f"""
+      <node oor:name="HunSpellDic_{locale}_ESDB" oor:op="fuse">
+        <prop oor:name="Locations" oor:type="oor:string-list">
+          <value>%origin%/{target}.aff %origin%/{target}.dic</value>
+        </prop>
+        <prop oor:name="Format" oor:type="xs:string">
+          <value>DICT_SPELL</value>
+        </prop>
+        <prop oor:name="Locales" oor:type="oor:string-list">
+          <value>{locale}</value>
+        </prop>
+      </node>
+""")
+
+def dictionaries_xcu(out, dicts):
+    out.write("""<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-data
+    xmlns:oor="http://openoffice.org/2001/registry"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    oor:name="Linguistic"
+    oor:package="org.openoffice.Office">
+
+  <node oor:name="ServiceManager">
+    <node oor:name="Dictionaries">
+""")
+
+    for locale, target in dicts.items():
+        dict_xcu(out, locale, target)
+    
+    out.write("""
+    </node>
+  </node>
+</oor:component-data>
+""")
+
+DEFAULT_DICT_CONFIG = {
+    'pkg' : 'dict-en-esdb',
+    'dicts' : {
+        'en-US': 'en_US',
+        'en-GB': 'en_GB-ise',
+        'en-GB-oxendict': 'en_GB-ize',
+        'en-CA': 'en_CA',
+        'en-AU': 'en_AU',
+    },
+    'id': 'default',
+    'name': 'ESDB based English speller dictionaries',
+    'descr': Path('libreoffice/default-descr.txt'),
+}
+
+LARGE_DICT_CONFIG = {
+    'pkg' : 'dict-en-esdb-large',
+    'dicts' : {
+        'en-US': 'en_US-large',
+        'en-CA': 'en_CA-large',
+        'en-AU': 'en_AU-large',
+    },
+    'id': 'large',
+    'name': 'ESDB based English speller dictionaries (large)',
+    'descr': Path('libreoffice/large-descr.txt'),
+}
+
+def mk_dist_dir(config, version):
+    dir = Path(f"lo-{config['pkg']}-{version}")
+    if dir.exists():
+        shutil.rmtree(dir)
+    dir.mkdir()
+    (dir / 'META-INF').mkdir()
+
+    with open(dir / 'description.xml', 'w') as f:
+        description_xml(f, id=config['id'], version=version, name=config['name'])
+
+    with open(dir / 'dictionaries.xcu', 'w') as f:
+        dictionaries_xcu(f, config['dicts'])
+
+    shutil.copy('libreoffice/manifest.xml', dir / 'META-INF' / 'manifest.xml')
+    shutil.copy(config['descr'], dir / 'package-description.txt')
+    shutil.copy('libreoffice/test-doc-2026.02.25.odt', dir)
+
+def populate(config, version):
+    dir = Path(f"lo-{config['pkg']}-{version}")
+    for target in config['dicts'].values():
+        shutil.copy(f"{target}.aff", dir)
+        shutil.copy(f"{target}.dic", dir)
+
+def mk_dist(config, version):
+    mk_dist_dir(config, version)
+    populate(config, version)
+    dir = Path(f"lo-{config['pkg']}-{version}")
+    oxt_name = f"{config['pkg']}-{version}.oxt"
+    with zipfile.ZipFile(oxt_name, 'w', zipfile.ZIP_DEFLATED) as zf:
+        for file in dir.rglob('*'):
+            if file.is_file():
+                zf.write(file, file.relative_to(dir))
+    return oxt_name
+
+def main():
+    version = os.environ.get('ESDB_LO_VERSION', None)
+    if not version:
+        version = os.environ.get('ESDB_VERSION', None)
+    if not version:
+        version = os.environ.get('SCOWL_VERSION', None)
+    if not version:
+        raise RuntimeError('ESDB_LO_VERSION or ESDB_VERSION must be defined')
+    mk_dist(DEFAULT_DICT_CONFIG, version)
+    mk_dist(LARGE_DICT_CONFIG, version)
+
+if __name__ == '__main__':
+    main()

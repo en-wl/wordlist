@@ -10,6 +10,7 @@
 /*.zip
 /.aspell
 /.hunspell
+/.libreoffice
 /README_en_*.txt
 /deaccent
 /en_*.aff
@@ -33,3 +34,5 @@
 /aspell/configure
 /aspell/info
 aspell6-en-*/
+/lo-dict-en-esdb*/
+/dict-en-esdb*.oxt

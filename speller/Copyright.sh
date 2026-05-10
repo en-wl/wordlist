@@ -1,5 +1,5 @@
 sed -n '/^===/q;p' $SCOWL/Copyright
-sed -n '/^=== AU$/,/^===/{/^===/d;p}' $SCOWL/Copyright | sed '1{/^$/d}'
+sed -n '/^=== AU$/,/^===/{/^===/d;p;}' $SCOWL/Copyright | sed '1{/^$/d;}'
 
 cat <<'EOF'
 Affix file Copyright:

@@ -57,8 +57,9 @@ ESDB requires Python 3 and SQLite.  It currently requires Python 3.7 and
 SQLite 3.33.0.  Newer versions should work, older versions may work but are
 not supported.
 
-A Unix-like environment is also required for now.
-
+A Unix-like environment is not required but the rest of this documentation
+will assume you are using one.  For details on how to run on Windows 10/11
+directly see: https://github.com/en-wl/wordlist/issues/499.
 
 Basic Usage
 -----------
@@ -68,13 +69,13 @@ the database.  For this reason all internal commands still use the original
 name for now.
 
 In order to use ESDB the database must first be created from the source files
-in the `data/` directly.  To do so simply type:
+in the `data/` directly.  If you have a Unix-like environment simply type:
 
     make
 
 which will create the sqlite3 file `scowl.db` which is all that you need for
-most operations.  If required the flat text file can also be created with `make
-scowl.txt`.
+most operations.  If required the flat text file can also be created with
+`make scowl.txt`.
 
 To work with the database use the `scowl` script provided in the root
 directory.  This script is a very thin wrapper around the `libscowl` Python

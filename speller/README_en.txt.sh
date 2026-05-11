@@ -37,8 +37,7 @@ words (for example, "ort" and "calender").
 
 The American, Canadian, and Australian dictionaries are considered the
 official version for Hunspell.  The British ones are considered an 
-alternative version.  The official ones are maintained by Marco A.G.Pinto at
-https://proofingtoolgui.org.
+alternative version.
 
 For additional information, including information on how to contribute, see
 https://wordlist.aspell.net/dicts/.

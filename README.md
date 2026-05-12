@@ -110,7 +110,7 @@ keep them:
 
 To exclude abbreviations altogether (including unmarked ones):
 
-    ./scowl word-list 60 A 1 --poses-to-exclude=abbr > wl.txt
+    ./scowl word-list 60 A 1 --wo-poses=abbr > wl.txt
 
 To disable the word filter and include all words:
 
@@ -902,7 +902,7 @@ example is equivalent to:
 
     ? cohost <v>
     cohost <m→v>
-  
+
 #### Examples
 
 The most straightforward use of an _adjust_ file is to add variant info.  For

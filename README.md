@@ -110,7 +110,7 @@ keep them:
 
 To exclude abbreviations altogether (including unmarked ones):
 
-    ./scowl word-list 60 A 1 --poses-to-exclude=abbr > wl.txt
+    ./scowl word-list 60 A 1 --wo-poses=abbr > wl.txt
 
 To disable the word filter and include all words:
 
@@ -641,11 +641,11 @@ The POS pairs noun/verb and adjective/adverb are normally combined into a
 single group when doing so will not introduce additional noise.  The POS pairs
 can be split by using:
 
-    ./scowl split-pos scowl.db
+    ./scowl split-pos [--db scowl.db]
 
 And can then be combined using:
 
-    ./scowl combine-pos scowl.db
+    ./scowl combine-pos [--db scowl.db]
 
 Both these commands modify the database in place and are reversible.
 
@@ -902,7 +902,7 @@ example is equivalent to:
 
     ? cohost <v>
     cohost <m→v>
-  
+
 #### Examples
 
 The most straightforward use of an _adjust_ file is to add variant info.  For

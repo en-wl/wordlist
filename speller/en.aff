@@ -112,7 +112,7 @@ SFX B   e     able       [^aeiou]e
 SFX L Y 1
 SFX L   0     ment       .
 
-REP 90
+REP 89
 REP a ei
 REP ei a
 REP a ey
@@ -202,4 +202,3 @@ REP ss z
 REP shun tion
 REP shun sion
 REP shun cion
-REP size cise

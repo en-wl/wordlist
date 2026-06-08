@@ -420,31 +420,31 @@ def _mergeGroup(conn, grp, idx, next_group_id, next_word_id,
         # be valid within that range is an error.
         max_vl = max(4, *(vl for lemma_id, sps in lemmaSpellings.items() for sp, vl in sps.items()))
 
-        anyVariantInfo = False
+        existingVariantInfo = False
         fullCoverage = True
         for lemma_id, vl in existing.items():
             if vl is None:
                 vl = -1
             else:
-                anyVariantInfo = True
+                existingVariantInfo = True
             if lemma_id not in lemmaSpellings:
                 fullCoverage = False
                 if vl < max_vl:
                     raise ValueError("unaccounted for lemma when trying to add lemma variant info")
 
-        if onVariantConflict == 'replace':
+        if not existingVariantInfo or onVariantConflict == 'replace':
             for lemma_id, sps in lemmaSpellings.items():
                 conn.execute("delete from lemma_variant_info where lemma_id = ?", (lemma_id,))
                 conn.executemany("insert into lemma_variant_info (lemma_id, spelling, variant_level) values (?, ?, ?)",
                                  ((lemma_id, sp, vl) for sp, vl in sps.items()))
-            if fullCoverage:
+            if fullCoverage and onVariantConflict == 'replace':
                 # If the incoming spellings cover every lemma in the group,
                 # group_comments tend to be redundant/stale (they often record
                 # the spellings that we just replaced).
                 conn.execute("delete from group_comments where group_id = ?", (group_id,))
         elif onVariantConflict == 'skip':
             pass
-        elif anyVariantInfo:
+        else:
             raise ValueError("existing lemma variant info found")
 
     for l in grp.lines:

@@ -497,7 +497,8 @@
 
 60: decrypt <v>: decrypted, decrypting, decrypts
 
-60: deemphasize <v>: deemphasized, deemphasizing, deemphasizes
+60: A Z: deemphasize <v>: deemphasized, deemphasizing, deemphasizes
+60: B: deemphasise <v>: deemphasised, deemphasising, deemphasises
 
 60: defang <v>: defanged, defanging, defangs
 
@@ -509,7 +510,8 @@
 
 60: deglaze <v>
 
-60: delegitimize <v>: delegitimized, delegitimizing, delegitimizes
+60: A Z: delegitimize <v>: delegitimized, delegitimizing, delegitimizes
+60: B: delegitimise <v>: delegitimised, delegitimising, delegitimises
 
 60: demonization <n>: demonizations
 
@@ -655,7 +657,8 @@
 
 60: fenugreek <n>
 
-60: fetishize <v>: fetishized, fetishizing, fetishizes
+60: A Z: fetishize <v>: fetishized, fetishizing, fetishizes
+60: B: fetishise <v>: fetishised, fetishising, fetishises
 
 60: fibromyalgia <n>
 
@@ -855,7 +858,8 @@
 
 60: improv <v>
 
-60: incentivize <v>: incentivized, incentivizing, incentivizes
+60: A Z: incentivize <v>: incentivized, incentivizing, incentivizes
+60: B: incentivise <v>: incentivised, incentivising, incentivises
 
 60: inclusivity <n>
 
@@ -863,7 +867,8 @@
 
 60: industrial <n>: industrials
 
-60: infantilize <v>: infantilized, infantilizing, infantilizes
+60: A Z: infantilize <v>: infantilized, infantilizing, infantilizes
+60: B: infantilise <v>: infantilised, infantilising, infantilises
 
 60: ingroup <n>: ingroup's
 
@@ -907,7 +912,8 @@
 
 60: jokester <n>: jokesters
 
-60: journaling <n>
+60: A B: journaling <n>
+60: B?: journalling <n>
 
 60: juju <n>: jujus
 
@@ -1065,7 +1071,8 @@
 
 60: mischaracterization <n>: mischaracterizations
 
-60: mischaracterize <v>: mischaracterized, mischaracterizing, mischaracterizes
+60: A Z: mischaracterize <v>: mischaracterized, mischaracterizing, mischaracterizes
+60: B: mischaracterise <v>: mischaracterised, mischaracterising, mischaracterises
 
 60: misclassification <n>: misclassifications
 
@@ -1087,7 +1094,8 @@
 
 60: mojo <n>
 
-60: moldable <aj>
+60: A Cv DV: moldable <aj>
+60: B C D: mouldable <aj>
 
 60: monkeypox <n>
 
@@ -1380,7 +1388,8 @@
 
 60: qubit <n>: qubits
 
-60: racialized <aj>
+60: A Z: racialized <aj>
+60: B: racialised <aj>
 
 60: railcar <n>: railcars
 
@@ -1414,7 +1423,8 @@
 
 60: redshirt <n>
 
-60: reenergize <v>
+60: A Z: reenergize <v>
+60: B: reenergise <v>
 
 60: reengineer <v>: reengineered, reengineering, reengineers
 
@@ -1512,7 +1522,8 @@
 
 60: sexualization <n>
 
-60: sexualize <v>: sexualized, sexualizing, sexualizes
+60: A Z: sexualize <v>: sexualized, sexualizing, sexualizes
+60: B: sexualise <v>: sexualised, sexualising, sexualises
 
 60: shaper <n>: shapers
 
@@ -1579,7 +1590,8 @@
 
 60: stovetop <n>: stovetops
 
-60: strategize <v>: strategized, strategizing, strategizes
+60: A Z: strategize <v>: strategized, strategizing, strategizes
+60: B: strategise <v>: strategised, strategising, strategises
 
 60: streambed <n>: streambeds
 
@@ -1781,7 +1793,8 @@
 
 60: underrepresentation <n>
 
-60: underutilize <v>
+60: A Z: underutilize <v>
+60: B: underutilise <v>
 
 60: undiagnosed <aj>
 
@@ -1821,7 +1834,8 @@
 
 60: unshaved <aj>
 
-60: unsubsidized <aj>
+60: A Z: unsubsidized <aj>
+60: B: unsubsidised <aj>
 
 60: unsubtle <aj>
 
@@ -1890,7 +1904,8 @@
 
 60: waypoint <n>: waypoints
 
-60: weaponization <n>
+60: A Z: weaponization <n>
+60: B: weaponisation <n>
 
 60: wheatgrass <n>
 

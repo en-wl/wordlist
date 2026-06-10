@@ -3,12 +3,36 @@
 A B: adapter <n>
 AV Bv: adaptor <n>
 
+A Bv C: adjudgment <n>
+B Cv: adjudgement <n>
+
 alight <v>: (alighted | V: alit), -, -
+
+A Bv C: anapest <n>
+AV B CV: anapaest <n>
+
+A Bv C: anapestic <n>
++ AV B CV: anapaestic <n>: anapaestics
+
+A Bv C: anapestic <aj>
+AV B CV: anapaestic <aj>
 
 = _: angstrom <n/>: angstroms
 + _V: ångström <n/>: ångströms
 = _-: Ångström <n/>: Ångströms
 - Angstrom <n/>
+
+A Z: annex <n>
+B: annexe <n>
+
+A B: annex <v>
+B-: annexe <v>
+
+A Z: antiglobalization <n>
+B: antiglobalisation <n>
+
+A B: athenaeum <n>
+Av: atheneum <n>
 
 A B: axe <n_v>
 A.: ax <n_v>
@@ -16,14 +40,77 @@ A.: ax <n_v>
 ##   and they wrote an article on why _axe_ is preferred.  Some other American
 ##   dictionaries still preferred _ax_, however.
 
+A B: axeman <n>
+A.: axman <n>
+
+A BV C Dv: backdraft <n>
+A D: backdraught <n>
+
 A B: briar <n>
 AV BV: brier <n>
+
+burn <v>: (_: burned | _v: burnt), -, -
+
+- Caesarean <n>
+
+A BV Cv: cesarean <n>
+Av B C: caesarean <n>
+AV BV CV:  cesarian <n>
+AV BV CV: caesarian <n>
+
+A BV Cv: cesarean <aj>
+Av B C: caesarean <aj>
+AV BV CV:  cesarian <aj>
+AV BV CV: caesarian <aj>
+
+- Cesarean <n>
+
+A B: caesura <n>: (caesuras | V: caesurae)
+AV: cesura <n>: cesuras_
+
+A C: cecum <n>
+B CV: caecum <n>
+
+_: Chaldea <n/place>
+_V: Chaldaea <n/place>
+
+A B: coliseum <n>
+Bv: colosseum <n>
+
+Colosseum <n/name>
+
+A Z: conscientize <v>
+B: conscientise <v>
 
 _: Curaçao <n/place>
 _-: Curacao <n/place>
 
+A B: defecate <v>
+BV: defaecate <v>
+
+A B: defecation <n>
+BV: defaecation <n>
+
+A BV: dependent <n>
+B: dependant <n>
+
 A C D: deprogram <v>: (A C D: deprogrammed | Av: deprogramed), (A C D: deprogramming | Av: deprograming), deprograms
 B Cv Dv: deprogramme <m→v>: deprogrammed, deprogramming, deprogrammes
+
+A Z: dollarize <v>
+B: dollarise <v>
+
+A C D: draftspeople <→n>
+B DV: draughtspeople <→n>
+
+A C D: draftsperson <n>
+B DV: draughtsperson <n>
+
++ A C DV: Euroskeptic <n>: Euroskeptics
+B Cv D: Eurosceptic <n/>
+
+A Cv DV: favorability <n>
+B C D: favourability <n>
 
 A B=: fete <n>: fetes
 Av B: fête <n>: fêtes
@@ -37,11 +124,50 @@ formula <n>: (A B: formulas | Av B.: formulae), formula's, (A B: formulas' | Av 
 
 forum <n>: (forums | V: fora), forum's, (forums' | V: fora's)
 
+A Cv BV: gemological <aj>
+B C: gemmological <aj>
+
+A Cv BV: gemologist <n>
+B C: gemmologist <n>
+
+A Cv BV: gemology <n>
+B C: gemmology <n>
+
 get <v>: -, (A B C: got | A. B@ C.: gotten), -, -
+
+A Z: glocalization <n>
+B: glocalisation <n>
+
+A BV Z C D: gonadotropic <aj>
+B: gonadotrophic <aj>
+
+A Bv C: gonadotropin <n>
+B Cv: gonadotrophin <n>
+
+A: harbormaster <n>
+AV CV: harbor master <n>
+B C: harbour master <n>
+Bv CV: harbourmaster <n>
+
+A Cv: highflier <n>
+Av: highflyer <n>
+B C: high-flyer <n>
+Bv CV: high-flier <n>
 
 hoof <n>: (hooves | .: hoofs)
 
+A Cv DV: humorlessly <av>
+B C D: humourlessly <av>
+
+A C Dv: hyperglycemia <n>
+B D: hyperglycaemia <n>
+
+A C Dv: hyperglycemic <aj>
+B D: hyperglycaemic <aj>
+
 imago <n>: (A: imagoes | Av Bv: imagines | B: imagos)
+
+journal <v>: (A B: journaled | B?: journalled), (A B: journaling | B?: journalling), -
 
 A C: kindergartner <n>
 AV B: kindergartener <n>
@@ -50,17 +176,91 @@ A- B-: kindergärtner <n>
 A Bv: lambaste <v>
 Av B: lambast <v>
 
+_: largesse <n>
+_V: largess <n>
+
+A C Dv: leukemic <aj>
+B D: leukaemic <aj>
+
+A C Dv: leukocyte <n>
+B D: leucocyte <n>
+
+A Cv DV: likability <n>
+Av B C D: likeability <n>
+
+A Cv DV: likable <aj>
+Av B C D: likeable <aj>
+
+A Cv DV: likableness <n>
+Av B C D: likeableness <n>
+
+A Cv DV: likably <av>
+Av B C D: likeably <av>
+
+A C D: livability <n>
+AV B Cv Dv: liveability <n>
+
+A B: megaton <n>
+Bv: megatonne <n>
+
+A: microfiber <n>
+B: microfibre <n>
+
 misspell <v>: (A B: misspelled | AV B.: misspelt), -, -
+
+A Cv DV: moldable <aj>
+B C D: mouldable <aj>
+
+A Cv DV: moldiness <n>
+B C D: mouldiness <n>
+
+A: multistory <aj>
+B: multistorey <aj>
+B-: multi-storey <aj>
+
+A B C: neuron <n>
+Bv: neurone <n>
+
+A Bv C: nonjudgmental <aj>
+Av B Cv: nonjudgemental <aj>
+
+A B: oenophile <n>
+Av: enophile <n>
+
+A Z: overgeneralization <n>
+B: overgeneralisation <n>
+
+A C: paleographer <n>
+B Cv: palaeographer <n>
+
+A C: paleography <n>
+B Cv: palaeography <n>
+
+A CV: paycheck <n>
+B C.: pay cheque <n>
+BV C: paycheque <n>
 
 A B C: peddler <n>
 AV B. Cv: pedlar <n>
 A@ B@ C@: pedler <n>
 
+A B: pederasty <n>
+BV: paederasty <n>
+
 persona <n>: (personae | .: personas), persona's, (personae's | .: personas')
+
+A B: phenobarbital <n>
+Bv: phenobarbitone <n>
 
 _: piñon <n>
 _v: pinyon <n>
 _-: pinon <n>
+
+A B: pipette <n>
+AV: pipet <n>
+
+A Bv: portaled <→aj>
+Av B: portalled <→aj>
 
 A C D: program <n>: programs
 B Cv Dv: programme <n>: programmes
@@ -69,6 +269,9 @@ A C D: program <v>: (A C D: programmed | Av: programed), (A C D: programming | A
 AV B Cv Dv: programme <v>: programmed, programming, programmes
 
 A B: program <n_v> {computer program → coded instructions}: (A B: programmed | Av: programed), (A B: programming | Av: programing), -
+
+A C: pudgy <aj>
+B: podgy <aj>
 
 referendum <n>: (referendums | .: referenda)
 
@@ -88,6 +291,14 @@ AV Bv: Salvadorean <aj>
 
 scampi <n>: (scampi | -: scampies | -: scampis)
 
+A C: smart-ass <n>
+AV: smartass <n>
+B Cv: smart-arse <n>
+B. Cv: smartarse <n>
+
+A: snorkeler <n>
+B: snorkeller <n>
+
 _: soigné <aj>
 _V: soigne <aj>
 
@@ -102,11 +313,37 @@ _V: souffle <a→aj>
 
 spec <n_v>: (specced | v: spec'd | -: specked), (speccing | v: spec'ing | -: specking), specs
 
+A B: storied <aj> {→book}
+
+A: storied <aj> {→level of building}
+B: storeyed <aj> {→level of building}
+
 strew <v>: -, (strewn | .: strewed), -, -
 
+A: supercenter <n>
+B: supercentre <n>
+
+A B C: swap <n_v>
+BV: swop
+
 taxon <n>: (taxa | V: taxons_), taxon's, (taxa's | V: taxons'_)
+
+A B: turnaround <n>
+BV: turnround <n>
 
 A B. C: unbeknownst <aj_av>
 Av B Cv: unbeknown <aj_av>
 
+A Cv DV: unlikable <aj>
+Av B C D: unlikeable <aj>
+
+A: untraveled <aj>
+B: untravelled <aj>
+
 virtuoso <n>: (A B=: virtuosos | A= B: virtuosi | A-: virtuosoes), virtuoso's, (A B=: virtuosos' | A= B: virtuosi's | A-: virtuosoes')
+
+A Z: volumize <v>
+B: volumise <v>
+
+A Z: volumizer <n>
+B: volumiser

@@ -20,6 +20,15 @@ insert into to_remove values (0);
 analyze temp;
 
 --
+-- preprocessing
+--
+
+insert or ignore into new_scowl_data
+select size,category,region,tag,main_group_id,'*',false
+  from use_scowl_info_from
+  join scowl_data on group_id = other_group_id and pos = other_pos;
+
+--
 -- tables and views used to split entries as needed
 --
 

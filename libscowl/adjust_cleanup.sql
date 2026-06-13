@@ -17,6 +17,7 @@ drop table if exists new_words;
 drop table if exists explicit;
 drop table if exists to_remove;
 drop view if exists to_merge;
+drop table if exists use_scowl_info_from;
 drop table if exists use_info_from;
 
 commit;

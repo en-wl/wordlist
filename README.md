@@ -903,6 +903,18 @@ example is equivalent to:
     ? cohost <v>
     cohost <m→v>
 
+#### Size Adjustments via Word Annotations
+
+If an annotations after a word is given, in addition to adjusting the
+entry rank, the SCOWL size will also be adjusted as follows:
+
+    -,@ → 70
+    ~ → 80
+    ! → 85
+
+That is a derived entry marked with `-` will get assigned a size of at least
+70, etc.
+
 #### Examples
 
 The most straightforward use of an _adjust_ file is to add variant info.  For

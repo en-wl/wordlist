@@ -12,6 +12,13 @@ create table temp.use_info_from (
   primary key (main_group_id, other_group_id)
 ) without rowid;
 
+create table temp.use_scowl_info_from (
+  main_group_id integer,
+  other_group_id integer,
+  other_pos text not null,
+  primary key (main_group_id, other_group_id)
+) without rowid;
+
 create view temp.to_merge as
   select main_group_id, other_group_id
   from temp.use_info_from

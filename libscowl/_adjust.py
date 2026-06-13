@@ -418,14 +418,14 @@ def adjustEntries(conn, f = None, *,
                             elif li.pos != needed_pos:
                                 raise ValueError(f"inconsistent resolved POSes within group: {needed_pos} vs {adj_pos}")
                             return True
-                        needAdj = (match_uncertain('m', 'n', 'v') 
+                        needAdj = (match_uncertain('m', 'n', 'v')
                                    or match_uncertain('a', 'aj', 'av')
                                    or match_uncertain('')
                                    or needAdj)
                         adjLines.append((line, li))
                     if needAdj and adjLines:
                         groupLines = [(line, li, needed_pos) for line, li in adjLines]
-                    
+
                 # prepare subgroups and unify pos
                 for line, li, new_pos in groupLines:
                   if isinstance(li, LineInfo):
@@ -538,13 +538,21 @@ def adjustEntries(conn, f = None, *,
                         group_id = getattr(li, 'group_id', sg.id)
 
                         if li.action == 'transfer':
-                            conn.execute("insert into use_info_from (main_group_id, other_group_id, also_merge) values (?, ?, false)"
-                                         " on conflict do nothing",
-                                         (sg.id, group_id))
-                        else:
-                            conn.execute("insert into use_info_from (main_group_id, other_group_id, also_merge) values (?, ?, true)"
-                                         " on conflict (main_group_id, other_group_id) do update set also_merge = true where not excluded.also_merge",
-                                         (sg.id, group_id))
+                            if len(li.words) == 1:
+                                pos = next(k for k in li.words.keys())
+                            else:
+                                lemma_pos = basePosInfo[li.pos].lemma_pos
+                                infl_poses = [k for k in li.words.keys() if k != lemma_pos]
+                                if len(infl_poses) != 1:
+                                    raise ValueError("more than one possible word found for transfer entry")
+                                pos = infl_poses[0]
+                            conn.execute("insert into use_scowl_info_from (main_group_id, other_group_id, other_pos) values (?, ?, ?)",
+                                         (sg.id, group_id, pos))
+                            continue
+
+                        conn.execute("insert into use_info_from (main_group_id, other_group_id, also_merge) values (?, ?, true)"
+                                     " on conflict (main_group_id, other_group_id) do update set also_merge = true where not excluded.also_merge",
+                                     (sg.id, group_id))
 
                         keepPoses = set()
                         for pos, wes in li.words.items():
@@ -552,7 +560,7 @@ def adjustEntries(conn, f = None, *,
                                 keepPoses.add(pos)
                                 wes.clear()
 
-                        if li.action == 'remove' or li.action == 'transfer':
+                        if li.action == 'remove':
                             for pos, wes in li.words.items():
                                 for we in wes:
                                     try:
@@ -560,12 +568,10 @@ def adjustEntries(conn, f = None, *,
                                                                      (li.lemma_id, pos, we.word)))
                                     except StopIteration:
                                         raise ValueError(f"unable to find match for {we.word} with pos '{pos}'")
-                                    if li.action == 'remove':
-                                        conn.execute("insert into to_remove(word_id) values (?)", (word_id,))
+                                    conn.execute("insert into to_remove(word_id) values (?)", (word_id,))
                                     conn.execute("insert into explicit(word_id) values (?)", (word_id,))
-                            if li.action == 'remove':
-                                conn.execute("insert or ignore into to_remove (word_id) select word_id from words "
-                                             "where lemma_id = ?", (li.lemma_id,))
+                            conn.execute("insert or ignore into to_remove (word_id) select word_id from words "
+                                         "where lemma_id = ?", (li.lemma_id,))
                             continue
 
                         if li.action == 'replace':

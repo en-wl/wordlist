@@ -43,9 +43,9 @@ def mergeEntries(conn, f = None, *,
         if len(header) == 0 or header[0] != 'merge':
             raise ValueError("unexpected file format")
         for flag in header[1:]:
-            if flag[0] == '[' and flag[-1] == ']':
-                tag = flag
-            elif flag[0] == '(' and flag[-1] == ')':
+            if (flag[0] == "[" and flag[-1] == "]") or (
+                flag[0] == "(" and flag[-1] == ")"
+            ):
                 tag = flag
             elif flag == ':skip-on-variant-conflict':
                 onVariantConflict = 'skip'

@@ -559,7 +559,7 @@ def adjustEntries(conn, f = None, *,
                                         word_id, = next(conn.execute("select word_id from words where lemma_id = ? and pos = ? and word = ?",
                                                                      (li.lemma_id, pos, we.word)))
                                     except StopIteration:
-                                        raise ValueError(f"uanble to find match for {we.word} with pos '{pos}'")
+                                        raise ValueError(f"unable to find match for {we.word} with pos '{pos}'")
                                     if li.action == 'remove':
                                         conn.execute("insert into to_remove(word_id) values (?)", (word_id,))
                                     conn.execute("insert into explicit(word_id) values (?)", (word_id,))

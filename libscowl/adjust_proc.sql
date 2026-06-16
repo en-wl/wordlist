@@ -325,7 +325,7 @@ delete from scowl_data
 -- add/update any explicitly provided scowl data
 create temp table old_scowl_data as
   select other_group_id as group_id, sd.pos, sd.size
-     from (select main_group_id, pos, min(size) as size from new_scowl_data where replace group by main_group_id, pos)  nsd
+     from (select main_group_id, pos, max(size) as size from new_scowl_data where replace group by main_group_id, pos)  nsd
      join to_merge using (main_group_id)
      join scowl_data sd on sd.group_id = other_group_id and (nsd.pos = '*' or sd.pos = nsd.pos) and sd.size < nsd.size;
 delete from scowl_data
@@ -359,10 +359,12 @@ insert or ignore into scowl_override(size,category,region,tag,word_id)
 insert into scowl_data
 select b.size, b.category, b.region, b.tag, group_id, w.pos
   from (select distinct main_group_id as group_id, pos from to_merge join words on main_group_id = group_id) as w
+  join groups using (group_id)
+  join base_poses using (base_pos)
   left join scowl_data as a using (group_id, pos)
   left join scowl_data as b using (group_id)
   where a.size is null
-    and b.pos in (select lemma_pos from base_poses);
+    and b.pos = lemma_pos;
 
 -- cleanup
 delete from scowl_data as sd

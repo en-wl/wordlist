@@ -379,6 +379,28 @@ select b.size, b.category, b.region, b.tag, group_id, w.pos
   where a.size is null
     and b.pos = lemma_pos;
 
+-- if a rank is given adjust the scowl size to the minimal size based on the rank
+create temp table min_scowl_sizes (
+  entry_rank text not null primary key,
+  min_size integer not null
+) without rowid;
+insert into min_scowl_sizes values ('-', 70), ('@', 70), ('~', 80), ('!', 85);
+create temp table adj_scowl_sizes as
+with ranks as (select main_group_id as group_id, pos, adj_rank as entry_rank from adj_entry_ranks
+               union select main_group_id, pos, entry_rank from new_words where entry_rank is not null)
+select sd.*, min_size
+  from scowl_data as sd
+  join ranks using (group_id, pos)
+  join min_scowl_sizes using (entry_rank)
+where size < min_size;
+delete from scowl_data 
+  where (size,category,region,tag,group_id,pos) in (select size,category,region,tag,group_id,pos from adj_scowl_sizes);
+insert or ignore into scowl_data (size,category,region,tag,group_id,pos)
+select min_size,category,region,tag,group_id,pos adj_scowl_sizes 
+  from adj_scowl_sizes;
+drop table adj_scowl_sizes;
+drop table min_scowl_sizes;
+
 -- cleanup
 delete from scowl_data as sd
   where group_id in (select * from group_ids_to_clean_up)

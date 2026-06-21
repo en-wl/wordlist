@@ -260,6 +260,12 @@ A Bv: percent <a→av>
 person <n>: (people | V: persons), person's, (people's | V: persons')
 + 60: +: person <n>: persons
 
+petrifaction <n>
+= 70 [-]: ...
+
+petrification <n>: petrifications~
+= 50 [extra]: ...
+
 _: piñata <n>
 _v: pinata <n>
 

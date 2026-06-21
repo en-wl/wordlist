@@ -332,6 +332,7 @@ delete from scowl_data
        join to_merge using (main_group_id));
 
 -- add/update any explicitly provided scowl data
+
 create temp table old_scowl_data as
   select other_group_id as group_id, sd.pos, sd.size
      from (select main_group_id, pos, max(size) as size from new_scowl_data where replace group by main_group_id, pos)  nsd
@@ -339,6 +340,7 @@ create temp table old_scowl_data as
      join scowl_data sd on sd.group_id = other_group_id and (nsd.pos = '*' or sd.pos = nsd.pos) and sd.size < nsd.size;
 delete from scowl_data
   where (group_id, pos, size) in (select * from old_scowl_data);
+
 insert or ignore into scowl_data(size,category,region,tag,group_id,pos)
   select nsd.size,category,region,tag,main_group_id,coalesce(new_pos, nsd.pos)
     from new_scowl_data nsd
@@ -346,11 +348,13 @@ insert or ignore into scowl_data(size,category,region,tag,group_id,pos)
     cross join fix_pos p on g.base_pos = p.base_pos and nsd.pos = orig_pos
   where nsd.pos != '*';
 insert or ignore into scowl_data(size,category,region,tag,group_id,pos)
-  select size,category,region,tag,main_group_id,w.pos
+  select size,category,region,tag,w.group_id,w.pos
     from new_scowl_data nsd
     cross join words w on nsd.main_group_id = w.group_id
     -- note: words has already been updated with the corrected pos, so no need to join with fix_pos
   where nsd.pos = '*'
+    and not exists (select * from new_scowl_data b
+                    where b.replace and b.pos = w.pos and b.main_group_id = w.group_id and b.size >= nsd.size)
     and (nsd.tag != '[-]'
          or exists (select * from old_scowl_data osd
                     where osd.group_id = nsd.main_group_id and osd.pos = w.pos and osd.size <= nsd.size))

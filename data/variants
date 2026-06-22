@@ -28,6 +28,8 @@ B: annexe <n>
 A B: annex <v>
 B-: annexe <v>
 
+annulus <n>: (annuli | V: annuluses)
+
 A Z: antiglobalization <n>
 B: antiglobalisation <n>
 
@@ -79,6 +81,9 @@ Bv: colosseum <n>
 
 Colosseum <n/name>
 
+= _: coney <n>: coneys, coney's
+= _v: cony <n>: conies, cony's
+
 A Z: conscientize <v>
 B: conscientise <v>
 
@@ -105,6 +110,12 @@ B DV: draughtspeople <→n>
 
 A C D: draftsperson <n>
 B DV: draughtsperson <n>
+
+endometrium <n>: (endometria- | -: endometriums-)
+
+epithelium <n>: (epithelia | -: epitheliums)
+
+equilibrium <n>: (equilibriums | v: equilibria)
 
 + A C DV: Euroskeptic <n>: Euroskeptics
 B Cv D: Eurosceptic <n/>
@@ -179,6 +190,8 @@ Av B: lambast <v>
 _: largesse <n>
 _V: largess <n>
 
+latex <n>: (latexes | v: latices)
+
 A C Dv: leukemic <aj>
 B D: leukaemic <aj>
 
@@ -223,6 +236,8 @@ Bv: neurone <n>
 
 A Bv C: nonjudgmental <aj>
 Av B Cv: nonjudgemental <aj>
+
+octopus <n>: (octopuses | v: octopi | V: octopodes), octopus's, (octopuses' | v: octopi's | V: octopodes's)
 
 A B: oenophile <n>
 Av: enophile <n>
@@ -273,10 +288,16 @@ A B: program <n_v> {computer program → coded instructions}: (A B: programmed |
 A C: pudgy <aj>
 B: podgy <aj>
 
+quadrivium <n>: (quadrivia- | -: quadriviums-)
+
 referendum <n>: (referendums | .: referenda)
 
 A B Z: reprogram <v>: (A B: reprogrammed | AV: reprogramed), (A B: reprogramming | AV: reprograming), reprograms
 Bv: reprogramme <v>: reprogrammed, reprogramming, reprograms
+
+residuum <n>: (residua | -: residuums_), residuum's, (residua's | -: residuums'_)
+
+reticulum <n>: (reticula | V: reticulums_), reticulum's, (reticula's | V: reticulums'_)
 
 _: Réunion <n/place>
 _-: Reunion <n/place>

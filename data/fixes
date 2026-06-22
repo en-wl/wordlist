@@ -44,6 +44,12 @@ _: _arse <v> (vulgar-3)
 = 99: ...
 + 50 GB: ...
 
+atlas <n> {sculpture}
+= 70 [-]: ...
+
+axis <n> {deer}
+= 70 [-]: ...
+
 bacteria <n>: bacterias!
 
 _: biblical <aj>
@@ -54,6 +60,9 @@ _: biblical <aj>
 _: biblically <→av/>
 _V: Biblically <→av/>
 
+bid <v> {command}
+= 70 [-]: ...
+
 bing <m→n>
 
 = blin <n>: (blini | v: blinis | V: bliny | -: blins)
@@ -61,6 +70,9 @@ bing <m→n>
 - blini <n>
 
 CAD <n→abbr/>
+
+camera <n> {chamber}
+= 80 [-]: ...
 
 _V: candie <m→n> {→unit}
 + _: candy <n> {unit}: candies
@@ -73,6 +85,9 @@ _v: chizz <v>
 # Issue #376
 colorization <n>: colorizations_
 + 60 [extra]: - <n>: colorizations
+
+coma <n> {optics}
+= 70 [-]: ...
 
 = constructivism <n>: constructivisms~, constructivism's
 = 80: - <n>: constructivisms, -
@@ -104,6 +119,9 @@ _V: déclassée <n→aj>
 dialog <n→wp> {dialog box}
 dialogue <n→wp> {dialog box}
 
+die <v> {shape}: -, dieing, -
+= 70 [-]: ...
+
 = A Bv: dishabille <n>: dishabilles~
 = Av: deshabille <n>: deshabilles~
 = B: déshabillé <n>: déshabillés~
@@ -124,6 +142,9 @@ B Dv: euthanise <v>: euthanised, euthanising, euthanises
 A B: fantasy <n_v>
 AV BV: phantasy <n_v>
 A- B-: fantasie <m→n_v>
+
+farewell <v>: farewelled_, farewelling_, farewells
+= 50 AU 80: ...
 
 ~ gratiné <v>
 + _: gratiné <aj>
@@ -160,6 +181,9 @@ insofar as <→c>
 = intaglio <v>: intaglioed, intaglioing, intaglioes
 
 job-share <m→v>
+
+kin <n> {family→}
+kin <n> {relative→}
 
 # Issue #345
 + _: Kyiv <n/place>: Kyiv's
@@ -222,6 +246,9 @@ _: naivety <n>: naiveties
 
 _: nonplussed <aj>
 _V: nonplused <aj>
+
+ox <n> {oaf}
+= 80 [-]: ...
 
 = A Bv: percent <n>: percent
 - per cent
@@ -303,6 +330,9 @@ rive <v>: -, (riven | V: rived), -, -
 
 - sauteed <aj>
 
+slit <v> {narrow→squint}: slitted_, -, -
+= 70 [-]: ...
+
 spokesperson <n>: (spokespeople | V: spokespersons), spokesperson's, (spokespeople's | V: spokespersons')
 + 60: +: spokesperson <n>: spokespersons
 
@@ -337,6 +367,9 @@ trabecula <n>
 _: !très <m→av>
 _V: !tres <m→av>
 = 85 [ukacd]: ...
+
+tuba <n> {Roman}
+= 80 [-]: ...
 
 wake <v>: (A B: woke | AV B@: waked), (A B: woken | A. B@: waked | AV: woke), waking, wakes
 - 50 [+]: ...

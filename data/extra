@@ -699,6 +699,10 @@
 # Issue #316
 70: oganesson <n>: oganessons, oganesson's
 
+# Issue #512
+60: _: omnidirectional <aj>
+60: _V: omni-directional <aj>
+
 # Issue #445
 70: _: on-chain <aj>
 70: _v: onchain <aj>
@@ -740,6 +744,9 @@
 
 # Issue #441
 60: podcaster <n>: podcasters, podcaster's
+
+# Issue #511
+60: polymorph <n>: polymorphs, polymorph's
 
 # Issue #265
 60: A B C D Z: preprogram <v>: (preprogrammed | V: preprogramed), (preprogramming | V: preprograming), preprograms

@@ -648,8 +648,8 @@ def adjustEntries(conn, f = None, *,
                     elif isinstance(s, ScowlOverrideLine):
                         # fixme: should likely verify words
                         conn.executemany("insert or replace into new_scowl_override values (?, ?, ?, ?, ?, ?, ?)",
-                                         ((si.size, si.category, si.region, tag,
-                                           sg.id, word, s.action == 'replace') for si in s.si for tag in si.tags for word in s.words))
+                                         ((si.size, si.category, si.region, tag, sg.id, word, s.action == 'replace')
+                                           for si in s.si for tag in si.tags for word in s.words if word is not None))
 
                 for size, category, region, tag in conn.execute(
                         "select size, category, region, tag "

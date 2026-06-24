@@ -8,6 +8,36 @@
 35: an <d>
 
 
+35: be <v>: (was | @: wast), were, been, being, am, (are | @: art), is, are
+70: +: be <v>: wast
+
+35: can <n>: cans, can's
+
+35: can <v> {be able}: could, -, -, -, can, -, -, can
+70: - <v> {be able}: -, -, -, -, -, canst@, -, -
+
+35: can <v> {preserve}: canned, canning, cans
+
+35: may <v>: might, -, -, -, may, -, -, may
+70: may <v>: might, -, -, -, -, (mayest@ | V: mayst@), -, -
+
+80: @may <n>: mays
+
+35: do <n>: (dos | -: do's)
+
+35: do <v>: (did | @: didst), -, done, doing, does, dost@, doth@, -
+70: +: do <v>: didst
+
+35: have <n>: haves
+
+35: have <v>: (had | @: hadst), -, -, having, has, hast@, hath@, -
+
+35: say <v>: said, saying, says
+60: - <v>: -, -, -, -, -, -, saith@, -
+
+35: shall <v>: should, -, -, -, shall, shalt@, -, shall
+
+
 35: that <d>: those
 
 35: that <av>
@@ -144,7 +174,7 @@
 
 35: one <pn>: -, ones, -, one's, (oneself | V: one's self)
 
-60: @whoso <pn>: whomso, -, whoseso
+70: @whoso <pn>: whomso, -, whoseso
 
 35: other <pn>: -, others, -, other's
 

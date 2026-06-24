@@ -339,6 +339,9 @@ rive <v>: -, (riven | V: rived), -, -
 slit <v> {narrow→squint}: slitted_, -, -
 = 70 [-]: ...
 
+speak <v>
++ 70: +: - <v>: spake
+
 spokesperson <n>: (spokespeople | V: spokespersons), spokesperson's, (spokespeople's | V: spokespersons')
 + 60: +: spokesperson <n>: spokespersons
 
@@ -386,6 +389,13 @@ B: weaponise <m→v>: weaponised, weaponising, weaponises
 
 _: Wi-Fi <→n/>
 _.: WiFi <n/>
+
+will <v> {future}
++ 70: +: - <v>: wouldst
+
+= @wit <v>: wist, -, -, witting, wot, wost-, wot, -
++ 60: wit <v>
+= 80: wit <v>: wist, -, -, witting, wot, wost, wot, -
 
 = wiz <n> {:2}: wizzes, wiz's
 

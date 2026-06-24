@@ -14,6 +14,7 @@
 = beat <v>: beat, (beaten | v: beat), *, *
 
 = beget <v>: (begot | @: begat), (begotten | -: begot), *, *
++ 60: +: - <v>: begat, -, -, -
 
 = bestrew <v>: bestrewed, (bestrewn | v: bestrewed), *, *
 

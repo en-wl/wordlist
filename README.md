@@ -566,8 +566,8 @@ The VARIANT-LEVELs are as follows:
     v: 4: common
     ~: 5: variant
     V: 6: acceptable
-    -: 7: uncommon
-    @: 8: archaic
+    @: 7: archaic
+    -: 8: uncommon
     x: 9: invalid
 
 `v` is used for common variants where there is clear agreement on the
@@ -978,6 +978,9 @@ Important Changes
 -----------------
 
 ### 2026-06-24
+
+* Swapped variant level for archaic and uncommon variants: uncommon (`-`) is
+  now 8 and archaic (`@`) is now 7.
 
 * Changed POS codes for irregular plural verb forms: `vd2` → `vds`, `vs4` → `vss`
 

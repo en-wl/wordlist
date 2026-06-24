@@ -548,9 +548,9 @@ fixPos = {
   ('x', 'x'): 'x',
 }
 
-variantAsSymbol = {0: '', 1: '.', 2: '=', 3: '?', 4: 'v', 5: '~', 6: 'V', 7: '-', 8: '@', 9: 'x'}
+variantAsSymbol = {0: '', 1: '.', 2: '=', 3: '?', 4: 'v', 5: '~', 6: 'V', 7: '@', 8: '-', 9: 'x'}
 
-variantFromSymbol = {'': 0, '.': 1, '=': 2, '?': 3, 'v': 4, '~': 5, 'V': 6, '-': 7, '@': 8, 'x': 9}
+variantFromSymbol = {'': 0, '.': 1, '=': 2, '?': 3, 'v': 4, '~': 5, 'V': 6, '@': 7, '-': 8, 'x': 9}
 
 spellingInfo = {
   '_': SpellingInfo(order_num=1, spelling='_', region='', descr=''),

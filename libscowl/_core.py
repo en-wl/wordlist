@@ -190,8 +190,8 @@ def posmap(base_pos, poses):
         else:
             new_poses = ['ns']
     elif base_pos == 'v':
-        if not {'vd2', 'vs2', 'vs3', 'vs4'}.isdisjoint(poses):
-            new_poses = ['v0', 'vd', 'vd2', 'vn', 'vg', 'vs', 'vs2', 'vs3', 'vs4']
+        if not {'vds', 'vs2', 'vs3', 'vss'}.isdisjoint(poses):
+            new_poses = ['v0', 'vd', 'vds', 'vn', 'vg', 'vs', 'vs2', 'vs3', 'vss']
         elif 'vn' in poses:
             new_poses = ['v0', 'vd', 'vn', 'vg', 'vs']
         elif not {'vd', 'vg', 'vs'}.isdisjoint(poses):
@@ -291,7 +291,7 @@ def posesFromList(base_pos, words, isPossessive):
                 poses = ['ns', 'nss']
     elif base_pos == 'v':
         if len(words) == 9:
-            poses = ['v0', 'vd', 'vd2', 'vn', 'vg', 'vs', 'vs2', 'vs3', 'vs4']
+            poses = ['v0', 'vd', 'vds', 'vn', 'vg', 'vs', 'vs2', 'vs3', 'vss']
         elif len(words) == 5:
             poses = ['v0', 'vd', 'vn', 'vg', 'vs']
         elif len(words) == 4:

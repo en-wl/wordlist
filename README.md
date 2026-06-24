@@ -429,13 +429,13 @@ The derived forms are as follows:
     nssp: noun: plural of plural possessive
     v0: verb
     vd: verb: past tense (-ed)
-    vd2: verb: past tense plural (were)
+    vds: verb: past tense plural (were)
     vn: verb: past participle (-en)
     vg: verb: present participle (-ing)
     vs: verb: present tense (-s)
     vs2: verb: present tense second-person singular (are)
     vs3: verb: present tense third-person singular (is)
-    vs4: verb: present tense plural (are)
+    vss: verb: present tense plural (are)
     m0: noun/verb
     ms: noun/verb: (-s)
     aj0: adjective
@@ -973,6 +973,13 @@ The `+` after the size is a an override to force the word _thru_ in at size 70
 at all variant levels.  The comment at the end is a lemma comment and will
 carry over to scowl.txt.
 
+
+Important Changes
+-----------------
+
+### 2026-06-24
+
+* Changed POS codes for irregular plural verb forms: `vd2` → `vds`, `vs4` → `vss`
 
 Compatibility with SCOWLv1
 --------------------------

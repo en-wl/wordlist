@@ -348,9 +348,9 @@ p.add_argument('files', metavar='<file>', nargs='*', default=[])
 args = parser.parse_args()
 if not hasattr(args, 'func'):
     parser.print_usage()
-    exit(1)
+    sys.exit(1)
 
 try:
     args.func(args)
 except BrokenPipeError:
-    exit(1)
+    sys.exit(1)

@@ -35,8 +35,10 @@ spellingMap = {
     'en-ca': 'canadian',
     'en-au': 'australian'
 }
-for sp in spellingCategorySQL.keys():
-    spellingMap[sp] = sp
+spellingMap.extend(
+    (sp, sp)
+    for sp in spellingCategorySQL.keys()
+)
 
 SCOWL_DB = os.environ.get('SCOWL_DB', '')
 if not SCOWL_DB:
@@ -58,15 +60,15 @@ args = p.parse_args()
 if args.with_variants is not None:
     variant_levels = set(range(0, args.with_variants + 1))
 elif args.variants is not None:
-    variant_levels = set(int(v) for v in args.variants.split(','))
+    variant_levels = {int(v) for v in args.variants.split(',')}
 else:
     variant_levels = {0}
 
-sps = set(spellingMap[sp] for sp in args.spelling_categories)
+sps = {spellingMap[sp] for sp in args.spelling_categories}
 if 'british?' in sps:
     if 0 in variant_levels:
         print('error: must specify en_GB-ise or en_GB-ize', file=sys.stderr)
-        exit(2)
+        sys.exit(2)
     sps.remove('british?')
     sps.add('british')
 orig_sps = set(sps)
@@ -111,12 +113,13 @@ if 'special' in sps:
 else:
     categoryClause = "category = ''"
 
-whereClause = ' AND '.join(map(lambda s: f'({s})', 
-                               filter(lambda s: s != '', [
-                                   ' OR '.join(spellingCategorySQL[sp] for sp in sorted(sps)),
-                                   categoryClause,
-                                   f'size <= {args.size}'
-                               ])))
+whereClause = ' AND '.join(f'({s})'
+                           for s in (
+                                ' OR '.join(spellingCategorySQL[sp] for sp in sorted(sps)),
+                                categoryClause,
+                                f'size <= {args.size}',
+                           )
+                           if s != '')
 query = f"select word from scowl_v0 where {whereClause}"
 
 #print(sorted(sps))

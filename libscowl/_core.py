@@ -226,7 +226,7 @@ def posmap(base_pos, poses):
             new_poses = ['av0', 'av1', 'av2']
         else:
             new_poses = ['av0']
-    elif base_pos == 'a' or base_pos == 'aj_av':
+    elif base_pos in ('a', 'aj_av'):
         if 'a1' in poses or 'a2' in poses:
             new_poses = ['a0', 'a1', 'a2']
         else:
@@ -322,7 +322,7 @@ def posesFromList(base_pos, words, isPossessive):
     elif base_pos == 'av':
         if len(words) == 3:
             poses = ['av0', 'av1', 'av2']
-    elif base_pos == 'a' or base_pos == 'aj_av':
+    elif base_pos in ('a', 'aj_av'):
         if len(words) == 3:
             poses = ['a0', 'a1', 'a2']
     elif base_pos == 'pn':
@@ -422,7 +422,7 @@ def getRedundantSpellings(seq):
     tally = defaultdict(dict)
     for spellings, word in seq:
         for sp, vl in spellings.items():
-            if sp == '_' or sp == '': continue
+            if sp in ('_', ''): continue
             tally[sp][vl] = word
     if tally:
         exclude = set()
@@ -451,7 +451,7 @@ def addMissingSpellings(entries, have = ()):
         sps = e.spellings
         if sps is None: continue
         for sp in sps.keys():
-            if sp == '_' or sp == '': continue
+            if sp in ('_', ''): continue
             have.add(sp)
     for e in entries:
         _addMissingSpellings(e.spellings, have)
@@ -1024,9 +1024,8 @@ class WordEntry(SlotsDataClass):
         if spellingsStr is None:
             if self.spellings:
                 parts.append(self.spellings.str())
-        else:
-            if spellingsStr != '':
-                parts.append(spellingsStr)
+        elif spellingsStr != '':
+            parts.append(spellingsStr)
         duplicate = '†' if self.duplicate else ''
         parts.append(f"{self.word}{self.entry_rank}{duplicate}")
         return ': '.join(parts)

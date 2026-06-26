@@ -10,7 +10,7 @@ from contextlib import suppress
 
 def usage():
     sys.stderr.write(f"usage: {sys.argv[0]} (create-db [--raw|--dont-combine-pos] [<db file>]) | sort\n")
-    exit(1)
+    sys.exit(1)
 
 sys.path.insert(0, '.')
 import libscowl
@@ -41,7 +41,7 @@ if sys.argv[1] == 'sort':
         sortFileInPlace(files=[fn])
     for fn in mergeFiles:
         sortFileInPlace(files=[fn])
-    exit(0)
+    sys.exit(0)
 
 if sys.argv[1] != 'create-db':
     usage()

@@ -31,6 +31,7 @@ adjustFiles = (
     'data/fixes',
     'data/vn_fixes',
     'data/exclude',
+    'data/expurg',
 )
 
 if len(sys.argv) < 2:

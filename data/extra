@@ -1036,6 +1036,10 @@
 # Issue #460
 60: voxel <n>: voxels, voxel's
 
+# Issue #523
+60: _: watchlist <n>: watchlists, watchlist's
+60: _?: watch list <n>: watch lists, watch list's
+
 # Issue #337
 60: wheatgrass <n>
 70: - <n>: wheatgrasses-

@@ -13,8 +13,9 @@ Data from the Corpus of Contemporary American English (COCA) was also used.
 
 All data from COCA comes from 3-gram data that is not freely available;
 however, the usage is within the rights given by the NDA that was signed when
-purchasing the data.  More information on COCA is available at
-https://www.english-corpora.org/coca/.
+purchasing the data.  Data from COCA is also used in such a way that a
+separate COCA license is not required as long as this notice is preserved.
+More information on COCA is available at https://www.english-corpora.org/.
 
 The primary source of words for ESDB comes from 12dicts and ENABLE2K.  Both
 are in the Public Domain, but Alan Beale <biljir@pobox.com> deserves special

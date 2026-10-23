@@ -364,4 +364,4 @@ following copyright:
 
 Data from the Corpus of Contemporary American English (COCA) was used in
 various ways beyond simply adding new words.  All usage is within the 
-terms of the NDA.  <https://www.english-corpora.org/coca/>.
+terms of the NDA.  <https://www.english-corpora.org/>.
